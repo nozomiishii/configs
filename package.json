@@ -22,5 +22,9 @@
     "@commitlint/config-conventional": "~17.4.2",
     "@evilmartians/lefthook": "~1.2.7"
   },
-  "packageManager": "yarn@1.22.19"
+  "prettier": "@nozomiishii/prettier-config",
+  "packageManager": "yarn@1.22.19",
+  "dependencies": {
+    "@nozomiishii/prettier-config": "~0.1.3"
+  }
 }
