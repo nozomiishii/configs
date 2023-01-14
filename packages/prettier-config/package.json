@@ -1,0 +1,22 @@
+{
+  "name": "@nozomiishii/prettier-config",
+  "version": "0.1.2",
+  "description": "Nozomi's Personal Prettier config",
+  "keywords": [
+    "prettier"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozomiishii/configs.git",
+    "directory": "packages/prettier-config"
+  },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
+  "main": "index.js",
+  "peerDependencies": {
+    "prettier": "2.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
