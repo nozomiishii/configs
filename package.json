@@ -1,0 +1,26 @@
+{
+  "name": "configs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cool Configs",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozomiishii/configs.git"
+  },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
+  "main": "README.md",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "publish:prettier-config": "yarn workspace @nozomiishii/prettier-config publish"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "~17.4.2",
+    "@commitlint/config-conventional": "~17.4.2",
+    "@evilmartians/lefthook": "~1.2.7"
+  },
+  "packageManager": "yarn@1.22.19"
+}
