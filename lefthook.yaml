@@ -6,7 +6,8 @@ pre-commit:
 
   commands:
     format:
-      glob: '!*.md'
+      # Markdown formatting is the responsibility of the markdownlint
+      exclude: ".*\\.md$"
       run: npx -y prettier {staged_files} --ignore-unknown --ignore-path .gitignore --write
 
     lint-markdown:
