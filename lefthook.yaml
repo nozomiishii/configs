@@ -6,7 +6,8 @@ pre-commit:
 
   commands:
     format:
-      run: npx -y prettier {staged_files} '!**/*.md' --ignore-unknown --ignore-path .gitignore --write
+      glob: '!*.md'
+      run: npx -y prettier {staged_files} --ignore-unknown --ignore-path .gitignore --write
 
     lint-markdown:
       glob: '*.md'
