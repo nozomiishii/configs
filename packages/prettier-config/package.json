@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/prettier-config",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Nozomi's Personal Prettier config",
   "keywords": [
     "prettier"
@@ -13,10 +13,11 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "main": "index.js",
-  "peerDependencies": {
-    "prettier": "2.8.3"
-  },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "prettier": "~2.8.3",
+    "prettier-plugin-sh": "~0.12.8"
   }
 }
