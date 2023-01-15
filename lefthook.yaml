@@ -6,10 +6,10 @@ pre-commit:
 
   commands:
     format:
-      run: npx -y prettier --ignore-unknown --write {staged_files}
+      run: npx -y prettier {staged_files} '!**/*.md' --ignore-unknown --ignore-path .gitignore --write
 
     lint-markdown:
-      glob: "*.md"
+      glob: '*.md'
       run: npx -y markdownlint-cli2 {staged_files}
 
 commit-msg:
@@ -20,7 +20,7 @@ commit-msg:
       run: npx commitlint --edit
 
   scripts:
-    "spell-check.sh":
+    'spell-check.sh':
       runner: bash
 
 post-merge:
@@ -29,7 +29,7 @@ post-merge:
   commands:
     npm:
       files: git diff --name-only HEAD main
-      glob: "{package.json,yarn.lock}"
+      glob: '{package.json,yarn.lock}'
       run: yarn install
 
     delete-merged-branches:
