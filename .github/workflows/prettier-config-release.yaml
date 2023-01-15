@@ -3,7 +3,7 @@ name: Publish prettier-config to npm
 on:
   push:
     paths:
-      - "packages/prettier-config/**"
+      - 'packages/prettier-config/package.json'
     branches:
       - main
 
@@ -17,9 +17,9 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-          cache: "yarn"
-          registry-url: "https://registry.npmjs.org"
+          node-version: '16.x'
+          cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install modules
         run: yarn install --frozen-lockfile
