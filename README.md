@@ -23,3 +23,7 @@
 | Package                                                    | Version                                                                                                                                |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | [@nozomiishii/prettier-config](./packages/prettier-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fprettier-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fprettier-config) |
+
+## Contributing
+
+- See [CONTRIBUTING.md](CONTRIBUTING.md)
