@@ -15,12 +15,16 @@
     "packages/*"
   ],
   "scripts": {
-    "publish:prettier-config": "yarn workspace @nozomiishii/prettier-config publish"
+    "publish:prettier-config": "yarn workspace @nozomiishii/prettier-config publish",
+    "setup": "./scripts/setup.sh"
   },
   "devDependencies": {
     "@commitlint/cli": "~17.4.2",
     "@commitlint/config-conventional": "~17.4.2",
     "@evilmartians/lefthook": "~1.2.7"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "engines": {
+    "node": "16.x"
+  }
 }
