@@ -15,6 +15,8 @@ Nozomi's personal [Prettier](https://prettier.io) config.
 yarn add -D @nozomiishii/prettier-config
 ```
 
+- `@nozomiishii/prettier-config`だけでいい。`prettier`別途入れなくていい。
+
 ### Included Plugins
 
 - [prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)
