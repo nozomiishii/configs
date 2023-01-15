@@ -1,6 +1,13 @@
 # @nozomiishii/prettier-config
 
-My personal [Prettier](https://prettier.io) config.
+Nozomi's personal [Prettier](https://prettier.io) config.
+
+<!-- Main Image -->
+<br>
+<div align="center">
+  <img src="https://media.giphy.com/media/3o6Zt9ADoZ9grTGu1a/giphy.gif" alt="Coding" width="480" />
+</div>
+<br>
 
 ## Install
 
@@ -8,15 +15,30 @@ My personal [Prettier](https://prettier.io) config.
 yarn add -D @nozomiishii/prettier-config
 ```
 
+### Included Plugins
+
+- [prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)
+- [prettier-plugin-sh](https://www.npmjs.com/package/prettier-plugin-sh)
+
+[Option] BrewfileなどRubyのfileもformatしたい場合は[@prettier/plugin-ruby](https://www.npmjs.com/package/@prettier/plugin-ruby)を別途入れると良い。
+
+```sh
+yarn add -D @prettier/plugin-ruby
+```
+
 ## Setup
 
-### prettierrc.js
+### Create `.prettierrc.js`
 
 ```bash
 echo "module.exports = { ...require('@nozomiishii/prettier-config') };" > .prettierrc.js
 ```
 
-### (alternative plan) Edit `package.json`
+#### [Alternative] Edit `package.json`
+
+```bash
+npm pkg set prettier="@nozomiishii/prettier-config"
+```
 
 ```jsonc
 {
@@ -24,6 +46,49 @@ echo "module.exports = { ...require('@nozomiishii/prettier-config') };" > .prett
   "prettier": "@nozomiishii/prettier-config"
 }
 ```
+
+## Scripts for package.json
+
+```bash
+npm pkg set scripts.format="yarn prettier --check"
+npm pkg set scripts.format:fix="yarn prettier --write"
+npm pkg set scripts.prettier="prettier . '!**/*.md' --ignore-unknown --ignore-path .gitignore"
+```
+
+`package.json`
+
+```json
+{
+  "format": "yarn prettier --check",
+  "format:fix": "yarn prettier --write",
+  "prettier": "prettier . '!**/*.md' --ignore-unknown --ignore-path .gitignore",
+}
+```
+
+### 注意
+
+npmの場合は`format`や`format:fix`の際、  
+`npm run prettier -- --write` みたく書かないと動かないかも(検証はしてない)
+
+--(Double Dash)とは、-h, -vみたいなフラグの読み取りを終了させる。  
+--(Double Dash)以降の入力はargsとして取り込まれる。
+
+- [npm run とかで使うハイフン2つ「--」の意味 - Neo's World](https://neos21.net/blog/2018/09/13-01.html)  
+- [The How? & Why? of the Double Dash (--) Delimiter on macOS, Linux, bash - YouTube](https://www.youtube.com/watch?v=K1zVrLi8NBA)
+
+### 解説
+
+- `--write`
+  - 対象ファイルをフォーマット。  
+- `--check`
+  - prettierでフォーマットがかかってるかチェックする。CIに入れとくと便利。  
+- `--ignore-unknown`
+  - prettierに対応してない拡張子は無視する。  
+- `--ignore-path .gitignore`
+  - .gitignoreしてるfileはフォーマットかけない。  
+- `'!**/*.md'`
+  - !をつけてファイル指定することで.prettierignoreに指定してるものをフォーマットから除外できる
+  - PrettierのMarkdownフォーマットに日本語が混じってると、英語と日本語の間にスペースが勝手に挿入されたり挙動が謎い。MarkdownのフォーマットはMarkdownlintにまかせる。もしくは `.`でブラックリストで弾くのではなく`**/*.{ts,tsx}`てきにホワイトリストで管理した方がいいかもしれない、、、
 
 ## Preferences
 
@@ -124,19 +189,17 @@ touch .prettierignore
 .vscode
 ```
 
-## Scripts
-
-```json
-{
-  "format": "yarn prettier --check",
-  "format:fix": "yarn prettier --write",
-  "prettier": "prettier . '!**/*.md' --ignore-unknown --ignore-path .gitignore",
-}
-```
-
-### Sharing configurations
+## [Option] How to create sharing configurations like this
 
 - [Sharing configurations](https://prettier.io/docs/en/configuration.html#sharing-configurations)
+
+## FAQ
+
+- 別途prettierインストールしてなくてもyarn prettierが通るのか
+  - 通る
+
+- prettier-plugin-shみたいな別途prettier-plugin-xxxを入れた場合に`.prettierrc.js`のpluginに追記しなくていいのか
+  - よい。少なくともこのパッケージにいれたものに関してはよい。
 
 ## References
 
