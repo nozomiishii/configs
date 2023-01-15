@@ -124,7 +124,7 @@ touch .prettierignore
 .vscode
 ```
 
-## Script
+## Scripts
 
 ```json
 {
