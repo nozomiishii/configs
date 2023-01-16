@@ -89,8 +89,9 @@ npmの場合は`format`や`format:fix`の際、
 - `--ignore-path .gitignore`
   - .gitignoreしてるfileはフォーマットかけない。  
 - `'!**/*.md'`
-  - !をつけてファイル指定することで.prettierignoreに指定してるものをフォーマットから除外できる
-  - PrettierのMarkdownフォーマットに日本語が混じってると、英語と日本語の間にスペースが勝手に挿入されたり挙動が謎い。MarkdownのフォーマットはMarkdownlintにまかせる。もしくは `.`でブラックリストで弾くのではなく`**/*.{ts,tsx}`てきにホワイトリストで管理した方がいいかもしれない、、、
+  - !をつけてファイル指定することでフォーマットから除外できる
+    - [prettierとmarkdownと日本語の相性の悩み]
+    - PrettierのMarkdownフォーマットに日本語が混じってると、英語と日本語の間にスペースが勝手に挿入されたり挙動が謎い。MarkdownのフォーマットはMarkdownlintにまかせる。もしくは `.`で全体指定してからブラックリストで弾くのではなく`**/*.{ts,tsx}`てきにホワイトリストで管理した方がいいかもしれない、、、
 
 ## Preferences
 
@@ -197,7 +198,7 @@ touch .prettierignore
 
 ## FAQ
 
-- 別途prettierインストールしてなくてもyarn prettierが通るのか
+- 別途prettierインストールしてなくても`@nozomiishii/prettier-config`だけでyarn prettierが通るのか
   - 通る
 
 - prettier-plugin-shみたいな別途prettier-plugin-xxxを入れた場合に`.prettierrc.js`のpluginに追記しなくていいのか
