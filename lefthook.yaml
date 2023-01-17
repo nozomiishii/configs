@@ -29,7 +29,7 @@ post-merge:
   piped: true
 
   commands:
-    npm:
+    node-modules:
       files: git diff --name-only HEAD main
       glob: '{package.json,yarn.lock}'
       run: yarn install
