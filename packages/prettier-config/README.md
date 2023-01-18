@@ -28,7 +28,9 @@ yarn add -D @nozomiishii/prettier-config
 ### Included Plugins
 
 - [prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)
+  - package.jsonをいいかんじに並び替え
 - [prettier-plugin-sh](https://www.npmjs.com/package/prettier-plugin-sh)
+  - shellファイルのフォーマット
 
 [Option] BrewfileなどRubyのfileもformatしたい場合は[@prettier/plugin-ruby](https://www.npmjs.com/package/@prettier/plugin-ruby)を別途入れると良い。
 
