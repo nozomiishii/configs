@@ -9,6 +9,14 @@ Nozomi's personal [Prettier](https://prettier.io) config.
 </div>
 <br>
 
+## Gist
+
+- 忙しい人はとりあえず下のコマンド実行だけでオールオッケー
+
+```bash
+yarn add -D @nozomiishii/prettier-config && echo "module.exports = { ...require('@nozomiishii/prettier-config') };" > .prettierrc.js
+```
+
 ## Install
 
 ```bash
