@@ -1,8 +1,8 @@
 {
   "name": "configs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Cool Configs",
+  "description": "Crucial Configs",
   "keywords": [],
   "repository": {
     "type": "git",
