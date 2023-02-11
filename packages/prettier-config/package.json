@@ -1,7 +1,7 @@
 {
   "name": "@nozomiishii/prettier-config",
-  "version": "0.1.7",
-  "description": "Nozomi's Personal Prettier config",
+  "version": "0.1.8",
+  "description": "Nozomi's Recommended Prettier config",
   "keywords": [
     "prettier",
     "config"

@@ -1,6 +1,6 @@
 # @nozomiishii/prettier-config
 
-Nozomi's personal [Prettier](https://prettier.io) config.
+Nozomi's Recommended [Prettier](https://prettier.io) Config.
 
 <!-- Main Image -->
 <br>
