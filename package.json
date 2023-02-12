@@ -15,6 +15,7 @@
     "packages/*"
   ],
   "scripts": {
+    "publish:nozo": "yarn workspace nozo publish",
     "publish:prettier-config": "yarn workspace @nozomiishii/prettier-config publish",
     "setup": "./scripts/setup.sh"
   },

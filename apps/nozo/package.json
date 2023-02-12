@@ -1,0 +1,20 @@
+{
+  "name": "nozo",
+  "version": "0.0.0",
+  "description": "Nozomi config manager",
+  "keywords": [
+    "config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozomiishii/configs.git",
+    "directory": "packages/nozo"
+  },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
+  "main": "index.js",
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
