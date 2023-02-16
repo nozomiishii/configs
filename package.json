@@ -21,12 +21,12 @@
     "setup": "./scripts/setup.sh"
   },
   "devDependencies": {
-    "@commitlint/cli": "~17.4.2",
-    "@commitlint/config-conventional": "~17.4.2",
-    "@evilmartians/lefthook": "~1.2.7"
+    "@commitlint/cli": "17.4.2",
+    "@commitlint/config-conventional": "17.4.2",
+    "@evilmartians/lefthook": "1.2.7"
   },
   "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": "18.x"
+    "node": "18.14.0"
   }
 }
