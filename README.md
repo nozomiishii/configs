@@ -24,6 +24,14 @@
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | [@nozomiishii/prettier-config](./packages/prettier-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fprettier-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fprettier-config) |
 
+## Apps
+
+### CLI Tools(WIP)
+
+| App                                                    | Version                                                                                                                                |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| [nozo](./apps/nozo) | [![npm version](https://badge.fury.io/js/nozo.svg)](https://badge.fury.io/js/nozo) |
+
 ## Contributing
 
 - See [CONTRIBUTING.md](CONTRIBUTING.md)
