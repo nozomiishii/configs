@@ -17,6 +17,7 @@
   "scripts": {
     "publish:nozo": "yarn workspace nozo publish",
     "publish:prettier-config": "yarn workspace @nozomiishii/prettier-config publish",
+    "publish:renovate-config": "yarn workspace @nozomiishii/renovate-config publish",
     "setup": "./scripts/setup.sh"
   },
   "devDependencies": {
@@ -26,6 +27,6 @@
   },
   "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   }
 }
