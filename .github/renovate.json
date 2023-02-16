@@ -1,0 +1,3 @@
+{
+  "extends": ["github>nozomiishii/configs/tree/main/packages/renovate-config"]
+}

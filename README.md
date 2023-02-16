@@ -23,7 +23,6 @@
 | Package                                                    | Version                                                                                                                                |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | [@nozomiishii/prettier-config](./packages/prettier-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fprettier-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fprettier-config) |
-| [@nozomiishii/renovate-config](./packages/renovate-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Frenovate-config.svg)](https://badge.fury.io/js/@nozomiishii%2Frenovate-config) |
 
 ## Apps
 

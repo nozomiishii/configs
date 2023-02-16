@@ -17,14 +17,12 @@
   "scripts": {
     "publish:nozo": "yarn workspace nozo publish",
     "publish:prettier-config": "yarn workspace @nozomiishii/prettier-config publish",
-    "publish:renovate-config": "yarn workspace @nozomiishii/renovate-config publish",
     "setup": "./scripts/setup.sh"
   },
   "devDependencies": {
     "@commitlint/cli": "17.4.3",
     "@commitlint/config-conventional": "17.4.3",
-    "@evilmartians/lefthook": "1.2.9",
-    "@nozomiishii/renovate-config": "0.0.0"
+    "@evilmartians/lefthook": "1.2.9"
   },
   "packageManager": "yarn@1.22.19",
   "engines": {

@@ -12,5 +12,5 @@ Nozomi's Recommended [Renovate](https://docs.renovatebot.com/) Config.
 ## Gist
 
 ```bash
-yarn add -D @nozomiishii/renovate-config && echo '{ "extends": ["@nozomiishii"] }' > renovate.json
+echo '{ "extends": ["github>nozomiishii/configs/tree/main/packages/renovate-config"] }' > .github/renovate.json
 ```
