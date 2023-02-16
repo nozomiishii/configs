@@ -1,0 +1,20 @@
+{
+  "name": "@nozomiishii/renovate-config",
+  "version": "0.1.0",
+  "description": "Nozomi's Recommended Renovate config",
+  "keywords": [
+    "renovate",
+    "config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozomiishii/configs.git",
+    "directory": "packages/renovate-config"
+  },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
+  "main": "default.json",
+  "publishConfig": {
+    "access": "public"
+  }
+}
