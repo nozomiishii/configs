@@ -1,5 +1,12 @@
 {
   // ----------------------------------------------------------------
+  // Yaml
+  // ----------------------------------------------------------------
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "../.github/workflows/*"
+  },
+
+  // ----------------------------------------------------------------
   // Prettier
   // ----------------------------------------------------------------
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -12,7 +19,7 @@
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
   // ----------------------------------------------------------------
-  // Lint
+  // editor.codeActionsOnSave
   // ----------------------------------------------------------------
   "editor.codeActionsOnSave": {
     "source.addMissingImports": true,
@@ -25,6 +32,37 @@
   // ----------------------------------------------------------------
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+
+  // ----------------------------------------------------------------
+  // i18n-ally
+  // ----------------------------------------------------------------
+  "i18n-ally.localesPaths": "public/locales",
+  "i18n-ally.enabledFrameworks": ["react", "i18next", "general"],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sortKeys": true,
+  "i18n-ally.annotations": true,
+  "i18n-ally.editor.preferEditor": true,
+
+  // ----------------------------------------------------------------
+  // REST Client
+  // ----------------------------------------------------------------
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "version": "v1",
+      "token": ""
+    },
+    "$user": {
+      "email": "sample@example.com"
+    },
+    "mock": {
+      "host": "localhost:4010"
+    },
+    "dev": {
+      "host": "localhost:4000"
+    },
+    "stg": {},
+    "prod": {}
   }
 
   // ----------------------------------------------------------------
