@@ -15,7 +15,7 @@ yarn-error.log*
 .env
 
 # editor preferences
-.vscode/settings.json
+# .vscode/settings.json
 
 # lefthook
 lefthook-local.yaml
