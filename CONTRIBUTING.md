@@ -2,21 +2,22 @@
 
 ## System Required
 
-Check the following files.
+[volta](https://volta.sh/) and [corepack](https://github.com/nodejs/corepack) unify the nodejs environment among developers
 
-- [.tool-versions](.tool-versions)
-- [package.json](package.json)
+- Check the following items in [package.json](package.json)
   - packageManager
-  - engines
+  - volta
 
 ## Setup
 
-## Create the node environment and initialize local files
+### Create the node environment and initialize local files
+
+⚠️ If you do not want to manage with volta and corepack, please do a manual setup
 
 ```sh
 yarn setup
 ```
 
-[Optional] Manual Setup
+### [Optional] Manual Setup
 
 - [scripts/setup.sh](scripts/setup.sh)

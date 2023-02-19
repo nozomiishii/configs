@@ -20,11 +20,6 @@ fi
 printf "🐉: Enable corepack...\n"
 corepack enable
 corepack enable npm
-
-if type asdf > /dev/null 2>&1; then
-  asdf reshim nodejs
-fi
-
 yarn -v
 printf "Enable corepack completed\n\n"
 
