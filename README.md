@@ -23,6 +23,7 @@
 | Package                                                    | Version                                                                                                                                |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | [@nozomiishii/prettier-config](./packages/prettier-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fprettier-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fprettier-config) |
+| [@nozomiishii/markdownlint-cli2-config](./packages/markdownlint-cli2-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fmarkdownlint-cli2-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fmarkdownlint-cli2-config) |
 
 ## Apps
 

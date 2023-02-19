@@ -1,0 +1,22 @@
+{
+  "name": "@nozomiishii/markdownlint-cli2-config",
+  "version": "0.0.0",
+  "description": "Nozomi's Recommended markdownlint-cli2 config",
+  "keywords": [
+    "markdownlint-cli2",
+    "markdown",
+    "lint",
+    "config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozomiishii/configs.git",
+    "directory": "packages/markdownlint-cli2-config"
+  },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
+  "main": "index.cjs",
+  "publishConfig": {
+    "access": "public"
+  }
+}
