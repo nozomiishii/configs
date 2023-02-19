@@ -1,9 +1,12 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "configs",
   "version": "1.0.0",
   "private": true,
   "description": "Crucial Configs",
-  "keywords": [],
+  "keywords": [
+    "configs"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git"
