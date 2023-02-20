@@ -98,6 +98,7 @@
     "prisma.prisma",
     "nrwl.angular-console",
     "digitalbrainstem.javascript-ejs-support",
+    "ms-playwright.playwright",
 
     // ----------------------------------------------------------------
     // Solidity
