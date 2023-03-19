@@ -17,6 +17,7 @@
     "eamodio.gitlens",
     "formulahendry.code-runner",
     "editorconfig.editorconfig",
+    "github.vscode-pull-request-github",
 
     // ----------------------------------------------------------------
     // Intellisense
