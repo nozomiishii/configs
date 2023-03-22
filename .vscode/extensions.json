@@ -18,6 +18,9 @@
     "formulahendry.code-runner",
     "editorconfig.editorconfig",
     "github.vscode-pull-request-github",
+    "github.copilot",
+    "github.copilot-labs",
+    "github.vscode-github-actions",
 
     // ----------------------------------------------------------------
     // Intellisense
