@@ -1,25 +1,32 @@
 {
   "recommendations": [
     // ----------------------------------------------------------------
-    // General
+    // Theme
     // ----------------------------------------------------------------
     "monokai.theme-monokai-pro-vscode",
     "vscode-icons-team.vscode-icons",
+
+    // ----------------------------------------------------------------
+    // General
+    // ----------------------------------------------------------------
     "naumovs.color-highlight",
     "usernamehw.errorlens",
     "mikestead.dotenv",
     "streetsidesoftware.code-spell-checker",
+    "wmaurer.change-case",
     "gruntfuggly.todo-tree",
     "mechatroner.rainbow-csv",
     "janisdd.vscode-edit-csv",
     "grapecity.gc-excelviewer",
     "analytic-signal.preview-pdf",
-    "eamodio.gitlens",
     "formulahendry.code-runner",
     "editorconfig.editorconfig",
+
+    // ----------------------------------------------------------------
+    // Git
+    // ----------------------------------------------------------------
+    "eamodio.gitlens",
     "github.vscode-pull-request-github",
-    "github.copilot",
-    "github.copilot-labs",
     "github.vscode-github-actions",
 
     // ----------------------------------------------------------------
