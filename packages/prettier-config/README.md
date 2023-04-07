@@ -29,10 +29,15 @@ yarn add -D @nozomiishii/prettier-config
 
 - [prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)
   - package.jsonをいいかんじに並び替え
-- [prettier-plugin-sh](https://www.npmjs.com/package/prettier-plugin-sh)
-  - shellファイルのフォーマット
 
-[Option] BrewfileなどRubyのfileもformatしたい場合は[@prettier/plugin-ruby](https://www.npmjs.com/package/@prettier/plugin-ruby)を別途入れると良い。
+#### [Option]
+
+- [@prettier/plugin-ruby](https://www.npmjs.com/package/@prettier/plugin-ruby)
+  - BrewfileなどRubyのfileもformatしたい
+  - プロジェクト内でrubyが多い場合は、[rufo](https://github.com/ruby-formatter/rufo)のほうがいいかも
+- [prettier-plugin-sh](https://www.npmjs.com/package/prettier-plugin-sh)
+  - shellのfileもformatしたい
+  - プロジェクト内でshellが多い場合は、[shfmt](https://github.com/mvdan/sh)のほうがいいかも
 
 ```sh
 yarn add -D @prettier/plugin-ruby
