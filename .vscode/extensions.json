@@ -53,6 +53,7 @@
     // Shell
     // ----------------------------------------------------------------
     "mads-hartmann.bash-ide-vscode",
+    "foxundermoon.shell-format",
     "timonwong.shellcheck",
     "jetmartin.bats",
 
