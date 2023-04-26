@@ -1,7 +1,13 @@
 name: Publish markdownlint-cli2-config to npm
 
 on:
+  workflow_dispatch:
   push:
+    paths:
+      - 'packages/markdownlint-cli2-config/package.json'
+    branches:
+      - main
+  pull_request:
     paths:
       - 'packages/markdownlint-cli2-config/package.json'
     branches:

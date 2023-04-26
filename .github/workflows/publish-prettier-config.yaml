@@ -1,7 +1,13 @@
 name: Publish prettier-config to npm
 
 on:
+  workflow_dispatch:
   push:
+    paths:
+      - 'packages/prettier-config/package.json'
+    branches:
+      - main
+  pull_request:
     paths:
       - 'packages/prettier-config/package.json'
     branches:
