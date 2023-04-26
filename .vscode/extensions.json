@@ -11,7 +11,7 @@
     // ----------------------------------------------------------------
     "naumovs.color-highlight",
     "usernamehw.errorlens",
-    "mikestead.dotenv",
+    "dotenv.dotenv-vscode",
     "streetsidesoftware.code-spell-checker",
     "wmaurer.change-case",
     "gruntfuggly.todo-tree",
