@@ -151,10 +151,9 @@ npmの場合は`format`や`format:fix`の際、
 - `"printWidth": 119`  
   - 1行あたりの文字数。  
   - Githubのコードレビュー画面の幅と同じ
-  - OSSなどでも上記を理由に119を採用してたりする
 
 - `"proseWrap": "preserve"`  
-  - default - markdownで勝手に文を折り返さないようにする
+  - default
 
 - `"quoteProps": "as-needed"`  
   - default
@@ -176,7 +175,7 @@ npmの場合は`format`や`format:fix`の際、
   - ダブルクオート派だったけど、なんとなくtutorialの先生たちがシングルクオート多くて、それに合わせて
 
 - `"tabWidth": 2`  
-  - タブ2のほうが見やすい。好み
+  - タブ2のほうがJavaScriptっぽい気がしてる。好み
 
 - `"trailingComma": "all"`  
   - 全部にカンマあったほうがgitの差分に出てこないからall
@@ -191,7 +190,7 @@ const id = {
 ```
 
 - `"useTabs": false`  
-  - これもpython的にはspace推奨だったから、僕はタブで打つけどprettierにスペースに変換してもらう
+  - タブ幅は開発者の環境依存する。spaceは倍打鍵しなきゃいけない。自分はタブで打つけどprettierにスペースに変換してもらう。
 
 ## .prettierignore
 
@@ -215,9 +214,6 @@ touch .prettierignore
 
 - 別途prettierインストールしてなくても`@nozomiishii/prettier-config`だけでyarn prettierが通るのか
   - 通る
-
-- prettier-plugin-shみたいな別途prettier-plugin-xxxを入れた場合に`.prettierrc.js`のpluginに追記しなくていいのか
-  - よい。少なくともこのパッケージにいれたものに関してはよい。
 
 ## References
 
