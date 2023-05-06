@@ -102,6 +102,7 @@
     // ----------------------------------------------------------------
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
+    "zixuanchen.vitest-explorer",
     "orta.vscode-jest",
     "prisma.prisma",
     "nrwl.angular-console",
