@@ -101,6 +101,7 @@
     // TypeScript
     // ----------------------------------------------------------------
     "dbaeumer.vscode-eslint",
+    "yoavbls.pretty-ts-errors",
     "esbenp.prettier-vscode",
     "zixuanchen.vitest-explorer",
     "orta.vscode-jest",
