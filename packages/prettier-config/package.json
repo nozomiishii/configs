@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/prettier-config",
-  "version": "0.1.17",
+  "version": "0.2.0",
   "description": "Nozomi's Recommended Prettier config",
   "keywords": [
     "prettier",
@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "author": "Nozomi Ishii",
-  "main": "index.js",
+  "main": "index.cjs",
   "dependencies": {
     "prettier": "2.8.8",
     "prettier-plugin-packagejson": "2.4.3"

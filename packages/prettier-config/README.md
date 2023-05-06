@@ -14,7 +14,7 @@ Nozomi's Recommended [Prettier](https://prettier.io) Config.
 - 忙しい人はとりあえず下のコマンド実行だけでオールオッケー
 
 ```bash
-yarn add -D @nozomiishii/prettier-config && echo "module.exports = require('@nozomiishii/prettier-config');" > .prettierrc.js
+yarn add -D @nozomiishii/prettier-config && echo "module.exports = require('@nozomiishii/prettier-config');" > prettier.config.cjs
 ```
 
 ## Install
