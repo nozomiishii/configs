@@ -1,5 +1,5 @@
 module.exports = {
-  fix: true,
+  fix: !process.env.CI,
 
   // https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
   config: {
