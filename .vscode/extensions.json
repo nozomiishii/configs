@@ -21,6 +21,7 @@
     "analytic-signal.preview-pdf",
     "formulahendry.code-runner",
     "editorconfig.editorconfig",
+    "scaffdog.scaffdog-vscode",
 
     // ----------------------------------------------------------------
     // Git
