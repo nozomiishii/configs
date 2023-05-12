@@ -13,6 +13,14 @@ Nozomi's Recommended [Prettier](https://prettier.io) Config.
 
 - 忙しい人はとりあえず下のコマンド実行だけでオールオッケー
 
+pnpm
+
+```bash
+pnpm add -D @nozomiishii/prettier-config && echo "module.exports = require('@nozomiishii/prettier-config');" > prettier.config.cjs
+```
+
+yarn
+
 ```bash
 yarn add -D @nozomiishii/prettier-config && echo "module.exports = require('@nozomiishii/prettier-config');" > prettier.config.cjs
 ```
