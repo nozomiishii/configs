@@ -1,20 +1,27 @@
-// https://prettier.io/docs/en/options.html
-module.exports = {
-  arrowParens: 'always',
-  bracketSpacing: true,
-  htmlWhitespaceSensitivity: 'css',
-  insertPragma: false,
-  bracketSameLine: false,
-  jsxSingleQuote: false,
+// @ts-check
+
+/**
+ * Prettier options
+ * {@link https://prettier.io/docs/en/options.html}
+ *
+ * @type {import("prettier").Options}
+ */
+const options = {
   printWidth: 119,
-  proseWrap: 'preserve',
-  quoteProps: 'as-needed',
-  requirePragma: false,
+  tabWidth: 2,
+  useTabs: false,
   semi: true,
   singleQuote: true,
-  tabWidth: 2,
+  quoteProps: 'as-needed',
+  jsxSingleQuote: false,
   trailingComma: 'all',
-  useTabs: false,
-
-  plugins: ['prettier-plugin-packagejson'],
+  bracketSpacing: true,
+  bracketSameLine: false,
+  arrowParens: 'always',
+  requirePragma: false,
+  insertPragma: false,
+  proseWrap: 'preserve',
+  htmlWhitespaceSensitivity: 'css',
 };
+
+module.exports = options;
