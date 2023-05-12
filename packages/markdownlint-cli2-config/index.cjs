@@ -25,7 +25,7 @@ module.exports = {
     },
 
     /**
-     * MD033/no-inline-html - Inline HTML
+     * MD033 - Inline HTML
      * {@link https://github.com/DavidAnson/markdownlint/blob/main/doc/md033.md}
      */
     MD033: false,
