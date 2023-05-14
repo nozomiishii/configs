@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "packages/eslint-config"
+    },
+    {
+      "path": "packages/markdownlint-cli2-config"
+    },
+    {
+      "path": "packages/prettier-config"
+    },
+    {
+      "path": "packages/tsconfig"
+    }
+  ]
+}
