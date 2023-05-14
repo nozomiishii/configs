@@ -29,7 +29,7 @@ commit-msg:
 
   commands:
     commitlint:
-      run: npx -y commitlint --edit
+      run: npx -y commitlint --edit {1} --verbose
 
   scripts:
     'spell-check.sh':
