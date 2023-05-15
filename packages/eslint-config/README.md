@@ -41,8 +41,6 @@ module.exports = defineConfig({
 
 ## Dependencies
 
-### Legacy config
-
 ```shell
 @next/eslint-plugin-next \
 @typescript-eslint/eslint-plugin \
@@ -67,34 +65,4 @@ eslint-plugin-testing-library \
 eslint-plugin-tsdoc \
 eslint-plugin-unicorn \
 eslint-plugin-vitest
-```
-
-### flat config
-
-```shell
-@next/eslint-plugin-next \
-@typescript-eslint/eslint-plugin \
-@typescript-eslint/parser \
-@vercel/style-guide \
-eslint \
-eslint-config-airbnb-base \
-eslint-config-airbnb-typescript \
-eslint-config-prettier \
-eslint-define-config \
-eslint-import-resolver-typescript \
-eslint-plugin-eslint-comments \
-eslint-plugin-import \
-eslint-plugin-jsx-a11y \
-eslint-plugin-playwright \
-eslint-plugin-react \
-eslint-plugin-react-hooks \
-eslint-plugin-sort-keys-custom-order \
-eslint-plugin-storybook \
-eslint-plugin-tailwindcss \
-eslint-plugin-testing-library \
-eslint-plugin-tsdoc \
-eslint-plugin-unicorn \
-eslint-plugin-vitest \
-globals \
-parse-gitignore
 ```
