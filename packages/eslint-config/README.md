@@ -12,7 +12,7 @@ Nozomi's Recommended [eslint](https://eslint.org/) Config.
 ## Gist
 
 ```bash
-yarn add -D eslint typescript @nozomiishii/eslint-config && touch .eslintrc.cjs
+yarn add -D eslint typescript eslint-define-config @nozomiishii/eslint-config && touch .eslintrc.cjs
 ```
 
 .eslintrc.cjs
