@@ -15,7 +15,7 @@
 ⚠️ If you do not want to manage with volta and corepack, please do a manual setup
 
 ```sh
-yarn setup
+./scripts/setup.sh
 ```
 
 ### [Optional] Manual Setup

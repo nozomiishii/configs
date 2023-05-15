@@ -7,11 +7,6 @@ on:
       - 'packages/prettier-config/package.json'
     branches:
       - main
-  pull_request:
-    paths:
-      - 'packages/prettier-config/package.json'
-    branches:
-      - main
 
 jobs:
   build:
@@ -31,6 +26,6 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Publish
-        run: yarn publish:prettier-config
+        run: yarn workspace @nozomiishii/prettier-config publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

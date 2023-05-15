@@ -20,17 +20,19 @@
 
 ## Packages
 
-| Package                                                    | Version                                                                                                                                |
-| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [@nozomiishii/prettier-config](./packages/prettier-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fprettier-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fprettier-config) |
+| Package | Version |
+| ------- | ------- |
+| [@nozomiishii/eslint-config](./packages/eslint-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Feslint-config.svg)](https://badge.fury.io/js/@nozomiishii%2Feslint-config) |
 | [@nozomiishii/markdownlint-cli2-config](./packages/markdownlint-cli2-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fmarkdownlint-cli2-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fmarkdownlint-cli2-config) |
+| [@nozomiishii/prettier-config](./packages/prettier-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fprettier-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fprettier-config) |
+| [@nozomiishii/tsconfig](./packages/tsconfig)| [![npm version](https://badge.fury.io/js/@nozomiishii%2Ftsconfig.svg)](https://badge.fury.io/js/@nozomiishii%2Ftsconfig) |
 
 ## Apps
 
 ### CLI Tools(WIP)
 
-| App                                                    | Version                                                                                                                                |
-| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| App                 | Version                                                                            |
+| ------------------- | ---------------------------------------------------------------------------------- |
 | [nozo](./apps/nozo) | [![npm version](https://badge.fury.io/js/nozo.svg)](https://badge.fury.io/js/nozo) |
 
 ## Contributing

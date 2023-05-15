@@ -1,10 +1,10 @@
-name: Publish markdownlint-cli2-config to npm
+name: Publish eslint-config to npm
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - 'packages/markdownlint-cli2-config/package.json'
+      - 'packages/eslint-config/package.json'
     branches:
       - main
 
@@ -26,6 +26,6 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Publish
-        run: yarn workspace @nozomiishii/markdownlint-cli2-config publish
+        run: yarn workspace @nozomiishii/eslint-config publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
