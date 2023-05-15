@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/markdownlint-cli2-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Nozomi's Recommended markdownlint-cli2 config",
   "keywords": [
     "markdownlint-cli2",
@@ -8,6 +8,7 @@
     "lint",
     "config"
   ],
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/markdownlint-cli2-config/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",

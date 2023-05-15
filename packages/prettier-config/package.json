@@ -1,11 +1,12 @@
 {
   "name": "@nozomiishii/prettier-config",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Nozomi's Recommended Prettier config",
   "keywords": [
     "prettier",
     "config"
   ],
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/prettier-config/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
