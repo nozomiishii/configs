@@ -47,6 +47,7 @@ module.exports = defineConfig({
 @next/eslint-plugin-next \
 @typescript-eslint/eslint-plugin \
 @typescript-eslint/parser \
+@vercel/style-guide \
 eslint \
 eslint-config-airbnb-base \
 eslint-config-airbnb-typescript \
@@ -74,6 +75,7 @@ eslint-plugin-vitest
 @next/eslint-plugin-next \
 @typescript-eslint/eslint-plugin \
 @typescript-eslint/parser \
+@vercel/style-guide \
 eslint \
 eslint-config-airbnb-base \
 eslint-config-airbnb-typescript \
