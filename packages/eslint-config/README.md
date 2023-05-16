@@ -15,6 +15,26 @@ Nozomi's Recommended [eslint](https://eslint.org/) Config.
 yarn add -D eslint typescript eslint-define-config @nozomiishii/eslint-config && touch .eslintrc.cjs
 ```
 
+scriptの設定
+
+```bash
+pnpm pkg set scripts.eslint="eslint . --max-warnings=0 --ignore-path .gitignore" \
+pnpm pkg set scripts.lint="yarn eslint" \
+pnpm pkg set scripts.lint:fix="yarn eslint --fix"
+```
+
+package.json
+
+```json
+{
+  "scripts": {
+    "eslint": "eslint . --max-warnings=0 --ignore-path .gitignore",
+    "lint": "yarn eslint",
+    "lint:fix": "yarn eslint --fix",
+  }
+}
+```
+
 .eslintrc.cjs
 
 ```js
@@ -66,3 +86,10 @@ eslint-plugin-tsdoc \
 eslint-plugin-unicorn \
 eslint-plugin-vitest
 ```
+
+## 便利そうなカスタムルールたち
+
+### 特定のimportを禁止
+
+[no-restricted-imports](https://eslint.org/docs/latest/rules/no-restricted-imports)
+[ESLintで特定のimportを禁止する](https://blog.mahoroi.com/posts/2019/03/eslint-no-restricted-import/)
