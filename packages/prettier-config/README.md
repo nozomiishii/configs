@@ -56,7 +56,7 @@ yarn add -D @prettier/plugin-ruby
 ### Create `.prettierrc.js`
 
 ```bash
-echo "module.exports = require('@nozomiishii/prettier-config');" > .prettierrc.js
+echo "module.exports = require('@nozomiishii/prettier-config');" > prettier.config.cjs
 ```
 
 #### [Alternative] Edit `package.json`
