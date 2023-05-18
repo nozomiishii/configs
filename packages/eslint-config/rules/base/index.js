@@ -9,6 +9,8 @@ module.exports = defineConfig({
     browser: true,
     node: true,
   },
+  // バチバチにルール確定したらnoInlineConfigで部分上書きできないようにしても良いかも
+  // noInlineConfig: true,
   reportUnusedDisableDirectives: true,
   extends: [
     require.resolve('./airbnb'),

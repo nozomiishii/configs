@@ -87,7 +87,7 @@ eslint-plugin-unicorn \
 eslint-plugin-vitest
 ```
 
-## 便利そうなカスタムルールたち
+## その他便利そうなカスタムルールたち（プロジェクトによって入れたい）
 
 ### 特定のimportを禁止
 
