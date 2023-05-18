@@ -1,0 +1,22 @@
+{
+  "name": "@nozomiishii/lefthook",
+  "version": "0.0.0",
+  "description": "Nozomi's Recommended lefthook config",
+  "keywords": [
+    "lefthook",
+    "githooks",
+    "config"
+  ],
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/lefthook/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozomiishii/configs.git",
+    "directory": "packages/lefthook"
+  },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
+  "main": "index.yaml",
+  "publishConfig": {
+    "access": "public"
+  }
+}
