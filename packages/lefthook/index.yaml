@@ -1,7 +1,7 @@
 # Refer for explanation to following link:
 # https://github.com/evilmartians/lefthook
 
-source_dir: ./.lefthook
+source_dir: packages/lefthook/.lefthook/
 
 pre-commit:
   parallel: true
