@@ -1,6 +1,6 @@
 # @nozomiishii/lefthook
 
-Nozomi's Recommended [lefthook](https://github.com/evilmartians/lefthook) workflows.
+Nozomi's Recommended [lefthook](https://github.com/evilmartians/lefthook) config.
 
 <!-- Main Image -->
 <br>
@@ -11,12 +11,20 @@ Nozomi's Recommended [lefthook](https://github.com/evilmartians/lefthook) workfl
 
 ## Gist
 
+### Remote config
+
 lefthook.yaml or lefthook-local.yaml
 
 ```yaml
 remote:
   git_url: https://github.com/nozomiishii/configs
   config: packages/lefthook/index.yaml
+```
+
+update config
+
+```sh
+npx lefthook install
 ```
 
 [See more details](https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md)

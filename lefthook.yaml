@@ -1,2 +1,2 @@
 extends:
-  - packages/lefthook/index.yaml
+  - packages/lefthook-config/index.yaml
