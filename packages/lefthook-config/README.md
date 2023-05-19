@@ -18,7 +18,7 @@ lefthook.yaml or lefthook-local.yaml
 ```yaml
 remote:
   git_url: https://github.com/nozomiishii/configs
-  config: packages/lefthook/index.yaml
+  config: packages/lefthook-config/index.yaml
 ```
 
 update config
