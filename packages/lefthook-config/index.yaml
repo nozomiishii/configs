@@ -7,7 +7,7 @@ pre-commit:
   parallel: true
 
   commands:
-    format:
+    format-prettier:
       # Markdown formatting is the responsibility of the markdownlint
       exclude: ".*\\.md$"
       run: npx -y prettier {staged_files} --ignore-unknown --ignore-path .gitignore --write
@@ -20,6 +20,11 @@ pre-commit:
       files: git diff --name-only --staged
       glob: '*.yml'
       run: echo "Error! ".yml" extension found, please use ".yaml" instead." && exit 1
+
+    lint-file-extension-test:
+      files: git diff --name-only --staged
+      glob: '*.spec.{js,ts}'
+      run: echo "Error! ".spec.{js,ts}" extension found, please use ".test.ts" instead." && exit 1
 
     lint-file-extension-storybook:
       files: git diff --name-only --staged
