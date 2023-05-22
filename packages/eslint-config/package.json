@@ -17,7 +17,7 @@
   "author": "Nozomi Ishii",
   "main": "index.js",
   "dependencies": {
-    "@next/eslint-plugin-next": "13.4.2",
+    "@next/eslint-plugin-next": "13.4.3",
     "@typescript-eslint/eslint-plugin": "5.59.6",
     "@typescript-eslint/parser": "5.59.6",
     "@vercel/style-guide": "4.0.2",
