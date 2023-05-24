@@ -30,7 +30,7 @@ module.exports = defineConfig({
     // interfaceではなくtypeを使う
     '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
 
-    // EnumではなくUnion typeを使う
+    // EnumではなくTypeを使う
     'no-restricted-syntax': [
       'error',
       {
@@ -38,5 +38,21 @@ module.exports = defineConfig({
         message: "Don't use enums. Use Union type instead.",
       },
     ],
+
+    // auto fixがまだ対応してない
+    // https://github.com/typescript-eslint/typescript-eslint/issues/2296
+    '@typescript-eslint/member-ordering': [
+      'error',
+      {
+        default: {
+          memberTypes: ['signature', 'field', 'static-initialization', 'constructor', 'get', 'set', 'method'],
+          optionalityOrder: 'required-first',
+          order: 'natural',
+        },
+      },
+    ],
+
+    // Union TypesとIntersection Typesの並び順
+    '@typescript-eslint/sort-type-constituents': 'warn',
   },
 });

@@ -10,10 +10,10 @@ module.exports = defineConfig({
     'import',
 
     /**
-     * eslint-plugin-sort-keys-custom-order
-     * {@link https://www.npmjs.com/package/eslint-plugin-sort-keys-custom-order}
+     * eslint-plugin-sort
+     * {@link https://www.npmjs.com/package/eslint-plugin-sort}
      */
-    'sort-keys-custom-order',
+    'sort',
   ],
   rules: {
     // return句の改行ルール
@@ -29,44 +29,63 @@ module.exports = defineConfig({
     // import句の後改行する
     'import/newline-after-import': ['warn', { considerComments: true }],
 
-    // import文の並び替え
-    'import/order': [
+    /**
+     * 分割代入の並び替え
+     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/HEAD/docs/rules/destructuring-properties.md}
+     */
+    'sort/destructuring-properties': ['warn', { caseSensitive: false, natural: true }],
+
+    /**
+     * export句の並び替え
+     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/main/docs/rules/exports.md}
+     */
+    'sort/exports': [
       'warn',
       {
-        alphabetize: { caseInsensitive: true, order: 'asc' },
-        groups: ['builtin', 'external', 'internal', ['parent', 'sibling'], 'object', 'type', 'index'],
-        'newlines-between': 'never',
-        pathGroupsExcludedImportTypes: ['builtin'],
+        groups: [
+          { type: 'dependency', order: 10 },
+          { type: 'other', order: 20 },
+          { type: 'sourceless', order: 30 },
+          { type: 'default', order: 40 },
+        ],
+        caseSensitive: false,
+        natural: true,
       },
     ],
 
     /**
-     * keyを並び替え
-     * {@link https://github.com/hugoattal/eslint-plugin-sort-keys-custom-order}
+     * export句のオブジェクト並び替え
+     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/main/docs/rules/export-members.md}
      */
-    'sort-keys-custom-order/export-object-keys': [
+    'sort/export-members': ['warn', { caseSensitive: false, natural: true }],
+
+    /**
+     * import句の並び替え
+     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/main/docs/rules/exports.md}
+     */
+    'sort/imports': [
       'warn',
       {
-        orderedKeys: ['id', 'key', 'name', 'title', 'default'],
+        groups: [
+          { type: 'side-effect', order: 10 },
+          { type: 'dependency', order: 20 },
+          { type: 'other', order: 30 },
+        ],
+        caseSensitive: false,
+        natural: true,
       },
     ],
-    'sort-keys-custom-order/import-object-keys': [
-      'warn',
-      {
-        orderedKeys: ['id', 'key', 'name', 'title', 'default'],
-      },
-    ],
-    'sort-keys-custom-order/object-keys': [
-      'warn',
-      {
-        orderedKeys: ['id', 'key', 'name', 'title', 'default'],
-      },
-    ],
-    'sort-keys-custom-order/type-keys': [
-      'warn',
-      {
-        orderedKeys: ['id', 'key', 'name', 'title', 'default'],
-      },
-    ],
+
+    /**
+     * import句のオブジェクト並び替え
+     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/HEAD/docs/rules/import-members.md}
+     */
+    'sort/import-members': ['warn', { caseSensitive: false, natural: true }],
+
+    /**
+     * オブジェクト並び替え
+     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/HEAD/docs/rules/object-properties.md}
+     */
+    'sort/object-properties': ['warn', { caseSensitive: false, natural: true }],
   },
 });
