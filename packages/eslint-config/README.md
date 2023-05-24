@@ -78,7 +78,7 @@ eslint-plugin-jsx-a11y \
 eslint-plugin-playwright \
 eslint-plugin-react \
 eslint-plugin-react-hooks \
-eslint-plugin-sort-keys-custom-order \
+eslint-plugin-sort \
 eslint-plugin-storybook \
 eslint-plugin-tailwindcss \
 eslint-plugin-testing-library \
