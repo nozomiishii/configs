@@ -1,5 +1,11 @@
 # Refer for explanation to following link:
 # https://github.com/evilmartians/lefthook
+#
+# Run the command to test:
+#   npx lefthook run -v <hook-name>
+#
+# Example:
+#   npx lefthook run -v post-merge
 
 source_dir: .lefthook/
 
@@ -49,8 +55,14 @@ post-merge:
     # If you have set 'git config pull.rebase true', use the 'post-rewrite' hook instead of the 'post-merge' hook.
     update-node-modules:
       files: git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD
-      glob: '**/{package.json,yarn.lock}'
-      run: yarn install
+      glob: '**/{package.json,pnpm-lock.yaml,yarn.lock,package-lock.json}'
+      run: |
+        if ! command -v ni > /dev/null 2>&1; then
+          echo "🥊 @antfu/ni doesn't exist, continuing with install"
+          npm i -g @antfu/ni
+        fi
+
+        ni
 
     delete-merged-branches:
       run: git branch --merged | grep -Ev '\*|master|main|dev|develop|development|stag|staging|prod|production' | xargs git branch -d; git fetch --prune;
