@@ -1,2 +1,11 @@
+# Refer for explanation to following link:
+# https://github.com/evilmartians/lefthook
+#
+# Run the command to test:
+#   npx -y lefthook run -v <hook-name>
+#
+# Example:
+#   npx -y lefthook run -v post-merge
+
 extends:
   - packages/lefthook-config/index.yaml
