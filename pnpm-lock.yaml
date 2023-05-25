@@ -8,8 +8,8 @@ importers:
         specifier: 17.6.3
         version: 17.6.3
       '@evilmartians/lefthook':
-        specifier: 1.4.0
-        version: 1.4.0
+        specifier: 1.4.1
+        version: 1.4.1
 
   packages/eslint-config:
     dependencies:
@@ -80,8 +80,8 @@ importers:
         specifier: 47.0.0
         version: 47.0.0(eslint@8.41.0)
       eslint-plugin-vitest:
-        specifier: 0.2.2
-        version: 0.2.2(eslint@8.41.0)(typescript@4.8.2)
+        specifier: 0.2.3
+        version: 0.2.3(eslint@8.41.0)(typescript@4.8.2)
       globals:
         specifier: 13.20.0
         version: 13.20.0
@@ -384,8 +384,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
-  /@evilmartians/lefthook@1.4.0:
-    resolution: {integrity: sha512-1Wppuw/Vi0F+HfTm5n9TykzTIHphFUl+nNlHc15rFlFSGm+l0mo7zi9Y1AE4+9Z9Bx3eK6Tes98MLojiSreL5Q==}
+  /@evilmartians/lefthook@1.4.1:
+    resolution: {integrity: sha512-9DV4lN4BK7M+NPHgxbWF52ikLDy1k2R27/Wlb24tWaYjY0ZrA+FPDZn/uoJtgEEDxoipEFhtc9jpP+x/4YN4mg==}
     cpu: [x64, arm64, ia32]
     os: [darwin, linux, win32]
     hasBin: true
@@ -1743,8 +1743,8 @@ packages:
       strip-indent: 3.0.0
     dev: false
 
-  /eslint-plugin-vitest@0.2.2(eslint@8.41.0)(typescript@4.8.2):
-    resolution: {integrity: sha512-f6E90twgtAAuIE8P2YOy4f1RBVbZ0NB9yoyeHSpwYL6xiNxT4fmq6UHZoR4tHN+NMkbtAoZtiTr1EmqSpB2C4A==}
+  /eslint-plugin-vitest@0.2.3(eslint@8.41.0)(typescript@4.8.2):
+    resolution: {integrity: sha512-eqyiIY0Hhyp/2+AgNDDFrVhVT0hSXMbAyjFLB87E5CCHxelH9eNrJZe9qVElPPVpuJ201nQ/wmUupaO5EguxKQ==}
     engines: {node: 14.x || >= 16}
     peerDependencies:
       eslint: '>=8.0.0'
