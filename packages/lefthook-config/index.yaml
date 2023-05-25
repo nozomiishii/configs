@@ -15,7 +15,7 @@ pre-commit:
   commands:
     format-prettier:
       # Markdown formatting is the responsibility of the markdownlint
-      exclude: ".*\\.md$"
+      exclude: ".*\\.md$|.*pnpm-lock\\.yaml$"
       run: npx -y prettier {staged_files} --ignore-unknown --ignore-path .gitignore --write
 
     lint-markdown:
