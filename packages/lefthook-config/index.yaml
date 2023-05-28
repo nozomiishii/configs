@@ -12,7 +12,7 @@
 source_dir: .lefthook/
 
 extends:
-  - packages/lefthook-config/hooks/commit-msg/format-prettier.yaml
+  # - packages/lefthook-config/hooks/commit-msg/format-prettier.yaml
 
 pre-commit:
   parallel: true
