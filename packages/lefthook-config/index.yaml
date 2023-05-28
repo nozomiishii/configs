@@ -4,20 +4,20 @@
 # Run the command to test:
 #   npx -y lefthook run -v <hook-name>
 #
-# Example:
+# Examples:
+#   npx -y lefthook run -v pre-commit
+#   npx -y lefthook run -v commit-msg
 #   npx -y lefthook run -v post-merge
 
 source_dir: .lefthook/
+
+extends:
+  - packages/lefthook-config/hooks/commit-msg/format-prettier.yaml
 
 pre-commit:
   parallel: true
 
   commands:
-    format-prettier:
-      # Markdown formatting is the responsibility of the markdownlint
-      exclude: ".*\\.md$|.*pnpm-lock\\.yaml$"
-      run: npx -y prettier {staged_files} --ignore-unknown --ignore-path .gitignore --write
-
     lint-markdown:
       glob: '*.md'
       run: npx -y markdownlint-cli2 {staged_files}
