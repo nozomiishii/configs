@@ -57,12 +57,23 @@ post-merge:
       files: git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD
       glob: '**/{package.json,pnpm-lock.yaml,yarn.lock,package-lock.json}'
       run: |
-        if ! command -v ni > /dev/null 2>&1; then
-          echo "🥊 @antfu/ni doesn't exist, continuing with install"
-          npm i -g @antfu/ni
+        if [ -f "pnpm-lock.yaml" ]; then
+          echo "🥊 Installing dependencies with pnpm..."
+          pnpm install
+          exit 0
         fi
 
-        ni
+        if [ -f "yarn.lock" ]; then
+          echo "🥊 Installing dependencies with yarn..."
+          yarn install
+          exit 0
+        fi
+
+        if [ -f "package-lock.json" ]; then
+          echo "🥊 Installing dependencies with npm..."
+          npm install
+          exit 0
+        fi
 
     delete-merged-branches:
       run: git branch --merged | grep -Ev '\*|master|main|dev|develop|development|stag|staging|prod|production' | xargs git branch -d; git fetch --prune;
