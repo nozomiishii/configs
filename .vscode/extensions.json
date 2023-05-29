@@ -22,6 +22,7 @@
     "formulahendry.code-runner",
     "editorconfig.editorconfig",
     "scaffdog.scaffdog-vscode",
+    "jock.svg",
 
     // ----------------------------------------------------------------
     // Git
