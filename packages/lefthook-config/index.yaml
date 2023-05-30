@@ -51,10 +51,13 @@ commit-msg:
 
         # For remote config
         # https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md#remote
-        if [ -f "packages/cspell-config/index.cjs" ]; then
-          npx -y cspell {1} --config packages/cspell-config/index.cjs
-          exit 0
-        fi
+        configURL="https://raw.githubusercontent.com/nozomiishii/configs/main/packages/cspell-config/index.cjs"
+        configFile="tmp/cspell-config.cjs"
+
+        wget -O "$configFile" "$configURL"
+
+        npx -y cspell {1} --config "$configFile" --verbose
+        rm "$configFile"
 
 post-merge:
   parallel: true
