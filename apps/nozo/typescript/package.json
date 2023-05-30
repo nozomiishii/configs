@@ -1,6 +1,6 @@
 {
   "name": "nozo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Nozomi config manager",
   "keywords": [
     "config"
@@ -8,11 +8,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
-    "directory": "packages/nozo"
+    "directory": "apps/typescript/nozo"
   },
   "license": "MIT",
   "author": "Nozomi Ishii",
   "main": "src/index.js",
+  "bin": "src/index.js",
   "dependencies": {},
   "publishConfig": {
     "access": "public"

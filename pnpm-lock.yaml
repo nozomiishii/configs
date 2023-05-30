@@ -17,6 +17,8 @@ importers:
         specifier: workspace:*
         version: link:packages/lefthook-config
 
+  apps/nozo/typescript: {}
+
   packages/cspell-config: {}
 
   packages/eslint-config:
