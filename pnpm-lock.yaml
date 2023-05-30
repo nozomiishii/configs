@@ -10,6 +10,12 @@ importers:
       '@evilmartians/lefthook':
         specifier: 1.4.1
         version: 1.4.1
+      '@nozomiishii/cspell-config':
+        specifier: workspace:*
+        version: link:packages/cspell-config
+      '@nozomiishii/lefthook-config':
+        specifier: workspace:*
+        version: link:packages/lefthook-config
 
   packages/cspell-config: {}
 

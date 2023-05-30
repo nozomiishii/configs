@@ -9,8 +9,6 @@
 #   npx -y lefthook run -v commit-msg
 #   npx -y lefthook run -v post-merge
 
-source_dir: .lefthook/
-
 extends:
   # - packages/lefthook-config/hooks/commit-msg/format-prettier.yaml
 
@@ -44,9 +42,19 @@ commit-msg:
     commitlint:
       run: npx -y commitlint --edit {1} --verbose
 
-  scripts:
-    'spell-check.sh':
-      runner: bash
+    cspell:
+      run: |
+        if [ -f "./node_modules/@nozomiishii/cspell-config" ]; then
+          npx -y cspell {1} --config ./node_modules/@nozomiishii/cspell-config
+          exit 0
+        fi
+
+        # For remote config
+        # https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md#remote
+        if [ -f "packages/cspell-config/index.cjs" ]; then
+          npx -y cspell {1} --config packages/cspell-config/index.cjs
+          exit 0
+        fi
 
 post-merge:
   parallel: true

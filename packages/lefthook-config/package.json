@@ -7,15 +7,18 @@
     "githooks",
     "config"
   ],
-  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/lefthook/README.md",
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/lefthook-config/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
-    "directory": "packages/lefthook"
+    "directory": "packages/lefthook-config"
   },
   "license": "MIT",
   "author": "Nozomi Ishii",
   "main": "index.yaml",
+  "dependencies": {
+    "@nozomiishii/cspell-config": "workspace:*"
+  },
   "publishConfig": {
     "access": "public"
   }

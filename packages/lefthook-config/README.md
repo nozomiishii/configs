@@ -1,4 +1,4 @@
-# @nozomiishii/lefthook
+# @nozomiishii/lefthook-config
 
 Nozomi's Recommended [lefthook](https://github.com/evilmartians/lefthook) config.
 

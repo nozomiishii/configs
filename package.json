@@ -20,7 +20,9 @@
   "main": "README.md",
   "devDependencies": {
     "@commitlint/config-conventional": "17.6.3",
-    "@evilmartians/lefthook": "1.4.1"
+    "@evilmartians/lefthook": "1.4.1",
+    "@nozomiishii/cspell-config": "workspace:*",
+    "@nozomiishii/lefthook-config": "workspace:*"
   },
   "packageManager": "pnpm@8.5.1",
   "volta": {
