@@ -11,6 +11,8 @@ importers:
         specifier: 1.4.1
         version: 1.4.1
 
+  packages/cspell-config: {}
+
   packages/eslint-config:
     dependencies:
       '@next/eslint-plugin-next':
@@ -96,7 +98,11 @@ importers:
         specifier: 20.1.4
         version: 20.1.4
 
-  packages/lefthook-config: {}
+  packages/lefthook-config:
+    dependencies:
+      '@nozomiishii/cspell-config':
+        specifier: workspace:*
+        version: link:../cspell-config
 
   packages/markdownlint-cli2-config: {}
 

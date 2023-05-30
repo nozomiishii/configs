@@ -4,6 +4,9 @@
       "path": "."
     },
     {
+      "path": "packages/cspell-config"
+    },
+    {
       "path": "packages/eslint-config"
     },
     {

@@ -22,6 +22,7 @@
 
 | Package | Version |
 | ------- | ------- |
+| [@nozomiishii/cspell-config](./packages/cspell-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fcspell-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fcspell-config) |
 | [@nozomiishii/eslint-config](./packages/eslint-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Feslint-config.svg)](https://badge.fury.io/js/@nozomiishii%2Feslint-config) |
 | [@nozomiishii/lefthook-config](./packages/lefthook-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Flefthook-config.svg)](https://badge.fury.io/js/@nozomiishii%2Flefthook-config) |
 | [@nozomiishii/markdownlint-cli2-config](./packages/markdownlint-cli2-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fmarkdownlint-cli2-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fmarkdownlint-cli2-config) |
