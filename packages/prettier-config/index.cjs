@@ -21,6 +21,8 @@ const options = {
   insertPragma: false,
   proseWrap: 'preserve',
   htmlWhitespaceSensitivity: 'css',
+
+  plugins: ['prettier-plugin-packagejson'],
 };
 
 module.exports = options;
