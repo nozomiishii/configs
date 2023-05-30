@@ -14,7 +14,7 @@ Nozomi's Recommended [cspell](https://cspell.org/) config.
 ### Run
 
 ```sh
-npx -y cspell "**" --config ./node_modules/@nozomiishii/cspell-config
+npx -y @nozomiishii/cspell-config "**"
 ```
 
 [See more details](https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md)

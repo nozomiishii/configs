@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/cspell-config",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Nozomi's Recommended cspell config",
   "keywords": [
     "cspell",
@@ -15,7 +15,9 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "main": "index.cjs",
-  "bin": "./bin/cli.sh",
+  "bin": {
+    "@nozomiishii/cspell-config": "bin/cli.js"
+  },
   "publishConfig": {
     "access": "public"
   }
