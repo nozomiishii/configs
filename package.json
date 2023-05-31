@@ -24,7 +24,7 @@
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*"
   },
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.6.0",
   "volta": {
     "node": "18.16.0",
     "pnpm": "8.5.1"
