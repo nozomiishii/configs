@@ -16,5 +16,3 @@ Nozomi's Recommended [cspell](https://cspell.org/) config.
 ```sh
 npx -y @nozomiishii/cspell-config "**"
 ```
-
-[See more details](https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md)

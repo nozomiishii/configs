@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/cspell-config",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Nozomi's Recommended cspell config",
   "keywords": [
     "cspell",
@@ -16,6 +16,9 @@
   "author": "Nozomi Ishii",
   "main": "index.cjs",
   "bin": "bin/cli.cjs",
+  "devDependencies": {
+    "cspell": "6.31.1"
+  },
   "publishConfig": {
     "access": "public"
   }

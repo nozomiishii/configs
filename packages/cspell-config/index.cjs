@@ -1,4 +1,8 @@
-module.exports = {
+// @ts-check
+const path = require('path');
+
+/** @type {import('cspell').CSpellUserSettingsWithComments} */
+const config = {
   version: '0.2',
   language: 'en',
   // 外部辞書
@@ -10,7 +14,7 @@ module.exports = {
   dictionaryDefinitions: [
     {
       name: 'custom-dictionary',
-      path: './dictionaries/customised.txt',
+      path: path.resolve(__dirname, './dictionaries/customised.txt'),
       addWords: true,
     },
   ],
@@ -41,3 +45,5 @@ module.exports = {
   ],
   ignorePaths: [],
 };
+
+module.exports = config;
