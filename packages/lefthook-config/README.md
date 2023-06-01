@@ -14,7 +14,7 @@ Nozomi's Recommended [lefthook](https://github.com/evilmartians/lefthook) config
 ### Use as Dependency
 
 ```sh
-pnpm install @nozomiishii/lefthook-config
+pnpm add @nozomiishii/lefthook-config
 ```
 
 lefthook.yaml
