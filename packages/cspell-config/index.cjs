@@ -1,7 +1,5 @@
-// @ts-check
 const path = require('path');
 
-/** @type {import('cspell').CSpellUserSettingsWithComments} */
 const config = {
   version: '0.2',
   language: 'en',
