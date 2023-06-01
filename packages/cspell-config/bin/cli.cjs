@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 const { spawnSync } = require('child_process');
+const path = require('path');
 
-const configPath = require.resolve('../index.cjs');
+const configPath = path.resolve(__dirname, '../index.cjs');
 const args = process.argv.slice(2);
 
 const result = spawnSync('npx', ['-y', 'cspell', '--config', configPath, ...args], {
