@@ -43,21 +43,7 @@ commit-msg:
       run: npx -y commitlint --edit {1} --verbose
 
     cspell:
-      run: |
-        if [ -f "./node_modules/@nozomiishii/cspell-config" ]; then
-          npx -y cspell {1} --config ./node_modules/@nozomiishii/cspell-config
-          exit 0
-        fi
-
-        # For remote config
-        # https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md#remote
-        configURL="https://raw.githubusercontent.com/nozomiishii/configs/main/packages/cspell-config/index.cjs"
-        configFile="tmp/cspell-config.cjs"
-
-        wget -O "$configFile" "$configURL"
-
-        npx -y cspell {1} --config "$configFile" --verbose
-        rm "$configFile"
+      run: npx -y @nozomiishii/cspell-config@latest {1}
 
 post-merge:
   parallel: true
