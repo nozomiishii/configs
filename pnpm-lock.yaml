@@ -110,11 +110,7 @@ importers:
         specifier: 20.1.4
         version: 20.1.4
 
-  packages/lefthook-config:
-    dependencies:
-      '@nozomiishii/cspell-config':
-        specifier: workspace:*
-        version: link:../cspell-config
+  packages/lefthook-config: {}
 
   packages/markdownlint-cli2-config: {}
 

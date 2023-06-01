@@ -11,7 +11,20 @@ Nozomi's Recommended [lefthook](https://github.com/evilmartians/lefthook) config
 
 ## Gist
 
-### Remote config
+### Use as Dependency
+
+```sh
+pnpm install @nozomiishii/lefthook-config
+```
+
+lefthook.yaml
+
+```yaml
+extends:
+  - ./node_modules/@nozomiishii/lefthook-config/index.yaml
+```
+
+### Use as remote config
 
 lefthook.yaml or lefthook-local.yaml
 

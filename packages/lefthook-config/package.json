@@ -16,9 +16,6 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "main": "index.yaml",
-  "dependencies": {
-    "@nozomiishii/cspell-config": "workspace:*"
-  },
   "publishConfig": {
     "access": "public"
   }
