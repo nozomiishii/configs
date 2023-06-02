@@ -24,6 +24,10 @@ extends:
   - ./node_modules/@nozomiishii/lefthook-config/index.yaml
 ```
 
+```sh
+npx lefthook install
+```
+
 ### Use as remote config
 
 lefthook.yaml or lefthook-local.yaml
@@ -33,8 +37,6 @@ remote:
   git_url: https://github.com/nozomiishii/configs
   config: packages/lefthook-config/index.yaml
 ```
-
-update config
 
 ```sh
 npx lefthook install

@@ -19,16 +19,10 @@ pnpm
 pnpm add -D @nozomiishii/prettier-config && echo "module.exports = require('@nozomiishii/prettier-config');" > prettier.config.cjs
 ```
 
-yarn
-
-```bash
-yarn add -D @nozomiishii/prettier-config && echo "module.exports = require('@nozomiishii/prettier-config');" > prettier.config.cjs
-```
-
 ## Install
 
 ```bash
-yarn add -D @nozomiishii/prettier-config
+pnpm add -D @nozomiishii/prettier-config
 ```
 
 - `@nozomiishii/prettier-config`だけでいい。`prettier`別途入れなくていい。
@@ -48,7 +42,7 @@ yarn add -D @nozomiishii/prettier-config
   - プロジェクト内でshellが多い場合は、[shfmt](https://github.com/mvdan/sh)のほうがいいかも
 
 ```sh
-yarn add -D @prettier/plugin-ruby
+pnpm add -D @prettier/plugin-ruby
 ```
 
 ## Setup
@@ -75,8 +69,8 @@ npm pkg set prettier="@nozomiishii/prettier-config"
 ## Scripts for package.json
 
 ```bash
-npm pkg set scripts.format="yarn prettier --check"
-npm pkg set scripts.format:fix="yarn prettier --write"
+npm pkg set scripts.format="pnpm prettier --check"
+npm pkg set scripts.format:fix="pnpm prettier --write"
 npm pkg set scripts.prettier="prettier . '!**/*.md' --ignore-unknown --ignore-path .gitignore"
 ```
 
@@ -84,8 +78,8 @@ npm pkg set scripts.prettier="prettier . '!**/*.md' --ignore-unknown --ignore-pa
 
 ```json
 {
-  "format": "yarn prettier --check",
-  "format:fix": "yarn prettier --write",
+  "format": "pnpm prettier --check",
+  "format:fix": "pnpm prettier --write",
   "prettier": "prettier . '!**/*.md' --ignore-unknown --ignore-path .gitignore",
 }
 ```
@@ -220,7 +214,7 @@ touch .prettierignore
 
 ## FAQ
 
-- 別途prettierインストールしてなくても`@nozomiishii/prettier-config`だけでyarn prettierが通るのか
+- 別途prettierインストールしてなくても`@nozomiishii/prettier-config`だけでpnpm prettierが通るのか
   - 通る
 
 ## References

@@ -12,15 +12,15 @@ Nozomi's Recommended [eslint](https://eslint.org/) Config.
 ## Gist
 
 ```bash
-yarn add -D eslint typescript eslint-define-config @nozomiishii/eslint-config && touch .eslintrc.cjs
+pnpm add -D eslint typescript eslint-define-config @nozomiishii/eslint-config && touch .eslintrc.cjs
 ```
 
 scriptの設定
 
 ```bash
 pnpm pkg set scripts.eslint="eslint . --max-warnings=0 --ignore-path .gitignore" \
-pnpm pkg set scripts.lint="yarn eslint" \
-pnpm pkg set scripts.lint:fix="yarn eslint --fix"
+pnpm pkg set scripts.lint="pnpm eslint" \
+pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
 ```
 
 package.json
@@ -29,8 +29,8 @@ package.json
 {
   "scripts": {
     "eslint": "eslint . --max-warnings=0 --ignore-path .gitignore",
-    "lint": "yarn eslint",
-    "lint:fix": "yarn eslint --fix",
+    "lint": "pnpm eslint",
+    "lint:fix": "pnpm eslint --fix",
   }
 }
 ```

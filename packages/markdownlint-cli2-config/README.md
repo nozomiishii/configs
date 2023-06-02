@@ -12,5 +12,5 @@ Nozomi's Recommended [markdownlint-cli2](https://github.com/DavidAnson/markdownl
 ## Gist
 
 ```bash
-yarn add -D @nozomiishii/markdownlint-cli2-config && echo "module.exports = require('@nozomiishii/markdownlint-cli2-config');" > .markdownlint-cli2.cjs
+pnpm add -D @nozomiishii/markdownlint-cli2-config && echo "module.exports = require('@nozomiishii/markdownlint-cli2-config');" > .markdownlint-cli2.cjs
 ```

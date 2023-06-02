@@ -18,13 +18,12 @@ if ! type node > /dev/null 2>&1; then
 fi
 
 printf "🐉: Enable corepack...\n"
-corepack enable
-corepack enable npm
-yarn -v
+corepack enable pnpm yarn npm
+pnpm -v
 printf "Enable corepack completed\n\n"
 
 printf "🐉: Install Node modules...\n"
-yarn install
+pnpm install
 printf "Install Node modules completed\n\n"
 
 # ----------------------------------------------------------------
