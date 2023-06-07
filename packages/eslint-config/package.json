@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/eslint-config",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "description": "Nozomi's Recommended eslint config",
   "keywords": [
     "eslint",
@@ -16,6 +16,7 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "main": "index.js",
+  "bin": "bin/cli.sh",
   "dependencies": {
     "@next/eslint-plugin-next": "13.4.4",
     "@typescript-eslint/eslint-plugin": "5.59.8",

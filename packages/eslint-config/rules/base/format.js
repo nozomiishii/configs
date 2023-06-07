@@ -61,7 +61,7 @@ module.exports = defineConfig({
 
     /**
      * import句の並び替え
-     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/main/docs/rules/exports.md}
+     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/main/docs/rules/imports.md}
      */
     'sort/imports': [
       'warn',

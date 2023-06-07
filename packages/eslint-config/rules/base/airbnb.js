@@ -10,7 +10,7 @@ module.exports = defineConfig({
     'airbnb-base',
   ],
   rules: {
-    // ++表現不可。for文ないでは++表現可
+    // ++表現不可。for文内では++表現可
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
 
     // ./format.jsで定義

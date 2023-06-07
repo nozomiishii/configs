@@ -12,6 +12,12 @@ Nozomi's Recommended [eslint](https://eslint.org/) Config.
 ## Gist
 
 ```bash
+npx -y @nozomiishii/eslint-config@latest
+```
+
+## Manual
+
+```bash
 pnpm add -D eslint typescript eslint-define-config @nozomiishii/eslint-config && touch .eslintrc.cjs
 ```
 
