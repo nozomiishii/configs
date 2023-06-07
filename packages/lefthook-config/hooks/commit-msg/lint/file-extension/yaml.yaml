@@ -1,0 +1,6 @@
+pre-commit:
+  commands:
+    lint-file-extension-yaml:
+      files: git diff --name-only --staged
+      glob: '*.yml'
+      run: echo "Error! ".yml" extension found, please use ".yaml" instead." && exit 1

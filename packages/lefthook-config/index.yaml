@@ -11,6 +11,7 @@
 
 extends:
   # - packages/lefthook-config/hooks/commit-msg/format-prettier.yaml
+  - packages/lefthook-config/hooks/commit-msg/lint/file-extension/yaml.yaml
 
 pre-commit:
   parallel: true
