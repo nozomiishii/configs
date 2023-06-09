@@ -1,0 +1,6 @@
+pre-commit:
+  commands:
+    lint-file-extension-test:
+      files: git diff --name-only --staged
+      glob: '*.spec.{js,ts}'
+      run: echo "Error! ".spec.{js,ts}" extension found, please use ".test.ts" instead." && exit 1
