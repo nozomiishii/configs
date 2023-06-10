@@ -10,9 +10,13 @@
 #   npx -y lefthook run -v post-merge
 
 extends:
+  # ----------------------------------------------------------------
+  # pre-commit
+  # ----------------------------------------------------------------
   # - packages/lefthook-config/hooks/commit-msg/format-prettier.yaml
   - packages/lefthook-config/hooks/commit-msg/lint/file-extension/yaml.yaml
   - packages/lefthook-config/hooks/commit-msg/lint/file-extension/test.yaml
+  - packages/lefthook-config/hooks/commit-msg/lint/file-extension/storybook.yaml
 
 pre-commit:
   parallel: true
@@ -21,11 +25,6 @@ pre-commit:
     lint-markdown:
       glob: '*.md'
       run: npx -y markdownlint-cli2 {staged_files}
-
-    lint-file-extension-storybook:
-      files: git diff --name-only --staged
-      glob: '*.story.{tsx,mdx}'
-      run: echo "Error! "*.story.{tsx,mdx}" extension found, please use "*.stories.{tsx,mdx}" instead." && exit 1
 
 commit-msg:
   parallel: true
