@@ -1,0 +1,5 @@
+pre-commit:
+  commands:
+    lint-markdown:
+      glob: '*.md'
+      run: npx -y markdownlint-cli2 {staged_files}

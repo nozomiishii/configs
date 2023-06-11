@@ -17,14 +17,10 @@ extends:
   - packages/lefthook-config/hooks/pre-commit/lint/file-extension/yaml.yaml
   - packages/lefthook-config/hooks/pre-commit/lint/file-extension/test.yaml
   - packages/lefthook-config/hooks/pre-commit/lint/file-extension/storybook.yaml
+  - packages/lefthook-config/hooks/pre-commit/lint/markdown.yaml
 
 pre-commit:
   parallel: true
-
-  commands:
-    lint-markdown:
-      glob: '*.md'
-      run: npx -y markdownlint-cli2 {staged_files}
 
 commit-msg:
   parallel: true
