@@ -25,6 +25,25 @@ module.exports = defineConfig({
         prev: '*',
       },
     ],
+    // // import文の並び替え
+    // 'import/order': [
+    //   'warn',
+    //   {
+    //     alphabetize: { caseInsensitive: true, order: 'asc' },
+    //     groups: ['builtin', 'external', 'internal', 'parent', 'sibling'],
+    //     pathGroups: [
+    //       {
+    //         pattern: '~/**',
+    //         group: 'internal',
+    //       },
+    //       {
+    //         pattern: '@/**',
+    //         group: 'internal',
+    //       },
+    //     ],
+    //     'newlines-between': 'never',
+    //   },
+    // ],
 
     // import句の後改行する
     'import/newline-after-import': ['warn', { considerComments: true }],
