@@ -10,6 +10,7 @@ module.exports = defineConfig({
     'plugin:eslint-comments/recommended',
   ],
   rules: {
-    'eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }],
+    // 'eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }]だと'use client'に対応できない
+    'eslint-comments/disable-enable-pair': 'off',
   },
 });
