@@ -18,6 +18,10 @@ extends:
   - packages/lefthook-config/hooks/pre-commit/lint/file-extension/test.yaml
   - packages/lefthook-config/hooks/pre-commit/lint/file-extension/storybook.yaml
   - packages/lefthook-config/hooks/pre-commit/lint/markdown.yaml
+  # ----------------------------------------------------------------
+  # commit-msg
+  # ----------------------------------------------------------------
+  - packages/lefthook-config/hooks/commit-msg/commitlint.yaml
 
 pre-commit:
   parallel: true
@@ -26,9 +30,6 @@ commit-msg:
   parallel: true
 
   commands:
-    commitlint:
-      run: npx -y commitlint --edit {1} --verbose
-
     cspell:
       run: npx -y @nozomiishii/cspell-config@latest {1}
 
