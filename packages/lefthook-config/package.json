@@ -18,5 +18,8 @@
   "main": "index.yaml",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@evilmartians/lefthook": "1.4.1"
   }
 }

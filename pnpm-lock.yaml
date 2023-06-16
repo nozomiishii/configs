@@ -110,7 +110,11 @@ importers:
         specifier: 20.1.4
         version: 20.1.4
 
-  packages/lefthook-config: {}
+  packages/lefthook-config:
+    dependencies:
+      '@evilmartians/lefthook':
+        specifier: 1.4.1
+        version: 1.4.1
 
   packages/markdownlint-cli2-config: {}
 
@@ -404,7 +408,6 @@ packages:
     os: [darwin, linux, win32]
     hasBin: true
     requiresBuild: true
-    dev: true
 
   /@humanwhocodes/config-array@0.11.10:
     resolution: {integrity: sha512-KVVjQmNUepDVGXNuoRRdmmEjruj0KfiGSbS8LVc12LMsWDQzRXJ0qdhN8L8uUigKpfEHRhlaQFY0ib1tnUbNeQ==}
