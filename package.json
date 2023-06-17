@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "17.6.5",
-    "@evilmartians/lefthook": "1.4.1",
+    "@evilmartians/lefthook": "1.4.2",
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*"
   },
