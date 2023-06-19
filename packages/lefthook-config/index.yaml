@@ -22,16 +22,13 @@ extends:
   # commit-msg
   # ----------------------------------------------------------------
   - packages/lefthook-config/hooks/commit-msg/commitlint.yaml
+  - packages/lefthook-config/hooks/commit-msg/spell.yaml
 
 pre-commit:
   parallel: true
 
 commit-msg:
   parallel: true
-
-  commands:
-    cspell:
-      run: npx -y @nozomiishii/cspell-config@latest {1}
 
 post-merge:
   parallel: true

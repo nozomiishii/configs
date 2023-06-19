@@ -1,0 +1,4 @@
+commit-msg:
+  commands:
+    cspell:
+      run: npx -y @nozomiishii/cspell-config@latest {1}
