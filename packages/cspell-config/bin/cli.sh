@@ -8,6 +8,8 @@
 # -x          : (Optional) Enable command tracing for easier debugging
 set -Ceuo pipefail
 
-configPath="$(realpath "$(dirname "$0")/../index.cjs")"
+cli_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+
+configPath="$cli_dir/../index.cjs"
 
 npx -y cspell --config "$configPath" "$@"
