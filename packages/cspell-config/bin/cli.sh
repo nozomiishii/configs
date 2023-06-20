@@ -10,6 +10,8 @@ set -Ceuo pipefail
 
 cli_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
+echo "$cli_dir"
+
 configPath="$cli_dir/../index.cjs"
 
 npx -y cspell --config "$configPath" "$@"
