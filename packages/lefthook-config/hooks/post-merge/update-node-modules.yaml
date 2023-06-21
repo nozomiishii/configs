@@ -1,0 +1,26 @@
+post-merge:
+  parallel: true
+
+  commands:
+    # If you have set 'git config pull.rebase true', use the 'post-rewrite' hook instead of the 'post-merge' hook.
+    update-node-modules:
+      files: git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD
+      glob: '**/{package.json,pnpm-lock.yaml,yarn.lock,package-lock.json}'
+      run: |
+        if [ -f "pnpm-lock.yaml" ]; then
+          echo "🥊 Installing dependencies with pnpm..."
+          pnpm install
+          exit 0
+        fi
+
+        if [ -f "yarn.lock" ]; then
+          echo "🥊 Installing dependencies with yarn..."
+          yarn install
+          exit 0
+        fi
+
+        if [ -f "package-lock.json" ]; then
+          echo "🥊 Installing dependencies with npm..."
+          npm install
+          exit 0
+        fi
