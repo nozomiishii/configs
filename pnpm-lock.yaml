@@ -12,8 +12,8 @@ importers:
         specifier: 17.6.5
         version: 17.6.5
       '@evilmartians/lefthook':
-        specifier: 1.4.2
-        version: 1.4.2
+        specifier: 1.4.3
+        version: 1.4.3
       '@nozomiishii/cspell-config':
         specifier: workspace:*
         version: link:packages/cspell-config
@@ -113,8 +113,8 @@ importers:
   packages/lefthook-config:
     dependencies:
       '@evilmartians/lefthook':
-        specifier: 1.4.2
-        version: 1.4.2
+        specifier: 1.4.3
+        version: 1.4.3
 
   packages/markdownlint-cli2-config: {}
 
@@ -402,8 +402,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
-  /@evilmartians/lefthook@1.4.2:
-    resolution: {integrity: sha512-YTsQB9QzJcT5bHfzjQbLHFEtsHn0lxnd/yDpQnHwMUwTNfKGo9H+slCd24JN4snvifDVUyvQ5MX63FJWDHrIUw==}
+  /@evilmartians/lefthook@1.4.3:
+    resolution: {integrity: sha512-m9MMFdDqFpsctUev3pk4sGzjKXpYFZH9MTVSGrnAjo8HsP0XZ/L/UgPXY75BNUtqU+hvXCmBF8mxSLU93kjhvA==}
     cpu: [x64, arm64, ia32]
     os: [darwin, linux, win32]
     hasBin: true
