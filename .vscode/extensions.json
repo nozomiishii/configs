@@ -76,6 +76,7 @@
     // ----------------------------------------------------------------
     "bradlc.vscode-tailwindcss",
     "stylelint.vscode-stylelint",
+    "chakra-ui.panda-css-vscode",
 
     // ----------------------------------------------------------------
     // Yaml
