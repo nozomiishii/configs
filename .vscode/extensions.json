@@ -23,6 +23,7 @@
     "editorconfig.editorconfig",
     "scaffdog.scaffdog-vscode",
     "jock.svg",
+    "figma.figma-vscode-extension",
 
     // ----------------------------------------------------------------
     // Git
