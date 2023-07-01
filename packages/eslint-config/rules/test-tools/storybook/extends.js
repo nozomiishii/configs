@@ -31,5 +31,15 @@ module.exports = defineConfig({
         '@typescript-eslint/await-thenable': 'off',
       },
     },
+    {
+      files: ['**/.storybook/main.*'],
+      rules: {
+        /**
+         * addonのinstall漏れ防止
+         * {@link https://github.com/storybookjs/eslint-plugin-storybook/blob/HEAD/docs/rules/no-uninstalled-addons.md}
+         */
+        'storybook/no-uninstalled-addons': 'error',
+      },
+    },
   ],
 });
