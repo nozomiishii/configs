@@ -15,26 +15,24 @@ module.exports = defineConfig({
       'warn',
       {
         replacements: {
-          args: {
-            arguments: false,
-          },
-          env: {
-            environment: false,
-          },
-          e: {
-            event: false,
-          },
-          props: {
-            properties: false,
-          },
-          req: {
-            request: false,
-          },
-          res: {
-            response: false,
-          },
+          args: false,
+          env: false,
+          e: false,
+          props: false,
+          req: false,
+          res: false,
+          ref: false,
         },
       },
     ],
   },
+  overrides: [
+    {
+      files: ['**/*.tsx'],
+      rules: {
+        // React Componentでは条件によってはnullを返せるようにしたい
+        'unicorn/no-null': 'off',
+      },
+    },
+  ],
 });
