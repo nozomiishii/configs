@@ -18,6 +18,7 @@ npm pkg set scripts.prettier="prettier . '!**/*.md' --ignore-unknown --ignore-pa
 
 echo -e "Creating prettier.config.cjs"
 find . -type f -name '.prettierrc*' -delete
+find . -type f -name 'prettier.config.cjs' -delete
 echo "module.exports = require('@nozomiishii/prettier-config');" > prettier.config.cjs
 
 echo -e "All set! Your Prettier configuration has been set up successfully🎉"
