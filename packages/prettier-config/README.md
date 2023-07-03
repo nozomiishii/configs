@@ -16,7 +16,7 @@ Nozomi's Recommended [Prettier](https://prettier.io) Config.
 pnpm
 
 ```bash
-pnpm add -D @nozomiishii/prettier-config && echo "module.exports = require('@nozomiishii/prettier-config');" > prettier.config.cjs
+npx -y @nozomiishii/prettier-config@latest
 ```
 
 ## Install
