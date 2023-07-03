@@ -2,6 +2,7 @@
 const { defineConfig } = require('eslint-define-config');
 
 module.exports = defineConfig({
+  ignorePatterns: ['!**/.storybook'],
   overrides: [
     {
       files: ['**/.storybook/**', '**/.storybook**'],
