@@ -1,6 +1,4 @@
 post-merge:
-  parallel: true
-
   commands:
     # If you have set 'git config pull.rebase true', use the 'post-rewrite' hook instead of the 'post-merge' hook.
     update-node-modules:

@@ -27,6 +27,7 @@ extends:
   # post-merge
   # ----------------------------------------------------------------
   - packages/lefthook-config/hooks/post-merge/update-node-modules.yaml
+  - packages/lefthook-config/hooks/post-merge/delete-merged-branches.yaml
 
 pre-commit:
   parallel: true
@@ -36,7 +37,3 @@ commit-msg:
 
 post-merge:
   parallel: true
-
-  commands:
-    delete-merged-branches:
-      run: git branch --merged | grep -Ev '\*|master|main|dev|develop|development|stag|staging|prod|production' | xargs git branch -d; git fetch --prune;

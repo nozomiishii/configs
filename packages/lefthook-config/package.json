@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/lefthook-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nozomi's Recommended lefthook config",
   "keywords": [
     "lefthook",
@@ -16,10 +16,10 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "main": "index.yaml",
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "@evilmartians/lefthook": "1.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
