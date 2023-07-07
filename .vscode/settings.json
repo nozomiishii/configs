@@ -3,17 +3,9 @@
   // File associations
   // ----------------------------------------------------------------
   "files.associations": {
+    "CODEOWNERS": "ignore",
     ".tool-versions": "properties",
-    "LICENSE": "plaintext",
-    ".env.sample": "dotenv",
-    "CODEOWNERS": "ignore"
-  },
-
-  // ----------------------------------------------------------------
-  // Yaml
-  // ----------------------------------------------------------------
-  "yaml.schemas": {
-    "https://json.schemastore.org/github-workflow.json": "../.github/workflows/*"
+    ".actrc": "properties"
   },
 
   // ----------------------------------------------------------------
