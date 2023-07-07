@@ -5,7 +5,7 @@
   "files.associations": {
     "CODEOWNERS": "ignore",
     ".tool-versions": "properties",
-    ".actrc": "properties"
+    ".actrc*": "properties"
   },
 
   // ----------------------------------------------------------------
