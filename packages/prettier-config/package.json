@@ -18,7 +18,7 @@
   "bin": "bin/cli.sh",
   "dependencies": {
     "prettier": "2.8.8",
-    "prettier-plugin-packagejson": "2.4.3"
+    "prettier-plugin-packagejson": "2.4.4"
   },
   "publishConfig": {
     "access": "public"
