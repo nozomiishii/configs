@@ -45,6 +45,6 @@
 
     // Strict mode
     "strict": true
-  },
+  }
 }
 ```

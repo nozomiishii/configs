@@ -47,31 +47,19 @@ pnpm add -D @prettier/plugin-ruby
 
 ## Setup
 
-### Create `.prettierrc.js`
+### Create `prettier.config.js`
 
 ```bash
-echo "module.exports = require('@nozomiishii/prettier-config');" > prettier.config.cjs
-```
-
-#### [Alternative] Edit `package.json`
-
-```bash
-npm pkg set prettier="@nozomiishii/prettier-config"
-```
-
-```jsonc
-{
-  // ...
-  "prettier": "@nozomiishii/prettier-config"
-}
+echo "export { default } from '@nozomiishii/prettier-config';" > prettier.config.js
 ```
 
 ## Scripts for package.json
 
 ```bash
+npm pkg set type="module"
 npm pkg set scripts.format="pnpm prettier --check"
 npm pkg set scripts.format:fix="pnpm prettier --write"
-npm pkg set scripts.prettier="prettier . '!**/*.md' --ignore-unknown --ignore-path .gitignore"
+npm pkg set scripts.prettier="prettier . --ignore-unknown"
 ```
 
 `package.json`
@@ -80,7 +68,7 @@ npm pkg set scripts.prettier="prettier . '!**/*.md' --ignore-unknown --ignore-pa
 {
   "format": "pnpm prettier --check",
   "format:fix": "pnpm prettier --write",
-  "prettier": "prettier . '!**/*.md' --ignore-unknown --ignore-path .gitignore",
+  "prettier": "prettier . --ignore-unknown"
 }
 ```
 
@@ -92,38 +80,40 @@ npmの場合は`format`や`format:fix`の際、
 --(Double Dash)とは、-h, -vみたいなフラグの読み取りを終了させる。  
 --(Double Dash)以降の入力はargsとして取り込まれる。
 
-- [npm run とかで使うハイフン2つ「--」の意味 - Neo's World](https://neos21.net/blog/2018/09/13-01.html)  
+- [npm run とかで使うハイフン2つ「--」の意味 - Neo's World](https://neos21.net/blog/2018/09/13-01.html)
 - [The How? & Why? of the Double Dash (--) Delimiter on macOS, Linux, bash - YouTube](https://www.youtube.com/watch?v=K1zVrLi8NBA)
 
 ### 解説
 
 - `--write`
-  - 対象ファイルをフォーマット。  
+  - 対象ファイルをフォーマット。
 - `--check`
-  - prettierでフォーマットがかかってるかチェックする。CIに入れとくと便利。  
+  - prettierでフォーマットがかかってるかチェックする。CIに入れとくと便利。
 - `--ignore-unknown`
-  - prettierに対応してない拡張子は無視する。  
+  - prettierに対応してない拡張子は無視する。
 - `--ignore-path .gitignore`
-  - .gitignoreしてるfileはフォーマットかけない。  
+  - .gitignoreしてるfileはフォーマットかけない。
 - `'!**/*.md'`
   - !をつけてファイル指定することでフォーマットから除外できる
-    - [prettierとmarkdownと日本語の相性の悩み]
-    - PrettierのMarkdownフォーマットに日本語が混じってると、英語と日本語の間にスペースが勝手に挿入されたり挙動が謎い。MarkdownのフォーマットはMarkdownlintにまかせる。もしくは `.`で全体指定してからブラックリストで弾くのではなく`**/*.{ts,tsx}`てきにホワイトリストで管理した方がいいかもしれない、、、
 
 ## Preferences
 
-- `"arrowParens": "always"`  
+- `"arrowParens": "always"`
+
   - const fn = (a) ⇒ {}　かconst fn = a ⇒ {}って書くか
   - パラメータ加えていくのに楽したいので()ありで
 
 - `"bracketSpacing": true`
+
   - import {a} from "module"　かimport { a } from "module"
   - trueが好み
 
 - `"htmlWhitespaceSensitivity": "css"`
+
   - default
 
 - `"insertPragma": false`
+
   - default
 
 - `"jsxBracketSameLine": false`
@@ -147,39 +137,46 @@ npmの場合は`format`や`format:fix`の際、
 </button>
 ```
 
-- `"jsxSingleQuote": false`  
+- `"jsxSingleQuote": false`
+
   - default
 
-- `"printWidth": 119`  
-  - 1行あたりの文字数。  
+- `"printWidth": 119`
+
+  - 1行あたりの文字数。
   - Githubのコードレビュー画面の幅と同じ
 
-- `"proseWrap": "preserve"`  
+- `"proseWrap": "preserve"`
+
   - default
 
-- `"quoteProps": "as-needed"`  
+- `"quoteProps": "as-needed"`
+
   - default
 
-- `"requirePragma": false`  
+- `"requirePragma": false`
+
   - default
 
-- `"semi": true`  
+- `"semi": true`
   - セミコロンがあったほうがJavaScript感あって好き。好み
   - 即時関数のときに以下みたい括弧の前にセミコロンがつくようになるのもあんまり好きじゃない
 
 ```typescript
-;(function () {
+(function () {
   // code...
-})()
+})();
 ```
 
-- `"singleQuote": true`  
+- `"singleQuote": true`
+
   - ダブルクオート派だったけど、なんとなくtutorialの先生たちがシングルクオート多くて、それに合わせて
 
-- `"tabWidth": 2`  
+- `"tabWidth": 2`
+
   - タブ2のほうがJavaScriptっぽい気がしてる。好み
 
-- `"trailingComma": "all"`  
+- `"trailingComma": "all"`
   - 全部にカンマあったほうがgitの差分に出てこないからall
 
 ```tsx
@@ -191,7 +188,7 @@ const id = {
 };
 ```
 
-- `"useTabs": false`  
+- `"useTabs": false`
   - タブ幅は開発者の環境依存する。spaceは倍打鍵しなきゃいけない。自分はタブで打つけどprettierにスペースに変換してもらう。
 
 ## .prettierignore

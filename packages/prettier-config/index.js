@@ -3,9 +3,9 @@
  * Prettier options
  * {@link https://prettier.io/docs/en/options.html}
  *
- * @type {import("prettier").Options}
+ * @type {import("prettier").Config}
  */
-const options = {
+export default {
   printWidth: 119,
   tabWidth: 2,
   useTabs: false,
@@ -21,8 +21,16 @@ const options = {
   insertPragma: false,
   proseWrap: 'preserve',
   htmlWhitespaceSensitivity: 'css',
+  embeddedLanguageFormatting: 'auto',
 
   plugins: ['prettier-plugin-packagejson'],
-};
 
-module.exports = options;
+  overrides: [
+    {
+      files: '**/pnpm-lock.yaml',
+      options: {
+        requirePragma: true,
+      },
+    },
+  ],
+};
