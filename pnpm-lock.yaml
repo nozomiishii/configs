@@ -20,6 +20,9 @@ importers:
       '@nozomiishii/lefthook-config':
         specifier: workspace:*
         version: link:packages/lefthook-config
+      '@nozomiishii/prettier-config':
+        specifier: workspace:*
+        version: link:packages/prettier-config
 
   apps/nozo/typescript: {}
 

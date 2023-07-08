@@ -17,15 +17,20 @@
   },
   "license": "MIT",
   "author": "Nozomi Ishii",
+  "type": "module",
   "main": "README.md",
   "scripts": {
-    "reset:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
+    "format": "pnpm prettier --check",
+    "format:fix": "pnpm prettier --write",
+    "prettier": "prettier . --ignore-unknown",
+    "reset:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && pnpm install"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "17.6.6",
     "@evilmartians/lefthook": "1.4.3",
     "@nozomiishii/cspell-config": "workspace:*",
-    "@nozomiishii/lefthook-config": "workspace:*"
+    "@nozomiishii/lefthook-config": "workspace:*",
+    "@nozomiishii/prettier-config": "workspace:*"
   },
   "packageManager": "pnpm@8.6.6",
   "volta": {

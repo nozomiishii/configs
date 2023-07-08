@@ -36,7 +36,7 @@ package.json
   "scripts": {
     "eslint": "eslint . --max-warnings=0 --ignore-path .gitignore",
     "lint": "pnpm eslint",
-    "lint:fix": "pnpm eslint --fix",
+    "lint:fix": "pnpm eslint --fix"
   }
 }
 ```
@@ -62,7 +62,6 @@ module.exports = defineConfig({
 
   extends: '@nozomiishii',
 });
-
 ```
 
 ## Dependencies

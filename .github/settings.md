@@ -4,7 +4,7 @@
 
 ```shell
 # https://docs.github.com/en/rest/repos/repos#update-a-repository
-# 
+#
 # GitHub CLI api
 # https://cli.github.com/manual/gh_api
 
@@ -17,12 +17,12 @@ gh api \
   -F allow_squash_merge=true \
   -F allow_merge_commit=false \
   -F allow_rebase_merge=false \
-  -F allow_auto_merge=true 
+  -F allow_auto_merge=true
   # -f description='' \
 ```
 
 `-F`: typed parameter  
-`-f`: string parameter  
+`-f`: string parameter
 
 ### example
 

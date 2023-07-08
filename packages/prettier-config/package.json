@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/prettier-config",
-  "version": "0.2.6",
+  "version": "0.3.1",
   "description": "Nozomi's Recommended Prettier config",
   "keywords": [
     "prettier",
@@ -14,7 +14,12 @@
   },
   "license": "MIT",
   "author": "Nozomi Ishii",
-  "main": "index.cjs",
+  "type": "module",
+  "exports": {
+    "import": "./index.js",
+    "require": "./index.js"
+  },
+  "main": "index.js",
   "bin": "bin/cli.sh",
   "dependencies": {
     "prettier": "3.0.0",
