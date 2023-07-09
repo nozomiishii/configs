@@ -31,7 +31,12 @@ extends:
 
 EOF
 
-echo -e "Init"
+echo -e "Installing lefthook Git hooks"
+
+if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+  git init
+fi
+
 npx lefthook install
 
 echo -e "All set! Your lefthook configuration has been set up successfully🎉"
