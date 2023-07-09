@@ -27,7 +27,7 @@ export default {
 
   overrides: [
     {
-      files: 'pnpm-lock.yaml',
+      files: ['pnpm-lock.yaml', 'submodules/**'],
       options: {
         requirePragma: true,
       },
