@@ -11,10 +11,16 @@ Nozomi's Recommended [lefthook](https://github.com/evilmartians/lefthook) config
 
 ## Gist
 
+```sh
+npx -y @nozomiishii/lefthook-config@latest
+```
+
+## Manual
+
 ### Use as Dependency
 
 ```sh
-pnpm add @nozomiishii/lefthook-config
+pnpm add -D lefthook @nozomiishii/lefthook-config
 ```
 
 lefthook.yaml
