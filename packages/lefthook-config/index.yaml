@@ -29,8 +29,14 @@ extends:
   - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/update-node-modules.yaml
   - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/delete-merged-branches.yaml
 
-# pre-commit:
-#   parallel: true
+pre-commit:
+  parallel: true
+
+  commands:
+    test:
+      run: |
+        echo 'test'
+        pwd
 
 commit-msg:
   parallel: true
