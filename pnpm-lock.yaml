@@ -23,6 +23,9 @@ importers:
       '@nozomiishii/prettier-config':
         specifier: workspace:*
         version: link:packages/prettier-config
+      '@types/node':
+        specifier: 20.4.0
+        version: 20.4.0
 
   apps/nozo/typescript: {}
 

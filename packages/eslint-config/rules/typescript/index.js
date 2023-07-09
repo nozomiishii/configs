@@ -54,5 +54,8 @@ module.exports = defineConfig({
 
     // Union TypesとIntersection Typesの並び順
     '@typescript-eslint/sort-type-constituents': 'warn',
+
+    // Promiseをちゃんと処理する。VoidやIIFEは無視してよい。
+    '@typescript-eslint/no-floating-promises': ['error', { ignoreVoid: true, ignoreIIFE: true }],
   },
 });
