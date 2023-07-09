@@ -29,8 +29,8 @@ extends:
   - packages/lefthook-config/hooks/post-merge/update-node-modules.yaml
   - packages/lefthook-config/hooks/post-merge/delete-merged-branches.yaml
 
-pre-commit:
-  parallel: true
+# pre-commit:
+#   parallel: true
 
 commit-msg:
   parallel: true
