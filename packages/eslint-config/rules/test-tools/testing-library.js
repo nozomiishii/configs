@@ -13,6 +13,10 @@ module.exports = defineConfig({
          */
         'plugin:testing-library/react',
       ],
+      rules: {
+        // DevDependenciesでいい
+        'import/no-extraneous-dependencies': 'off',
+      },
     },
   ],
 });

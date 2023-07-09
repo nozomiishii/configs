@@ -13,6 +13,9 @@ module.exports = defineConfig({
         'plugin:playwright/playwright-test',
       ],
       rules: {
+        // DevDependenciesでいい
+        'import/no-extraneous-dependencies': 'off',
+
         /**
          * テストタイトルは小文字からはじめる
          * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-lowercase-title.md}

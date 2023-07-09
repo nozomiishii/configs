@@ -14,6 +14,9 @@ module.exports = defineConfig({
         'plugin:vitest/all',
       ],
       rules: {
+        // DevDependenciesでいい
+        'import/no-extraneous-dependencies': 'off',
+
         // itでなくtest句でテスト書く
         'vitest/consistent-test-it': ['warn', { fn: 'test' }],
 

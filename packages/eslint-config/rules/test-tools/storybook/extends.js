@@ -7,7 +7,7 @@ module.exports = defineConfig({
     {
       files: ['**/.storybook/**', '**/.storybook**'],
       rules: {
-        // devDependenciesで良い
+        // DevDependenciesでいい
         'import/no-extraneous-dependencies': 'off',
       },
     },
