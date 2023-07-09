@@ -37,6 +37,6 @@ if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
   git init
 fi
 
-npx lefthook install
+npx -y lefthook install --verbose
 
 echo -e "All set! Your lefthook configuration has been set up successfully🎉"
