@@ -9,37 +9,41 @@
 #   npx -y lefthook run --verbose commit-msg
 #   npx -y lefthook run --verbose post-merge
 
-extends:
-  # ----------------------------------------------------------------
-  # pre-commit
-  # ----------------------------------------------------------------
-  # - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/format/prettier.yaml
-  # - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/lint/file-extension/yaml.yaml
-  # - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/lint/file-extension/test.yaml
-  # - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/lint/file-extension/storybook.yaml
-  # - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/lint/markdown.yaml
-  # ----------------------------------------------------------------
-  # commit-msg
-  # ----------------------------------------------------------------
-  - node_modules/@nozomiishii/lefthook-config/hooks/commit-msg/commitlint.yaml
-  - node_modules/@nozomiishii/lefthook-config/hooks/commit-msg/spell.yaml
-  # ----------------------------------------------------------------
-  # post-merge
-  # ----------------------------------------------------------------
-  - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/update-node-modules.yaml
-  - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/delete-merged-branches.yaml
-
-pre-commit:
-  parallel: true
-
-  commands:
-    test:
-      run: |
-        echo 'test'
-        pwd
-
 commit-msg:
   parallel: true
 
+  commands:
+    commitlint:
+      run: npx -y commitlint --edit {1} --verbose
+
+    cspell:
+      run: npx -y @nozomiishii/cspell-config@latest {1}
+
 post-merge:
   parallel: true
+
+  commands:
+    delete-merged-branches:
+      run: git branch --merged | grep -Ev '\*|master|main|dev|develop|development|stag|staging|prod|production' | xargs git branch -d; git fetch --prune;
+
+    update-node-modules:
+      files: git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD
+      glob: '**/{package.json,pnpm-lock.yaml,yarn.lock,package-lock.json}'
+      run: |
+        if [ -f "pnpm-lock.yaml" ]; then
+          echo "🥊 Installing dependencies with pnpm..."
+          pnpm install
+          exit 0
+        fi
+
+        if [ -f "yarn.lock" ]; then
+          echo "🥊 Installing dependencies with yarn..."
+          yarn install
+          exit 0
+        fi
+
+        if [ -f "package-lock.json" ]; then
+          echo "🥊 Installing dependencies with npm..."
+          npm install
+          exit 0
+        fi
