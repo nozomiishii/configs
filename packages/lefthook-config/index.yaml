@@ -13,21 +13,21 @@ extends:
   # ----------------------------------------------------------------
   # pre-commit
   # ----------------------------------------------------------------
-  # - packages/lefthook-config/hooks/pre-commit/format/prettier.yaml
-  # - packages/lefthook-config/hooks/pre-commit/lint/file-extension/yaml.yaml
-  # - packages/lefthook-config/hooks/pre-commit/lint/file-extension/test.yaml
-  # - packages/lefthook-config/hooks/pre-commit/lint/file-extension/storybook.yaml
-  # - packages/lefthook-config/hooks/pre-commit/lint/markdown.yaml
+  # - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/format/prettier.yaml
+  # - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/lint/file-extension/yaml.yaml
+  # - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/lint/file-extension/test.yaml
+  # - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/lint/file-extension/storybook.yaml
+  # - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/lint/markdown.yaml
   # ----------------------------------------------------------------
   # commit-msg
   # ----------------------------------------------------------------
-  - packages/lefthook-config/hooks/commit-msg/commitlint.yaml
-  - packages/lefthook-config/hooks/commit-msg/spell.yaml
+  - node_modules/@nozomiishii/lefthook-config/hooks/commit-msg/commitlint.yaml
+  - node_modules/@nozomiishii/lefthook-config/hooks/commit-msg/spell.yaml
   # ----------------------------------------------------------------
   # post-merge
   # ----------------------------------------------------------------
-  - packages/lefthook-config/hooks/post-merge/update-node-modules.yaml
-  - packages/lefthook-config/hooks/post-merge/delete-merged-branches.yaml
+  - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/update-node-modules.yaml
+  - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/delete-merged-branches.yaml
 
 # pre-commit:
 #   parallel: true

@@ -34,7 +34,8 @@ extends:
 npx lefthook install
 ```
 
-### Use as remote config
+<!-- renovate対応しなきゃいけないのと、extendsのpathが変わるのでindex-remote.yaml的なの作らなきゃかな-->
+<!-- ### Use as remote config
 
 lefthook.yaml or lefthook-local.yaml
 
@@ -48,4 +49,4 @@ remote:
 npx lefthook install
 ```
 
-[See more details](https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md)
+[See more details](https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md) -->
