@@ -18,7 +18,10 @@ module.exports = defineConfig({
     require.resolve('./rules/react'),
     require.resolve('./rules/next'),
     require.resolve('./rules/tailwindcss'),
-    require.resolve('./rules/test-tools'),
+    require.resolve('./rules/vitest'),
+    require.resolve('./rules/testing-library'),
+    require.resolve('./rules/storybook'),
+    require.resolve('./rules/playwright'),
     require.resolve('./rules/prettier'),
   ],
 });
