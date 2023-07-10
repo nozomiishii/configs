@@ -5,12 +5,15 @@ Nozomi's Recommended [markdownlint-cli2](https://github.com/DavidAnson/markdownl
 <!-- Main Image -->
 <br>
 <div align="center">
-  <img src="https://media.giphy.com/media/e0R1WZcRnfK991XoIl/giphy.gif" alt="Coding" width="480" />
+  <img src="https://media.giphy.com/media/SJJIVTh7YV9MtuRFTL/giphy.gif" alt="Coding" width="480" />
+</div>
+<div align="right">
+  <small>via Jimmy Arca on GIPHY</small>
 </div>
 <br>
 
 ## Gist
 
 ```bash
-pnpm add -D @nozomiishii/markdownlint-cli2-config && echo "module.exports = require('@nozomiishii/markdownlint-cli2-config');" > .markdownlint-cli2.cjs
+npx -y @nozomiishii/markdownlint-cli2-config@latest
 ```

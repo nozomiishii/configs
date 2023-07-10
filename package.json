@@ -30,6 +30,7 @@
     "@evilmartians/lefthook": "1.4.3",
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
+    "@nozomiishii/markdownlint-cli2-config": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
     "@types/node": "20.4.0"
   },
