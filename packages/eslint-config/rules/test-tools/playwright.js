@@ -16,6 +16,24 @@ module.exports = defineConfig({
         // DevDependenciesでいい
         'import/no-extraneous-dependencies': 'off',
 
+        // 明示的にvitestからimportする
+        // @types/testing-library__jest-domのせいで勝手にjest.testなどがglobal変数として扱われるため
+        'no-restricted-globals': [
+          'error',
+          {
+            name: 'test',
+            message: "Use import { test } from '@playwright/test' instead",
+          },
+          {
+            name: 'describe',
+            message: "Use import { describe } from '@playwright/test' instead",
+          },
+          {
+            name: 'expect',
+            message: "Use import { expect } from '@playwright/test' instead",
+          },
+        ],
+
         /**
          * テストタイトルは小文字からはじめる
          * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-lowercase-title.md}
