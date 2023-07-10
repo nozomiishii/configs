@@ -25,6 +25,9 @@ jobs:
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Publish
         run: pnpm publish --filter @nozomiishii/markdownlint-cli2-config
         env:
