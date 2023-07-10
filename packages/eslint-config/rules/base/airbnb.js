@@ -15,5 +15,8 @@ module.exports = defineConfig({
 
     // ./format.jsで定義
     'import/order': 'off',
+
+    // Default exportの強制はしない
+    'import/prefer-default-export': 'off',
   },
 });
