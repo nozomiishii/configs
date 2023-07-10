@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/eslint-config",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Nozomi's Recommended eslint config",
   "keywords": [
     "eslint",
