@@ -31,5 +31,5 @@ module.exports = {
     MD033: false,
   },
 
-  ignores: ['**/node_modules', '.git', '**/submodules'],
+  ignores: ['**/node_modules', '**/submodules', 'LICENSE', '.git'],
 };
