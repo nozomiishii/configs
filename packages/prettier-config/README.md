@@ -7,6 +7,9 @@ Nozomi's Recommended [Prettier](https://prettier.io) Config.
 <div align="center">
   <img src="https://media.giphy.com/media/3o6Zt9ADoZ9grTGu1a/giphy.gif" alt="Coding" width="480" />
 </div>
+<div align="right">
+  <small>via South Park on GIPHY</small>
+</div>
 <br>
 
 ## Gist

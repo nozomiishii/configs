@@ -7,6 +7,9 @@ Nozomi's Recommended [eslint](https://eslint.org/) Config.
 <div align="center">
   <img src="https://media.giphy.com/media/FHEjBpiqMwSuA/giphy.gif" alt="Coding" width="480" />
 </div>
+<div align="right">
+  <small>via GIPHY</small>
+</div>
 <br>
 
 ## Gist

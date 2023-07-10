@@ -5,6 +5,9 @@
 <div align="center">
   <img src="https://media.giphy.com/media/3o7bujyYv1d9ZVD3z2/giphy.gif" alt="Coding" width="480" />
 </div>
+<div align="right">
+  <small>via Adult Swim Games on GIPHY</small>
+</div>
 <br>
 
 <!-- shields -->
