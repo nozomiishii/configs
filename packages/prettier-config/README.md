@@ -8,7 +8,7 @@ Nozomi's Recommended [Prettier](https://prettier.io) Config.
   <img src="https://media.giphy.com/media/3o6Zt9ADoZ9grTGu1a/giphy.gif" alt="Coding" width="480" />
 </div>
 <div align="right">
-  <small>via South Park on GIPHY</small>
+  <p style="font-size: 0.75em; color: #656D76;">via South Park on GIPHY</p>
 </div>
 <br>
 
