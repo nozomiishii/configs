@@ -21,7 +21,10 @@ export default {
   insertPragma: false,
   proseWrap: 'preserve',
   htmlWhitespaceSensitivity: 'css',
+  vueIndentScriptAndStyle: false,
+  endOfLine: 'lf',
   embeddedLanguageFormatting: 'auto',
+  singleAttributePerLine: false,
 
   plugins: ['prettier-plugin-packagejson'],
 
