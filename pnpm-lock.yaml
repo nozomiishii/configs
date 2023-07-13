@@ -12,8 +12,8 @@ importers:
         specifier: 17.6.6
         version: 17.6.6
       '@evilmartians/lefthook':
-        specifier: 1.4.3
-        version: 1.4.3
+        specifier: 1.4.4
+        version: 1.4.4
       '@nozomiishii/cspell-config':
         specifier: workspace:*
         version: link:packages/cspell-config
@@ -420,8 +420,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
-  /@evilmartians/lefthook@1.4.3:
-    resolution: {integrity: sha512-m9MMFdDqFpsctUev3pk4sGzjKXpYFZH9MTVSGrnAjo8HsP0XZ/L/UgPXY75BNUtqU+hvXCmBF8mxSLU93kjhvA==}
+  /@evilmartians/lefthook@1.4.4:
+    resolution: {integrity: sha512-0DyKAkDHzI76Xs7a9kdozCkOXqdgHcAmG873d9Zv3BgG7oP1dGN4osPQPBLEi+gLAoI+f5cMZf5wWld0+es7Kw==}
     cpu: [x64, arm64, ia32]
     os: [darwin, linux, win32]
     hasBin: true
