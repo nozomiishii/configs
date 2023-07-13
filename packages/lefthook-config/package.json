@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/lefthook-config",
-  "version": "0.0.11",
+  "version": "0.0.13",
   "description": "Nozomi's Recommended lefthook config",
   "keywords": [
     "lefthook",
@@ -18,10 +18,10 @@
   "main": "index.yaml",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "lefthook": "1.4.3"
+    "@evilmartians/lefthook": "1.4.5"
   },
   "peerDependencies": {
-    "lefthook": ">=1.4.0"
+    "@evilmartians/lefthook": ">=1.4.0"
   },
   "publishConfig": {
     "access": "public"

@@ -9,7 +9,7 @@
 set -Ceuo pipefail
 
 echo -e "Installing dependencies..."
-pnpm add -D lefthook @nozomiishii/lefthook-config
+pnpm add -D @evilmartians/lefthook @nozomiishii/lefthook-config
 
 echo -e "Creating lefthook.yaml"
 find . -type f -name 'lefthook.*' -delete
