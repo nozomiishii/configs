@@ -10,21 +10,8 @@ module.exports = defineConfig({
     'plugin:unicorn/recommended',
   ],
   rules: {
-    // 略語の許容
-    'unicorn/prevent-abbreviations': [
-      'warn',
-      {
-        replacements: {
-          args: false,
-          env: false,
-          e: false,
-          props: false,
-          req: false,
-          res: false,
-          ref: false,
-        },
-      },
-    ],
+    // 略語の制限は今のところしなくてもいい。やるなら明示的にreplacementを記載していく
+    'unicorn/prevent-abbreviations': 'off',
   },
   overrides: [
     {
