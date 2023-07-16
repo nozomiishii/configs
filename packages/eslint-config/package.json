@@ -24,7 +24,7 @@
     "@vercel/style-guide": "4.0.2",
     "eslint": "8.44.0",
     "eslint-config-airbnb-base": "15.0.0",
-    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-airbnb-typescript": "17.1.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-define-config": "1.21.0",
     "eslint-import-resolver-typescript": "3.5.5",
