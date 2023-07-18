@@ -13,9 +13,9 @@ module.exports = defineConfig({
      * @typescript-eslint/eslint-plugin
      * {@link https://www.npmjs.com/package/@typescript-eslint/eslint-plugin}
      */
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:@typescript-eslint/strict',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
+    'plugin:@typescript-eslint/strict-type-checked',
     require.resolve('./tsdoc'),
   ],
   rules: {
