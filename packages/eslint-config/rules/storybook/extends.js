@@ -45,9 +45,6 @@ module.exports = defineConfig({
          * {@link https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/csf-component.md}
          */
         'storybook/csf-component': 'error',
-
-        // testing LibraryのuserEventの戻り値の型がpromiseではないがawaitで書かないと予期した挙動にならない
-        '@typescript-eslint/await-thenable': 'off',
       },
     },
     {
