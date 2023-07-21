@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "17.6.6",
-    "@evilmartians/lefthook": "1.4.5",
+    "@evilmartians/lefthook": "1.4.6",
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
     "@nozomiishii/markdownlint-cli2-config": "workspace:*",
