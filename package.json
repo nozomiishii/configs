@@ -26,17 +26,17 @@
     "reset:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && pnpm install"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "17.6.6",
-    "@evilmartians/lefthook": "1.4.5",
+    "@commitlint/config-conventional": "17.6.7",
+    "@evilmartians/lefthook": "1.4.6",
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
     "@nozomiishii/markdownlint-cli2-config": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
     "@types/node": "20.4.2"
   },
-  "packageManager": "pnpm@8.6.7",
+  "packageManager": "pnpm@8.6.9",
   "volta": {
-    "node": "18.16.1",
-    "pnpm": "8.6.7"
+    "node": "18.17.0",
+    "pnpm": "8.6.9"
   }
 }
