@@ -26,7 +26,7 @@
     "reset:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && pnpm install"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "17.6.6",
+    "@commitlint/config-conventional": "17.6.7",
     "@evilmartians/lefthook": "1.4.6",
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
