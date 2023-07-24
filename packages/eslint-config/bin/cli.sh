@@ -9,7 +9,7 @@
 set -Ceuo pipefail
 
 echo -e "Installing dependencies..."
-pnpm add -D eslint typescript eslint-define-config @nozomiishii/eslint-config
+pnpm add -D eslint typescript eslint-define-config @nozomiishii/eslint-config @types/node
 
 echo -e "Adding npm scripts..."
 pnpm pkg set scripts.eslint="eslint . --max-warnings=0 --ignore-path .gitignore"
