@@ -1,0 +1,15 @@
+name: commit lint
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+
+      - name: Validate current commit (last commit) with commitlint
+        uses: wagoid/commitlint-github-action@v5
