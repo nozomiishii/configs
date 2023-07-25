@@ -45,7 +45,7 @@
     "parse-gitignore": "2.0.0"
   },
   "devDependencies": {
-    "@types/node": "20.4.3"
+    "@types/node": "20.4.4"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0",
