@@ -45,6 +45,9 @@ module.exports = defineConfig({
          * {@link https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/csf-component.md}
          */
         'storybook/csf-component': 'error',
+
+        // storybookのrender関数内ではhooksつかっていい
+        'react-hooks/rules-of-hooks': 'off',
       },
     },
     {
