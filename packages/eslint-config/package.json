@@ -19,8 +19,8 @@
   "bin": "bin/cli.sh",
   "dependencies": {
     "@next/eslint-plugin-next": "13.4.12",
-    "@typescript-eslint/eslint-plugin": "6.1.0",
-    "@typescript-eslint/parser": "6.1.0",
+    "@typescript-eslint/eslint-plugin": "6.2.0",
+    "@typescript-eslint/parser": "6.2.0",
     "@vercel/style-guide": "4.0.2",
     "eslint": "8.45.0",
     "eslint-config-airbnb-base": "15.0.0",
