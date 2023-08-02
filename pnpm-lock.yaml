@@ -39,6 +39,9 @@ importers:
       '@next/eslint-plugin-next':
         specifier: 13.4.12
         version: 13.4.12
+      '@types/node':
+        specifier: 18.17.1
+        version: 18.17.1
       '@typescript-eslint/eslint-plugin':
         specifier: 6.1.0
         version: 6.1.0(@typescript-eslint/parser@6.1.0)(eslint@8.45.0)(typescript@4.8.2)
@@ -114,10 +117,6 @@ importers:
       typescript:
         specifier: '>=4.8.0'
         version: 4.8.2
-    devDependencies:
-      '@types/node':
-        specifier: 20.4.4
-        version: 20.4.4
 
   packages/lefthook-config:
     dependencies:
@@ -553,6 +552,10 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: false
+
+  /@types/node@18.17.1:
+    resolution: {integrity: sha512-xlR1jahfizdplZYRU59JlUx9uzF1ARa8jbhM11ccpCJya8kvos5jwdm2ZAgxSCwOl0fq21svP18EVwPBXMQudw==}
     dev: false
 
   /@types/node@20.4.4:

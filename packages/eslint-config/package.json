@@ -19,6 +19,7 @@
   "bin": "bin/cli.sh",
   "dependencies": {
     "@next/eslint-plugin-next": "13.4.12",
+    "@types/node": "18.17.1",
     "@typescript-eslint/eslint-plugin": "6.1.0",
     "@typescript-eslint/parser": "6.1.0",
     "@vercel/style-guide": "4.0.2",
@@ -43,9 +44,6 @@
     "eslint-plugin-vitest": "0.2.6",
     "globals": "13.20.0",
     "parse-gitignore": "2.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "20.4.4"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0",
