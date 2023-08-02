@@ -4,8 +4,8 @@ const { defineConfig } = require('eslint-define-config');
 module.exports = defineConfig({
   overrides: [
     {
-      files: ['**/*.test.ts'],
-      excludedFiles: '**/e2e/**',
+      files: ['**/*.test.*'],
+      excludedFiles: ['**/e2e/**'],
       extends: [
         /**
          * eslint-plugin-vitest
