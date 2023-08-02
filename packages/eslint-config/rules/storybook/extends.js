@@ -2,10 +2,12 @@
 const { defineConfig } = require('eslint-define-config');
 
 module.exports = defineConfig({
+  // デフォルトでは隠しフォルダはESLintの対象にならない。
+  // 明示的にignorePatternsでホワイトリストする必要がある。
   ignorePatterns: ['!**/.storybook'],
   overrides: [
     {
-      files: ['**/.storybook/**', '**/.storybook**'],
+      files: ['**/.storybook/**'],
       rules: {
         // DevDependenciesでいい
         'import/no-extraneous-dependencies': 'off',
