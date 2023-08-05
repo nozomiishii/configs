@@ -40,7 +40,6 @@ gh api \
 #### 更新
 
 ```shell
-
 gh api \
   --method PATCH \
   -H "Accept: application/vnd.github+json" \
@@ -50,5 +49,8 @@ gh api \
   -F allow_squash_merge=true \
   -F allow_merge_commit=false \
   -F allow_rebase_merge=false \
-  -F allow_auto_merge=true
+  -F allow_auto_merge=true \
+  -F use_squash_pr_title_as_default=true \
+  -F squash_merge_commit_message="COMMIT_MESSAGES" \
+  -F squash_merge_commit_title="PR_TITLE"
 ```
