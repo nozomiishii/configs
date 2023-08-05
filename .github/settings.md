@@ -55,3 +55,11 @@ for dir in packages/* apps/nozo/*; do
   fi
 done
 ```
+
+- プロジェクトの途中からrelease-please入れるにあたって`release-please-config.json`にbootstrap-shaで基準のcommit hash入れないとgithubのrate limitに引っかかって死ぬので注意
+
+```json
+{
+  "bootstrap-sha": "6eab9dc5dfb54eea8cefec0b30c6893e06a736f8"
+}
+```
