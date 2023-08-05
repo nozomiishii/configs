@@ -1,8 +1,12 @@
-name: commit lint
+name: Commit
 
 on:
   workflow_dispatch:
   push:
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   commitlint:
@@ -11,5 +15,7 @@ jobs:
       - name: Check out
         uses: actions/checkout@v3
 
-      - name: Validate current commit (last commit) with commitlint
+      - name: Lint commit message
         uses: wagoid/commitlint-github-action@v5
+        with:
+          configFile: commitlint.config.cjs

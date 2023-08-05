@@ -1,0 +1,94 @@
+name: release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  release-please:
+    if: ${{ !github.event.act }}
+
+    runs-on: ubuntu-latest
+
+    outputs:
+      pr: ${{ steps.release-please.outputs.pr }}
+      releases_created: ${{ steps.release-please.outputs.releases_created }}
+
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release-please
+        with:
+          release-type:
+          bump-minor-pre-major: false
+          bump-patch-for-minor-pre-major: false
+          default-branch: main
+          monorepo-tags: true
+          command: manifest
+          config-file: .github/.release-please-config.json
+          manifest-file: .github/.release-please-manifest.json
+
+      - name: Echo release-please outputs
+        if: steps.release-please.outputs
+        run: echo '${{ toJson(steps.release-please) }}'
+
+  format:
+    needs: release-please
+
+    if: needs.release-please.outputs.pr
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout release-please Pull Request
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ fromJson(needs.release-please.outputs.pr).headBranchName }}
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Configure Git user
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git --no-pager show --name-only
+
+      - name: Format CHANGELOG.md
+        run: |
+          npx markdownlint-cli2 --fix '**/CHANGELOG.md'
+          npx prettier --write '**/CHANGELOG.md'
+
+      - name: Commit and push
+        run: |
+          git add --all
+          git commit -m 'chore: format CHANGELOG.md' --no-verify
+          git push
+
+  publish:
+    needs: release-please
+
+    if: needs.release-please.outputs.releases_created
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Publish
+        run: pnpm --recursive publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
