@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+
+  "packages": {
+    "packages/cspell-config": {
+      "release-type": "node",
+      "package-name": "@nozomiishii/cspell-config"
+    },
+    "packages/eslint-config": {
+      "release-type": "node",
+      "package-name": "@nozomiishii/eslint-config"
+    },
+    "packages/lefthook-config": {
+      "release-type": "node",
+      "package-name": "@nozomiishii/lefthook-config"
+    },
+    "packages/markdownlint-cli2-config": {
+      "release-type": "node",
+      "package-name": "@nozomiishii/markdownlint-cli2-config"
+    },
+    "packages/prettier-config": {
+      "release-type": "node",
+      "package-name": "@nozomiishii/prettier-config"
+    },
+    "apps/nozo/typescript": {
+      "release-type": "node",
+      "package-name": "nozo"
+    }
+  }
+}
