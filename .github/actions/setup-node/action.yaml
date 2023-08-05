@@ -1,0 +1,26 @@
+name: 'Node.js with pnpm'
+description: 'Setup Node.js and install dependencies using pnpm'
+
+inputs:
+  working-directory:
+    description: 'keyword specifies the working directory where the command is run.'
+    required: false
+    default: '.'
+
+runs:
+  using: 'composite'
+
+  steps:
+    - name: pnpm setup
+      uses: pnpm/action-setup@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.17.0
+        cache: pnpm
+
+    - name: Install dependencies
+      shell: bash
+      run: pnpm install
+      working-directory: ${{ inputs.working-directory }}
