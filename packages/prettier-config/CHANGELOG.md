@@ -4,4 +4,4 @@
 
 ### Features
 
-- **prettier:** create init script ([2cf3e39](https://github.com/nozomiishii/configs/commit/2cf3e391407fe64e8eabe5976d7948b9c57ed1bb))
+- create init script ([2cf3e39](https://github.com/nozomiishii/configs/commit/2cf3e391407fe64e8eabe5976d7948b9c57ed1bb))
