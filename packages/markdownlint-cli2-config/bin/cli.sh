@@ -9,7 +9,7 @@
 set -Ceuo pipefail
 
 echo -e "Installing dependencies..."
-pnpm add -D @nozomiishii/markdownlint-cli2-config
+pnpm add -D markdownlint-cli2 @nozomiishii/markdownlint-cli2-config
 
 echo -e "Adding npm scripts..."
 npm pkg set scripts.markdownlint="markdownlint-cli2 '**/*.md' '#node_modules'"

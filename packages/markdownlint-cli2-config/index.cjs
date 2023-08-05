@@ -3,8 +3,6 @@
  * {@link https://github.com/DavidAnson/markdownlint}
  */
 module.exports = {
-  fix: !process.env.CI,
-
   /**
    * Rules
    * {@link https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md}
