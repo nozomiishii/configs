@@ -1,8 +1,8 @@
 {
-  "packages/cspell-config": "0.1.10",
-  "packages/eslint-config": "0.2.3",
-  "packages/lefthook-config": "0.0.13",
-  "packages/markdownlint-cli2-config": "0.1.2",
-  "packages/prettier-config": "0.3.3",
-  "apps/nozo/typescript": "0.0.1"
+  "packages/cspell-config": "0.2.0",
+  "packages/eslint-config": "0.3.0",
+  "packages/lefthook-config": "0.1.0",
+  "packages/markdownlint-cli2-config": "0.2.0",
+  "packages/prettier-config": "0.4.0",
+  "apps/nozo/typescript": "0.1.0"
 }
