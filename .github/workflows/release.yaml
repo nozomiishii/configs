@@ -29,10 +29,7 @@ jobs:
         id: release-please
         with:
           release-type:
-          bump-minor-pre-major: false
-          bump-patch-for-minor-pre-major: false
           default-branch: main
-          monorepo-tags: true
           command: manifest
           config-file: .github/.release-please-config.json
           manifest-file: .github/.release-please-manifest.json
@@ -40,6 +37,18 @@ jobs:
       - name: Echo release-please outputs
         if: steps.release-please.outputs
         run: echo '${{ toJson(steps.release-please) }}'
+
+      - name: Prepare update release notes
+        if: steps.release-please.outputs.release_created
+        uses: actions/checkout@v3
+
+      - name: Update release notes
+        if: steps.release-please.outputs.release_created
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_DATA: ${{ toJson(steps.release-please.outputs) }}
+        run: ./.github/scripts/update_release_notes.sh
+        shell: bash
 
   format:
     needs: release-please
