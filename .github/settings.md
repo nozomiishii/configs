@@ -63,3 +63,17 @@ done
   "bootstrap-sha": "6eab9dc5dfb54eea8cefec0b30c6893e06a736f8"
 }
 ```
+
+### release-please-config.json
+
+```jsonc
+{
+  "packages/eslint-config": {
+    "release-type": "node",
+    // tagの名前　@nozomiishii/eslint-config-v0.0.0ってなる
+    "component": "@nozomiishii/eslint-config"
+    // github releaseの名前。package.jsonのname見てくれてる気配
+    // "package-name": "@nozomiishii/eslint-config"
+  }
+}
+```
