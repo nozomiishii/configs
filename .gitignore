@@ -19,3 +19,7 @@ lefthook-local.yaml
 
 # rust
 target
+
+# act
+.actrc
+
