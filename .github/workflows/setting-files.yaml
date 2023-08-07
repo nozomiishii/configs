@@ -1,0 +1,34 @@
+name: Setting File Format Check
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'apps/**'
+      - 'packages/**'
+  pull_request:
+    paths-ignore:
+      - 'apps/**'
+      - 'packages/**'
+
+jobs:
+  format-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Format Check
+        id: format-check
+        run: npx -y prettier@latest . '!apps/**' '!packages/**' --ignore-unknown  --check
+
+      - name: Tips
+        if: failure()
+        run: |
+          echo 'Try the following command in the project root'
+          echo 'npx -y prettier@latest . '!apps/**' '!packages/**' --ignore-unknown --write'
