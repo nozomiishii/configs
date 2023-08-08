@@ -23,3 +23,9 @@ target
 # act
 .actrc
 
+# Playwright
+playwright-report
+test-results
+
+# storybook
+storybook-static
