@@ -48,11 +48,11 @@ fi
 # ----------------------------------------------------------------
 # VSCode Preferences
 # ----------------------------------------------------------------
-# if [ ! -f .vscode/settings.json ]; then
-#   printf "🐟: Copy VSCode Preferences...\n"
-#   cp .vscode/settings.sample.jsonc .vscode/settings.json
-#   printf "Copy VSCode Preferences completed\n\n"
-# fi
+if [ ! -f .vscode/settings.json ]; then
+  printf "🐟: Copy VSCode Preferences...\n"
+  cp .vscode/settings.example.jsonc .vscode/settings.json
+  printf "Copy VSCode Preferences completed\n\n"
+fi
 
 # ----------------------------------------------------------------
 # Git
