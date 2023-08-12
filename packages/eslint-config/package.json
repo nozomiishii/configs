@@ -19,7 +19,7 @@
   "bin": "bin/cli.sh",
   "dependencies": {
     "@next/eslint-plugin-next": "13.4.13",
-    "@types/node": "18.17.3",
+    "@types/node": "18.17.4",
     "@typescript-eslint/eslint-plugin": "6.3.0",
     "@typescript-eslint/parser": "6.3.0",
     "@vercel/style-guide": "4.0.2",
