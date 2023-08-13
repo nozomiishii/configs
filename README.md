@@ -39,7 +39,3 @@
 | App                 | Version                                                                            |
 | ------------------- | ---------------------------------------------------------------------------------- |
 | [nozo](./apps/nozo) | [![npm version](https://badge.fury.io/js/nozo.svg)](https://badge.fury.io/js/nozo) |
-
-## Contributing
-
-- See [CONTRIBUTING.md](CONTRIBUTING.md)
