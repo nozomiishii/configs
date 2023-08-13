@@ -39,11 +39,11 @@ fi
 # ----------------------------------------------------------------
 # Env
 # ----------------------------------------------------------------
-# if [ ! -f .env.local ]; then
-#   printf "🏔: Copy env file...\n"
-#   cp .env.example .env.local
-#   printf "Copy env file completed\n\n"
-# fi
+if [ ! -f .env.local ]; then
+  printf "🏔: Copy env file...\n"
+  cp .env.example .env.local
+  printf "Copy env file completed\n\n"
+fi
 
 # ----------------------------------------------------------------
 # VSCode Preferences
