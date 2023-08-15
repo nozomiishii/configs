@@ -100,8 +100,8 @@ importers:
         specifier: 3.13.0
         version: 3.13.0(tailwindcss@3.3.3)
       eslint-plugin-testing-library:
-        specifier: 5.11.1
-        version: 5.11.1(eslint@8.47.0)(typescript@4.8.2)
+        specifier: 6.0.0
+        version: 6.0.0(eslint@8.47.0)(typescript@4.8.2)
       eslint-plugin-tsdoc:
         specifier: 0.2.17
         version: 0.2.17
@@ -2202,6 +2202,19 @@ packages:
 
   /eslint-plugin-testing-library@5.11.1(eslint@8.47.0)(typescript@4.8.2):
     resolution: {integrity: sha512-5eX9e1Kc2PqVRed3taaLnAAqPZGEX75C+M/rXzUAI3wIg/ZxzUm1OVAwfe/O+vE+6YXOLetSe9g5GKD2ecXipw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0, npm: '>=6'}
+    peerDependencies:
+      eslint: ^7.5.0 || ^8.0.0
+    dependencies:
+      '@typescript-eslint/utils': 5.62.0(eslint@8.47.0)(typescript@4.8.2)
+      eslint: 8.47.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: false
+
+  /eslint-plugin-testing-library@6.0.0(eslint@8.47.0)(typescript@4.8.2):
+    resolution: {integrity: sha512-SHeisSxG1f6UV2wKdMuQBiTTmGEQ858H7LMyz1LG+30TxPQEcXXQauC4E6sfEdcrJ/nIOUxNmlFZdlL6PNK4mg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0, npm: '>=6'}
     peerDependencies:
       eslint: ^7.5.0 || ^8.0.0
