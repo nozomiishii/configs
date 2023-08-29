@@ -12,14 +12,8 @@ module.exports = defineConfig({
   rules: {
     // 略語の制限は今のところしなくてもいい。やるなら明示的にreplacementを記載していく
     'unicorn/prevent-abbreviations': 'off',
+
+    // React Componentやhooksでは条件によってはnullを返せるようにしたい
+    'unicorn/no-null': 'off',
   },
-  overrides: [
-    {
-      files: ['**/*.tsx'],
-      rules: {
-        // React Componentでは条件によってはnullを返せるようにしたい
-        'unicorn/no-null': 'off',
-      },
-    },
-  ],
 });
