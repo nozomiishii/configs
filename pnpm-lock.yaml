@@ -109,8 +109,8 @@ importers:
         specifier: 48.0.1
         version: 48.0.1(eslint@8.48.0)
       eslint-plugin-vitest:
-        specifier: 0.3.0
-        version: 0.3.0(@typescript-eslint/eslint-plugin@6.5.0)(eslint@8.48.0)(vitest@0.34.3)
+        specifier: 0.3.1
+        version: 0.3.1(@typescript-eslint/eslint-plugin@6.5.0)(eslint@8.48.0)(vitest@0.34.3)
       globals:
         specifier: 13.21.0
         version: 13.21.0
@@ -2090,8 +2090,8 @@ packages:
       strip-indent: 3.0.0
     dev: false
 
-  /eslint-plugin-vitest@0.3.0(@typescript-eslint/eslint-plugin@6.5.0)(eslint@8.48.0)(vitest@0.34.3):
-    resolution: {integrity: sha512-NmEOOXQvU9f/30xlRk5Upv3VgDacFv8CaSiHjn3K/JthV2qUFF/l5gICP2vVTNETzYMx2ucmUOyOabeSKxkesA==}
+  /eslint-plugin-vitest@0.3.1(@typescript-eslint/eslint-plugin@6.5.0)(eslint@8.48.0)(vitest@0.34.3):
+    resolution: {integrity: sha512-GeR3zISHmqUGWK2sfW+eyCZivMqiQYzPf9UttHXBiEyMveS/jkKLHCrHUllwr3Hz1+i0zoseANd2xL0cFha8Eg==}
     engines: {node: 14.x || >= 16}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': '*'
