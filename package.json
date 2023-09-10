@@ -27,17 +27,17 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "17.7.0",
-    "@evilmartians/lefthook": "1.4.9",
+    "@evilmartians/lefthook": "1.4.10",
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
     "@nozomiishii/markdownlint-cli2-config": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
-    "@types/node": "18.17.11",
+    "@types/node": "18.17.14",
     "markdownlint-cli2": "0.9.2"
   },
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@8.7.4",
   "volta": {
     "node": "18.17.1",
-    "pnpm": "8.6.12"
+    "pnpm": "8.7.4"
   }
 }
