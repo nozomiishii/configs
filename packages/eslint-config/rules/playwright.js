@@ -16,7 +16,7 @@ module.exports = defineConfig({
         // DevDependenciesでいい
         'import/no-extraneous-dependencies': 'off',
 
-        // 明示的にvitestからimportする
+        // 明示的に@playwright/testからimportする
         // @types/testing-library__jest-domのせいで勝手にjest.testなどがglobal変数として扱われるため
         'no-restricted-globals': [
           'error',
