@@ -67,8 +67,8 @@ importers:
         specifier: 9.0.0
         version: 9.0.0(eslint@8.51.0)
       eslint-define-config:
-        specifier: 1.23.0
-        version: 1.23.0
+        specifier: 1.24.0
+        version: 1.24.0
       eslint-import-resolver-typescript:
         specifier: 3.6.1
         version: 3.6.1(@typescript-eslint/parser@6.7.4)(eslint-plugin-import@2.28.1)(eslint@8.51.0)
@@ -94,8 +94,8 @@ importers:
         specifier: 2.10.0
         version: 2.10.0(eslint@8.51.0)(typescript@5.2.2)
       eslint-plugin-storybook:
-        specifier: 0.6.14
-        version: 0.6.14(eslint@8.51.0)(typescript@5.2.2)
+        specifier: 0.6.15
+        version: 0.6.15(eslint@8.51.0)(typescript@5.2.2)
       eslint-plugin-tailwindcss:
         specifier: 3.13.0
         version: 3.13.0(tailwindcss@3.3.3)
@@ -1800,9 +1800,9 @@ packages:
       eslint: 8.51.0
     dev: false
 
-  /eslint-define-config@1.23.0:
-    resolution: {integrity: sha512-4mMyu0JuBkQHsCtR+42irIQdFLmLIW+pMAVcyOV/gZRL4O1R8iuH0eMG3oL3Cbi1eo9fDAfT5CIHVHgdyxcf6w==}
-    engines: {node: ^16.13.0 || >=18.0.0, npm: '>=7.0.0', pnpm: '>= 8.6.0'}
+  /eslint-define-config@1.24.0:
+    resolution: {integrity: sha512-RCuWIiz5gWwmzXCt8FVXoDYLjwlLzI/WB9q0YIcqVnTlc9GQXwiKDjRBFNHtYIywnBIOhj/cuwSEUE8eWVLCfQ==}
+    engines: {node: '>=18.0.0', npm: '>=9.0.0', pnpm: '>= 8.6.0'}
     dev: false
 
   /eslint-import-resolver-alias@1.1.2(eslint-plugin-import@2.28.1):
@@ -2030,8 +2030,8 @@ packages:
       - typescript
     dev: false
 
-  /eslint-plugin-storybook@0.6.14(eslint@8.51.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-IeYigPur/MvESNDo43Z+Z5UvlcEVnt0dDZmnw1odi9X2Th1R3bpGyOZsHXb9bp1pFecOpRUuoMG5xdID2TwwOg==}
+  /eslint-plugin-storybook@0.6.15(eslint@8.51.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-lAGqVAJGob47Griu29KXYowI4G7KwMoJDOkEip8ujikuDLxU+oWJ1l0WL6F2oDO4QiyUFXvtDkEkISMOPzo+7w==}
     engines: {node: 12.x || 14.x || >= 16}
     peerDependencies:
       eslint: '>=6'
