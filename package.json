@@ -35,9 +35,9 @@
     "@types/node": "18.18.5",
     "markdownlint-cli2": "0.10.0"
   },
-  "packageManager": "pnpm@8.9.1",
+  "packageManager": "pnpm@8.9.2",
   "volta": {
     "node": "18.18.2",
-    "pnpm": "8.9.1"
+    "pnpm": "8.9.2"
   }
 }
