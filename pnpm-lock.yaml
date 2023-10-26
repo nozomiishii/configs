@@ -82,8 +82,8 @@ importers:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.52.0)
       eslint-plugin-playwright:
-        specifier: 0.17.0
-        version: 0.17.0(eslint@8.52.0)
+        specifier: 0.18.0
+        version: 0.18.0(eslint@8.52.0)
       eslint-plugin-react:
         specifier: 7.33.2
         version: 7.33.2(eslint@8.52.0)
@@ -109,8 +109,8 @@ importers:
         specifier: 48.0.1
         version: 48.0.1(eslint@8.52.0)
       eslint-plugin-vitest:
-        specifier: 0.3.6
-        version: 0.3.6(@typescript-eslint/eslint-plugin@6.8.0)(eslint@8.52.0)(typescript@5.2.2)(vitest@0.34.6)
+        specifier: 0.3.8
+        version: 0.3.8(@typescript-eslint/eslint-plugin@6.8.0)(eslint@8.52.0)(typescript@5.2.2)(vitest@0.34.6)
       globals:
         specifier: 13.23.0
         version: 13.23.0
@@ -1989,8 +1989,8 @@ packages:
       eslint-plugin-jest: 27.4.3(@typescript-eslint/eslint-plugin@6.8.0)(eslint@8.52.0)(typescript@5.2.2)
     dev: false
 
-  /eslint-plugin-playwright@0.17.0(eslint@8.52.0):
-    resolution: {integrity: sha512-5IABk90JcD96SkD9sr5V9RZHPdsZqBZYwlnRcTIcYmbxfxD2vtd9MQ2rPsTPLaMGKAPdfoyFaWARQElJCgYDuQ==}
+  /eslint-plugin-playwright@0.18.0(eslint@8.52.0):
+    resolution: {integrity: sha512-VLvKOAaDvRTonUeI3J8plXIJQuReXjbjrgDGoNwsiydwdqk3lt+mbzgsBcxJscMJDHc9XgnLVo0nWTiaYHLGYQ==}
     peerDependencies:
       eslint: '>=7'
       eslint-plugin-jest: '>=25'
@@ -2121,8 +2121,8 @@ packages:
       strip-indent: 3.0.0
     dev: false
 
-  /eslint-plugin-vitest@0.3.6(@typescript-eslint/eslint-plugin@6.8.0)(eslint@8.52.0)(typescript@5.2.2)(vitest@0.34.6):
-    resolution: {integrity: sha512-W3H5tIvFncwX8NmsyxHwnJICZ8XIVbuXWxUZ5pfuOLkMgd6Jh5t0f/JDl9IzxyuV690c3zTazcwRX0Ez0/QrOg==}
+  /eslint-plugin-vitest@0.3.8(@typescript-eslint/eslint-plugin@6.8.0)(eslint@8.52.0)(typescript@5.2.2)(vitest@0.34.6):
+    resolution: {integrity: sha512-MYQJzg3i+nLkaIQgjnOhtqHYIt0W6nErqAOKI3LTSQ2aOgcNHGYTwOhpnwGC1IXTvGWjKgAwb7rHwLpcHWHSAQ==}
     engines: {node: 14.x || >= 16}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': '*'
