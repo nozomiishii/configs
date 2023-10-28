@@ -27,8 +27,8 @@ importers:
         specifier: workspace:*
         version: link:packages/prettier-config
       '@types/node':
-        specifier: 18.18.6
-        version: 18.18.6
+        specifier: 18.18.7
+        version: 18.18.7
       markdownlint-cli2:
         specifier: 0.10.0
         version: 0.10.0
@@ -43,8 +43,8 @@ importers:
         specifier: 13.5.6
         version: 13.5.6
       '@types/node':
-        specifier: 18.18.6
-        version: 18.18.6
+        specifier: 18.18.7
+        version: 18.18.7
       '@typescript-eslint/eslint-plugin':
         specifier: 6.9.0
         version: 6.9.0(@typescript-eslint/parser@6.9.0)(eslint@8.52.0)(typescript@5.2.2)
@@ -767,8 +767,10 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
 
-  /@types/node@18.18.6:
-    resolution: {integrity: sha512-wf3Vz+jCmOQ2HV1YUJuCWdL64adYxumkrxtc+H1VUQlnQI04+5HtH+qZCOE21lBE7gIrt+CwX2Wv8Acrw5Ak6w==}
+  /@types/node@18.18.7:
+    resolution: {integrity: sha512-bw+lEsxis6eqJYW8Ql6+yTqkE6RuFtsQPSe5JxXbqYRFQEER5aJA9a5UH9igqDWm3X4iLHIKOHlnAXLM4mi7uQ==}
+    dependencies:
+      undici-types: 5.26.5
 
   /@types/normalize-package-data@2.4.3:
     resolution: {integrity: sha512-ehPtgRgaULsFG8x0NeYJvmyH1hmlfsNLujHe9dQEia/7MAJYdzMSi19JtchUHjmBA6XC/75dK55mzZH+RyieSg==}
@@ -4197,6 +4199,9 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: false
 
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+
   /untildify@4.0.0:
     resolution: {integrity: sha512-KK8xQ1mkzZeg9inewmFVDNkg3l5LUhoq9kN6iWYB/CC9YMG8HA+c1Q8HwDe6dEX7kErrEVNVBO3fWsVq5iDgtw==}
     engines: {node: '>=8'}
@@ -4230,7 +4235,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: false
 
-  /vite-node@0.34.6(@types/node@18.18.6):
+  /vite-node@0.34.6(@types/node@18.18.7):
     resolution: {integrity: sha512-nlBMJ9x6n7/Amaz6F3zJ97EBwR2FkzhBRxF5e+jE6LA3yi6Wtc2lyTij1OnDMIr34v5g/tVQtsVAzhT0jc5ygA==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -4240,7 +4245,7 @@ packages:
       mlly: 1.4.2
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 4.5.0(@types/node@18.18.6)
+      vite: 4.5.0(@types/node@18.18.7)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4252,7 +4257,7 @@ packages:
       - terser
     dev: false
 
-  /vite@4.5.0(@types/node@18.18.6):
+  /vite@4.5.0(@types/node@18.18.7):
     resolution: {integrity: sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -4280,7 +4285,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.18.6
+      '@types/node': 18.18.7
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
@@ -4321,7 +4326,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.9
       '@types/chai-subset': 1.3.4
-      '@types/node': 18.18.6
+      '@types/node': 18.18.7
       '@vitest/expect': 0.34.6
       '@vitest/runner': 0.34.6
       '@vitest/snapshot': 0.34.6
@@ -4340,8 +4345,8 @@ packages:
       strip-literal: 1.3.0
       tinybench: 2.5.1
       tinypool: 0.7.0
-      vite: 4.5.0(@types/node@18.18.6)
-      vite-node: 0.34.6(@types/node@18.18.6)
+      vite: 4.5.0(@types/node@18.18.7)
+      vite-node: 0.34.6(@types/node@18.18.7)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
