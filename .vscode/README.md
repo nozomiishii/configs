@@ -23,3 +23,8 @@ code --install-extension ms-vscode.cpptools
 ```sh
 code --uninstall-extension ms-vscode.csharp
 ```
+
+## Memo
+
+- [wmaurer.change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case)
+  - change caseなかなか良かったけど、file名の変換できなそうだったのでraycastのchange case拡張機能に寄せた。
