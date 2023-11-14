@@ -15,9 +15,9 @@ runs:
       uses: pnpm/action-setup@v2
 
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
-        node-version: 18.18.2
+        node-version: 20.9.0
         cache: pnpm
         registry-url: 'https://registry.npmjs.org'
 
