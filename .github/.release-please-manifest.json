@@ -1,6 +1,6 @@
 {
   "packages/cspell-config": "0.3.0",
-  "packages/eslint-config": "0.4.1",
+  "packages/eslint-config": "0.4.2",
   "packages/lefthook-config": "0.2.0",
   "packages/markdownlint-cli2-config": "0.3.0",
   "packages/prettier-config": "0.6.0",

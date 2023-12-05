@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.1...@nozomiishii/eslint-config-v0.4.2) (2023-12-05)
+
+
+### Bug Fixes
+
+* import/no-extraneous-dependencies in storybook ([4377b92](https://github.com/nozomiishii/configs/commit/4377b92167d97a96071018aab9a54c60193c9b7f))
+
 ## [0.4.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.0...@nozomiishii/eslint-config-v0.4.1) (2023-12-05)
 
 ### Bug Fixes
