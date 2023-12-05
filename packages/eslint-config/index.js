@@ -19,7 +19,8 @@ module.exports = defineConfig({
     require.resolve('./rules/next'),
     require.resolve('./rules/tailwindcss'),
     require.resolve('./rules/vitest'),
-    require.resolve('./rules/testing-library'),
+    // @storybook/testが内包してくれる？
+    // require.resolve('./rules/testing-library'),
     require.resolve('./rules/storybook'),
     require.resolve('./rules/playwright'),
     require.resolve('./rules/prettier'),

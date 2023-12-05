@@ -24,23 +24,26 @@ module.exports = defineConfig({
         'plugin:storybook/csf-strict',
       ],
       rules: {
-        // 明示的にvitestからimportする
+        // 明示的に@storybook/testからimportする
         // @types/testing-library__jest-domのせいで勝手にjest.testなどがglobal変数として扱われるため
         'no-restricted-globals': [
           'error',
           {
             name: 'test',
-            message: "Use import { test } from '@storybook/jest' instead",
+            message: "Use import { test } from '@storybook/test' instead",
           },
           {
             name: 'describe',
-            message: "Use import { describe } from '@storybook/jest' instead",
+            message: "Use import { describe } from '@storybook/test' instead",
           },
           {
             name: 'expect',
-            message: "Use import { expect } from '@storybook/jest' instead",
+            message: "Use import { expect } from '@storybook/test' instead",
           },
         ],
+
+        // FIXME: @storybook/jestから@storybook/testに対応したらonにし直す
+        'storybook/use-storybook-expect': 'off',
 
         /**
          * metaにcomponent渡し忘れ防止
