@@ -7,7 +7,7 @@ module.exports = defineConfig({
   ignorePatterns: ['!**/.storybook'],
   overrides: [
     {
-      files: ['**/.storybook/**'],
+      files: ['**/.storybook/**', '**/*.stories.*'],
       rules: {
         // DevDependenciesでいい
         'import/no-extraneous-dependencies': 'off',
