@@ -32,7 +32,7 @@
     "@nozomiishii/lefthook-config": "workspace:*",
     "@nozomiishii/markdownlint-cli2-config": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
-    "@types/node": "20.10.3",
+    "@types/node": "20.10.4",
     "markdownlint-cli2": "0.11.0"
   },
   "packageManager": "pnpm@8.11.0",
