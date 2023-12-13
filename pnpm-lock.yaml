@@ -136,11 +136,11 @@ importers:
   packages/prettier-config:
     dependencies:
       prettier:
-        specifier: 3.1.0
-        version: 3.1.0
+        specifier: 3.1.1
+        version: 3.1.1
       prettier-plugin-packagejson:
         specifier: 2.4.7
-        version: 2.4.7(prettier@3.1.0)
+        version: 2.4.7(prettier@3.1.1)
 
 packages:
 
@@ -813,7 +813,7 @@ packages:
       eslint-plugin-testing-library: 6.2.0(eslint@8.55.0)(typescript@5.3.3)
       eslint-plugin-tsdoc: 0.2.17
       eslint-plugin-unicorn: 48.0.1(eslint@8.55.0)
-      prettier-plugin-packagejson: 2.4.7(prettier@3.1.0)
+      prettier-plugin-packagejson: 2.4.7(prettier@3.1.1)
       typescript: 5.3.3
     transitivePeerDependencies:
       - eslint-import-resolver-node
@@ -3177,7 +3177,7 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: false
 
-  /prettier-plugin-packagejson@2.4.7(prettier@3.1.0):
+  /prettier-plugin-packagejson@2.4.7(prettier@3.1.1):
     resolution: {integrity: sha512-/n1HGcBbuJyTlD3tb2/tW1mT5WIR6FCo+bAijHF6pNoSBf8YoxoskawjSY2ku9/8d6mdzci7oMchziI7CYEWYg==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -3185,13 +3185,13 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 3.1.0
+      prettier: 3.1.1
       sort-package-json: 2.6.0
       synckit: 0.8.6
     dev: false
 
-  /prettier@3.1.0:
-    resolution: {integrity: sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw==}
+  /prettier@3.1.1:
+    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
     engines: {node: '>=14'}
     hasBin: true
     dev: false
