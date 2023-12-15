@@ -15,7 +15,7 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "main": "index.cjs",
-  "bin": "bin/cli.cjs",
+  "bin": "bin/cli.sh",
   "publishConfig": {
     "access": "public"
   }
