@@ -35,5 +35,11 @@ export default {
         requirePragma: true,
       },
     },
+    {
+      files: ['*.json5'],
+      options: {
+        parser: 'json',
+      },
+    },
   ],
 };
