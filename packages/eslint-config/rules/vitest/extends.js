@@ -43,6 +43,16 @@ module.exports = defineConfig({
 
         // describeのネストやめる
         'vitest/max-nested-describe': ['error', { max: 1 }],
+
+        // 非同期テストなどで、期待されるアサーションが呼び出されない場合を防ぐ
+        'vitest/prefer-expect-assertions': [
+          'warn',
+          {
+            onlyFunctionsWithAsyncKeyword: true,
+            onlyFunctionsWithExpectInLoop: true,
+            onlyFunctionsWithExpectInCallback: true,
+          },
+        ],
       },
     },
   ],
