@@ -29,10 +29,10 @@ jobs:
 
       - name: Format Check
         id: format-check
-        run: npx -y prettier@latest . '!apps/**' '!packages/**' --ignore-unknown  --check
+        run: pnpm format
 
       - name: Tips
         if: failure()
         run: |
           echo 'Try the following command in the project root'
-          echo 'npx -y prettier@latest . '!apps/**' '!packages/**' --ignore-unknown --write'
+          echo 'pnpm format:fix'
