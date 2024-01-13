@@ -38,22 +38,6 @@ module.exports = defineConfig({
       },
     ],
 
-    // auto fixがまだ対応してない
-    // https://github.com/typescript-eslint/typescript-eslint/issues/2296
-    '@typescript-eslint/member-ordering': [
-      'error',
-      {
-        default: {
-          memberTypes: ['signature', 'field', 'static-initialization', 'constructor', 'get', 'set', 'method'],
-          optionalityOrder: 'required-first',
-          order: 'natural',
-        },
-      },
-    ],
-
-    // Union TypesとIntersection Typesの並び順
-    '@typescript-eslint/sort-type-constituents': 'warn',
-
     // Promiseをちゃんと処理する。VoidやIIFEは無視してよい。
     '@typescript-eslint/no-floating-promises': ['error', { ignoreVoid: true, ignoreIIFE: true }],
   },

@@ -33,13 +33,4 @@ module.exports = defineConfig({
      */
     require.resolve('@vercel/style-guide/eslint/react'),
   ],
-  rules: {
-    // propsの並び替え
-    'react/jsx-sort-props': [
-      'warn',
-      {
-        callbacksLast: true,
-      },
-    ],
-  },
 });

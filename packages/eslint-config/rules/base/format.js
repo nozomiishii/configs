@@ -10,11 +10,12 @@ module.exports = defineConfig({
     'import',
 
     /**
-     * eslint-plugin-sort
-     * {@link https://www.npmjs.com/package/eslint-plugin-sort}
+     * eslint-plugin-perfectionist
+     * {@link https://www.npmjs.com/package/eslint-plugin-perfectionist}
      */
-    'sort',
+    'perfectionist',
   ],
+  extends: ['plugin:perfectionist/recommended-natural'],
   rules: {
     // return句の改行ルール
     'padding-line-between-statements': [
@@ -25,86 +26,29 @@ module.exports = defineConfig({
         prev: '*',
       },
     ],
-    // // import文の並び替え
-    // 'import/order': [
-    //   'warn',
-    //   {
-    //     alphabetize: { caseInsensitive: true, order: 'asc' },
-    //     groups: ['builtin', 'external', 'internal', 'parent', 'sibling'],
-    //     pathGroups: [
-    //       {
-    //         pattern: '~/**',
-    //         group: 'internal',
-    //       },
-    //       {
-    //         pattern: '@/**',
-    //         group: 'internal',
-    //       },
-    //     ],
-    //     'newlines-between': 'never',
-    //   },
-    // ],
 
     // import句の後改行する
     'import/newline-after-import': ['warn', { considerComments: true }],
 
-    /**
-     * 分割代入の並び替え
-     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/HEAD/docs/rules/destructuring-properties.md}
-     */
-    'sort/destructuring-properties': ['warn', { caseSensitive: false, natural: true }],
-
-    /**
-     * export句の並び替え
-     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/main/docs/rules/exports.md}
-     */
-    'sort/exports': [
-      'warn',
+    // import文の並び替え
+    'perfectionist/sort-imports': [
+      'error',
       {
+        type: 'natural',
+        order: 'asc',
         groups: [
-          { type: 'dependency', order: 10 },
-          { type: 'other', order: 20 },
-          { type: 'sourceless', order: 30 },
-          { type: 'default', order: 40 },
+          'type',
+          ['builtin', 'external'],
+          'internal-type',
+          'internal',
+          ['parent-type', 'sibling-type', 'index-type'],
+          ['parent', 'sibling', 'index'],
+          'object',
+          'unknown',
         ],
-        caseSensitive: false,
-        natural: true,
+        'newlines-between': 'never',
+        'internal-pattern': ['@/**', '~/**'],
       },
     ],
-
-    /**
-     * export句のオブジェクト並び替え
-     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/main/docs/rules/export-members.md}
-     */
-    'sort/export-members': ['warn', { caseSensitive: false, natural: true }],
-
-    /**
-     * import句の並び替え
-     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/main/docs/rules/imports.md}
-     */
-    'sort/imports': [
-      'warn',
-      {
-        groups: [
-          { type: 'side-effect', order: 10 },
-          { type: 'dependency', order: 20 },
-          { type: 'other', order: 30 },
-        ],
-        caseSensitive: false,
-        natural: true,
-      },
-    ],
-
-    /**
-     * import句のオブジェクト並び替え
-     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/HEAD/docs/rules/import-members.md}
-     */
-    'sort/import-members': ['warn', { caseSensitive: false, natural: true }],
-
-    /**
-     * オブジェクト並び替え
-     * @see {@link https://github.com/mskelton/eslint-plugin-sort/blob/HEAD/docs/rules/object-properties.md}
-     */
-    'sort/object-properties': ['warn', { caseSensitive: false, natural: true }],
   },
 });
