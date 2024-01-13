@@ -67,34 +67,6 @@ module.exports = defineConfig({
 });
 ```
 
-## Dependencies
-
-```shell
-@next/eslint-plugin-next \
-@typescript-eslint/eslint-plugin \
-@typescript-eslint/parser \
-@vercel/style-guide \
-eslint \
-eslint-config-airbnb-base \
-eslint-config-airbnb-typescript \
-eslint-config-prettier \
-eslint-define-config \
-eslint-import-resolver-typescript \
-eslint-plugin-eslint-comments \
-eslint-plugin-import \
-eslint-plugin-jsx-a11y \
-eslint-plugin-playwright \
-eslint-plugin-react \
-eslint-plugin-react-hooks \
-eslint-plugin-sort \
-eslint-plugin-storybook \
-eslint-plugin-tailwindcss \
-eslint-plugin-testing-library \
-eslint-plugin-tsdoc \
-eslint-plugin-unicorn \
-eslint-plugin-vitest
-```
-
 ## その他便利そうなカスタムルールたち（プロジェクトによって入れたい）
 
 ### 特定のimportを禁止
