@@ -42,6 +42,9 @@ importers:
       '@next/eslint-plugin-next':
         specifier: 14.0.4
         version: 14.0.4
+      '@tanstack/eslint-plugin-query':
+        specifier: 5.17.7
+        version: 5.17.7(eslint@8.56.0)(typescript@5.3.3)
       '@types/node':
         specifier: 20.10.7
         version: 20.10.7
@@ -554,6 +557,18 @@ packages:
     resolution: {integrity: sha512-USTLkZze5gkel8MYCujSRBVIrUQ3YPBrLOx7GNk/0wttvVtlzWXAq9eLbQ4p/NicGxP+3T7KPEMVV//g+yubpw==}
     dependencies:
       lodash: 4.17.21
+    dev: false
+
+  /@tanstack/eslint-plugin-query@5.17.7(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-RpKZXIuplRrUZLqqh+jTM1yJP8/Ck21FpaSB5uGyc9LY8LNwxC8AwgaRAXVOZzKVeQMunnt3HrK83HME+7jnGw==}
+    peerDependencies:
+      eslint: ^8.0.0
+    dependencies:
+      '@typescript-eslint/utils': 5.62.0(eslint@8.56.0)(typescript@5.3.3)
+      eslint: 8.56.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: false
 
   /@types/json-schema@7.0.15:

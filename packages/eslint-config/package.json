@@ -19,6 +19,7 @@
   "bin": "bin/cli.sh",
   "dependencies": {
     "@next/eslint-plugin-next": "14.0.4",
+    "@tanstack/eslint-plugin-query": "5.17.7",
     "@types/node": "20.10.7",
     "@typescript-eslint/eslint-plugin": "6.18.1",
     "@typescript-eslint/parser": "6.18.1",

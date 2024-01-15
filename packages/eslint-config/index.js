@@ -17,6 +17,7 @@ module.exports = defineConfig({
     require.resolve('./rules/typescript'),
     require.resolve('./rules/react'),
     require.resolve('./rules/next'),
+    require.resolve('./rules/tanstack-query'),
     require.resolve('./rules/tailwindcss'),
     require.resolve('./rules/vitest'),
     // react hooksのstorybookのテスト方法知らない
