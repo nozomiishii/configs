@@ -1,25 +1,25 @@
 {
   "folders": [
     {
-      "path": "."
+      "path": ".",
     },
     {
-      "path": "packages/cspell-config"
+      "path": "packages/cspell-config",
     },
     {
-      "path": "packages/eslint-config"
+      "path": "packages/eslint-config",
     },
     {
-      "path": "packages/lefthook-config"
+      "path": "packages/lefthook-config",
     },
     {
-      "path": "packages/markdownlint-cli2-config"
+      "path": "packages/markdownlint-cli2-config",
     },
     {
-      "path": "packages/prettier-config"
+      "path": "packages/prettier-config",
     },
     {
-      "path": "packages/tsconfig"
-    }
-  ]
+      "path": "packages/tsconfig",
+    },
+  ],
 }

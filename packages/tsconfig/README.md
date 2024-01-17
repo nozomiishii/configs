@@ -44,7 +44,7 @@
     "skipLibCheck": false,
 
     // Strict mode
-    "strict": true
-  }
+    "strict": true,
+  },
 }
 ```

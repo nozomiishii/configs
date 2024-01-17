@@ -71,9 +71,9 @@ done
   "packages/eslint-config": {
     "release-type": "node",
     // tagの名前　@nozomiishii/eslint-config-v0.0.0ってなる
-    "component": "@nozomiishii/eslint-config"
+    "component": "@nozomiishii/eslint-config",
     // github releaseの名前。package.jsonのname見てくれてる気配
     // "package-name": "@nozomiishii/eslint-config"
-  }
+  },
 }
 ```
