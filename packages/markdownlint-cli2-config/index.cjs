@@ -19,7 +19,7 @@ module.exports = {
      * {@link https://github.com/DavidAnson/markdownlint/blob/main/doc/md024.md}
      */
     MD024: {
-      allow_different_nesting: true,
+      siblings_only: true,
     },
 
     /**
