@@ -19,7 +19,7 @@
   "main": "index.cjs",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "markdownlint-cli2": "0.12.0"
+    "markdownlint-cli2": "0.12.1"
   },
   "publishConfig": {
     "access": "public"

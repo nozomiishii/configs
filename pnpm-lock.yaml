@@ -30,8 +30,8 @@ importers:
         specifier: 20.11.0
         version: 20.11.0
       markdownlint-cli2:
-        specifier: 0.12.0
-        version: 0.12.0
+        specifier: 0.12.1
+        version: 0.12.1
 
   apps/nozo/typescript: {}
 
@@ -133,8 +133,8 @@ importers:
   packages/markdownlint-cli2-config:
     dependencies:
       markdownlint-cli2:
-        specifier: 0.12.0
-        version: 0.12.0
+        specifier: 0.12.1
+        version: 0.12.1
 
   packages/prettier-config:
     dependencies:
@@ -2602,6 +2602,9 @@ packages:
     hasBin: true
     dev: false
 
+  /jsonc-parser@3.2.0:
+    resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
+
   /jsx-ast-utils@3.3.5:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}
     engines: {node: '>=4.0'}
@@ -2714,23 +2717,23 @@ packages:
       punycode.js: 2.3.1
       uc.micro: 2.0.0
 
-  /markdownlint-cli2-formatter-default@0.0.4(markdownlint-cli2@0.12.0):
+  /markdownlint-cli2-formatter-default@0.0.4(markdownlint-cli2@0.12.1):
     resolution: {integrity: sha512-xm2rM0E+sWgjpPn1EesPXx5hIyrN2ddUnUwnbCsD/ONxYtw3PX6LydvdH6dciWAoFDpwzbHM1TO7uHfcMd6IYg==}
     peerDependencies:
       markdownlint-cli2: '>=0.0.4'
     dependencies:
-      markdownlint-cli2: 0.12.0
+      markdownlint-cli2: 0.12.1
 
-  /markdownlint-cli2@0.12.0:
-    resolution: {integrity: sha512-5nddNaPY1WC7BE1mkF8fiEkRDW8XbODwqYBPL3eyvFh7tLk74no+P8JRbCjghF7ozahCW5pF0TZ3ZS30m9H1Eg==}
+  /markdownlint-cli2@0.12.1:
+    resolution: {integrity: sha512-RcK+l5FjJEyrU3REhrThiEUXNK89dLYNJCYbvOUKypxqIGfkcgpz8g08EKqhrmUbYfYoLC5nEYQy53NhJSEtfQ==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
       globby: 14.0.0
+      jsonc-parser: 3.2.0
       markdownlint: 0.33.0
-      markdownlint-cli2-formatter-default: 0.0.4(markdownlint-cli2@0.12.0)
+      markdownlint-cli2-formatter-default: 0.0.4(markdownlint-cli2@0.12.1)
       micromatch: 4.0.5
-      strip-json-comments: 5.0.1
       yaml: 2.3.4
 
   /markdownlint-micromark@0.1.8:
@@ -3504,10 +3507,6 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
     dev: false
-
-  /strip-json-comments@5.0.1:
-    resolution: {integrity: sha512-0fk9zBqO67Nq5M/m45qHCJxylV/DhBlIOVExqgOMiCCrzrhU6tCibRXNqE3jwJLftzE9SNuZtYbpzcO+i9FiKw==}
-    engines: {node: '>=14.16'}
 
   /sucrase@3.35.0:
     resolution: {integrity: sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==}
