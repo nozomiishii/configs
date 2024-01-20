@@ -17,6 +17,7 @@ module.exports = defineConfig({
       { blankLine: 'always', prev: '*', next: 'block' },
       { blankLine: 'always', prev: '*', next: 'cjs-export' },
       { blankLine: 'always', prev: '*', next: 'export' },
+      { blankLine: 'always', prev: '*', next: 'for' },
       { blankLine: 'always', prev: '*', next: 'function' },
       { blankLine: 'always', prev: '*', next: 'if' },
       { blankLine: 'always', prev: 'import', next: '*' },
