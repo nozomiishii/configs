@@ -36,7 +36,7 @@ export default {
       },
     },
     {
-      files: ['*.json5', '*.jsonc'],
+      files: ['*.json', '*.json5', '*.jsonc'],
       options: {
         parser: 'json',
       },
