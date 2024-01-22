@@ -4,12 +4,6 @@ const { defineConfig } = require('eslint-define-config');
 module.exports = defineConfig({
   plugins: [
     /**
-     * eslint-plugin-import
-     * {@link https://www.npmjs.com/package/eslint-plugin-import}
-     */
-    'import',
-
-    /**
      * eslint-plugin-perfectionist
      * {@link https://www.npmjs.com/package/eslint-plugin-perfectionist}
      */
@@ -17,18 +11,33 @@ module.exports = defineConfig({
   ],
   extends: ['plugin:perfectionist/recommended-natural'],
   rules: {
-    // return句の改行ルール
+    // コード改行ルール
     'padding-line-between-statements': [
       'warn',
-      {
-        blankLine: 'always',
-        next: 'return',
-        prev: '*',
-      },
+      { blankLine: 'always', prev: '*', next: 'block' },
+      { blankLine: 'always', prev: '*', next: 'cjs-export' },
+      { blankLine: 'always', prev: '*', next: 'export' },
+      { blankLine: 'always', prev: '*', next: 'for' },
+      { blankLine: 'always', prev: '*', next: 'function' },
+      { blankLine: 'always', prev: '*', next: 'if' },
+      { blankLine: 'always', prev: 'import', next: '*' },
+      { blankLine: 'never', prev: 'import', next: 'import' },
+      { blankLine: 'always', next: 'return', prev: '*' },
+      { blankLine: 'always', prev: '*', next: 'try' },
     ],
 
-    // import句の後改行する
-    'import/newline-after-import': ['warn', { considerComments: true }],
+    // コメント改行ルール
+    'lines-around-comment': [
+      'warn',
+      {
+        beforeBlockComment: true,
+        beforeLineComment: true,
+        allowBlockStart: true,
+        allowObjectStart: true,
+        allowClassStart: true,
+        allowArrayStart: true,
+      },
+    ],
 
     // import文の並び替え
     'perfectionist/sort-imports': [
