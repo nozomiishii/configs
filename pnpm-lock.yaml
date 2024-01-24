@@ -43,8 +43,8 @@ importers:
         specifier: 14.1.0
         version: 14.1.0
       '@tanstack/eslint-plugin-query':
-        specifier: 5.17.7
-        version: 5.17.7(eslint@8.56.0)(typescript@5.3.3)
+        specifier: 5.17.20
+        version: 5.17.20(eslint@8.56.0)(typescript@5.3.3)
       '@types/node':
         specifier: 20.11.5
         version: 20.11.5
@@ -559,8 +559,8 @@ packages:
       lodash: 4.17.21
     dev: false
 
-  /@tanstack/eslint-plugin-query@5.17.7(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-RpKZXIuplRrUZLqqh+jTM1yJP8/Ck21FpaSB5uGyc9LY8LNwxC8AwgaRAXVOZzKVeQMunnt3HrK83HME+7jnGw==}
+  /@tanstack/eslint-plugin-query@5.17.20(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-Jxu/GV7JqDgI6HMP8wQqc5a8efe0GaXoc0qCI+YjVBWEaWh8+T+wF5Ywha44gVraaEGlqkEhYmZrykg6dUG3OA==}
     peerDependencies:
       eslint: ^8.0.0
     dependencies:
