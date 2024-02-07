@@ -38,6 +38,6 @@
     // Strict mode
     "strict": true,
 
-    "types": ["vitest/importMeta"]
-  }
+    "types": ["vitest/importMeta"],
+  },
 }
