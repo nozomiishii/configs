@@ -22,8 +22,11 @@ module.exports = defineConfig({
       { blankLine: 'always', prev: '*', next: 'if' },
       { blankLine: 'always', prev: 'import', next: '*' },
       { blankLine: 'never', prev: 'import', next: 'import' },
-      { blankLine: 'always', next: 'return', prev: '*' },
+      { blankLine: 'always', prev: '*', next: 'return' },
+      { blankLine: 'always', prev: '*', next: 'switch' },
+      { blankLine: 'always', prev: '*', next: 'throw' },
       { blankLine: 'always', prev: '*', next: 'try' },
+      { blankLine: 'always', prev: '*', next: 'while' },
     ],
 
     // コメント改行ルール

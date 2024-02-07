@@ -15,6 +15,7 @@ module.exports = defineConfig({
   extends: [
     require.resolve('./airbnb'),
     require.resolve('./unicorn'),
+    require.resolve('./jsdoc'),
     require.resolve('./eslint-comments'),
     require.resolve('./format'),
   ],
