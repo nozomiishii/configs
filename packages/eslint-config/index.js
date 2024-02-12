@@ -13,17 +13,15 @@ const { defineConfig } = require('eslint-define-config');
  */
 module.exports = defineConfig({
   extends: [
-    require.resolve('./rules/base'),
-    require.resolve('./rules/typescript'),
-    require.resolve('./rules/react'),
-    require.resolve('./rules/next'),
-    require.resolve('./rules/tanstack-query'),
-    require.resolve('./rules/tailwindcss'),
-    require.resolve('./rules/vitest'),
-    // react hooksのstorybookのテスト方法知らない
-    require.resolve('./rules/testing-library'),
-    require.resolve('./rules/storybook'),
-    require.resolve('./rules/playwright'),
-    require.resolve('./rules/prettier'),
-  ],
+    './rules/base',
+    './rules/typescript',
+    './rules/react',
+    './rules/next',
+    './rules/tanstack-query',
+    './rules/tailwindcss',
+    './rules/vitest',
+    './rules/storybook',
+    './rules/playwright',
+    './rules/prettier',
+  ].map((rules) => require.resolve(rules)),
 });
