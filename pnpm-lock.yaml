@@ -43,8 +43,8 @@ importers:
         specifier: 14.1.0
         version: 14.1.0
       '@tanstack/eslint-plugin-query':
-        specifier: 5.18.1
-        version: 5.18.1(eslint@8.56.0)(typescript@5.3.3)
+        specifier: 5.20.1
+        version: 5.20.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/node':
         specifier: 20.11.17
         version: 20.11.17
@@ -571,12 +571,12 @@ packages:
       lodash: 4.17.21
     dev: false
 
-  /@tanstack/eslint-plugin-query@5.18.1(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-pLHqd2RYSbGxhFXdjVxo5Gmi1aJfcXDpZQsjLHEkGEXFb65WzX6LMCz7n2rW3wBElDerRLFZNVLC61Pg/TlYsA==}
+  /@tanstack/eslint-plugin-query@5.20.1(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-oIp7Wh90KHOm1FKCvcv87fiD2H96xo/crFrlhbvqBzR2f0tMEGOK/ANKMGNFQprd6BT6lyZhQPlOEkFdezsjIg==}
     peerDependencies:
       eslint: ^8.0.0
     dependencies:
-      '@typescript-eslint/utils': 5.62.0(eslint@8.56.0)(typescript@5.3.3)
+      '@typescript-eslint/utils': 6.21.0(eslint@8.56.0)(typescript@5.3.3)
       eslint: 8.56.0
     transitivePeerDependencies:
       - supports-color
