@@ -118,8 +118,8 @@ importers:
         specifier: 0.3.22
         version: 0.3.22(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
       globals:
-        specifier: 13.24.0
-        version: 13.24.0
+        specifier: 14.0.0
+        version: 14.0.0
       parse-gitignore:
         specifier: 2.0.0
         version: 2.0.0
@@ -2239,6 +2239,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.20.2
+    dev: false
+
+  /globals@14.0.0:
+    resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
     dev: false
 
   /globalthis@1.0.3:
