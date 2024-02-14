@@ -19,7 +19,7 @@
   "bin": "bin/cli.sh",
   "dependencies": {
     "@next/eslint-plugin-next": "14.1.0",
-    "@tanstack/eslint-plugin-query": "5.18.1",
+    "@tanstack/eslint-plugin-query": "5.20.1",
     "@types/node": "20.11.17",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
@@ -35,7 +35,7 @@
     "eslint-plugin-jsdoc": "48.0.6",
     "eslint-plugin-jsx-a11y": "6.8.0",
     "eslint-plugin-perfectionist": "2.5.0",
-    "eslint-plugin-playwright": "0.22.2",
+    "eslint-plugin-playwright": "1.0.0",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-storybook": "0.6.15",
@@ -44,7 +44,7 @@
     "eslint-plugin-tsdoc": "0.2.17",
     "eslint-plugin-unicorn": "51.0.1",
     "eslint-plugin-vitest": "0.3.22",
-    "globals": "13.24.0",
+    "globals": "14.0.0",
     "parse-gitignore": "2.0.0"
   },
   "peerDependencies": {

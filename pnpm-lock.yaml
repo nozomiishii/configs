@@ -43,8 +43,8 @@ importers:
         specifier: 14.1.0
         version: 14.1.0
       '@tanstack/eslint-plugin-query':
-        specifier: 5.18.1
-        version: 5.18.1(eslint@8.56.0)(typescript@5.3.3)
+        specifier: 5.20.1
+        version: 5.20.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/node':
         specifier: 20.11.17
         version: 20.11.17
@@ -91,8 +91,8 @@ importers:
         specifier: 2.5.0
         version: 2.5.0(eslint@8.56.0)(typescript@5.3.3)
       eslint-plugin-playwright:
-        specifier: 0.22.2
-        version: 0.22.2(eslint@8.56.0)
+        specifier: 1.0.0
+        version: 1.0.0(eslint@8.56.0)
       eslint-plugin-react:
         specifier: 7.33.2
         version: 7.33.2(eslint@8.56.0)
@@ -118,8 +118,8 @@ importers:
         specifier: 0.3.22
         version: 0.3.22(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
       globals:
-        specifier: 13.24.0
-        version: 13.24.0
+        specifier: 14.0.0
+        version: 14.0.0
       parse-gitignore:
         specifier: 2.0.0
         version: 2.0.0
@@ -571,12 +571,12 @@ packages:
       lodash: 4.17.21
     dev: false
 
-  /@tanstack/eslint-plugin-query@5.18.1(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-pLHqd2RYSbGxhFXdjVxo5Gmi1aJfcXDpZQsjLHEkGEXFb65WzX6LMCz7n2rW3wBElDerRLFZNVLC61Pg/TlYsA==}
+  /@tanstack/eslint-plugin-query@5.20.1(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-oIp7Wh90KHOm1FKCvcv87fiD2H96xo/crFrlhbvqBzR2f0tMEGOK/ANKMGNFQprd6BT6lyZhQPlOEkFdezsjIg==}
     peerDependencies:
       eslint: ^8.0.0
     dependencies:
-      '@typescript-eslint/utils': 5.62.0(eslint@8.56.0)(typescript@5.3.3)
+      '@typescript-eslint/utils': 6.21.0(eslint@8.56.0)(typescript@5.3.3)
       eslint: 8.56.0
     transitivePeerDependencies:
       - supports-color
@@ -1763,8 +1763,8 @@ packages:
       eslint-plugin-jest: 27.6.3(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
     dev: false
 
-  /eslint-plugin-playwright@0.22.2(eslint@8.56.0):
-    resolution: {integrity: sha512-LtOB9myIX1O7HHqg9vtvBLjvXq1MXKuXIcD1nS+qZiMUJV6s9HBdilURAr9pIFc9kEelbVF54hOJ8pMxHvJP7g==}
+  /eslint-plugin-playwright@1.0.0(eslint@8.56.0):
+    resolution: {integrity: sha512-DKHQ92eXNZl2WamZzPvTg1CERcJwz1f/iW0Ynf3UXJfKTAC3jvafWiUZtyjoQhB4BoQ+ZjEYeWviAJ4FvUQOcw==}
     peerDependencies:
       eslint: '>=7'
       eslint-plugin-jest: '>=25'
@@ -2239,6 +2239,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.20.2
+    dev: false
+
+  /globals@14.0.0:
+    resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
     dev: false
 
   /globalthis@1.0.3:
