@@ -19,8 +19,13 @@ module.exports = defineConfig({
     './rules/next',
     './rules/tanstack-query',
     './rules/tailwindcss',
+    // Unit test
     './rules/vitest',
+    // Componentの描画に関係ないもの。`renderHook`と`act`のみでテストできるビジネスロジック関数用。
+    './rules/testing-library',
+    // Component test
     './rules/storybook',
+    // e2e
     './rules/playwright',
     './rules/prettier',
   ].map((rules) => require.resolve(rules)),
