@@ -2,23 +2,21 @@
 
 ## [0.4.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.2...@nozomiishii/eslint-config-v0.4.3) (2024-02-18)
 
-
 ### Features
 
-* add eslint rule for @tanstack/eslint-plugin-query ([b527faf](https://github.com/nozomiishii/configs/commit/b527faf7b640edc268a987f60739cff7bab75cc2))
-* add jsdoc rules to eslint ([992efc5](https://github.com/nozomiishii/configs/commit/992efc59a2cf6246fcb68159e044fc7168d446bb))
-* add padding-line-between-statements for switch, throw, and while ([1338f0f](https://github.com/nozomiishii/configs/commit/1338f0f25a763e6d9b37f6a97af6846c5ce564e8))
-* apply eslint-plugin-perfectionist instead of eslint-plugin-sort to sorting rules ([beabc83](https://github.com/nozomiishii/configs/commit/beabc83ead3749270477d036f874f7507459e191))
-
+- add eslint rule for @tanstack/eslint-plugin-query ([b527faf](https://github.com/nozomiishii/configs/commit/b527faf7b640edc268a987f60739cff7bab75cc2))
+- add jsdoc rules to eslint ([992efc5](https://github.com/nozomiishii/configs/commit/992efc59a2cf6246fcb68159e044fc7168d446bb))
+- add padding-line-between-statements for switch, throw, and while ([1338f0f](https://github.com/nozomiishii/configs/commit/1338f0f25a763e6d9b37f6a97af6846c5ce564e8))
+- apply eslint-plugin-perfectionist instead of eslint-plugin-sort to sorting rules ([beabc83](https://github.com/nozomiishii/configs/commit/beabc83ead3749270477d036f874f7507459e191))
 
 ### Bug Fixes
 
-* add line break rule for "for" statement ([44d705f](https://github.com/nozomiishii/configs/commit/44d705f736646b59ce2ea0445e39b29a9582800d))
-* add line break rules ([d6aaab5](https://github.com/nozomiishii/configs/commit/d6aaab5256481eb6e2928375ba672c187f678bea))
-* add testing library rules for react hooks ([8cb8203](https://github.com/nozomiishii/configs/commit/8cb8203e9cbc0a2eb1f2cf6b5e124acba82e578e))
-* remove testing-library from eslint default config ([7ed25fa](https://github.com/nozomiishii/configs/commit/7ed25fa5b12234e1d7464086f69653523a1bfff0))
-* remove unused eslint plugins and update README.md ([bb1161f](https://github.com/nozomiishii/configs/commit/bb1161f1611946e17f1ce2f0813621cc6f581ce6))
-* vitest/prefer-expect-assertions setup ([0f71382](https://github.com/nozomiishii/configs/commit/0f71382cd8db963240ccf86197a942be0a85899a))
+- add line break rule for "for" statement ([44d705f](https://github.com/nozomiishii/configs/commit/44d705f736646b59ce2ea0445e39b29a9582800d))
+- add line break rules ([d6aaab5](https://github.com/nozomiishii/configs/commit/d6aaab5256481eb6e2928375ba672c187f678bea))
+- add testing library rules for react hooks ([8cb8203](https://github.com/nozomiishii/configs/commit/8cb8203e9cbc0a2eb1f2cf6b5e124acba82e578e))
+- remove testing-library from eslint default config ([7ed25fa](https://github.com/nozomiishii/configs/commit/7ed25fa5b12234e1d7464086f69653523a1bfff0))
+- remove unused eslint plugins and update README.md ([bb1161f](https://github.com/nozomiishii/configs/commit/bb1161f1611946e17f1ce2f0813621cc6f581ce6))
+- vitest/prefer-expect-assertions setup ([0f71382](https://github.com/nozomiishii/configs/commit/0f71382cd8db963240ccf86197a942be0a85899a))
 
 ## [0.4.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.1...@nozomiishii/eslint-config-v0.4.2) (2023-12-05)
 
