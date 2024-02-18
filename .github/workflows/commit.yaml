@@ -19,6 +19,9 @@ jobs:
       - name: Check out
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
       - name: Lint commit message
         uses: wagoid/commitlint-github-action@v5
         with:
