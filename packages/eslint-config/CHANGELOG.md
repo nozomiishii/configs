@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.3...@nozomiishii/eslint-config-v0.4.4) (2024-02-18)
+
+
+### Bug Fixes
+
+* downgrade eslint-plugin-tailwindcss to 3.13.1 ([87e3599](https://github.com/nozomiishii/configs/commit/87e3599c55fefde76bfff9ed9f2f6e07929c4289))
+
 ## [0.4.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.2...@nozomiishii/eslint-config-v0.4.3) (2024-02-18)
 
 ### Features
