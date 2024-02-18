@@ -20,7 +20,7 @@
   "dependencies": {
     "@next/eslint-plugin-next": "14.1.0",
     "@tanstack/eslint-plugin-query": "5.20.1",
-    "@types/node": "20.11.17",
+    "@types/node": "20.11.18",
     "@typescript-eslint/eslint-plugin": "7.0.1",
     "@typescript-eslint/parser": "7.0.1",
     "@vercel/style-guide": "5.2.0",
