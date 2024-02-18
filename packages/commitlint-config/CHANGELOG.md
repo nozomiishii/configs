@@ -2,10 +2,9 @@
 
 ## [0.0.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.2...@nozomiishii/commitlint-config-v0.0.3) (2024-02-18)
 
-
 ### Bug Fixes
 
-* add script to remove @commitlint/config-conventional ([4d30566](https://github.com/nozomiishii/configs/commit/4d30566bdc823097cff015066fc40bd91e1be2e3))
+- add script to remove @commitlint/config-conventional ([4d30566](https://github.com/nozomiishii/configs/commit/4d30566bdc823097cff015066fc40bd91e1be2e3))
 
 ## [0.0.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.1...@nozomiishii/commitlint-config-v0.0.2) (2024-02-18)
 
