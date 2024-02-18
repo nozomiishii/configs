@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.1...@nozomiishii/prettier-config-v0.6.2) (2024-02-18)
+
+
+### Bug Fixes
+
+* remove d.ts from prettier ([3834e87](https://github.com/nozomiishii/configs/commit/3834e87284bcd1962c93f202f6280dad9cf12cad))
+
 ## [0.6.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.0...@nozomiishii/prettier-config-v0.6.1) (2024-02-18)
 
 ### Bug Fixes
