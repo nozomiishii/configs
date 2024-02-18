@@ -9,6 +9,7 @@
 set -Ceuo pipefail
 
 echo -e "Installing dependencies..."
+pnpm remove @commitlint/config-conventional || true
 pnpm add -D @nozomiishii/commitlint-config
 
 echo -e "Adding npm scripts..."
