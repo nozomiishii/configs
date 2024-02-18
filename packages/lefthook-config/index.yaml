@@ -14,7 +14,7 @@ commit-msg:
 
   commands:
     commitlint:
-      run: npx -y commitlint --edit {1} --verbose
+      run: npx -y commitlint@latest --edit {1} --verbose
 
     cspell:
       run: npx -y @nozomiishii/cspell-config@latest {1}

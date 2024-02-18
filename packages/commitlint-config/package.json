@@ -1,0 +1,31 @@
+{
+  "name": "@nozomiishii/commitlint-config",
+  "version": "0.0.0",
+  "description": "Nozomi's Recommended commitlint config",
+  "keywords": [
+    "commitlint",
+    "config"
+  ],
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/commitlint-config/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozomiishii/configs.git",
+    "directory": "packages/commitlint-config"
+  },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
+  "exports": {
+    "import": "./index.js",
+    "require": "./index.js"
+  },
+  "main": "index.js",
+  "bin": "bin/cli.sh",
+  "dependencies": {
+    "@commitlint/cli": "18.6.1",
+    "@commitlint/config-conventional": "18.6.2",
+    "@commitlint/types": "18.6.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
