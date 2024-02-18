@@ -3,6 +3,9 @@
 
   "bootstrap-sha": "09c59ef0540b47e96916b8bb91c541ae53c5c72e",
 
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
+
   "packages": {
     "packages/commitlint-config": {
       "release-type": "node",
