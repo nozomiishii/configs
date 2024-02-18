@@ -25,6 +25,7 @@
 
 | Package                                                                      | Version                                                                                                                                                  |
 | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [@nozomiishii/commitlint-config](./packages/commitlint-config)               | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fcommitlint-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fcommitlint-config)               |
 | [@nozomiishii/cspell-config](./packages/cspell-config)                       | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fcspell-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fcspell-config)                       |
 | [@nozomiishii/eslint-config](./packages/eslint-config)                       | [![npm version](https://badge.fury.io/js/@nozomiishii%2Feslint-config.svg)](https://badge.fury.io/js/@nozomiishii%2Feslint-config)                       |
 | [@nozomiishii/lefthook-config](./packages/lefthook-config)                   | [![npm version](https://badge.fury.io/js/@nozomiishii%2Flefthook-config.svg)](https://badge.fury.io/js/@nozomiishii%2Flefthook-config)                   |

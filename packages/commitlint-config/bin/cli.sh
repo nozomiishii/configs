@@ -18,9 +18,7 @@ echo -e "Creating commitlint.config.js"
 find . -type f -name 'commitlint.config.*' -delete
 
 cat > commitlint.config.cjs << EOF
-module.exports = {
-  extends: ['@nozomiishii'],
-};
+module.exports = { extends: ['@nozomiishii'] };
 EOF
 
-echo -e "All set! Your Commit lint configuration has been set up successfully🎉"
+echo -e "All set! Your Commitlint configuration has been set up successfully🎉"

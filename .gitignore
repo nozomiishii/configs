@@ -11,9 +11,6 @@ node_modules
 .env*
 !.env.example
 
-# editor preferences
-# **/.vscode/settings.json
-
 # lefthook
 lefthook-local.yaml
 
@@ -29,3 +26,6 @@ test-results
 
 # storybook
 storybook-static
+
+# vscode
+**/.vscode/settings.json
