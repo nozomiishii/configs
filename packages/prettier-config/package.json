@@ -17,8 +17,7 @@
   "type": "module",
   "exports": {
     "import": "./index.js",
-    "require": "./index.js",
-    "types": "./index.d.ts"
+    "require": "./index.js"
   },
   "main": "index.js",
   "bin": "bin/cli.sh",
