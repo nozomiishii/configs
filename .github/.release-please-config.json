@@ -4,6 +4,10 @@
   "bootstrap-sha": "09c59ef0540b47e96916b8bb91c541ae53c5c72e",
 
   "packages": {
+    "packages/commitlint-config": {
+      "release-type": "node",
+      "component": "@nozomiishii/commitlint-config"
+    },
     "packages/cspell-config": {
       "release-type": "node",
       "component": "@nozomiishii/cspell-config"
