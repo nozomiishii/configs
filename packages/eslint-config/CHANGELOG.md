@@ -1,5 +1,56 @@
 # Changelog
 
+## [0.4.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.4...@nozomiishii/eslint-config-v0.4.5) (2024-02-18)
+
+
+### Features
+
+* add eslint rule for @tanstack/eslint-plugin-query ([b527faf](https://github.com/nozomiishii/configs/commit/b527faf7b640edc268a987f60739cff7bab75cc2))
+* add initial CHANGELOG ([9ce8c62](https://github.com/nozomiishii/configs/commit/9ce8c62626daccb52d6855312820188fbb069a18))
+* add jsdoc rules to eslint ([992efc5](https://github.com/nozomiishii/configs/commit/992efc59a2cf6246fcb68159e044fc7168d446bb))
+* add padding-line-between-statements for switch, throw, and while ([1338f0f](https://github.com/nozomiishii/configs/commit/1338f0f25a763e6d9b37f6a97af6846c5ce564e8))
+* apply eslint-plugin-perfectionist instead of eslint-plugin-sort to sorting rules ([beabc83](https://github.com/nozomiishii/configs/commit/beabc83ead3749270477d036f874f7507459e191))
+* **eslint:** restrict the usage of global variables from @types/jest ([ac7fa84](https://github.com/nozomiishii/configs/commit/ac7fa84623ff0ed7dad21524ef4ab0777e82d767))
+* **prettier:** update prettier version to v3 ([3ca3f49](https://github.com/nozomiishii/configs/commit/3ca3f49e8418f0507084983740bab3596a9f6460))
+* **prettier:** update prettier version to v3 ([26239c9](https://github.com/nozomiishii/configs/commit/26239c9361d60734a5a13f635c4161de80bffbaa))
+
+
+### Bug Fixes
+
+* add line break rule for "for" statement ([44d705f](https://github.com/nozomiishii/configs/commit/44d705f736646b59ce2ea0445e39b29a9582800d))
+* add line break rules ([d6aaab5](https://github.com/nozomiishii/configs/commit/d6aaab5256481eb6e2928375ba672c187f678bea))
+* add testing library rules for react hooks ([8cb8203](https://github.com/nozomiishii/configs/commit/8cb8203e9cbc0a2eb1f2cf6b5e124acba82e578e))
+* **deps:** update dependency @next/eslint-plugin-next to v13.4.10 ([#116](https://github.com/nozomiishii/configs/issues/116)) ([9b0a9a1](https://github.com/nozomiishii/configs/commit/9b0a9a1b011836e9ea649d0e558a14f495d0e5a6))
+* **deps:** update dependency @next/eslint-plugin-next to v13.4.11 ([#126](https://github.com/nozomiishii/configs/issues/126)) ([d600ded](https://github.com/nozomiishii/configs/commit/d600ded73ede27d1a992a1930e3b4d6f41d65da3))
+* **deps:** update dependency @next/eslint-plugin-next to v13.4.12 ([#127](https://github.com/nozomiishii/configs/issues/127)) ([18e3e12](https://github.com/nozomiishii/configs/commit/18e3e125c16d0402114917cdd155f6e84053208a))
+* **deps:** update dependency @next/eslint-plugin-next to v13.4.9 ([#104](https://github.com/nozomiishii/configs/issues/104)) ([94037f0](https://github.com/nozomiishii/configs/commit/94037f0c5ceb329ec5b5873b873ea69f634d6f5e))
+* **deps:** update dependency eslint to v8.44.0 ([#96](https://github.com/nozomiishii/configs/issues/96)) ([93351d8](https://github.com/nozomiishii/configs/commit/93351d82827143e0cf0a1aa50e9591c9c1b07b16))
+* **deps:** update dependency eslint to v8.45.0 ([#117](https://github.com/nozomiishii/configs/issues/117)) ([a54f123](https://github.com/nozomiishii/configs/commit/a54f1237d89988b5897b8cbce94464a5bed52111))
+* **deps:** update dependency eslint to v8.46.0 ([#138](https://github.com/nozomiishii/configs/issues/138)) ([6c7562c](https://github.com/nozomiishii/configs/commit/6c7562ca0d73fa09e1c78e822d8e96f613e8e667))
+* **deps:** update dependency eslint-config-airbnb-typescript to v17.1.0 ([#114](https://github.com/nozomiishii/configs/issues/114)) ([584268b](https://github.com/nozomiishii/configs/commit/584268bc3b04d6bd605ed68fd920b48d97dd8da9))
+* **deps:** update dependency eslint-config-prettier to v8.9.0 ([#136](https://github.com/nozomiishii/configs/issues/136)) ([4b734bf](https://github.com/nozomiishii/configs/commit/4b734bf1ebc8d43baa0173348d27c2b07eddc850))
+* **deps:** update dependency eslint-define-config to v1.22.0 ([#140](https://github.com/nozomiishii/configs/issues/140)) ([d1bf499](https://github.com/nozomiishii/configs/commit/d1bf499c42439500750b644b969ffd48e8d45ffb))
+* **deps:** update dependency eslint-plugin-import to v2.28.0 ([#137](https://github.com/nozomiishii/configs/issues/137)) ([7aa46be](https://github.com/nozomiishii/configs/commit/7aa46be7e20fd331adedcb1294f4e00eaa7f64ec))
+* **deps:** update dependency eslint-plugin-playwright to v0.15.3 ([#100](https://github.com/nozomiishii/configs/issues/100)) ([65cb772](https://github.com/nozomiishii/configs/commit/65cb772617b906bd8572b029a76b6181705f9032))
+* **deps:** update dependency eslint-plugin-react to v7.33.0 ([#125](https://github.com/nozomiishii/configs/issues/125)) ([2a005cf](https://github.com/nozomiishii/configs/commit/2a005cfee8d35aefdbd33634a7fbe75127a3fb70))
+* **deps:** update dependency eslint-plugin-react to v7.33.1 ([#139](https://github.com/nozomiishii/configs/issues/139)) ([9659aed](https://github.com/nozomiishii/configs/commit/9659aed88fadb4e8934d67697c99eca3aee0ac35))
+* **deps:** update dependency eslint-plugin-storybook to v0.6.13 ([#124](https://github.com/nozomiishii/configs/issues/124)) ([7e9d311](https://github.com/nozomiishii/configs/commit/7e9d31199d08bf7df1d12c206134c61b42c1112b))
+* **deps:** update dependency eslint-plugin-unicorn to v48 ([#118](https://github.com/nozomiishii/configs/issues/118)) ([44db7de](https://github.com/nozomiishii/configs/commit/44db7de74d87fcf1811ed8a69b73d7f04c1f0261))
+* **deps:** update dependency eslint-plugin-unicorn to v48.0.1 ([#134](https://github.com/nozomiishii/configs/issues/134)) ([1613680](https://github.com/nozomiishii/configs/commit/161368030e06bb483e40bcf2316e24748368ccb3))
+* **deps:** update dependency eslint-plugin-vitest to v0.2.8 ([#135](https://github.com/nozomiishii/configs/issues/135)) ([68ff75c](https://github.com/nozomiishii/configs/commit/68ff75cc19403f4160f2a69b70e1664a09fa55b5))
+* **deps:** update eslint ([#98](https://github.com/nozomiishii/configs/issues/98)) ([865aee5](https://github.com/nozomiishii/configs/commit/865aee5cf7b0636f00a01aba621cbf5a09febefa))
+* **deps:** update eslint to v5.62.0 ([#109](https://github.com/nozomiishii/configs/issues/109)) ([25a6bfc](https://github.com/nozomiishii/configs/commit/25a6bfc52c97180b5af77bec61473910def8def7))
+* **deps:** update eslint to v6.2.0 ([#132](https://github.com/nozomiishii/configs/issues/132)) ([4199bde](https://github.com/nozomiishii/configs/commit/4199bde472aba2ed3fcb6a4f130cbffe4c519788))
+* **deps:** update eslint to v6.2.1 ([#143](https://github.com/nozomiishii/configs/issues/143)) ([2c4606f](https://github.com/nozomiishii/configs/commit/2c4606f0dd9b0db2617f8cfc3862c53ea9254b93))
+* downgrade eslint-plugin-tailwindcss to 3.13.1 ([87e3599](https://github.com/nozomiishii/configs/commit/87e3599c55fefde76bfff9ed9f2f6e07929c4289))
+* import/no-extraneous-dependencies in storybook ([4377b92](https://github.com/nozomiishii/configs/commit/4377b92167d97a96071018aab9a54c60193c9b7f))
+* remove testing-library from eslint default config ([7ed25fa](https://github.com/nozomiishii/configs/commit/7ed25fa5b12234e1d7464086f69653523a1bfff0))
+* remove unused eslint plugins and update README.md ([bb1161f](https://github.com/nozomiishii/configs/commit/bb1161f1611946e17f1ce2f0813621cc6f581ce6))
+* set "unicorn/no-null: off" in eslint unicorn ([745398b](https://github.com/nozomiishii/configs/commit/745398bff74182f3671852c68fdfe4e8421aece9))
+* support @storybook/test ([445d307](https://github.com/nozomiishii/configs/commit/445d3078497d64e836810b912f5e7bd2741e5806))
+* typo in playwright eslint rule description ([55eb4f1](https://github.com/nozomiishii/configs/commit/55eb4f1a4c552b8ee1ac76c36e1545fe740da273))
+* vitest/prefer-expect-assertions setup ([0f71382](https://github.com/nozomiishii/configs/commit/0f71382cd8db963240ccf86197a942be0a85899a))
+
 ## [0.4.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.3...@nozomiishii/eslint-config-v0.4.4) (2024-02-18)
 
 ### Bug Fixes
