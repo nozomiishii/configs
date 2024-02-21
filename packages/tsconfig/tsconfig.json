@@ -32,8 +32,9 @@
     // ファイルパスの大文字小文字を区別するか
     "forceConsistentCasingInFileNames": true,
 
-    // ライブラリの型の不一致を無視するか https://gist.github.com/azu/56a0411d69e2fc333d545bfe57933d07#skiplibcheck
-    "skipLibCheck": false,
+    // ライブラリの型の不一致を無視するか
+    // https://www.youtube.com/watch?v=zu-EgnbmcLY
+    "skipLibCheck": true,
 
     // Strict mode
     "strict": true,
