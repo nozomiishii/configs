@@ -118,7 +118,7 @@
     "dbaeumer.vscode-eslint",
     "yoavbls.pretty-ts-errors",
     "esbenp.prettier-vscode",
-    "zixuanchen.vitest-explorer",
+    "vitest.explorer",
     "orta.vscode-jest",
     "prisma.prisma",
     "nrwl.angular-console",
