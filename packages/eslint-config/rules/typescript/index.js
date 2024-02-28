@@ -29,6 +29,10 @@ module.exports = defineConfig({
     // interfaceではなくtypeを使う
     '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
 
+    // Method shorthand syntaxではなくObject property syntaxで関数の型定義する
+    // https://www.totaltypescript.com/method-shorthand-syntax-considered-harmful
+    '@typescript-eslint/method-signature-style': ['error', 'property'],
+
     // EnumではなくTypeを使う
     'no-restricted-syntax': [
       'error',
