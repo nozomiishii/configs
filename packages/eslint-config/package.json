@@ -18,7 +18,7 @@
   "main": "index.js",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "@next/eslint-plugin-next": "14.1.0",
+    "@next/eslint-plugin-next": "14.1.1",
     "@tanstack/eslint-plugin-query": "5.20.1",
     "@types/node": "20.11.24",
     "@typescript-eslint/eslint-plugin": "7.1.0",
