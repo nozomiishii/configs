@@ -18,7 +18,7 @@
   "main": "index.yaml",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "@evilmartians/lefthook": "1.6.4"
+    "@evilmartians/lefthook": "1.6.5"
   },
   "peerDependencies": {
     "@evilmartians/lefthook": ">=1.4.0"
