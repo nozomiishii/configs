@@ -127,8 +127,8 @@ importers:
         specifier: 51.0.1
         version: 51.0.1(eslint@8.57.0)
       eslint-plugin-vitest:
-        specifier: 0.3.25
-        version: 0.3.25(@typescript-eslint/eslint-plugin@7.2.0)(eslint@8.57.0)(typescript@5.4.2)
+        specifier: 0.3.26
+        version: 0.3.26(@typescript-eslint/eslint-plugin@7.2.0)(eslint@8.57.0)(typescript@5.4.2)
       globals:
         specifier: 14.0.0
         version: 14.0.0
@@ -1075,7 +1075,7 @@ packages:
       eslint-plugin-testing-library: 6.2.0(eslint@8.57.0)(typescript@5.4.2)
       eslint-plugin-tsdoc: 0.2.17
       eslint-plugin-unicorn: 51.0.1(eslint@8.57.0)
-      eslint-plugin-vitest: 0.3.25(@typescript-eslint/eslint-plugin@7.2.0)(eslint@8.57.0)(typescript@5.4.2)
+      eslint-plugin-vitest: 0.3.26(@typescript-eslint/eslint-plugin@7.2.0)(eslint@8.57.0)(typescript@5.4.2)
       prettier-plugin-packagejson: 2.4.12(prettier@3.2.5)
       typescript: 5.4.2
     transitivePeerDependencies:
@@ -2222,8 +2222,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-vitest@0.3.25(@typescript-eslint/eslint-plugin@7.2.0)(eslint@8.57.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-18iXBQmSeLSkFYlzPDACodtJb1AlyuLkCi+zweBotdeKeALY3TC7dEmPuU8zKuySihHURbIojhJwGevcFC8ojw==}
+  /eslint-plugin-vitest@0.3.26(@typescript-eslint/eslint-plugin@7.2.0)(eslint@8.57.0)(typescript@5.4.2):
+    resolution: {integrity: sha512-oxe5JSPgRjco8caVLTh7Ti8PxpwJdhSV0hTQAmkFcNcmy/9DnqLB/oNVRA11RmVRP//2+jIIT6JuBEcpW3obYg==}
     engines: {node: ^18.0.0 || >= 20.0.0}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': '*'
