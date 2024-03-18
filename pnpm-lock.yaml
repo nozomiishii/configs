@@ -38,8 +38,8 @@ importers:
   packages/commitlint-config:
     dependencies:
       '@commitlint/cli':
-        specifier: 19.1.0
-        version: 19.1.0(@types/node@20.11.27)(typescript@5.4.2)
+        specifier: 19.2.0
+        version: 19.2.0(@types/node@20.11.27)(typescript@5.4.2)
       '@commitlint/config-conventional':
         specifier: 19.1.0
         version: 19.1.0
@@ -392,8 +392,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
-  /@commitlint/cli@19.1.0(@types/node@20.11.27)(typescript@5.4.2):
-    resolution: {integrity: sha512-SYGm8HGbVzrlSYeB6oo6pG1Ec6bOMJcDsXgNGa4vgZQsPj6nJkcbTWlIRmtmIk0tHi0d5sCljGuQ+g/0NCPv7w==}
+  /@commitlint/cli@19.2.0(@types/node@20.11.27)(typescript@5.4.2):
+    resolution: {integrity: sha512-8XnQDMyQR+1/ldbmIyhonvnDS2enEw48Wompo/967fsEvy9Vj5/JbDutzmSBKxANWDVeEbR9QQm0yHpw6ArrFw==}
     engines: {node: '>=v18'}
     hasBin: true
     dependencies:
