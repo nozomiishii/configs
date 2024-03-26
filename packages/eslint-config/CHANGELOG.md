@@ -2,10 +2,9 @@
 
 ## [0.4.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.5...@nozomiishii/eslint-config-v0.4.6) (2024-03-26)
 
-
 ### Features
 
-* add @typescript-eslint/method-signature-style ([63cdd79](https://github.com/nozomiishii/configs/commit/63cdd79b721c415bc69219e13c31a789245bb164))
+- add @typescript-eslint/method-signature-style ([63cdd79](https://github.com/nozomiishii/configs/commit/63cdd79b721c415bc69219e13c31a789245bb164))
 
 ## [0.4.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.4...@nozomiishii/eslint-config-v0.4.5) (2024-02-18)
 
