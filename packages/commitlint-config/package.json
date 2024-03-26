@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/commitlint-config",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Nozomi's Recommended commitlint config",
   "keywords": [
     "commitlint",
