@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.4...@nozomiishii/commitlint-config-v0.0.5) (2024-03-28)
+
+
+### Bug Fixes
+
+* update commitlint version ([89b4158](https://github.com/nozomiishii/configs/commit/89b4158f8fd29f6b7d06dad89a4aa96d337cdfae))
+
 ## [0.0.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.3...@nozomiishii/commitlint-config-v0.0.4) (2024-02-18)
 
 ### Features
