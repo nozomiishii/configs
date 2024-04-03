@@ -43,7 +43,7 @@
     "eslint-plugin-testing-library": "6.2.0",
     "eslint-plugin-tsdoc": "0.2.17",
     "eslint-plugin-unicorn": "51.0.1",
-    "eslint-plugin-vitest": "0.4.0",
+    "eslint-plugin-vitest": "0.4.1",
     "globals": "15.0.0",
     "parse-gitignore": "2.0.0"
   },
