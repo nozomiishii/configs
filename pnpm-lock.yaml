@@ -118,8 +118,8 @@ importers:
         specifier: 3.13.1
         version: 3.13.1(tailwindcss@3.4.3)
       eslint-plugin-testing-library:
-        specifier: 6.2.0
-        version: 6.2.0(eslint@8.57.0)(typescript@5.4.5)
+        specifier: 6.2.1
+        version: 6.2.1(eslint@8.57.0)(typescript@5.4.5)
       eslint-plugin-tsdoc:
         specifier: 0.2.17
         version: 0.2.17
@@ -1074,7 +1074,7 @@ packages:
       eslint-plugin-playwright: 1.6.0(eslint-plugin-jest@27.9.0)(eslint@8.57.0)
       eslint-plugin-react: 7.34.1(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.57.0)
-      eslint-plugin-testing-library: 6.2.0(eslint@8.57.0)(typescript@5.4.5)
+      eslint-plugin-testing-library: 6.2.1(eslint@8.57.0)(typescript@5.4.5)
       eslint-plugin-tsdoc: 0.2.17
       eslint-plugin-unicorn: 51.0.1(eslint@8.57.0)
       eslint-plugin-vitest: 0.3.26(@typescript-eslint/eslint-plugin@7.6.0)(eslint@8.57.0)(typescript@5.4.5)
@@ -2202,8 +2202,8 @@ packages:
       tailwindcss: 3.4.3
     dev: false
 
-  /eslint-plugin-testing-library@6.2.0(eslint@8.57.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-+LCYJU81WF2yQ+Xu4A135CgK8IszcFcyMF4sWkbiu6Oj+Nel0TrkZq/HvDw0/1WuO3dhDQsZA/OpEMGd0NfcUw==}
+  /eslint-plugin-testing-library@6.2.1(eslint@8.57.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-CP2YV/AxtgyrXgizM4648UkuVrFGDcCA8uDmrLytGqtsa7wgC6MTuIQqEAT1Qm4/zCxnC8xRtiGgfEwEt6hmdw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0, npm: '>=6'}
     peerDependencies:
       eslint: ^7.5.0 || ^8.0.0
