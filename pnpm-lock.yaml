@@ -127,8 +127,8 @@ importers:
         specifier: 52.0.0
         version: 52.0.0(eslint@8.57.0)
       eslint-plugin-vitest:
-        specifier: 0.5.2
-        version: 0.5.2(@typescript-eslint/eslint-plugin@7.6.0)(eslint@8.57.0)(typescript@5.4.5)
+        specifier: 0.5.3
+        version: 0.5.3(@typescript-eslint/eslint-plugin@7.6.0)(eslint@8.57.0)(typescript@5.4.5)
       globals:
         specifier: 15.0.0
         version: 15.0.0
@@ -2297,8 +2297,8 @@ packages:
       - typescript
     dev: false
 
-  /eslint-plugin-vitest@0.5.2(@typescript-eslint/eslint-plugin@7.6.0)(eslint@8.57.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-KROUmsB9xCq8R78omFJmn8tS11s8OC+TXwmo1RaU69x5CI56icXb4k4rSfag4za2ZcIQIEpoOkS/bYWyiMyK/g==}
+  /eslint-plugin-vitest@0.5.3(@typescript-eslint/eslint-plugin@7.6.0)(eslint@8.57.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-D0iu6ppP6FmNSZP4cdhEXqyI+fuW6JwwWdECRrNymd1jiVgUmDgSvtryytonNxHQQWhGNmZM3V/qvpXttH1rRQ==}
     engines: {node: ^18.0.0 || >= 20.0.0}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': '*'
