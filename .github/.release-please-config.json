@@ -31,6 +31,10 @@
       "release-type": "node",
       "component": "@nozomiishii/prettier-config"
     },
+    "packages/tsconfig": {
+      "release-type": "node",
+      "component": "@nozomiishii/tsconfig"
+    },
     "apps/nozo/typescript": {
       "release-type": "node",
       "component": "nozo"

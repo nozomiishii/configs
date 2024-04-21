@@ -5,5 +5,6 @@
   "packages/lefthook-config": "0.2.1",
   "packages/markdownlint-cli2-config": "0.3.1",
   "packages/prettier-config": "0.6.2",
+  "packages/tsconfig": "0.0.1",
   "apps/nozo/typescript": "0.2.0"
 }
