@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "@nozomiishii/tsconfig/base",
+
+  "compilerOptions": {
+    // ----------------------------------------------------------------
+    // Base Option
+    // ----------------------------------------------------------------
+    // ESModuleの互換。CommonJSで定義されてるモジュールを変換してESModuleでも利用できるようにするか。
+    "esModuleInterop": true,
+
+    // .d.tsファイルの型までtype checkするか
+    // falseだと全てのnode_modulesまでチェックするからパフォーマンスよくない
+    // https://www.youtube.com/watch?v=zu-EgnbmcLY
+    "skipLibCheck": true,
+
+    // どのJavaScriptのバージョンに変換するか
+    // 使うnodeバージョンによって変更する
+    // 対応表 https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping
+    "target": "ES2023",
+
+    // .jsファイルのインポートを許可するか
+    "allowJs": true,
+
+    // .jsonファイルのインポートを許可するか
+    "resolveJsonModule": true,
+
+    // forceにすることで全てのファイルをモジュールとして扱う
+    // https://www.totaltypescript.com/cannot-redeclare-block-scoped-variable
+    "moduleDetection": "force",
+
+    // ファイル内で何かをエクスポートするか、少なくとも1つの外部モジュールをインポートしているか確認する
+    // TSC以外のトランスパイラに配慮するためのもの
+    "isolatedModules": true,
+
+    // ファイルパスの大文字小文字を区別するか
+    "forceConsistentCasingInFileNames": true,
+
+    // ----------------------------------------------------------------
+    // Strictness
+    // ----------------------------------------------------------------
+    // 次の8個のオプションをすべて有効になる
+    // noImplicitAny
+    // strictNullChecks
+    // strictFunctionTypes
+    // strictBindCallApply
+    // strictPropertyInitialization
+    // noImplicitThis
+    // useUnknownInCatchVariables
+    // alwaysStrict
+    // https://typescriptbook.jp/reference/tsconfig/strict
+    "strict": true,
+
+    // 配列やオブジェクトへのインデックスアクセスを型安全にする
+    "noUncheckedIndexedAccess": true,
+
+    // x?: T と x?: T | undefined が区別される
+    "exactOptionalPropertyTypes": true,
+
+    // ----------------------------------------------------------------
+    // Transpiling
+    // ----------------------------------------------------------------
+    // tsconfig.tsbuildinfoを生成して差分コンパイルにより時間短縮するか
+    "incremental": true,
+
+    // TSCでTranspileする場合
+    // "moduleResolution": "NodeNext",
+    // "module": "NodeNext",
+    // "outDir": "dist",
+    // "sourceMap": true,
+
+    // TSC以外でTranspileする場合
+    // "moduleResolution": "Bundler",
+    // "module": "ESNext",
+    // "noEmit": true,
+
+    /* ライブラリの場合 */
+    // "declaration": true,
+
+    /* monorepoでライブラリの場合 */
+    // "composite": true,
+    // "declarationMap": true,
+
+    // ----------------------------------------------------------------
+    // JSX
+    // ----------------------------------------------------------------
+    // tsxファイルの変換方法。preserveは.jsファイルに変換せずにそのまま.jsxを出力する
+    // Nextjs使う場合はpreserveのままが良い
+    // "jsx": "preserve",
+
+    // ----------------------------------------------------------------
+    // Libs
+    // ----------------------------------------------------------------
+    /* If your code runs in the DOM: */
+    // "lib": ["ES2023", "dom", "dom.iterable"]
+    /* If your code doesn't run in the DOM: */
+    // "lib": ["ES2023"],
+
+    // ----------------------------------------------------------------
+    // Types
+    // ----------------------------------------------------------------
+    "types": ["vitest/importMeta"]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@nozomiishii/tsconfig",
+  "version": "0.0.0",
+  "description": "Nozomi's Recommended tsconfig",
+  "keywords": [
+    "tsconfig",
+    "config"
+  ],
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/tsconfig/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozomiishii/configs.git",
+    "directory": "packages/tsconfig"
+  },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
+  "files": [
+    "*.json"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "volta": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
