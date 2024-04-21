@@ -18,10 +18,10 @@
     "*.json"
   ],
   "engines": {
-    "node": ">=20.0.0"
+    "node": "21.7.3"
   },
   "volta": {
-    "node": ">=20.0.0"
+    "node": "21.7.3"
   },
   "publishConfig": {
     "access": "public"
