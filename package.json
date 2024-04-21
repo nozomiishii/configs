@@ -36,6 +36,10 @@
     "markdownlint-cli2": "0.13.0"
   },
   "packageManager": "pnpm@9.0.2",
+  "engines": {
+    "node": "20.12.2",
+    "pnpm": "9.0.2"
+  },
   "volta": {
     "node": "20.12.2",
     "pnpm": "9.0.2"
