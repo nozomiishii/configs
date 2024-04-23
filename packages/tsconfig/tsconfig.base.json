@@ -26,6 +26,7 @@
     "resolveJsonModule": true,
 
     // forceにすることで全てのファイルをモジュールとして扱う
+    // ファイルがスコープの単位になるので別ファイルで同一名の変数定義が可能
     // https://www.totaltypescript.com/cannot-redeclare-block-scoped-variable
     "moduleDetection": "force",
 
@@ -39,7 +40,7 @@
     // ----------------------------------------------------------------
     // Strictness
     // ----------------------------------------------------------------
-    // 次の8個のオプションをすべて有効になる
+    // trueにすることで次の8個のオプションがすべて有効になる
     // noImplicitAny
     // strictNullChecks
     // strictFunctionTypes
