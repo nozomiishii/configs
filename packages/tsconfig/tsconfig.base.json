@@ -58,6 +58,9 @@
     // x?: T と x?: T | undefined が区別される
     "exactOptionalPropertyTypes": true,
 
+    // overrideする場合は明示する
+    "noImplicitOverride": true,
+
     // ----------------------------------------------------------------
     // Transpiling
     // ----------------------------------------------------------------
@@ -79,7 +82,9 @@
     // "declaration": true,
 
     /* monorepoでライブラリの場合 */
+    // "declaration": true,
     // "composite": true,
+    // "sourceMap": true,
     // "declarationMap": true,
 
     // ----------------------------------------------------------------
