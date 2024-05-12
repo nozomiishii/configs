@@ -44,7 +44,7 @@
     "eslint-plugin-tsdoc": "0.2.17",
     "eslint-plugin-unicorn": "52.0.0",
     "eslint-plugin-vitest": "0.5.4",
-    "globals": "15.1.0",
+    "globals": "15.2.0",
     "parse-gitignore": "2.0.0"
   },
   "peerDependencies": {
