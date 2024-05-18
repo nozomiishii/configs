@@ -94,8 +94,8 @@ importers:
         specifier: 2.29.1
         version: 2.29.1(@typescript-eslint/parser@7.9.0(eslint@9.2.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@9.2.0)
       eslint-plugin-jsdoc:
-        specifier: 48.2.4
-        version: 48.2.4(eslint@9.2.0)
+        specifier: 48.2.5
+        version: 48.2.5(eslint@9.2.0)
       eslint-plugin-jsx-a11y:
         specifier: 6.8.0
         version: 6.8.0(eslint@9.2.0)
@@ -1105,8 +1105,8 @@ packages:
       jest:
         optional: true
 
-  eslint-plugin-jsdoc@48.2.4:
-    resolution: {integrity: sha512-3ebvVgCJFy06gpmuS2ynz13uh9iFSzZ1C1dDkgcSAqVVg82zlORKMk2fvjq708pAO6bwfs5YLttknFEbaoDiGw==}
+  eslint-plugin-jsdoc@48.2.5:
+    resolution: {integrity: sha512-ZeTfKV474W1N9niWfawpwsXGu+ZoMXu4417eBROX31d7ZuOk8zyG66SO77DpJ2+A9Wa2scw/jRqBPnnQo7VbcQ==}
     engines: {node: '>=18'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -3724,7 +3724,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-jsdoc@48.2.4(eslint@9.2.0):
+  eslint-plugin-jsdoc@48.2.5(eslint@9.2.0):
     dependencies:
       '@es-joy/jsdoccomment': 0.43.0
       are-docs-informative: 0.0.2
