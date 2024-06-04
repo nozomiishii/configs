@@ -22,7 +22,7 @@
   "main": "index.js",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "prettier": "3.2.5",
+    "prettier": "3.3.0",
     "prettier-plugin-packagejson": "2.5.0"
   },
   "publishConfig": {
