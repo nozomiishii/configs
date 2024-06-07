@@ -42,7 +42,13 @@ module.exports = defineConfig({
           },
         ],
 
-        // FIXME: @storybook/jestから@storybook/testに対応したらonにし直す
+        /**
+         * // FIXME
+         * storybook v8からは@storybook/jestではなく@storybook/testを使いたいのでoff。対応待ち
+         *
+         * assertionを@storybook/jestから使う
+         * {@link https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/csf-component.md}
+         */
         'storybook/use-storybook-expect': 'off',
 
         /**
