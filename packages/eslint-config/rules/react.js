@@ -33,4 +33,11 @@ module.exports = defineConfig({
      */
     require.resolve('@vercel/style-guide/eslint/react'),
   ],
+  rules: {
+    /**
+     * Reactで”&&”で分岐した際、うっかり「0」を表示しないようにする
+     * {@link https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-leaked-render.md}
+     */
+    'react/jsx-no-leaked-render': ['warn', { validStrategies: ['coerce'] }],
+  },
 });
