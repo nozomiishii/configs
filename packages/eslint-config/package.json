@@ -20,7 +20,7 @@
   "dependencies": {
     "@next/eslint-plugin-next": "14.2.3",
     "@tanstack/eslint-plugin-query": "5.35.6",
-    "@types/node": "20.14.1",
+    "@types/node": "20.14.2",
     "@typescript-eslint/eslint-plugin": "7.12.0",
     "@typescript-eslint/parser": "7.12.0",
     "@vercel/style-guide": "6.0.0",
@@ -32,7 +32,7 @@
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-jsdoc": "48.2.7",
+    "eslint-plugin-jsdoc": "48.2.9",
     "eslint-plugin-jsx-a11y": "6.8.0",
     "eslint-plugin-perfectionist": "2.10.0",
     "eslint-plugin-playwright": "1.6.2",
@@ -44,7 +44,7 @@
     "eslint-plugin-tsdoc": "0.3.0",
     "eslint-plugin-unicorn": "53.0.0",
     "eslint-plugin-vitest": "0.5.4",
-    "globals": "15.3.0",
+    "globals": "15.4.0",
     "parse-gitignore": "2.0.0"
   },
   "peerDependencies": {
