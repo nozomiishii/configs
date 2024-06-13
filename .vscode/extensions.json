@@ -18,7 +18,6 @@
     "janisdd.vscode-edit-csv",
     "grapecity.gc-excelviewer",
     "analytic-signal.preview-pdf",
-    "formulahendry.code-runner",
     "editorconfig.editorconfig",
     "scaffdog.scaffdog-vscode",
     "jock.svg",
@@ -114,6 +113,8 @@
     // Python
     // ----------------------------------------------------------------
     "ms-python.python",
+    "ms-python.vscode-pylance",
+    "charliermarsh.ruff",
 
     // ----------------------------------------------------------------
     // Ruby
