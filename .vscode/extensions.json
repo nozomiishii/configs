@@ -45,7 +45,6 @@
     // ----------------------------------------------------------------
     "visualstudioexptteam.vscodeintellicode",
     "christian-kohler.path-intellisense",
-    "tabnine.tabnine-vscode",
 
     // ----------------------------------------------------------------
     // ssh-config
