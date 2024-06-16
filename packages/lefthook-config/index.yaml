@@ -27,6 +27,9 @@ post-merge:
       run: git branch --merged | grep -Ev '\*|master|main|dev|develop|development|stag|staging|prod|production' | xargs git branch -d; git fetch --prune;
 
     update-node-modules:
+      env:
+        LEFTHOOK_VERBOSE: true
+      interactive: true
       files: git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD
       glob: '**/{package.json,pnpm-lock.yaml,yarn.lock,package-lock.json}'
       run: |
