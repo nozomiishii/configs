@@ -2,15 +2,13 @@
 
 ## [0.0.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.4...@nozomiishii/commitlint-config-v0.0.5) (2024-06-16)
 
-
 ### Features
 
-* update commitlint install command ([26e256d](https://github.com/nozomiishii/configs/commit/26e256d2f9f4cff2afffd9ab93d99a21c472482f))
-
+- update commitlint install command ([26e256d](https://github.com/nozomiishii/configs/commit/26e256d2f9f4cff2afffd9ab93d99a21c472482f))
 
 ### Bug Fixes
 
-* update commitlint version ([89b4158](https://github.com/nozomiishii/configs/commit/89b4158f8fd29f6b7d06dad89a4aa96d337cdfae))
+- update commitlint version ([89b4158](https://github.com/nozomiishii/configs/commit/89b4158f8fd29f6b7d06dad89a4aa96d337cdfae))
 
 ## [0.0.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.3...@nozomiishii/commitlint-config-v0.0.4) (2024-02-18)
 

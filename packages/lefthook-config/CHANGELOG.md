@@ -2,10 +2,9 @@
 
 ## [0.2.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.1...@nozomiishii/lefthook-config-v0.2.2) (2024-06-16)
 
-
 ### Features
 
-* add LEFTHOOK_VERBOSE true to update-node-modules ([8e05b51](https://github.com/nozomiishii/configs/commit/8e05b5192afacccf4ebc75ce979bde3355a77d97))
+- add LEFTHOOK_VERBOSE true to update-node-modules ([8e05b51](https://github.com/nozomiishii/configs/commit/8e05b5192afacccf4ebc75ce979bde3355a77d97))
 
 ## [0.2.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.0...@nozomiishii/lefthook-config-v0.2.1) (2024-02-18)
 
