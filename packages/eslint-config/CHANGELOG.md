@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.5...@nozomiishii/eslint-config-v0.4.6) (2024-06-16)
+
+### Features
+
+- add @typescript-eslint/method-signature-style ([63cdd79](https://github.com/nozomiishii/configs/commit/63cdd79b721c415bc69219e13c31a789245bb164))
+- add eslint-plugin-jsx-no-leaked-render rule ([ae1c1a9](https://github.com/nozomiishii/configs/commit/ae1c1a93e72e0bad1ad2c68eb788f23343b981e6))
+
+### Bug Fixes
+
+- update peerDependencies version ([bd65911](https://github.com/nozomiishii/configs/commit/bd65911bcd93b907565f00ac9aace0a60e560a5e))
+- update storybook configuration for @storybook/test usage ([7c1ed0f](https://github.com/nozomiishii/configs/commit/7c1ed0f155c4ee3e618581b1685bf1a3b40d2873))
+
 ## [0.4.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.4...@nozomiishii/eslint-config-v0.4.5) (2024-02-18)
 
 ### Features
