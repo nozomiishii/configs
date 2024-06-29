@@ -60,7 +60,7 @@ jobs:
 
     steps:
       - name: Checkout release-please Pull Request
-        uses: actions/checkout@v4
+        uses: actions/checkout@v1
         with:
           ref: ${{ fromJson(needs.release-please.outputs.pr).headBranchName }}
 
