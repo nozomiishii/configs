@@ -77,5 +77,12 @@ module.exports = defineConfig({
         ],
       },
     },
+    {
+      files: ['**/*.test.ts', '**/*.spec.ts'],
+      rules: {
+        // テストファイルではrequire-jsdocをoffにする
+        'jsdoc/require-jsdoc': 'off',
+      },
+    },
   ],
 });
