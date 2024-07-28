@@ -58,6 +58,7 @@ module.exports = defineConfig({
           'object',
           'unknown',
         ],
+        // ここだけDefaultから変更してる
         'newlines-between': 'never',
         'internal-pattern': ['@/**', '~/**'],
       },
