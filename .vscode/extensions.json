@@ -126,7 +126,6 @@
     "yoavbls.pretty-ts-errors",
     "esbenp.prettier-vscode",
     "vitest.explorer",
-    "orta.vscode-jest",
     "prisma.prisma",
     "nrwl.angular-console",
     "digitalbrainstem.javascript-ejs-support",
