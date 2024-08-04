@@ -4,7 +4,7 @@ const { defineConfig } = require('eslint-define-config');
 module.exports = defineConfig({
   overrides: [
     {
-      files: ['**/e2e/**'],
+      files: ['**/e2e/**', '**/*.stories.test.{ts,tsx}'],
       extends: [
         /**
          * eslint-plugin-playwright
@@ -18,21 +18,43 @@ module.exports = defineConfig({
 
         // 明示的に@playwright/testからimportする
         // @types/testing-library__jest-domのせいで勝手にjest.testなどがglobal変数として扱われるため
-        'no-restricted-globals': [
-          'error',
-          {
-            name: 'test',
-            message: "Use import { test } from '@playwright/test' instead",
-          },
-          {
-            name: 'describe',
-            message: "Use import { describe } from '@playwright/test' instead",
-          },
-          {
-            name: 'expect',
-            message: "Use import { expect } from '@playwright/test' instead",
-          },
-        ],
+        // 'no-restricted-globals': [
+        //   'error',
+        //   {
+        //     name: 'test',
+        //     message: "Use import { test } from '@playwright/test' instead",
+        //   },
+        //   {
+        //     name: 'describe',
+        //     message: "Use import { describe } from '@playwright/test' instead",
+        //   },
+        //   {
+        //     name: 'expect',
+        //     message: "Use import { expect } from '@playwright/test' instead",
+        //   },
+        // ],
+
+        /**
+         * setup and teardown hooksは使わない。関数を逐一呼び出す。
+         * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/no-hooks.md}
+         */
+        'playwright/no-hooks': 'error',
+
+        /**
+         * getByTitleは使わない。built in locatorsを使う。
+         * https://playwright.dev/docs/locators
+         * https://playwright.dev/docs/best-practices#best-practices
+         * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/no-get-by-title.md}
+         */
+        'playwright/no-get-by-title': 'warn',
+
+        /**
+         * raw locatorsは使わない。built in locatorsを使う。
+         * https://playwright.dev/docs/locators
+         * https://playwright.dev/docs/best-practices#best-practices
+         * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/no-raw-locators.md}
+         */
+        'playwright/no-raw-locators': 'error',
 
         /**
          * テストタイトルは小文字からはじめる
@@ -41,10 +63,22 @@ module.exports = defineConfig({
         'playwright/prefer-lowercase-title': 'warn',
 
         /**
+         * comparison-matcherでいけるところはcomparison-matcher使う
+         * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-comparison-matcher.md}
+         */
+        'playwright/prefer-comparison-matcher': 'warn',
+
+        /**
          * toBeでいけるところはtoBe
          * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-to-be.md}
          */
         'playwright/prefer-to-be': 'warn',
+
+        /**
+         * toContainでいけるところはtoContain
+         * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-to-contain.md}
+         */
+        'playwright/prefer-to-contain': 'warn',
 
         /**
          * toHaveLengthでいけるところはtoHaveLength
