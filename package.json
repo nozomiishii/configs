@@ -26,13 +26,13 @@
     "reset:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && pnpm install"
   },
   "devDependencies": {
-    "@evilmartians/lefthook": "1.7.7",
+    "@evilmartians/lefthook": "1.7.11",
     "@nozomiishii/commitlint-config": "workspace:*",
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
     "@nozomiishii/markdownlint-cli2-config": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
-    "@types/node": "20.14.12",
+    "@types/node": "20.14.13",
     "markdownlint-cli2": "0.13.0"
   },
   "packageManager": "pnpm@9.6.0",
