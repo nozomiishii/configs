@@ -86,11 +86,17 @@ module.exports = defineConfig({
          */
         'playwright/prefer-to-have-length': 'warn',
 
-        /**
-         * describe内にテスト書く
-         * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/require-top-level-describe.md}
-         */
-        'playwright/require-top-level-describe': 'error',
+        // /**
+        //  * describe内にテスト書く
+        //  * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/require-top-level-describe.md}
+        //  */
+        // 'playwright/require-top-level-describe': 'error',
+
+        // /**
+        //  * expect.softを使う
+        //  * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/require-soft-assertions.md}
+        //  */
+        // 'playwright/require-soft-assertions': 'warn',
       },
     },
   ],
