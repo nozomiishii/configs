@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.4.7](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.6...@nozomiishii/eslint-config-v0.4.7) (2024-08-04)
+
+### Features
+
+- update eslint-config for playwright rules ([eacbbdc](https://github.com/nozomiishii/configs/commit/eacbbdc888e222f8752b935073bee15030feb7db))
+
+### Bug Fixes
+
+- add description to perfectionist/sort-imports ([092d6db](https://github.com/nozomiishii/configs/commit/092d6db962fbc6e161b9f66fb3ab63b922dc8254))
+- turn off jsdoc/require-jsdoc rules in test files ([432af76](https://github.com/nozomiishii/configs/commit/432af767db8336a32d217d29f9d8586195ff2999))
+
 ## [0.4.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.5...@nozomiishii/eslint-config-v0.4.6) (2024-06-16)
 
 ### Features
