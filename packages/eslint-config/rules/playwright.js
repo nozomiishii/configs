@@ -35,6 +35,12 @@ module.exports = defineConfig({
         // ],
 
         /**
+         * test内のexpectの数の制限
+         * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/max-expects.md}
+         */
+        'playwright/max-expects': ['error', { max: 5 }],
+
+        /**
          * setup and teardown hooksは使わない。関数を逐一呼び出す。
          * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/no-hooks.md}
          */
