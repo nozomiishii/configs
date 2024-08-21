@@ -44,7 +44,7 @@ module.exports = defineConfig({
          * describeはnestの数の制限
          * {@link https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/max-nested-describe.md}
          */
-        'playwright/max-nested-describe': ['error', { max: 1 }],
+        'playwright/max-nested-describe': ['error', { max: 2 }],
 
         /**
          * setup and teardown hooksは使わない。関数を逐一呼び出す。
