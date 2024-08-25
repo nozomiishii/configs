@@ -24,6 +24,7 @@
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "@vercel/style-guide": "6.0.0",
+    "@vitest/eslint-plugin": "1.0.3",
     "eslint": "8.57.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "18.0.0",
@@ -43,7 +44,6 @@
     "eslint-plugin-testing-library": "6.3.0",
     "eslint-plugin-tsdoc": "0.3.0",
     "eslint-plugin-unicorn": "55.0.0",
-    "eslint-plugin-vitest": "0.5.4",
     "globals": "15.9.0",
     "parse-gitignore": "2.0.0"
   },

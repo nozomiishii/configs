@@ -4,14 +4,14 @@ const { defineConfig } = require('eslint-define-config');
 module.exports = defineConfig({
   overrides: [
     {
-      files: ['**/*.test.*'],
-      excludedFiles: ['**/e2e/**'],
+      files: ['**/*.test.{ts,tsx}'],
+      excludedFiles: ['**/e2e/**', '!**/*.stories.test.{ts,tsx}', '!**/.playwright/**'],
       extends: [
         /**
-         * eslint-plugin-vitest
-         * {@link https://www.npmjs.com/package/eslint-plugin-vitest}
+         * @vitest/eslint-plugin
+         * {@link https://github.com/vitest-dev/eslint-plugin-vitest?tab=readme-ov-file#rules}
          */
-        'plugin:vitest/all',
+        'plugin:@vitest/legacy-all',
       ],
       rules: {
         // DevDependenciesでいい
