@@ -70,8 +70,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0(@next/eslint-plugin-next@14.2.6)(eslint@8.57.0)(prettier@3.3.3)(typescript@5.5.4)
       '@vitest/eslint-plugin':
-        specifier: 1.0.3
-        version: 1.0.3(@typescript-eslint/utils@8.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
+        specifier: 1.0.4
+        version: 1.0.4(@typescript-eslint/utils@8.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -613,8 +613,8 @@ packages:
       typescript:
         optional: true
 
-  '@vitest/eslint-plugin@1.0.3':
-    resolution: {integrity: sha512-7hTONh+lqN+TEimHy2aWVdHVqYohcxLGD4yYBwSVvhyiti/j9CqBNMQvOa6xLoVcEtaWAoCCDbYgvxwNqA4lsA==}
+  '@vitest/eslint-plugin@1.0.4':
+    resolution: {integrity: sha512-8w8ozemYJul5hQE0X6XJ5kFiOf9VrnJBVYIDa54uAcU4cr/X/iVAzvWNcggS+f8kB+NnaQQPsi5HjkfnF6wdEg==}
     peerDependencies:
       '@typescript-eslint/utils': '>= 8.0'
       eslint: '>= 8.57.0'
@@ -3220,7 +3220,7 @@ snapshots:
       - supports-color
       - vitest
 
-  '@vitest/eslint-plugin@1.0.3(@typescript-eslint/utils@8.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)':
+  '@vitest/eslint-plugin@1.0.4(@typescript-eslint/utils@8.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)':
     dependencies:
       eslint: 8.57.0
     optionalDependencies:
