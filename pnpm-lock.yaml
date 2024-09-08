@@ -52,8 +52,8 @@ importers:
   packages/eslint-config:
     dependencies:
       '@next/eslint-plugin-next':
-        specifier: 14.2.7
-        version: 14.2.7
+        specifier: 14.2.8
+        version: 14.2.8
       '@tanstack/eslint-plugin-query':
         specifier: 5.53.0
         version: 5.53.0(eslint@8.57.0)(typescript@5.5.4)
@@ -68,7 +68,7 @@ importers:
         version: 7.18.0(eslint@8.57.0)(typescript@5.5.4)
       '@vercel/style-guide':
         specifier: 6.0.0
-        version: 6.0.0(@next/eslint-plugin-next@14.2.7)(eslint@8.57.0)(prettier@3.3.3)(typescript@5.5.4)
+        version: 6.0.0(@next/eslint-plugin-next@14.2.8)(eslint@8.57.0)(prettier@3.3.3)(typescript@5.5.4)
       '@vitest/eslint-plugin':
         specifier: 1.1.0
         version: 1.1.0(@typescript-eslint/utils@8.3.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
@@ -394,8 +394,8 @@ packages:
   '@microsoft/tsdoc@0.15.0':
     resolution: {integrity: sha512-HZpPoABogPvjeJOdzCOSJsXeL/SMCBgBZMVC3X3d7YYp2gf31MfxhUoYUNwf1ERPJOnQc0wkFn9trqI6ZEdZuA==}
 
-  '@next/eslint-plugin-next@14.2.7':
-    resolution: {integrity: sha512-+7xh142AdhZGjY9/L0iFo7mqRBMJHe+q+uOL+hto1Lfo9DeWCGcR6no4StlFbVSVcA6fQLKEX6y6qhMsSKbgNQ==}
+  '@next/eslint-plugin-next@14.2.8':
+    resolution: {integrity: sha512-ue5vcq9Fjk3asACRDrzYjcGMEN7pMMDQ5zUD+FenkqvlPCVUD1x7PxBNOLfPYDZOrk/Vnl4GHmjj2mZDqPW8TQ==}
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
@@ -2919,7 +2919,7 @@ snapshots:
 
   '@microsoft/tsdoc@0.15.0': {}
 
-  '@next/eslint-plugin-next@14.2.7':
+  '@next/eslint-plugin-next@14.2.8':
     dependencies:
       glob: 10.3.10
 
@@ -3142,7 +3142,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vercel/style-guide@6.0.0(@next/eslint-plugin-next@14.2.7)(eslint@8.57.0)(prettier@3.3.3)(typescript@5.5.4)':
+  '@vercel/style-guide@6.0.0(@next/eslint-plugin-next@14.2.8)(eslint@8.57.0)(prettier@3.3.3)(typescript@5.5.4)':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/eslint-parser': 7.25.1(@babel/core@7.25.2)(eslint@8.57.0)
@@ -3165,7 +3165,7 @@ snapshots:
       eslint-plugin-vitest: 0.3.26(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
       prettier-plugin-packagejson: 2.5.2(prettier@3.3.3)
     optionalDependencies:
-      '@next/eslint-plugin-next': 14.2.7
+      '@next/eslint-plugin-next': 14.2.8
       eslint: 8.57.0
       prettier: 3.3.3
       typescript: 5.5.4
