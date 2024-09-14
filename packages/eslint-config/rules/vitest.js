@@ -5,7 +5,7 @@ module.exports = defineConfig({
   overrides: [
     {
       files: ['**/*.test.{ts,tsx}'],
-      excludedFiles: ['**/e2e/**', '!**/*.stories.test.{ts,tsx}', '!**/.playwright/**'],
+      excludedFiles: ['!**/.playwright/**', '**/e2e/**', '!**/.storybook/**', '!**/*.stories.test.{ts,tsx}'],
       extends: [
         /**
          * @vitest/eslint-plugin
