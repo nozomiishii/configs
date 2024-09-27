@@ -55,8 +55,8 @@ importers:
         specifier: 14.2.13
         version: 14.2.13
       '@tanstack/eslint-plugin-query':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.57.0)(typescript@5.6.2)
+        specifier: 5.57.2
+        version: 5.57.2(eslint@8.57.0)(typescript@5.6.2)
       '@types/node':
         specifier: 20.16.6
         version: 20.16.6
@@ -437,8 +437,8 @@ packages:
   '@storybook/csf@0.0.1':
     resolution: {integrity: sha512-USTLkZze5gkel8MYCujSRBVIrUQ3YPBrLOx7GNk/0wttvVtlzWXAq9eLbQ4p/NicGxP+3T7KPEMVV//g+yubpw==}
 
-  '@tanstack/eslint-plugin-query@5.57.1':
-    resolution: {integrity: sha512-HrfX4NqVseUZiRFBEOjS61bYIU5Qb9TeLEraOj0yMruCFIXz4reP62Cpq6BwZfMMASV7GfWAFiRvMbg7J/U05Q==}
+  '@tanstack/eslint-plugin-query@5.57.2':
+    resolution: {integrity: sha512-JEvKhL4cRV0vMwvjg8LSYE7tiaxr1zzBEgNC9n/vexrUKkLeM7rxt4iIXMYphMGzuTYdSBYBo5CQy1Iio7LhSA==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
@@ -2908,7 +2908,7 @@ snapshots:
     dependencies:
       lodash: 4.17.21
 
-  '@tanstack/eslint-plugin-query@5.57.1(eslint@8.57.0)(typescript@5.6.2)':
+  '@tanstack/eslint-plugin-query@5.57.2(eslint@8.57.0)(typescript@5.6.2)':
     dependencies:
       '@typescript-eslint/utils': 8.7.0(eslint@8.57.0)(typescript@5.6.2)
       eslint: 8.57.0
