@@ -83,6 +83,7 @@
     // CSS
     // ----------------------------------------------------------------
     "bradlc.vscode-tailwindcss",
+    "kalimahapps.tailwind-config-viewer",
     "stylelint.vscode-stylelint",
     "chakra-ui.panda-css-vscode",
 
