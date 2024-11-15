@@ -37,6 +37,11 @@ module.exports = defineConfig({
     /**
      * Reactで”&&”で分岐した際、うっかり「0」を表示しないようにする
      * {@link https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-leaked-render.md}
+     *
+     * validStrategiesのcoerceとternaryの違い
+     * https://chatgpt.com/share/67356362-f738-8007-9b93-6164fb55340f
+     *
+     * 人によって a ? b : nullって書くか!!a && b って書くか揺れないようにcoerceにしてる
      */
     'react/jsx-no-leaked-render': ['warn', { validStrategies: ['coerce'] }],
   },
