@@ -25,6 +25,9 @@
     "fabiospampinato.vscode-open-in-github",
     "lokalise.i18n-ally",
     "adpyke.codesnap",
+    "ms-vscode.vscode-copilot-vision",
+    "github.copilot",
+    "github.copilot-chat",
 
     // ----------------------------------------------------------------
     // plist
@@ -80,9 +83,7 @@
     // CSS
     // ----------------------------------------------------------------
     "bradlc.vscode-tailwindcss",
-    "kalimahapps.tailwind-config-viewer",
     "stylelint.vscode-stylelint",
-    "chakra-ui.panda-css-vscode",
 
     // ----------------------------------------------------------------
     // Yaml
@@ -103,7 +104,6 @@
     // Rust
     // ----------------------------------------------------------------
     "rust-lang.rust-analyzer",
-    "serayuzgur.crates",
     "tamasfe.even-better-toml",
     "vadimcn.vscode-lldb",
 
@@ -128,16 +128,8 @@
     "vitest.explorer",
     "prisma.prisma",
     "nrwl.angular-console",
-    "digitalbrainstem.javascript-ejs-support",
     "ms-playwright.playwright",
-    "nitayneeman.playwright-snippets",
     "ygkn.storybook-opener",
-    "mylesmurphy.prettify-ts",
-
-    // ----------------------------------------------------------------
-    // Nextjs
-    // ----------------------------------------------------------------
-    "nextnav.nextnav",
 
     // ----------------------------------------------------------------
     // Brewfile
@@ -147,7 +139,7 @@
     // ----------------------------------------------------------------
     // Solidity
     // ----------------------------------------------------------------
-    "juanblanco.solidity",
+    // "juanblanco.solidity",
 
     // ----------------------------------------------------------------
     // SQL
