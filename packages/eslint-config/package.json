@@ -36,7 +36,7 @@
     "eslint-plugin-jsdoc": "50.5.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-perfectionist": "3.9.1",
-    "eslint-plugin-playwright": "2.0.1",
+    "eslint-plugin-playwright": "2.1.0",
     "eslint-plugin-react": "7.37.2",
     "eslint-plugin-react-hooks": "5.0.0",
     "eslint-plugin-storybook": "0.11.0",
