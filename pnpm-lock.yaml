@@ -115,20 +115,20 @@ importers:
         specifier: 5.0.0
         version: 5.0.0(eslint@8.57.0)
       eslint-plugin-storybook:
-        specifier: 0.11.0
-        version: 0.11.0(eslint@8.57.0)(typescript@5.7.2)
+        specifier: 0.11.1
+        version: 0.11.1(eslint@8.57.0)(typescript@5.7.2)
       eslint-plugin-tailwindcss:
         specifier: 3.17.5
         version: 3.17.5(tailwindcss@3.4.15)
       eslint-plugin-testing-library:
-        specifier: 6.4.0
-        version: 6.4.0(eslint@8.57.0)(typescript@5.7.2)
+        specifier: 6.5.0
+        version: 6.5.0(eslint@8.57.0)(typescript@5.7.2)
       eslint-plugin-tsdoc:
         specifier: 0.3.0
         version: 0.3.0
       eslint-plugin-unicorn:
-        specifier: 56.0.0
-        version: 56.0.0(eslint@8.57.0)
+        specifier: 56.0.1
+        version: 56.0.1(eslint@8.57.0)
       globals:
         specifier: 15.12.0
         version: 15.12.0
@@ -1148,8 +1148,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
 
-  eslint-plugin-storybook@0.11.0:
-    resolution: {integrity: sha512-MvPJgF+ORwgK04a1CY5itO4pwdAOFIRqczlNEHL62+4Ocvj1d61GWRqIdeX1BNCKno6fdPC6TksUHCZMGsq26g==}
+  eslint-plugin-storybook@0.11.1:
+    resolution: {integrity: sha512-yGKpAYkBm/Q2hZg476vRUAvd9lAccjjSvzU5nYy3BSQbKTPy7uopx7JEpwk2vSuw4weTMZzWF64z9/gp/K5RCg==}
     engines: {node: '>= 18'}
     peerDependencies:
       eslint: '>=6'
@@ -1160,8 +1160,8 @@ packages:
     peerDependencies:
       tailwindcss: ^3.4.0
 
-  eslint-plugin-testing-library@6.4.0:
-    resolution: {integrity: sha512-yeWF+YgCgvNyPNI9UKnG0FjeE2sk93N/3lsKqcmR8dSfeXJwFT5irnWo7NjLf152HkRzfoFjh3LsBUrhvFz4eA==}
+  eslint-plugin-testing-library@6.5.0:
+    resolution: {integrity: sha512-Ls5TUfLm5/snocMAOlofSOJxNN0aKqwTlco7CrNtMjkTdQlkpSMaeTCDHCuXfzrI97xcx2rSCNeKeJjtpkNC1w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0, npm: '>=6'}
     peerDependencies:
       eslint: ^7.5.0 || ^8.0.0 || ^9.0.0
@@ -1178,8 +1178,8 @@ packages:
     peerDependencies:
       eslint: '>=8.56.0'
 
-  eslint-plugin-unicorn@56.0.0:
-    resolution: {integrity: sha512-aXpddVz/PQMmd69uxO98PA4iidiVNvA0xOtbpUoz1WhBd4RxOQQYqN618v68drY0hmy5uU2jy1bheKEVWBjlPw==}
+  eslint-plugin-unicorn@56.0.1:
+    resolution: {integrity: sha512-FwVV0Uwf8XPfVnKSGpMg7NtlZh0G0gBarCaFcMUOoqPxXryxdYxTRRv4kH6B9TFCVIrjRXG+emcxIk2ayZilog==}
     engines: {node: '>=18.18'}
     peerDependencies:
       eslint: '>=8.56.0'
@@ -3047,7 +3047,7 @@ snapshots:
       eslint-plugin-playwright: 1.8.3(eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)
       eslint-plugin-react: 7.37.2(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
-      eslint-plugin-testing-library: 6.4.0(eslint@8.57.0)(typescript@5.7.2)
+      eslint-plugin-testing-library: 6.5.0(eslint@8.57.0)(typescript@5.7.2)
       eslint-plugin-tsdoc: 0.2.17
       eslint-plugin-unicorn: 51.0.1(eslint@8.57.0)
       eslint-plugin-vitest: 0.3.26(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2)
@@ -3732,7 +3732,7 @@ snapshots:
       string.prototype.matchall: 4.0.11
       string.prototype.repeat: 1.0.0
 
-  eslint-plugin-storybook@0.11.0(eslint@8.57.0)(typescript@5.7.2):
+  eslint-plugin-storybook@0.11.1(eslint@8.57.0)(typescript@5.7.2):
     dependencies:
       '@storybook/csf': 0.1.11
       '@typescript-eslint/utils': 8.15.0(eslint@8.57.0)(typescript@5.7.2)
@@ -3748,7 +3748,7 @@ snapshots:
       postcss: 8.4.49
       tailwindcss: 3.4.15
 
-  eslint-plugin-testing-library@6.4.0(eslint@8.57.0)(typescript@5.7.2):
+  eslint-plugin-testing-library@6.5.0(eslint@8.57.0)(typescript@5.7.2):
     dependencies:
       '@typescript-eslint/utils': 5.62.0(eslint@8.57.0)(typescript@5.7.2)
       eslint: 8.57.0
@@ -3788,7 +3788,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-unicorn@56.0.0(eslint@8.57.0):
+  eslint-plugin-unicorn@56.0.1(eslint@8.57.0):
     dependencies:
       '@babel/helper-validator-identifier': 7.25.9
       '@eslint-community/eslint-utils': 4.4.1(eslint@8.57.0)
