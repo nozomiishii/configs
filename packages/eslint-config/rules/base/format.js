@@ -42,25 +42,15 @@ module.exports = defineConfig({
       },
     ],
 
-    // import文の並び替え
+    /**
+     * import文の並び順
+     * {@link https://perfectionist.dev/rules/sort-imports}
+     */
     'perfectionist/sort-imports': [
       'error',
       {
-        type: 'natural',
-        order: 'asc',
-        groups: [
-          'type',
-          ['builtin', 'external'],
-          'internal-type',
-          'internal',
-          ['parent-type', 'sibling-type', 'index-type'],
-          ['parent', 'sibling', 'index'],
-          'object',
-          'unknown',
-        ],
-        // ここだけDefaultから変更してる
-        'newlines-between': 'never',
-        'internal-pattern': ['@/**', '~/**'],
+        newlinesBetween: 'never',
+        internalPattern: ['^@/.*', '^~/'],
       },
     ],
   },
