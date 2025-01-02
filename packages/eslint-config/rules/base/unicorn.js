@@ -15,5 +15,28 @@ module.exports = defineConfig({
 
     // React Componentやhooksでは条件によってはnullを返せるようにしたい
     'unicorn/no-null': 'off',
+
+    /**
+     * TODOやFIXMEには期限をつける
+     * {@link https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md}
+     */
+    'unicorn/expiring-todo-comments': [
+      'error',
+      {
+        allowWarningComments: false,
+      },
+    ],
   },
+  overrides: [
+    {
+      files: ['**/*.test.{ts,tsx}'],
+      rules: {
+        /**
+         * テストファイルではスコープ内でmock関数を定義したい
+         * {@link https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/consistent-function-scoping.md}
+         */
+        'unicorn/consistent-function-scoping': 'off',
+      },
+    },
+  ],
 });
