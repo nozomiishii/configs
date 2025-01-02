@@ -2,20 +2,18 @@
 
 ## [0.4.8](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.7...@nozomiishii/eslint-config-v0.4.8) (2025-01-02)
 
-
 ### Features
 
-* add playwright/max-expects ([13d269b](https://github.com/nozomiishii/configs/commit/13d269be4a0b2ffa62df22244625fb33dcc87dff))
-* add playwright/max-nested-describe ([f7f91c6](https://github.com/nozomiishii/configs/commit/f7f91c6dc0464da210bc9968c6d602d60e7a6197))
-* increase max-nested-describe limit to 2 in eslint playwright ([d30da99](https://github.com/nozomiishii/configs/commit/d30da996b099d85ffcbf519a39db55631e6b6e20))
-
+- add playwright/max-expects ([13d269b](https://github.com/nozomiishii/configs/commit/13d269be4a0b2ffa62df22244625fb33dcc87dff))
+- add playwright/max-nested-describe ([f7f91c6](https://github.com/nozomiishii/configs/commit/f7f91c6dc0464da210bc9968c6d602d60e7a6197))
+- increase max-nested-describe limit to 2 in eslint playwright ([d30da99](https://github.com/nozomiishii/configs/commit/d30da996b099d85ffcbf519a39db55631e6b6e20))
 
 ### Bug Fixes
 
-* add expiring-todo-comments rule and adjust consistent-function-scoping for test files ([5c5cdfc](https://github.com/nozomiishii/configs/commit/5c5cdfc8a521ced130ec74f81ab5d3bab82f1877))
-* ignore .playwright and .storybook from vitest lint ([fe0adb8](https://github.com/nozomiishii/configs/commit/fe0adb8f207b01650e2023f2f18003c5609de31e))
-* turn off require-top-level-describe ([8ba2d54](https://github.com/nozomiishii/configs/commit/8ba2d54eb3bfc1b5b69ad1c863c89f1ced0cca28))
-* update internal-pattern regex for module resolution ([a746239](https://github.com/nozomiishii/configs/commit/a746239fe3e0c11b58c5c7802bfd095f5ad44f66))
+- add expiring-todo-comments rule and adjust consistent-function-scoping for test files ([5c5cdfc](https://github.com/nozomiishii/configs/commit/5c5cdfc8a521ced130ec74f81ab5d3bab82f1877))
+- ignore .playwright and .storybook from vitest lint ([fe0adb8](https://github.com/nozomiishii/configs/commit/fe0adb8f207b01650e2023f2f18003c5609de31e))
+- turn off require-top-level-describe ([8ba2d54](https://github.com/nozomiishii/configs/commit/8ba2d54eb3bfc1b5b69ad1c863c89f1ced0cca28))
+- update internal-pattern regex for module resolution ([a746239](https://github.com/nozomiishii/configs/commit/a746239fe3e0c11b58c5c7802bfd095f5ad44f66))
 
 ## [0.4.7](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.6...@nozomiishii/eslint-config-v0.4.7) (2024-08-04)
 
