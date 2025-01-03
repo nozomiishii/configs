@@ -33,7 +33,7 @@
     "@nozomiishii/markdownlint-cli2-config": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
     "@types/node": "22.10.2",
-    "markdownlint-cli2": "0.17.0"
+    "markdownlint-cli2": "0.17.1"
   },
   "packageManager": "pnpm@9.15.2",
   "engines": {
