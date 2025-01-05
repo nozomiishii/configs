@@ -57,6 +57,7 @@
     // Markdown
     // ----------------------------------------------------------------
     "bierner.markdown-preview-github-styles",
+    "bierner.github-markdown-preview",
     "bierner.markdown-mermaid",
     "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
 
