@@ -23,8 +23,8 @@ npm pkg set type="module"
 echo -e "Creating commitlint.config.js"
 find . -type f -name 'commitlint.config.*' -delete
 
-cat > commitlint.config.js << EOF
-module.exports = { extends: ['@nozomiishii'] };
+cat > commitlint.config.ts << EOF
+export default { extends: ['@nozomiishii'] };
 EOF
 
 echo -e "All set! Your Commitlint configuration has been set up successfully🎉"
