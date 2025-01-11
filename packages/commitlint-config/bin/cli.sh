@@ -9,7 +9,12 @@
 set -Ceuo pipefail
 
 echo -e "Installing dependencies..."
-pnpm remove @commitlint/config-conventional || true
+
+if grep -q '"@commitlint/config-conventional"' package.json; then
+  echo "Removing @commitlint/config-conventional..."
+  pnpm remove @commitlint/config-conventional
+fi
+
 pnpm add -D @nozomiishii/commitlint-config
 
 echo -e "Adding npm scripts..."
