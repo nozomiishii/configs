@@ -18,6 +18,7 @@
   "main": "index.js",
   "bin": "bin/cli.sh",
   "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "3.2.0",
     "@next/eslint-plugin-next": "15.1.4",
     "@tanstack/eslint-plugin-query": "5.62.16",
     "@types/node": "22.10.5",
@@ -31,7 +32,6 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-define-config": "2.1.0",
     "eslint-import-resolver-typescript": "3.7.0",
-    "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsdoc": "50.6.1",
     "eslint-plugin-jsx-a11y": "6.10.2",

@@ -5,7 +5,7 @@ module.exports = defineConfig({
   extends: [
     /**
      * eslint-plugin-eslint-comments
-     * {@link https://www.npmjs.com/package/eslint-plugin-eslint-comments}
+     * {@link https://github.com/eslint-community/eslint-plugin-eslint-comments}
      */
     'plugin:eslint-comments/recommended',
   ],

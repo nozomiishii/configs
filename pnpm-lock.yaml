@@ -51,6 +51,9 @@ importers:
 
   packages/eslint-config:
     dependencies:
+      '@eslint-community/eslint-plugin-eslint-comments':
+        specifier: 3.2.0
+        version: 3.2.0(eslint@8.57.0)
       '@next/eslint-plugin-next':
         specifier: 15.1.4
         version: 15.1.4
@@ -90,9 +93,6 @@ importers:
       eslint-import-resolver-typescript:
         specifier: 3.7.0
         version: 3.7.0(eslint-plugin-import@2.31.0)(eslint@8.57.0)
-      eslint-plugin-eslint-comments:
-        specifier: 3.2.0
-        version: 3.2.0(eslint@8.57.0)
       eslint-plugin-import:
         specifier: 2.31.0
         version: 2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.7.3))(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.0)
@@ -356,6 +356,12 @@ packages:
     resolution: {integrity: sha512-xjZTSFgECpb9Ohuk5yMX5RhUEbfeQcuOp8IF60e+wyzWEF0M5xeSgqsfLtvPEX8BIyOX9saZqzuGPmZ8oWc+5Q==}
     engines: {node: '>=16'}
 
+  '@eslint-community/eslint-plugin-eslint-comments@3.2.0':
+    resolution: {integrity: sha512-BjyMKQRjkywhbkrtHzUITQTQQuysxbZk1/z5Cco7cMNxhw0odzWohDgVuxmuhS9LJRFWAkIXhnfuLXjChFmfoA==}
+    engines: {node: '>=6.5.0'}
+    peerDependencies:
+      eslint: '>=4.19.1'
+
   '@eslint-community/eslint-utils@4.4.1':
     resolution: {integrity: sha512-s3O3waFUrMV8P/XaF/+ZTp1X9XBZW1a4B97ZnjQF2KYWaFD2A8KyFBsrsfSjEmjn3RGWAIuvlneuZm3CUK3jbA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -376,7 +382,6 @@ packages:
 
   '@evilmartians/lefthook@1.10.3':
     resolution: {integrity: sha512-xD4AKXh4I6Pyidkl0RW/CblI8pH7Uw9E8JTeYaSXh5EOuZ9M/j72VrwDcGviGLgmbGKuciSnd9Btso8ymHIgeQ==}
-    cpu: [x64, arm64, ia32]
     os: [darwin, linux, win32]
     hasBin: true
 
@@ -3022,6 +3027,12 @@ snapshots:
       comment-parser: 1.4.1
       esquery: 1.6.0
       jsdoc-type-pratt-parser: 4.1.0
+
+  '@eslint-community/eslint-plugin-eslint-comments@3.2.0(eslint@8.57.0)':
+    dependencies:
+      escape-string-regexp: 1.0.5
+      eslint: 8.57.0
+      ignore: 5.3.2
 
   '@eslint-community/eslint-utils@4.4.1(eslint@8.57.0)':
     dependencies:
