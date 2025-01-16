@@ -52,8 +52,8 @@ importers:
   packages/eslint-config:
     dependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
-        specifier: 3.2.0
-        version: 3.2.0(eslint@8.57.0)
+        specifier: 4.4.1
+        version: 4.4.1(eslint@8.57.0)
       '@next/eslint-plugin-next':
         specifier: 15.1.4
         version: 15.1.4
@@ -356,11 +356,11 @@ packages:
     resolution: {integrity: sha512-xjZTSFgECpb9Ohuk5yMX5RhUEbfeQcuOp8IF60e+wyzWEF0M5xeSgqsfLtvPEX8BIyOX9saZqzuGPmZ8oWc+5Q==}
     engines: {node: '>=16'}
 
-  '@eslint-community/eslint-plugin-eslint-comments@3.2.0':
-    resolution: {integrity: sha512-BjyMKQRjkywhbkrtHzUITQTQQuysxbZk1/z5Cco7cMNxhw0odzWohDgVuxmuhS9LJRFWAkIXhnfuLXjChFmfoA==}
-    engines: {node: '>=6.5.0'}
+  '@eslint-community/eslint-plugin-eslint-comments@4.4.1':
+    resolution: {integrity: sha512-lb/Z/MzbTf7CaVYM9WCFNQZ4L1yi3ev2fsFPF99h31ljhSEyUoyEsKsNWiU+qD1glbYTDJdqgyaLKtyTkkqtuQ==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
-      eslint: '>=4.19.1'
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
 
   '@eslint-community/eslint-utils@4.4.1':
     resolution: {integrity: sha512-s3O3waFUrMV8P/XaF/+ZTp1X9XBZW1a4B97ZnjQF2KYWaFD2A8KyFBsrsfSjEmjn3RGWAIuvlneuZm3CUK3jbA==}
@@ -382,6 +382,7 @@ packages:
 
   '@evilmartians/lefthook@1.10.3':
     resolution: {integrity: sha512-xD4AKXh4I6Pyidkl0RW/CblI8pH7Uw9E8JTeYaSXh5EOuZ9M/j72VrwDcGviGLgmbGKuciSnd9Btso8ymHIgeQ==}
+    cpu: [x64, arm64, ia32]
     os: [darwin, linux, win32]
     hasBin: true
 
@@ -3028,9 +3029,9 @@ snapshots:
       esquery: 1.6.0
       jsdoc-type-pratt-parser: 4.1.0
 
-  '@eslint-community/eslint-plugin-eslint-comments@3.2.0(eslint@8.57.0)':
+  '@eslint-community/eslint-plugin-eslint-comments@4.4.1(eslint@8.57.0)':
     dependencies:
-      escape-string-regexp: 1.0.5
+      escape-string-regexp: 4.0.0
       eslint: 8.57.0
       ignore: 5.3.2
 
