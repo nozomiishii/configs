@@ -38,14 +38,14 @@ importers:
   packages/commitlint-config:
     dependencies:
       '@commitlint/cli':
-        specifier: 19.7.1
-        version: 19.7.1(@types/node@22.13.9)(typescript@5.8.2)
+        specifier: 19.8.0
+        version: 19.8.0(@types/node@22.13.9)(typescript@5.8.2)
       '@commitlint/config-conventional':
-        specifier: 19.7.1
-        version: 19.7.1
+        specifier: 19.8.0
+        version: 19.8.0
       '@commitlint/types':
-        specifier: 19.5.0
-        version: 19.5.0
+        specifier: 19.8.0
+        version: 19.8.0
 
   packages/cspell-config: {}
 
@@ -284,13 +284,13 @@ packages:
     resolution: {integrity: sha512-Y3IR1cRnOxOCDvMmNiym7XpXQ93iGDDPHx+Zj+NM+rg0fBaShfQLkg+hKPaZCEvg5N/LeCo4+Rj/i3FuJsIQaw==}
     engines: {node: '>=6.9.0'}
 
-  '@commitlint/cli@19.7.1':
-    resolution: {integrity: sha512-iObGjR1tE/PfDtDTEfd+tnRkB3/HJzpQqRTyofS2MPPkDn1mp3DBC8SoPDayokfAy+xKhF8+bwRCJO25Nea0YQ==}
+  '@commitlint/cli@19.8.0':
+    resolution: {integrity: sha512-t/fCrLVu+Ru01h0DtlgHZXbHV2Y8gKocTR5elDOqIRUzQd0/6hpt2VIWOj9b3NDo7y4/gfxeR2zRtXq/qO6iUg==}
     engines: {node: '>=v18'}
     hasBin: true
 
-  '@commitlint/config-conventional@19.7.1':
-    resolution: {integrity: sha512-fsEIF8zgiI/FIWSnykdQNj/0JE4av08MudLTyYHm4FlLWemKoQvPNUYU2M/3tktWcCEyq7aOkDDgtjrmgWFbvg==}
+  '@commitlint/config-conventional@19.8.0':
+    resolution: {integrity: sha512-9I2kKJwcAPwMoAj38hwqFXG0CzS2Kj+SAByPUQ0SlHTfb7VUhYVmo7G2w2tBrqmOf7PFd6MpZ/a1GQJo8na8kw==}
     engines: {node: '>=v18'}
 
   '@commitlint/config-validator@19.8.0':
@@ -347,10 +347,6 @@ packages:
 
   '@commitlint/top-level@19.8.0':
     resolution: {integrity: sha512-Rphgoc/omYZisoNkcfaBRPQr4myZEHhLPx2/vTXNLjiCw4RgfPR1wEgUpJ9OOmDCiv5ZyIExhprNLhteqH4FuQ==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/types@19.5.0':
-    resolution: {integrity: sha512-DSHae2obMSMkAtTBSOulg5X7/z+rGLxcXQIkg3OmWvY6wifojge5uVMydfhUvs7yQj+V7jNmRZ2Xzl8GJyqRgg==}
     engines: {node: '>=v18'}
 
   '@commitlint/types@19.8.0':
@@ -2936,22 +2932,22 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@commitlint/cli@19.7.1(@types/node@22.13.9)(typescript@5.8.2)':
+  '@commitlint/cli@19.8.0(@types/node@22.13.9)(typescript@5.8.2)':
     dependencies:
       '@commitlint/format': 19.8.0
       '@commitlint/lint': 19.8.0
       '@commitlint/load': 19.8.0(@types/node@22.13.9)(typescript@5.8.2)
       '@commitlint/read': 19.8.0
-      '@commitlint/types': 19.5.0
+      '@commitlint/types': 19.8.0
       tinyexec: 0.3.2
       yargs: 17.7.2
     transitivePeerDependencies:
       - '@types/node'
       - typescript
 
-  '@commitlint/config-conventional@19.7.1':
+  '@commitlint/config-conventional@19.8.0':
     dependencies:
-      '@commitlint/types': 19.5.0
+      '@commitlint/types': 19.8.0
       conventional-changelog-conventionalcommits: 7.0.2
 
   '@commitlint/config-validator@19.8.0':
@@ -3040,11 +3036,6 @@ snapshots:
   '@commitlint/top-level@19.8.0':
     dependencies:
       find-up: 7.0.0
-
-  '@commitlint/types@19.5.0':
-    dependencies:
-      '@types/conventional-commits-parser': 5.0.1
-      chalk: 5.4.1
 
   '@commitlint/types@19.8.0':
     dependencies:
