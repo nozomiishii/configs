@@ -35,13 +35,13 @@
     "@types/node": "22.13.10",
     "markdownlint-cli2": "0.17.2"
   },
-  "packageManager": "pnpm@10.6.1",
+  "packageManager": "pnpm@10.6.2",
   "engines": {
     "node": "22.14.0",
-    "pnpm": "10.6.1"
+    "pnpm": "10.6.2"
   },
   "volta": {
     "node": "22.14.0",
-    "pnpm": "10.6.1"
+    "pnpm": "10.6.2"
   }
 }
