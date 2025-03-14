@@ -22,8 +22,7 @@
   "scripts": {
     "format": "pnpm prettier . --check",
     "format:fix": "pnpm prettier . --write",
-    "prettier": "prettier --ignore-unknown --ignore-path .gitignore",
-    "reset:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && pnpm install"
+    "prettier": "prettier --ignore-unknown --ignore-path .gitignore"
   },
   "devDependencies": {
     "@evilmartians/lefthook": "1.11.3",
@@ -36,12 +35,9 @@
     "markdownlint-cli2": "0.17.2"
   },
   "packageManager": "pnpm@10.6.2",
-  "engines": {
-    "node": "22.14.0",
-    "pnpm": "10.6.2"
-  },
-  "volta": {
-    "node": "22.14.0",
-    "pnpm": "10.6.2"
+  "pnpm": {
+    "executionEnv": {
+      "nodeVersion": "22.14.0"
+    }
   }
 }
