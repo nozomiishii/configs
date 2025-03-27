@@ -19,7 +19,7 @@
   "bin": "bin/cli.sh",
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.4.1",
-    "@next/eslint-plugin-next": "15.2.3",
+    "@next/eslint-plugin-next": "15.2.4",
     "@tanstack/eslint-plugin-query": "5.68.0",
     "@types/node": "22.13.12",
     "@typescript-eslint/eslint-plugin": "7.18.0",
