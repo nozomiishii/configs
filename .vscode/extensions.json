@@ -164,7 +164,6 @@
     // ----------------------------------------------------------------
     "42crunch.vscode-openapi",
     "philosowaffle.openapi-designer",
-    "typespec.typespec-vscode",
 
     // ----------------------------------------------------------------
     // gRPC
