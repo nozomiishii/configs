@@ -18,10 +18,10 @@
   "main": "index.yaml",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "@evilmartians/lefthook": "1.11.5"
+    "@evilmartians/lefthook": "1.11.6"
   },
   "peerDependencies": {
-    "@evilmartians/lefthook": ">=1.11.5"
+    "@evilmartians/lefthook": ">=1.11.6"
   },
   "publishConfig": {
     "access": "public"
