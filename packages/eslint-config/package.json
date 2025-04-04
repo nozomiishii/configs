@@ -21,7 +21,7 @@
     "@eslint-community/eslint-plugin-eslint-comments": "4.4.1",
     "@next/eslint-plugin-next": "15.2.4",
     "@tanstack/eslint-plugin-query": "5.68.0",
-    "@types/node": "22.13.16",
+    "@types/node": "22.13.17",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "@vercel/style-guide": "6.0.0",
