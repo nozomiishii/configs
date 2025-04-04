@@ -34,7 +34,7 @@
     "@types/node": "22.13.16",
     "markdownlint-cli2": "0.17.2"
   },
-  "packageManager": "pnpm@10.7.0",
+  "packageManager": "pnpm@10.7.1",
   "pnpm": {
     "executionEnv": {
       "nodeVersion": "22.14.0"
