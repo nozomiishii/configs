@@ -58,8 +58,8 @@ importers:
         specifier: 15.2.4
         version: 15.2.4
       '@tanstack/eslint-plugin-query':
-        specifier: 5.68.0
-        version: 5.68.0(eslint@8.57.0)(typescript@5.8.2)
+        specifier: 5.71.5
+        version: 5.71.5(eslint@8.57.0)(typescript@5.8.2)
       '@types/node':
         specifier: 22.14.0
         version: 22.14.0
@@ -73,8 +73,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0(@next/eslint-plugin-next@15.2.4)(eslint@8.57.0)(prettier@3.5.3)(typescript@5.8.2)
       '@vitest/eslint-plugin':
-        specifier: 1.1.38
-        version: 1.1.38(@typescript-eslint/utils@8.29.0(eslint@8.57.0)(typescript@5.8.2))(eslint@8.57.0)(typescript@5.8.2)
+        specifier: 1.1.39
+        version: 1.1.39(@typescript-eslint/utils@8.29.0(eslint@8.57.0)(typescript@5.8.2))(eslint@8.57.0)(typescript@5.8.2)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -489,8 +489,8 @@ packages:
   '@storybook/csf@0.1.13':
     resolution: {integrity: sha512-7xOOwCLGB3ebM87eemep89MYRFTko+D8qE7EdAAq74lgdqRR5cOUtYWJLjO2dLtP94nqoOdHJo6MdLLKzg412Q==}
 
-  '@tanstack/eslint-plugin-query@5.68.0':
-    resolution: {integrity: sha512-w/+y5LILV1GTWBB2R/lKfUzgocKXU1B7O6jipLUJhmxCKPmJFy5zpfR1Vx7c6yCEsQoKcTbhuR/tIy+1sIGaiA==}
+  '@tanstack/eslint-plugin-query@5.71.5':
+    resolution: {integrity: sha512-6EDWMUQc35HEYtZrX4yRP7vBXjUhNLwO0JwLzkV14lNpTlpnPbNUltvgh+cUJBh3awpOuUNNuxTL96BG3azLmw==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
@@ -733,8 +733,8 @@ packages:
       typescript:
         optional: true
 
-  '@vitest/eslint-plugin@1.1.38':
-    resolution: {integrity: sha512-KcOTZyVz8RiM5HyriiDVrP1CyBGuhRxle+lBsmSs6NTJEO/8dKVAq+f5vQzHj1/Kc7bYXSDO6yBe62Zx0t5iaw==}
+  '@vitest/eslint-plugin@1.1.39':
+    resolution: {integrity: sha512-l5/MUFCYI8nxwr62JHlWwXfeQNS8E7xy71lSLGQ3CrjGjBdWLs1Rtee+BvYwy2m4YVPwYqUwdcAIOaZOwPUpfg==}
     peerDependencies:
       '@typescript-eslint/utils': ^8.24.0
       eslint: '>= 8.57.0'
@@ -3346,7 +3346,7 @@ snapshots:
     dependencies:
       type-fest: 2.19.0
 
-  '@tanstack/eslint-plugin-query@5.68.0(eslint@8.57.0)(typescript@5.8.2)':
+  '@tanstack/eslint-plugin-query@5.71.5(eslint@8.57.0)(typescript@5.8.2)':
     dependencies:
       '@typescript-eslint/utils': 8.29.0(eslint@8.57.0)(typescript@5.8.2)
       eslint: 8.57.0
@@ -3627,7 +3627,7 @@ snapshots:
       - supports-color
       - vitest
 
-  '@vitest/eslint-plugin@1.1.38(@typescript-eslint/utils@8.29.0(eslint@8.57.0)(typescript@5.8.2))(eslint@8.57.0)(typescript@5.8.2)':
+  '@vitest/eslint-plugin@1.1.39(@typescript-eslint/utils@8.29.0(eslint@8.57.0)(typescript@5.8.2))(eslint@8.57.0)(typescript@5.8.2)':
     dependencies:
       '@typescript-eslint/utils': 8.29.0(eslint@8.57.0)(typescript@5.8.2)
       eslint: 8.57.0
