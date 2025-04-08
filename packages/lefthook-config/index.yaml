@@ -35,7 +35,7 @@ post-merge:
       run: |
         if [ -f "pnpm-lock.yaml" ]; then
           echo "🥊 Installing dependencies with pnpm..."
-          pnpm install
+          yes | pnpm install
           exit 0
         fi
 
