@@ -25,7 +25,7 @@
     "prettier": "prettier --ignore-unknown --ignore-path .gitignore"
   },
   "devDependencies": {
-    "@evilmartians/lefthook": "1.11.7",
+    "@evilmartians/lefthook": "1.11.8",
     "@nozomiishii/commitlint-config": "workspace:*",
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
