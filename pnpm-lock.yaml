@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@evilmartians/lefthook':
-        specifier: 1.11.10
-        version: 1.11.10
+        specifier: 1.11.11
+        version: 1.11.11
       '@nozomiishii/commitlint-config':
         specifier: workspace:*
         version: link:packages/commitlint-config
@@ -145,8 +145,8 @@ importers:
   packages/lefthook-config:
     dependencies:
       '@evilmartians/lefthook':
-        specifier: 1.11.10
-        version: 1.11.10
+        specifier: 1.11.11
+        version: 1.11.11
 
   packages/markdownlint-cli2-config:
     dependencies:
@@ -548,8 +548,8 @@ packages:
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@evilmartians/lefthook@1.11.10':
-    resolution: {integrity: sha512-Y1Cy5nYY69JYNf74/QgFYoNCzQoJ6llALygjf7L1Ovc+pqVKF7u861PREFiOugVajzgkNUyjR3YtDK+tTMP5/g==}
+  '@evilmartians/lefthook@1.11.11':
+    resolution: {integrity: sha512-3XRY+3WWUQKEtRBUlaVFIGPD8lLOcJ/6zy6quCM9prH61ueKh4YxyPV2+Dy3sCogSlk2vGmmJUmmtJTJlpKuJw==}
     cpu: [x64, arm64, ia32]
     os: [darwin, linux, win32]
     hasBin: true
@@ -3776,7 +3776,7 @@ snapshots:
       '@eslint/core': 0.13.0
       levn: 0.4.1
 
-  '@evilmartians/lefthook@1.11.10': {}
+  '@evilmartians/lefthook@1.11.11': {}
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
