@@ -35,7 +35,7 @@
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsdoc": "50.6.10",
     "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-perfectionist": "4.12.2",
+    "eslint-plugin-perfectionist": "4.12.3",
     "eslint-plugin-playwright": "2.2.0",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-compiler": "19.0.0-beta-ebf51a3-20250411",
