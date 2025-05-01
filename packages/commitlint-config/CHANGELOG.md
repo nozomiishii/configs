@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.5...@nozomiishii/commitlint-config-v0.0.6) (2025-05-01)
+
+
+### Features
+
+* add TypeScript configuration for Commitlint ([abee5aa](https://github.com/nozomiishii/configs/commit/abee5aa94794cbf84e46125c04dff02d71344316))
+
+
+### Bug Fixes
+
+* conditionally remove @commitlint/config-conventional before adding custom config ([dceaf95](https://github.com/nozomiishii/configs/commit/dceaf958b143ec9d2f445eda3fb38aeeded3c825))
+
 ## [0.0.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.4...@nozomiishii/commitlint-config-v0.0.5) (2024-06-16)
 
 ### Features

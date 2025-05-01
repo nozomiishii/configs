@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.9](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.8...@nozomiishii/eslint-config-v0.4.9) (2025-05-01)
+
+
+### Bug Fixes
+
+* replace eslint-plugin-eslint-comments to @eslint-community/eslint-plugin-eslint-comments ([46dccbb](https://github.com/nozomiishii/configs/commit/46dccbbc49088118f2d0776b61676aa04b7cd42d))
+
 ## [0.4.8](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.7...@nozomiishii/eslint-config-v0.4.8) (2025-01-02)
 
 ### Features

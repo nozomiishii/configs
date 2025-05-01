@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.2...@nozomiishii/prettier-config-v0.6.3) (2025-05-01)
+
+
+### Bug Fixes
+
+* update prettier CLI commands for improved functionality ([67c93dd](https://github.com/nozomiishii/configs/commit/67c93dd2d734fe703abb774ebabd15e38e21dd95))
+
 ## [0.6.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.1...@nozomiishii/prettier-config-v0.6.2) (2024-02-18)
 
 ### Bug Fixes
