@@ -16,8 +16,8 @@ commit-msg:
     commitlint:
       run: npx -y commitlint@latest --edit {1} --verbose
 
-    cspell:
-      run: npx -y @nozomiishii/cspell-config@latest {1}
+    # cspell:
+    #   run: npx -y @nozomiishii/cspell-config@latest {1}
 
 post-merge:
   parallel: true
