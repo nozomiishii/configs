@@ -1,16 +1,9 @@
-import { echo, $ } from 'zx';
 import { setupLefthook } from './lefthook';
 import { setupVSCode } from './vscode';
+import { welcome } from './welcome';
+import { setupAct } from './act';
 
 await setupVSCode();
+await setupAct();
 await setupLefthook();
-
-echo(`
-@nozomiishii/
- ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ ███████╗
-██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ ██╔════╝
-██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗███████╗
-██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║╚════██║
-╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝███████║
- ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝
-`);
+await welcome();

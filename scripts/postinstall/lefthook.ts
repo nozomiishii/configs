@@ -1,10 +1,10 @@
-import { chalk, fs, $, echo } from 'zx';
+import { fs, $, echo } from 'zx';
 
 const TARGET_FILE = 'lefthook-local.yaml';
 
-const info = chalk.bold.bgBlue;
-const error = chalk.bold.red;
-
+/**
+ * Create a local config file
+ */
 async function createLocalConfig() {
   if (fs.existsSync(TARGET_FILE)) {
     return echo(`Skipped: ${TARGET_FILE} already exists.`);
@@ -13,8 +13,11 @@ async function createLocalConfig() {
   await $`touch ${TARGET_FILE}`;
 }
 
+/**
+ * Setup lefthook
+ */
 export async function setupLefthook() {
-  echo(info('Setup lefthook'));
+  echo('Setup lefthook');
 
   try {
     await createLocalConfig();
@@ -22,6 +25,6 @@ export async function setupLefthook() {
     const result = await $`lefthook install`;
     echo(result);
   } catch (e) {
-    echo(error(e));
+    echo(e);
   }
 }

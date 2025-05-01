@@ -1,12 +1,10 @@
-import { chalk, echo, fs, glob, path } from 'zx';
-
-const info = chalk.bold.bgBlue;
+import { echo, fs, glob, path } from 'zx';
 
 /**
- * .vscode/settings.example.jsoncを.vscode/settings.jsonに再帰的に変換
+ * Recursively convert .vscode/settings.example.jsonc to .vscode/settings.json
  */
 export async function setupVSCode() {
-  echo(info('Setup vscode'));
+  echo('Setup vscode');
 
   const examples = await glob(['**/.vscode/settings.example.jsonc']);
 
