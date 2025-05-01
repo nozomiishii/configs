@@ -30,7 +30,7 @@
     "figlet": "1.8.1"
   },
   "devDependencies": {
-    "@evilmartians/lefthook": "1.11.11",
+    "@evilmartians/lefthook": "1.11.12",
     "@nozomiishii/commitlint-config": "workspace:*",
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
