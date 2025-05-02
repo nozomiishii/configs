@@ -27,8 +27,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          subjectPattern: ^(?![A-Z]).+$
+          subjectPattern: ^[a-z][a-zA-Z0-9 \-_/.:()[\]#!]*$
           subjectPatternError: |
             The subject "{subject}" found in the pull request title "{title}"
             didn't match the configured pattern. Please ensure that the subject
-            doesn't start with an uppercase character.
+            starts with a lowercase letter and contains only letters,
+            numbers, spaces, or the following symbols: - _ / . : ( ) [ ] # !

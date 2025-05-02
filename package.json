@@ -22,7 +22,7 @@
   "scripts": {
     "format": "pnpm prettier . --check",
     "format:fix": "pnpm prettier . --write",
-    "postinstall": "node --import @swc-node/register/esm-register ./scripts/postinstall/index.ts",
+    "postinstall": "postinstall",
     "prettier": "prettier --ignore-unknown --ignore-path .gitignore"
   },
   "dependencies": {
@@ -35,6 +35,7 @@
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
     "@nozomiishii/markdownlint-cli2-config": "workspace:*",
+    "@nozomiishii/postinstall": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
     "@swc-node/register": "1.10.10",
     "@types/node": "22.15.3",
