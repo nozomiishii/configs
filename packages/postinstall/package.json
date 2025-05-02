@@ -38,7 +38,7 @@
     "zx": "8.5.3"
   },
   "devDependencies": {
-    "@types/node": "20.11.24",
+    "@types/node": "20.17.32",
     "tsup": "8.0.2",
     "typescript": "5.3.3"
   },
