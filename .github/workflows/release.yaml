@@ -21,12 +21,12 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
-      pr: ${{ steps.release-please.outputs.pr }}
+      prs: ${{ steps.release-please.outputs.prs }}
       releases_created: ${{ steps.release-please.outputs.releases_created }}
       paths_released: ${{ steps.release-please.outputs.paths_released }}
 
     steps:
-      - uses: google-github-actions/release-please-action@e4dc86ba9405554aeba3c6bb2d169500e7d3b4ee # v4
+      - uses: googleapis/release-please-action@v4
         id: release-please
         with:
           config-file: .github/.release-please-config.json
@@ -35,6 +35,42 @@ jobs:
       - name: Echo release-please outputs
         if: steps.release-please.outputs
         run: echo '${{ toJson(steps.release-please) }}'
+
+  format:
+    needs: release-please
+
+    if: needs.release-please.outputs.prs
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        pr: ${{ fromJson(needs.release-please.outputs.prs) }}
+
+    steps:
+      - name: Checkout release-please Pull Request
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          ref: ${{ matrix.pr.headBranchName }}
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Configure Git user
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Format CHANGELOG.md
+        run: |
+          npx markdownlint-cli2 --fix '**/CHANGELOG.md'
+          npx prettier --write '**/CHANGELOG.md'
+
+      - name: Commit and push
+        run: |
+          git add --all
+          git commit -m 'chore: format CHANGELOG.md' --no-verify
+          git push
 
   publish:
     needs: release-please
