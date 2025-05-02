@@ -168,10 +168,10 @@ importers:
         version: 20.17.32
       tsup:
         specifier: 8.0.2
-        version: 8.0.2(@swc/core@1.11.21)(postcss@8.5.3)(typescript@5.3.3)
+        version: 8.0.2(@swc/core@1.11.21)(postcss@8.5.3)(typescript@5.8.3)
       typescript:
-        specifier: 5.3.3
-        version: 5.3.3
+        specifier: 5.8.3
+        version: 5.8.3
 
   packages/prettier-config:
     dependencies:
@@ -3474,11 +3474,6 @@ packages:
   typed-array-length@1.0.7:
     resolution: {integrity: sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg==}
     engines: {node: '>= 0.4'}
-
-  typescript@5.3.3:
-    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
-    engines: {node: '>=14.17'}
-    hasBin: true
 
   typescript@5.8.3:
     resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
@@ -7282,7 +7277,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  tsup@8.0.2(@swc/core@1.11.21)(postcss@8.5.3)(typescript@5.3.3):
+  tsup@8.0.2(@swc/core@1.11.21)(postcss@8.5.3)(typescript@5.8.3):
     dependencies:
       bundle-require: 4.2.1(esbuild@0.19.12)
       cac: 6.7.14
@@ -7301,7 +7296,7 @@ snapshots:
     optionalDependencies:
       '@swc/core': 1.11.21
       postcss: 8.5.3
-      typescript: 5.3.3
+      typescript: 5.8.3
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -7355,8 +7350,6 @@ snapshots:
       is-typed-array: 1.1.15
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
-
-  typescript@5.3.3: {}
 
   typescript@5.8.3: {}
 
