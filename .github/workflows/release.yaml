@@ -23,6 +23,7 @@ jobs:
     outputs:
       pr: ${{ steps.release-please.outputs.pr }}
       releases_created: ${{ steps.release-please.outputs.releases_created }}
+      paths_released: ${{ steps.release-please.outputs.paths_released }}
 
     steps:
       - uses: google-github-actions/release-please-action@e4dc86ba9405554aeba3c6bb2d169500e7d3b4ee # v4
@@ -35,55 +36,10 @@ jobs:
         if: steps.release-please.outputs
         run: echo '${{ toJson(steps.release-please) }}'
 
-      - name: Prepare update release notes
-        if: steps.release-please.outputs.release_created
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-
-      - name: Update release notes
-        if: steps.release-please.outputs.release_created
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_DATA: ${{ toJson(steps.release-please.outputs) }}
-        run: ./.github/scripts/update_release_notes.sh
-        shell: bash
-
-  format:
-    needs: release-please
-
-    if: needs.release-please.outputs.pr
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout release-please Pull Request
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-        with:
-          ref: ${{ fromJson(needs.release-please.outputs.pr).headBranchName }}
-
-      - name: Setup Node
-        uses: ./.github/actions/setup-node
-
-      - name: Configure Git user
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git --no-pager show --name-only
-
-      - name: Format CHANGELOG.md
-        run: |
-          npx markdownlint-cli2 --fix '**/CHANGELOG.md'
-          npx prettier --write '**/CHANGELOG.md'
-
-      - name: Commit and push
-        run: |
-          git add --all
-          git commit -m 'chore: format CHANGELOG.md' --no-verify
-          git push
-
   publish:
     needs: release-please
 
-    if: needs.release-please.outputs.releases_created
+    if: needs.release-please.outputs.releases_created && needs.release-please.outputs.paths_released
 
     runs-on: ubuntu-latest
 
@@ -94,7 +50,10 @@ jobs:
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
-      - name: Publish
-        run: pnpm --recursive publish
+      - name: Publish released packages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          for path in ${{ needs.release-please.outputs.paths_released }}; do
+            pnpm --filter "$path" publish
+          done
