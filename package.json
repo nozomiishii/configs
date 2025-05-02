@@ -25,10 +25,6 @@
     "postinstall": "postinstall",
     "prettier": "prettier --ignore-unknown --ignore-path .gitignore"
   },
-  "dependencies": {
-    "@types/figlet": "1.7.0",
-    "figlet": "1.8.1"
-  },
   "devDependencies": {
     "@evilmartians/lefthook": "1.11.11",
     "@nozomiishii/commitlint-config": "workspace:*",
@@ -37,10 +33,7 @@
     "@nozomiishii/markdownlint-cli2-config": "workspace:*",
     "@nozomiishii/postinstall": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
-    "@swc-node/register": "1.10.10",
-    "@types/node": "22.15.3",
-    "markdownlint-cli2": "0.17.2",
-    "zx": "8.5.3"
+    "markdownlint-cli2": "0.17.2"
   },
   "packageManager": "pnpm@10.10.0",
   "pnpm": {
