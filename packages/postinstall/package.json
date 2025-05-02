@@ -1,0 +1,48 @@
+{
+  "name": "@nozomiishii/postinstall",
+  "version": "0.0.0",
+  "description": "Nozomi's Recommended postinstall scripts",
+  "keywords": [
+    "postinstall",
+    "scripts"
+  ],
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/postinstall/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozomiishii/configs.git",
+    "directory": "packages/postinstall"
+  },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "postinstall": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "pnpm run build",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "figlet": "1.8.1",
+    "zx": "8.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.24",
+    "tsup": "8.0.2",
+    "typescript": "5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

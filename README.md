@@ -30,13 +30,6 @@
 | [@nozomiishii/eslint-config](./packages/eslint-config)                       | [![npm version](https://badge.fury.io/js/@nozomiishii%2Feslint-config.svg)](https://badge.fury.io/js/@nozomiishii%2Feslint-config)                       |
 | [@nozomiishii/lefthook-config](./packages/lefthook-config)                   | [![npm version](https://badge.fury.io/js/@nozomiishii%2Flefthook-config.svg)](https://badge.fury.io/js/@nozomiishii%2Flefthook-config)                   |
 | [@nozomiishii/markdownlint-cli2-config](./packages/markdownlint-cli2-config) | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fmarkdownlint-cli2-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fmarkdownlint-cli2-config) |
+| [@nozomiishii/postinstall](./packages/postinstall)                           | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fpostinstall.svg)](https://badge.fury.io/js/@nozomiishii%2Fpostinstall)                           |
 | [@nozomiishii/prettier-config](./packages/prettier-config)                   | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fprettier-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fprettier-config)                   |
 | [@nozomiishii/tsconfig](./packages/tsconfig)                                 | [![npm version](https://badge.fury.io/js/@nozomiishii%2Ftsconfig.svg)](https://badge.fury.io/js/@nozomiishii%2Ftsconfig)                                 |
-
-## Apps
-
-### CLI Tools(WIP)
-
-| App                 | Version                                                                            |
-| ------------------- | ---------------------------------------------------------------------------------- |
-| [nozo](./apps/nozo) | [![npm version](https://badge.fury.io/js/nozo.svg)](https://badge.fury.io/js/nozo) |

@@ -29,3 +29,6 @@ storybook-static
 
 # vscode
 **/.vscode/settings.json
+
+# dist
+dist

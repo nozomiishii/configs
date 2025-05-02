@@ -5,6 +5,8 @@
 
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
+  "separate-pull-requests": true,
+  "pull-request-title-pattern": "chore: release ${component} ${version}",
 
   "packages": {
     "packages/commitlint-config": {
@@ -26,6 +28,10 @@
     "packages/markdownlint-cli2-config": {
       "release-type": "node",
       "component": "@nozomiishii/markdownlint-cli2-config"
+    },
+    "packages/postinstall": {
+      "release-type": "node",
+      "component": "@nozomiishii/postinstall"
     },
     "packages/prettier-config": {
       "release-type": "node",
