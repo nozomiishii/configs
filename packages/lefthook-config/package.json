@@ -23,7 +23,13 @@
   "peerDependencies": {
     "@evilmartians/lefthook": ">=1.11.12"
   },
+  "packageManager": "pnpm@10.10.0",
   "publishConfig": {
     "access": "public"
+  },
+  "pnpm": {
+    "executionEnv": {
+      "nodeVersion": "22.14.0"
+    }
   }
 }

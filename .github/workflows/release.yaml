@@ -75,7 +75,7 @@ jobs:
   publish:
     needs: release-please
 
-    if: needs.release-please.outputs.releases_created && needs.release-please.outputs.paths_released
+    if: needs.release-please.outputs.releases_created == 'true' && needs.release-please.outputs.paths_released != '[]'
 
     runs-on: ubuntu-latest
 
