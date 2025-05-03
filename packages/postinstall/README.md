@@ -10,17 +10,21 @@
 </div>
 <br>
 
-## Gist
+## Install
 
 ```bash
 pnpm add -D @nozomiishii/postinstall
 ```
 
-## Scripts for package.json
+## Usage
+
+Add this package to your project's postinstall script using pnpm CLI
 
 ```bash
 pnpm pkg set scripts.postinstall="postinstall"
 ```
+
+Your package.json should contain this configuration
 
 `package.json`
 
@@ -28,4 +32,10 @@ pnpm pkg set scripts.postinstall="postinstall"
 {
   "postinstall": "postinstall"
 }
+```
+
+Run install to trigger the postinstall script which sets up development tools
+
+```bash
+pnpm install
 ```
