@@ -19,6 +19,8 @@ runs:
       with:
         node-version-file: ${{ inputs.working-directory }}/package.json
         cache: pnpm
+        # Required for publishing packages to npm
+        registry-url: 'https://registry.npmjs.org'
 
     - name: Install dependencies
       shell: bash
