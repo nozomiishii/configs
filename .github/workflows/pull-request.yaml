@@ -27,7 +27,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          subjectPattern: ^[a-z][a-zA-Z0-9 \-_/@.:()[\]#!]*$
+          # Disallow scopes by defining a pattern that expects only type: subject
+          headerPattern: '^(\w*): (.*)$'
+          headerPatternCorrespondence: type, subject
+          # Ensure the subject starts with a lowercase letter and contains allowed characters
+          subjectPattern: ^[a-z][a-zA-Z0-9 \\-_/@.:()[\]#!]*$
           subjectPatternError: |
             The subject "{subject}" found in the pull request title "{title}"
             didn't match the configured pattern. Please ensure that the subject
