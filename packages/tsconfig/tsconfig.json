@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "@nozomiishii/tsconfig/base",
+  "display": "@nozomiishii/tsconfig",
 
   "compilerOptions": {
     // ----------------------------------------------------------------
@@ -69,7 +69,7 @@
     // Transpiling
     // ----------------------------------------------------------------
     // tsconfig.tsbuildinfoを生成して差分コンパイルにより時間短縮するか
-    "incremental": true,
+    // "incremental": true,
 
     // TSCでTranspileする場合
     // "moduleResolution": "NodeNext",
@@ -104,11 +104,11 @@
     /* If your code runs in the DOM: */
     // "lib": ["ES2023", "dom", "dom.iterable"]
     /* If your code doesn't run in the DOM: */
-    // "lib": ["ES2023"],
+    "lib": ["ES2023"]
 
     // ----------------------------------------------------------------
     // Types
     // ----------------------------------------------------------------
-    "types": ["vitest/importMeta"]
+    // "types": ["vitest/importMeta"]
   }
 }

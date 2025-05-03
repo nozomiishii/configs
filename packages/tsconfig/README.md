@@ -12,6 +12,32 @@ Nozomi's Recommended [tsconfig](https://www.typescriptlang.org/tsconfig)
 </div>
 <br>
 
-## Note
+## Install
 
-node >= 20.0.0
+```bash
+pnpm add -D @nozomiishii/tsconfig
+```
+
+## Usage
+
+`tsconfig.json`
+
+base
+
+```json
+{
+  "extends": "@nozomiishii/tsconfig"
+}
+```
+
+nextjs
+
+```json
+{
+  "extends": "@nozomiishii/tsconfig/tsconfig.nextjs.json"
+}
+```
+
+## References
+
+- [sindresorhus/tsconfig](https://github.com/sindresorhus/tsconfig)
