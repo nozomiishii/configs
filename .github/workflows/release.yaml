@@ -79,6 +79,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        path: ${{ fromJson(needs.release-please.outputs.paths_released) }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
@@ -86,10 +90,7 @@ jobs:
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
-      - name: Publish released packages
+      - name: Publish package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          for path in ${{ needs.release-please.outputs.paths_released }}; do
-            pnpm --filter "$path" publish
-          done
+        run: pnpm --filter "./${{ matrix.path }}" publish
