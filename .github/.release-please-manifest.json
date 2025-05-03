@@ -1,5 +1,5 @@
 {
-  "packages/commitlint-config": "0.0.5",
+  "packages/commitlint-config": "0.0.6",
   "packages/cspell-config": "0.4.1",
   "packages/eslint-config": "0.4.8",
   "packages/lefthook-config": "0.2.2",
