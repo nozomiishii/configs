@@ -2,10 +2,9 @@
 
 ## [0.0.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v0.0.3...@nozomiishii/tsconfig-v0.0.4) (2025-05-03)
 
-
 ### Features
 
-* enable TypeScript configuration inheritance via "extends": "@nozomiishii/tsconfig" ([72f5cbc](https://github.com/nozomiishii/configs/commit/72f5cbc5f8c470c607093db11f5b0e95eac520b4))
+- enable TypeScript configuration inheritance via "extends": "@nozomiishii/tsconfig" ([72f5cbc](https://github.com/nozomiishii/configs/commit/72f5cbc5f8c470c607093db11f5b0e95eac520b4))
 
 ## [0.0.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v0.0.2...@nozomiishii/tsconfig-v0.0.3) (2025-05-03)
 
