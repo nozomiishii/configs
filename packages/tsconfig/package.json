@@ -15,14 +15,13 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "type": "module",
-  "exports": {
-    ".": "./tsconfig.json",
-    "./nextjs": "./tsconfig.nextjs.json"
-  },
   "files": [
     "*.json",
     "README.md"
   ],
+  "scripts": {
+    "link": "pnpm link --global"
+  },
   "packageManager": "pnpm@10.10.0",
   "publishConfig": {
     "access": "public"

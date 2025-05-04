@@ -22,19 +22,56 @@ pnpm add -D @nozomiishii/tsconfig
 
 `tsconfig.json`
 
-base
+### tsup
 
 ```json
 {
-  "extends": "@nozomiishii/tsconfig"
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@nozomiishii/tsconfig",
+
+  "compilerOptions": {
+    // ----------------------------------------------------------------
+    // Transpiling
+    // ----------------------------------------------------------------
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "noEmit": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
 ```
 
-nextjs
+### tsc
 
 ```json
 {
-  "extends": "@nozomiishii/tsconfig/tsconfig.nextjs.json"
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@nozomiishii/tsconfig",
+  "compilerOptions": {
+    // ----------------------------------------------------------------
+    // Transpiling
+    // ----------------------------------------------------------------
+    // TSCでTranspileする場合
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "outDir": "dist",
+    "sourceMap": true
+  }
+}
+```
+
+### nextjs
+
+```json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@nozomiishii/tsconfig/tsconfig.nextjs.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
 ```
 
@@ -43,3 +80,4 @@ nextjs
 - [The TSConfig Cheat Sheet](https://www.totaltypescript.com/tsconfig-cheat-sheet)
 - [tsconfig/bases](https://github.com/tsconfig/bases)
 - [sindresorhus/tsconfig](https://github.com/sindresorhus/tsconfig)
+- [TypeScriptの設定の良し悪し](https://gist.github.com/azu/56a0411d69e2fc333d545bfe57933d07)

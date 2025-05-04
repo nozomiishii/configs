@@ -1,12 +1,15 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "@nozomiishii/tsconfig/nextjs",
+  "display": "@nozomiishii/tsconfig/tsconfig.nextjs.json",
   "extends": "./tsconfig.json",
 
   "compilerOptions": {
     // ----------------------------------------------------------------
     // Transpiling
     // ----------------------------------------------------------------
+    // tsconfig.tsbuildinfoを生成して差分コンパイルにより時間短縮するか
+    "incremental": true,
+
     // TSC以外でTranspileする場合
     "moduleResolution": "Bundler",
     "module": "ESNext",
@@ -32,7 +35,5 @@
         "name": "next"
       }
     ]
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  }
 }
