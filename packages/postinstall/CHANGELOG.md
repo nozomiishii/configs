@@ -2,10 +2,9 @@
 
 ## [0.0.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.2...@nozomiishii/postinstall-v0.0.3) (2025-05-04)
 
-
 ### Bug Fixes
 
-* use @nozomiishii/tsconfig ([5eacdc9](https://github.com/nozomiishii/configs/commit/5eacdc9e7ea6823fd2dfffadd118194a04f906c7))
+- use @nozomiishii/tsconfig ([5eacdc9](https://github.com/nozomiishii/configs/commit/5eacdc9e7ea6823fd2dfffadd118194a04f906c7))
 
 ## [0.0.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.1...@nozomiishii/postinstall-v0.0.2) (2025-05-02)
 
