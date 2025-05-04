@@ -2,10 +2,9 @@
 
 ## [0.4.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.4.1...@nozomiishii/cspell-config-v0.4.2) (2025-05-04)
 
-
 ### Bug Fixes
 
-* update release workflow condition and add package manager configuration to multiple packages ([958992c](https://github.com/nozomiishii/configs/commit/958992ccd8bdaf906a50bb769ec45459fab81210))
+- update release workflow condition and add package manager configuration to multiple packages ([958992c](https://github.com/nozomiishii/configs/commit/958992ccd8bdaf906a50bb769ec45459fab81210))
 
 ## [0.4.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.4.0...@nozomiishii/cspell-config-v0.4.1) (2023-12-15)
 
