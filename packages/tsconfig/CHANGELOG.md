@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v0.0.4...@nozomiishii/tsconfig-v0.0.5) (2025-05-04)
+
+
+### Bug Fixes
+
+* resolve Next.js build failure ([9d9ced2](https://github.com/nozomiishii/configs/commit/9d9ced2405774cffaf5db8eb5015478cbdb29b6d))
+
 ## [0.0.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v0.0.3...@nozomiishii/tsconfig-v0.0.4) (2025-05-03)
 
 ### Features
