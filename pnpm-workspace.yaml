@@ -1,3 +1,25 @@
+# https://pnpm.io/settings
+#
+# ```bash
+# pnpm config list
+# ```
+
 packages:
   - 'packages/*'
   - 'apps/nozo/*'
+
+# モノレポのpackagesもシンボリックリンクで管理する
+linkWorkspacePackages: true
+
+# 依存解決のうまくいっていないdependenciesのdependenciesをrootのnode_modulesまで巻き上げる
+publicHoistPattern:
+  - '@types/*'
+  - '*eslint*'
+  - '*prettier*'
+  - '*storybook*'
+
+# lifecycle scriptsのlogを全部表示する
+reporter: append-only
+
+# pinバージョンでインストールする
+savePrefix: ''
