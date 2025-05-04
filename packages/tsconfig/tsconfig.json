@@ -68,14 +68,12 @@
     // ----------------------------------------------------------------
     // Transpiling
     // ----------------------------------------------------------------
-    // tsconfig.tsbuildinfoを生成して差分コンパイルにより時間短縮するか
-    // "incremental": true,
-
     // TSCでTranspileする場合
     // "moduleResolution": "NodeNext",
     // "module": "NodeNext",
     // "outDir": "dist",
     // "sourceMap": true,
+    // "incremental": true,   // tsconfig.tsbuildinfoを生成して差分コンパイルにより時間短縮するか
 
     // TSC以外でTranspileする場合
     // "moduleResolution": "Bundler",
