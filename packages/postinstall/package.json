@@ -30,6 +30,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "link": "pnpm link --global",
     "prepublishOnly": "pnpm run build",
     "tsc": "tsc"
   },
