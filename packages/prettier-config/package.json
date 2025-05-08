@@ -23,7 +23,7 @@
   "bin": "bin/cli.sh",
   "dependencies": {
     "prettier": "3.5.3",
-    "prettier-plugin-packagejson": "2.5.10"
+    "prettier-plugin-packagejson": "2.5.11"
   },
   "packageManager": "pnpm@10.10.0",
   "publishConfig": {
