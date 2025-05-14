@@ -19,7 +19,7 @@
   "main": "index.cjs",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "markdownlint-cli2": "0.17.2"
+    "markdownlint-cli2": "0.18.0"
   },
   "packageManager": "pnpm@10.10.0",
   "publishConfig": {
