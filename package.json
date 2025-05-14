@@ -34,7 +34,7 @@
     "@nozomiishii/postinstall": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
-    "markdownlint-cli2": "0.17.2"
+    "markdownlint-cli2": "0.18.0"
   },
   "packageManager": "pnpm@10.10.0",
   "pnpm": {
