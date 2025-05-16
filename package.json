@@ -36,7 +36,7 @@
     "@nozomiishii/tsconfig": "workspace:*",
     "markdownlint-cli2": "0.18.0"
   },
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.11.0",
   "pnpm": {
     "executionEnv": {
       "nodeVersion": "22.14.0"

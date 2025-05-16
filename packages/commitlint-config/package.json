@@ -26,7 +26,7 @@
     "@commitlint/config-conventional": "19.8.1",
     "@commitlint/types": "19.8.1"
   },
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.11.0",
   "publishConfig": {
     "access": "public"
   },
