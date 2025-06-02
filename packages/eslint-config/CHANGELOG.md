@@ -2,11 +2,10 @@
 
 ## [0.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.5.0...@nozomiishii/eslint-config-v0.5.1) (2025-06-02)
 
-
 ### Bug Fixes
 
-* typegen ([f28d097](https://github.com/nozomiishii/configs/commit/f28d097816bca578472efa19dcf4d13d0e999640))
-* update install command for Flat Config support ([cf24046](https://github.com/nozomiishii/configs/commit/cf240463990c674fbabd71c0c9a31bf15225924d))
+- typegen ([f28d097](https://github.com/nozomiishii/configs/commit/f28d097816bca578472efa19dcf4d13d0e999640))
+- update install command for Flat Config support ([cf24046](https://github.com/nozomiishii/configs/commit/cf240463990c674fbabd71c0c9a31bf15225924d))
 
 ## [0.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.8...@nozomiishii/eslint-config-v0.5.0) (2025-06-02)
 
