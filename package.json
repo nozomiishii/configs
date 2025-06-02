@@ -38,11 +38,11 @@
   },
   "packageManager": "pnpm@10.11.0",
   "pnpm": {
-    "executionEnv": {
-      "nodeVersion": "22.14.0"
-    },
     "onlyBuiltDependencies": [
       "@swc/core"
-    ]
+    ],
+    "executionEnv": {
+      "nodeVersion": "22.14.0"
+    }
   }
 }

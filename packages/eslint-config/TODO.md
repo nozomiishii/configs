@@ -9,7 +9,7 @@
 - ちゃんと全てのルールが適応されているかテストする
 - 依存先で`eslint --inspect-config --config eslint.config.ts`みたいに実行してもうまくいかない問題の対応(できるようになったらREADMEも更新する)
 
-```
+```bash
 ℹ Reading ESLint config from /Users/nozomiishii/Code/nozomiishii/dev/apps/home/eslint.config.ts
 Failed to load `eslint.config.js`.
 Note that `@eslint/config-inspector` only works with the flat config format:

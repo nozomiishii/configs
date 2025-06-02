@@ -9,34 +9,16 @@
 set -Ceuo pipefail
 
 echo -e "Installing dependencies..."
-pnpm add -D eslint typescript eslint-define-config @nozomiishii/eslint-config @types/node
+pnpm add -D eslint typescript @nozomiishii/eslint-config
 
 echo -e "Adding npm scripts..."
-pnpm pkg set scripts.eslint="eslint . --max-warnings=0 --ignore-path .gitignore"
+pnpm pkg set scripts.eslint="eslint --max-warnings=0 --cache"
 pnpm pkg set scripts.lint="pnpm eslint"
 pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
 
-echo -e "Creating .eslintrc.cjs..."
-find . -type f -name '.eslintrc*' -delete
-cat > .eslintrc.cjs << EOF
-// @ts-check
-const { defineConfig } = require('eslint-define-config');
-
-module.exports = defineConfig({
-  root: true,
-
-  ignorePatterns: ['.eslintrc.cjs', '*.config.*'],
-
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    tsconfigRootDir: __dirname,
-    project: true,
-    sourceType: 'module',
-  },
-
-  extends: '@nozomiishii',
-});
+echo -e "Creating eslint.config.ts..."
+cat > eslint.config.ts << EOF
+export { default } from '@nozomiishii/eslint-config';
 EOF
 
 echo -e "All set! Your ESLint configuration has been set up successfully🎉"

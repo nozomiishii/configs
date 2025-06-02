@@ -21,13 +21,13 @@ npx -y @nozomiishii/eslint-config@latest
 ## Manual
 
 ```bash
-pnpm add -D eslint typescript eslint-define-config @nozomiishii/eslint-config && touch .eslintrc.cjs
+pnpm add -D eslint typescript @nozomiishii/eslint-config && touch eslint.config.ts
 ```
 
 scriptの設定
 
 ```bash
-pnpm pkg set scripts.eslint="eslint . --max-warnings=0 --ignore-path .gitignore" \
+pnpm pkg set scripts.eslint="eslint --max-warnings=0 --cache" \
 pnpm pkg set scripts.lint="pnpm eslint" \
 pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
 ```
@@ -37,34 +37,17 @@ pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
 ```json
 {
   "scripts": {
-    "eslint": "eslint . --max-warnings=0 --ignore-path .gitignore",
+    "eslint": "eslint --max-warnings=0 --cache",
     "lint": "pnpm eslint",
     "lint:fix": "pnpm eslint --fix"
   }
 }
 ```
 
-.eslintrc.cjs
+`eslint.config.ts`
 
-```js
-// @ts-check
-const { defineConfig } = require('eslint-define-config');
-
-module.exports = defineConfig({
-  root: true,
-
-  ignorePatterns: ['.eslintrc.cjs', '*.config.*'],
-
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    tsconfigRootDir: __dirname,
-    project: true,
-    sourceType: 'module',
-  },
-
-  extends: '@nozomiishii',
-});
+```ts
+export { default } from '@nozomiishii/eslint-config';
 ```
 
 ## References🙏
