@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.3...@nozomiishii/lefthook-config-v0.2.4) (2025-06-02)
+
+### Features
+
+- add pre-commit script to check for 'link:' in package.json ([45b30f4](https://github.com/nozomiishii/configs/commit/45b30f45747c3cc7f77762972f0ba6b18c67a574))
+
 ## [0.2.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.2...@nozomiishii/lefthook-config-v0.2.3) (2025-05-04)
 
 ### Bug Fixes
