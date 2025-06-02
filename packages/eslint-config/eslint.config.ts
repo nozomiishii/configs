@@ -1,5 +1,4 @@
 import gitignore from 'eslint-config-flat-gitignore';
-import typegen from 'eslint-typegen';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import { deMorgan } from './rules/de-morgan';
@@ -25,71 +24,69 @@ import { unicorn } from './rules/unicorn';
 import { viest } from './rules/viest';
 import { name } from './utils/name';
 
-export default typegen(
-  defineConfig([
-    /**
-     * eslint-config-flat-gitignore
-     *
-     * @see https://github.com/antfu/eslint-config-flat-gitignore
-     */
-    gitignore(),
+export default defineConfig([
+  /**
+   * eslint-config-flat-gitignore
+   *
+   * @see https://github.com/antfu/eslint-config-flat-gitignore
+   */
+  gitignore(),
 
-    {
-      // パーサー設定する必要あるかも
-      // https://github.com/Rel1cx/eslint-react?tab=readme-ov-file#setup
-      languageOptions: {
-        /**
-         * globals
-         * グローバル変数の設定
-         * 例えば、document や process といった変数をコード中で使っても、
-         * ESLintが「未定義の変数です」というエラーを出さないようにする
-         */
-        globals: {
-          ...globals.browser,
-          ...globals.node,
-        },
+  {
+    // パーサー設定する必要あるかも
+    // https://github.com/Rel1cx/eslint-react?tab=readme-ov-file#setup
+    languageOptions: {
+      /**
+       * globals
+       * グローバル変数の設定
+       * 例えば、document や process といった変数をコード中で使っても、
+       * ESLintが「未定義の変数です」というエラーを出さないようにする
+       */
+      globals: {
+        ...globals.browser,
+        ...globals.node,
       },
-      name: name('languageOptions/globals'),
     },
-    {
-      languageOptions: {
-        parserOptions: {
-          projectService: true,
-          tsconfigRootDir: import.meta.dirname,
-        },
+    name: name('languageOptions/globals'),
+  },
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
-      name: name('languageOptions/parserOptions'),
     },
+    name: name('languageOptions/parserOptions'),
+  },
 
-    javascript(),
-    typescript(),
-    importX(),
-    n(),
+  javascript(),
+  typescript(),
+  importX(),
+  n(),
 
-    jsdoc(),
-    eslintComments(),
-    unicorn(),
-    deMorgan(),
-    regexp(),
+  jsdoc(),
+  eslintComments(),
+  unicorn(),
+  deMorgan(),
+  regexp(),
 
-    react(),
-    //  Cannot read properties of undefined (reading 'configs')てなる
-    // reactCompiler(),
-    reactHooks(),
-    // reactRefresh(),
-    jsxA11yX(),
+  react(),
+  //  Cannot read properties of undefined (reading 'configs')てなる
+  // reactCompiler(),
+  reactHooks(),
+  // reactRefresh(),
+  jsxA11yX(),
 
-    nextjs(),
-    tailwindcss(),
+  nextjs(),
+  tailwindcss(),
 
-    viest(),
-    storybook(),
-    playwright(),
+  viest(),
+  storybook(),
+  playwright(),
 
-    perfectionist(),
-    prettier(),
+  perfectionist(),
+  prettier(),
 
-    // jsdoc()
-    // packageJson()
-  ]),
-);
+  // jsdoc()
+  // packageJson()
+]);
