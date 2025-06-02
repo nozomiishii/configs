@@ -9,6 +9,17 @@
 #   npx -y lefthook run --verbose commit-msg
 #   npx -y lefthook run --verbose post-merge
 
+pre-commit:
+  parallel: true
+
+  scripts:
+    check-link-in-package-json:
+      run: |
+        if grep -q 'link:' package.json; then
+          echo "ERROR: \"link:\" is included in package.json. Please remove it before committing."
+          exit 1
+        fi
+
 commit-msg:
   parallel: true
 
