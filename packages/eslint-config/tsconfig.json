@@ -5,11 +5,8 @@
     // ----------------------------------------------------------------
     // Transpiling
     // ----------------------------------------------------------------
-    // TSCでTranspileする場合
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "outDir": "dist",
-    "sourceMap": true
-  },
-  "include": ["packages/eslint-config/**/*.ts"]
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "noEmit": true
+  }
 }

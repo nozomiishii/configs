@@ -12,7 +12,7 @@ Nozomi's Recommended [eslint](https://eslint.org/) Config.
 </div>
 <br>
 
-## Gist
+## Install
 
 ```bash
 npx -y @nozomiishii/eslint-config@latest
@@ -32,7 +32,7 @@ pnpm pkg set scripts.lint="pnpm eslint" \
 pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
 ```
 
-package.json
+`package.json`
 
 ```json
 {
@@ -67,9 +67,13 @@ module.exports = defineConfig({
 });
 ```
 
-## その他便利そうなカスタムルールたち（プロジェクトによって入れたい）
+## References🙏
 
-### 特定のimportを禁止
-
-[no-restricted-imports](https://eslint.org/docs/latest/rules/no-restricted-imports)
-[ESLintで特定のimportを禁止する](https://blog.mahoroi.com/posts/2019/03/eslint-no-restricted-import/)
+- [sxzz/eslint-config](https://github.com/sxzz/eslint-config)
+- [azat-io/eslint-config](https://github.com/azat-io/eslint-config)
+- [antfu/eslint-config](https://github.com/antfu/eslint-config)
+- [kazupon/eslint-config](https://github.com/kazupon/eslint-config)
+- [AkaraChen/eslint-config](https://github.com/AkaraChen/eslint-config)
+- [eslint-react/examples/next-app](https://github.com/Rel1cx/eslint-react/blob/2.0.0-next/examples/next-app/eslint.config.js)
+- [vercel/style-guide](https://github.com/vercel/style-guide)
+- [airbnb/javascript](https://github.com/airbnb/javascript)
