@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.8...@nozomiishii/eslint-config-v0.5.0) (2025-06-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrete to flat config
+
+### Features
+
+* migrete to flat config ([c5ff410](https://github.com/nozomiishii/configs/commit/c5ff4107999b678374aade48327d45fb509a4d15))
+
+
+### Bug Fixes
+
+* replace eslint-plugin-eslint-comments to @eslint-community/eslint-plugin-eslint-comments ([46dccbb](https://github.com/nozomiishii/configs/commit/46dccbbc49088118f2d0776b61676aa04b7cd42d))
+* update release workflow condition and add package manager configuration to multiple packages ([958992c](https://github.com/nozomiishii/configs/commit/958992ccd8bdaf906a50bb769ec45459fab81210))
+
 ## [0.4.8](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.4.7...@nozomiishii/eslint-config-v0.4.8) (2025-01-02)
 
 ### Features
