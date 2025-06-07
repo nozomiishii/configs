@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "figlet": "1.8.1",
-    "zx": "8.5.4"
+    "zx": "8.5.5"
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
