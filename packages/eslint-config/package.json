@@ -49,7 +49,7 @@
     "eslint-plugin-jsonc": "2.20.1",
     "eslint-plugin-jsx-a11y-x": "0.1.1",
     "eslint-plugin-n": "17.20.0",
-    "eslint-plugin-package-json": "0.37.0",
+    "eslint-plugin-package-json": "0.39.0",
     "eslint-plugin-perfectionist": "4.14.0",
     "eslint-plugin-playwright": "2.2.0",
     "eslint-plugin-react-compiler": "19.1.0-rc.2",
