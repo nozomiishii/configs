@@ -1,9 +1,11 @@
 # TODO
 
+- tslint.configからdefineConfigに移行
 - react-compiler
 - jsdoc
 - packageJson
-- tslint.configからdefineConfigに移行
+- eslint.style [https://eslint.style/]
+  - @eslint/jsで非推奨になってしまったルールの削除
 - cliで簡単にインストールできるようにする
 - config-inspectorをgithub pagesに載せる
 - ちゃんと全てのルールが適応されているかテストする
