@@ -2,10 +2,9 @@
 
 ## [0.0.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.3...@nozomiishii/postinstall-v0.0.4) (2025-06-20)
 
-
 ### Features
 
-* add git setup functionality to postinstall script ([b1e03d1](https://github.com/nozomiishii/configs/commit/b1e03d149b9695ad1d44e917fd1568e2fe8ad675))
+- add git setup functionality to postinstall script ([b1e03d1](https://github.com/nozomiishii/configs/commit/b1e03d149b9695ad1d44e917fd1568e2fe8ad675))
 
 ## [0.0.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.2...@nozomiishii/postinstall-v0.0.3) (2025-05-04)
 
