@@ -109,8 +109,8 @@ importers:
         specifier: 17.20.0
         version: 17.20.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
       eslint-plugin-package-json:
-        specifier: 0.39.2
-        version: 0.39.2(@types/estree@1.0.7)(eslint@9.29.0(jiti@2.4.2))(jsonc-eslint-parser@2.4.0)
+        specifier: 0.40.0
+        version: 0.40.0(@types/estree@1.0.7)(eslint@9.29.0(jiti@2.4.2))(jsonc-eslint-parser@2.4.0)
       eslint-plugin-perfectionist:
         specifier: 4.14.0
         version: 4.14.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
@@ -1398,6 +1398,9 @@ packages:
     resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
+  change-case@5.4.4:
+    resolution: {integrity: sha512-HRQyTk2/YPEkt9TnUPbOpr64Uw3KOicFWPVBb+xiHvd6eBx/qPr9xqfBFDT8P2vWsvvz4jbEkfDe71W3VyNu2w==}
+
   character-entities-legacy@3.0.0:
     resolution: {integrity: sha512-RpPp0asT/6ufRm//AJVwpViZbGM/MkjQFxJccQRHmISF/22NBtsHqAWmL+/pmkPWoIUJdWyeVleTl1wydHATVQ==}
 
@@ -1845,8 +1848,8 @@ packages:
     peerDependencies:
       eslint: '>=8.23.0'
 
-  eslint-plugin-package-json@0.39.2:
-    resolution: {integrity: sha512-uvyMjUlzr0CKsmj7IfDK5s2RvFVei2KZRxr3WAycpFR+p22R957lZlGIcmwSuVoNmSq9/uk+jZMLqzS/TcYS1A==}
+  eslint-plugin-package-json@0.40.0:
+    resolution: {integrity: sha512-obI6zBC5UHihedXL9mjRhmFe2YRVQfM5MHQVgdXXlNj8NadChyhkongz8wcn2o/2mKVj0CnlyE4xIfixD+Kkhg==}
     engines: {node: ^=20.19.0 || >=22.12.0}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -4757,6 +4760,8 @@ snapshots:
 
   chalk@5.4.1: {}
 
+  change-case@5.4.4: {}
+
   character-entities-legacy@3.0.0: {}
 
   character-entities@2.0.2: {}
@@ -5309,9 +5314,10 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-package-json@0.39.2(@types/estree@1.0.7)(eslint@9.29.0(jiti@2.4.2))(jsonc-eslint-parser@2.4.0):
+  eslint-plugin-package-json@0.40.0(@types/estree@1.0.7)(eslint@9.29.0(jiti@2.4.2))(jsonc-eslint-parser@2.4.0):
     dependencies:
       '@altano/repository-tools': 1.0.1
+      change-case: 5.4.4
       detect-indent: 7.0.1
       detect-newline: 4.0.1
       eslint: 9.29.0(jiti@2.4.2)
