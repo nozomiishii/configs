@@ -112,8 +112,8 @@ importers:
         specifier: 0.40.0
         version: 0.40.0(@types/estree@1.0.7)(eslint@9.29.0(jiti@2.4.2))(jsonc-eslint-parser@2.4.0)
       eslint-plugin-perfectionist:
-        specifier: 4.14.0
-        version: 4.14.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
+        specifier: 4.15.0
+        version: 4.15.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
       eslint-plugin-playwright:
         specifier: 2.2.0
         version: 2.2.0(eslint@9.29.0(jiti@2.4.2))
@@ -1855,8 +1855,8 @@ packages:
       eslint: '>=8.0.0'
       jsonc-eslint-parser: ^2.0.0
 
-  eslint-plugin-perfectionist@4.14.0:
-    resolution: {integrity: sha512-BkhiOqzdum8vQSFgj1/q5+6UUWPMn4GELdxuX7uIsGegmAeH/+LnWsiVxgMrxalD0p68sYfMeKaHF1NfrpI/mg==}
+  eslint-plugin-perfectionist@4.15.0:
+    resolution: {integrity: sha512-pC7PgoXyDnEXe14xvRUhBII8A3zRgggKqJFx2a82fjrItDs1BSI7zdZnQtM2yQvcyod6/ujmzb7ejKPx8lZTnw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       eslint: '>=8.45.0'
@@ -5331,7 +5331,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/estree'
 
-  eslint-plugin-perfectionist@4.14.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3):
+  eslint-plugin-perfectionist@4.15.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3):
     dependencies:
       '@typescript-eslint/types': 8.34.1
       '@typescript-eslint/utils': 8.34.1(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
