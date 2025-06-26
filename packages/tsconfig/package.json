@@ -22,7 +22,7 @@
   "scripts": {
     "link": "pnpm link --global"
   },
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.12.2",
   "publishConfig": {
     "access": "public"
   },
