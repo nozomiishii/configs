@@ -102,21 +102,17 @@ npmの場合は`format`や`format:fix`の際、
 ## Preferences
 
 - `"arrowParens": "always"`
-
   - const fn = (a) ⇒ {}　かconst fn = a ⇒ {}って書くか
   - パラメータ加えていくのに楽したいので()ありで
 
 - `"bracketSpacing": true`
-
   - import {a} from "module"　かimport { a } from "module"
   - trueが好み
 
 - `"htmlWhitespaceSensitivity": "css"`
-
   - default
 
 - `"insertPragma": false`
-
   - default
 
 - `"jsxBracketSameLine": false`
@@ -141,24 +137,19 @@ npmの場合は`format`や`format:fix`の際、
 ```
 
 - `"jsxSingleQuote": false`
-
   - default
 
 - `"printWidth": 119`
-
   - 1行あたりの文字数。
   - Githubのコードレビュー画面の幅と同じ
 
 - `"proseWrap": "preserve"`
-
   - default
 
 - `"quoteProps": "as-needed"`
-
   - default
 
 - `"requirePragma": false`
-
   - default
 
 - `"semi": true`
@@ -172,11 +163,9 @@ npmの場合は`format`や`format:fix`の際、
 ```
 
 - `"singleQuote": true`
-
   - ダブルクオート派だったけど、なんとなくtutorialの先生たちがシングルクオート多くて、それに合わせて
 
 - `"tabWidth": 2`
-
   - タブ2のほうがJavaScriptっぽい気がしてる。好み
 
 - `"trailingComma": "all"`
