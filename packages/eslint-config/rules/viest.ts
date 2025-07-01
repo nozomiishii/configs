@@ -3,19 +3,18 @@ import { defineConfig } from 'eslint/config';
 import { name } from '../utils/name';
 
 /**
- * @returns eslint-plugin-perfectionist
+ * @returns eslint-plugin-vitest
  *
- * @see https://github.com/azat-io/eslint-plugin-perfectionist
+ * @see https://github.com/vitest-dev/eslint-plugin-vitest
  */
 export function viest() {
   return defineConfig([
     {
+      ...eslintPluginVitest.configs.all,
       files: ['**/*.test.{ts,tsx}'],
       ignores: ['**/e2e/**'],
       name: name('viest'),
-      plugins: {
-        vitest: eslintPluginVitest,
-      },
+
       rules: {
         ...eslintPluginVitest.configs.all.rules,
 
