@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.5.2...@nozomiishii/eslint-config-v0.5.3) (2025-07-01)
+
+### Bug Fixes
+
+- improve typescript eslint configuration ([465aeae](https://github.com/nozomiishii/configs/commit/465aeae461f81ca44ac79cc731de23c331eff2e7))
+
 ## [0.5.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.5.1...@nozomiishii/eslint-config-v0.5.2) (2025-07-01)
 
 ### Bug Fixes
