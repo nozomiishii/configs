@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.5.1...@nozomiishii/eslint-config-v0.5.2) (2025-07-01)
+
+
+### Bug Fixes
+
+* eslint-plugin-storybook error ([a3c901f](https://github.com/nozomiishii/configs/commit/a3c901f0458d92b5dfc15ad2945b763e699b8981))
+* update eslint-plugin-vitest ([1a65fd5](https://github.com/nozomiishii/configs/commit/1a65fd56e86678b15cefa39bda66f2d4cbac77a7))
+
 ## [0.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.5.0...@nozomiishii/eslint-config-v0.5.1) (2025-06-02)
 
 ### Bug Fixes
