@@ -175,8 +175,8 @@ importers:
         specifier: 1.8.1
         version: 1.8.1
       zx:
-        specifier: 8.6.0
-        version: 8.6.0
+        specifier: 8.6.1
+        version: 8.6.1
     devDependencies:
       '@nozomiishii/tsconfig':
         specifier: workspace:*
@@ -3279,8 +3279,8 @@ packages:
   zod@3.25.67:
     resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
 
-  zx@8.6.0:
-    resolution: {integrity: sha512-CpOskNj7nNW19z5DkOTHX24Yh1qnnx1oANn8EnD3QbCUBnZpuennJaYkb4zea5GJCxT6/IdxeiA5nweQ1S2YtA==}
+  zx@8.6.1:
+    resolution: {integrity: sha512-ig4Gn2e3L9QaQq3OsyDyGKvXFiq7wYvLCPmFJgcneHsr5vTeJefe0SXtDE7qaur9ysv7giAc0CmEtQcS71UA5Q==}
     engines: {node: '>= 12.17.0'}
     hasBin: true
 
@@ -6552,4 +6552,4 @@ snapshots:
 
   zod@3.25.67: {}
 
-  zx@8.6.0: {}
+  zx@8.6.1: {}
