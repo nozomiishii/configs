@@ -18,11 +18,13 @@ import { reactHooks } from './rules/react-hooks';
 // import { reactRefresh } from './rules/react-refresh';
 import { regexp } from './rules/regexp';
 import { storybook } from './rules/storybook';
-import { tailwindcss } from './rules/tailwindcss';
+import { betterTailwindcss } from './rules/tailwindcss';
 import { typescript } from './rules/typescript';
 import { unicorn } from './rules/unicorn';
 import { viest } from './rules/viest';
 import { name } from './utils/name';
+
+export { defineConfig } from 'eslint/config';
 
 export default defineConfig([
   /**
@@ -78,7 +80,7 @@ export default defineConfig([
   jsxA11yX(),
 
   nextjs(),
-  tailwindcss(),
+  betterTailwindcss(),
 
   viest(),
   storybook(),

@@ -1,20 +1,32 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-// @ts-expect-error missing types 型がない
-import eslintPluginTailwindcss from 'eslint-plugin-tailwindcss';
+import type { Linter } from 'eslint';
+import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss';
 import { defineConfig } from 'eslint/config';
 import { name } from '../utils/name';
 
+type Options = {
+  entryPoint?: string;
+};
+
 /**
- * @returns eslint-plugin-tailwindcss
+ * @returns eslint-plugin-better-tailwindcss
  *
- * @see https://github.com/francoismassart/eslint-plugin-tailwindcss
+ * @see https://github.com/schoero/eslint-plugin-better-tailwindcss
  */
-export function tailwindcss() {
+export function betterTailwindcss(options?: Options) {
   return defineConfig([
     {
-      // https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/master/lib/config/flat-recommended.js
-      ...eslintPluginTailwindcss.configs['flat/recommended'][0],
-      ...eslintPluginTailwindcss.configs['flat/recommended'][1],
+      settings: {
+        'better-tailwindcss': {
+          entryPoint: options?.entryPoint ?? 'src/global.css',
+        },
+      },
+      plugins: {
+        'better-tailwindcss': eslintPluginBetterTailwindcss,
+      },
+      rules: {
+        ...(eslintPluginBetterTailwindcss.configs['recommended-warn']?.rules as Linter.Config['rules']),
+      },
+
       name: name('tailwindcss'),
     },
   ]);
