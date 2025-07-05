@@ -20,6 +20,7 @@
   "type": "module",
   "main": "README.md",
   "scripts": {
+    "clean": "npkill --delete-all -y",
     "format": "pnpm prettier . --check",
     "format:fix": "pnpm prettier . --write",
     "postinstall": "postinstall",
@@ -34,7 +35,8 @@
     "@nozomiishii/postinstall": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
-    "markdownlint-cli2": "0.18.1"
+    "markdownlint-cli2": "0.18.1",
+    "npkill": "0.12.2"
   },
   "packageManager": "pnpm@10.12.4",
   "pnpm": {
