@@ -142,8 +142,8 @@ importers:
         specifier: 59.0.1
         version: 59.0.1(eslint@9.30.0(jiti@2.4.2))
       eslint-typegen:
-        specifier: 2.2.0
-        version: 2.2.0(eslint@9.30.0(jiti@2.4.2))
+        specifier: 2.2.1
+        version: 2.2.1(eslint@9.30.0(jiti@2.4.2))
       globals:
         specifier: 16.3.0
         version: 16.3.0
@@ -1938,8 +1938,8 @@ packages:
     resolution: {integrity: sha512-sNXOfKCn74rt8RICKMvJS7XKV/Xk9kA7DyJr8mJik3S7Cwgy3qlkkmyS2uQB3jiJg6VNdZd/pDBJu0nvG2NlTg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  eslint-typegen@2.2.0:
-    resolution: {integrity: sha512-OVgibKnRNnlSs4MhMz8uTRLSSIsvTXjH7a1gzXvyDIVU/txX1t8Zr9I/vOSwWIhtACX5DCPLo9CuyvA9usyjyw==}
+  eslint-typegen@2.2.1:
+    resolution: {integrity: sha512-DMx6fMxSsou1wiT2dviHvKRevCx6O7axogtl2WE0Pjq/p2D3rAx9ubsmQWMTmYyT/vmBWZ1yxZyAXhx1u7QpiA==}
     peerDependencies:
       eslint: ^9.0.0
 
@@ -5133,7 +5133,7 @@ snapshots:
       esrecurse: 4.3.0
       estraverse: 5.3.0
 
-  eslint-typegen@2.2.0(eslint@9.30.0(jiti@2.4.2)):
+  eslint-typegen@2.2.1(eslint@9.30.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.30.0(jiti@2.4.2)
       json-schema-to-typescript-lite: 14.1.0
