@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@evilmartians/lefthook':
-        specifier: 1.11.14
-        version: 1.11.14
+        specifier: 1.11.15
+        version: 1.11.15
       '@nozomiishii/commitlint-config':
         specifier: workspace:*
         version: link:packages/commitlint-config
@@ -166,8 +166,8 @@ importers:
   packages/lefthook-config:
     dependencies:
       '@evilmartians/lefthook':
-        specifier: 1.11.14
-        version: 1.11.14
+        specifier: 1.11.15
+        version: 1.11.15
 
   packages/markdownlint-cli2-config:
     dependencies:
@@ -674,8 +674,8 @@ packages:
     resolution: {integrity: sha512-4SaFZCNfJqvk/kenHpI8xvN42DMaoycy4PzKc5otHxRswww1kAt82OlBuwRVLofCACCTZEcla2Ydxv8scMXaTg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@evilmartians/lefthook@1.11.14':
-    resolution: {integrity: sha512-vh6lqXVwh7uhI5C/gKB7InW8RyMFYXN27U4Hlum8ZBcDrOviF9fmcBJf4C6ZboWkD3j8v1qp4psc3bwynhPlTQ==}
+  '@evilmartians/lefthook@1.11.15':
+    resolution: {integrity: sha512-/l4mzLex2ZxF5hIsIq1YX5lCl5NUjKVDVqMqHLKkxP2qlOGOgdU9ov7CaJscc1b1rhrXXHs6a3ycI/rHEjbDOA==}
     cpu: [x64, arm64, ia32]
     os: [darwin, linux, win32]
     hasBin: true
@@ -1655,10 +1655,6 @@ packages:
 
   emojilib@2.4.0:
     resolution: {integrity: sha512-5U0rVMU5Y2n2+ykNLQqMoqklN9ICBT/KsvC1Gz6vqHbz2AXXGkG+Pm5rMWk/8Vjrr/mY9985Hi8DYzn1F09Nyw==}
-
-  enhanced-resolve@5.18.1:
-    resolution: {integrity: sha512-ZSW3ma5GkcQBIpwZTSRAI8N71Uuwgs93IezB7mf7R60tC8ZbJideoDNKjHn2O9KIlx6rkGTTEk1xUCK2E1Y2Yg==}
-    engines: {node: '>=10.13.0'}
 
   enhanced-resolve@5.18.2:
     resolution: {integrity: sha512-6Jw4sE1maoRJo3q8MsSIn2onJFbLTOjY9hlx4DZXmOKvLRd1Ok2kXmAGXaafL2+ijsJZ1ClYbl/pmqr9+k4iUQ==}
@@ -3843,7 +3839,7 @@ snapshots:
       '@eslint/core': 0.15.0
       levn: 0.4.1
 
-  '@evilmartians/lefthook@1.11.14': {}
+  '@evilmartians/lefthook@1.11.15': {}
 
   '@humanfs/core@0.19.1': {}
 
@@ -4685,11 +4681,6 @@ snapshots:
 
   emojilib@2.4.0: {}
 
-  enhanced-resolve@5.18.1:
-    dependencies:
-      graceful-fs: 4.2.11
-      tapable: 2.2.2
-
   enhanced-resolve@5.18.2:
     dependencies:
       graceful-fs: 4.2.11
@@ -4884,7 +4875,7 @@ snapshots:
     dependencies:
       '@eslint-community/eslint-utils': 4.7.0(eslint@9.30.1(jiti@2.4.2))
       '@typescript-eslint/utils': 8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)
-      enhanced-resolve: 5.18.1
+      enhanced-resolve: 5.18.2
       eslint: 9.30.1(jiti@2.4.2)
       eslint-plugin-es-x: 7.8.0(eslint@9.30.1(jiti@2.4.2))
       get-tsconfig: 4.10.1
