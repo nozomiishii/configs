@@ -24,8 +24,6 @@ import { unicorn } from './rules/unicorn';
 import { viest } from './rules/viest';
 import { name } from './utils/name';
 
-export { defineConfig } from 'eslint/config';
-
 export default defineConfig([
   /**
    * eslint-config-flat-gitignore
@@ -92,3 +90,5 @@ export default defineConfig([
   // jsdoc()
   // packageJson()
 ]);
+
+export { defineConfig } from 'eslint/config';
