@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.5.3...@nozomiishii/eslint-config-v0.6.0) (2025-07-06)
+
+### ⚠ BREAKING CHANGES
+
+- replace eslint-plugin-tailwindcss with eslint-plugin-better-tailwindcss
+
+### Features
+
+- replace eslint-plugin-tailwindcss with eslint-plugin-better-tailwindcss ([916d5ba](https://github.com/nozomiishii/configs/commit/916d5bae22fb7ee1fcd290cc236469303ef28784))
+
+### Bug Fixes
+
+- support pnpm.executionEnv.nodeVersion ([974aabe](https://github.com/nozomiishii/configs/commit/974aabe6961683189e612236e48513cd4acf0cd0))
+
 ## [0.5.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.5.2...@nozomiishii/eslint-config-v0.5.3) (2025-07-01)
 
 ### Bug Fixes
