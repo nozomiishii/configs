@@ -15,19 +15,21 @@ type Options = {
 export function betterTailwindcss(options?: Options) {
   return defineConfig([
     {
-      settings: {
-        'better-tailwindcss': {
-          entryPoint: options?.entryPoint ?? 'src/global.css',
-        },
-      },
+      name: name('tailwindcss'),
       plugins: {
         'better-tailwindcss': eslintPluginBetterTailwindcss,
       },
       rules: {
         ...(eslintPluginBetterTailwindcss.configs['recommended-warn']?.rules as Linter.Config['rules']),
-      },
 
-      name: name('tailwindcss'),
+        // Prettierと競合する
+        'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
+      },
+      settings: {
+        'better-tailwindcss': {
+          entryPoint: options?.entryPoint ?? 'src/global.css',
+        },
+      },
     },
   ]);
 }
