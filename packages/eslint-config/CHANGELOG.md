@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.6.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.0...@nozomiishii/eslint-config-v0.6.1) (2025-07-08)
+
+### Bug Fixes
+
+- turn off better-tailwindcss/enforce-consistent-line-wrapping ([e4894b0](https://github.com/nozomiishii/configs/commit/e4894b09fea3eb7c5eef7c47231996add25acebe))
+
 ## [0.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.5.3...@nozomiishii/eslint-config-v0.6.0) (2025-07-06)
 
 ### ⚠ BREAKING CHANGES
