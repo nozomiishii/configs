@@ -16,7 +16,7 @@
   "author": "Nozomi Ishii",
   "main": "index.cjs",
   "bin": "bin/cli.cjs",
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.13.1",
   "publishConfig": {
     "access": "public"
   },
