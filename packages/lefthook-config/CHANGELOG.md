@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.4...@nozomiishii/lefthook-config-v0.2.5) (2025-07-12)
+
+
+### Features
+
+* replace npx with pnpx for commitlint command ([ddcb0a7](https://github.com/nozomiishii/configs/commit/ddcb0a7236161ac66bf7392b49bdb13909135c69))
+
 ## [0.2.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.3...@nozomiishii/lefthook-config-v0.2.4) (2025-06-02)
 
 ### Features
