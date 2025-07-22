@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.5...@nozomiishii/lefthook-config-v0.2.6) (2025-07-22)
+
+
+### Bug Fixes
+
+* fail to release ([df126af](https://github.com/nozomiishii/configs/commit/df126af8c9653c75fe4dc34136d166ead03ed742))
+
 ## [0.2.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.4...@nozomiishii/lefthook-config-v0.2.5) (2025-07-12)
 
 ### Features
