@@ -94,8 +94,8 @@ importers:
         specifier: 4.4.4
         version: 4.4.4(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.37.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-better-tailwindcss:
-        specifier: 3.6.3
-        version: 3.6.3(eslint@9.31.0(jiti@2.4.2))(tailwindcss@4.1.11)
+        specifier: 3.7.0
+        version: 3.7.0(eslint@9.31.0(jiti@2.4.2))(tailwindcss@4.1.11)
       eslint-plugin-de-morgan:
         specifier: 1.3.0
         version: 1.3.0(eslint@9.31.0(jiti@2.4.2))
@@ -1760,8 +1760,8 @@ packages:
       '@eslint/json':
         optional: true
 
-  eslint-plugin-better-tailwindcss@3.6.3:
-    resolution: {integrity: sha512-Xe1BMDIgINeQb1Xf7NLZHvi1S8V+4TXCnjheardPQsz6do38OAlqRSm0Uiq+biYzxNVofbJCkWNndW/3twjSkA==}
+  eslint-plugin-better-tailwindcss@3.7.0:
+    resolution: {integrity: sha512-8xMy1h3v5X9m9r1E6bNc49WOYYcxk6ld+67UJOz9gFZ48BzG8KR430nrGkZbWNhbQTR5i0f2c3mtLgQbVXWZkA==}
     engines: {node: ^20.11.0 || >=21.2.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -3001,6 +3001,10 @@ packages:
     resolution: {integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==}
     engines: {node: '>=12'}
 
+  strip-bom@3.0.0:
+    resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
+    engines: {node: '>=4'}
+
   strip-indent@3.0.0:
     resolution: {integrity: sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==}
     engines: {node: '>=8'}
@@ -3103,6 +3107,14 @@ packages:
 
   ts-pattern@5.7.1:
     resolution: {integrity: sha512-EGs8PguQqAAUIcQfK4E9xdXxB6s2GK4sJfT/vcc9V1ELIvC4LH/zXu2t/5fajtv6oiRCxdv7BgtVK3vWgROxag==}
+
+  tsconfig-paths-webpack-plugin@4.2.0:
+    resolution: {integrity: sha512-zbem3rfRS8BgeNK50Zz5SIQgXzLafiHjOwUAvk/38/o1jHn/V5QAgVUcz884or7WYcPaH3N2CIfUc2u0ul7UcA==}
+    engines: {node: '>=10.13.0'}
+
+  tsconfig-paths@4.2.0:
+    resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
+    engines: {node: '>=6'}
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
@@ -4796,7 +4808,7 @@ snapshots:
       esquery: 1.6.0
       jsonc-eslint-parser: 2.4.0
 
-  eslint-plugin-better-tailwindcss@3.6.3(eslint@9.31.0(jiti@2.4.2))(tailwindcss@4.1.11):
+  eslint-plugin-better-tailwindcss@3.7.0(eslint@9.31.0(jiti@2.4.2))(tailwindcss@4.1.11):
     dependencies:
       '@eslint/css-tree': 3.6.1
       enhanced-resolve: 5.18.2
@@ -4807,6 +4819,7 @@ snapshots:
       synckit: 0.11.11
       tailwind-csstree: 0.1.1
       tailwindcss: 4.1.11
+      tsconfig-paths-webpack-plugin: 4.2.0
 
   eslint-plugin-de-morgan@1.3.0(eslint@9.31.0(jiti@2.4.2)):
     dependencies:
@@ -6263,6 +6276,8 @@ snapshots:
     dependencies:
       ansi-regex: 6.1.0
 
+  strip-bom@3.0.0: {}
+
   strip-indent@3.0.0:
     dependencies:
       min-indent: 1.0.1
@@ -6348,6 +6363,19 @@ snapshots:
   ts-interface-checker@0.1.13: {}
 
   ts-pattern@5.7.1: {}
+
+  tsconfig-paths-webpack-plugin@4.2.0:
+    dependencies:
+      chalk: 4.1.2
+      enhanced-resolve: 5.18.2
+      tapable: 2.2.2
+      tsconfig-paths: 4.2.0
+
+  tsconfig-paths@4.2.0:
+    dependencies:
+      json5: 2.2.3
+      minimist: 1.2.8
+      strip-bom: 3.0.0
 
   tslib@2.8.1: {}
 
