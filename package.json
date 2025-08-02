@@ -38,13 +38,17 @@
     "markdownlint-cli2": "0.18.1",
     "npkill": "0.12.2"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@swc/core"
-    ],
-    "executionEnv": {
-      "nodeVersion": "22.14.0"
+    ]
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "22.14.0",
+      "onFail": "download"
     }
   }
 }

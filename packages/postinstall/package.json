@@ -45,13 +45,15 @@
     "tsup": "8.5.0",
     "typescript": "5.8.3"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "publishConfig": {
     "access": "public"
   },
-  "pnpm": {
-    "executionEnv": {
-      "nodeVersion": "22.14.0"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "22.14.0",
+      "onFail": "download"
     }
   }
 }

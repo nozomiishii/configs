@@ -16,13 +16,16 @@
   "author": "Nozomi Ishii",
   "main": "index.cjs",
   "bin": "bin/cli.cjs",
-  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {},
+  "packageManager": "pnpm@10.14.0",
   "publishConfig": {
     "access": "public"
   },
-  "pnpm": {
-    "executionEnv": {
-      "nodeVersion": "22.14.0"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "22.14.0",
+      "onFail": "download"
     }
   }
 }
