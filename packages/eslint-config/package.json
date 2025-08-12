@@ -20,6 +20,7 @@
   "bin": "bin/cli.sh",
   "scripts": {
     "build": "pnpx @eslint/config-inspector build",
+    "check:ts": "tsc",
     "dev": "eslint --inspect-config",
     "eslint": "eslint --max-warnings=0",
     "postinstall": "pnpm typegen",
@@ -66,7 +67,9 @@
     "tailwindcss": "4.1.11",
     "typescript-eslint": "8.39.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "typescript": "5.9.2"
+  },
   "peerDependencies": {
     "eslint": "^9.32.0",
     "typescript": "^5.9.2"

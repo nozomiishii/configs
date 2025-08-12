@@ -24,7 +24,7 @@
     "clean:node": "npkill --delete-all -y",
     "format": "pnpm prettier . --check",
     "format:fix": "pnpm prettier . --write",
-    "postinstall": "postinstall",
+    "postinstall": "pnpm -F @nozomiishii/postinstall build && postinstall",
     "prettier": "prettier --ignore-unknown --ignore-path .gitignore"
   },
   "devDependencies": {

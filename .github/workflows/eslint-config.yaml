@@ -34,4 +34,4 @@ jobs:
           working-directory: packages/eslint-config
 
       - name: Compiler check
-        run: npx tsc
+        run: pnpm check:ts
