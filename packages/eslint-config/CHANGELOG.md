@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.6.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.1...@nozomiishii/eslint-config-v0.6.2) (2025-08-12)
+
+### Bug Fixes
+
+- eslint Next.js configuration ([#1342](https://github.com/nozomiishii/configs/issues/1342)) ([ba4a1d7](https://github.com/nozomiishii/configs/commit/ba4a1d764a90ed3933b3dbdef9e09831219b91e7))
+
 ## [0.6.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.0...@nozomiishii/eslint-config-v0.6.1) (2025-07-08)
 
 ### Bug Fixes
