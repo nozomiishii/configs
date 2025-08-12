@@ -20,7 +20,8 @@
   "type": "module",
   "main": "README.md",
   "scripts": {
-    "clean": "npkill --delete-all -y",
+    "clean:all": "git clean -fdX",
+    "clean:node": "npkill --delete-all -y",
     "format": "pnpm prettier . --check",
     "format:fix": "pnpm prettier . --write",
     "postinstall": "postinstall",
