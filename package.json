@@ -43,13 +43,9 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@swc/core"
-    ]
-  },
-  "devEngines": {
-    "runtime": {
-      "name": "node",
-      "version": "22.14.0",
-      "onFail": "download"
+    ],
+    "executionEnv": {
+      "nodeVersion": "22.14.0"
     }
   }
 }
