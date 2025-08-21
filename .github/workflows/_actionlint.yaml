@@ -1,0 +1,36 @@
+name: Lint GitHub Actions workflows
+on:
+  workflow_dispatch:
+  # Remove push trigger for team development
+  push:
+    branches:
+      - main
+  pull_request:
+    paths:
+      - '.github/**/*.ya?ml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+
+      - name: Check workflow files
+        # https://github.com/rhysd/actionlint
+        #
+        # To run locally, execute the following command:
+        # docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:latest
+        uses: docker://rhysd/actionlint:1.7.7@sha256:887a259a5a534f3c4f36cb02dca341673c6089431057242cdc931e9f133147e9
+        with:
+          args: -color
