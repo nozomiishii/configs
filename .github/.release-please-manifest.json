@@ -1,11 +1,11 @@
 {
-  "packages/commitlint-config": "0.0.6",
+  "packages/commitlint-config": "0.0.7",
   "packages/cspell-config": "0.4.3",
-  "packages/eslint-config": "0.6.2",
+  "packages/eslint-config": "0.6.3",
   "packages/lefthook-config": "0.2.7",
-  "packages/markdownlint-cli2-config": "0.3.2",
-  "packages/prettier-config": "0.6.3",
+  "packages/markdownlint-cli2-config": "0.3.3",
+  "packages/prettier-config": "0.6.4",
   "packages/tsconfig": "0.0.6",
   "packages/postinstall": "0.0.5",
-  "apps/nozo/typescript": "0.2.0"
+  "apps/nozo/typescript": "0.2.1"
 }
