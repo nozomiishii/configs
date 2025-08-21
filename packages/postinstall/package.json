@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/postinstall",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Nozomi's Recommended postinstall scripts",
   "keywords": [
     "postinstall",
