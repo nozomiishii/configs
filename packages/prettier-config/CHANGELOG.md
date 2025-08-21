@@ -2,11 +2,10 @@
 
 ## [0.6.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.3...@nozomiishii/prettier-config-v0.6.4) (2025-08-21)
 
-
 ### Bug Fixes
 
-* devEngines in package.json ([02d57a3](https://github.com/nozomiishii/configs/commit/02d57a31f4d4d403b14ad223661c9531faeda296))
-* remove pnpm.executionEnv.nodeVersion ([9e2941a](https://github.com/nozomiishii/configs/commit/9e2941a0b00a83a5dc00391a533eccd3dd9b7824))
+- devEngines in package.json ([02d57a3](https://github.com/nozomiishii/configs/commit/02d57a31f4d4d403b14ad223661c9531faeda296))
+- remove pnpm.executionEnv.nodeVersion ([9e2941a](https://github.com/nozomiishii/configs/commit/9e2941a0b00a83a5dc00391a533eccd3dd9b7824))
 
 ## [0.6.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.2...@nozomiishii/prettier-config-v0.6.3) (2025-05-04)
 
