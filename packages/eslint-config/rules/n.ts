@@ -1,7 +1,6 @@
 import eslintPluginN from 'eslint-plugin-n';
 import { defineConfig } from 'eslint/config';
 import { name } from '../utils/name';
-import { getNodeVersion } from '../utils/package-json';
 
 const config = eslintPluginN.configs['flat/recommended-module'];
 
@@ -24,11 +23,15 @@ export function n() {
         'n/no-missing-import': 'off',
       },
       // pnpmでnode管理したいので設定。engines設定してるならここは省略できる。
-      settings: {
-        node: {
-          version: getNodeVersion(),
-        },
-      },
+      // pnpm.executionEnv.nodeVersionがcustomManagers書いてもenginesと同じタイミングでアップデートしてくれない。
+      // pnpmはdevEngines指定になりそう。node versionの固定の仕組みが安定するまで、engines + fnmの運用にする
+      // https://github.com/renovatebot/renovate/issues/32632
+      //
+      // settings: {
+      //   node: {
+      //     version: getNodeVersion(),
+      //   },
+      // },
     },
 
     {

@@ -51,10 +51,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "pnpm": {
-    "executionEnv": {
-      "nodeVersion": "22.14.0"
-    }
   }
 }

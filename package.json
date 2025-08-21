@@ -46,9 +46,6 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@swc/core"
-    ],
-    "executionEnv": {
-      "nodeVersion": "22.14.0"
-    }
+    ]
   }
 }
