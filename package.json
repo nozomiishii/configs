@@ -40,6 +40,9 @@
     "npkill": "0.12.2"
   },
   "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": "22.14.0"
+  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@swc/core"

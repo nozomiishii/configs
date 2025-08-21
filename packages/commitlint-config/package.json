@@ -28,6 +28,9 @@
   },
   "devDependencies": {},
   "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": "22.14.0"
+  },
   "publishConfig": {
     "access": "public"
   },
