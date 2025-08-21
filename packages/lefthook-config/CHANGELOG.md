@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.7](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.6...@nozomiishii/lefthook-config-v0.2.7) (2025-08-21)
+
+
+### Bug Fixes
+
+* devEngines in package.json ([02d57a3](https://github.com/nozomiishii/configs/commit/02d57a31f4d4d403b14ad223661c9531faeda296))
+* remove pnpm.executionEnv.nodeVersion ([9e2941a](https://github.com/nozomiishii/configs/commit/9e2941a0b00a83a5dc00391a533eccd3dd9b7824))
+
 ## [0.2.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.5...@nozomiishii/lefthook-config-v0.2.6) (2025-07-22)
 
 ### Bug Fixes
