@@ -5,8 +5,6 @@
 
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
-  "separate-pull-requests": true,
-  "pull-request-title-pattern": "chore: release ${component} ${version}",
 
   "packages": {
     "packages/commitlint-config": {
