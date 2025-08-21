@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/markdownlint-cli2-config",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Nozomi's Recommended markdownlint-cli2 config",
   "keywords": [
     "markdownlint-cli2",
