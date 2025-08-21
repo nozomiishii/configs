@@ -16,7 +16,7 @@
   "bin": "src/index.js",
   "dependencies": {},
   "engines": {
-    "node": "22.14.0"
+    "node": "22.18.0"
   },
   "publishConfig": {
     "access": "public"
