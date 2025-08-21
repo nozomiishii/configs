@@ -2,7 +2,7 @@
   "packages/commitlint-config": "0.0.6",
   "packages/cspell-config": "0.4.2",
   "packages/eslint-config": "0.6.2",
-  "packages/lefthook-config": "0.2.6",
+  "packages/lefthook-config": "0.2.7",
   "packages/markdownlint-cli2-config": "0.3.2",
   "packages/prettier-config": "0.6.3",
   "packages/tsconfig": "0.0.5",
