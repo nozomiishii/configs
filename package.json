@@ -22,6 +22,7 @@
   "scripts": {
     "clean:all": "git clean -fdX",
     "clean:node": "npkill --delete-all -y",
+    "fix:md": "markdownlint-cli2 --fix '**/*.md'",
     "format": "pnpm prettier . --check",
     "format:fix": "pnpm prettier . --write",
     "postinstall": "pnpm -F @nozomiishii/postinstall build && postinstall",
