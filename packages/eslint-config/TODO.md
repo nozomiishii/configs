@@ -11,6 +11,8 @@
 - config-inspectorをgithub pagesに載せる
 - ちゃんと全てのルールが適応されているかテストする
 - 依存先で`eslint --inspect-config --config eslint.config.ts`みたいに実行してもうまくいかない問題の対応(できるようになったらREADMEも更新する)
+- マルチスレッド対応
+  - <https://eslint.org/blog/2025/08/multithread-linting>
 
 ```bash
 ℹ Reading ESLint config from /Users/nozomiishii/Code/nozomiishii/dev/apps/home/eslint.config.ts
