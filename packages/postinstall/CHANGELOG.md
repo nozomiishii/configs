@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.5...@nozomiishii/postinstall-v0.0.6) (2025-09-02)
+
+### Bug Fixes
+
+- remove node engine from package.json files ([b3ad146](https://github.com/nozomiishii/configs/commit/b3ad14646e733a4c7435544e76b8a7238f333388))
+
 ## [0.0.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.4...@nozomiishii/postinstall-v0.0.5) (2025-08-21)
 
 ### Bug Fixes
