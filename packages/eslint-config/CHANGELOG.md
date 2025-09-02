@@ -2,10 +2,9 @@
 
 ## [0.6.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.3...@nozomiishii/eslint-config-v0.6.4) (2025-09-02)
 
-
 ### Bug Fixes
 
-* remove node engine from package.json files ([b3ad146](https://github.com/nozomiishii/configs/commit/b3ad14646e733a4c7435544e76b8a7238f333388))
+- remove node engine from package.json files ([b3ad146](https://github.com/nozomiishii/configs/commit/b3ad14646e733a4c7435544e76b8a7238f333388))
 
 ## [0.6.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.2...@nozomiishii/eslint-config-v0.6.3) (2025-08-21)
 
