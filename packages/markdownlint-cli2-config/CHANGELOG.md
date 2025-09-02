@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v0.3.3...@nozomiishii/markdownlint-cli2-config-v0.3.4) (2025-09-02)
+
+
+### Bug Fixes
+
+* remove node engine from package.json files ([b3ad146](https://github.com/nozomiishii/configs/commit/b3ad14646e733a4c7435544e76b8a7238f333388))
+
 ## [0.3.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v0.3.2...@nozomiishii/markdownlint-cli2-config-v0.3.3) (2025-08-21)
 
 ### Bug Fixes

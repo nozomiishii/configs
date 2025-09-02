@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.4.3...@nozomiishii/cspell-config-v0.4.4) (2025-09-02)
+
+
+### Bug Fixes
+
+* remove node engine from package.json files ([b3ad146](https://github.com/nozomiishii/configs/commit/b3ad14646e733a4c7435544e76b8a7238f333388))
+
 ## [0.4.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.4.2...@nozomiishii/cspell-config-v0.4.3) (2025-08-21)
 
 ### Bug Fixes
