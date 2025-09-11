@@ -179,8 +179,8 @@ importers:
   packages/postinstall:
     dependencies:
       figlet:
-        specifier: 1.8.2
-        version: 1.8.2
+        specifier: 1.9.0
+        version: 1.9.0
       zx:
         specifier: 8.8.1
         version: 8.8.1
@@ -1519,6 +1519,10 @@ packages:
     resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
     engines: {node: '>=0.1.90'}
 
+  commander@14.0.0:
+    resolution: {integrity: sha512-2uM9rYjPvyq39NwLRqaiLtWHyDC1FvryJDa2ATTVims5YAS4PupsEQsDvP14FqhFr0P49CYDugi59xaxJlTXRA==}
+    engines: {node: '>=20'}
+
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
@@ -2057,9 +2061,9 @@ packages:
       picomatch:
         optional: true
 
-  figlet@1.8.2:
-    resolution: {integrity: sha512-iPCpE9B/rOcjewIzDnagP9F2eySzGeHReX8WlrZQJkqFBk2wvq8gY0c6U6Hd2y9HnX1LQcYSeP7aEHoPt6sVKQ==}
-    engines: {node: '>= 0.4.0'}
+  figlet@1.9.0:
+    resolution: {integrity: sha512-S+WN3ZIGYgiZUlQD0s3qlAPSOdCdYth0G7PK6DbubfixgorA7jzNl4eae2Hc/rEjQ5UYnf0YkcpCFc/IMklZhg==}
+    engines: {node: '>= 17.0.0'}
     hasBin: true
 
   file-entry-cache@8.0.0:
@@ -4625,6 +4629,8 @@ snapshots:
 
   colors@1.4.0: {}
 
+  commander@14.0.0: {}
+
   commander@4.1.1: {}
 
   commander@8.3.0: {}
@@ -5303,7 +5309,9 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.3
 
-  figlet@1.8.2: {}
+  figlet@1.9.0:
+    dependencies:
+      commander: 14.0.0
 
   file-entry-cache@8.0.0:
     dependencies:
