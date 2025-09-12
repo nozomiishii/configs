@@ -18,7 +18,6 @@ runs:
       uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
       with:
         node-version-file: ${{ inputs.working-directory }}/package.json
-        cache: pnpm
         # Required for publishing packages to npm
         registry-url: 'https://registry.npmjs.org'
 
