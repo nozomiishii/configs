@@ -70,8 +70,8 @@ importers:
         specifier: 9.35.0
         version: 9.35.0
       '@next/eslint-plugin-next':
-        specifier: 15.5.2
-        version: 15.5.2
+        specifier: 15.5.3
+        version: 15.5.3
       '@swc-node/register':
         specifier: 1.11.1
         version: 1.11.1(@swc/core@1.13.3)(@swc/types@0.1.24)(typescript@5.9.2)
@@ -736,8 +736,8 @@ packages:
   '@napi-rs/wasm-runtime@1.0.3':
     resolution: {integrity: sha512-rZxtMsLwjdXkMUGC3WwsPwLNVqVqnTJT6MNIB6e+5fhMcSCPP0AOsNWuMQ5mdCq6HNjs/ZeWAEchpqeprqBD2Q==}
 
-  '@next/eslint-plugin-next@15.5.2':
-    resolution: {integrity: sha512-lkLrRVxcftuOsJNhWatf1P2hNVfh98k/omQHrCEPPriUypR6RcS13IvLdIrEvkm9AH2Nu2YpR5vLqBuy6twH3Q==}
+  '@next/eslint-plugin-next@15.5.3':
+    resolution: {integrity: sha512-SdhaKdko6dpsSr0DldkESItVrnPYB1NS2NpShCSX5lc7SSQmLZt5Mug6t2xbiuVWEVDLZSuIAoQyYVBYp0dR5g==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -3969,7 +3969,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.0
     optional: true
 
-  '@next/eslint-plugin-next@15.5.2':
+  '@next/eslint-plugin-next@15.5.3':
     dependencies:
       fast-glob: 3.3.1
 
