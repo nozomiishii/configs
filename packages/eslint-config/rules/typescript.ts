@@ -1,4 +1,4 @@
-import { type Linter } from 'eslint';
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 import { name } from '../utils/name';
 
@@ -10,8 +10,12 @@ import { name } from '../utils/name';
  * @see https://typescript-eslint.io/rules
  */
 export function typescript() {
-  return tseslint.config(
+  return defineConfig([
+    // typescript-eslint/baseとtypescript-eslint/eslint-recommendedの設定がダブってるからなんとかしたい
+    //
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/flat/strict-type-checked.ts
     tseslint.configs.strictTypeChecked,
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/flat/stylistic-type-checked.ts
     tseslint.configs.stylisticTypeChecked,
     {
       files: ['**/*.{ts,tsx}'],
@@ -58,5 +62,5 @@ export function typescript() {
         '@typescript-eslint/consistent-type-definitions': ['warn', 'interface'],
       },
     },
-  ) as Linter.Config[];
+  ]);
 }
