@@ -27,7 +27,7 @@
     "@commitlint/types": "19.8.1"
   },
   "devDependencies": {},
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@10.17.1",
   "publishConfig": {
     "access": "public"
   }
