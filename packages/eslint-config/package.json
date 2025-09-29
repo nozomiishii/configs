@@ -75,6 +75,9 @@
     "typescript": "^5.9.2"
   },
   "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=22.16.0"
+  },
   "publishConfig": {
     "access": "public"
   }
