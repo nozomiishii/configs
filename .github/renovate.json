@@ -1,1 +1,13 @@
-{ "extends": ["github>nozomiishii/renovate"] }
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>nozomiishii/renovate"],
+
+  "packageRules": [
+    {
+      "matchPaths": ["packages/**"],
+      "matchDepTypes": ["engines"],
+      "matchDepNames": ["node"],
+      "enabled": false
+    }
+  ]
+}
