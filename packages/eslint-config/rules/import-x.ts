@@ -6,21 +6,32 @@ import { name } from '../utils/name';
 /**
  * @returns eslint-plugin-import-x
  *
- * 次のルールはtypescriptで解決して方が良い。このルールがrecommendの半数を占めるのでrecommnendは使わずに個別に定義している
- * - 'import-x/default': 'off'
- * - 'import-x/export': 'off'
- * - 'import-x/namespace': 'off'
- * - 'import-x/no-unresolved': 'off'
+ * typescriptに任せた方がいいルール
+ * https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
+ * ```
+ * import/named
+ * import/namespace
+ * import/default
+ * import/no-named-as-default-member
+ * import/no-unresolved
+ * ```
  *
  * @see https://github.com/un-ts/eslint-plugin-import-x
  */
 export function importX() {
+  // tseslint.configがdefineConfigに移行した差分が取り込まれてない
+  // https://github.com/un-ts/eslint-plugin-import-x/issues/421
+  //
+  // antfuさんも使ってるし
+  // こっちにかえようかな import-x/no-cycleがないのが悩み
+  // https://github.com/9romise/eslint-plugin-import-lite
+  //
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   return tseslint.config({
+    // https://github.com/un-ts/eslint-plugin-import-x/blob/master/src/config/flat/typescript.ts
     ...pluginImportX.flatConfigs.typescript,
     name: name('import-x'),
     rules: {
-      ...pluginImportX.flatConfigs.typescript.rules,
-
       /**
        * import文は先頭に書く
        *
@@ -43,11 +54,18 @@ export function importX() {
       'import-x/no-duplicates': 'warn',
 
       /**
-       * デフォルトエクスポートの識別子としてエクスポートされた名前の使用を禁止
+       * default import名がモジュールのnamed export名と一致することを禁止
        *
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-named-as-default.md
        */
       'import-x/no-named-as-default': 'warn',
+
+      /**
+       * 使ってないモジュールを禁止
+       *
+       * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-unused-modules.md
+       */
+      'import-x/no-unused-modules': 'warn',
     },
   }) as Linter.Config[];
 }
