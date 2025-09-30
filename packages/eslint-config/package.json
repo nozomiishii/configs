@@ -21,7 +21,7 @@
   "scripts": {
     "build": "pnpx @eslint/config-inspector build",
     "check:ts": "tsc",
-    "dev": "eslint --inspect-config",
+    "dev": "pnpm typegen && eslint --inspect-config",
     "eslint": "eslint --max-warnings=0",
     "postinstall": "pnpm typegen",
     "link": "pnpm link --global",
