@@ -34,6 +34,14 @@ export function viest() {
         'vitest/max-nested-describe': ['error', { max: 1 }],
 
         /**
+         * Deprecated
+         * allじゃなくってrecommendにして選んでく方針にしようか悩む
+         *
+         * https://github.com/vitest-dev/eslint-plugin-vitest/issues/312
+         */
+        'vitest/no-done-callback': 'off',
+
+        /**
          * 非同期テストなどで、期待されるアサーションが呼び出されない場合を防ぐ
          */
         'vitest/prefer-expect-assertions': [
