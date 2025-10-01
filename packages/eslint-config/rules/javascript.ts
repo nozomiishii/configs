@@ -31,19 +31,6 @@ export function javascript() {
          */
         eqeqeq: ['warn', 'allow-null'],
 
-        // コメント改行ルール
-        // 'lines-around-comment': [
-        //   'warn',
-        //   {
-        //     allowArrayStart: true,
-        //     allowBlockStart: true,
-        //     allowClassStart: true,
-        //     allowObjectStart: true,
-        //     beforeBlockComment: true,
-        //     beforeLineComment: true,
-        //   },
-        // ],
-
         /**
          * consoleの消し忘れ防止
          *
@@ -57,28 +44,6 @@ export function javascript() {
          * @see https://eslint.org/docs/latest/rules/no-useless-rename
          */
         'no-useless-rename': 'warn',
-
-        /**
-         * 改行のルールの統一
-         *
-         * @see https://eslint.org/docs/latest/rules/padding-line-between-statements#rule-details
-         */
-        'padding-line-between-statements': [
-          'warn',
-          { blankLine: 'always', next: 'block', prev: '*' },
-          { blankLine: 'always', next: 'function', prev: '*' },
-          { blankLine: 'always', next: 'cjs-export', prev: '*' },
-          { blankLine: 'always', next: 'export', prev: '*' },
-          { blankLine: 'always', next: 'for', prev: '*' },
-          { blankLine: 'always', next: '*', prev: 'import' },
-          { blankLine: 'always', next: 'if', prev: '*' },
-          { blankLine: 'never', next: 'import', prev: 'import' },
-          { blankLine: 'always', next: 'return', prev: '*' },
-          { blankLine: 'always', next: 'switch', prev: '*' },
-          { blankLine: 'always', next: 'throw', prev: '*' },
-          { blankLine: 'always', next: 'try', prev: '*' },
-          { blankLine: 'always', next: 'while', prev: '*' },
-        ],
 
         /**
          * 比較式において、リテラルを前に置く「ヨーダ条件」を禁止

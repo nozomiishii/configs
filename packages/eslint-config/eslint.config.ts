@@ -18,6 +18,7 @@ import { reactHooks } from './rules/react-hooks';
 // import { reactRefresh } from './rules/react-refresh';
 import { regexp } from './rules/regexp';
 import { storybook } from './rules/storybook';
+import { stylistic } from './rules/stylistic';
 import { betterTailwindcss } from './rules/tailwindcss';
 import { typescript } from './rules/typescript';
 import { unicorn } from './rules/unicorn';
@@ -85,6 +86,7 @@ export default defineConfig([
   playwright(),
 
   perfectionist(),
+  stylistic(),
   prettier(),
 
   // jsdoc()
