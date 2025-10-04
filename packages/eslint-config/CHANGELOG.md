@@ -2,18 +2,16 @@
 
 ## [0.6.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.4...@nozomiishii/eslint-config-v0.6.5) (2025-10-04)
 
-
 ### Features
 
-* add @stylistic/eslint-plugin and integrate stylistic rules into eslint-config ([f9a7c4b](https://github.com/nozomiishii/configs/commit/f9a7c4be338240abfd08bdfb315d9a34c4165c7f))
-
+- add @stylistic/eslint-plugin and integrate stylistic rules into eslint-config ([f9a7c4b](https://github.com/nozomiishii/configs/commit/f9a7c4be338240abfd08bdfb315d9a34c4165c7f))
 
 ### Bug Fixes
 
-* disable deprecated 'vitest/no-done-callback' rule ([43c7de1](https://github.com/nozomiishii/configs/commit/43c7de1572f8121f24a9c105f4a3397cde680e4f))
-* import-x rules tseslint.config ([2bda4c5](https://github.com/nozomiishii/configs/commit/2bda4c586a8f3780612b9b4933ab5bceb9e70580))
-* update renovate configuration and adjust Node.js engine version ([1eaa26e](https://github.com/nozomiishii/configs/commit/1eaa26ee3ad4e804c91b37411eeab709e9323eb5))
-* use defineConfig instead of tseslint.config in typescript eslint rules ([8a5e316](https://github.com/nozomiishii/configs/commit/8a5e316c6b018f3b8d252a08d819c683fde7a1a6))
+- disable deprecated 'vitest/no-done-callback' rule ([43c7de1](https://github.com/nozomiishii/configs/commit/43c7de1572f8121f24a9c105f4a3397cde680e4f))
+- import-x rules tseslint.config ([2bda4c5](https://github.com/nozomiishii/configs/commit/2bda4c586a8f3780612b9b4933ab5bceb9e70580))
+- update renovate configuration and adjust Node.js engine version ([1eaa26e](https://github.com/nozomiishii/configs/commit/1eaa26ee3ad4e804c91b37411eeab709e9323eb5))
+- use defineConfig instead of tseslint.config in typescript eslint rules ([8a5e316](https://github.com/nozomiishii/configs/commit/8a5e316c6b018f3b8d252a08d819c683fde7a1a6))
 
 ## [0.6.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.3...@nozomiishii/eslint-config-v0.6.4) (2025-09-02)
 
