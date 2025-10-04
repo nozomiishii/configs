@@ -43,7 +43,7 @@
     "@types/figlet": "1.7.0",
     "@types/node": "22.18.8",
     "tsup": "8.5.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "packageManager": "pnpm@10.17.1",
   "publishConfig": {
