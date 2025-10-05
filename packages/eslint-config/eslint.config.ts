@@ -15,7 +15,7 @@ import { prettier } from './rules/prettier';
 import { react } from './rules/react';
 // import { reactCompiler } from './rules/react-compiler';
 import { reactHooks } from './rules/react-hooks';
-// import { reactRefresh } from './rules/react-refresh';
+import { reactRefresh } from './rules/react-refresh';
 import { regexp } from './rules/regexp';
 import { storybook } from './rules/storybook';
 import { stylistic } from './rules/stylistic';
@@ -75,7 +75,7 @@ export default defineConfig([
   //  Cannot read properties of undefined (reading 'configs')てなる
   // reactCompiler(),
   reactHooks(),
-  // reactRefresh(),
+  reactRefresh(),
   jsxA11yX(),
 
   nextjs(),
