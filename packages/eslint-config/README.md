@@ -53,8 +53,9 @@ export { default } from '@nozomiishii/eslint-config';
 ## References🙏
 
 - [sxzz/eslint-config](https://github.com/sxzz/eslint-config)
-- [azat-io/eslint-config](https://github.com/azat-io/eslint-config)
 - [antfu/eslint-config](https://github.com/antfu/eslint-config)
+- [azat-io/eslint-config](https://github.com/azat-io/eslint-config)
+- [EvgenyOrekhov/eslint-config-hardcore](https://github.com/EvgenyOrekhov/eslint-config-hardcore)
 - [kazupon/eslint-config](https://github.com/kazupon/eslint-config)
 - [AkaraChen/eslint-config](https://github.com/AkaraChen/eslint-config)
 - [eslint-react/examples/next-app](https://github.com/Rel1cx/eslint-react/blob/2.0.0-next/examples/next-app/eslint.config.js)
