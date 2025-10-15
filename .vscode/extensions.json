@@ -75,6 +75,7 @@
     "bierner.markdown-mermaid",
     "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
     "dendron.dendron-markdown-shortcuts",
+    "foam.foam-vscode",
 
     // ----------------------------------------------------------------
     // Shell
