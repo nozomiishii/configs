@@ -97,8 +97,8 @@ importers:
         specifier: 4.4.4
         version: 4.4.4(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.46.1(eslint@9.37.0(jiti@2.5.1))(typescript@5.9.3))(eslint@9.37.0(jiti@2.5.1)))(eslint@9.37.0(jiti@2.5.1))
       eslint-plugin-better-tailwindcss:
-        specifier: 3.7.9
-        version: 3.7.9(eslint@9.37.0(jiti@2.5.1))(tailwindcss@4.1.14)
+        specifier: 3.7.10
+        version: 3.7.10(eslint@9.37.0(jiti@2.5.1))(tailwindcss@4.1.14)
       eslint-plugin-de-morgan:
         specifier: 2.0.0
         version: 2.0.0(eslint@9.37.0(jiti@2.5.1))
@@ -1808,8 +1808,8 @@ packages:
       '@eslint/json':
         optional: true
 
-  eslint-plugin-better-tailwindcss@3.7.9:
-    resolution: {integrity: sha512-xmd3YqRoc57ngplFBZLn13bLpKsq6fe+ipdObilG46llJi0MvHSx8+uQ1VNBE1/ieIcedmVY7quol4WLntM8iw==}
+  eslint-plugin-better-tailwindcss@3.7.10:
+    resolution: {integrity: sha512-a6Hif4A9lPJZwpoMir2WVs1ZL4IK6fzwbZvVhQQchoqqg3BycL+ZGLHGIuqKBqwnZgOC6olwmu0sDzM3uSkEFw==}
     engines: {node: ^20.11.0 || >=21.2.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -4870,7 +4870,7 @@ snapshots:
       esquery: 1.6.0
       jsonc-eslint-parser: 2.4.1
 
-  eslint-plugin-better-tailwindcss@3.7.9(eslint@9.37.0(jiti@2.5.1))(tailwindcss@4.1.14):
+  eslint-plugin-better-tailwindcss@3.7.10(eslint@9.37.0(jiti@2.5.1))(tailwindcss@4.1.14):
     dependencies:
       '@eslint/css-tree': 3.6.5
       enhanced-resolve: 5.18.3
