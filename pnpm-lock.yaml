@@ -98,7 +98,7 @@ importers:
         version: 4.4.4(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3))(eslint@9.38.0(jiti@2.6.1)))(eslint@9.38.0(jiti@2.6.1))
       eslint-plugin-better-tailwindcss:
         specifier: 3.7.10
-        version: 3.7.10(eslint@9.38.0(jiti@2.6.1))(tailwindcss@4.1.14)
+        version: 3.7.10(eslint@9.38.0(jiti@2.6.1))(tailwindcss@4.1.15)
       eslint-plugin-de-morgan:
         specifier: 2.0.0
         version: 2.0.0(eslint@9.38.0(jiti@2.6.1))
@@ -157,8 +157,8 @@ importers:
         specifier: 2.4.1
         version: 2.4.1
       tailwindcss:
-        specifier: 4.1.14
-        version: 4.1.14
+        specifier: 4.1.15
+        version: 4.1.15
       typescript-eslint:
         specifier: 8.46.1
         version: 8.46.1(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)
@@ -3095,8 +3095,8 @@ packages:
     resolution: {integrity: sha512-FzD187HuFIZEyeR7Xy6sJbJll2d4SybS90satC8SKIuaNRC05CxMvdzN7BUsfDQffcnabckRM5OIcfArjsZ0mg==}
     engines: {node: '>=18.18'}
 
-  tailwindcss@4.1.14:
-    resolution: {integrity: sha512-b7pCxjGO98LnxVkKjaZSDeNuljC4ueKUddjENJOADtubtdo8llTaJy7HwBMeLNSSo2N5QIAgklslK1+Ir8r6CA==}
+  tailwindcss@4.1.15:
+    resolution: {integrity: sha512-k2WLnWkYFkdpRv+Oby3EBXIyQC8/s1HOFMBUViwtAh6Z5uAozeUSMQlIsn/c6Q2iJzqG6aJT3wdPaRNj70iYxQ==}
 
   tapable@2.3.0:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
@@ -4900,7 +4900,7 @@ snapshots:
       esquery: 1.6.0
       jsonc-eslint-parser: 2.4.1
 
-  eslint-plugin-better-tailwindcss@3.7.10(eslint@9.38.0(jiti@2.6.1))(tailwindcss@4.1.14):
+  eslint-plugin-better-tailwindcss@3.7.10(eslint@9.38.0(jiti@2.6.1))(tailwindcss@4.1.15):
     dependencies:
       '@eslint/css-tree': 3.6.6
       enhanced-resolve: 5.18.3
@@ -4910,7 +4910,7 @@ snapshots:
       postcss-import: 16.1.1(postcss@8.5.6)
       synckit: 0.11.11
       tailwind-csstree: 0.1.4
-      tailwindcss: 4.1.14
+      tailwindcss: 4.1.15
       tsconfig-paths-webpack-plugin: 4.2.0
 
   eslint-plugin-de-morgan@2.0.0(eslint@9.38.0(jiti@2.6.1)):
@@ -6402,7 +6402,7 @@ snapshots:
 
   tailwind-csstree@0.1.4: {}
 
-  tailwindcss@4.1.14: {}
+  tailwindcss@4.1.15: {}
 
   tapable@2.3.0: {}
 
