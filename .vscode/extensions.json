@@ -76,6 +76,7 @@
     "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
     "dendron.dendron-markdown-shortcuts",
     "foam.foam-vscode",
+    "unifiedjs.vscode-remark",
 
     // ----------------------------------------------------------------
     // Shell
