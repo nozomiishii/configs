@@ -10,7 +10,7 @@ import { name } from '../utils/name';
 export function reactHooks() {
   return defineConfig([
     {
-      ...eslintPluginReactHooks.configs['recommended-latest'],
+      ...eslintPluginReactHooks.configs.flat.recommended,
       name: name('react-hooks'),
     },
   ]);
