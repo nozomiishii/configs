@@ -1,30 +1,21 @@
-import type { Linter } from 'eslint';
-import pkg from '@next/eslint-plugin-next';
+import eslintPluginNext from '@next/eslint-plugin-next';
 import { defineConfig } from 'eslint/config';
 import { name } from '../utils/name';
 
 /**
  * @returns `@next/eslint-plugin-next`
  *
- * @see https://github.com/vercel/next.js/blob/canary/packages/eslint-plugin-next
+ * coreWebVitalsRulesは`@next/next/no-html-link-for-pages`と
+ * `@next/next/no-sync-scripts`のルールがwarnからerrorになっただけ
  *
+ * @see https://github.com/vercel/next.js/blob/canary/packages/eslint-plugin-next/src/index.ts
+ * @see https://github.com/vercel/next.js/blob/canary/packages/eslint-plugin-next
  * @see https://nextjs.org/docs/app/api-reference/config/eslint#eslint-plugin
  */
 export function nextjs() {
-  const { flatConfig: eslintPluginNext } = pkg as unknown as {
-    flatConfig: {
-      coreWebVitals: Linter.Config;
-      recommended: Linter.Config;
-    };
-  };
-
-  const nextRecommended = eslintPluginNext.recommended;
-  const nextCoreWebVitals = eslintPluginNext.coreWebVitals;
-
   return defineConfig([
     {
-      ...nextRecommended,
-      ...nextCoreWebVitals,
+      ...eslintPluginNext.configs.recommended,
       name: name('nextjs'),
     },
 
