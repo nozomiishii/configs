@@ -13,7 +13,6 @@ import { perfectionist } from './rules/perfectionist';
 import { playwright } from './rules/playwright';
 import { prettier } from './rules/prettier';
 import { react } from './rules/react';
-// import { reactCompiler } from './rules/react-compiler';
 import { reactHooks } from './rules/react-hooks';
 import { reactRefresh } from './rules/react-refresh';
 import { regexp } from './rules/regexp';
@@ -72,8 +71,6 @@ export default defineConfig([
   regexp(),
 
   react(),
-  //  Cannot read properties of undefined (reading 'configs')てなる
-  // reactCompiler(),
   reactHooks(),
   reactRefresh(),
   jsxA11yX(),
