@@ -26,6 +26,13 @@ jobs:
       paths_released: ${{ steps.release-please.outputs.paths_released }}
 
     steps:
+      # lockfilesの不整合等でCheckoutとSetup Nodeの失敗してもrelease noteが作られてしまうのでrelease-pleaseにはCheckoutとSetup Nodeのstepはいらないが検証する
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
       - uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4
         id: release-please
         with:
