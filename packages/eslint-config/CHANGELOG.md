@@ -2,10 +2,9 @@
 
 ## [0.6.7](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.6...@nozomiishii/eslint-config-v0.6.7) (2025-11-10)
 
-
 ### Bug Fixes
 
-* remove reference to react-compiler in TODO.md in eslint-config ([193762c](https://github.com/nozomiishii/configs/commit/193762c0bfa1a0f6931cd113f86502c2db277b41))
+- remove reference to react-compiler in TODO.md in eslint-config ([193762c](https://github.com/nozomiishii/configs/commit/193762c0bfa1a0f6931cd113f86502c2db277b41))
 
 ## [0.6.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.5...@nozomiishii/eslint-config-v0.6.6) (2025-11-10)
 
