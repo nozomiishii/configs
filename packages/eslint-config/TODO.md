@@ -3,7 +3,6 @@
 - tslint.configからdefineConfigに移行
   - <https://github.com/typescript-eslint/typescript-eslint/pull/11475>
 - 全てのrulesにfiles指定書く
-- react-compiler
 - jsdoc
 - packageJson
 - eslint.style [https://eslint.style/]
