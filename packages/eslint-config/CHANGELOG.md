@@ -1,23 +1,27 @@
 # Changelog
 
-## [0.6.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.4...@nozomiishii/eslint-config-v0.6.5) (2025-11-10)
-
-
-### Features
-
-* add @stylistic/eslint-plugin and integrate stylistic rules into eslint-config ([f9a7c4b](https://github.com/nozomiishii/configs/commit/f9a7c4be338240abfd08bdfb315d9a34c4165c7f))
-* enable react-refresh rule in ESLint configuration ([c82e546](https://github.com/nozomiishii/configs/commit/c82e546ca1f0b5bdf17295fba7399a88c7fff636))
-
+## [0.6.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.5...@nozomiishii/eslint-config-v0.6.6) (2025-11-10)
 
 ### Bug Fixes
 
-* disable deprecated 'vitest/no-done-callback' rule ([43c7de1](https://github.com/nozomiishii/configs/commit/43c7de1572f8121f24a9c105f4a3397cde680e4f))
-* eslint build error in nextjs rules ([971bced](https://github.com/nozomiishii/configs/commit/971bced409e11111c94b668f9150d920eb6f8110))
-* import-x rules tseslint.config ([2bda4c5](https://github.com/nozomiishii/configs/commit/2bda4c586a8f3780612b9b4933ab5bceb9e70580))
-* remove unused react-compiler rule from eslint configuration ([f74bf1f](https://github.com/nozomiishii/configs/commit/f74bf1fbadc158778a6daad9078244697e4a6ca0))
-* update dependency eslint-plugin-react-hooks to v7 ([71d83d9](https://github.com/nozomiishii/configs/commit/71d83d995dcb7a526f53b5d722a96d064b461616))
-* update renovate configuration and adjust Node.js engine version ([1eaa26e](https://github.com/nozomiishii/configs/commit/1eaa26ee3ad4e804c91b37411eeab709e9323eb5))
-* use defineConfig instead of tseslint.config in typescript eslint rules ([8a5e316](https://github.com/nozomiishii/configs/commit/8a5e316c6b018f3b8d252a08d819c683fde7a1a6))
+- pnpm-lock file version in eslint-config ([6ce6c9b](https://github.com/nozomiishii/configs/commit/6ce6c9bf35476b492a13ad93debed7768328bc2f))
+
+## [0.6.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.4...@nozomiishii/eslint-config-v0.6.5) (2025-11-10)
+
+### Features
+
+- add @stylistic/eslint-plugin and integrate stylistic rules into eslint-config ([f9a7c4b](https://github.com/nozomiishii/configs/commit/f9a7c4be338240abfd08bdfb315d9a34c4165c7f))
+- enable react-refresh rule in ESLint configuration ([c82e546](https://github.com/nozomiishii/configs/commit/c82e546ca1f0b5bdf17295fba7399a88c7fff636))
+
+### Bug Fixes
+
+- disable deprecated 'vitest/no-done-callback' rule ([43c7de1](https://github.com/nozomiishii/configs/commit/43c7de1572f8121f24a9c105f4a3397cde680e4f))
+- eslint build error in nextjs rules ([971bced](https://github.com/nozomiishii/configs/commit/971bced409e11111c94b668f9150d920eb6f8110))
+- import-x rules tseslint.config ([2bda4c5](https://github.com/nozomiishii/configs/commit/2bda4c586a8f3780612b9b4933ab5bceb9e70580))
+- remove unused react-compiler rule from eslint configuration ([f74bf1f](https://github.com/nozomiishii/configs/commit/f74bf1fbadc158778a6daad9078244697e4a6ca0))
+- update dependency eslint-plugin-react-hooks to v7 ([71d83d9](https://github.com/nozomiishii/configs/commit/71d83d995dcb7a526f53b5d722a96d064b461616))
+- update renovate configuration and adjust Node.js engine version ([1eaa26e](https://github.com/nozomiishii/configs/commit/1eaa26ee3ad4e804c91b37411eeab709e9323eb5))
+- use defineConfig instead of tseslint.config in typescript eslint rules ([8a5e316](https://github.com/nozomiishii/configs/commit/8a5e316c6b018f3b8d252a08d819c683fde7a1a6))
 
 ## [0.6.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.3...@nozomiishii/eslint-config-v0.6.4) (2025-09-02)
 
