@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.5...@nozomiishii/eslint-config-v0.6.6) (2025-11-10)
+
+
+### Bug Fixes
+
+* pnpm-lock file version in eslint-config ([6ce6c9b](https://github.com/nozomiishii/configs/commit/6ce6c9bf35476b492a13ad93debed7768328bc2f))
+
 ## [0.6.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.4...@nozomiishii/eslint-config-v0.6.5) (2025-11-10)
 
 

@@ -1,7 +1,7 @@
 {
   "packages/commitlint-config": "0.0.8",
   "packages/cspell-config": "0.4.4",
-  "packages/eslint-config": "0.6.5",
+  "packages/eslint-config": "0.6.6",
   "packages/lefthook-config": "0.2.8",
   "packages/markdownlint-cli2-config": "0.3.4",
   "packages/prettier-config": "0.6.5",
