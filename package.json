@@ -40,7 +40,7 @@
     "markdownlint-cli2": "0.18.1",
     "npkill": "0.12.2"
   },
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.21.0",
   "engines": {
     "node": "22.21.1"
   },
