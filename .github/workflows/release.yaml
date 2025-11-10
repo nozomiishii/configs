@@ -102,5 +102,8 @@ jobs:
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
+      - name: Update npm
+        run: npm install -g npm@latest
+
       - name: Publish package
         run: pnpm --filter "./${{ matrix.path }}" publish
