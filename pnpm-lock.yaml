@@ -139,8 +139,8 @@ importers:
         specifier: 10.0.6
         version: 10.0.6(eslint@9.39.1(jiti@2.6.1))(storybook@9.1.13(@testing-library/dom@10.4.1)(prettier@3.6.2))(typescript@5.9.3)
       eslint-plugin-tsdoc:
-        specifier: 0.4.0
-        version: 0.4.0
+        specifier: 0.5.0
+        version: 0.5.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-unicorn:
         specifier: 62.0.0
         version: 62.0.0(eslint@9.39.1(jiti@2.6.1))
@@ -683,11 +683,11 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@microsoft/tsdoc-config@0.17.1':
-    resolution: {integrity: sha512-UtjIFe0C6oYgTnad4q1QP4qXwLhe6tIpNTRStJ2RZEPIkqQPREAwE5spzVxsdn9UaEMUqhh0AqSx3X4nWAKXWw==}
+  '@microsoft/tsdoc-config@0.18.0':
+    resolution: {integrity: sha512-8N/vClYyfOH+l4fLkkr9+myAoR6M7akc8ntBJ4DJdWH2b09uVfr71+LTMpNyG19fNqWDg8KEDZhx5wxuqHyGjw==}
 
-  '@microsoft/tsdoc@0.15.1':
-    resolution: {integrity: sha512-4aErSrCR/On/e5G2hDP0wjooqDdauzEbIq8hIkIe5pXV0rtWJZvdCEKL0ykZxex+IxIwBp0eGeV48hQN07dXtw==}
+  '@microsoft/tsdoc@0.16.0':
+    resolution: {integrity: sha512-xgAyonlVVS+q7Vc7qLW0UrJU7rSFcETRWsqdXZtjzRU8dF+6CkozTK4V4y1LwOX7j8r/vHphjDeMeGI4tNGeGA==}
 
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
@@ -1915,8 +1915,8 @@ packages:
       eslint: '>=8'
       storybook: ^10.0.6
 
-  eslint-plugin-tsdoc@0.4.0:
-    resolution: {integrity: sha512-MT/8b4aKLdDClnS8mP3R/JNjg29i0Oyqd/0ym6NnQf+gfKbJJ4ZcSh2Bs1H0YiUMTBwww5JwXGTWot/RwyJ7aQ==}
+  eslint-plugin-tsdoc@0.5.0:
+    resolution: {integrity: sha512-ush8ehCwub2rgE16OIgQPFyj/o0k3T8kL++9IrAI4knsmupNo8gvfO2ERgDHWWgTC5MglbwLVRswU93HyXqNpw==}
 
   eslint-plugin-unicorn@62.0.0:
     resolution: {integrity: sha512-HIlIkGLkvf29YEiS/ImuDZQbP12gWyx5i3C6XrRxMvVdqMroCI9qoVYCoIl17ChN+U89pn9sVwLxhIWj5nEc7g==}
@@ -3826,14 +3826,14 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@microsoft/tsdoc-config@0.17.1':
+  '@microsoft/tsdoc-config@0.18.0':
     dependencies:
-      '@microsoft/tsdoc': 0.15.1
+      '@microsoft/tsdoc': 0.16.0
       ajv: 8.12.0
       jju: 1.4.0
       resolve: 1.22.10
 
-  '@microsoft/tsdoc@0.15.1': {}
+  '@microsoft/tsdoc@0.16.0': {}
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
@@ -5042,10 +5042,15 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-tsdoc@0.4.0:
+  eslint-plugin-tsdoc@0.5.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3):
     dependencies:
-      '@microsoft/tsdoc': 0.15.1
-      '@microsoft/tsdoc-config': 0.17.1
+      '@microsoft/tsdoc': 0.16.0
+      '@microsoft/tsdoc-config': 0.18.0
+      '@typescript-eslint/utils': 8.46.4(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
 
   eslint-plugin-unicorn@62.0.0(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
