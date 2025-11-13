@@ -42,7 +42,7 @@
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/figlet": "1.7.0",
     "@types/node": "22.19.1",
-    "tsup": "8.5.0",
+    "tsup": "8.5.1",
     "typescript": "5.9.3"
   },
   "packageManager": "pnpm@10.21.0",
