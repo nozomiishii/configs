@@ -4,6 +4,9 @@
 # pnpm config list
 # ```
 
+# 使用するNode.jsのバージョン
+useNodeVersion: 22.21.1
+
 packages:
   - 'packages/*'
   - 'apps/nozo/*'
