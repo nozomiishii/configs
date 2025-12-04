@@ -29,3 +29,6 @@ reporter: append-only
 
 # pinバージョンでインストールする
 savePrefix: ''
+
+# 新しく公開されたパッケージのインストールを3日間遅延させる（セキュリティ対策）
+minimumReleaseAge: 4320 # 3日間 (3 × 24 × 60分)
