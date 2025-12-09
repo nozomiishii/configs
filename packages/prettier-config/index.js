@@ -30,7 +30,13 @@ export default {
 
   overrides: [
     {
-      files: ['pnpm-lock.yaml', 'submodules/**'],
+      // prettierのformatを実行したくないものを指定
+      files: [
+        'pnpm-lock.yaml',
+        'submodules/**',
+        // Next.jsがnext devの度に自動生成上書きするため
+        'next-env.d.ts',
+      ],
       options: {
         requirePragma: true,
       },
