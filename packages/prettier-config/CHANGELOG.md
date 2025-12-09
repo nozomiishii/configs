@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.5...@nozomiishii/prettier-config-v0.6.6) (2025-12-09)
+
+
+### Bug Fixes
+
+* update prettier config to exclude next-env.d.ts from formatting ([d197443](https://github.com/nozomiishii/configs/commit/d19744359733a09bc9a64d1d60bedff52e265366))
+
 ## [0.6.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.4...@nozomiishii/prettier-config-v0.6.5) (2025-09-02)
 
 ### Bug Fixes
