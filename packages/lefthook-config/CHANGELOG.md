@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.8...@nozomiishii/lefthook-config-v0.3.0) (2025-12-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* replace @evilmartians/lefthook with lefthook
+
+### Features
+
+* replace @evilmartians/lefthook with lefthook ([ecd44c9](https://github.com/nozomiishii/configs/commit/ecd44c98cefed5bd5b6d109145bded1389bc33d5))
+
 ## [0.2.8](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.7...@nozomiishii/lefthook-config-v0.2.8) (2025-09-02)
 
 ### Bug Fixes
