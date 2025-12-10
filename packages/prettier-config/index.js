@@ -36,6 +36,9 @@ export default {
         'submodules/**',
         // Next.jsがnext devの度に自動生成上書きするため
         'next-env.d.ts',
+        // markdownはremarkで行う
+        '*.md',
+        '*.mdx',
       ],
       options: {
         requirePragma: true,
