@@ -29,7 +29,6 @@
     "prettier": "prettier --ignore-unknown --ignore-path .gitignore"
   },
   "devDependencies": {
-    "@evilmartians/lefthook": "2.0.8",
     "@nozomiishii/commitlint-config": "workspace:*",
     "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
@@ -37,16 +36,12 @@
     "@nozomiishii/postinstall": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
+    "lefthook": "2.0.8",
     "markdownlint-cli2": "0.19.1",
     "npkill": "0.12.2"
   },
   "packageManager": "pnpm@10.24.0",
   "engines": {
     "node": "22.21.1"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@swc/core"
-    ]
   }
 }
