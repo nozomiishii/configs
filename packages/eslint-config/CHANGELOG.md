@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.8](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.7...@nozomiishii/eslint-config-v0.6.8) (2025-12-11)
+
+
+### Bug Fixes
+
+* disable require-top-level-describe rule in viest config ([64da997](https://github.com/nozomiishii/configs/commit/64da99757c103d47888f3c59da509de1c628d453))
+* prefer-expect-assertions rule in viest config ([e796a1a](https://github.com/nozomiishii/configs/commit/e796a1aba93353589ddd3dfd337b18a00b2bd00a))
+
 ## [0.6.7](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.6...@nozomiishii/eslint-config-v0.6.7) (2025-11-10)
 
 ### Bug Fixes

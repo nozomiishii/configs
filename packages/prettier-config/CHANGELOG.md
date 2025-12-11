@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.6...@nozomiishii/prettier-config-v0.7.0) (2025-12-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* update prettier config to exclude markdown files from formatting
+
+### Bug Fixes
+
+* update prettier config to exclude markdown files from formatting ([f4ea664](https://github.com/nozomiishii/configs/commit/f4ea664548843959924bd46c99d6f299581d2c28))
+
 ## [0.6.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.5...@nozomiishii/prettier-config-v0.6.6) (2025-12-09)
 
 ### Bug Fixes
