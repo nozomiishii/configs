@@ -33,4 +33,4 @@ minimumReleaseAgeExclude:
   - '@nozomiishii/*'
 
 # 新しいバージョンの認証が古いバージョンよりも弱い場合、インストールは失敗する
-trustPolicy: no-downgrade
+# trustPolicy: no-downgrade
