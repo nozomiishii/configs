@@ -43,11 +43,12 @@ export function viest() {
 
         /**
          * 非同期テストなどで、期待されるアサーションが呼び出されない場合を防ぐ
+         *
+         * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md
          */
         'vitest/prefer-expect-assertions': [
           'warn',
           {
-            onlyFunctionsWithAsyncKeyword: true,
             onlyFunctionsWithExpectInCallback: true,
             onlyFunctionsWithExpectInLoop: true,
           },
