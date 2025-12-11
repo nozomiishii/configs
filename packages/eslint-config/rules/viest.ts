@@ -53,6 +53,13 @@ export function viest() {
             onlyFunctionsWithExpectInLoop: true,
           },
         ],
+
+        /**
+         * describe句は必要に応じて使う
+         *
+         * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-top-level-describe.md
+         */
+        'vitest/require-top-level-describe': 'off',
       },
     },
   ]);
