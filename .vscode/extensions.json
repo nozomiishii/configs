@@ -46,10 +46,11 @@
     // ----------------------------------------------------------------
     // Git
     // ----------------------------------------------------------------
-    "eamodio.gitlens",
     "github.vscode-pull-request-github",
     "github.vscode-github-actions",
     "github.vscode-codeql",
+    "codeinklingon.git-worktree-menu",
+    "arturock.gitstash",
 
     // ----------------------------------------------------------------
     // Intellisense
