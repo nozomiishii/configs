@@ -18,11 +18,11 @@
   "main": "index.yaml",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "lefthook": "2.0.11"
+    "lefthook": "2.0.12"
   },
   "devDependencies": {},
   "peerDependencies": {
-    "lefthook": ">=2.0.11"
+    "lefthook": ">=2.0.12"
   },
   "packageManager": "pnpm@10.25.0",
   "publishConfig": {
