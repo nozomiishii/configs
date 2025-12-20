@@ -53,7 +53,7 @@
     "eslint-plugin-jsx-a11y-x": "0.1.1",
     "eslint-plugin-n": "17.23.1",
     "eslint-plugin-package-json": "0.85.0",
-    "eslint-plugin-perfectionist": "4.15.1",
+    "eslint-plugin-perfectionist": "5.0.0",
     "eslint-plugin-playwright": "2.4.0",
     "eslint-plugin-react-hooks": "7.0.1",
     "eslint-plugin-react-refresh": "0.4.26",
