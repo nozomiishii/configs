@@ -74,7 +74,7 @@
     "eslint": "^9.39.2",
     "typescript": "^5.9.3"
   },
-  "packageManager": "pnpm@10.26.0",
+  "packageManager": "pnpm@10.26.1",
   "publishConfig": {
     "access": "public"
   }
