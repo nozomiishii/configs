@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
-    "@eslint-react/eslint-plugin": "2.5.0",
+    "@eslint-react/eslint-plugin": "2.5.1",
     "@eslint/config-inspector": "1.4.2",
     "@eslint/js": "9.39.2",
     "@next/eslint-plugin-next": "16.1.1",
