@@ -3,9 +3,7 @@
   // File associations
   // ----------------------------------------------------------------
   "files.associations": {
-    "CODEOWNERS": "ignore",
-    ".tool-versions": "properties",
-    ".actrc*": "properties"
+    "CODEOWNERS": "ignore"
   },
 
   // ----------------------------------------------------------------
@@ -29,13 +27,6 @@
     "source.fixAll.eslint": "explicit",
     "source.fixAll.markdownlint": "explicit"
   },
-
-  // ----------------------------------------------------------------
-  // vitest
-  // ----------------------------------------------------------------
-  "vitest.enable": true,
-  "vitest.commandLine": "npx vitest --watch",
-  "vitest.exclude": ["**/e2e/**", "**/node_modules/**", "**/dist/**", "**/.{idea,git,cache,output,temp}/**"],
 
   // ----------------------------------------------------------------
   // Shell
