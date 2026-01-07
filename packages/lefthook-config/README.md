@@ -15,7 +15,7 @@ Nozomi's Recommended [lefthook](https://github.com/evilmartians/lefthook) config
 ## Gist
 
 ```sh
-npx -y @nozomiishii/lefthook-config@latest
+pnpx @nozomiishii/lefthook-config@latest
 ```
 
 ## Manual

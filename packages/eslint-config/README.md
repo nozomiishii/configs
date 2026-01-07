@@ -15,7 +15,7 @@ Nozomi's Recommended [eslint](https://eslint.org/) Config.
 ## Install
 
 ```bash
-npx -y @nozomiishii/eslint-config@latest
+pnpx @nozomiishii/eslint-config@latest
 ```
 
 ## Manual

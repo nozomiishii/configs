@@ -15,5 +15,5 @@ Nozomi's Recommended [markdownlint-cli2](https://github.com/DavidAnson/markdownl
 ## Gist
 
 ```bash
-npx -y @nozomiishii/markdownlint-cli2-config@latest
+pnpx @nozomiishii/markdownlint-cli2-config@latest
 ```

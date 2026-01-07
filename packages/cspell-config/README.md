@@ -17,5 +17,5 @@ Nozomi's Recommended [cspell](https://cspell.org/) config.
 ### Run
 
 ```sh
-npx -y @nozomiishii/cspell-config "**"
+pnpx @nozomiishii/cspell-config "**"
 ```

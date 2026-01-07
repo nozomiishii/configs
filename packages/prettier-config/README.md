@@ -19,7 +19,7 @@ Nozomi's Recommended [Prettier](https://prettier.io) Config.
 pnpm
 
 ```bash
-npx -y @nozomiishii/prettier-config@latest
+pnpx @nozomiishii/prettier-config@latest
 ```
 
 ## Install

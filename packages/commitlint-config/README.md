@@ -17,5 +17,5 @@ Nozomi's Recommended [commitlint](https://commitlint.js.org) config.
 ### Run
 
 ```bash
-npx -y @nozomiishii/commitlint-config@latest
+pnpx @nozomiishii/commitlint-config@latest
 ```
