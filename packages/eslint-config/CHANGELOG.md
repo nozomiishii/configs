@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.9](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.8...@nozomiishii/eslint-config-v0.6.9) (2026-01-11)
+
+
+### Bug Fixes
+
+* update installation commands in README files to use pnpx instead of npx ([d8c68bc](https://github.com/nozomiishii/configs/commit/d8c68bce6370baa876e773e4b64a9b24fdfca36f))
+
 ## [0.6.8](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.7...@nozomiishii/eslint-config-v0.6.8) (2025-12-11)
 
 ### Bug Fixes
