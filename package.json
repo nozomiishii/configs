@@ -36,7 +36,7 @@
     "@nozomiishii/postinstall": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
-    "lefthook": "2.0.13",
+    "lefthook": "2.0.14",
     "markdownlint-cli2": "0.20.0",
     "npkill": "0.12.2"
   },
