@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.7.0...@nozomiishii/prettier-config-v0.7.1) (2026-01-18)
+
+
+### Bug Fixes
+
+* update installation commands in README files to use pnpx instead of npx ([d8c68bc](https://github.com/nozomiishii/configs/commit/d8c68bce6370baa876e773e4b64a9b24fdfca36f))
+
 ## [0.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.6.6...@nozomiishii/prettier-config-v0.7.0) (2025-12-11)
 
 ### ⚠ BREAKING CHANGES
