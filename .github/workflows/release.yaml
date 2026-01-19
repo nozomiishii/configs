@@ -70,8 +70,8 @@ jobs:
 
       - name: Format CHANGELOG.md
         run: |
-          npx markdownlint-cli2 --fix '**/CHANGELOG.md'
-          npx prettier --write '**/CHANGELOG.md'
+          pnpm fix:md
+          pnpm format:fix
 
       - name: Commit and push
         run: |
