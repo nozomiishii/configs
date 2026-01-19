@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v0.3.4...@nozomiishii/markdownlint-cli2-config-v0.3.5) (2026-01-19)
+
+### Bug Fixes
+
+- update installation commands in README files to use pnpx instead of npx ([d8c68bc](https://github.com/nozomiishii/configs/commit/d8c68bce6370baa876e773e4b64a9b24fdfca36f))
+- update markdownlint and prettier configurations to improve formatting rules ([#1774](https://github.com/nozomiishii/configs/issues/1774)) ([de91846](https://github.com/nozomiishii/configs/commit/de91846585c60a28cba5f7a01e897201ea3d0ca3))
+
 ## [0.3.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v0.3.3...@nozomiishii/markdownlint-cli2-config-v0.3.4) (2025-09-02)
 
 ### Bug Fixes
