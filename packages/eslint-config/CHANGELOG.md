@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.6.9](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.8...@nozomiishii/eslint-config-v0.6.9) (2026-01-19)
+
+
+### Bug Fixes
+
+* update @eslint-community/eslint-plugin-eslint-comments to v4.6.0 ([ff9bcca](https://github.com/nozomiishii/configs/commit/ff9bcca540ed4942f21dedec64bbead25de0a43b))
+* update installation commands in README files to use pnpx instead of npx ([d8c68bc](https://github.com/nozomiishii/configs/commit/d8c68bce6370baa876e773e4b64a9b24fdfca36f))
+* update markdownlint and prettier configurations to improve formatting rules ([#1774](https://github.com/nozomiishii/configs/issues/1774)) ([de91846](https://github.com/nozomiishii/configs/commit/de91846585c60a28cba5f7a01e897201ea3d0ca3))
+* update storybook ESLint plugin links to point to the new repository structure ([b04cb40](https://github.com/nozomiishii/configs/commit/b04cb4058d2b7c558fcdd9d691b7f35a546b9f82))
+
 ## [0.6.8](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.7...@nozomiishii/eslint-config-v0.6.8) (2025-12-11)
 
 ### Bug Fixes
