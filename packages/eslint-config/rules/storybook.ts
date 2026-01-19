@@ -9,7 +9,7 @@ const plugins = configs[0];
 /**
  * @returns eslint-plugin-storybook
  *
- * @see https://github.com/storybookjs/eslint-plugin-storybook
+ * @see https://github.com/storybookjs/storybook/tree/next/code/lib/eslint-plugin
  *
  * 型がぶっ壊れてる
  *
@@ -24,12 +24,12 @@ export function storybook() {
       name: name('storybook'),
       rules: {
         /**
-         * https://github.com/storybookjs/eslint-plugin-storybook/blob/main/lib/configs/flat/csf-strict.ts
+         * https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/src/configs/flat/csf-strict.ts
          */
         ...(eslintPluginStorybook.configs['flat/csf-strict'] as unknown as Linter.Config[])[1]?.rules,
 
         /**
-         * https://github.com/storybookjs/eslint-plugin-storybook/blob/main/lib/configs/flat/recommended.ts
+         * https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/src/configs/flat/recommended.ts
          */
         ...(eslintPluginStorybook.configs['flat/recommended'] as unknown as Linter.Config[])[1]?.rules,
       },
@@ -41,7 +41,7 @@ export function storybook() {
       name: name('storybook/add-ons'),
       rules: {
         /**
-         * https://github.com/storybookjs/eslint-plugin-storybook/blob/main/lib/configs/flat/recommended.ts
+         * https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/src/configs/flat/recommended.ts
          */
         ...configs[2]?.rules,
       },
