@@ -9,6 +9,14 @@ module.exports = {
    */
   config: {
     /**
+     * MD004 - Unordered list style
+     * {@link https://github.com/DavidAnson/markdownlint/blob/main/doc/md004.md}
+     */
+    MD004: {
+      style: 'dash',
+    },
+
+    /**
      * MD013 - Line length
      * {@link https://github.com/DavidAnson/markdownlint/blob/main/doc/md013.md}
      */
