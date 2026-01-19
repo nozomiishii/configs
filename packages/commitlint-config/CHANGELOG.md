@@ -2,10 +2,9 @@
 
 ## [0.0.9](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.8...@nozomiishii/commitlint-config-v0.0.9) (2026-01-19)
 
-
 ### Bug Fixes
 
-* update installation commands in README files to use pnpx instead of npx ([d8c68bc](https://github.com/nozomiishii/configs/commit/d8c68bce6370baa876e773e4b64a9b24fdfca36f))
+- update installation commands in README files to use pnpx instead of npx ([d8c68bc](https://github.com/nozomiishii/configs/commit/d8c68bce6370baa876e773e4b64a9b24fdfca36f))
 
 ## [0.0.8](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.7...@nozomiishii/commitlint-config-v0.0.8) (2025-09-02)
 

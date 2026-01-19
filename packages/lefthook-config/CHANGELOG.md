@@ -2,10 +2,9 @@
 
 ## [0.3.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.0...@nozomiishii/lefthook-config-v0.3.1) (2026-01-19)
 
-
 ### Bug Fixes
 
-* update installation commands in README files to use pnpx instead of npx ([d8c68bc](https://github.com/nozomiishii/configs/commit/d8c68bce6370baa876e773e4b64a9b24fdfca36f))
+- update installation commands in README files to use pnpx instead of npx ([d8c68bc](https://github.com/nozomiishii/configs/commit/d8c68bce6370baa876e773e4b64a9b24fdfca36f))
 
 ## [0.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.2.8...@nozomiishii/lefthook-config-v0.3.0) (2025-12-10)
 

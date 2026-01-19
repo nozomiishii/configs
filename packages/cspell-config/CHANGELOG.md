@@ -2,10 +2,9 @@
 
 ## [0.4.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.4.4...@nozomiishii/cspell-config-v0.4.5) (2026-01-19)
 
-
 ### Bug Fixes
 
-* update installation commands in README files to use pnpx instead of npx ([d8c68bc](https://github.com/nozomiishii/configs/commit/d8c68bce6370baa876e773e4b64a9b24fdfca36f))
+- update installation commands in README files to use pnpx instead of npx ([d8c68bc](https://github.com/nozomiishii/configs/commit/d8c68bce6370baa876e773e4b64a9b24fdfca36f))
 
 ## [0.4.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.4.3...@nozomiishii/cspell-config-v0.4.4) (2025-09-02)
 
