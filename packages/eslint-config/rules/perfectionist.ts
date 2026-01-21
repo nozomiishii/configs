@@ -25,7 +25,7 @@ export function perfectionist() {
         'perfectionist/sort-imports': [
           'error',
           {
-            newlinesBetween: 'never',
+            newlinesBetween: 0,
           },
         ],
       },

@@ -3,9 +3,19 @@
   "extends": ["github>nozomiishii/renovate"],
   "packageRules": [
     {
-      "matchFileNames": ["packages/**"],
-      "matchDepTypes": ["engines"],
+      "description": "Packages: Use node versioning for LTS awareness",
+      "matchFileNames": ["packages/**/package.json"],
+      "matchManagers": ["npm"],
       "matchDepNames": ["node"],
+      "versioning": "node",
+      "rangeStrategy": "bump"
+    },
+    {
+      "description": "Packages: Major updates only for node engines",
+      "matchFileNames": ["packages/**/package.json"],
+      "matchManagers": ["npm"],
+      "matchDepNames": ["node"],
+      "matchUpdateTypes": ["minor", "patch"],
       "enabled": false
     }
   ]
