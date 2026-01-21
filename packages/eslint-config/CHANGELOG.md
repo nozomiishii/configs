@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.6.10](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.9...@nozomiishii/eslint-config-v0.6.10) (2026-01-21)
+
+### Bug Fixes
+
+- perfectionist/sort-imports error on eslint ([#1781](https://github.com/nozomiishii/configs/issues/1781)) ([387631d](https://github.com/nozomiishii/configs/commit/387631d6f1f3946ff9f26f1723ab27dece3775ae))
+
 ## [0.6.9](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.8...@nozomiishii/eslint-config-v0.6.9) (2026-01-19)
 
 ### Bug Fixes
