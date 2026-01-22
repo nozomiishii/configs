@@ -22,7 +22,7 @@
     "markdownlint-cli2": "0.20.0"
   },
   "devDependencies": {},
-  "packageManager": "pnpm@10.28.0",
+  "packageManager": "pnpm@10.28.1",
   "publishConfig": {
     "access": "public"
   }
