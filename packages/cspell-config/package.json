@@ -17,7 +17,7 @@
   "main": "index.cjs",
   "bin": "bin/cli.cjs",
   "devDependencies": {},
-  "packageManager": "pnpm@10.28.1",
+  "packageManager": "pnpm@10.28.2",
   "publishConfig": {
     "access": "public"
   }
