@@ -22,9 +22,9 @@
   "main": "index.js",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "@commitlint/cli": "20.3.1",
-    "@commitlint/config-conventional": "20.3.1",
-    "@commitlint/types": "20.3.1"
+    "@commitlint/cli": "20.4.0",
+    "@commitlint/config-conventional": "20.4.0",
+    "@commitlint/types": "20.4.0"
   },
   "devDependencies": {},
   "packageManager": "pnpm@10.28.2",
