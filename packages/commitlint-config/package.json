@@ -22,8 +22,8 @@
   "main": "index.js",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "@commitlint/cli": "20.4.0",
-    "@commitlint/config-conventional": "20.4.0",
+    "@commitlint/cli": "20.4.1",
+    "@commitlint/config-conventional": "20.4.1",
     "@commitlint/types": "20.4.0"
   },
   "devDependencies": {},
