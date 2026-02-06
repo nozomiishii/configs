@@ -1,4 +1,3 @@
-import type { Linter } from 'eslint';
 import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss';
 import { defineConfig } from 'eslint/config';
 import { name } from '../utils/name';
@@ -20,7 +19,7 @@ export function betterTailwindcss(options?: Options) {
         'better-tailwindcss': eslintPluginBetterTailwindcss,
       },
       rules: {
-        ...(eslintPluginBetterTailwindcss.configs['recommended-warn']?.rules as Linter.Config['rules']),
+        ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
 
         // Prettierと競合する
         'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
