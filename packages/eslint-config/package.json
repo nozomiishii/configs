@@ -39,7 +39,7 @@
     "@next/eslint-plugin-next": "16.1.6",
     "@stylistic/eslint-plugin": "5.7.1",
     "@swc-node/register": "1.11.1",
-    "@types/node": "24.10.10",
+    "@types/node": "24.10.11",
     "@vitest/eslint-plugin": "1.6.6",
     "eslint": "9.39.2",
     "eslint-config-flat-gitignore": "2.1.0",
