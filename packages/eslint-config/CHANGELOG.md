@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.11](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.10...@nozomiishii/eslint-config-v0.6.11) (2026-02-11)
+
+### Bug Fixes
+
+- simplify react ESLint configuration by directly using recommended settings ([2a24259](https://github.com/nozomiishii/configs/commit/2a242594c5448c1aa511dafa44b28cc4e5a30b4f))
+- update eslint-plugin-better-tailwindcss to v4.1.1 ([#1826](https://github.com/nozomiishii/configs/issues/1826)) ([75d09a1](https://github.com/nozomiishii/configs/commit/75d09a1bba1bded64446b62b53d3500b834e1427))
+
 ## [0.6.10](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.9...@nozomiishii/eslint-config-v0.6.10) (2026-01-21)
 
 ### Bug Fixes
