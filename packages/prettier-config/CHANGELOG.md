@@ -2,10 +2,9 @@
 
 ## [0.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.7.1...@nozomiishii/prettier-config-v0.7.2) (2026-02-11)
 
-
 ### Features
 
-* add TypeScript definitions and update package.json for prettier-config ([c5c3505](https://github.com/nozomiishii/configs/commit/c5c350537e7f22dbffd579f2871899706e6109b0))
+- add TypeScript definitions and update package.json for prettier-config ([c5c3505](https://github.com/nozomiishii/configs/commit/c5c350537e7f22dbffd579f2871899706e6109b0))
 
 ## [0.7.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.7.0...@nozomiishii/prettier-config-v0.7.1) (2026-01-19)
 
