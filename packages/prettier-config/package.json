@@ -16,10 +16,17 @@
   "author": "Nozomi Ishii",
   "type": "module",
   "exports": {
-    "import": "./index.js",
-    "require": "./index.js"
+    "import": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "require": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
   },
   "main": "index.js",
+  "types": "index.d.ts",
   "bin": "bin/cli.sh",
   "dependencies": {
     "prettier": "3.8.1",
