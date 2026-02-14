@@ -27,7 +27,7 @@
     "@commitlint/types": "20.4.0"
   },
   "devDependencies": {},
-  "packageManager": "pnpm@10.29.2",
+  "packageManager": "pnpm@10.29.3",
   "publishConfig": {
     "access": "public"
   }
