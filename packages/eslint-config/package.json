@@ -35,13 +35,13 @@
     "@eslint-community/eslint-plugin-eslint-comments": "4.6.0",
     "@eslint-react/eslint-plugin": "2.12.4",
     "@eslint/config-inspector": "1.4.2",
-    "@eslint/js": "9.39.2",
+    "@eslint/js": "10.0.1",
     "@next/eslint-plugin-next": "16.1.6",
     "@stylistic/eslint-plugin": "5.8.0",
     "@swc-node/register": "1.11.1",
     "@types/node": "24.10.13",
     "@vitest/eslint-plugin": "1.6.7",
-    "eslint": "9.39.2",
+    "eslint": "10.0.0",
     "eslint-config-flat-gitignore": "2.1.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
@@ -71,7 +71,7 @@
     "typescript": "5.9.3"
   },
   "peerDependencies": {
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@10.29.2",
