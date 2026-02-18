@@ -51,7 +51,7 @@
     "eslint-plugin-jsdoc": "62.5.5",
     "eslint-plugin-jsonc": "2.21.1",
     "eslint-plugin-jsx-a11y-x": "0.1.1",
-    "eslint-plugin-n": "17.23.2",
+    "eslint-plugin-n": "17.24.0",
     "eslint-plugin-package-json": "0.88.2",
     "eslint-plugin-perfectionist": "5.5.0",
     "eslint-plugin-playwright": "2.5.1",
