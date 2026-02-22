@@ -37,7 +37,7 @@
     "@eslint/config-inspector": "1.4.2",
     "@eslint/js": "10.0.1",
     "@next/eslint-plugin-next": "16.1.6",
-    "@stylistic/eslint-plugin": "5.8.0",
+    "@stylistic/eslint-plugin": "5.9.0",
     "@swc-node/register": "1.11.1",
     "@types/node": "24.10.13",
     "@vitest/eslint-plugin": "1.6.9",
