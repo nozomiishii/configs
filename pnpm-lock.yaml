@@ -145,8 +145,8 @@ importers:
         specifier: 63.0.0
         version: 63.0.0(eslint@10.0.0(jiti@2.6.1))
       eslint-typegen:
-        specifier: 2.3.0
-        version: 2.3.0(eslint@10.0.0(jiti@2.6.1))
+        specifier: 2.3.1
+        version: 2.3.1(eslint@10.0.0(jiti@2.6.1))
       globals:
         specifier: 17.3.0
         version: 17.3.0
@@ -1998,10 +1998,10 @@ packages:
     resolution: {integrity: sha512-CkWE42hOJsNj9FJRaoMX9waUFYhqY4jmyLFdAdzZr6VaCg3ynLYx4WnOdkaIifGfH4gsUcBTn4OZbHXkpLD0FQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  eslint-typegen@2.3.0:
-    resolution: {integrity: sha512-azYgAvhlz1AyTpeLfVSKcrNJInuIsRrcUrOcHmEl8T9oMKesePVUPrF8gRgE6azV8CAlFzxJDTyaXAAbA/BYiA==}
+  eslint-typegen@2.3.1:
+    resolution: {integrity: sha512-zVdh8rThBvv2o5T/K524Fr5iy1Jo0q09rHL7y7FbOhgMB177T2gw+shxfC4ChCEqdq6/y6LJA4j8Fbr/Xls9aw==}
     peerDependencies:
-      eslint: ^9.0.0
+      eslint: ^9.0.0 || ^10.0.0
 
   eslint-visitor-keys@3.4.3:
     resolution: {integrity: sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==}
@@ -5103,7 +5103,7 @@ snapshots:
       esrecurse: 4.3.0
       estraverse: 5.3.0
 
-  eslint-typegen@2.3.0(eslint@10.0.0(jiti@2.6.1)):
+  eslint-typegen@2.3.1(eslint@10.0.0(jiti@2.6.1)):
     dependencies:
       eslint: 10.0.0(jiti@2.6.1)
       json-schema-to-typescript-lite: 15.0.0
