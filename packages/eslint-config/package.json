@@ -42,7 +42,7 @@
     "@types/node": "24.10.13",
     "@vitest/eslint-plugin": "1.6.9",
     "eslint": "10.0.0",
-    "eslint-config-flat-gitignore": "2.1.0",
+    "eslint-config-flat-gitignore": "2.2.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-better-tailwindcss": "4.3.0",
