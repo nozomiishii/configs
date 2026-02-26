@@ -130,8 +130,8 @@ importers:
         specifier: 7.0.1
         version: 7.0.1(eslint@10.0.1(jiti@2.6.1))
       eslint-plugin-react-refresh:
-        specifier: 0.5.0
-        version: 0.5.0(eslint@10.0.1(jiti@2.6.1))
+        specifier: 0.5.1
+        version: 0.5.1(eslint@10.0.1(jiti@2.6.1))
       eslint-plugin-regexp:
         specifier: 3.0.0
         version: 3.0.0(eslint@10.0.1(jiti@2.6.1))
@@ -1941,10 +1941,10 @@ packages:
       eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
       typescript: '>=4.8.4 <6.0.0'
 
-  eslint-plugin-react-refresh@0.5.0:
-    resolution: {integrity: sha512-ZYvmh7VfVgqR/7wR71I3Zl6hK/C5CcxdWYKZSpHawS5JCNgE4efhQWg/+/WPpgGAp9Ngp/rRZYyaIwmPQBq/lA==}
+  eslint-plugin-react-refresh@0.5.1:
+    resolution: {integrity: sha512-Y5sJsreCUdGcF4mLD70iJNa47Z6CX4MsqJoJBARDC/fBhmacSby7k73UuValr0F9M7GfWKpEqS4NMsniWkVxQw==}
     peerDependencies:
-      eslint: '>=9'
+      eslint: ^9 || ^10
 
   eslint-plugin-react-rsc@2.13.0:
     resolution: {integrity: sha512-RaftgITDLQm1zIgYyvR51sBdy4FlVaXFts5VISBaKbSUB0oqXyzOPxMHasfr9BCSjPLKus9zYe+G/Hr6rjFLXQ==}
@@ -4972,7 +4972,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-react-refresh@0.5.0(eslint@10.0.1(jiti@2.6.1)):
+  eslint-plugin-react-refresh@0.5.1(eslint@10.0.1(jiti@2.6.1)):
     dependencies:
       eslint: 10.0.1(jiti@2.6.1)
 
