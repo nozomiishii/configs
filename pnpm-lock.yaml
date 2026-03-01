@@ -139,8 +139,8 @@ importers:
         specifier: 10.2.12
         version: 10.2.12(eslint@10.0.2(jiti@2.6.1))(storybook@10.2.8(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)
       eslint-plugin-tsdoc:
-        specifier: 0.5.1
-        version: 0.5.1(eslint@10.0.2(jiti@2.6.1))(typescript@5.9.3)
+        specifier: 0.5.2
+        version: 0.5.2(eslint@10.0.2(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-unicorn:
         specifier: 63.0.0
         version: 63.0.0(eslint@10.0.2(jiti@2.6.1))
@@ -1936,8 +1936,8 @@ packages:
       eslint: '>=8'
       storybook: ^10.2.12
 
-  eslint-plugin-tsdoc@0.5.1:
-    resolution: {integrity: sha512-+EFu9XAFzogfoRspo2slmHZZ10amXqLAhmgCG0nbR6RZHNZK2XmsE7gfZ8gBjaO/p6C2DOGn09UpTGOlYy6OdQ==}
+  eslint-plugin-tsdoc@0.5.2:
+    resolution: {integrity: sha512-BlvqjWZdBJDIPO/YU3zcPCF23CvjYT3gyu63yo6b609NNV3D1b6zceAREy2xnweuBoDpZcLNuPyAUq9cvx6bbQ==}
 
   eslint-plugin-unicorn@63.0.0:
     resolution: {integrity: sha512-Iqecl9118uQEXYh7adylgEmGfkn5es3/mlQTLLkd4pXkIk9CTGrAbeUux+YljSa2ohXCBmQQ0+Ej1kZaFgcfkA==}
@@ -4936,7 +4936,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-tsdoc@0.5.1(eslint@10.0.2(jiti@2.6.1))(typescript@5.9.3):
+  eslint-plugin-tsdoc@0.5.2(eslint@10.0.2(jiti@2.6.1))(typescript@5.9.3):
     dependencies:
       '@microsoft/tsdoc': 0.16.0
       '@microsoft/tsdoc-config': 0.18.1
