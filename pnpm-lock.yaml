@@ -73,8 +73,8 @@ importers:
         specifier: 16.1.6
         version: 16.1.6
       '@stylistic/eslint-plugin':
-        specifier: 5.9.0
-        version: 5.9.0(eslint@10.0.2(jiti@2.6.1))
+        specifier: 5.10.0
+        version: 5.10.0(eslint@10.0.2(jiti@2.6.1))
       '@swc-node/register':
         specifier: 1.11.1
         version: 1.11.1(@swc/core@1.15.11)(@swc/types@0.1.25)(typescript@5.9.3)
@@ -984,8 +984,8 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  '@stylistic/eslint-plugin@5.9.0':
-    resolution: {integrity: sha512-FqqSkvDMYJReydrMhlugc71M76yLLQWNfmGq+SIlLa7N3kHp8Qq8i2PyWrVNAfjOyOIY+xv9XaaYwvVW7vroMA==}
+  '@stylistic/eslint-plugin@5.10.0':
+    resolution: {integrity: sha512-nPK52ZHvot8Ju/0A4ucSX1dcPV2/1clx0kLcH5wDmrE4naKso7TUC/voUyU1O9OTKTrR6MYip6LP0ogEMQ9jPQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
@@ -3920,7 +3920,7 @@ snapshots:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
 
-  '@stylistic/eslint-plugin@5.9.0(eslint@10.0.2(jiti@2.6.1))':
+  '@stylistic/eslint-plugin@5.10.0(eslint@10.0.2(jiti@2.6.1))':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@10.0.2(jiti@2.6.1))
       '@typescript-eslint/types': 8.56.1
