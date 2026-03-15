@@ -23,7 +23,7 @@
     "link": "pnpm link --global"
   },
   "devDependencies": {},
-  "packageManager": "pnpm@10.32.0",
+  "packageManager": "pnpm@10.32.1",
   "publishConfig": {
     "access": "public"
   }
