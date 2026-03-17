@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.12](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.11...@nozomiishii/eslint-config-v0.6.12) (2026-03-17)
+
+
+### Bug Fixes
+
+* switch from typescript-eslint to eslint/config in import-x configuration ([58f1f02](https://github.com/nozomiishii/configs/commit/58f1f02801f4e5aab331518f6b79f01de05f34bd))
+
 ## [0.6.11](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.10...@nozomiishii/eslint-config-v0.6.11) (2026-02-11)
 
 ### Bug Fixes
