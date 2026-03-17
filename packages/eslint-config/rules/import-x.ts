@@ -1,6 +1,5 @@
-import { type Linter } from 'eslint';
 import pluginImportX from 'eslint-plugin-import-x';
-import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 import { name } from '../utils/name';
 
 /**
@@ -26,8 +25,7 @@ export function importX() {
   // こっちにかえようかな import-x/no-cycleがないのが悩み
   // https://github.com/9romise/eslint-plugin-import-lite
   //
-  // eslint-disable-next-line @typescript-eslint/no-deprecated
-  return tseslint.config({
+  return defineConfig({
     // https://github.com/un-ts/eslint-plugin-import-x/blob/master/src/config/flat/typescript.ts
     ...pluginImportX.flatConfigs.typescript,
     name: name('import-x'),
@@ -59,13 +57,6 @@ export function importX() {
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-named-as-default.md
        */
       'import-x/no-named-as-default': 'warn',
-
-      /**
-       * 使ってないモジュールを禁止
-       *
-       * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-unused-modules.md
-       */
-      'import-x/no-unused-modules': 'warn',
     },
-  }) as Linter.Config[];
+  });
 }
