@@ -19,6 +19,7 @@ jobs:
     if: github.actor != 'nektos/act'
 
     runs-on: ubuntu-slim
+    timeout-minutes: 10
 
     outputs:
       prs: ${{ steps.release-please.outputs.prs }}
@@ -49,6 +50,7 @@ jobs:
     if: needs.release-please.outputs.prs
 
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     strategy:
       matrix:
@@ -90,6 +92,7 @@ jobs:
     if: needs.release-please.outputs.releases_created == 'true' && needs.release-please.outputs.paths_released != '[]'
 
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     strategy:
       matrix:
