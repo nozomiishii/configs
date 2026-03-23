@@ -54,4 +54,3 @@ pnpm postinstall
 
 - 設定変更は基本的に `packages/` 配下の設定・ドキュメント側を優先して更新する。
 - フォーマット・リントは `pnpm format` / `pnpm prettier` と `pnpm fix:md`（markdown）を使う。
-
