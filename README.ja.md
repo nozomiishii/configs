@@ -1,6 +1,6 @@
 # Configs
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
 <!-- Main Image -->
 <br>
@@ -23,9 +23,9 @@ English | [日本語](./README.ja.md)
 </div>
 <br>
 
-## Packages
+## パッケージ
 
-| Package                                                                      | Version                                                                                                                                                  |
+| パッケージ                                                                   | バージョン                                                                                                                                               |
 | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [@nozomiishii/commitlint-config](./packages/commitlint-config)               | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fcommitlint-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fcommitlint-config)               |
 | [@nozomiishii/cspell-config](./packages/cspell-config)                       | [![npm version](https://badge.fury.io/js/@nozomiishii%2Fcspell-config.svg)](https://badge.fury.io/js/@nozomiishii%2Fcspell-config)                       |
