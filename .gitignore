@@ -36,3 +36,8 @@ dist
 # eslint
 .eslint-config-inspector
 eslint-typegen.d.ts
+
+# claude
+**/.claude/settings.local.json
+**/CLAUDE.local.md
+**/.claude/worktrees/
