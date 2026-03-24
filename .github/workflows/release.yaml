@@ -1,4 +1,4 @@
-name: release
+name: Release
 
 on:
   workflow_dispatch:
@@ -6,9 +6,8 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-  pull-requests: write
+# デフォルト権限を無効化し、各ジョブで必要最小限の権限のみ付与する
+permissions: {}
 
 defaults:
   run:
@@ -21,28 +20,28 @@ jobs:
     runs-on: ubuntu-slim
     timeout-minutes: 10
 
+    permissions:
+      contents: write
+      pull-requests: write
+
     outputs:
       prs: ${{ steps.release-please.outputs.prs }}
       releases_created: ${{ steps.release-please.outputs.releases_created }}
       paths_released: ${{ steps.release-please.outputs.paths_released }}
 
     steps:
-      # lockfilesの不整合等でCheckoutとSetup Nodeの失敗してもrelease noteが作られてしまうのでrelease-pleaseにはCheckoutとSetup Nodeのstepはいらないが検証する
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-
-      - name: Setup Node
-        uses: ./.github/actions/setup-node
-
-      - uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4
+      - name: Run release-please
         id: release-please
+        uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4
         with:
           config-file: .github/.release-please-config.json
           manifest-file: .github/.release-please-manifest.json
 
       - name: Echo release-please outputs
         if: steps.release-please.outputs
-        run: echo '${{ toJson(steps.release-please) }}'
+        env:
+          RELEASE_PLEASE_OUTPUTS: ${{ toJson(steps.release-please) }}
+        run: echo "$RELEASE_PLEASE_OUTPUTS"
 
   format:
     needs: release-please
@@ -51,6 +50,9 @@ jobs:
 
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
+    permissions:
+      contents: write
 
     strategy:
       matrix:
@@ -77,7 +79,8 @@ jobs:
 
       - name: Commit and push
         run: |
-          git add --all
+          git add '*.md' '**/*.md'
+          git diff --cached --quiet && echo 'No changes to commit' && exit 0
           git commit -m 'chore: format CHANGELOG.md' --no-verify
           git push
 
@@ -104,9 +107,6 @@ jobs:
 
       - name: Setup Node
         uses: ./.github/actions/setup-node
-
-      - name: Update npm
-        run: npm install -g npm@latest
 
       - name: Publish package
         run: pnpm --filter "./${{ matrix.path }}" publish
