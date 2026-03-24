@@ -47,6 +47,7 @@
   },
   "packageManager": "pnpm@10.32.1",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }
