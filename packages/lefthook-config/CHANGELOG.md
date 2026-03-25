@@ -2,10 +2,9 @@
 
 ## [0.3.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.1...@nozomiishii/lefthook-config-v0.3.2) (2026-03-25)
 
-
 ### Features
 
-* **lefthook-config:** extract cleanup-merged into external shell script ([#1978](https://github.com/nozomiishii/configs/issues/1978)) ([2707166](https://github.com/nozomiishii/configs/commit/2707166fc38f41a64522e2a592403065febdb022))
+- **lefthook-config:** extract cleanup-merged into external shell script ([#1978](https://github.com/nozomiishii/configs/issues/1978)) ([2707166](https://github.com/nozomiishii/configs/commit/2707166fc38f41a64522e2a592403065febdb022))
 
 ## [0.3.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.0...@nozomiishii/lefthook-config-v0.3.1) (2026-01-19)
 
