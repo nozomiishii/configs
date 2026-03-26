@@ -47,7 +47,7 @@ cleanup_branches() {
   echo "$merged_branches" | while read -r branch; do
     [ -z "$branch" ] && continue
     [ "$branch" = "$base" ] && continue
-    git branch -d "$branch" 2>/dev/null && echo "Deleted branch: $branch"
+    git branch -D "$branch" 2>/dev/null && echo "Deleted branch: $branch"
   done
   # リモートで削除済みの追跡ブランチを整理
   git fetch --prune
@@ -58,8 +58,19 @@ main() {
   base=$(default_branch)
 
   # デフォルトブランチにマージ済みのローカルブランチ一覧を取得
+  # git branch --merged は squash merge を検出できないため、
+  # git cherry を使ってパッチ単位で比較する
   local merged_branches
-  merged_branches=$(git branch --merged "$base" 2>/dev/null | sed 's/^[* ]*//' | grep -Ev "^\s*$" || true)
+  merged_branches=$(
+    git branch | sed 's/^[* ]*//' | while read -r branch; do
+      [ "$branch" = "$base" ] && continue
+      # git cherry: "+" = unmerged, "-" = already in upstream
+      # "+" が 0 件 = 全コミットが main に取り込み済み (squash merge 含む)
+      if [ "$(git cherry "$base" "$branch" 2>/dev/null | grep -c '^+')" -eq 0 ]; then
+        echo "$branch"
+      fi
+    done
+  )
 
   [ -z "$merged_branches" ] && exit 0
 
