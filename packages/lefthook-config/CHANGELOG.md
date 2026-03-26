@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.2...@nozomiishii/lefthook-config-v0.3.3) (2026-03-26)
+
+
+### Bug Fixes
+
+* **lefthook-config:** detect squash-merged branches in cleanup-merged script ([#1980](https://github.com/nozomiishii/configs/issues/1980)) ([308ddf8](https://github.com/nozomiishii/configs/commit/308ddf83aee855d4c247d929e2798cef9d4787e6))
+
 ## [0.3.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.1...@nozomiishii/lefthook-config-v0.3.2) (2026-03-25)
 
 ### Features
