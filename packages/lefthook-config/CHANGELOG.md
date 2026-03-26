@@ -2,10 +2,9 @@
 
 ## [0.3.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.4...@nozomiishii/lefthook-config-v0.3.5) (2026-03-26)
 
-
 ### Bug Fixes
 
-* **lefthook-config:** resolve exit status 1 and improve squash merge detection ([#1987](https://github.com/nozomiishii/configs/issues/1987)) ([6ff2334](https://github.com/nozomiishii/configs/commit/6ff23340356e73d99beb4dbed84116ff86e46368))
+- **lefthook-config:** resolve exit status 1 and improve squash merge detection ([#1987](https://github.com/nozomiishii/configs/issues/1987)) ([6ff2334](https://github.com/nozomiishii/configs/commit/6ff23340356e73d99beb4dbed84116ff86e46368))
 
 ## [0.3.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.3...@nozomiishii/lefthook-config-v0.3.4) (2026-03-26)
 
