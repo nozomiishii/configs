@@ -59,14 +59,18 @@ main() {
 
   # デフォルトブランチにマージ済みのローカルブランチ一覧を取得
   # git branch --merged は squash merge を検出できないため、
-  # git cherry を使ってパッチ単位で比較する
+  # commit-tree で仮想 squash コミットを作成し git cherry で比較する
   local merged_branches
   merged_branches=$(
     while read -r branch; do
       [ "$branch" = "$base" ] && continue
-      # git cherry: "+" = unmerged, "-" = already in upstream
-      # "+" が 0 件 = 全コミットが main に取り込み済み (squash merge 含む)
-      if [ "$(git cherry "$base" "$branch" 2>/dev/null | grep -c '^+')" -eq 0 ]; then
+      local merge_base
+      merge_base=$(git merge-base "$base" "$branch" 2>/dev/null) || continue
+      # ブランチの tree を使い、merge-base を親に持つ仮想 squash コミットを作成
+      local squash_commit
+      squash_commit=$(git commit-tree "$branch^{tree}" -p "$merge_base" -m "_" 2>/dev/null) || continue
+      # 仮想 squash コミットが base に既に含まれていれば "-" を返す
+      if [ "$(git cherry "$base" "$squash_commit" 2>/dev/null | grep -c '^+')" -eq 0 ]; then
         echo "$branch"
       fi
     done < <(git branch | sed 's/^[* ]*//')
