@@ -29,6 +29,9 @@ importers:
       '@nozomiishii/tsconfig':
         specifier: workspace:*
         version: link:packages/tsconfig
+      git-tidyup:
+        specifier: workspace:*
+        version: link:packages/git-tidyup
       lefthook:
         specifier: 2.1.4
         version: 2.1.4
@@ -164,8 +167,17 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
 
+  packages/git-tidyup:
+    devDependencies:
+      '@types/bun':
+        specifier: latest
+        version: 1.3.11
+
   packages/lefthook-config:
     dependencies:
+      git-tidyup:
+        specifier: workspace:*
+        version: link:../git-tidyup
       lefthook:
         specifier: 2.1.4
         version: 2.1.4
@@ -1120,6 +1132,9 @@ packages:
   '@types/aria-query@5.0.4':
     resolution: {integrity: sha512-rfT93uj5s0PRL7EzccGMs3brplhcrghnDoV26NqKhCAS1hVo+WdNsPvE/yb6ilfr5hi2MEk6d5EWJTKdxg8jVw==}
 
+  '@types/bun@1.3.11':
+    resolution: {integrity: sha512-5vPne5QvtpjGpsGYXiFyycfpDF2ECyPcTSsFBMa0fraoxiQyMJ3SmuQIGhzPg2WJuWxVBoxWJ2kClYTcw/4fAg==}
+
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
 
@@ -1500,6 +1515,9 @@ packages:
   builtin-modules@5.0.0:
     resolution: {integrity: sha512-bkXY9WsVpY7CvMhKSR6pZilZu9Ln5WDrKVBUXf2S443etkmEO4V58heTecXcUIsNsi4Rx8JUO4NfX1IcQl4deg==}
     engines: {node: '>=18.20'}
+
+  bun-types@1.3.11:
+    resolution: {integrity: sha512-1KGPpoxQWl9f6wcZh57LvrPIInQMn2TQ7jsgxqpRzg+l0QPOFvJVH7HmvHo/AiPgwXy+/Thf6Ov3EdVn1vOabg==}
 
   bundle-name@4.1.0:
     resolution: {integrity: sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q==}
@@ -4086,6 +4104,10 @@ snapshots:
 
   '@types/aria-query@5.0.4': {}
 
+  '@types/bun@1.3.11':
+    dependencies:
+      bun-types: 1.3.11
+
   '@types/chai@5.2.3':
     dependencies:
       '@types/deep-eql': 4.0.2
@@ -4447,6 +4469,10 @@ snapshots:
   buffer-from@1.1.2: {}
 
   builtin-modules@5.0.0: {}
+
+  bun-types@1.3.11:
+    dependencies:
+      '@types/node': 24.12.0
 
   bundle-name@4.1.0:
     dependencies:

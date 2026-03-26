@@ -39,6 +39,11 @@
       "release-type": "node",
       "component": "@nozomiishii/tsconfig"
     },
+    "packages/git-tidyup": {
+      "release-type": "node",
+      "component": "git-tidyup",
+      "extra-files": ["packages/git-tidyup/lib/git-tidyup.sh"]
+    },
     "apps/nozo/typescript": {
       "release-type": "node",
       "component": "nozo"

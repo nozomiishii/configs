@@ -1,4 +1,4 @@
 post-merge:
   commands:
     cleanup-merged:
-      run: bash node_modules/@nozomiishii/lefthook-config/scripts/cleanup-merged.sh
+      run: ./node_modules/.bin/git-tidyup

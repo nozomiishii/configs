@@ -1,6 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+VERSION="0.1.0" # x-release-please-version
+
+case "${1:-}" in
+  -v | --version)
+    echo "git-tidyup v$VERSION"
+    exit 0
+    ;;
+  -h | --help)
+    cat <<'HELP'
+git-tidyup - Clean up merged branches and worktrees
+
+Usage: git-tidyup [options]
+
+Options:
+  -h, --help     Show this help
+  -v, --version  Show version
+
+Deletes local branches already merged into the default branch
+(supports squash merges). Also removes associated worktrees.
+HELP
+    exit 0
+    ;;
+esac
+
 # リモートのデフォルトブランチ名を取得する (例: main, master)
 # 未設定の場合はリモートから自動取得を試みる
 default_branch() {
@@ -34,7 +58,7 @@ cleanup_worktrees() {
     if echo "$merged_branches" | grep -qw "$branch"; then
       git worktree remove "$wt" && echo "Removed worktree: $wt"
     fi
-  done < <(git worktree list --porcelain | grep '^worktree ' | sed 's/^worktree //')
+  done < <(git worktree list --porcelain | grep --color=never '^worktree ' | sed 's/^worktree //')
   # 既に存在しない worktree の管理情報を削除
   git worktree prune
 }
@@ -64,16 +88,20 @@ main() {
   merged_branches=$(
     while read -r branch; do
       [ "$branch" = "$base" ] && continue
+      # 通常マージ: ブランチが base の祖先であれば完全マージ済み
+      if git merge-base --is-ancestor "$branch" "$base" 2>/dev/null; then
+        echo "$branch"
+        continue
+      fi
+      # squash マージ: commit-tree で仮想 squash コミットを作成し git cherry で比較
       local merge_base
       merge_base=$(git merge-base "$base" "$branch" 2>/dev/null) || continue
-      # ブランチの tree を使い、merge-base を親に持つ仮想 squash コミットを作成
       local squash_commit
       squash_commit=$(git commit-tree "$branch^{tree}" -p "$merge_base" -m "_" 2>/dev/null) || continue
-      # 仮想 squash コミットが base に既に含まれていれば "-" を返す
       if [ "$(git cherry "$base" "$squash_commit" 2>/dev/null | grep -c '^+')" -eq 0 ]; then
         echo "$branch"
       fi
-    done < <(git branch | sed 's/^[* ]*//')
+    done < <(git branch | sed 's/^[*+ ]*//')
   )
 
   [ -z "$merged_branches" ] && exit 0

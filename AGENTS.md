@@ -50,6 +50,21 @@ pnpm postinstall
 - `lefthook.yaml`: Git hooks の設定
 - `.github/workflows/`: CI（release-please 等）
 
+## GitHub Actions ワークフロー命名規則
+
+- **`_` プレフィックス付き** (`_actionlint.yaml`, `_secretlint.yaml` 等): 他プロジェクトでも共通で使う汎用ワークフロー。
+- **`_` プレフィックスなし** (`release.yaml` 等): このプロジェクト固有のワークフロー。
+
+## テストスタイル
+
+- テストタイトル（`test("...")` / `describe("...")`）は英語で記述する。
+- テストの上に簡潔な日本語コメントを添える。
+- テストファイルはソースと同じディレクトリに `{name}.test.ts` で配置する。
+
+## README フォーマットルール
+
+README.ja.md（日本語）と README.md（英語）は同じ構成を保つ。新しい項目を追加する際は両方を更新する。
+
 ## 重要なパターン
 
 - 設定変更は基本的に `packages/` 配下の設定・ドキュメント側を優先して更新する。
