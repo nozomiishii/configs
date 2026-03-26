@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.4](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.3...@nozomiishii/lefthook-config-v0.3.4) (2026-03-26)
+
+
+### Bug Fixes
+
+* **lefthook-config:** resolve exit status 1 in cleanup-merged script ([#1983](https://github.com/nozomiishii/configs/issues/1983)) ([08caae1](https://github.com/nozomiishii/configs/commit/08caae155b6b8dd29ce33b9b009d06f1a458334c))
+
 ## [0.3.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.2...@nozomiishii/lefthook-config-v0.3.3) (2026-03-26)
 
 ### Bug Fixes
