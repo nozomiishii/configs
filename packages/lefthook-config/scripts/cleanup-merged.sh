@@ -27,14 +27,14 @@ cleanup_worktrees() {
   local merged_branches="$2"
 
   # 全 worktree のパスを取得してループ
-  git worktree list --porcelain | grep '^worktree ' | sed 's/^worktree //' | while read -r wt; do
+  while read -r wt; do
     # その worktree が指しているブランチ名を取得
     branch=$(git -C "$wt" rev-parse --abbrev-ref HEAD 2>/dev/null) || continue
     [ "$branch" = "$base" ] && continue
     if echo "$merged_branches" | grep -qw "$branch"; then
       git worktree remove "$wt" && echo "Removed worktree: $wt"
     fi
-  done
+  done < <(git worktree list --porcelain | grep '^worktree ' | sed 's/^worktree //')
   # 既に存在しない worktree の管理情報を削除
   git worktree prune
 }
@@ -44,13 +44,13 @@ cleanup_branches() {
   local base="$1"
   local merged_branches="$2"
 
-  echo "$merged_branches" | while read -r branch; do
+  while read -r branch; do
     [ -z "$branch" ] && continue
     [ "$branch" = "$base" ] && continue
     git branch -D "$branch" 2>/dev/null && echo "Deleted branch: $branch"
-  done
+  done <<< "$merged_branches"
   # リモートで削除済みの追跡ブランチを整理
-  git fetch --prune
+  git fetch --prune || true
 }
 
 main() {
@@ -62,14 +62,14 @@ main() {
   # git cherry を使ってパッチ単位で比較する
   local merged_branches
   merged_branches=$(
-    git branch | sed 's/^[* ]*//' | while read -r branch; do
+    while read -r branch; do
       [ "$branch" = "$base" ] && continue
       # git cherry: "+" = unmerged, "-" = already in upstream
       # "+" が 0 件 = 全コミットが main に取り込み済み (squash merge 含む)
       if [ "$(git cherry "$base" "$branch" 2>/dev/null | grep -c '^+')" -eq 0 ]; then
         echo "$branch"
       fi
-    done
+    done < <(git branch | sed 's/^[* ]*//')
   )
 
   [ -z "$merged_branches" ] && exit 0
