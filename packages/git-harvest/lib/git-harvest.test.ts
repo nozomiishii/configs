@@ -4,7 +4,7 @@ import { tmpdir } from 'os';
 import { join } from 'path';
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test';
 
-const SCRIPT = join(import.meta.dir, 'git-tidyup.sh');
+const SCRIPT = join(import.meta.dir, 'git-harvest.sh');
 
 // ヘルパー: スクリプト実行
 function run(cwd: string, args = ''): string {
@@ -59,9 +59,9 @@ let repo: string;
 
 // テストごとに origin 付きリポジトリを作成
 beforeEach(() => {
-  bare = mkdtempSync(join(tmpdir(), 'git-tidyup-bare-'));
+  bare = mkdtempSync(join(tmpdir(), 'git-harvest-bare-'));
   execSync(`git init --bare ${bare}`);
-  repo = mkdtempSync(join(tmpdir(), 'git-tidyup-work-'));
+  repo = mkdtempSync(join(tmpdir(), 'git-harvest-work-'));
   execSync(`git clone ${bare} ${repo}`);
   git(repo, 'config user.email "test@test.com"');
   git(repo, 'config user.name "Test"');
@@ -93,7 +93,7 @@ describe('--help / --version', () => {
   // ヘルプ表示
   test('prints help and exits with 0', () => {
     const output = run(repo, '--help');
-    expect(output).toContain('Usage: git-tidyup');
+    expect(output).toContain('Usage: git-harvest');
     expect(output).toContain('--help');
     expect(output).toContain('--version');
   });
@@ -101,7 +101,7 @@ describe('--help / --version', () => {
   // バージョン表示
   test('prints version and exits with 0', () => {
     const output = run(repo, '--version');
-    expect(output).toMatch(/^git-tidyup v\d+\.\d+\.\d+/);
+    expect(output).toMatch(/^git-harvest v\d+\.\d+\.\d+/);
   });
 });
 
@@ -119,7 +119,7 @@ describe('default_branch', () => {
 
   // remote なし → 異常終了
   test('exits with 1 when no remote is configured', () => {
-    const noRemoteRepo = mkdtempSync(join(tmpdir(), 'git-tidyup-noremote-'));
+    const noRemoteRepo = mkdtempSync(join(tmpdir(), 'git-harvest-noremote-'));
     try {
       execSync(`git init ${noRemoteRepo}`);
       git(noRemoteRepo, 'config user.email "test@test.com"');
@@ -262,7 +262,7 @@ describe('worktree cleanup', () => {
     commitFile(repo, 'wt-prune.txt', 'prune work');
     git(repo, 'checkout main');
 
-    const wtDir = mkdtempSync(join(tmpdir(), 'git-tidyup-wt-prune-'));
+    const wtDir = mkdtempSync(join(tmpdir(), 'git-harvest-wt-prune-'));
     git(repo, `worktree add ${wtDir} wt-prune`);
 
     // worktree ディレクトリを手動で削除（git worktree remove ではなく）
@@ -312,8 +312,8 @@ describe('combined scenarios', () => {
 
   // master がデフォルトブランチ
   test('works when default branch is master', () => {
-    const masterBare = mkdtempSync(join(tmpdir(), 'git-tidyup-master-bare-'));
-    const masterRepo = mkdtempSync(join(tmpdir(), 'git-tidyup-master-work-'));
+    const masterBare = mkdtempSync(join(tmpdir(), 'git-harvest-master-bare-'));
+    const masterRepo = mkdtempSync(join(tmpdir(), 'git-harvest-master-work-'));
     try {
       execSync(`git init --bare -b master ${masterBare}`);
       execSync(`git clone ${masterBare} ${masterRepo}`);

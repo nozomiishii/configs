@@ -1,5 +1,5 @@
 {
-  "name": "git-tidyup",
+  "name": "git-harvest",
   "version": "0.1.0",
   "description": "Clean up merged branches and worktrees (supports squash merges)",
   "keywords": [
@@ -9,16 +9,16 @@
     "worktree",
     "squash-merge"
   ],
-  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/git-tidyup/README.md",
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/git-harvest/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
-    "directory": "packages/git-tidyup"
+    "directory": "packages/git-harvest"
   },
   "license": "MIT",
   "author": "Nozomi Ishii",
   "bin": {
-    "git-tidyup": "./lib/git-tidyup.sh"
+    "git-harvest": "./lib/git-harvest.sh"
   },
   "scripts": {
     "test": "bun test"

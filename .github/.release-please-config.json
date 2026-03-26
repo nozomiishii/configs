@@ -39,10 +39,10 @@
       "release-type": "node",
       "component": "@nozomiishii/tsconfig"
     },
-    "packages/git-tidyup": {
+    "packages/git-harvest": {
       "release-type": "node",
-      "component": "git-tidyup",
-      "extra-files": ["packages/git-tidyup/lib/git-tidyup.sh"]
+      "component": "git-harvest",
+      "extra-files": ["packages/git-harvest/lib/git-harvest.sh"]
     },
     "apps/nozo/typescript": {
       "release-type": "node",

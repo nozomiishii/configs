@@ -29,7 +29,7 @@ post-merge:
 
   jobs:
     - name: cleanup-merged
-      run: ./node_modules/.bin/git-tidyup
+      run: ./node_modules/.bin/git-harvest
 
     - name: install-packages
       env:

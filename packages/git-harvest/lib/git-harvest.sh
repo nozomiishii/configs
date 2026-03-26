@@ -5,14 +5,14 @@ VERSION="0.1.0" # x-release-please-version
 
 case "${1:-}" in
   -v | --version)
-    echo "git-tidyup v$VERSION"
+    echo "git-harvest v$VERSION"
     exit 0
     ;;
   -h | --help)
     cat <<'HELP'
-git-tidyup - Clean up merged branches and worktrees
+git-harvest - Clean up merged branches and worktrees
 
-Usage: git-tidyup [options]
+Usage: git-harvest [options]
 
 Options:
   -h, --help     Show this help

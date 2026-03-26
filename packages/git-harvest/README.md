@@ -1,4 +1,4 @@
-# git-tidyup
+# git-harvest
 
 English | [日本語](./README.ja.md)
 
@@ -7,20 +7,20 @@ Clean up merged branches and worktrees (supports squash merges).
 ## Usage
 
 ```sh
-pnpx git-tidyup
+pnpx git-harvest
 ```
 
 With npm:
 
 ```sh
-npx git-tidyup
+npx git-harvest
 ```
 
 ### Options
 
 ```sh
-git-tidyup --help     # Show help
-git-tidyup --version  # Show version
+git-harvest --help     # Show help
+git-harvest --version  # Show version
 ```
 
 ## What it does
@@ -42,5 +42,5 @@ Uses `git commit-tree` to create a virtual squash commit and `git cherry` to che
 post-merge:
   commands:
     cleanup-merged:
-      run: pnpx git-tidyup
+      run: pnpx git-harvest
 ```

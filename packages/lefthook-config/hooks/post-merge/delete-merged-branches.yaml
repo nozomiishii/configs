@@ -1,4 +1,4 @@
 post-merge:
   commands:
     cleanup-merged:
-      run: ./node_modules/.bin/git-tidyup
+      run: ./node_modules/.bin/git-harvest

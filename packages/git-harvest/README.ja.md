@@ -1,4 +1,4 @@
-# git-tidyup
+# git-harvest
 
 [English](./README.md) | 日本語
 
@@ -7,20 +7,20 @@
 ## 使い方
 
 ```sh
-pnpx git-tidyup
+pnpx git-harvest
 ```
 
 npm の場合:
 
 ```sh
-npx git-tidyup
+npx git-harvest
 ```
 
 ### オプション
 
 ```sh
-git-tidyup --help     # ヘルプを表示
-git-tidyup --version  # バージョンを表示
+git-harvest --help     # ヘルプを表示
+git-harvest --version  # バージョンを表示
 ```
 
 ## 動作内容
@@ -42,5 +42,5 @@ git-tidyup --version  # バージョンを表示
 post-merge:
   commands:
     cleanup-merged:
-      run: pnpx git-tidyup
+      run: pnpx git-harvest
 ```

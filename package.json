@@ -36,7 +36,7 @@
     "@nozomiishii/postinstall": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
-    "git-tidyup": "workspace:*",
+    "git-harvest": "workspace:*",
     "lefthook": "2.1.4",
     "markdownlint-cli2": "0.22.0",
     "npkill": "0.12.2"
