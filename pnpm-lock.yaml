@@ -170,7 +170,7 @@ importers:
   packages/git-tidyup:
     devDependencies:
       '@types/bun':
-        specifier: latest
+        specifier: 1.3.11
         version: 1.3.11
 
   packages/lefthook-config:
