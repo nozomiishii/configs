@@ -68,11 +68,11 @@
     "typescript-eslint": "8.57.2"
   },
   "devDependencies": {
-    "typescript": "5.9.3"
+    "typescript": "6.0.2"
   },
   "peerDependencies": {
     "eslint": "^10.1.0",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.2"
   },
   "packageManager": "pnpm@10.32.1",
   "engines": {
