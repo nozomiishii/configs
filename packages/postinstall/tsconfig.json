@@ -8,7 +8,10 @@
     // ----------------------------------------------------------------
     "moduleResolution": "Bundler",
     "module": "ESNext",
-    "noEmit": true
+    "noEmit": true,
+
+    // TypeScript 6.0で非推奨化されたオプションの警告を抑制
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
