@@ -17,19 +17,19 @@
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
-    ".": "./dist/index.js"
+    ".": "./dist/index.mjs"
   },
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "bin": {
-    "postinstall": "./dist/index.js"
+    "postinstall": "./dist/index.mjs"
   },
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "link": "pnpm link --global",
     "prepublishOnly": "pnpm run build",
     "tsc": "tsc"
@@ -42,7 +42,7 @@
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/figlet": "1.7.0",
     "@types/node": "24.12.0",
-    "tsup": "8.5.1",
+    "tsdown": "0.21.6",
     "typescript": "6.0.2"
   },
   "packageManager": "pnpm@10.32.1",
