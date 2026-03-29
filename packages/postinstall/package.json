@@ -17,11 +17,11 @@
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
-    ".": "./dist/index.mjs"
+    ".": "./dist/index.js"
   },
-  "types": "./dist/index.d.mts",
+  "types": "./dist/index.d.ts",
   "bin": {
-    "postinstall": "./dist/index.mjs"
+    "postinstall": "./dist/index.js"
   },
   "files": [
     "dist",

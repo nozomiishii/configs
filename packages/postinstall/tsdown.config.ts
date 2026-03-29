@@ -7,4 +7,5 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   platform: 'node',
+  outExtensions: () => ({ js: '.js', dts: '.d.ts' }),
 });
