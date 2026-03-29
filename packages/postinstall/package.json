@@ -28,8 +28,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "link": "pnpm link --global",
     "prepublishOnly": "pnpm run build",
     "tsc": "tsc"
@@ -42,8 +42,8 @@
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/figlet": "1.7.0",
     "@types/node": "24.12.0",
-    "tsup": "8.5.1",
-    "typescript": "5.9.3"
+    "tsdown": "0.21.6",
+    "typescript": "6.0.2"
   },
   "packageManager": "pnpm@10.33.0",
   "publishConfig": {
