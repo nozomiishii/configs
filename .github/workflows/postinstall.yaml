@@ -1,0 +1,37 @@
+name: Postinstall
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'packages/postinstall/**'
+      - '.github/workflows/postinstall.yaml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+    working-directory: packages/postinstall
+
+jobs:
+  test:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-slim
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+        with:
+          working-directory: packages/postinstall
+
+      - name: Test
+        run: pnpm test
