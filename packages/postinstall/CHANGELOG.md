@@ -2,10 +2,9 @@
 
 ## [0.0.7](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.6...@nozomiishii/postinstall-v0.0.7) (2026-04-01)
 
-
 ### Bug Fixes
 
-* **postinstall:** disable sourcemap in production build ([#2013](https://github.com/nozomiishii/configs/issues/2013)) ([801065b](https://github.com/nozomiishii/configs/commit/801065bfc22116339e911635f26a4451b926d496))
+- **postinstall:** disable sourcemap in production build ([#2013](https://github.com/nozomiishii/configs/issues/2013)) ([801065b](https://github.com/nozomiishii/configs/commit/801065bfc22116339e911635f26a4451b926d496))
 
 ## [0.0.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.5...@nozomiishii/postinstall-v0.0.6) (2025-09-02)
 
