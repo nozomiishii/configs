@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.5...@nozomiishii/lefthook-config-v0.3.6) (2026-04-01)
+
+
+### Bug Fixes
+
+* add pre-push format check and scope format CI to all PRs ([#2015](https://github.com/nozomiishii/configs/issues/2015)) ([9553977](https://github.com/nozomiishii/configs/commit/955397758214088e7808d81fab5056f132ca3337))
+* **lefthook-config:** add --frozen-lockfile to post-merge pnpm install ([#1999](https://github.com/nozomiishii/configs/issues/1999)) ([ab9fc5e](https://github.com/nozomiishii/configs/commit/ab9fc5efc025e4bc6103a7e53308b4dad789fec1))
+
 ## [0.3.5](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.4...@nozomiishii/lefthook-config-v0.3.5) (2026-03-26)
 
 ### Bug Fixes
