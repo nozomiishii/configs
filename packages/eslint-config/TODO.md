@@ -1,7 +1,5 @@
 # TODO
 
-- tslint.configからdefineConfigに移行
-  - <https://github.com/typescript-eslint/typescript-eslint/pull/11475>
 - 全てのrulesにfiles指定書く
 - jsdoc
 - packageJson
