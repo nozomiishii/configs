@@ -109,5 +109,20 @@ jobs:
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
+      - name: Inject README metadata for npm registry
+        run: |
+          node --input-type=module -e "
+            import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+            import { join } from 'node:path';
+            const pkgPath = join('${{ matrix.path }}', 'package.json');
+            const readmePath = join('${{ matrix.path }}', 'README.md');
+            if (existsSync(readmePath)) {
+              const pkg = JSON.parse(readFileSync(pkgPath, 'utf8'));
+              pkg.readme = readFileSync(readmePath, 'utf8');
+              pkg.readmeFilename = 'README.md';
+              writeFileSync(pkgPath, JSON.stringify(pkg, null, 2));
+            }
+          "
+
       - name: Publish package
         run: pnpm --filter "./${{ matrix.path }}" publish
