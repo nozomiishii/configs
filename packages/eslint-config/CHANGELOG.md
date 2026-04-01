@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.6.13](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.12...@nozomiishii/eslint-config-v0.6.13) (2026-04-01)
+
+### Bug Fixes
+
+- **eslint-config:** remove completed defineConfig migration task from TODO ([#2017](https://github.com/nozomiishii/configs/issues/2017)) ([dc26fa3](https://github.com/nozomiishii/configs/commit/dc26fa3dee74304e5a68a4c2dd9c85cd2a65450e))
+
 ## [0.6.12](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.11...@nozomiishii/eslint-config-v0.6.12) (2026-03-17)
 
 ### Bug Fixes
