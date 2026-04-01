@@ -8,6 +8,13 @@
 #   pnpx lefthook run --verbose pre-commit
 #   pnpx lefthook run --verbose commit-msg
 #   pnpx lefthook run --verbose post-merge
+pre-push:
+  parallel: true
+
+  jobs:
+    - name: format-check
+      run: pnpm prettier {push_files} --check
+
 commit-msg:
   parallel: true
 
