@@ -36,6 +36,9 @@ extends:
 # pre-commit:
 #   parallel: true
 
+pre-push:
+  parallel: true
+
 commit-msg:
   parallel: true
 
