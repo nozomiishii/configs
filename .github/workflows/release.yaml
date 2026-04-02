@@ -31,12 +31,28 @@ jobs:
       paths_released: ${{ steps.release-please.outputs.paths_released }}
 
     steps:
+      - name: Load secrets from 1Password
+        id: secrets
+        uses: 1password/load-secrets-action@92467eb28f72e8255933372f1e0707c567ce2259 # v4
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          APP_ID: op://github-app/nozomiishii-release/username
+          APP_PRIVATE_KEY: op://github-app/nozomiishii-release/credential
+
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@d72941d797fd3113feb6b93fd0dec494b13a2547 # v1
+        with:
+          app-id: ${{ steps.secrets.outputs.APP_ID }}
+          private-key: ${{ steps.secrets.outputs.APP_PRIVATE_KEY }}
+
       - name: Run release-please
         id: release-please
         uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4
         with:
           config-file: .github/.release-please-config.json
           manifest-file: .github/.release-please-manifest.json
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Echo release-please outputs
         if: steps.release-please.outputs
@@ -60,18 +76,34 @@ jobs:
         pr: ${{ fromJson(needs.release-please.outputs.prs) }}
 
     steps:
+      - name: Load secrets from 1Password
+        id: secrets
+        uses: 1password/load-secrets-action@92467eb28f72e8255933372f1e0707c567ce2259 # v4
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          APP_ID: op://github-app/nozomiishii-release/username
+          APP_PRIVATE_KEY: op://github-app/nozomiishii-release/credential
+
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@d72941d797fd3113feb6b93fd0dec494b13a2547 # v1
+        with:
+          app-id: ${{ steps.secrets.outputs.APP_ID }}
+          private-key: ${{ steps.secrets.outputs.APP_PRIVATE_KEY }}
+
       - name: Checkout release-please Pull Request
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           ref: ${{ matrix.pr.headBranchName }}
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
       - name: Configure Git user
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'nozomiishii-release[bot]'
+          git config --global user.email 'nozomiishii-release[bot]@users.noreply.github.com'
 
       - name: Format CHANGELOG.md
         run: |
