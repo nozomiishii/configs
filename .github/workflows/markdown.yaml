@@ -8,8 +8,6 @@ on:
     paths:
       - '**/*.md'
   pull_request:
-    paths:
-      - '**/*.md'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -22,8 +20,18 @@ jobs:
       - name: Check out
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
+      - name: Check for changes
+        uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3
+        id: changes
+        with:
+          filters: |
+            md:
+              - '**/*.md'
+
       - name: Setup Node
+        if: steps.changes.outputs.md == 'true'
         uses: ./.github/actions/setup-node
 
       - name: lint
+        if: steps.changes.outputs.md == 'true'
         run: npx -y markdownlint-cli2 "**/*.md"
