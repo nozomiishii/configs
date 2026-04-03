@@ -2,9 +2,10 @@
 
 ## [0.0.10](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.9...@nozomiishii/commitlint-config-v0.0.10) (2026-04-03)
 
+
 ### Features
 
-- **commitlint-config:** restrict commit types to feat, fix, and chore ([#2027](https://github.com/nozomiishii/configs/issues/2027)) ([47ba00c](https://github.com/nozomiishii/configs/commit/47ba00c950861b2ca68e4e557f6264a3ad404e63))
+* **commitlint-config:** restrict commit types to feat, fix, and chore ([#2027](https://github.com/nozomiishii/configs/issues/2027)) ([47ba00c](https://github.com/nozomiishii/configs/commit/47ba00c950861b2ca68e4e557f6264a3ad404e63))
 
 ## [0.0.9](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.8...@nozomiishii/commitlint-config-v0.0.9) (2026-01-19)
 
