@@ -29,7 +29,7 @@
   "types": "index.d.ts",
   "bin": "bin/cli.sh",
   "dependencies": {
-    "prettier": "3.8.1",
+    "prettier": "3.8.2",
     "prettier-plugin-packagejson": "3.0.2"
   },
   "devDependencies": {},
