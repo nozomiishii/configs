@@ -25,3 +25,8 @@ runs:
       shell: bash
       run: pnpm install --frozen-lockfile --ignore-scripts
       working-directory: ${{ inputs.working-directory }}
+
+    - name: Build workspace packages
+      shell: bash
+      run: pnpm -r run build
+      working-directory: ${{ inputs.working-directory }}
