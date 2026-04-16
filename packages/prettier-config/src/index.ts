@@ -1,9 +1,8 @@
-// @ts-check
+import type { Config } from 'prettier';
+
 /**
  * Prettier options
  * {@link https://prettier.io/docs/en/options.html}
- *
- * @type {import("prettier").Config}
  */
 export default {
   printWidth: 119,
@@ -51,4 +50,4 @@ export default {
       },
     },
   ],
-};
+} satisfies Config;

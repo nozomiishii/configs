@@ -16,23 +16,32 @@
   "author": "Nozomi Ishii",
   "type": "module",
   "exports": {
-    "import": {
-      "types": "./index.d.ts",
-      "default": "./index.js"
-    },
-    "require": {
-      "types": "./index.d.ts",
-      "default": "./index.js"
-    }
+    "./package.json": "./package.json",
+    ".": "./dist/index.js"
   },
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "bin": "bin/cli.sh",
+  "files": [
+    "bin",
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch --sourcemap",
+    "prepublishOnly": "pnpm run build",
+    "tsc": "tsc"
+  },
   "dependencies": {
     "prettier": "3.8.2",
     "prettier-plugin-packagejson": "3.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@nozomiishii/tsconfig": "workspace:*",
+    "tsdown": "0.21.7",
+    "typescript": "6.0.2"
+  },
   "packageManager": "pnpm@10.33.0",
   "publishConfig": {
     "access": "public",
