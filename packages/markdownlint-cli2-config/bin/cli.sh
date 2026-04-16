@@ -16,8 +16,8 @@ npm pkg set scripts.markdownlint="markdownlint-cli2 '**/*.md' '#node_modules'"
 npm pkg set scripts.lint:md="pnpm markdownlint"
 npm pkg set scripts.lint:md:fix="pnpm markdownlint --fix"
 
-echo -e "Creating markdownlint-cli2.cjs"
+echo -e "Creating .markdownlint-cli2.mjs"
 find . -type f -name '.markdownlint-cli2*' -delete
-echo "module.exports = require('@nozomiishii/markdownlint-cli2-config');" > .markdownlint-cli2.cjs
+echo "export { default } from '@nozomiishii/markdownlint-cli2-config';" > .markdownlint-cli2.mjs
 
 echo -e "All set! Your markdownlint-cli2 configuration has been set up successfully🎉"

@@ -16,12 +16,33 @@
   },
   "license": "MIT",
   "author": "Nozomi Ishii",
-  "main": "index.cjs",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "bin": "bin/cli.sh",
+  "files": [
+    "bin",
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch --sourcemap",
+    "prepublishOnly": "pnpm run build",
+    "tsc": "tsc"
+  },
   "dependencies": {
     "markdownlint-cli2": "0.22.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@nozomiishii/tsconfig": "workspace:*",
+    "tsdown": "0.21.7",
+    "typescript": "6.0.2"
+  },
   "packageManager": "pnpm@10.33.0",
   "publishConfig": {
     "access": "public",
