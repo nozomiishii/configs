@@ -2,7 +2,7 @@
  * markdownlint
  * {@link https://github.com/DavidAnson/markdownlint}
  */
-module.exports = {
+export default {
   /**
    * Rules
    * {@link https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md}
