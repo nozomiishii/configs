@@ -12,10 +12,10 @@ runs:
 
   steps:
     - name: pnpm setup
-      uses: pnpm/action-setup@v2
+      uses: pnpm/action-setup@eae0cfeb286e66ffb5155f1a79b90583a127a68b # v2.4.1
 
     - name: Setup Node.js
-      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
       with:
         node-version-file: ${{ inputs.working-directory }}/package.json
         # Required for publishing packages to npm
