@@ -16,17 +16,33 @@
   "author": "Nozomi Ishii",
   "type": "module",
   "exports": {
-    "import": "./index.js",
-    "require": "./index.js"
+    "./package.json": "./package.json",
+    ".": "./dist/index.js"
   },
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "bin": "bin/cli.sh",
+  "files": [
+    "bin",
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch --sourcemap",
+    "prepublishOnly": "pnpm run build",
+    "tsc": "tsc"
+  },
   "dependencies": {
     "@commitlint/cli": "20.5.0",
     "@commitlint/config-conventional": "20.5.0",
     "@commitlint/types": "20.5.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@nozomiishii/tsconfig": "workspace:*",
+    "tsdown": "0.21.7",
+    "typescript": "6.0.2"
+  },
   "packageManager": "pnpm@10.33.0",
   "publishConfig": {
     "access": "public",

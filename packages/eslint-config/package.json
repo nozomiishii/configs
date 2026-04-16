@@ -19,7 +19,7 @@
   "main": "eslint.config.ts",
   "bin": "bin/cli.sh",
   "scripts": {
-    "build": "pnpx @eslint/config-inspector build",
+    "build:inspector": "pnpx @eslint/config-inspector build",
     "check:ts": "tsc",
     "dev": "pnpm typegen && eslint --inspect-config",
     "eslint": "eslint --max-warnings=0",
@@ -27,7 +27,7 @@
     "link": "pnpm link --global",
     "lint": "pnpm eslint .",
     "lint:fix": "pnpm eslint . --fix",
-    "prepublishOnly": "pnpm run build",
+    "prepublishOnly": "pnpm run build:inspector",
     "start": "pnpx serve .eslint-config-inspector",
     "typegen": "node --import @swc-node/register/esm-register scripts/typegen.ts"
   },
