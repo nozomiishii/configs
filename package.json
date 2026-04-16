@@ -25,7 +25,7 @@
     "fix:md": "markdownlint-cli2 --fix '**/*.md'",
     "format": "pnpm prettier --check '!apps/**' '!packages/**' .",
     "format:fix": "pnpm prettier --write '!apps/**' '!packages/**' .",
-    "postinstall": "pnpm -F @nozomiishii/postinstall build && pnpm -F @nozomiishii/prettier-config build && postinstall",
+    "postinstall": "pnpm -r run build && postinstall",
     "prettier": "prettier --ignore-unknown --ignore-path .gitignore"
   },
   "devDependencies": {
@@ -42,6 +42,6 @@
   },
   "packageManager": "pnpm@10.33.0",
   "engines": {
-    "node": "24.14.1"
+    "node": "24.15.0"
   }
 }

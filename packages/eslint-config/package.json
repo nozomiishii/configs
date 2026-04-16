@@ -19,7 +19,7 @@
   "main": "eslint.config.ts",
   "bin": "bin/cli.sh",
   "scripts": {
-    "build": "pnpx @eslint/config-inspector build",
+    "build:inspector": "pnpx @eslint/config-inspector build",
     "check:ts": "tsc",
     "dev": "pnpm typegen && eslint --inspect-config",
     "eslint": "eslint --max-warnings=0",
@@ -27,7 +27,7 @@
     "link": "pnpm link --global",
     "lint": "pnpm eslint .",
     "lint:fix": "pnpm eslint . --fix",
-    "prepublishOnly": "pnpm run build",
+    "prepublishOnly": "pnpm run build:inspector",
     "start": "pnpx serve .eslint-config-inspector",
     "typegen": "node --import @swc-node/register/esm-register scripts/typegen.ts"
   },
@@ -45,7 +45,7 @@
     "eslint-config-flat-gitignore": "2.3.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
-    "eslint-plugin-better-tailwindcss": "4.4.0",
+    "eslint-plugin-better-tailwindcss": "4.4.1",
     "eslint-plugin-de-morgan": "2.1.1",
     "eslint-plugin-import-x": "4.16.2",
     "eslint-plugin-jsdoc": "62.9.0",
