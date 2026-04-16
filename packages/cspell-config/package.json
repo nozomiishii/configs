@@ -14,10 +14,39 @@
   },
   "license": "MIT",
   "author": "Nozomi Ishii",
-  "main": "index.cjs",
-  "bin": "bin/cli.cjs",
-  "devDependencies": {},
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": "bin/cli.js",
+  "files": [
+    "bin",
+    "dictionaries",
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch --sourcemap",
+    "prepublishOnly": "pnpm run build",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "cspell": "10.0.0"
+  },
+  "devDependencies": {
+    "@nozomiishii/tsconfig": "workspace:*",
+    "@types/node": "24.12.2",
+    "tsdown": "0.21.7",
+    "typescript": "6.0.2"
+  },
   "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=22.18.0"
+  },
   "publishConfig": {
     "access": "public",
     "provenance": true
