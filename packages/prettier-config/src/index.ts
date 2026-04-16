@@ -1,9 +1,8 @@
-// @ts-check
+import type { Config } from 'prettier';
+
 /**
  * Prettier options
  * {@link https://prettier.io/docs/en/options.html}
- *
- * @type {import("prettier").Config}
  */
 export default {
   printWidth: 119,
@@ -30,13 +29,10 @@ export default {
 
   overrides: [
     {
-      // prettierのformatを実行したくないものを指定
       files: [
         'pnpm-lock.yaml',
         'submodules/**',
-        // Next.jsがnext devの度に自動生成上書きするため
         'next-env.d.ts',
-        // markdownはremarkで行う
         '*.md',
         '*.mdx',
       ],
@@ -51,4 +47,4 @@ export default {
       },
     },
   ],
-};
+} satisfies Config;
