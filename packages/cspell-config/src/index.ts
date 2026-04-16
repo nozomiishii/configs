@@ -1,6 +1,12 @@
-const path = require('path');
+import { fileURLToPath } from 'node:url';
 
-const config = {
+const customDictionaryPath = fileURLToPath(new URL('../dictionaries/customised.txt', import.meta.url));
+
+/**
+ * cspell configuration
+ * {@link https://cspell.org/docs/Configuration}
+ */
+export default {
   version: '0.2',
   language: 'en',
   // 外部辞書
@@ -12,7 +18,7 @@ const config = {
   dictionaryDefinitions: [
     {
       name: 'custom-dictionary',
-      path: path.resolve(__dirname, './dictionaries/customised.txt'),
+      path: customDictionaryPath,
       addWords: true,
     },
   ],
@@ -43,5 +49,3 @@ const config = {
   ],
   ignorePaths: [],
 };
-
-module.exports = config;
