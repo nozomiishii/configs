@@ -44,7 +44,7 @@
     "@types/figlet": "1.7.0",
     "@types/node": "24.12.2",
     "tsdown": "0.21.8",
-    "typescript": "6.0.2",
+    "typescript": "6.0.3",
     "vitest": "4.1.4"
   },
   "packageManager": "pnpm@10.33.0",
