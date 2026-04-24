@@ -6,6 +6,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # デフォルト権限を無効化し、各ジョブで必要最小限の権限のみ付与する
 permissions: {}
 
@@ -21,9 +25,9 @@ jobs:
     timeout-minutes: 10
 
     permissions:
-      contents: write
-      issues: write
-      pull-requests: write
+      contents: write  # required by release-please-action to create release tags and commits
+      issues: write  # required by release-please-action to label release issues
+      pull-requests: write  # required by release-please-action to open the release PR
 
     outputs:
       prs: ${{ steps.release-please.outputs.prs }}
@@ -69,7 +73,7 @@ jobs:
     timeout-minutes: 10
 
     permissions:
-      contents: write
+      contents: write  # required to push the formatted CHANGELOG commit back to the release-please PR branch
 
     strategy:
       matrix:
@@ -96,6 +100,7 @@ jobs:
         with:
           ref: ${{ matrix.pr.headBranchName }}
           token: ${{ steps.app-token.outputs.token }}
+          persist-credentials: false
 
       - name: Setup Node
         uses: ./.github/actions/setup-node
@@ -137,9 +142,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
       - name: Publish package
-        run: pnpm --filter "./${{ matrix.path }}" publish
+        env:
+          MATRIX_PATH: ${{ matrix.path }}
+        run: pnpm --filter "./${MATRIX_PATH}" publish
