@@ -99,8 +99,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: ${{ matrix.pr.headBranchName }}
-          token: ${{ steps.app-token.outputs.token }}
-          persist-credentials: false
+          persist-credentials: false  # auth は後段の `gh auth setup-git` で配線する
 
       - name: Setup Node
         uses: ./.github/actions/setup-node
@@ -116,7 +115,10 @@ jobs:
           pnpm format:fix
 
       - name: Commit and push
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
+          gh auth setup-git
           git add '*.md' '**/*.md'
           git diff --cached --quiet && echo 'No changes to commit' && exit 0
           git commit -m 'chore: format CHANGELOG.md' --no-verify
