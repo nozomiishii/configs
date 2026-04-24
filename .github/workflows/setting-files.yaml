@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-slim
 
     permissions:
-      contents: read  # required by actions/checkout to fetch repository code
+      contents: read # required by actions/checkout to fetch repository code
 
     steps:
       - name: Check out

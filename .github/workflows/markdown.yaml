@@ -20,8 +20,8 @@ jobs:
     runs-on: ubuntu-slim
 
     permissions:
-      contents: read  # required by actions/checkout to fetch repository code
-      pull-requests: read  # required by dorny/paths-filter to list PR files via the GitHub API
+      contents: read # required by actions/checkout to fetch repository code
+      pull-requests: read # required by dorny/paths-filter to list PR files via the GitHub API
 
     steps:
       - name: Check out

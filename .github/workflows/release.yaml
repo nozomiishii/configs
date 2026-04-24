@@ -25,9 +25,9 @@ jobs:
     timeout-minutes: 10
 
     permissions:
-      contents: write  # required by release-please-action to create release tags and commits
-      issues: write  # required by release-please-action to label release issues
-      pull-requests: write  # required by release-please-action to open the release PR
+      contents: write # required by release-please-action to create release tags and commits
+      issues: write # required by release-please-action to label release issues
+      pull-requests: write # required by release-please-action to open the release PR
 
     outputs:
       prs: ${{ steps.release-please.outputs.prs }}
@@ -73,7 +73,7 @@ jobs:
     timeout-minutes: 10
 
     permissions:
-      contents: write  # required to push the formatted CHANGELOG commit back to the release-please PR branch
+      contents: write # required to push the formatted CHANGELOG commit back to the release-please PR branch
 
     strategy:
       matrix:
@@ -99,7 +99,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: ${{ matrix.pr.headBranchName }}
-          persist-credentials: false  # auth は後段の `gh auth setup-git` で配線する
+          persist-credentials: false # auth は後段の `gh auth setup-git` で配線する
 
       - name: Setup Node
         uses: ./.github/actions/setup-node
