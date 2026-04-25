@@ -196,6 +196,7 @@
     // ----------------------------------------------------------------
     "hashicorp.terraform",
     "hashicorp.hcl",
+    "opentofu.vscode-opentofu",
     "emeraldwalk.runonsave",
 
     // ----------------------------------------------------------------
