@@ -37,7 +37,7 @@
     "@nozomiishii/prettier-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "lefthook": "2.1.6",
-    "markdownlint-cli2": "0.22.0",
+    "markdownlint-cli2": "0.22.1",
     "npkill": "0.12.2"
   },
   "packageManager": "pnpm@10.33.0",
