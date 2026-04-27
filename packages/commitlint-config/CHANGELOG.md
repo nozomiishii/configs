@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.0.11](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.10...@nozomiishii/commitlint-config-v0.0.11) (2026-04-27)
+
+
+### Features
+
+* **commitlint-config:** add body-ascii-only rule ([#2094](https://github.com/nozomiishii/configs/issues/2094)) ([cf870b9](https://github.com/nozomiishii/configs/commit/cf870b9cf722a01f6843ab4b536ac68ddd60010a))
+
+
+### Miscellaneous
+
+* **commitlint-config:** migrate to TypeScript source with tsdown build ([#2061](https://github.com/nozomiishii/configs/issues/2061)) ([b394ec0](https://github.com/nozomiishii/configs/commit/b394ec0b9e70624cc7311b72309e786315b9aed2))
+* release main ([#2031](https://github.com/nozomiishii/configs/issues/2031)) ([ba1c8b0](https://github.com/nozomiishii/configs/commit/ba1c8b0d0373eb1cc65bc89702ba1a41f5923e6b))
+* update dependency tsdown to v0.21.10 ([#2112](https://github.com/nozomiishii/configs/issues/2112)) ([21939bb](https://github.com/nozomiishii/configs/commit/21939bb55da1202f1e84eaed0f10a07c65c23e41))
+* update dependency tsdown to v0.21.8 ([#2070](https://github.com/nozomiishii/configs/issues/2070)) ([bdcdeab](https://github.com/nozomiishii/configs/commit/bdcdeab2a83cfef17629d63b621b431a9399cd56))
+* update dependency tsdown to v0.21.9 ([#2085](https://github.com/nozomiishii/configs/issues/2085)) ([eaeb311](https://github.com/nozomiishii/configs/commit/eaeb311df48848207f0a3ae5aa051eece4bfa278))
+* update dependency typescript to v6.0.3 ([#2088](https://github.com/nozomiishii/configs/issues/2088)) ([25e9e34](https://github.com/nozomiishii/configs/commit/25e9e34004a9069de68430008b4daca34bcac000))
+* update pnpm to v10.33.1 ([#2110](https://github.com/nozomiishii/configs/issues/2110)) ([5af1dc0](https://github.com/nozomiishii/configs/commit/5af1dc0b5d2ce5c49bc1f97a87d04f1e72aadd51))
+* update pnpm to v10.33.2 ([#2114](https://github.com/nozomiishii/configs/issues/2114)) ([de64989](https://github.com/nozomiishii/configs/commit/de64989ce298d538e759f980ab505030be9a3e24))
+
 ## [0.0.10](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.9...@nozomiishii/commitlint-config-v0.0.10) (2026-04-03)
 
 ### Features

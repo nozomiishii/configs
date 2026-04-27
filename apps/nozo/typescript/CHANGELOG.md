@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.2](https://github.com/nozomiishii/configs/compare/nozo-v0.2.1...nozo-v0.2.2) (2026-04-27)
+
+
+### Miscellaneous
+
+* release main ([#2031](https://github.com/nozomiishii/configs/issues/2031)) ([ba1c8b0](https://github.com/nozomiishii/configs/commit/ba1c8b0d0373eb1cc65bc89702ba1a41f5923e6b))
+* update Node.js version to 24.11.0 ([dfe7067](https://github.com/nozomiishii/configs/commit/dfe70673dea75db5967d267483aa03c99bc14630))
+
 ## [0.2.1](https://github.com/nozomiishii/configs/compare/nozo-v0.2.0...nozo-v0.2.1) (2025-08-21)
 
 ### Bug Fixes
