@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.7](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.6...@nozomiishii/lefthook-config-v0.3.7) (2026-04-27)
+
+### Miscellaneous
+
+- **lefthook-config:** remove pre-push format-check job ([#2117](https://github.com/nozomiishii/configs/issues/2117)) ([3febb99](https://github.com/nozomiishii/configs/commit/3febb99a767923e071e592cc67a7a3af0e32fc9c))
+- release main ([#2031](https://github.com/nozomiishii/configs/issues/2031)) ([ba1c8b0](https://github.com/nozomiishii/configs/commit/ba1c8b0d0373eb1cc65bc89702ba1a41f5923e6b))
+- update dependency lefthook to v2.1.5 ([#2045](https://github.com/nozomiishii/configs/issues/2045)) ([36a86c7](https://github.com/nozomiishii/configs/commit/36a86c71ac524c87d5a223f1af2b13cd4a5b7d0f))
+- update dependency lefthook to v2.1.6 ([#2083](https://github.com/nozomiishii/configs/issues/2083)) ([c98897a](https://github.com/nozomiishii/configs/commit/c98897aa4437c0e97e4c2bbeb75efb09b86e85c1))
+- update pnpm to v10.33.1 ([#2110](https://github.com/nozomiishii/configs/issues/2110)) ([5af1dc0](https://github.com/nozomiishii/configs/commit/5af1dc0b5d2ce5c49bc1f97a87d04f1e72aadd51))
+- update pnpm to v10.33.2 ([#2114](https://github.com/nozomiishii/configs/issues/2114)) ([de64989](https://github.com/nozomiishii/configs/commit/de64989ce298d538e759f980ab505030be9a3e24))
+
 ## [0.3.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.5...@nozomiishii/lefthook-config-v0.3.6) (2026-04-01)
 
 ### Bug Fixes
