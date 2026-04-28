@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/commitlint-config",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "description": "Nozomi's Recommended commitlint config",
   "keywords": [
     "commitlint",
@@ -21,7 +21,9 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "bin": { "nozo-commitlint": "./dist/cli.js" },
+  "bin": {
+    "nozo-commitlint": "./dist/cli.js"
+  },
   "files": [
     "dist",
     "README.md"
