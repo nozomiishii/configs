@@ -12,10 +12,29 @@ Nozomi's Recommended [commitlint](https://commitlint.js.org) config.
 </div>
 <br>
 
-## Gist
-
-### Run
+## Install
 
 ```bash
-pnpx @nozomiishii/commitlint-config@latest
+pnpm add -D @nozomiishii/commitlint-config
+```
+
+## Usage
+
+Add `commitlint.config.ts` (or `.js`) that extends this package:
+
+```ts
+import config from '@nozomiishii/commitlint-config';
+
+export default config;
+```
+
+The package also ships a namespaced bin, `nozo-commitlint`, which wraps the
+pinned `@commitlint/cli`. Lefthook configs (e.g. `@nozomiishii/lefthook-config`)
+invoke the shim directly:
+
+```yaml
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: node_modules/.bin/nozo-commitlint --edit {1} --verbose
 ```

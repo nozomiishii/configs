@@ -1,27 +1,21 @@
 {
-  "name": "@nozomiishii/commitlint-config",
-  "version": "0.0.11",
-  "description": "Nozomi's Recommended commitlint config",
+  "name": "nozo",
+  "version": "0.2.2",
+  "description": "Nozomi config manager",
   "keywords": [
-    "commitlint",
+    "cli",
     "config"
   ],
-  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/commitlint-config/README.md",
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/nozo/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
-    "directory": "packages/commitlint-config"
+    "directory": "packages/nozo"
   },
   "license": "MIT",
   "author": "Nozomi Ishii",
   "type": "module",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": "./dist/index.js"
-  },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "bin": { "nozo-commitlint": "./dist/cli.js" },
+  "bin": "./dist/index.js",
   "files": [
     "dist",
     "README.md"
@@ -33,9 +27,9 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@commitlint/cli": "20.5.2",
-    "@commitlint/config-conventional": "20.5.0",
-    "@commitlint/types": "20.5.0"
+    "@clack/prompts": "1.2.0",
+    "citty": "0.2.2",
+    "consola": "3.4.2"
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",

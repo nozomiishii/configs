@@ -16,9 +16,9 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "main": "index.yaml",
-  "bin": "bin/cli.sh",
   "dependencies": {
-    "lefthook": "2.1.6"
+    "lefthook": "2.1.6",
+    "git-harvest": "0.1.20"
   },
   "devDependencies": {},
   "peerDependencies": {
