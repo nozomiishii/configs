@@ -21,9 +21,8 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "bin": { "nozo-commitlint": "bin/cli.mjs" },
+  "bin": { "nozo-commitlint": "./dist/cli.js" },
   "files": [
-    "bin",
     "dist",
     "README.md"
   ],
