@@ -9,7 +9,6 @@ useNodeVersion: 24.15.0
 
 packages:
   - 'packages/*'
-  - 'apps/nozo/*'
 
 # モノレポのpackagesもシンボリックリンクで管理する
 linkWorkspacePackages: true

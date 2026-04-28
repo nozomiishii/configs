@@ -45,7 +45,7 @@
       "release-type": "node",
       "component": "@nozomiishii/tsconfig"
     },
-    "apps/nozo/typescript": {
+    "packages/nozo": {
       "release-type": "node",
       "component": "nozo"
     }

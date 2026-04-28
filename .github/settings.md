@@ -48,7 +48,7 @@ Allow GitHub Actions to create and approve pull requests
 - プロジェクト内の名前とversionの確認
 
 ```shell
-for dir in packages/* apps/nozo/*; do
+for dir in packages/*; do
   if [ -f "$dir/package.json" ]; then
     echo "Project: $dir"
     grep '"name"\|"version"' $dir/package.json
