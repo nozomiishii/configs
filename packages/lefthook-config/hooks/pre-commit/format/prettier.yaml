@@ -1,6 +1,6 @@
 pre-commit:
-  commands:
-    format-prettier:
-      # Markdown formatting is the responsibility of the markdownlint
+  jobs:
+    - name: format-prettier
+      # Markdown formatting is the responsibility of the markdownlint job
       exclude: ".*\\.md$|.*pnpm-lock\\.yaml$"
       run: npx -y prettier {staged_files} --ignore-unknown --ignore-path .gitignore --write

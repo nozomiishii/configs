@@ -1,24 +1,26 @@
 post-merge:
-  commands:
-    # If you have set 'git config pull.rebase true', use the 'post-rewrite' hook instead of the 'post-merge' hook.
-    update-node-modules:
+  jobs:
+    - name: update-node-modules
       files: git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD
-      glob: '**/{package.json,pnpm-lock.yaml,yarn.lock,package-lock.json}'
+      glob: '**/{package.json,pnpm-lock.yaml,bun.lock,bun.lockb,package-lock.json,yarn.lock}'
       run: |
         if [ -f "pnpm-lock.yaml" ]; then
           echo "🥊 Installing dependencies with pnpm..."
           pnpm install --frozen-lockfile
           exit 0
         fi
-
-        if [ -f "yarn.lock" ]; then
-          echo "🥊 Installing dependencies with yarn..."
-          yarn install
+        if [ -f "bun.lock" ] || [ -f "bun.lockb" ]; then
+          echo "🥊 Installing dependencies with bun..."
+          bun install --frozen-lockfile
           exit 0
         fi
-
         if [ -f "package-lock.json" ]; then
           echo "🥊 Installing dependencies with npm..."
           npm install
+          exit 0
+        fi
+        if [ -f "yarn.lock" ]; then
+          echo "🥊 Installing dependencies with yarn..."
+          yarn install
           exit 0
         fi

@@ -1,52 +1,21 @@
-# @see
-# https://github.com/evilmartians/lefthook
+# @nozomiishii/lefthook-config — recommended preset (C pattern)
+#
+# This preset is composed of fragments via `extends`. Consumers can either
+# extend this file as-is, or cherry-pick individual fragments under hooks/.
+#
+# @see https://github.com/evilmartians/lefthook
+# @see https://github.com/nozomiishii/configs/blob/main/packages/lefthook-config/README.md
 #
 # Run the command to test:
 #   pnpx lefthook run [-v,--verbose] <hook-name>
-#
-# Examples:
-#   pnpx lefthook run --verbose pre-commit
-#   pnpx lefthook run --verbose commit-msg
-#   pnpx lefthook run --verbose post-merge
+
+extends:
+  - node_modules/@nozomiishii/lefthook-config/hooks/commit-msg/commitlint.yaml
+  - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/update-node-modules.yaml
+  - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/cleanup-merged.yaml
 
 commit-msg:
   parallel: true
 
-  jobs:
-    - name: commitlint
-      run: |
-        if [ -f "pnpm-lock.yaml" ]; then
-          pnpx commitlint@latest --edit {1} --verbose
-          exit 0
-        fi
-
-        if [ -f "package-lock.json" ]; then
-          npx commitlint@latest --edit {1} --verbose
-          exit 0
-        fi
-
 post-merge:
   parallel: true
-
-  jobs:
-    - name: cleanup-merged
-      run: bash node_modules/@nozomiishii/lefthook-config/scripts/cleanup-merged.sh
-
-    - name: install-packages
-      env:
-        LEFTHOOK_VERBOSE: 'true'
-      interactive: true
-      files: git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD
-      glob: '**/{package.json,pnpm-lock.yaml,yarn.lock,package-lock.json}'
-      run: |
-        if [ -f "pnpm-lock.yaml" ]; then
-          echo "🥊 Installing dependencies with pnpm..."
-          yes | pnpm install
-          exit 0
-        fi
-
-        if [ -f "package-lock.json" ]; then
-          echo "🥊 Installing dependencies with npm..."
-          npm install
-          exit 0
-        fi
