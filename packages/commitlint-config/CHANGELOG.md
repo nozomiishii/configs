@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.11...@nozomiishii/commitlint-config-v0.1.0) (2026-04-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* bin field changes from a single setup script ("bin": "bin/cli.sh") to a namespaced map ({ "nozo-commitlint": "bin/cli.mjs" }). Consumers who previously ran pnpx @nozomiishii/commitlint-config@latest to scaffold a commitlint config now need a different mechanism (planned for nozo init in a follow-up PR).
+
+### Features
+
+* modularize lefthook config + commitlint shim + nozo CLI rebuild ([#2119](https://github.com/nozomiishii/configs/issues/2119)) ([1140b62](https://github.com/nozomiishii/configs/commit/1140b62e3d0430f2383a5f683ea2583fa4ea7ee9)), closes [#2118](https://github.com/nozomiishii/configs/issues/2118)
+
+
+### Miscellaneous
+
+* update dependency @commitlint/cli to v20.5.2 ([#2120](https://github.com/nozomiishii/configs/issues/2120)) ([f127eab](https://github.com/nozomiishii/configs/commit/f127eab67e0c2a76c7d4b11edcdb67b92e12baaf))
+
 ## [0.0.11](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.10...@nozomiishii/commitlint-config-v0.0.11) (2026-04-27)
 
 ### Features
