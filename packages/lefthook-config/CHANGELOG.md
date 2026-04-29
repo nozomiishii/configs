@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.4.0...@nozomiishii/lefthook-config-v0.4.1) (2026-04-29)
+
+
+### Features
+
+* **lefthook-config:** ship nozo-git-harvest shim ([#2124](https://github.com/nozomiishii/configs/issues/2124)) ([256ae89](https://github.com/nozomiishii/configs/commit/256ae8918527fd7c86ca118be332a808b75f5095)), closes [#2118](https://github.com/nozomiishii/configs/issues/2118)
+
 ## [0.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.3.7...@nozomiishii/lefthook-config-v0.4.0) (2026-04-28)
 
 ### ⚠ BREAKING CHANGES
