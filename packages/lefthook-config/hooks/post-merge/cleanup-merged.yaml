@@ -1,4 +1,4 @@
 post-merge:
   jobs:
     - name: cleanup-merged
-      run: node_modules/.bin/git-harvest
+      run: node_modules/.bin/nozo-git-harvest

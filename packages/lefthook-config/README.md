@@ -19,14 +19,13 @@ either pull the whole preset or cherry-pick individual fragments.
 ## Install
 
 ```sh
-pnpm add -D lefthook git-harvest @nozomiishii/lefthook-config
+pnpm add -D lefthook @nozomiishii/lefthook-config
 ```
 
-`git-harvest` is invoked by the `cleanup-merged` post-merge fragment via
-`node_modules/.bin/git-harvest`. Listing it as a direct dependency of
-your project guarantees the binary is hoisted into your top-level
-`node_modules/.bin/`, regardless of package manager (pnpm strict layout,
-npm, yarn).
+Auxiliary runtimes (currently `git-harvest`, used by the `cleanup-merged`
+post-merge fragment) are wrapped by shims that this package ships under
+its own `bin` field, so they are exposed as `node_modules/.bin/nozo-*`
+without requiring consumers to add them as direct dependencies.
 
 ## Use the full preset
 
@@ -58,7 +57,7 @@ extends:
 - `hooks/commit-msg/commitlint.yaml` — runs `nozo-commitlint` (provided by `@nozomiishii/commitlint-config`)
 - `hooks/commit-msg/spell.yaml`
 - `hooks/post-merge/update-node-modules.yaml` — pnpm > bun > npm > yarn
-- `hooks/post-merge/cleanup-merged.yaml` — runs [`git-harvest`](https://github.com/nozomiishii/git-harvest)
+- `hooks/post-merge/cleanup-merged.yaml` — runs [`git-harvest`](https://github.com/nozomiishii/git-harvest) via the `nozo-git-harvest` shim shipped by this package
 - `hooks/pre-commit/format/prettier.yaml`
 - `hooks/pre-commit/lint/markdown.yaml`
 - `hooks/pre-commit/lint/file-extension/{storybook,test,yaml}.yaml`
@@ -102,6 +101,6 @@ run: node_modules/.bin/nozo-commitlint --edit {1}
 run: node_modules/.bin/nozo run commitlint --edit {1}
 ```
 
-### Rule 5: shims live in the config package, not in `lefthook-config`
+### Rule 5: each shim lives where its config package lives
 
-`@nozomiishii/lefthook-config` does not ship its own bin. Each runtime tool's shim is provided by the corresponding config package (e.g. `@nozomiishii/commitlint-config` ships `nozo-commitlint`).
+Most runtime tools have their own `@nozomiishii/<x>-config` package, and that package ships the `nozo-<x>` shim (e.g. `@nozomiishii/commitlint-config` ships `nozo-commitlint`). `lefthook-config` itself is the exception: it composes a few auxiliary runtimes (currently `git-harvest`) that don't have a dedicated config package, so it ships those shims (`nozo-git-harvest`) directly. The principle is "one shim per runtime, owned by exactly one package" — never duplicate.
