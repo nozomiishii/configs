@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/lefthook-config",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Nozomi's Recommended lefthook config",
   "keywords": [
     "lefthook",
@@ -17,7 +17,9 @@
   "author": "Nozomi Ishii",
   "type": "module",
   "main": "index.yaml",
-  "bin": { "nozo-git-harvest": "./dist/cli.js" },
+  "bin": {
+    "nozo-git-harvest": "./dist/cli.js"
+  },
   "files": [
     "dist",
     "hooks",
