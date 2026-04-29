@@ -15,12 +15,30 @@
   },
   "license": "MIT",
   "author": "Nozomi Ishii",
+  "type": "module",
   "main": "index.yaml",
+  "bin": { "nozo-git-harvest": "./dist/cli.js" },
+  "files": [
+    "dist",
+    "hooks",
+    "index.yaml",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch --sourcemap",
+    "prepublishOnly": "pnpm run build",
+    "tsc": "tsc"
+  },
   "dependencies": {
     "lefthook": "2.1.6",
     "git-harvest": "0.1.20"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@nozomiishii/tsconfig": "workspace:*",
+    "tsdown": "0.21.10",
+    "typescript": "6.0.3"
+  },
   "peerDependencies": {
     "lefthook": ">=2.1.6"
   },
