@@ -22,7 +22,7 @@ export async function setupLefthook() {
   try {
     await createLocalConfig();
 
-    const result = await $`lefthook install`;
+    const result = await $`lefthook install --force`;
     echo(result);
   } catch (e) {
     echo(e);
