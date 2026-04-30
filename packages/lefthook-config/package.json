@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "lefthook": "2.1.6",
-    "git-harvest": "0.1.20"
+    "git-harvest": "0.1.23"
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
