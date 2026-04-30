@@ -24,7 +24,7 @@ export function viest() {
          *
          * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-filename.md
          */
-        'vitest/consistent-test-filename': ['error', { pattern: '.*\\.test\\.[tj]sx?$' }],
+        'vitest/consistent-test-filename': ['error', { pattern: String.raw`.*\.test\.[tj]sx?$` }],
 
         /**
          * itでなくtest句でテスト書く
