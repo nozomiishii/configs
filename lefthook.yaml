@@ -10,3 +10,14 @@
 #   pnpx lefthook run --verbose post-merge
 extends:
   - ./node_modules/@nozomiishii/lefthook-config/index.yaml
+
+pre-push:
+  jobs:
+    - name: lint-affected
+      # `pnpm --filter '...[<ref>]'` is broken inside git worktrees on both pnpm
+      # 10.x and 11.0.1 (returns "No projects matched"), so derive the affected
+      # package set from `git diff` and pass them as path filters instead.
+      run: |
+        ARGS=$(git diff --name-only origin/main...HEAD | grep -oE '^packages/[^/]+' | sort -u | sed 's|^|--filter=./|' | tr '\n' ' ')
+        [ -z "$ARGS" ] && exit 0
+        pnpm $ARGS --if-present run lint
