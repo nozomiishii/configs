@@ -10,3 +10,8 @@
 #   pnpx lefthook run --verbose post-merge
 extends:
   - ./node_modules/@nozomiishii/lefthook-config/index.yaml
+
+pre-push:
+  jobs:
+    - name: lint
+      run: pnpm -r --if-present run lint
