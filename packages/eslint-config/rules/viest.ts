@@ -11,12 +11,20 @@ export function viest() {
   return defineConfig([
     {
       ...eslintPluginVitest.configs.all,
-      files: ['**/*.test.{ts,tsx}'],
+      files: ['**/*.{test,spec}.{ts,tsx}'],
       ignores: ['**/e2e/**'],
       name: name('viest'),
 
       rules: {
         ...eslintPluginVitest.configs.all.rules,
+
+        /**
+         * テストファイル名は .test.{ts,tsx} に統一する。
+         * .spec.* も識別対象に含めた上で、ファイル名規則違反としてエラーにする。
+         *
+         * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-filename.md
+         */
+        'vitest/consistent-test-filename': ['error', { pattern: '.*\\.test\\.[tj]sx?$' }],
 
         /**
          * itでなくtest句でテスト書く
