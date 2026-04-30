@@ -1,6 +1,6 @@
-import eslintPluginReactRefresh from 'eslint-plugin-react-refresh';
-import { defineConfig } from 'eslint/config';
-import { name } from '../utils/name';
+import eslintPluginReactRefresh from "eslint-plugin-react-refresh";
+import { defineConfig } from "eslint/config";
+import { name } from "../utils/name";
 
 /**
  * @returns eslint-plugin-react-refresh
@@ -11,7 +11,7 @@ export function reactRefresh() {
   return defineConfig([
     {
       ...eslintPluginReactRefresh.configs.next,
-      name: name('react-refresh'),
+      name: name("react-refresh"),
     },
   ]);
 }

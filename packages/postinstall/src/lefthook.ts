@@ -1,6 +1,6 @@
-import { fs, $, echo } from 'zx';
+import { fs, $, echo } from "zx";
 
-const TARGET_FILE = 'lefthook-local.yaml';
+const TARGET_FILE = "lefthook-local.yaml";
 
 /**
  * Create a local config file
@@ -17,7 +17,7 @@ async function createLocalConfig() {
  * Setup lefthook
  */
 export async function setupLefthook() {
-  echo('Setup lefthook');
+  echo("Setup lefthook");
 
   try {
     await createLocalConfig();

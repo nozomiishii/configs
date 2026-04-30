@@ -1,6 +1,6 @@
-import eslintPluginRegexp from 'eslint-plugin-regexp';
-import { defineConfig } from 'eslint/config';
-import { name } from '../utils/name';
+import eslintPluginRegexp from "eslint-plugin-regexp";
+import { defineConfig } from "eslint/config";
+import { name } from "../utils/name";
 
 /**
  * @returns eslint-plugin-regexp
@@ -10,8 +10,8 @@ import { name } from '../utils/name';
 export function regexp() {
   return defineConfig([
     {
-      ...eslintPluginRegexp.configs['flat/recommended'],
-      name: name('regexp'),
+      ...eslintPluginRegexp.configs["flat/recommended"],
+      name: name("regexp"),
     },
   ]);
 }

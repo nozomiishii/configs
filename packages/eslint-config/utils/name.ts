@@ -1,6 +1,6 @@
-import pkg from '../package.json' with { type: 'json' };
+import pkg from "../package.json" with { type: "json" };
 
-const scope = pkg.name.split('/')[0];
+const scope = pkg.name.split("/")[0];
 
 /**
  * @param name The config name.

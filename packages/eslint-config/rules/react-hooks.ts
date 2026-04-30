@@ -1,6 +1,6 @@
-import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
-import { defineConfig } from 'eslint/config';
-import { name } from '../utils/name';
+import eslintPluginReactHooks from "eslint-plugin-react-hooks";
+import { defineConfig } from "eslint/config";
+import { name } from "../utils/name";
 
 /**
  * @returns eslint-plugin-react-hooks
@@ -11,7 +11,7 @@ export function reactHooks() {
   return defineConfig([
     {
       ...eslintPluginReactHooks.configs.flat.recommended,
-      name: name('react-hooks'),
+      name: name("react-hooks"),
     },
   ]);
 }

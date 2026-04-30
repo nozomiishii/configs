@@ -1,6 +1,6 @@
-import eslintConfigPrettier from 'eslint-config-prettier/flat';
-import { defineConfig } from 'eslint/config';
-import { name } from '../utils/name';
+import eslintConfigPrettier from "eslint-config-prettier/flat";
+import { defineConfig } from "eslint/config";
+import { name } from "../utils/name";
 
 /**
  * @returns eslint-config-prettier
@@ -11,7 +11,7 @@ export function prettier() {
   return defineConfig([
     {
       ...eslintConfigPrettier,
-      name: name('prettier'),
+      name: name("prettier"),
     },
   ]);
 }

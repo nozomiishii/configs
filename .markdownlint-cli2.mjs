@@ -1,1 +1,1 @@
-export { default } from '@nozomiishii/markdownlint-cli2-config';
+export { default } from "@nozomiishii/markdownlint-cli2-config";

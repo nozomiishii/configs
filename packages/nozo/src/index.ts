@@ -1,18 +1,18 @@
 #!/usr/bin/env node
-import { defineCommand, runMain } from 'citty';
-import { consola } from 'consola';
-import { spawn } from 'node:child_process';
-import { access, constants } from 'node:fs/promises';
-import { delimiter, join } from 'node:path';
+import { defineCommand, runMain } from "citty";
+import { consola } from "consola";
+import { spawn } from "node:child_process";
+import { access, constants } from "node:fs/promises";
+import { delimiter, join } from "node:path";
 
-import pkg from '../package.json' with { type: 'json' };
-import init from './commands/init.js';
+import pkg from "../package.json" with { type: "json" };
+import init from "./commands/init.js";
 
-const BUILTIN_COMMANDS = new Set(['init']);
+const BUILTIN_COMMANDS = new Set(["init"]);
 
 async function findOnPath(name: string): Promise<null | string> {
-  const exe = process.platform === 'win32' ? `${name}.exe` : name;
-  for (const dir of (process.env.PATH ?? '').split(delimiter)) {
+  const exe = process.platform === "win32" ? `${name}.exe` : name;
+  for (const dir of (process.env.PATH ?? "").split(delimiter)) {
     if (!dir) continue;
     const candidate = join(dir, exe);
     try {
@@ -27,14 +27,14 @@ async function findOnPath(name: string): Promise<null | string> {
 
 async function execExternal(command: string, args: string[]): Promise<number> {
   return new Promise((resolve) => {
-    const child = spawn(command, args, { stdio: 'inherit' });
-    child.on('exit', (code) => resolve(code ?? 0));
-    child.on('error', () => resolve(1));
+    const child = spawn(command, args, { stdio: "inherit" });
+    child.on("exit", (code) => resolve(code ?? 0));
+    child.on("error", () => resolve(1));
   });
 }
 
 const sub = process.argv[2];
-const isFlag = sub?.startsWith('-') ?? false;
+const isFlag = sub?.startsWith("-") ?? false;
 const isBuiltin = sub !== undefined && BUILTIN_COMMANDS.has(sub);
 
 if (sub !== undefined && !isFlag && !isBuiltin) {
@@ -50,7 +50,7 @@ if (sub !== undefined && !isFlag && !isBuiltin) {
 // Built-in command (or --help / --version / no args) → citty に委譲
 const main = defineCommand({
   meta: {
-    name: 'nozo',
+    name: "nozo",
     version: pkg.version,
     description: "Nozomi's config manager",
   },
