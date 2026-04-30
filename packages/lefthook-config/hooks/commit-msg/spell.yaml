@@ -1,4 +1,0 @@
-commit-msg:
-  jobs:
-    - name: cspell
-      run: npx -y @nozomiishii/cspell-config@latest {1}

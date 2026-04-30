@@ -55,7 +55,6 @@ extends:
 ## Available fragments
 
 - `hooks/commit-msg/commitlint.yaml` — runs `nozo-commitlint` (provided by `@nozomiishii/commitlint-config`)
-- `hooks/commit-msg/spell.yaml`
 - `hooks/post-merge/update-node-modules.yaml` — pnpm > bun > npm > yarn
 - `hooks/post-merge/cleanup-merged.yaml` — runs [`git-harvest`](https://github.com/nozomiishii/git-harvest) via the `nozo-git-harvest` shim shipped by this package
 - `hooks/pre-commit/format/prettier.yaml`
