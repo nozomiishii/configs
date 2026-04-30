@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "@nozomiishii/commitlint-config": "workspace:*",
-    "@nozomiishii/cspell-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
     "@nozomiishii/markdownlint-cli2-config": "workspace:*",
     "@nozomiishii/postinstall": "workspace:*",
