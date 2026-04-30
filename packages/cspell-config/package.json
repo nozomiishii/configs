@@ -21,9 +21,10 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "bin": "bin/cli.js",
+  "bin": {
+    "nozo-cspell": "./dist/cli.js"
+  },
   "files": [
-    "bin",
     "dictionaries",
     "dist",
     "README.md"
