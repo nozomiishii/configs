@@ -1,8 +1,8 @@
 # @nozomiishii/markdownlint-cli2-config
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
-Nozomi's Recommended [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) Config.
+Nozomi 推奨の [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) 設定。
 
 <!-- Main Image -->
 <br>
@@ -14,7 +14,7 @@ Nozomi's Recommended [markdownlint-cli2](https://github.com/DavidAnson/markdownl
 </div>
 <br>
 
-## Gist
+## 概要
 
 ```bash
 pnpx @nozomiishii/markdownlint-cli2-config@latest

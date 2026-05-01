@@ -1,8 +1,8 @@
 # @nozomiishii/prettier-config
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
-Nozomi's Recommended [Prettier](https://prettier.io) Config.
+Nozomi 推奨の [Prettier](https://prettier.io) 設定。
 
 <!-- Main Image -->
 <br>
@@ -14,9 +14,9 @@ Nozomi's Recommended [Prettier](https://prettier.io) Config.
 </div>
 <br>
 
-## Gist
+## 概要
 
-- TL;DR: just run the command below.
+- 忙しい人はとりあえず下のコマンド実行だけでオールオッケー
 
 pnpm
 
@@ -24,41 +24,41 @@ pnpm
 pnpx @nozomiishii/prettier-config@latest
 ```
 
-## Install
+## インストール
 
 ```bash
 pnpm add -D @nozomiishii/prettier-config
 ```
 
-- `@nozomiishii/prettier-config` is all you need. You don't have to install `prettier` separately.
+- `@nozomiishii/prettier-config` だけでいい。`prettier` を別途入れなくていい。
 
-### Included Plugins
+### 同梱プラグイン
 
 - [prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)
-  - Sorts `package.json` nicely.
+  - `package.json` をいいかんじに並び替え
 
-#### [Option]
+#### [オプション]
 
 - [@prettier/plugin-ruby](https://www.npmjs.com/package/@prettier/plugin-ruby)
-  - When you also want to format Ruby files such as `Brewfile`.
-  - If your project has lots of Ruby code, [rufo](https://github.com/ruby-formatter/rufo) might be a better fit.
+  - Brewfile など Ruby のファイルも format したい
+  - プロジェクト内で Ruby が多い場合は、[rufo](https://github.com/ruby-formatter/rufo) のほうがいいかも
 - [prettier-plugin-sh](https://www.npmjs.com/package/prettier-plugin-sh)
-  - When you also want to format shell scripts.
-  - If your project has lots of shell code, [shfmt](https://github.com/mvdan/sh) might be a better fit.
+  - shell のファイルも format したい
+  - プロジェクト内で shell が多い場合は、[shfmt](https://github.com/mvdan/sh) のほうがいいかも
 
 ```sh
 pnpm add -D @prettier/plugin-ruby
 ```
 
-## Setup
+## セットアップ
 
-### Create `prettier.config.js`
+### `prettier.config.js` を作成
 
 ```bash
 echo "export { default } from '@nozomiishii/prettier-config';" > prettier.config.js
 ```
 
-## Scripts for package.json
+## package.json 用スクリプト
 
 ```bash
 npm pkg set type="module"
@@ -77,41 +77,42 @@ npm pkg set scripts.prettier="prettier . --ignore-unknown"
 }
 ```
 
-### Note
+### 注意
 
-For npm, `format` and `format:fix` may need the form `npm run prettier -- --write` (not verified).
+npm の場合は `format` や `format:fix` の際、
+`npm run prettier -- --write` みたく書かないと動かないかも (検証はしてない)
 
-`--` (Double Dash) terminates flag parsing for things like `-h` / `-v`.
-Anything after `--` is taken as positional args.
+`--` (Double Dash) とは、`-h` や `-v` みたいなフラグの読み取りを終了させる。
+`--` (Double Dash) 以降の入力は args として取り込まれる。
 
 - [npm run とかで使うハイフン2つ「--」の意味 - Neo's World](https://neos21.net/blog/2018/09/13-01.html)
 - [The How? & Why? of the Double Dash (--) Delimiter on macOS, Linux, bash - YouTube](https://www.youtube.com/watch?v=K1zVrLi8NBA)
 
-### Notes on each flag
+### 解説
 
 - `--write`
-  - Format the target files.
+  - 対象ファイルをフォーマット。
 - `--check`
-  - Check whether files are formatted by prettier. Useful in CI.
+  - prettier でフォーマットがかかってるかチェックする。CI に入れとくと便利。
 - `--ignore-unknown`
-  - Ignore extensions that prettier doesn't support.
+  - prettier に対応してない拡張子は無視する。
 - `'!**/*.md'`
-  - Files prefixed with `!` are excluded from formatting.
+  - `!` をつけてファイル指定することでフォーマットから除外できる
 
-## Preferences
+## 設定項目
 
-See the comments in [`src/index.ts`](./src/index.ts) for each option and its intent.
+設定項目とその意図は [`src/index.ts`](./src/index.ts) のコメントを参照。
 
-## [Option] How to create sharing configurations like this
+## [オプション] このような共有設定の作り方
 
 - [Sharing configurations](https://prettier.io/docs/en/configuration.html#sharing-configurations)
 
 ## FAQ
 
-- Does `pnpm prettier` work with only `@nozomiishii/prettier-config` installed (no separate `prettier`)?
-  - Yes.
+- 別途 prettier をインストールしてなくても `@nozomiishii/prettier-config` だけで `pnpm prettier` が通るのか
+  - 通る
 
-## References
+## 参考
 
 - [Reduce maintenance effort with shared ESLint and Prettier configs](https://blog.logrocket.com/reduce-effort-shared-eslint-prettier-configs/)
 - [ESLintとPrettierの設定を共通化し、異なるプロジェクトでも同じ設定を使えるようにする](https://blog.35d.jp/2020-12-23-eslint-prettier-shareable-config)

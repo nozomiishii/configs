@@ -1,5 +1,7 @@
 # @nozomiishii/lefthook-config
 
+English | [日本語](./README.ja.md)
+
 Nozomi's Recommended [lefthook](https://github.com/evilmartians/lefthook) config.
 
 This package follows the **C pattern**: a thin preset (`index.yaml`) that

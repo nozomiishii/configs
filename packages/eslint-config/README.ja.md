@@ -1,8 +1,8 @@
 # @nozomiishii/eslint-config
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
-Nozomi's Recommended [eslint](https://eslint.org/) Config.
+Nozomi 推奨の [eslint](https://eslint.org/) 設定。
 
 <!-- Main Image -->
 <br>
@@ -14,19 +14,19 @@ Nozomi's Recommended [eslint](https://eslint.org/) Config.
 </div>
 <br>
 
-## Install
+## インストール
 
 ```bash
 pnpx @nozomiishii/eslint-config@latest
 ```
 
-## Manual
+## 手動セットアップ
 
 ```bash
 pnpm add -D eslint typescript @nozomiishii/eslint-config && touch eslint.config.ts
 ```
 
-Add the scripts:
+scripts の設定:
 
 ```bash
 pnpm pkg set scripts.eslint="eslint --max-warnings=0 --cache" \
@@ -52,7 +52,7 @@ pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
 export { default } from '@nozomiishii/eslint-config';
 ```
 
-## References🙏
+## 参考🙏
 
 - [sxzz/eslint-config](https://github.com/sxzz/eslint-config)
 - [antfu/eslint-config](https://github.com/antfu/eslint-config)

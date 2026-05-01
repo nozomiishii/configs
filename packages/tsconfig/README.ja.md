@@ -1,8 +1,8 @@
 # @nozomiishii/tsconfig
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
-Nozomi's Recommended [tsconfig](https://www.typescriptlang.org/tsconfig)
+Nozomi 推奨の [tsconfig](https://www.typescriptlang.org/tsconfig)
 
 <!-- Main Image -->
 <br>
@@ -14,19 +14,19 @@ Nozomi's Recommended [tsconfig](https://www.typescriptlang.org/tsconfig)
 </div>
 <br>
 
-## Install
+## インストール
 
 ```bash
 pnpm add -D @nozomiishii/tsconfig
 ```
 
-## Usage
+## 使い方
 
 `tsconfig.json`
 
-### tsup / tsdown / esbuild and other bundlers
+### tsup / tsdown / esbuild など bundler 系
 
-The base provides `module: "preserve"` (TS 5.4+), so bundler-based setups need minimal additional config.
+base が `module: "preserve"` (TS 5.4+) を提供するため、bundler 系では追加設定は最小限で済む。
 
 ```json
 {
@@ -43,7 +43,7 @@ The base provides `module: "preserve"` (TS 5.4+), so bundler-based setups need m
 
 ### tsc
 
-Override the base `module: "preserve"` with `NodeNext`.
+base の `module: "preserve"` を `NodeNext` で上書きする。
 
 ```json
 {
@@ -53,7 +53,7 @@ Override the base `module: "preserve"` with `NodeNext`.
     // ----------------------------------------------------------------
     // Transpiling
     // ----------------------------------------------------------------
-    // When transpiling with TSC
+    // TSC で Transpile する場合
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
     "outDir": "dist",
@@ -76,9 +76,9 @@ Override the base `module: "preserve"` with `NodeNext`.
 }
 ```
 
-### library (generating `.d.ts` in parallel with tsdown / tsup, etc.)
+### library (tsdown / tsup 等で `.d.ts` を並列生成する場合)
 
-A preset with `isolatedDeclarations: true` + `declaration: true` enabled. For libraries that want to generate type definition files quickly with tools other than `tsc`.
+`isolatedDeclarations: true` + `declaration: true` を有効化したプリセット。`tsc` 以外のツールで型定義ファイルを高速生成したいライブラリ向け。
 
 ```json
 {
@@ -95,7 +95,7 @@ A preset with `isolatedDeclarations: true` + `declaration: true` enabled. For li
 }
 ```
 
-## References
+## 参考
 
 - [The TSConfig Cheat Sheet](https://www.totaltypescript.com/tsconfig-cheat-sheet)
 - [tsconfig/bases](https://github.com/tsconfig/bases)

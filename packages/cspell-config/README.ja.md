@@ -1,8 +1,8 @@
 # @nozomiishii/cspell-config
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
-Nozomi's Recommended [cspell](https://cspell.org/) config.
+Nozomi 推奨の [cspell](https://cspell.org/) 設定。
 
 <!-- Main Image -->
 <br>
@@ -14,9 +14,9 @@ Nozomi's Recommended [cspell](https://cspell.org/) config.
 </div>
 <br>
 
-## Gist
+## 概要
 
-### Run
+### 実行
 
 ```sh
 pnpx @nozomiishii/cspell-config "**"
