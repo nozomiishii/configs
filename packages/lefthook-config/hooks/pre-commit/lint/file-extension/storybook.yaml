@@ -1,6 +1,0 @@
-pre-commit:
-  jobs:
-    - name: lint-file-extension-storybook
-      files: git diff --name-only --staged
-      glob: '*.story.{tsx,mdx}'
-      run: echo "Error! \"*.story.{tsx,mdx}\" extension found, please use \"*.stories.{tsx,mdx}\" instead." && exit 1

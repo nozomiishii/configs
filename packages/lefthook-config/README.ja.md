@@ -54,9 +54,7 @@ extends:
 - `hooks/commit-msg/commitlint.yaml` — `nozo-commitlint`（`@nozomiishii/commitlint-config` が提供）を実行
 - `hooks/post-merge/update-node-modules.yaml` — pnpm > bun > npm > yarn
 - `hooks/post-merge/cleanup-merged.yaml` — このパッケージが提供する `nozo-git-harvest` shim 経由で [`git-harvest`](https://github.com/nozomiishii/git-harvest) を実行
-- `hooks/pre-commit/format/prettier.yaml`
-- `hooks/pre-commit/lint/markdown.yaml`
-- `hooks/pre-commit/lint/file-extension/{storybook,test,yaml}.yaml`
+- `hooks/pre-commit/yaml.yaml` — ステージしたファイルが `.yml` 拡張子だった場合にコミットを失敗させる（`.yaml` を強制）
 
 ## 設定を書く際のルール（重要）
 
