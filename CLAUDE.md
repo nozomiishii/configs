@@ -56,3 +56,4 @@ pnpm postinstall
 ## リリース・Conventional Commits
 
 - `BREAKING CHANGE:` フッターと `feat!:` / `fix!:` の `!` 修飾は、**リリースされるパッケージ・公開アセットの互換性を破る変更にのみ**使用する。CI / workflows / branch protection / リポジトリ運用上の変更には使わない。これらの注意事項は PR 本文に記述する（release-please など自動リリースツールが major / minor バンプを誤って行い、CHANGELOG に `⚠ BREAKING CHANGES` セクションを誤生成するのを防ぐため。実例: 2026-04-25 にこのリポジトリ群で `chore: migrate reusable workflows to v3.0.0` PR が誤って BREAKING CHANGE として記録された）。
+- shared-config (例: `prettier-config`) の挙動変更で発生する cascade reformat は、**設定変更 PR (`feat(<config>)!: ...`) と必ず別 PR に分離**し、scope なしの `chore: reformat ...` で出すこと。同一 PR の squash commit に混ざると release-please の path-based 振り分けにより、変更 scope と無関係なパッケージにも `⚠ BREAKING CHANGES` セクションと minor バンプが波及する（実例: 2026-05-01 の PR #2140 / #2141 が release PR #2128 で全パッケージに BREAKING を誤付与）。
