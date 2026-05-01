@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Shareable [commitlint](https://commitlint.js.org) config.
+Shared [commitlint](https://commitlint.js.org) config.
 
 <!-- Main Image -->
 <br>

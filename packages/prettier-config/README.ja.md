@@ -2,7 +2,7 @@
 
 [English](./README.md) | 日本語
 
-共有可能な [Prettier](https://prettier.io) 設定。
+共通の [Prettier](https://prettier.io) 設定。
 
 <!-- Main Image -->
 <br>

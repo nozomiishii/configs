@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Shareable [eslint](https://eslint.org/) config.
+Shared [eslint](https://eslint.org/) config.
 
 <!-- Main Image -->
 <br>

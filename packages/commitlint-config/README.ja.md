@@ -2,7 +2,7 @@
 
 [English](./README.md) | 日本語
 
-共有可能な [commitlint](https://commitlint.js.org) 設定。
+共通の [commitlint](https://commitlint.js.org) 設定。
 
 <!-- Main Image -->
 <br>

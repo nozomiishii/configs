@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Shareable [tsconfig](https://www.typescriptlang.org/tsconfig).
+Shared [tsconfig](https://www.typescriptlang.org/tsconfig).
 
 <!-- Main Image -->
 <br>
