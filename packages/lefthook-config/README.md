@@ -1,6 +1,8 @@
 # @nozomiishii/lefthook-config
 
-Nozomi's Recommended [lefthook](https://github.com/evilmartians/lefthook) config.
+English | [日本語](./README.ja.md)
+
+Shared [lefthook](https://github.com/evilmartians/lefthook) config.
 
 This package follows a **preset + fragments** layout: a thin preset
 (`index.yaml`) that `extends` reusable fragments

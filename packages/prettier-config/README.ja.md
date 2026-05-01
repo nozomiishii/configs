@@ -1,8 +1,8 @@
 # @nozomiishii/prettier-config
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
-Shared [Prettier](https://prettier.io) config.
+共通の [Prettier](https://prettier.io) 設定。
 
 <!-- Main Image -->
 <br>
@@ -14,19 +14,19 @@ Shared [Prettier](https://prettier.io) config.
 </div>
 <br>
 
-## Install
+## インストール
 
 ```bash
 pnpx @nozomiishii/prettier-config@latest
 ```
 
-## Manual
+## 手動セットアップ
 
 ```bash
 pnpm add -D @nozomiishii/prettier-config
 ```
 
-Add the scripts:
+scripts の設定:
 
 ```bash
 npm pkg set type="module"
@@ -54,6 +54,6 @@ npm pkg set scripts.prettier="prettier . --ignore-unknown"
 export { default } from '@nozomiishii/prettier-config';
 ```
 
-## Included Plugins
+## 同梱プラグイン
 
 - [prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)

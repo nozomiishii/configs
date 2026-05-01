@@ -93,30 +93,6 @@
     "noImplicitOverride": true,
 
     // ----------------------------------------------------------------
-    // Transpiling
-    // ----------------------------------------------------------------
-    // tsconfig.tsbuildinfoを生成して差分コンパイルにより時間短縮するか
-    // "incremental": true,
-
-    // TSCでTranspileする場合 (base の `module: "preserve"` を上書きする)
-    // "moduleResolution": "NodeNext",
-    // "module": "NodeNext",
-    // "outDir": "dist",
-    // "sourceMap": true,
-
-    // TSC以外でTranspileする場合 (base の `module: "preserve"` で十分なケースが多い)
-    // "noEmit": true,
-
-    /* ライブラリの場合 */
-    // "declaration": true,
-
-    /* monorepoでライブラリの場合 */
-    // "declaration": true,
-    // "composite": true,
-    // "sourceMap": true,
-    // "declarationMap": true,
-
-    // ----------------------------------------------------------------
     // JSX
     // ----------------------------------------------------------------
     // tsxファイルの変換方法。preserveは.jsファイルに変換せずにそのまま.jsxを出力する

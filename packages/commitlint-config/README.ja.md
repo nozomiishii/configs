@@ -1,8 +1,8 @@
 # @nozomiishii/commitlint-config
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
-Shared [commitlint](https://commitlint.js.org) config.
+共通の [commitlint](https://commitlint.js.org) 設定。
 
 <!-- Main Image -->
 <br>
@@ -14,15 +14,15 @@ Shared [commitlint](https://commitlint.js.org) config.
 </div>
 <br>
 
-## Install
+## インストール
 
 ```bash
 pnpm add -D @nozomiishii/commitlint-config
 ```
 
-## Usage
+## 使い方
 
-Add `commitlint.config.ts` (or `.js`) that extends this package:
+このパッケージを extend する `commitlint.config.ts`（もしくは `.js`）を追加します:
 
 ```ts
 import config from '@nozomiishii/commitlint-config';
@@ -30,9 +30,7 @@ import config from '@nozomiishii/commitlint-config';
 export default config;
 ```
 
-The package also ships a namespaced bin, `nozo-commitlint`, which wraps the
-pinned `@commitlint/cli`. Lefthook configs (e.g. `@nozomiishii/lefthook-config`)
-invoke the shim directly:
+このパッケージは pin された `@commitlint/cli` をラップする `nozo-commitlint` という namespace 付きの bin も同梱しています。Lefthook の設定（例: `@nozomiishii/lefthook-config`）からはこの shim を直接呼び出します:
 
 ```yaml
 commit-msg:

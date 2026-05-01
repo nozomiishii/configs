@@ -1,6 +1,8 @@
 # @nozomiishii/tsconfig
 
-Nozomi's Recommended [tsconfig](https://www.typescriptlang.org/tsconfig)
+English | [日本語](./README.ja.md)
+
+Shared [tsconfig](https://www.typescriptlang.org/tsconfig).
 
 <!-- Main Image -->
 <br>
@@ -20,74 +22,20 @@ pnpm add -D @nozomiishii/tsconfig
 
 ## Usage
 
-`tsconfig.json`
+Pick the variant for your setup. Each file is a working `tsconfig` you can `extends`:
 
-### tsup / tsdown / esbuild など bundler 系
+- [`@nozomiishii/tsconfig`](./tsconfig.json) — base preset (`module: "preserve"` + strict defaults).
+- [`@nozomiishii/tsconfig/tsconfig.bundler.json`](./tsconfig.bundler.json) — for tsup / tsdown / esbuild and other bundlers (`noEmit: true`).
+- [`@nozomiishii/tsconfig/tsconfig.tsc.json`](./tsconfig.tsc.json) — for `tsc` transpile (`NodeNext` + `outDir` + sourceMap).
+- [`@nozomiishii/tsconfig/tsconfig.lib.json`](./tsconfig.lib.json) — for libraries (`declaration` + `isolatedDeclarations`).
+- [`@nozomiishii/tsconfig/tsconfig.nextjs.json`](./tsconfig.nextjs.json) — for Next.js (`jsx` + Next.js plugin, etc.).
 
-base が `module: "preserve"` (TS 5.4+) を提供するため、bundler 系では追加設定は最小限で済む。
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig",
-
-  "compilerOptions": {
-    "noEmit": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
-}
-```
-
-### tsc
-
-base の `module: "preserve"` を `NodeNext` で上書きする。
+After extending, add your own `include` / `exclude` / `baseUrl`:
 
 ```json
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig",
-  "compilerOptions": {
-    // ----------------------------------------------------------------
-    // Transpiling
-    // ----------------------------------------------------------------
-    // TSCでTranspileする場合
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "outDir": "dist",
-    "sourceMap": true
-  }
-}
-```
-
-### nextjs
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig/tsconfig.nextjs.json",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
-}
-```
-
-### library (tsdown / tsup 等で `.d.ts` を並列生成する場合)
-
-`isolatedDeclarations: true` + `declaration: true` を有効化したプリセット。`tsc` 以外のツールで型定義ファイルを高速生成したいライブラリ向け。
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig/tsconfig.lib.json",
-  "compilerOptions": {
-    "moduleResolution": "Bundler",
-    "module": "ESNext",
-    "outDir": "dist",
-    "noEmit": false
-  },
+  "extends": "@nozomiishii/tsconfig/tsconfig.bundler.json",
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "@nozomiishii/tsconfig/tsconfig.tsc.json",
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+    // ----------------------------------------------------------------
+    // Transpiling
+    // ----------------------------------------------------------------
+    // tsc で transpile する場合 (base の `module: "preserve"` を上書き)
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "outDir": "dist",
+    "sourceMap": true
+  }
+}

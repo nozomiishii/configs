@@ -1,6 +1,6 @@
 # @nozomiishii/postinstall
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
 <!-- Main Image -->
 <br>
@@ -12,21 +12,21 @@ English | [日本語](./README.ja.md)
 </div>
 <br>
 
-## Install
+## インストール
 
 ```bash
 pnpm add -D @nozomiishii/postinstall
 ```
 
-## Usage
+## 使い方
 
-Add this package to your project's postinstall script using pnpm CLI
+pnpm CLI でこのパッケージをプロジェクトの postinstall スクリプトに追加します:
 
 ```bash
 pnpm pkg set scripts.postinstall="postinstall"
 ```
 
-Your package.json should contain this configuration
+`package.json` は次の設定を含むはずです:
 
 `package.json`
 
@@ -36,7 +36,7 @@ Your package.json should contain this configuration
 }
 ```
 
-Run install to trigger the postinstall script which sets up development tools
+`pnpm install` を実行すると postinstall スクリプトが起動し、開発ツールがセットアップされます:
 
 ```bash
 pnpm install

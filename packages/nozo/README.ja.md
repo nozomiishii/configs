@@ -1,6 +1,6 @@
 # Nozomi config manager
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
 <!-- Main Image -->
 <br>
@@ -9,4 +9,4 @@ English | [日本語](./README.ja.md)
 </div>
 <br>
 
-> Project init. Stay tuned.
+> プロジェクト初期化中。お楽しみに。

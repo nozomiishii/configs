@@ -1,8 +1,8 @@
 # @nozomiishii/markdownlint-cli2-config
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
-Shared [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) config.
+共通の [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) 設定。
 
 <!-- Main Image -->
 <br>
@@ -14,7 +14,7 @@ Shared [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) conf
 </div>
 <br>
 
-## Install
+## インストール
 
 ```bash
 pnpx @nozomiishii/markdownlint-cli2-config@latest

@@ -1,8 +1,8 @@
 # @nozomiishii/cspell-config
 
-English | [日本語](./README.ja.md)
+[English](./README.md) | 日本語
 
-Shared [cspell](https://cspell.org/) config.
+共通の [cspell](https://cspell.org/) 設定。
 
 <!-- Main Image -->
 <br>
@@ -14,7 +14,7 @@ Shared [cspell](https://cspell.org/) config.
 </div>
 <br>
 
-## Install
+## インストール
 
 ```sh
 pnpx @nozomiishii/cspell-config "**"
