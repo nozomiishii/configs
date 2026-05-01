@@ -2,7 +2,7 @@
 
 [English](./README.md) | 日本語
 
-Nozomi 推奨の [eslint](https://eslint.org/) 設定。
+共通の [eslint](https://eslint.org/) 設定。
 
 <!-- Main Image -->
 <br>

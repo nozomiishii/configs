@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Nozomi's recommended [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) config.
+Shared [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) config.
 
 <!-- Main Image -->
 <br>

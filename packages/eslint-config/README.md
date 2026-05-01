@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Nozomi's recommended [eslint](https://eslint.org/) config.
+Shared [eslint](https://eslint.org/) config.
 
 <!-- Main Image -->
 <br>

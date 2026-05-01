@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Nozomi's recommended [Prettier](https://prettier.io) config.
+Shared [Prettier](https://prettier.io) config.
 
 <!-- Main Image -->
 <br>

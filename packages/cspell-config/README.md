@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Nozomi's recommended [cspell](https://cspell.org/) config.
+Shared [cspell](https://cspell.org/) config.
 
 <!-- Main Image -->
 <br>
