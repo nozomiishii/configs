@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Shared [Prettier](https://prettier.io) config.
+Shareable [Prettier](https://prettier.io) config.
 
 <!-- Main Image -->
 <br>

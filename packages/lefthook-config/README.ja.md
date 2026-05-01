@@ -2,7 +2,7 @@
 
 [English](./README.md) | 日本語
 
-共通の [lefthook](https://github.com/evilmartians/lefthook) 設定。
+共有可能な [lefthook](https://github.com/evilmartians/lefthook) 設定。
 
 このパッケージは **C パターン** を採用しています: 薄いプリセット（`index.yaml`）が再利用可能なフラグメント（`hooks/<hook>/<job>.yaml`）を `extends` で取り込む構成です。利用側はプリセット全体を取り込むことも、個別のフラグメントだけを cherry-pick することもできます。
 

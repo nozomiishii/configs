@@ -2,7 +2,7 @@
 
 [English](./README.md) | 日本語
 
-共通の [tsconfig](https://www.typescriptlang.org/tsconfig)。
+共有可能な [tsconfig](https://www.typescriptlang.org/tsconfig)。
 
 <!-- Main Image -->
 <br>

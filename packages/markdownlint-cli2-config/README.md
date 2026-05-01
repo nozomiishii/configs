@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Shared [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) config.
+Shareable [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) config.
 
 <!-- Main Image -->
 <br>

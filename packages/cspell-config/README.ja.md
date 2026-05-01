@@ -2,7 +2,7 @@
 
 [English](./README.md) | 日本語
 
-共通の [cspell](https://cspell.org/) 設定。
+共有可能な [cspell](https://cspell.org/) 設定。
 
 <!-- Main Image -->
 <br>
