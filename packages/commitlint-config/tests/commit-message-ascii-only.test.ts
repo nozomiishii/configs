@@ -54,6 +54,17 @@ describe("commit-message-ascii-only (unit)", () => {
     expect(valid).toBe(false);
   });
 
+  it("notes の title に日本語が含まれる場合は失敗する", () => {
+    // ルール実装は title と text を両方検査対象に含めている契約。
+    // 実用上 title はほぼ "BREAKING CHANGE" 固定だが、契約をテストで固定する。
+    const [valid] = runRule({
+      body: "English body.",
+      footer: null,
+      notes: [{ title: "破壊的変更", text: "english" }],
+    });
+    expect(valid).toBe(false);
+  });
+
   it("失敗時に固定のエラーメッセージを返す", () => {
     const [valid, message] = runRule({ body: "日本語", footer: null, notes: [] });
     expect(valid).toBe(false);
