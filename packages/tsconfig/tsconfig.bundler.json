@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "@nozomiishii/tsconfig/tsconfig.bundler.json",
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+    // ----------------------------------------------------------------
+    // Transpiling
+    // ----------------------------------------------------------------
+    // tsup / tsdown / esbuild などが transpile するため TypeScript は emit しない
+    "noEmit": true
+  }
+}

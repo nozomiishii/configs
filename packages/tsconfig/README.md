@@ -22,12 +22,24 @@ pnpm add -D @nozomiishii/tsconfig
 
 ## Usage
 
-Pick the example closest to your setup and copy its `tsconfig.json`:
+Pick the variant for your setup. Each file is a working `tsconfig` you can `extends`:
 
-- [**Bundler** (tsup / tsdown / esbuild, …)](./examples/bundler/tsconfig.json) — the base provides `module: "preserve"` (TS 5.4+), so additional config stays minimal.
-- [**tsc**](./examples/tsc/tsconfig.json) — overrides the base `module: "preserve"` with `NodeNext`.
-- [**Next.js**](./examples/nextjs/tsconfig.json) — extends `@nozomiishii/tsconfig/tsconfig.nextjs.json`.
-- [**Library** (`.d.ts` alongside builds with tsdown / tsup, etc.)](./examples/library/tsconfig.json) — preset with `isolatedDeclarations: true` + `declaration: true` enabled.
+- [`@nozomiishii/tsconfig`](./tsconfig.json) — base preset (`module: "preserve"` + strict defaults).
+- [`@nozomiishii/tsconfig/tsconfig.bundler.json`](./tsconfig.bundler.json) — for tsup / tsdown / esbuild and other bundlers (`noEmit: true`).
+- [`@nozomiishii/tsconfig/tsconfig.tsc.json`](./tsconfig.tsc.json) — for `tsc` transpile (`NodeNext` + `outDir` + sourceMap).
+- [`@nozomiishii/tsconfig/tsconfig.lib.json`](./tsconfig.lib.json) — for libraries (`declaration` + `isolatedDeclarations`).
+- [`@nozomiishii/tsconfig/tsconfig.nextjs.json`](./tsconfig.nextjs.json) — for Next.js (`jsx` + Next.js plugin, etc.).
+
+After extending, add your own `include` / `exclude` / `baseUrl`:
+
+```json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@nozomiishii/tsconfig/tsconfig.bundler.json",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+```
 
 ## References
 

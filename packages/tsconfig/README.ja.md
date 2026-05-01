@@ -22,12 +22,24 @@ pnpm add -D @nozomiishii/tsconfig
 
 ## 使い方
 
-セットアップに近い例を選び、その `tsconfig.json` をコピーして使う:
+セットアップに合った variant を選んで `extends` する。各ファイル自体がそのまま動く `tsconfig` 実例を兼ねている:
 
-- [**Bundler** (tsup / tsdown / esbuild など)](./examples/bundler/tsconfig.json) — base が `module: "preserve"` (TS 5.4+) を提供するため、追加設定は最小限で済む。
-- [**tsc**](./examples/tsc/tsconfig.json) — base の `module: "preserve"` を `NodeNext` で上書き。
-- [**Next.js**](./examples/nextjs/tsconfig.json) — `@nozomiishii/tsconfig/tsconfig.nextjs.json` を extend する形。
-- [**ライブラリ** （tsdown / tsup 等で `.d.ts` を並列生成する場合）](./examples/library/tsconfig.json) — `isolatedDeclarations: true` + `declaration: true` を有効化したプリセット。
+- [`@nozomiishii/tsconfig`](./tsconfig.json) — base プリセット (`module: "preserve"` + strict 系)。
+- [`@nozomiishii/tsconfig/tsconfig.bundler.json`](./tsconfig.bundler.json) — tsup / tsdown / esbuild など bundler 系向け (`noEmit: true`)。
+- [`@nozomiishii/tsconfig/tsconfig.tsc.json`](./tsconfig.tsc.json) — `tsc` で transpile する場合 (`NodeNext` + `outDir` + sourceMap)。
+- [`@nozomiishii/tsconfig/tsconfig.lib.json`](./tsconfig.lib.json) — ライブラリ向け (`declaration` + `isolatedDeclarations`)。
+- [`@nozomiishii/tsconfig/tsconfig.nextjs.json`](./tsconfig.nextjs.json) — Next.js 向け (`jsx` + Next.js plugin など)。
+
+extends したあとに `include` / `exclude` / `baseUrl` などプロジェクト固有設定を足す:
+
+```json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@nozomiishii/tsconfig/tsconfig.bundler.json",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+```
 
 ## 参考
 
