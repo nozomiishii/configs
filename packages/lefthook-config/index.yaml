@@ -1,4 +1,4 @@
-# @nozomiishii/lefthook-config — recommended preset (C pattern)
+# @nozomiishii/lefthook-config — recommended preset (preset + fragments)
 #
 # This preset is composed of fragments via `extends`. Consumers can either
 # extend this file as-is, or cherry-pick individual fragments under hooks/.
