@@ -75,6 +75,25 @@ pnpm add -D @nozomiishii/tsconfig
 }
 ```
 
+### library (tsdown / tsup 等で `.d.ts` を並列生成する場合)
+
+`isolatedDeclarations: true` + `declaration: true` を有効化したプリセット。`tsc` 以外のツールで型定義ファイルを高速生成したいライブラリ向け。
+
+```json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@nozomiishii/tsconfig/tsconfig.lib.json",
+  "compilerOptions": {
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "outDir": "dist",
+    "noEmit": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+```
+
 ## References
 
 - [The TSConfig Cheat Sheet](https://www.totaltypescript.com/tsconfig-cheat-sheet)

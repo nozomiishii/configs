@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "@nozomiishii/tsconfig/tsconfig.lib.json",
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+    // ----------------------------------------------------------------
+    // Library Declaration emit
+    // ----------------------------------------------------------------
+    // .d.tsファイルを生成する
+    "declaration": true,
+
+    // tsc以外のツール(tsdown / tsup / rolldown-plugin-dts等)で
+    // .d.tsを並列生成可能にする。全てのexportに明示的な型注釈を要求する
+    // https://www.typescriptlang.org/tsconfig/isolatedDeclarations.html
+    "isolatedDeclarations": true
+  }
+}
