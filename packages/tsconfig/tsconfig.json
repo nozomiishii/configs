@@ -55,6 +55,10 @@
     // useUnknownInCatchVariables
     // alwaysStrict
     // https://typescriptbook.jp/reference/tsconfig/strict
+    //
+    // TypeScript 6.0で`strict: true`がデフォルト化予定だが、
+    // 明示維持する: `exactOptionalPropertyTypes`の警告バグ報告
+    // (microsoft/TypeScript#63232)があり、明示の方が安全
     "strict": true,
 
     // 配列やオブジェクトへのインデックスアクセスを型安全にする
