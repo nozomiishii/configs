@@ -48,6 +48,9 @@ importers:
         specifier: 20.5.0
         version: 20.5.0
     devDependencies:
+      '@commitlint/lint':
+        specifier: 20.5.0
+        version: 20.5.0
       '@nozomiishii/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -57,6 +60,9 @@ importers:
       typescript:
         specifier: 6.0.3
         version: 6.0.3
+      vitest:
+        specifier: 4.1.5
+        version: 4.1.5(@types/node@24.12.2)(vite@8.0.10(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3))
 
   packages/cspell-config:
     dependencies:
