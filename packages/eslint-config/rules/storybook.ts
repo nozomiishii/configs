@@ -26,12 +26,14 @@ export function storybook() {
         /**
          * https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/src/configs/flat/csf-strict.ts
          */
-        ...(eslintPluginStorybook.configs["flat/csf-strict"] as unknown as Linter.Config[])[1]?.rules,
+        ...(eslintPluginStorybook.configs["flat/csf-strict"] as unknown as Linter.Config[])[1]
+          ?.rules,
 
         /**
          * https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/src/configs/flat/recommended.ts
          */
-        ...(eslintPluginStorybook.configs["flat/recommended"] as unknown as Linter.Config[])[1]?.rules,
+        ...(eslintPluginStorybook.configs["flat/recommended"] as unknown as Linter.Config[])[1]
+          ?.rules,
       },
     },
     {

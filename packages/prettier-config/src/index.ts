@@ -5,8 +5,8 @@ import type { Config } from "prettier";
  * {@link https://prettier.io/docs/en/options.html}
  */
 export default {
-  // 1 行あたりの文字数。Github のコードレビュー画面の幅に合わせて広めに取っている (default は 80)
-  printWidth: 119,
+  // 1 行あたりの文字数。default 80。型注釈言語コミュニティの収束点として 100 を採用 (Rust / Google Java / Apple swift-format / Linux kernel 2020 で 80 deprecate / OXC oxfmt 2025)。
+  printWidth: 100,
 
   // Prettier default タブ幅は 2 スペース
   tabWidth: 2,

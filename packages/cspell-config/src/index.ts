@@ -1,6 +1,8 @@
 import { fileURLToPath } from "node:url";
 
-const customDictionaryPath = fileURLToPath(new URL("../dictionaries/customised.txt", import.meta.url));
+const customDictionaryPath = fileURLToPath(
+  new URL("../dictionaries/customised.txt", import.meta.url),
+);
 
 /**
  * cspell configuration
