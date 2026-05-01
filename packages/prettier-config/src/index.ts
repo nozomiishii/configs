@@ -17,8 +17,8 @@ export default {
   // Prettier default 文末にセミコロンを付ける
   semi: true,
 
-  // ダブルクォート派だったが、tutorial の先生たちがシングルクォート多めだったので合わせた (default は false)
-  singleQuote: true,
+  // Prettier default ダブルクォートを使う (apostrophe を含む string と混在しにくく、Prettier の escape 最少優先 logic とも整合)
+  singleQuote: false,
 
   // Prettier default 必要なときだけプロパティ名をクオート
   quoteProps: 'as-needed',
