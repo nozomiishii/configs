@@ -1,6 +1,6 @@
-import pluginImportX from 'eslint-plugin-import-x';
-import { defineConfig } from 'eslint/config';
-import { name } from '../utils/name';
+import pluginImportX from "eslint-plugin-import-x";
+import { defineConfig } from "eslint/config";
+import { name } from "../utils/name";
 
 /**
  * @returns eslint-plugin-import-x
@@ -28,35 +28,35 @@ export function importX() {
   return defineConfig({
     // https://github.com/un-ts/eslint-plugin-import-x/blob/master/src/config/flat/typescript.ts
     ...pluginImportX.flatConfigs.typescript,
-    name: name('import-x'),
+    name: name("import-x"),
     rules: {
       /**
        * import文は先頭に書く
        *
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/first.md
        */
-      'import-x/first': 'warn',
+      "import-x/first": "warn",
 
       /**
        * 循環依存を禁止
        *
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-cycle.md
        */
-      'import-x/no-cycle': 'warn',
+      "import-x/no-cycle": "warn",
 
       /**
        * 同じモジュールの繰り返しインポートを禁止
        *
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-duplicates.md
        */
-      'import-x/no-duplicates': 'warn',
+      "import-x/no-duplicates": "warn",
 
       /**
        * default import名がモジュールのnamed export名と一致することを禁止
        *
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-named-as-default.md
        */
-      'import-x/no-named-as-default': 'warn',
+      "import-x/no-named-as-default": "warn",
     },
   });
 }

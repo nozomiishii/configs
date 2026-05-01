@@ -1,14 +1,14 @@
-name: 'Node.js with pnpm'
-description: 'Setup Node.js and install dependencies using pnpm'
+name: "Node.js with pnpm"
+description: "Setup Node.js and install dependencies using pnpm"
 
 inputs:
   working-directory:
-    description: 'keyword specifies the working directory where the command is run.'
+    description: "keyword specifies the working directory where the command is run."
     required: false
-    default: '.'
+    default: "."
 
 runs:
-  using: 'composite'
+  using: "composite"
 
   steps:
     - name: pnpm setup
@@ -19,7 +19,7 @@ runs:
       with:
         node-version-file: ${{ inputs.working-directory }}/package.json
         # Required for publishing packages to npm
-        registry-url: 'https://registry.npmjs.org'
+        registry-url: "https://registry.npmjs.org"
 
     - name: Install dependencies
       shell: bash

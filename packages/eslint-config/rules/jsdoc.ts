@@ -1,8 +1,8 @@
-import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
-import { defineConfig } from 'eslint/config';
-import { name } from '../utils/name';
+import eslintPluginJsdoc from "eslint-plugin-jsdoc";
+import { defineConfig } from "eslint/config";
+import { name } from "../utils/name";
 
-const configs = eslintPluginJsdoc.configs['flat/recommended-typescript'];
+const configs = eslintPluginJsdoc.configs["flat/recommended-typescript"];
 
 /**
  * @returns eslint-plugin-jsdoc
@@ -30,16 +30,16 @@ export function jsdoc() {
     // },
     {
       ...configs,
-      files: ['**/libs/**/*.ts', '**/utils/**/*.tsx'],
-      name: name('jsdoc'),
+      files: ["**/libs/**/*.ts", "**/utils/**/*.tsx"],
+      name: name("jsdoc"),
       rules: {
         ...configs.rules,
 
         /**
          * タグの順番
          */
-        'jsdoc/sort-tags': [
-          'warn',
+        "jsdoc/sort-tags": [
+          "warn",
           {
             reportIntraTagGroupSpacing: false,
           },
@@ -48,9 +48,9 @@ export function jsdoc() {
         /**
          * タグのごとにスペース開ける
          */
-        'jsdoc/tag-lines': [
-          'warn',
-          'always',
+        "jsdoc/tag-lines": [
+          "warn",
+          "always",
           {
             applyToEndTag: false,
             startLines: 1,

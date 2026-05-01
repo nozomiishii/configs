@@ -1,14 +1,14 @@
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath } from "node:url";
 
-const customDictionaryPath = fileURLToPath(new URL('../dictionaries/customised.txt', import.meta.url));
+const customDictionaryPath = fileURLToPath(new URL("../dictionaries/customised.txt", import.meta.url));
 
 /**
  * cspell configuration
  * {@link https://cspell.org/docs/Configuration}
  */
 export default {
-  version: '0.2',
-  language: 'en',
+  version: "0.2",
+  language: "en",
   // 外部辞書
   // cspellの辞書一覧 https://github.com/streetsidesoftware/cspell-dicts#all-dictionaries
   import: [],
@@ -17,35 +17,35 @@ export default {
   // 人名、プロジェクト依存、他のプロジェクトでも使えそうな単語集みたいなかんじで分類分けできたらいいかもしれない。
   dictionaryDefinitions: [
     {
-      name: 'custom-dictionary',
+      name: "custom-dictionary",
       path: customDictionaryPath,
       addWords: true,
     },
   ],
   dictionaries: [
     // Built-in dictionaries (alphabetical ascending order)
-    'bash',
-    'companies',
-    'css',
-    'docker',
-    'dotnet',
-    'en_US',
-    'en-gb',
-    'filetypes',
-    'fonts',
-    'fullstack',
-    'html',
-    'html-symbol-entities',
-    'networking-terms',
-    'node',
-    'npm',
-    'public-licenses',
-    'python',
-    'rust',
-    'softwareTerms',
-    'typescript',
+    "bash",
+    "companies",
+    "css",
+    "docker",
+    "dotnet",
+    "en_US",
+    "en-gb",
+    "filetypes",
+    "fonts",
+    "fullstack",
+    "html",
+    "html-symbol-entities",
+    "networking-terms",
+    "node",
+    "npm",
+    "public-licenses",
+    "python",
+    "rust",
+    "softwareTerms",
+    "typescript",
     // Custom dictionaries
-    'custom-dictionary',
+    "custom-dictionary",
   ],
   ignorePaths: [],
 };

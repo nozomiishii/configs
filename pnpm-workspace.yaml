@@ -8,20 +8,20 @@
 useNodeVersion: 24.15.0
 
 packages:
-  - 'packages/*'
+  - "packages/*"
 
 # モノレポのpackagesもシンボリックリンクで管理する
 linkWorkspacePackages: true
 
 # 依存解決のうまくいっていないdependenciesのdependenciesをrootのnode_modulesまで巻き上げる
 publicHoistPattern:
-  - '@types/*'
-  - '*eslint*'
-  - '*prettier*'
-  - '*storybook*'
+  - "@types/*"
+  - "*eslint*"
+  - "*prettier*"
+  - "*storybook*"
 
 # pinバージョンでインストールする
-savePrefix: ''
+savePrefix: ""
 
 # 公開から3日未満のバージョンをインストールしない（サプライチェーン攻撃対策）
 # https://pnpm.io/settings#minimumreleaseage

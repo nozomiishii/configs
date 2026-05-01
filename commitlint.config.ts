@@ -1,1 +1,1 @@
-export default { extends: ['@nozomiishii/commitlint-config'] };
+export default { extends: ["@nozomiishii/commitlint-config"] };

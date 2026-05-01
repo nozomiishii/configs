@@ -1,32 +1,32 @@
-import * as p from '@clack/prompts';
-import { defineCommand } from 'citty';
-import { consola } from 'consola';
+import * as p from "@clack/prompts";
+import { defineCommand } from "citty";
+import { consola } from "consola";
 
 export default defineCommand({
   meta: {
-    name: 'init',
-    description: 'Initialize a project with nozo configs',
+    name: "init",
+    description: "Initialize a project with nozo configs",
   },
   args: {
     tool: {
-      type: 'positional',
+      type: "positional",
       required: false,
-      description: 'Tool to set up (lefthook, commitlint, cspell)',
+      description: "Tool to set up (lefthook, commitlint, cspell)",
     },
     verbose: {
-      type: 'boolean',
-      alias: 'v',
-      description: 'Verbose output',
+      type: "boolean",
+      alias: "v",
+      description: "Verbose output",
     },
   },
   async run({ args }) {
     if (args.verbose) consola.level = 4;
 
-    p.intro('🥊 nozo init');
-    consola.info('init はまだ骨格だけです');
+    p.intro("🥊 nozo init");
+    consola.info("init はまだ骨格だけです");
     if (args.tool) {
       consola.info(`requested tool: ${args.tool}`);
     }
-    p.outro('done');
+    p.outro("done");
   },
 });

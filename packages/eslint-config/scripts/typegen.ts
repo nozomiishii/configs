@@ -1,5 +1,5 @@
-import typegen from 'eslint-typegen';
-import configs from '../eslint.config';
+import typegen from "eslint-typegen";
+import configs from "../eslint.config";
 
 /**
  * import typegen from 'eslint-typegen'
