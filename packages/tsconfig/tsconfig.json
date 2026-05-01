@@ -18,7 +18,16 @@
     // どのJavaScriptのバージョンに変換するか
     // 使うnodeバージョンによって変更する
     // 対応表 https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping
-    "target": "ES2023",
+    // ES2024でObject.groupBy / Promise.withResolvers / ArrayBuffer.prototype.transfer等の型が利用可能
+    // Node 22 LTS / Node 24 / 主要モダンブラウザは2026年時点でES2024をネイティブサポート
+    "target": "ES2024",
+
+    // バンドラー / トランスパイラ前提のmoduleモード (TS 5.4+)
+    // ECMAScript imports/exportsを変換せず保持し、moduleResolution: "bundler" を暗黙的に指定する
+    // tsupなどでtsc以外がtranspileするのが標準的な現状に最適
+    // tscでtranspileする場合はconsumer側で `module: "NodeNext"` 等に上書きする
+    // https://www.typescriptlang.org/tsconfig/module.html#preserve
+    "module": "preserve",
 
     // .jsファイルのインポートを許可するか
     "allowJs": true,
@@ -41,6 +50,19 @@
     // import typeやexport typeすることを強制
     // 可読性向上とトランスパイル時に不必要なimportが残ってしまうのを減らせる
     "verbatimModuleSyntax": true,
+
+    // typoした副作用importを silent に許す挙動を防止 (TS 5.6+)
+    // `import "./typo.css"` のような副作用importの解決失敗をエラー化
+    // TS 6.0でデフォルト化予定のため先行採用が安全
+    // CSS等のアンビエント宣言が必要な場合は `declare module "*.css";` を追加
+    // https://www.typescriptlang.org/tsconfig/#noUncheckedSideEffectImports
+    "noUncheckedSideEffectImports": true,
+
+    // Node 23.6+ の type-stripping や `tsgo` などでも実行可能なTypeScript構文に制限 (TS 5.8+)
+    // enum / runtime namespace / parameter properties をエラー化
+    // 既に `verbatimModuleSyntax: true` を採用しているため整合性が高い
+    // https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/
+    "erasableSyntaxOnly": true,
 
     // ----------------------------------------------------------------
     // Strictness
@@ -76,15 +98,13 @@
     // tsconfig.tsbuildinfoを生成して差分コンパイルにより時間短縮するか
     // "incremental": true,
 
-    // TSCでTranspileする場合
+    // TSCでTranspileする場合 (base の `module: "preserve"` を上書きする)
     // "moduleResolution": "NodeNext",
     // "module": "NodeNext",
     // "outDir": "dist",
     // "sourceMap": true,
 
-    // TSC以外でTranspileする場合
-    // "moduleResolution": "Bundler",
-    // "module": "ESNext",
+    // TSC以外でTranspileする場合 (base の `module: "preserve"` で十分なケースが多い)
     // "noEmit": true,
 
     /* ライブラリの場合 */
@@ -107,9 +127,9 @@
     // Libs
     // ----------------------------------------------------------------
     /* If your code runs in the DOM: */
-    // "lib": ["ES2023", "dom", "dom.iterable"]
+    // "lib": ["ES2024", "dom"]
     /* If your code doesn't run in the DOM: */
-    "lib": ["ES2023"]
+    "lib": ["ES2024"]
 
     // ----------------------------------------------------------------
     // Types

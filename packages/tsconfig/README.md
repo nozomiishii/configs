@@ -22,7 +22,9 @@ pnpm add -D @nozomiishii/tsconfig
 
 `tsconfig.json`
 
-### tsup
+### tsup / tsdown / esbuild など bundler 系
+
+base が `module: "preserve"` (TS 5.4+) を提供するため、bundler 系では追加設定は最小限で済む。
 
 ```json
 {
@@ -30,11 +32,6 @@ pnpm add -D @nozomiishii/tsconfig
   "extends": "@nozomiishii/tsconfig",
 
   "compilerOptions": {
-    // ----------------------------------------------------------------
-    // Transpiling
-    // ----------------------------------------------------------------
-    "moduleResolution": "Bundler",
-    "module": "ESNext",
     "noEmit": true
   },
   "include": ["src/**/*"],
@@ -43,6 +40,8 @@ pnpm add -D @nozomiishii/tsconfig
 ```
 
 ### tsc
+
+base の `module: "preserve"` を `NodeNext` で上書きする。
 
 ```json
 {
