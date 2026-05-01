@@ -2,22 +2,20 @@
 
 ## [0.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.4.6...@nozomiishii/cspell-config-v0.5.0) (2026-05-01)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **prettier-config:** The printWidth default is changed from 119 to 100. Lines in the 100-119 range will be re-formatted in consumer codebases on the next format run.
-* **prettier-config:** The singleQuote default is changed from true to false. Consumer repositories will see string literals re-formatted from single to double quotes.
+- **prettier-config:** The printWidth default is changed from 119 to 100. Lines in the 100-119 range will be re-formatted in consumer codebases on the next format run.
+- **prettier-config:** The singleQuote default is changed from true to false. Consumer repositories will see string literals re-formatted from single to double quotes.
 
 ### Features
 
-* **cspell-config:** ship nozo-cspell shim ([#2129](https://github.com/nozomiishii/configs/issues/2129)) ([9ad7963](https://github.com/nozomiishii/configs/commit/9ad7963693e62c8ac70fb4d6618c657ceb424158)), closes [#2118](https://github.com/nozomiishii/configs/issues/2118)
-* **prettier-config:** change printWidth default from 119 to 100 ([#2141](https://github.com/nozomiishii/configs/issues/2141)) ([949e037](https://github.com/nozomiishii/configs/commit/949e037f45d4ccfd8647fceeea4338bd5b6f697e))
-* **prettier-config:** revert singleQuote to Prettier default ([#2140](https://github.com/nozomiishii/configs/issues/2140)) ([c2f2ff5](https://github.com/nozomiishii/configs/commit/c2f2ff5ef8f68d53e7caf67206e95b8c16a10037))
-
+- **cspell-config:** ship nozo-cspell shim ([#2129](https://github.com/nozomiishii/configs/issues/2129)) ([9ad7963](https://github.com/nozomiishii/configs/commit/9ad7963693e62c8ac70fb4d6618c657ceb424158)), closes [#2118](https://github.com/nozomiishii/configs/issues/2118)
+- **prettier-config:** change printWidth default from 119 to 100 ([#2141](https://github.com/nozomiishii/configs/issues/2141)) ([949e037](https://github.com/nozomiishii/configs/commit/949e037f45d4ccfd8647fceeea4338bd5b6f697e))
+- **prettier-config:** revert singleQuote to Prettier default ([#2140](https://github.com/nozomiishii/configs/issues/2140)) ([c2f2ff5](https://github.com/nozomiishii/configs/commit/c2f2ff5ef8f68d53e7caf67206e95b8c16a10037))
 
 ### Bug Fixes
 
-* add Japanese READMEs for shared config packages ([#2151](https://github.com/nozomiishii/configs/issues/2151)) ([b5e96f1](https://github.com/nozomiishii/configs/commit/b5e96f1cb4ad35725b44cf9b19cd01b02d798fa9))
+- add Japanese READMEs for shared config packages ([#2151](https://github.com/nozomiishii/configs/issues/2151)) ([b5e96f1](https://github.com/nozomiishii/configs/commit/b5e96f1cb4ad35725b44cf9b19cd01b02d798fa9))
 
 ## [0.4.6](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.4.5...@nozomiishii/cspell-config-v0.4.6) (2026-04-27)
 

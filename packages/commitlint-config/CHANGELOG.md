@@ -2,27 +2,24 @@
 
 ## [0.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.1.0...@nozomiishii/commitlint-config-v0.2.0) (2026-05-01)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **commitlint-config:** rule renamed from `body-ascii-only` to `commit-message-ascii-only`. The new rule also fires when non-ASCII appears in the footer or in note text, not just the body.
-* **commitlint-config:** rule renamed from `body-ascii-only` to `commit-message-ascii-only`. The new rule also fires when non-ASCII appears in the footer or in note text, not just the body.
-* **prettier-config:** The singleQuote default is changed from true to false. Consumer repositories will see string literals re-formatted from single to double quotes.
+- **commitlint-config:** rule renamed from `body-ascii-only` to `commit-message-ascii-only`. The new rule also fires when non-ASCII appears in the footer or in note text, not just the body.
+- **commitlint-config:** rule renamed from `body-ascii-only` to `commit-message-ascii-only`. The new rule also fires when non-ASCII appears in the footer or in note text, not just the body.
+- **prettier-config:** The singleQuote default is changed from true to false. Consumer repositories will see string literals re-formatted from single to double quotes.
 
 ### Features
 
-* **commitlint-config:** rename body-ascii-only to commit-message-ascii-only ([#2147](https://github.com/nozomiishii/configs/issues/2147)) ([fc1bbf9](https://github.com/nozomiishii/configs/commit/fc1bbf95213eff33e03c842473bb84c516cef5bf))
-* **prettier-config:** revert singleQuote to Prettier default ([#2140](https://github.com/nozomiishii/configs/issues/2140)) ([c2f2ff5](https://github.com/nozomiishii/configs/commit/c2f2ff5ef8f68d53e7caf67206e95b8c16a10037))
-
+- **commitlint-config:** rename body-ascii-only to commit-message-ascii-only ([#2147](https://github.com/nozomiishii/configs/issues/2147)) ([fc1bbf9](https://github.com/nozomiishii/configs/commit/fc1bbf95213eff33e03c842473bb84c516cef5bf))
+- **prettier-config:** revert singleQuote to Prettier default ([#2140](https://github.com/nozomiishii/configs/issues/2140)) ([c2f2ff5](https://github.com/nozomiishii/configs/commit/c2f2ff5ef8f68d53e7caf67206e95b8c16a10037))
 
 ### Bug Fixes
 
-* add Japanese READMEs for shared config packages ([#2151](https://github.com/nozomiishii/configs/issues/2151)) ([b5e96f1](https://github.com/nozomiishii/configs/commit/b5e96f1cb4ad35725b44cf9b19cd01b02d798fa9))
-
+- add Japanese READMEs for shared config packages ([#2151](https://github.com/nozomiishii/configs/issues/2151)) ([b5e96f1](https://github.com/nozomiishii/configs/commit/b5e96f1cb4ad35725b44cf9b19cd01b02d798fa9))
 
 ### Miscellaneous
 
-* **commitlint-config:** add vitest tests for commit-message-ascii-only ([#2148](https://github.com/nozomiishii/configs/issues/2148)) ([7f80831](https://github.com/nozomiishii/configs/commit/7f808312173fa771ee6e37a082afd7599a26cfc1))
+- **commitlint-config:** add vitest tests for commit-message-ascii-only ([#2148](https://github.com/nozomiishii/configs/issues/2148)) ([7f80831](https://github.com/nozomiishii/configs/commit/7f808312173fa771ee6e37a082afd7599a26cfc1))
 
 ## [0.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.0.11...@nozomiishii/commitlint-config-v0.1.0) (2026-04-28)
 
