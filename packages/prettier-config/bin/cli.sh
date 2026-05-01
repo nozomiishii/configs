@@ -15,7 +15,7 @@ echo -e "Adding npm scripts..."
 npm pkg set type="module"
 npm pkg set scripts.format="pnpm prettier . --check"
 npm pkg set scripts.format:fix="pnpm prettier . --write"
-npm pkg set scripts.prettier="prettier --ignore-unknown --ignore-path ./.gitignore"
+npm pkg set scripts.prettier="prettier --ignore-unknown"
 
 echo -e "Creating prettier.config.js"
 find . -type f -name '.prettierrc*' -delete
