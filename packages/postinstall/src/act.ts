@@ -1,15 +1,15 @@
-import { fs, echo, path } from 'zx';
+import { fs, echo, path } from "zx";
 
-const TARGET_FILE = '.actrc';
-const EXAMPLE_FILE = '.actrc.example';
+const TARGET_FILE = ".actrc";
+const EXAMPLE_FILE = ".actrc.example";
 
 /**
  * Setup act
  */
 export async function setupAct() {
-  echo('Setup act');
+  echo("Setup act");
 
-  const projectRoot = process.env.INIT_CWD || '.';
+  const projectRoot = process.env.INIT_CWD || ".";
   const actrcExamplePath = path.resolve(projectRoot, EXAMPLE_FILE);
   const targetFilePath = path.resolve(projectRoot, TARGET_FILE);
 

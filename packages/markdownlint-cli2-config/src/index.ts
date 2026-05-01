@@ -13,7 +13,7 @@ export default {
      * {@link https://github.com/DavidAnson/markdownlint/blob/main/doc/md004.md}
      */
     MD004: {
-      style: 'dash',
+      style: "dash",
     },
 
     /**
@@ -37,5 +37,5 @@ export default {
     MD033: false,
   },
 
-  ignores: ['**/node_modules', '**/submodules', 'LICENSE', '.git'],
+  ignores: ["**/node_modules", "**/submodules", "LICENSE", ".git"],
 };

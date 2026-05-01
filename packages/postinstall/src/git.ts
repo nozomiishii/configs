@@ -1,10 +1,10 @@
-import { echo, $ } from 'zx';
+import { echo, $ } from "zx";
 
 /**
  * Setup git
  */
 export async function setupGit() {
-  echo('Setup git');
+  echo("Setup git");
 
   // Gitでファイルの大文字小文字を区別
   await $`git config core.ignorecase false`;

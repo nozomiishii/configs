@@ -1,7 +1,7 @@
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
-import { defineConfig } from 'eslint/config';
-import globals from 'globals';
-import { name } from '../utils/name';
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import { defineConfig } from "eslint/config";
+import globals from "globals";
+import { name } from "../utils/name";
 
 /**
  * @returns eslint-plugin-unicorn
@@ -14,7 +14,7 @@ export function unicorn() {
       languageOptions: {
         globals: globals.builtin,
       },
-      name: name('unicorn'),
+      name: name("unicorn"),
       plugins: {
         unicorn: eslintPluginUnicorn,
       },
@@ -26,14 +26,14 @@ export function unicorn() {
          *
          * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-null.md
          */
-        'unicorn/no-null': 'off',
+        "unicorn/no-null": "off",
 
         /**
          * 略語の制限。やるなら明示的にreplacementを記載していく
          *
          * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
          */
-        'unicorn/prevent-abbreviations': 'off',
+        "unicorn/prevent-abbreviations": "off",
       },
     },
   ]);

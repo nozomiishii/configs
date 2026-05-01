@@ -1,6 +1,6 @@
-import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs';
-import { defineConfig } from 'eslint/config';
-import { name } from '../utils/name';
+import eslintPluginEslintComments from "@eslint-community/eslint-plugin-eslint-comments/configs";
+import { defineConfig } from "eslint/config";
+import { name } from "../utils/name";
 
 const configs = eslintPluginEslintComments.recommended;
 
@@ -12,10 +12,10 @@ export function eslintComments() {
   return defineConfig([
     {
       ...configs,
-      name: name('eslint-comments'),
+      name: name("eslint-comments"),
       rules: {
         ...configs.rules,
-        '@eslint-community/eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }],
+        "@eslint-community/eslint-comments/disable-enable-pair": ["error", { allowWholeFile: true }],
       },
     },
   ]);

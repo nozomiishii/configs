@@ -1,6 +1,6 @@
-import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss';
-import { defineConfig } from 'eslint/config';
-import { name } from '../utils/name';
+import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
+import { defineConfig } from "eslint/config";
+import { name } from "../utils/name";
 
 type Options = {
   entryPoint?: string;
@@ -14,19 +14,19 @@ type Options = {
 export function betterTailwindcss(options?: Options) {
   return defineConfig([
     {
-      name: name('tailwindcss'),
+      name: name("tailwindcss"),
       plugins: {
-        'better-tailwindcss': eslintPluginBetterTailwindcss,
+        "better-tailwindcss": eslintPluginBetterTailwindcss,
       },
       rules: {
-        ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
+        ...eslintPluginBetterTailwindcss.configs["recommended-warn"].rules,
 
         // Prettierと競合する
-        'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
+        "better-tailwindcss/enforce-consistent-line-wrapping": "off",
       },
       settings: {
-        'better-tailwindcss': {
-          entryPoint: options?.entryPoint ?? 'src/global.css',
+        "better-tailwindcss": {
+          entryPoint: options?.entryPoint ?? "src/global.css",
         },
       },
     },

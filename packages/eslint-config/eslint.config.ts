@@ -1,28 +1,28 @@
-import gitignore from 'eslint-config-flat-gitignore';
-import { defineConfig } from 'eslint/config';
-import globals from 'globals';
-import { deMorgan } from './rules/de-morgan';
-import { eslintComments } from './rules/eslint-comments';
-import { importX } from './rules/import-x';
-import { javascript } from './rules/javascript';
-import { jsdoc } from './rules/jsdoc';
-import { jsxA11yX } from './rules/jsx-a11y-x';
-import { n } from './rules/n';
-import { nextjs } from './rules/nextjs';
-import { perfectionist } from './rules/perfectionist';
-import { playwright } from './rules/playwright';
-import { prettier } from './rules/prettier';
-import { react } from './rules/react';
-import { reactHooks } from './rules/react-hooks';
-import { reactRefresh } from './rules/react-refresh';
-import { regexp } from './rules/regexp';
-import { storybook } from './rules/storybook';
-import { stylistic } from './rules/stylistic';
-import { betterTailwindcss } from './rules/tailwindcss';
-import { typescript } from './rules/typescript';
-import { unicorn } from './rules/unicorn';
-import { viest } from './rules/viest';
-import { name } from './utils/name';
+import gitignore from "eslint-config-flat-gitignore";
+import { defineConfig } from "eslint/config";
+import globals from "globals";
+import { deMorgan } from "./rules/de-morgan";
+import { eslintComments } from "./rules/eslint-comments";
+import { importX } from "./rules/import-x";
+import { javascript } from "./rules/javascript";
+import { jsdoc } from "./rules/jsdoc";
+import { jsxA11yX } from "./rules/jsx-a11y-x";
+import { n } from "./rules/n";
+import { nextjs } from "./rules/nextjs";
+import { perfectionist } from "./rules/perfectionist";
+import { playwright } from "./rules/playwright";
+import { prettier } from "./rules/prettier";
+import { react } from "./rules/react";
+import { reactHooks } from "./rules/react-hooks";
+import { reactRefresh } from "./rules/react-refresh";
+import { regexp } from "./rules/regexp";
+import { storybook } from "./rules/storybook";
+import { stylistic } from "./rules/stylistic";
+import { betterTailwindcss } from "./rules/tailwindcss";
+import { typescript } from "./rules/typescript";
+import { unicorn } from "./rules/unicorn";
+import { viest } from "./rules/viest";
+import { name } from "./utils/name";
 
 export default defineConfig([
   /**
@@ -47,7 +47,7 @@ export default defineConfig([
         ...globals.node,
       },
     },
-    name: name('languageOptions/globals'),
+    name: name("languageOptions/globals"),
   },
   {
     languageOptions: {
@@ -56,7 +56,7 @@ export default defineConfig([
         tsconfigRootDir: import.meta.dirname,
       },
     },
-    name: name('languageOptions/parserOptions'),
+    name: name("languageOptions/parserOptions"),
   },
 
   javascript(),
@@ -90,4 +90,4 @@ export default defineConfig([
   // packageJson()
 ]);
 
-export { defineConfig } from 'eslint/config';
+export { defineConfig } from "eslint/config";

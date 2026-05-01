@@ -1,9 +1,9 @@
-import type { Linter } from 'eslint';
-import eslintPluginStorybook from 'eslint-plugin-storybook';
-import { defineConfig } from 'eslint/config';
-import { name } from '../utils/name';
+import type { Linter } from "eslint";
+import eslintPluginStorybook from "eslint-plugin-storybook";
+import { defineConfig } from "eslint/config";
+import { name } from "../utils/name";
 
-const configs = eslintPluginStorybook.configs['flat/recommended'] as unknown as Linter.Config[];
+const configs = eslintPluginStorybook.configs["flat/recommended"] as unknown as Linter.Config[];
 const plugins = configs[0];
 
 /**
@@ -20,25 +20,25 @@ export function storybook() {
     {
       ...plugins,
       ...configs[1],
-      ignores: ['!.storybook'],
-      name: name('storybook'),
+      ignores: ["!.storybook"],
+      name: name("storybook"),
       rules: {
         /**
          * https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/src/configs/flat/csf-strict.ts
          */
-        ...(eslintPluginStorybook.configs['flat/csf-strict'] as unknown as Linter.Config[])[1]?.rules,
+        ...(eslintPluginStorybook.configs["flat/csf-strict"] as unknown as Linter.Config[])[1]?.rules,
 
         /**
          * https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/src/configs/flat/recommended.ts
          */
-        ...(eslintPluginStorybook.configs['flat/recommended'] as unknown as Linter.Config[])[1]?.rules,
+        ...(eslintPluginStorybook.configs["flat/recommended"] as unknown as Linter.Config[])[1]?.rules,
       },
     },
     {
       ...plugins,
       ...configs[2],
-      ignores: ['!.storybook'],
-      name: name('storybook/add-ons'),
+      ignores: ["!.storybook"],
+      name: name("storybook/add-ons"),
       rules: {
         /**
          * https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/src/configs/flat/recommended.ts

@@ -1,6 +1,6 @@
-import eslintPluginNext from '@next/eslint-plugin-next';
-import { defineConfig } from 'eslint/config';
-import { name } from '../utils/name';
+import eslintPluginNext from "@next/eslint-plugin-next";
+import { defineConfig } from "eslint/config";
+import { name } from "../utils/name";
 
 /**
  * @returns `@next/eslint-plugin-next`
@@ -16,7 +16,7 @@ export function nextjs() {
   return defineConfig([
     {
       ...eslintPluginNext.configs.recommended,
-      name: name('nextjs'),
+      name: name("nextjs"),
     },
 
     {
@@ -25,24 +25,24 @@ export function nextjs() {
        *
        * @see https://next-intl-docs.vercel.app/docs/workflows/linting#consistent-usage-of-navigation-apis
        */
-      name: name('next-intl'),
+      name: name("next-intl"),
       rules: {
-        'no-restricted-imports': [
-          'error',
+        "no-restricted-imports": [
+          "error",
           {
-            message: 'Please import from `libs/next-intl` instead.',
-            name: 'next/link',
+            message: "Please import from `libs/next-intl` instead.",
+            name: "next/link",
           },
           {
-            importNames: ['getPathname', 'permanentRedirect', 'redirect', 'usePathname', 'useRouter'],
-            message: 'Please import from `libs/next-intl` instead.',
-            name: 'next/navigation',
+            importNames: ["getPathname", "permanentRedirect", "redirect", "usePathname", "useRouter"],
+            message: "Please import from `libs/next-intl` instead.",
+            name: "next/navigation",
           },
 
           {
-            importNames: ['getLocale'],
-            message: 'Please import from `libs/next-intl` instead.',
-            name: 'next-intl/server',
+            importNames: ["getLocale"],
+            message: "Please import from `libs/next-intl` instead.",
+            name: "next-intl/server",
           },
         ],
       },
