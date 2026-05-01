@@ -13,9 +13,13 @@ extends:
   - node_modules/@nozomiishii/lefthook-config/hooks/commit-msg/commitlint.yaml
   - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/update-node-modules.yaml
   - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/cleanup-merged.yaml
+  - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/yaml.yaml
 
 commit-msg:
   parallel: true
 
 post-merge:
+  parallel: true
+
+pre-commit:
   parallel: true

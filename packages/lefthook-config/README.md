@@ -57,9 +57,7 @@ extends:
 - `hooks/commit-msg/commitlint.yaml` — runs `nozo-commitlint` (provided by `@nozomiishii/commitlint-config`)
 - `hooks/post-merge/update-node-modules.yaml` — pnpm > bun > npm > yarn
 - `hooks/post-merge/cleanup-merged.yaml` — runs [`git-harvest`](https://github.com/nozomiishii/git-harvest) via the `nozo-git-harvest` shim shipped by this package
-- `hooks/pre-commit/format/prettier.yaml`
-- `hooks/pre-commit/lint/markdown.yaml`
-- `hooks/pre-commit/lint/file-extension/{storybook,test,yaml}.yaml`
+- `hooks/pre-commit/yaml.yaml` — fails the commit when staged files use the `.yml` extension (enforces `.yaml`)
 
 ## Authoring rules (important)
 
