@@ -15,7 +15,10 @@ export function eslintComments() {
       name: name("eslint-comments"),
       rules: {
         ...configs.rules,
-        "@eslint-community/eslint-comments/disable-enable-pair": ["error", { allowWholeFile: true }],
+        "@eslint-community/eslint-comments/disable-enable-pair": [
+          "error",
+          { allowWholeFile: true },
+        ],
       },
     },
   ]);

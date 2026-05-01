@@ -33,7 +33,10 @@ export function typescript() {
         "@typescript-eslint/method-signature-style": ["error", "property"],
 
         // Promiseをちゃんと処理する。VoidやIIFEは無視してよい。
-        "@typescript-eslint/no-floating-promises": ["error", { ignoreIIFE: true, ignoreVoid: true }],
+        "@typescript-eslint/no-floating-promises": [
+          "error",
+          { ignoreIIFE: true, ignoreVoid: true },
+        ],
 
         /**
          * 使ってない引数はアンダースコア始まりにする

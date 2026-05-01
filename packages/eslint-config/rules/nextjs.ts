@@ -34,7 +34,13 @@ export function nextjs() {
             name: "next/link",
           },
           {
-            importNames: ["getPathname", "permanentRedirect", "redirect", "usePathname", "useRouter"],
+            importNames: [
+              "getPathname",
+              "permanentRedirect",
+              "redirect",
+              "usePathname",
+              "useRouter",
+            ],
             message: "Please import from `libs/next-intl` instead.",
             name: "next/navigation",
           },
