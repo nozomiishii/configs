@@ -14,7 +14,7 @@ Nozomi 推奨の [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-
 </div>
 <br>
 
-## 概要
+## インストール
 
 ```bash
 pnpx @nozomiishii/markdownlint-cli2-config@latest

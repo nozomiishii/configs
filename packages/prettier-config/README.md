@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Nozomi's Recommended [Prettier](https://prettier.io) Config.
+Nozomi's recommended [Prettier](https://prettier.io) config.
 
 <!-- Main Image -->
 <br>
@@ -14,51 +14,19 @@ Nozomi's Recommended [Prettier](https://prettier.io) Config.
 </div>
 <br>
 
-## Gist
-
-- TL;DR: just run the command below.
-
-pnpm
+## Install
 
 ```bash
 pnpx @nozomiishii/prettier-config@latest
 ```
 
-## Install
+## Manual
 
 ```bash
 pnpm add -D @nozomiishii/prettier-config
 ```
 
-- `@nozomiishii/prettier-config` is all you need. You don't have to install `prettier` separately.
-
-### Included Plugins
-
-- [prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)
-  - Sorts `package.json` nicely.
-
-#### [Option]
-
-- [@prettier/plugin-ruby](https://www.npmjs.com/package/@prettier/plugin-ruby)
-  - When you also want to format Ruby files such as `Brewfile`.
-  - If your project has lots of Ruby code, [rufo](https://github.com/ruby-formatter/rufo) might be a better fit.
-- [prettier-plugin-sh](https://www.npmjs.com/package/prettier-plugin-sh)
-  - When you also want to format shell scripts.
-  - If your project has lots of shell code, [shfmt](https://github.com/mvdan/sh) might be a better fit.
-
-```sh
-pnpm add -D @prettier/plugin-ruby
-```
-
-## Setup
-
-### Create `prettier.config.js`
-
-```bash
-echo "export { default } from '@nozomiishii/prettier-config';" > prettier.config.js
-```
-
-## Scripts for package.json
+Add the scripts:
 
 ```bash
 npm pkg set type="module"
@@ -71,47 +39,21 @@ npm pkg set scripts.prettier="prettier . --ignore-unknown"
 
 ```json
 {
-  "format": "pnpm prettier --check",
-  "format:fix": "pnpm prettier --write",
-  "prettier": "prettier . --ignore-unknown"
+  "type": "module",
+  "scripts": {
+    "format": "pnpm prettier --check",
+    "format:fix": "pnpm prettier --write",
+    "prettier": "prettier . --ignore-unknown"
+  }
 }
 ```
 
-### Note
+`prettier.config.js`
 
-For npm, `format` and `format:fix` may need the form `npm run prettier -- --write` (not verified).
+```js
+export { default } from '@nozomiishii/prettier-config';
+```
 
-`--` (Double Dash) terminates flag parsing for things like `-h` / `-v`.
-Anything after `--` is taken as positional args.
+## Included Plugins
 
-- [npm run とかで使うハイフン2つ「--」の意味 - Neo's World](https://neos21.net/blog/2018/09/13-01.html)
-- [The How? & Why? of the Double Dash (--) Delimiter on macOS, Linux, bash - YouTube](https://www.youtube.com/watch?v=K1zVrLi8NBA)
-
-### Notes on each flag
-
-- `--write`
-  - Format the target files.
-- `--check`
-  - Check whether files are formatted by prettier. Useful in CI.
-- `--ignore-unknown`
-  - Ignore extensions that prettier doesn't support.
-- `'!**/*.md'`
-  - Files prefixed with `!` are excluded from formatting.
-
-## Preferences
-
-See the comments in [`src/index.ts`](./src/index.ts) for each option and its intent.
-
-## [Option] How to create sharing configurations like this
-
-- [Sharing configurations](https://prettier.io/docs/en/configuration.html#sharing-configurations)
-
-## FAQ
-
-- Does `pnpm prettier` work with only `@nozomiishii/prettier-config` installed (no separate `prettier`)?
-  - Yes.
-
-## References
-
-- [Reduce maintenance effort with shared ESLint and Prettier configs](https://blog.logrocket.com/reduce-effort-shared-eslint-prettier-configs/)
-- [ESLintとPrettierの設定を共通化し、異なるプロジェクトでも同じ設定を使えるようにする](https://blog.35d.jp/2020-12-23-eslint-prettier-shareable-config)
+- [prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)

@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Nozomi's Recommended [tsconfig](https://www.typescriptlang.org/tsconfig)
+Nozomi's recommended [tsconfig](https://www.typescriptlang.org/tsconfig).
 
 <!-- Main Image -->
 <br>

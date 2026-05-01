@@ -14,9 +14,7 @@ Nozomi 推奨の [cspell](https://cspell.org/) 設定。
 </div>
 <br>
 
-## 概要
-
-### 実行
+## インストール
 
 ```sh
 pnpx @nozomiishii/cspell-config "**"

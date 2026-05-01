@@ -52,7 +52,7 @@ pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
 export { default } from '@nozomiishii/eslint-config';
 ```
 
-## 参考🙏
+## 参考
 
 - [sxzz/eslint-config](https://github.com/sxzz/eslint-config)
 - [antfu/eslint-config](https://github.com/antfu/eslint-config)

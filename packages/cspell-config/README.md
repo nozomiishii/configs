@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Nozomi's Recommended [cspell](https://cspell.org/) config.
+Nozomi's recommended [cspell](https://cspell.org/) config.
 
 <!-- Main Image -->
 <br>
@@ -14,9 +14,7 @@ Nozomi's Recommended [cspell](https://cspell.org/) config.
 </div>
 <br>
 
-## Gist
-
-### Run
+## Install
 
 ```sh
 pnpx @nozomiishii/cspell-config "**"

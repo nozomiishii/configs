@@ -9,7 +9,4 @@ English | [日本語](./README.ja.md)
 </div>
 <br>
 
-## Gist
-
-Project init.
-Stay Tuned
+> Project init. Stay tuned.

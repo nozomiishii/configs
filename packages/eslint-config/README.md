@@ -2,7 +2,7 @@
 
 English | [日本語](./README.ja.md)
 
-Nozomi's Recommended [eslint](https://eslint.org/) Config.
+Nozomi's recommended [eslint](https://eslint.org/) config.
 
 <!-- Main Image -->
 <br>
@@ -52,7 +52,7 @@ pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
 export { default } from '@nozomiishii/eslint-config';
 ```
 
-## References🙏
+## References
 
 - [sxzz/eslint-config](https://github.com/sxzz/eslint-config)
 - [antfu/eslint-config](https://github.com/antfu/eslint-config)
