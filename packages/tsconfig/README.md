@@ -22,78 +22,12 @@ pnpm add -D @nozomiishii/tsconfig
 
 ## Usage
 
-`tsconfig.json`
+Pick the example closest to your setup and copy its `tsconfig.json`:
 
-### tsup / tsdown / esbuild and other bundlers
-
-The base provides `module: "preserve"` (TS 5.4+), so bundler-based setups need minimal additional config.
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig",
-
-  "compilerOptions": {
-    "noEmit": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
-}
-```
-
-### tsc
-
-Override the base `module: "preserve"` with `NodeNext`.
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig",
-  "compilerOptions": {
-    // ----------------------------------------------------------------
-    // Transpiling
-    // ----------------------------------------------------------------
-    // When transpiling with TSC
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "outDir": "dist",
-    "sourceMap": true
-  }
-}
-```
-
-### nextjs
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig/tsconfig.nextjs.json",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
-}
-```
-
-### library (generating `.d.ts` in parallel with tsdown / tsup, etc.)
-
-A preset with `isolatedDeclarations: true` + `declaration: true` enabled. For libraries that want to generate type definition files quickly with tools other than `tsc`.
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig/tsconfig.lib.json",
-  "compilerOptions": {
-    "moduleResolution": "Bundler",
-    "module": "ESNext",
-    "outDir": "dist",
-    "noEmit": false
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
-}
-```
+- [**Bundler** (tsup / tsdown / esbuild, …)](./examples/bundler/tsconfig.json) — the base provides `module: "preserve"` (TS 5.4+), so additional config stays minimal.
+- [**tsc**](./examples/tsc/tsconfig.json) — overrides the base `module: "preserve"` with `NodeNext`.
+- [**Next.js**](./examples/nextjs/tsconfig.json) — extends `@nozomiishii/tsconfig/tsconfig.nextjs.json`.
+- [**Library** (`.d.ts` alongside builds with tsdown / tsup, etc.)](./examples/library/tsconfig.json) — preset with `isolatedDeclarations: true` + `declaration: true` enabled.
 
 ## References
 

@@ -22,78 +22,12 @@ pnpm add -D @nozomiishii/tsconfig
 
 ## 使い方
 
-`tsconfig.json`
+セットアップに近い例を選び、その `tsconfig.json` をコピーして使う:
 
-### tsup / tsdown / esbuild など bundler 系
-
-base が `module: "preserve"` (TS 5.4+) を提供するため、bundler 系では追加設定は最小限で済む。
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig",
-
-  "compilerOptions": {
-    "noEmit": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
-}
-```
-
-### tsc
-
-base の `module: "preserve"` を `NodeNext` で上書きする。
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig",
-  "compilerOptions": {
-    // ----------------------------------------------------------------
-    // Transpiling
-    // ----------------------------------------------------------------
-    // TSC で Transpile する場合
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "outDir": "dist",
-    "sourceMap": true
-  }
-}
-```
-
-### nextjs
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig/tsconfig.nextjs.json",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
-}
-```
-
-### library (tsdown / tsup 等で `.d.ts` を並列生成する場合)
-
-`isolatedDeclarations: true` + `declaration: true` を有効化したプリセット。`tsc` 以外のツールで型定義ファイルを高速生成したいライブラリ向け。
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig/tsconfig.lib.json",
-  "compilerOptions": {
-    "moduleResolution": "Bundler",
-    "module": "ESNext",
-    "outDir": "dist",
-    "noEmit": false
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
-}
-```
+- [**Bundler** (tsup / tsdown / esbuild など)](./examples/bundler/tsconfig.json) — base が `module: "preserve"` (TS 5.4+) を提供するため、追加設定は最小限で済む。
+- [**tsc**](./examples/tsc/tsconfig.json) — base の `module: "preserve"` を `NodeNext` で上書き。
+- [**Next.js**](./examples/nextjs/tsconfig.json) — `@nozomiishii/tsconfig/tsconfig.nextjs.json` を extend する形。
+- [**ライブラリ** （tsdown / tsup 等で `.d.ts` を並列生成する場合）](./examples/library/tsconfig.json) — `isolatedDeclarations: true` + `declaration: true` を有効化したプリセット。
 
 ## 参考
 
