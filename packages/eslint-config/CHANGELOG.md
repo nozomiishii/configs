@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.14...@nozomiishii/eslint-config-v0.7.0) (2026-05-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **prettier-config:** The printWidth default is changed from 119 to 100. Lines in the 100-119 range will be re-formatted in consumer codebases on the next format run.
+* **prettier-config:** The singleQuote default is changed from true to false. Consumer repositories will see string literals re-formatted from single to double quotes.
+
+### Features
+
+* **eslint-config:** enforce .test.{ts,tsx} via vitest/consistent-test-filename ([#2130](https://github.com/nozomiishii/configs/issues/2130)) ([50cf240](https://github.com/nozomiishii/configs/commit/50cf24066671a4f80c2297aa44b198e60fdc0d08))
+* **prettier-config:** change printWidth default from 119 to 100 ([#2141](https://github.com/nozomiishii/configs/issues/2141)) ([949e037](https://github.com/nozomiishii/configs/commit/949e037f45d4ccfd8647fceeea4338bd5b6f697e))
+* **prettier-config:** revert singleQuote to Prettier default ([#2140](https://github.com/nozomiishii/configs/issues/2140)) ([c2f2ff5](https://github.com/nozomiishii/configs/commit/c2f2ff5ef8f68d53e7caf67206e95b8c16a10037))
+
+
+### Bug Fixes
+
+* add Japanese READMEs for shared config packages ([#2151](https://github.com/nozomiishii/configs/issues/2151)) ([b5e96f1](https://github.com/nozomiishii/configs/commit/b5e96f1cb4ad35725b44cf9b19cd01b02d798fa9))
+
+
+### Miscellaneous
+
+* update dependency eslint-plugin-better-tailwindcss to v4.5.0 ([#2138](https://github.com/nozomiishii/configs/issues/2138)) ([8674123](https://github.com/nozomiishii/configs/commit/8674123b1a2e0483d4aac17df42aeef531607797))
+* update dependency eslint-plugin-package-json to v0.91.2 ([#2137](https://github.com/nozomiishii/configs/issues/2137)) ([e803a96](https://github.com/nozomiishii/configs/commit/e803a96cbffc55e912e6d122900da5daebc6a14c))
+* update dependency typescript-eslint to v8.59.1 ([#2136](https://github.com/nozomiishii/configs/issues/2136)) ([0f6e369](https://github.com/nozomiishii/configs/commit/0f6e369a44062d8a9c11eb8962dce6b36b37bfd6))
+
 ## [0.6.14](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.13...@nozomiishii/eslint-config-v0.6.14) (2026-04-27)
 
 ### Miscellaneous

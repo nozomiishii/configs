@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.4.1...@nozomiishii/lefthook-config-v0.5.0) (2026-05-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **lefthook-config:** pre-commit fragments for prettier, markdown, storybook and the .spec-test guard are removed. Consumers cherry- picking those paths must point at their own project hooks. The yaml extension fragment moved from hooks/pre-commit/lint/file-extension/yaml.yaml to hooks/pre-commit/yaml.yaml and is now included by default when extending index.yaml.
+* **prettier-config:** The printWidth default is changed from 119 to 100. Lines in the 100-119 range will be re-formatted in consumer codebases on the next format run.
+* **prettier-config:** The singleQuote default is changed from true to false. Consumer repositories will see string literals re-formatted from single to double quotes.
+
+### Features
+
+* **lefthook-config:** tighten preset and drop redundant pre-commit fragments ([#2149](https://github.com/nozomiishii/configs/issues/2149)) ([7557145](https://github.com/nozomiishii/configs/commit/755714524f4f0d03407bd4a538225819d1ab302d)), closes [#2118](https://github.com/nozomiishii/configs/issues/2118)
+* **prettier-config:** change printWidth default from 119 to 100 ([#2141](https://github.com/nozomiishii/configs/issues/2141)) ([949e037](https://github.com/nozomiishii/configs/commit/949e037f45d4ccfd8647fceeea4338bd5b6f697e))
+* **prettier-config:** revert singleQuote to Prettier default ([#2140](https://github.com/nozomiishii/configs/issues/2140)) ([c2f2ff5](https://github.com/nozomiishii/configs/commit/c2f2ff5ef8f68d53e7caf67206e95b8c16a10037))
+
+
+### Bug Fixes
+
+* add Japanese READMEs for shared config packages ([#2151](https://github.com/nozomiishii/configs/issues/2151)) ([b5e96f1](https://github.com/nozomiishii/configs/commit/b5e96f1cb4ad35725b44cf9b19cd01b02d798fa9))
+
+
+### Miscellaneous
+
+* drop cspell from repo root and lefthook ([#2127](https://github.com/nozomiishii/configs/issues/2127)) ([bd17bca](https://github.com/nozomiishii/configs/commit/bd17bcab853fd4691c64e0d7a45bb38e51642229)), closes [#2118](https://github.com/nozomiishii/configs/issues/2118)
+* **lefthook-config:** rename "C pattern" to "preset + fragments" ([#2150](https://github.com/nozomiishii/configs/issues/2150)) ([0889b7a](https://github.com/nozomiishii/configs/commit/0889b7a2da715ea2ce559bce00a0460f17345ec0))
+* update dependency git-harvest to v0.1.23 ([#2135](https://github.com/nozomiishii/configs/issues/2135)) ([5210d59](https://github.com/nozomiishii/configs/commit/5210d590ed0b5b704b20e34ff72c39a1dd2d6739))
+
 ## [0.4.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.4.0...@nozomiishii/lefthook-config-v0.4.1) (2026-04-29)
 
 ### Features

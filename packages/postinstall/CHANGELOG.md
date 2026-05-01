@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.8...@nozomiishii/postinstall-v0.1.0) (2026-05-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **prettier-config:** The singleQuote default is changed from true to false. Consumer repositories will see string literals re-formatted from single to double quotes.
+
+### Features
+
+* **prettier-config:** revert singleQuote to Prettier default ([#2140](https://github.com/nozomiishii/configs/issues/2140)) ([c2f2ff5](https://github.com/nozomiishii/configs/commit/c2f2ff5ef8f68d53e7caf67206e95b8c16a10037))
+
+
+### Bug Fixes
+
+* add Japanese READMEs for shared config packages ([#2151](https://github.com/nozomiishii/configs/issues/2151)) ([b5e96f1](https://github.com/nozomiishii/configs/commit/b5e96f1cb4ad35725b44cf9b19cd01b02d798fa9))
+* **postinstall:** always use --force on lefthook install ([#2133](https://github.com/nozomiishii/configs/issues/2133)) ([53beef0](https://github.com/nozomiishii/configs/commit/53beef0693879f28a99bbf88fc3f6a12ebf97de6))
+
 ## [0.0.8](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.7...@nozomiishii/postinstall-v0.0.8) (2026-04-27)
 
 ### Bug Fixes

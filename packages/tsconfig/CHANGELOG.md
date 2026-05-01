@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v0.0.8...@nozomiishii/tsconfig-v0.1.0) (2026-05-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tsconfig:** 以下により consumer 側で型エラーが発生しうる。
+
+### Features
+
+* **tsconfig:** apply config audit findings (breaking) ([#2145](https://github.com/nozomiishii/configs/issues/2145)) ([44918fe](https://github.com/nozomiishii/configs/commit/44918fe25cc9e601b834dfb5b0f667f9e5032e14)), closes [#2126](https://github.com/nozomiishii/configs/issues/2126)
+* **tsconfig:** apply config audit findings (non-breaking) ([#2144](https://github.com/nozomiishii/configs/issues/2144)) ([96093d1](https://github.com/nozomiishii/configs/commit/96093d12da961607bcc6eb2007a84234a35a1a94)), closes [#2126](https://github.com/nozomiishii/configs/issues/2126)
+
+
+### Bug Fixes
+
+* add Japanese READMEs for shared config packages ([#2151](https://github.com/nozomiishii/configs/issues/2151)) ([b5e96f1](https://github.com/nozomiishii/configs/commit/b5e96f1cb4ad35725b44cf9b19cd01b02d798fa9))
+
 ## [0.0.8](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v0.0.7...@nozomiishii/tsconfig-v0.0.8) (2026-04-27)
 
 ### Miscellaneous
