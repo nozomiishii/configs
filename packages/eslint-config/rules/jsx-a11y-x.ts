@@ -1,8 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import type { Linter } from "eslint";
 // @ts-expect-error missing types 型がない
 import eslintPluginJsxA11yX from "eslint-plugin-jsx-a11y-x";
 import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
+
+const plugin = eslintPluginJsxA11yX as {
+  flatConfigs: { recommended: Linter.Config };
+};
 
 /**
  * @returns eslint-plugin-jsx-a11y-x
@@ -12,7 +16,7 @@ import { name } from "../utils/name";
 export function jsxA11yX() {
   return defineConfig([
     {
-      ...eslintPluginJsxA11yX.flatConfigs.recommended,
+      ...plugin.flatConfigs.recommended,
       name: name("jsx-a11y-x"),
     },
   ]);
