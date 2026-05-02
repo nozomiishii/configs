@@ -19,6 +19,7 @@ export function eslintComments() {
           "error",
           { allowWholeFile: true },
         ],
+        "@eslint-community/eslint-comments/no-use": "error",
       },
     },
   ]);
