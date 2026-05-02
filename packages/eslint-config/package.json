@@ -17,8 +17,11 @@
   "author": "Nozomi Ishii",
   "type": "module",
   "main": "eslint.config.ts",
-  "bin": "bin/cli.sh",
+  "bin": {
+    "nozo-eslint-init": "./dist/init.js"
+  },
   "scripts": {
+    "build": "tsdown",
     "build:inspector": "pnpx @eslint/config-inspector build",
     "check:ts": "tsc",
     "dev": "pnpm typegen && eslint --inspect-config",
@@ -27,7 +30,7 @@
     "link": "pnpm link --global",
     "lint": "pnpm eslint .",
     "lint:fix": "pnpm eslint . --fix",
-    "prepublishOnly": "pnpm run build:inspector",
+    "prepublishOnly": "pnpm run build && pnpm run build:inspector",
     "start": "pnpx serve .eslint-config-inspector",
     "typegen": "node --import @swc-node/register/esm-register scripts/typegen.ts"
   },
@@ -68,6 +71,7 @@
     "typescript-eslint": "8.59.1"
   },
   "devDependencies": {
+    "tsdown": "0.21.10",
     "typescript": "6.0.3"
   },
   "peerDependencies": {

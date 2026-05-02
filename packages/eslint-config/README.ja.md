@@ -16,9 +16,19 @@
 
 ## インストール
 
+統一 CLI [`nozo`](../nozo) を使う:
+
 ```bash
-pnpx @nozomiishii/eslint-config@latest
+pnpx nozo init
 ```
+
+または本パッケージの init bin を直接実行:
+
+```bash
+pnpx -p @nozomiishii/eslint-config nozo-eslint-init
+```
+
+どちらの経路でも、`@nozomiishii/eslint-config` / `eslint` / `typescript` が pin で `devDependencies` に追加され、`eslint` / `lint` / `lint:fix` の scripts が追加され、shared config を re-export する `eslint.config.ts` が生成される。
 
 ## 手動セットアップ
 
@@ -49,7 +59,7 @@ pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
 `eslint.config.ts`
 
 ```ts
-export { default } from '@nozomiishii/eslint-config';
+export { default } from "@nozomiishii/eslint-config";
 ```
 
 ## 参考
