@@ -21,7 +21,8 @@
   },
   "types": "./dist/index.d.ts",
   "bin": {
-    "postinstall": "./dist/index.js"
+    "postinstall": "./dist/index.js",
+    "nozo-postinstall-init": "./dist/init.js"
   },
   "files": [
     "dist",
