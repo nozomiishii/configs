@@ -9,6 +9,13 @@
     "module": "ESNext",
     "noEmit": true,
 
+    // `.ts` 拡張子付き import を許可。`scripts/typegen.ts` が
+    // `../eslint.config.ts` を拡張子付きで import するため必要。これは
+    // `eslint-plugin-n` の `n/no-unpublished-import` rule が拡張子なし
+    // の import path を解決できず、publish 状態を誤判定するのを回避する
+    // ための変更。
+    "allowImportingTsExtensions": true,
+
     // ----------------------------------------------------------------
     // Types
     // ----------------------------------------------------------------

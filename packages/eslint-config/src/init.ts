@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * `nozo-eslint-init` bin.
  *
@@ -7,6 +6,10 @@
  *   1. `pnpm add -D eslint typescript @nozomiishii/eslint-config` 相当の devDependencies 追加
  *   2. eslint 関連の scripts (eslint / lint / lint:fix) を追加
  *   3. ルートに `eslint.config.ts` を生成 (@nozomiishii/eslint-config を re-export)
+ *
+ * starter は `packages/eslint-config/starter.ts` に「普通の TypeScript」 として置き、
+ * このスクリプトが fs で読み取って利用側にそのまま書き出す方式を採る。template literal で
+ * ラップしないことで、IDE の構文ハイライトと型チェックがそのまま効く。
  *
  * このスクリプトは package.json と config file の patch のみを行い、実際の install は
  * 呼び出し側 (`nozo init`) が一括で実行する想定。スタンドアロン実行
@@ -20,21 +23,20 @@
  * 明示的に追加する必要がある。pin 値は本パッケージの dependencies / devDependencies に
  * 書かれた実 version (workspace の Renovate が更新している実値) を使う。
  *
- * bin 命名規則: 既存の `eslint-config` bin (legacy bash scaffold script) は backward
- * compat のため温存する。新規 init bin は `nozo-<pkg>-init` 規則に従う。
+ * shebang は src 側ではなく `tsdown.config.ts` の banner で `dist/init.js` に付与する
+ * (`n/hashbang` lint rule が src への shebang を「不要」と判定するため、build 出力に
+ * だけ付ける)。
  */
 import { readFileSync, writeFileSync } from "node:fs";
-import { resolve } from "node:path";
+import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import starter from "./starter.js";
-
 type PackageJson = {
-  name: string;
-  version: string;
   dependencies?: Record<string, string>;
   devDependencies?: Record<string, string>;
+  name: string;
   scripts?: Record<string, string>;
+  version: string;
 };
 
 // 1. 自パッケージ (eslint-config) の package.json から name / version、および
@@ -44,30 +46,37 @@ const selfPkg = JSON.parse(readFileSync(selfPkgPath, "utf8")) as PackageJson;
 const eslintVersion = selfPkg.dependencies?.eslint ?? "10.2.1";
 const typescriptVersion = selfPkg.devDependencies?.typescript ?? "6.0.3";
 
-// 2. target (CWD) の package.json を読み込む。
-const targetPath = resolve(process.cwd(), "package.json");
+// 2. starter テンプレート (利用側に書き出される TypeScript) を読み込む。
+//    starter.ts はパッケージルート直下に置かれ、publish 時にそのまま同梱されるため、
+//    `dist/init.js` から相対 path (`../starter.ts`) で解決できる。
+const starterPath = fileURLToPath(new URL("../starter.ts", import.meta.url));
+const starter = readFileSync(starterPath, "utf8");
+
+// 3. target (CWD) の package.json を読み込む。
+const targetPath = path.resolve(process.cwd(), "package.json");
 const target = JSON.parse(readFileSync(targetPath, "utf8")) as PackageJson;
 
-// 3. devDependencies に @nozomiishii/eslint-config / eslint / typescript を pin で追加する。
+// 4. devDependencies に @nozomiishii/eslint-config / eslint / typescript を pin で追加する。
 target.devDependencies = {
-  ...(target.devDependencies ?? {}),
-  [selfPkg.name]: selfPkg.version,
+  ...target.devDependencies,
   eslint: eslintVersion,
+  [selfPkg.name]: selfPkg.version,
   typescript: typescriptVersion,
 };
 
-// 4. eslint 関連の scripts を追加する。
+// 5. eslint 関連の scripts を追加する。
 target.scripts = {
-  ...(target.scripts ?? {}),
+  ...target.scripts,
   "eslint": "eslint --max-warnings=0 --cache",
   "lint": "pnpm eslint",
   "lint:fix": "pnpm eslint --fix",
 };
 
-// 5. package.json を書き戻す。キー順整列は prettier-plugin-packagejson に任せる。
+// 6. package.json を書き戻す。キー順整列は prettier-plugin-packagejson に任せる。
 writeFileSync(targetPath, `${JSON.stringify(target, null, 2)}\n`);
 
-// 6. ルートに eslint.config.ts を生成。
+// 7. ルートに eslint.config.ts を生成。
 writeFileSync("eslint.config.ts", starter);
 
-console.log("✓ @nozomiishii/eslint-config installed");
+// 8. 完了通知 (no-console rule が console.log を許可しないため stdout 直接書き込み)。
+process.stdout.write("✓ @nozomiishii/eslint-config installed\n");

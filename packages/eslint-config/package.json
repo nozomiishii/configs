@@ -20,6 +20,17 @@
   "bin": {
     "nozo-eslint-init": "./dist/init.js"
   },
+  "files": [
+    "dist",
+    "rules",
+    "scripts",
+    "utils",
+    "eslint-typegen.d.ts",
+    "eslint.config.ts",
+    "starter.ts",
+    "README.md",
+    "README.ja.md"
+  ],
   "scripts": {
     "build": "tsdown",
     "build:inspector": "pnpx @eslint/config-inspector build",
