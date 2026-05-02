@@ -27,6 +27,7 @@
   },
   "files": [
     "dist",
+    "starter.ts",
     "README.md"
   ],
   "scripts": {
