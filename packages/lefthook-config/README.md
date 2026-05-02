@@ -5,7 +5,7 @@ English | [日本語](./README.ja.md)
 Shared [lefthook](https://github.com/evilmartians/lefthook) config.
 
 This package follows a **preset + fragments** layout: a thin preset
-(`index.yaml`) that `extends` reusable fragments
+(`recommended.yaml`) that `extends` reusable fragments
 (`hooks/<hook>/<job>.yaml`). Consumers can either pull the whole preset
 or cherry-pick individual fragments.
 
@@ -36,7 +36,7 @@ without requiring consumers to add them as direct dependencies.
 
 ```yaml
 extends:
-  - node_modules/@nozomiishii/lefthook-config/index.yaml
+  - node_modules/@nozomiishii/lefthook-config/recommended.yaml
 ```
 
 Then:
@@ -81,7 +81,7 @@ Lefthook errors with `possible recursion in extends: path X is specified multipl
 ```yaml
 # bad — preset already pulls in commitlint.yaml, listing it again triggers recursion
 extends:
-  - node_modules/@nozomiishii/lefthook-config/index.yaml
+  - node_modules/@nozomiishii/lefthook-config/recommended.yaml
   - node_modules/@nozomiishii/lefthook-config/hooks/commit-msg/commitlint.yaml
 ```
 

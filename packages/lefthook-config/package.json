@@ -16,14 +16,14 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "type": "module",
-  "main": "index.yaml",
+  "main": "recommended.yaml",
   "bin": {
     "nozo-git-harvest": "./dist/cli.js"
   },
   "files": [
     "dist",
     "hooks",
-    "index.yaml",
+    "recommended.yaml",
     "README.md"
   ],
   "scripts": {
