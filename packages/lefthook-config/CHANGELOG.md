@@ -2,15 +2,14 @@
 
 ## [0.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.5.0...@nozomiishii/lefthook-config-v0.6.0) (2026-05-02)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **lefthook-config:** Consumers must replace node_modules/@nozomiishii/lefthook-config/index.yaml with node_modules/@nozomiishii/lefthook-config/recommended.yaml in their lefthook.yaml extends list.
+- **lefthook-config:** Consumers must replace node_modules/@nozomiishii/lefthook-config/index.yaml with node_modules/@nozomiishii/lefthook-config/recommended.yaml in their lefthook.yaml extends list.
 
 ### Features
 
-* **lefthook-config:** expose starter.yaml for manual setup and tooling ([#2156](https://github.com/nozomiishii/configs/issues/2156)) ([a20db41](https://github.com/nozomiishii/configs/commit/a20db419988977e507f6a738f58cad0d7fed1b1f))
-* **lefthook-config:** rename index.yaml to recommended.yaml ([#2155](https://github.com/nozomiishii/configs/issues/2155)) ([dee24d0](https://github.com/nozomiishii/configs/commit/dee24d08c1d4f85a48d30c8b7cfa0af593094ed8))
+- **lefthook-config:** expose starter.yaml for manual setup and tooling ([#2156](https://github.com/nozomiishii/configs/issues/2156)) ([a20db41](https://github.com/nozomiishii/configs/commit/a20db419988977e507f6a738f58cad0d7fed1b1f))
+- **lefthook-config:** rename index.yaml to recommended.yaml ([#2155](https://github.com/nozomiishii/configs/issues/2155)) ([dee24d0](https://github.com/nozomiishii/configs/commit/dee24d08c1d4f85a48d30c8b7cfa0af593094ed8))
 
 ## [0.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.4.1...@nozomiishii/lefthook-config-v0.5.0) (2026-05-01)
 

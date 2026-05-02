@@ -2,20 +2,18 @@
 
 ## [0.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.7.0...@nozomiishii/eslint-config-v0.8.0) (2026-05-02)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **eslint-config:** consumers will see new lint errors on any existing eslint-disable comments in their code. To opt out per file, add a flat config override that turns the no-use rule off for the matching files glob.
+- **eslint-config:** consumers will see new lint errors on any existing eslint-disable comments in their code. To opt out per file, add a flat config override that turns the no-use rule off for the matching files glob.
 
 ### Features
 
-* **eslint-config:** ban eslint-disable comments via no-use rule ([#2158](https://github.com/nozomiishii/configs/issues/2158)) ([429edd0](https://github.com/nozomiishii/configs/commit/429edd00f3267d27359f66782559f04b426b6f25))
-
+- **eslint-config:** ban eslint-disable comments via no-use rule ([#2158](https://github.com/nozomiishii/configs/issues/2158)) ([429edd0](https://github.com/nozomiishii/configs/commit/429edd00f3267d27359f66782559f04b426b6f25))
 
 ### Miscellaneous
 
-* update dependency @eslint-react/eslint-plugin to v5 ([#2153](https://github.com/nozomiishii/configs/issues/2153)) ([8511913](https://github.com/nozomiishii/configs/commit/85119134f7ee3a58a23d617bf9b06700ff862d64))
-* update dependency eslint-plugin-storybook to v10.3.6 ([#2161](https://github.com/nozomiishii/configs/issues/2161)) ([daacc17](https://github.com/nozomiishii/configs/commit/daacc17508627b42489c987d745c38636ea2fdb7))
+- update dependency @eslint-react/eslint-plugin to v5 ([#2153](https://github.com/nozomiishii/configs/issues/2153)) ([8511913](https://github.com/nozomiishii/configs/commit/85119134f7ee3a58a23d617bf9b06700ff862d64))
+- update dependency eslint-plugin-storybook to v10.3.6 ([#2161](https://github.com/nozomiishii/configs/issues/2161)) ([daacc17](https://github.com/nozomiishii/configs/commit/daacc17508627b42489c987d745c38636ea2fdb7))
 
 ## [0.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.6.14...@nozomiishii/eslint-config-v0.7.0) (2026-05-01)
 

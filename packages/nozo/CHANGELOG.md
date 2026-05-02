@@ -2,10 +2,9 @@
 
 ## [0.4.1](https://github.com/nozomiishii/configs/compare/nozo-v0.4.0...nozo-v0.4.1) (2026-05-02)
 
-
 ### Features
 
-* **nozo:** implement init command for lefthook scaffolding ([#2157](https://github.com/nozomiishii/configs/issues/2157)) ([85a00fe](https://github.com/nozomiishii/configs/commit/85a00febcfbea39e04a1283c54683e1265b37660))
+- **nozo:** implement init command for lefthook scaffolding ([#2157](https://github.com/nozomiishii/configs/issues/2157)) ([85a00fe](https://github.com/nozomiishii/configs/commit/85a00febcfbea39e04a1283c54683e1265b37660))
 
 ## [0.4.0](https://github.com/nozomiishii/configs/compare/nozo-v0.3.0...nozo-v0.4.0) (2026-05-01)
 
