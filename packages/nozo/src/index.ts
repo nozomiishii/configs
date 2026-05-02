@@ -22,23 +22,29 @@ async function execExternal(command: string, args: string[]): Promise<number> {
   });
 }
 
-const sub = process.argv[2];
-const isFlag = sub?.startsWith("-") ?? false;
-const isBuiltin = sub !== undefined && BUILTIN_COMMANDS.has(sub);
+async function main(): Promise<void> {
+  const sub = process.argv[2];
+  const isFlag = sub?.startsWith("-") ?? false;
+  const isBuiltin = sub !== undefined && BUILTIN_COMMANDS.has(sub);
 
-if (sub !== undefined && !isFlag && !isBuiltin) {
-  // PATH dispatch (cargo / git style)
-  const ext = await which(`nozo-${sub}`, { nothrow: true });
+  if (sub !== undefined && !isFlag && !isBuiltin) {
+    // PATH dispatch (cargo / git style)
+    const ext = await which(`nozo-${sub}`, { nothrow: true });
 
-  if (ext === null) {
-    consola.error(`'${sub}' is not a nozo command. See 'nozo --help'.`);
-    process.exitCode = EXIT_CODE_COMMAND_NOT_FOUND;
-  } else {
+    if (ext === null) {
+      consola.error(`'${sub}' is not a nozo command. See 'nozo --help'.`);
+      process.exitCode = EXIT_CODE_COMMAND_NOT_FOUND;
+
+      return;
+    }
+
     process.exitCode = await execExternal(ext, process.argv.slice(3));
+
+    return;
   }
-} else {
+
   // Built-in command (or --help / --version / no args) → citty に委譲
-  const main = defineCommand({
+  const cmd = defineCommand({
     meta: {
       description: "Nozomi's config manager",
       name: "nozo",
@@ -49,5 +55,7 @@ if (sub !== undefined && !isFlag && !isBuiltin) {
     },
   });
 
-  await runMain(main);
+  await runMain(cmd);
 }
+
+await main();
