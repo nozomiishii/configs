@@ -1,3 +1,1 @@
-import starter from "../starter.yaml";
-
-export { starter };
+export { default as starter } from "../starter.yaml";
