@@ -4,7 +4,7 @@
 
 共通の [lefthook](https://github.com/evilmartians/lefthook) 設定。
 
-このパッケージは **プリセット + フラグメント** 構成を採用しています: 薄いプリセット（`index.yaml`）が再利用可能なフラグメント（`hooks/<hook>/<job>.yaml`）を `extends` で取り込む形です。利用側はプリセット全体を取り込むことも、個別のフラグメントだけを cherry-pick することもできます。
+このパッケージは **プリセット + フラグメント** 構成を採用しています: 薄いプリセット（`recommended.yaml`）が再利用可能なフラグメント（`hooks/<hook>/<job>.yaml`）を `extends` で取り込む形です。利用側はプリセット全体を取り込むことも、個別のフラグメントだけを cherry-pick することもできます。
 
 <!-- Main Image -->
 <br>
@@ -30,7 +30,7 @@ pnpm add -D lefthook @nozomiishii/lefthook-config
 
 ```yaml
 extends:
-  - node_modules/@nozomiishii/lefthook-config/index.yaml
+  - node_modules/@nozomiishii/lefthook-config/recommended.yaml
 ```
 
 その後:
@@ -75,7 +75,7 @@ Lefthook は `possible recursion in extends: path X is specified multiple times`
 ```yaml
 # bad — プリセットが既に commitlint.yaml を取り込んでいるので、再度列挙すると recursion 扱いになる
 extends:
-  - node_modules/@nozomiishii/lefthook-config/index.yaml
+  - node_modules/@nozomiishii/lefthook-config/recommended.yaml
   - node_modules/@nozomiishii/lefthook-config/hooks/commit-msg/commitlint.yaml
 ```
 
