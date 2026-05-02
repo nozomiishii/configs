@@ -16,15 +16,10 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "type": "module",
-  "exports": {
-    "./starter": {
-      "types": "./dist/starter.d.ts",
-      "default": "./dist/starter.js"
-    }
-  },
   "main": "recommended.yaml",
   "bin": {
-    "nozo-git-harvest": "./dist/cli.js"
+    "nozo-git-harvest": "./dist/cli.js",
+    "nozo-lefthook": "./dist/setup.js"
   },
   "files": [
     "dist",
@@ -45,6 +40,7 @@
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
+    "@types/node": "24.12.2",
     "tsdown": "0.21.10",
     "typescript": "6.0.3"
   },
