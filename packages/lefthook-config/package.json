@@ -16,6 +16,12 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "type": "module",
+  "exports": {
+    "./starter": {
+      "types": "./dist/starter.d.ts",
+      "default": "./dist/starter.js"
+    }
+  },
   "main": "recommended.yaml",
   "bin": {
     "nozo-git-harvest": "./dist/cli.js"
@@ -24,6 +30,7 @@
     "dist",
     "hooks",
     "recommended.yaml",
+    "starter.yaml",
     "README.md"
   ],
   "scripts": {
@@ -33,8 +40,8 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "lefthook": "2.1.6",
-    "git-harvest": "0.1.23"
+    "git-harvest": "0.1.23",
+    "lefthook": "2.1.6"
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
