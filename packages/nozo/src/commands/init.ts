@@ -57,7 +57,13 @@ export default defineCommand({
       p.log.step(`${id}: ${tool.description}`);
 
       for (const file of tool.files) {
-        const fullPath = path.join(cwd, file.path);
+        const fullPath = path.resolve(cwd, file.path);
+        const relative = path.relative(cwd, fullPath);
+
+        if (relative === "" || relative.startsWith("..") || path.isAbsolute(relative)) {
+          throw new Error(`Refusing to write outside cwd: ${file.path}`);
+        }
+
         await mkdir(path.dirname(fullPath), { recursive: true });
         await writeFile(fullPath, file.content, "utf8");
         p.log.info(`  ${file.path}: written`);
