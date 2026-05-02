@@ -1,7 +1,4 @@
-// 利用側プロジェクトの prettier.config.ts に書き出される実体ファイル。
-// init bin はこのファイルを fs.readFileSync で読み取り、テキストのまま出力する。
-//
-// このファイル自体が利用側にコピーされる「普通の TypeScript」 として完結している必要が
-// あるため、template literal や export wrapper でラップしない。
+// @see https://prettier.io/
+// @see https://github.com/nozomiishii/configs/tree/main/packages/prettier-config
 
 export { default } from "@nozomiishii/prettier-config";
