@@ -19,7 +19,7 @@
   "main": "recommended.yaml",
   "bin": {
     "nozo-git-harvest": "./dist/cli.js",
-    "nozo-lefthook": "./dist/setup.js"
+    "nozo-lefthook-init": "./dist/setup.js"
   },
   "files": [
     "dist",
