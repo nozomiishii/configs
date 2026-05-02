@@ -7,6 +7,9 @@ import init from "./commands/init.js";
 
 const BUILTIN_COMMANDS = new Set(["init"]);
 
+// POSIX exit code returned by shells when the requested command is not on PATH
+const EXIT_CODE_COMMAND_NOT_FOUND = 127;
+
 async function execExternal(command: string, args: string[]): Promise<number> {
   return new Promise((resolve) => {
     const child = spawn(command, args, { stdio: "inherit" });
@@ -29,7 +32,7 @@ if (sub !== undefined && !isFlag && !isBuiltin) {
 
   if (ext === null) {
     consola.error(`'${sub}' is not a nozo command. See 'nozo --help'.`);
-    process.exitCode = 127;
+    process.exitCode = EXIT_CODE_COMMAND_NOT_FOUND;
   } else {
     process.exitCode = await execExternal(ext, process.argv.slice(3));
   }
