@@ -16,23 +16,33 @@
 
 ## インストール
 
+統一 CLI [`nozo`](../nozo) を使う:
+
 ```bash
-pnpx @nozomiishii/prettier-config@latest
+pnpx nozo init
 ```
+
+または本パッケージの init bin を直接実行:
+
+```bash
+pnpx -p @nozomiishii/prettier-config nozo-prettier-init
+```
+
+どちらの経路でも、`@nozomiishii/prettier-config` / `prettier` が pin で `devDependencies` に追加され、`"type": "module"` が設定され、`format` / `format:fix` / `prettier` の scripts が追加され、shared config を re-export する `prettier.config.ts` が生成される。
 
 ## 手動セットアップ
 
 ```bash
-pnpm add -D @nozomiishii/prettier-config
+pnpm add -D @nozomiishii/prettier-config prettier
 ```
 
 scripts の設定:
 
 ```bash
 npm pkg set type="module"
-npm pkg set scripts.format="pnpm prettier --check"
-npm pkg set scripts.format:fix="pnpm prettier --write"
-npm pkg set scripts.prettier="prettier . --ignore-unknown"
+npm pkg set scripts.format="pnpm prettier . --check"
+npm pkg set scripts.format:fix="pnpm prettier . --write"
+npm pkg set scripts.prettier="prettier --ignore-unknown"
 ```
 
 `package.json`
@@ -41,17 +51,17 @@ npm pkg set scripts.prettier="prettier . --ignore-unknown"
 {
   "type": "module",
   "scripts": {
-    "format": "pnpm prettier --check",
-    "format:fix": "pnpm prettier --write",
-    "prettier": "prettier . --ignore-unknown"
+    "format": "pnpm prettier . --check",
+    "format:fix": "pnpm prettier . --write",
+    "prettier": "prettier --ignore-unknown"
   }
 }
 ```
 
-`prettier.config.js`
+`prettier.config.ts`
 
-```js
-export { default } from '@nozomiishii/prettier-config';
+```ts
+export { default } from "@nozomiishii/prettier-config";
 ```
 
 ## 同梱プラグイン

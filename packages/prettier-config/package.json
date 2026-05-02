@@ -21,10 +21,12 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "bin": "bin/cli.sh",
+  "bin": {
+    "nozo-prettier-init": "./dist/init.js"
+  },
   "files": [
-    "bin",
     "dist",
+    "starter.ts",
     "README.md"
   ],
   "scripts": {
@@ -39,6 +41,7 @@
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
+    "@types/node": "24.12.2",
     "tsdown": "0.21.10",
     "typescript": "6.0.3"
   },

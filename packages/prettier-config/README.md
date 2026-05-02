@@ -16,23 +16,36 @@ Shared [Prettier](https://prettier.io) config.
 
 ## Install
 
+Use the unified [`nozo`](../nozo) CLI:
+
 ```bash
-pnpx @nozomiishii/prettier-config@latest
+pnpx nozo init
 ```
+
+Or invoke the init bin for this package directly:
+
+```bash
+pnpx -p @nozomiishii/prettier-config nozo-prettier-init
+```
+
+Either path adds `@nozomiishii/prettier-config` and `prettier` to your
+`devDependencies` (pinned), sets `"type": "module"`, adds `format` /
+`format:fix` / `prettier` scripts, and writes a `prettier.config.ts` that
+re-exports the shared config.
 
 ## Manual
 
 ```bash
-pnpm add -D @nozomiishii/prettier-config
+pnpm add -D @nozomiishii/prettier-config prettier
 ```
 
 Add the scripts:
 
 ```bash
 npm pkg set type="module"
-npm pkg set scripts.format="pnpm prettier --check"
-npm pkg set scripts.format:fix="pnpm prettier --write"
-npm pkg set scripts.prettier="prettier . --ignore-unknown"
+npm pkg set scripts.format="pnpm prettier . --check"
+npm pkg set scripts.format:fix="pnpm prettier . --write"
+npm pkg set scripts.prettier="prettier --ignore-unknown"
 ```
 
 `package.json`
@@ -41,17 +54,17 @@ npm pkg set scripts.prettier="prettier . --ignore-unknown"
 {
   "type": "module",
   "scripts": {
-    "format": "pnpm prettier --check",
-    "format:fix": "pnpm prettier --write",
-    "prettier": "prettier . --ignore-unknown"
+    "format": "pnpm prettier . --check",
+    "format:fix": "pnpm prettier . --write",
+    "prettier": "prettier --ignore-unknown"
   }
 }
 ```
 
-`prettier.config.js`
+`prettier.config.ts`
 
-```js
-export { default } from '@nozomiishii/prettier-config';
+```ts
+export { default } from "@nozomiishii/prettier-config";
 ```
 
 ## Included Plugins
