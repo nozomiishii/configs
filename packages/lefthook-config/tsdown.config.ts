@@ -8,4 +8,5 @@ export default defineConfig({
   platform: "node",
   loader: { ".yaml": "text" },
   outExtensions: () => ({ js: ".js" }),
+  banner: { js: "#!/usr/bin/env node" },
 });

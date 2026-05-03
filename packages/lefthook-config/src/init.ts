@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /** `nozo-lefthook-init`: scaffold lefthook config into the consumer project. */
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
