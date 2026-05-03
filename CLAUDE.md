@@ -48,6 +48,13 @@ pnpm postinstall
 - 設定変更は基本的に `packages/` 配下の設定・ドキュメント側を優先して更新する。
 - フォーマット・リントは `pnpm format` / `pnpm prettier` と `pnpm fix:md`（markdown）を使う。
 
+## テスト配置
+
+- Unit Test はテスト対象のファイルと同じ階層に配置する（例: `src/init.ts` のテストは `src/init.test.ts`）。
+- `tests/` ディレクトリでまとめて分離するスタイルは採用しない。配置を見るだけで「どのファイルにテストがあるか」が分かるようにするのが狙い。
+- setup / teardown は `beforeEach` / `afterEach` などの hook を避け、vitest の [`test.extend`](https://vitest.dev/guide/test-context.html) による fixture で書く。各 test が context 経由で依存を明示的に受け取ることで、test 間の hidden state（密結合）を排除する。
+- 既存テストが `tests/` 配下にあるパッケージは、新規テストから順次同階層配置に移行する。
+
 ## packages/prettier-config: requirePragma による除外方針
 
 - `packages/prettier-config/src/index.ts` の `overrides` で `pnpm-lock.yaml` / `submodules/**` / `next-env.d.ts` / `*.md` / `*.mdx` を `requirePragma: true` で除外している。
