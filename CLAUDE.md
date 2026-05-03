@@ -10,17 +10,9 @@
 
 `configs` は `pnpm` を使った共有設定モノレポです。`packages/` に各種ツール（commitlint / ESLint / lefthook / prettier / tsconfig など）の設定をパッケージとして提供します。
 
-主要ディレクトリ:
-
-- `packages/`: `@nozomiishii/*-config` 系
-- `apps/`: 設定やサンプル
-- `lefthook.yaml`: Git hooks の設定
-- `.github/workflows/`: CI（release-please 等）
-
 ## 重要なパターン
 
 - 設定変更は基本的に `packages/` 配下の設定・ドキュメント側を優先して更新する。
-- フォーマット・リントは `pnpm format` / `pnpm prettier` と `pnpm fix:md`（markdown）を使う。
 
 ## テスト配置
 
