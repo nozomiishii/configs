@@ -29,6 +29,14 @@ export function unicorn() {
         "unicorn/no-null": "off",
 
         /**
+         * import + 同名 re-export の bulk pattern を許可（local でも使っている場合のみ）
+         * pure re-export は引き続き `export ... from` を強制
+         *
+         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md
+         */
+        "unicorn/prefer-export-from": ["error", { ignoreUsedVariables: true }],
+
+        /**
          * 略語の制限。やるなら明示的にreplacementを記載していく
          *
          * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
