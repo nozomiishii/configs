@@ -8,14 +8,14 @@ import starter from "../starter.yaml";
 type PackageJson = {
   name: string;
   version: string;
-  dependencies?: Record<string, string>;
   devDependencies?: Record<string, string>;
+  peerDependencies?: Record<string, string>;
 };
 
 // 1. self pkg の name / version と lefthook の pin 値を取得
 const selfPkgPath = fileURLToPath(new URL("../package.json", import.meta.url));
 const selfPkg = JSON.parse(readFileSync(selfPkgPath, "utf8")) as PackageJson & {
-  dependencies: { lefthook: string };
+  peerDependencies: { lefthook: string };
 };
 
 // 2. target package.json を読み込み
@@ -26,7 +26,7 @@ const target = JSON.parse(readFileSync(targetPath, "utf8")) as PackageJson;
 target.devDependencies = {
   ...target.devDependencies,
   [selfPkg.name]: selfPkg.version,
-  lefthook: selfPkg.dependencies.lefthook,
+  lefthook: selfPkg.peerDependencies.lefthook,
 };
 
 // 4. package.json を書き戻し
@@ -35,4 +35,4 @@ writeFileSync(targetPath, `${JSON.stringify(target, null, 2)}\n`);
 // 5. lefthook.yaml を生成
 writeFileSync("lefthook.yaml", starter);
 
-console.log("✓ @nozomiishii/lefthook-config installed");
+process.stdout.write("✓ @nozomiishii/lefthook-config installed\n");

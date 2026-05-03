@@ -45,11 +45,11 @@ const test = baseTest
   });
 
 test("init adds @nozomiishii/lefthook-config to devDependencies", ({ initResult }) => {
-  expect(initResult.pkg.devDependencies?.["@nozomiishii/lefthook-config"]).toMatch(/^\d+\.\d+\.\d+/);
+  expect(initResult.pkg.devDependencies?.["@nozomiishii/lefthook-config"]).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
 test("init adds lefthook to devDependencies", ({ initResult }) => {
-  expect(initResult.pkg.devDependencies?.lefthook).toMatch(/^\d+\.\d+\.\d+/);
+  expect(initResult.pkg.devDependencies?.lefthook).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
 test("init generates lefthook.yaml", ({ initResult }) => {
