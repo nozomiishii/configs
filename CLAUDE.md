@@ -30,7 +30,7 @@ pnpm postinstall
 
 ## Git・GitHub 運用ルール
 
-- PR タイトルは英語 semantic 形式で、CI の semantic pull request チェックに従う。詳細は [.github/workflows/_pull-request.yaml](.github/workflows/_pull-request.yaml) を参照。
+- PR タイトルは Conventional Commits 形式（英語）で `<type>: <subject>` と書く。許可 type は `feat` / `fix` / `chore` のみ。subject は小文字始まり / ASCII のみ / 末尾スペース禁止。違反すると CI（`amannn/action-semantic-pull-request`、`nozomiishii/workflows` 経由）が落ちる。詳細は [.github/workflows/_pull-request.yaml](.github/workflows/_pull-request.yaml) を参照。
 
 ## アーキテクチャ概要
 
