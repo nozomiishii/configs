@@ -4,18 +4,18 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 type PackageJson = {
-  dependencies?: Record<string, string>;
   devDependencies?: Record<string, string>;
   name: string;
+  peerDependencies?: Record<string, string>;
   scripts?: Record<string, string>;
   version: string;
 };
 
 // 1. self pkg の name / version と eslint / typescript の pin 値を取得
 const selfPkgPath = fileURLToPath(new URL("../package.json", import.meta.url));
-const selfPkg = JSON.parse(readFileSync(selfPkgPath, "utf8")) as PackageJson;
-const eslintVersion = selfPkg.dependencies?.eslint ?? "10.2.1";
-const typescriptVersion = selfPkg.devDependencies?.typescript ?? "6.0.3";
+const selfPkg = JSON.parse(readFileSync(selfPkgPath, "utf8")) as PackageJson & {
+  peerDependencies: { eslint: string; typescript: string };
+};
 
 // 2. starter (利用側に書き出す TS) を読み込み
 const starterPath = fileURLToPath(new URL("../starter.ts", import.meta.url));
@@ -28,9 +28,9 @@ const target = JSON.parse(readFileSync(targetPath, "utf8")) as PackageJson;
 // 4. devDependencies に self / eslint / typescript を pin で追加
 target.devDependencies = {
   ...target.devDependencies,
-  eslint: eslintVersion,
+  eslint: selfPkg.peerDependencies.eslint,
   [selfPkg.name]: selfPkg.version,
-  typescript: typescriptVersion,
+  typescript: selfPkg.peerDependencies.typescript,
 };
 
 // 5. eslint scripts を追加

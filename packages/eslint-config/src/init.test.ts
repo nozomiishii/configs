@@ -48,15 +48,15 @@ const test = baseTest
   });
 
 test("init adds @nozomiishii/eslint-config to devDependencies", ({ initResult }) => {
-  expect(initResult.pkg.devDependencies?.["@nozomiishii/eslint-config"]).toMatch(/^\d+\.\d+\.\d+/);
+  expect(initResult.pkg.devDependencies?.["@nozomiishii/eslint-config"]).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
 test("init adds eslint to devDependencies", ({ initResult }) => {
-  expect(initResult.pkg.devDependencies?.eslint).toMatch(/^\d+\.\d+\.\d+/);
+  expect(initResult.pkg.devDependencies?.eslint).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
 test("init adds typescript to devDependencies", ({ initResult }) => {
-  expect(initResult.pkg.devDependencies?.typescript).toMatch(/^\d+\.\d+\.\d+/);
+  expect(initResult.pkg.devDependencies?.typescript).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
 test("init adds eslint script", ({ initResult }) => {
