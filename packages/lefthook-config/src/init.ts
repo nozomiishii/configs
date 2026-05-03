@@ -14,8 +14,9 @@ type PackageJson = {
 
 // 1. self pkg の name / version と lefthook の pin 値を取得
 const selfPkgPath = fileURLToPath(new URL("../package.json", import.meta.url));
-const selfPkg = JSON.parse(readFileSync(selfPkgPath, "utf8")) as PackageJson;
-const lefthookVersion = selfPkg.dependencies?.lefthook ?? "2.1.6";
+const selfPkg = JSON.parse(readFileSync(selfPkgPath, "utf8")) as PackageJson & {
+  dependencies: { lefthook: string };
+};
 
 // 2. target package.json を読み込み
 const targetPath = resolve(process.cwd(), "package.json");
@@ -25,7 +26,7 @@ const target = JSON.parse(readFileSync(targetPath, "utf8")) as PackageJson;
 target.devDependencies = {
   ...target.devDependencies,
   [selfPkg.name]: selfPkg.version,
-  lefthook: lefthookVersion,
+  lefthook: selfPkg.dependencies.lefthook,
 };
 
 // 4. package.json を書き戻し
