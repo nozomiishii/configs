@@ -54,12 +54,12 @@ test("init sets type:module", ({ initResult }) => {
 
 test("init adds @nozomiishii/prettier-config to devDependencies", ({ initResult }) => {
   expect(initResult.pkg.devDependencies?.["@nozomiishii/prettier-config"]).toMatch(
-    /^\d+\.\d+\.\d+/,
+    /^\d+\.\d+\.\d+$/,
   );
 });
 
 test("init adds prettier to devDependencies", ({ initResult }) => {
-  expect(initResult.pkg.devDependencies?.prettier).toMatch(/^\d+\.\d+\.\d+/);
+  expect(initResult.pkg.devDependencies?.prettier).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
 test("init adds format script", ({ initResult }) => {

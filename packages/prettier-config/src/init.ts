@@ -4,9 +4,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 type PackageJson = {
-  dependencies?: Record<string, string>;
   devDependencies?: Record<string, string>;
   name: string;
+  peerDependencies?: Record<string, string>;
   scripts?: Record<string, string>;
   type?: string;
   version: string;
@@ -14,8 +14,9 @@ type PackageJson = {
 
 // 1. self pkg の name / version と prettier の pin 値を取得
 const selfPkgPath = fileURLToPath(new URL("../package.json", import.meta.url));
-const selfPkg = JSON.parse(readFileSync(selfPkgPath, "utf8")) as PackageJson;
-const prettierVersion = selfPkg.dependencies?.prettier ?? "3.8.3";
+const selfPkg = JSON.parse(readFileSync(selfPkgPath, "utf8")) as PackageJson & {
+  peerDependencies: { prettier: string };
+};
 
 // 2. starter (利用側に書き出す TS) を読み込み
 const starterPath = fileURLToPath(new URL("../starter.ts", import.meta.url));
@@ -31,7 +32,7 @@ target.type = "module";
 // 5. devDependencies に self / prettier を pin で追加
 target.devDependencies = {
   ...target.devDependencies,
-  prettier: prettierVersion,
+  prettier: selfPkg.peerDependencies.prettier,
   [selfPkg.name]: selfPkg.version,
 };
 
