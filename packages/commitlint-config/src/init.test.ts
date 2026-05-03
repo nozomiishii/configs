@@ -46,7 +46,7 @@ const test = baseTest
 
 test("init adds @nozomiishii/commitlint-config to devDependencies", ({ initResult }) => {
   expect(initResult.pkg.devDependencies?.["@nozomiishii/commitlint-config"]).toMatch(
-    /^\d+\.\d+\.\d+/,
+    /^\d+\.\d+\.\d+$/,
   );
 });
 
