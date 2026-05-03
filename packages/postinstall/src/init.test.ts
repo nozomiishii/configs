@@ -46,7 +46,7 @@ const test = baseTest
   });
 
 test("init adds @nozomiishii/postinstall to devDependencies", ({ initResult }) => {
-  expect(initResult.pkg.devDependencies?.["@nozomiishii/postinstall"]).toMatch(/^\d+\.\d+\.\d+/);
+  expect(initResult.pkg.devDependencies?.["@nozomiishii/postinstall"]).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
 test("init adds postinstall script", ({ initResult }) => {
