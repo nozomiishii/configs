@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/nozomiishii/configs/compare/nozo-v0.4.1...nozo-v0.4.2) (2026-05-03)
+
+
+### Miscellaneous
+
+* update dependency @clack/prompts to v1.3.0 ([#2166](https://github.com/nozomiishii/configs/issues/2166)) ([09f6f2b](https://github.com/nozomiishii/configs/commit/09f6f2bedee6428bf77539b3689786076b947eb7))
+
 ## [0.4.1](https://github.com/nozomiishii/configs/compare/nozo-v0.4.0...nozo-v0.4.1) (2026-05-02)
 
 ### Features
