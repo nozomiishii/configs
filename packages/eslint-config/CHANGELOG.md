@@ -2,15 +2,13 @@
 
 ## [0.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.8.0...@nozomiishii/eslint-config-v0.8.1) (2026-05-03)
 
-
 ### Features
 
-* **eslint-config:** switch typegen API and add named rule exports ([#2171](https://github.com/nozomiishii/configs/issues/2171)) ([0cc65e5](https://github.com/nozomiishii/configs/commit/0cc65e5b37319612a843e029753ac284bc4f5ba9))
-
+- **eslint-config:** switch typegen API and add named rule exports ([#2171](https://github.com/nozomiishii/configs/issues/2171)) ([0cc65e5](https://github.com/nozomiishii/configs/commit/0cc65e5b37319612a843e029753ac284bc4f5ba9))
 
 ### Miscellaneous
 
-* update dependency @eslint-react/eslint-plugin to v5.6.2 ([#2168](https://github.com/nozomiishii/configs/issues/2168)) ([07251fc](https://github.com/nozomiishii/configs/commit/07251fc2f3e44fd9d5374237cdb1582901603ab4))
+- update dependency @eslint-react/eslint-plugin to v5.6.2 ([#2168](https://github.com/nozomiishii/configs/issues/2168)) ([07251fc](https://github.com/nozomiishii/configs/commit/07251fc2f3e44fd9d5374237cdb1582901603ab4))
 
 ## [0.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.7.0...@nozomiishii/eslint-config-v0.8.0) (2026-05-02)
 

@@ -2,10 +2,9 @@
 
 ## [0.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.5.0...@nozomiishii/cspell-config-v0.5.1) (2026-05-03)
 
-
 ### Miscellaneous
 
-* **cspell-config:** emit bin shebang via tsdown banner ([#2177](https://github.com/nozomiishii/configs/issues/2177)) ([28e65f5](https://github.com/nozomiishii/configs/commit/28e65f50bf28960c9b85f380b6e4347ad34750cd))
+- **cspell-config:** emit bin shebang via tsdown banner ([#2177](https://github.com/nozomiishii/configs/issues/2177)) ([28e65f5](https://github.com/nozomiishii/configs/commit/28e65f50bf28960c9b85f380b6e4347ad34750cd))
 
 ## [0.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.4.6...@nozomiishii/cspell-config-v0.5.0) (2026-05-01)
 
