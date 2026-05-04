@@ -16,41 +16,13 @@
 
 ## インストール
 
-```bash
-pnpx @nozomiishii/eslint-config@latest
-```
-
-## 手動セットアップ
+[`nozo`](../nozo) CLI を使う:
 
 ```bash
-pnpm add -D eslint typescript @nozomiishii/eslint-config && touch eslint.config.ts
+pnpx nozo init
 ```
 
-scripts の設定:
-
-```bash
-pnpm pkg set scripts.eslint="eslint --max-warnings=0 --cache" \
-pnpm pkg set scripts.lint="pnpm eslint" \
-pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
-```
-
-`package.json`
-
-```json
-{
-  "scripts": {
-    "eslint": "eslint --max-warnings=0 --cache",
-    "lint": "pnpm eslint",
-    "lint:fix": "pnpm eslint --fix"
-  }
-}
-```
-
-`eslint.config.ts`
-
-```ts
-export { default } from '@nozomiishii/eslint-config';
-```
+これで `@nozomiishii/eslint-config` / `eslint` / `typescript` が pin で `devDependencies` に追加され、`eslint` / `lint` / `lint:fix` の scripts が追加され、shared config を re-export する `eslint.config.ts` が生成される。
 
 ## 参考
 

@@ -17,18 +17,32 @@
   "author": "Nozomi Ishii",
   "type": "module",
   "main": "eslint.config.ts",
-  "bin": "bin/cli.sh",
+  "bin": {
+    "nozo-eslint-init": "./dist/init.js"
+  },
+  "files": [
+    "dist",
+    "rules",
+    "utils",
+    "eslint-typegen.d.ts",
+    "eslint.config.ts",
+    "starter.ts",
+    "README.md",
+    "README.ja.md"
+  ],
   "scripts": {
+    "build": "tsdown",
     "build:inspector": "pnpx @eslint/config-inspector build",
     "check:ts": "tsc",
     "dev": "pnpm typegen && eslint --inspect-config",
     "eslint": "eslint --max-warnings=0",
-    "postinstall": "pnpm typegen",
     "link": "pnpm link --global",
     "lint": "pnpm eslint .",
     "lint:fix": "pnpm eslint . --fix",
-    "prepublishOnly": "pnpm run build:inspector",
+    "prepare": "pnpm run typegen",
+    "prepublishOnly": "pnpm run build && pnpm run build:inspector",
     "start": "pnpx serve .eslint-config-inspector",
+    "test": "vitest run",
     "typegen": "node --import @swc-node/register/esm-register scripts/typegen.ts"
   },
   "dependencies": {
@@ -41,7 +55,6 @@
     "@swc-node/register": "1.11.1",
     "@types/node": "24.12.2",
     "@vitest/eslint-plugin": "1.6.16",
-    "eslint": "10.2.1",
     "eslint-config-flat-gitignore": "2.3.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
@@ -68,11 +81,14 @@
     "typescript-eslint": "8.59.1"
   },
   "devDependencies": {
-    "typescript": "6.0.3"
+    "eslint": "10.2.1",
+    "tsdown": "0.21.10",
+    "typescript": "6.0.3",
+    "vitest": "4.1.5"
   },
   "peerDependencies": {
-    "eslint": "^10.2.1",
-    "typescript": "^6.0.3"
+    "eslint": "10.2.1",
+    "typescript": "6.0.3"
   },
   "packageManager": "pnpm@10.33.2",
   "engines": {
