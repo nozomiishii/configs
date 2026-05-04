@@ -90,4 +90,28 @@ export default defineConfig([
   // packageJson()
 ]);
 
+export {
+  betterTailwindcss,
+  deMorgan,
+  eslintComments,
+  importX,
+  javascript,
+  jsdoc,
+  jsxA11yX,
+  n,
+  nextjs,
+  perfectionist,
+  playwright,
+  prettier,
+  react,
+  reactHooks,
+  reactRefresh,
+  regexp,
+  storybook,
+  stylistic,
+  typescript,
+  unicorn,
+  viest,
+};
+
 export { defineConfig } from "eslint/config";

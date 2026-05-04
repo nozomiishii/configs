@@ -2,51 +2,24 @@
 
 このリポジトリで Claude Code (claude.ai/code) が作業する際のガイドラインです。
 
-## よく使うコマンド
-
-```sh
-# Install / dependencies
-pnpm install
-
-# Prettier check
-pnpm format
-
-# Prettier format
-pnpm format:fix
-
-# Fix markdown lint issues
-pnpm fix:md
-
-# Prettier (write)
-pnpm prettier
-
-# Cleanup
-pnpm clean:all
-pnpm clean:node
-
-# postinstall
-pnpm postinstall
-```
-
 ## Git・GitHub 運用ルール
 
-- PR タイトルは英語 semantic 形式で、CI の semantic pull request チェックに従う。詳細は [.github/workflows/_pull-request.yaml](.github/workflows/_pull-request.yaml) を参照。
+- PR タイトルは Conventional Commits 形式（英語）で `<type>: <subject>` と書く。許可 type は `feat` / `fix` / `chore` のみ。subject は小文字始まり / ASCII のみ / 末尾スペース禁止。違反すると CI（`amannn/action-semantic-pull-request`、`nozomiishii/workflows` 経由）が落ちる。詳細は [.github/workflows/_pull-request.yaml](.github/workflows/_pull-request.yaml) を参照。
 
 ## アーキテクチャ概要
 
 `configs` は `pnpm` を使った共有設定モノレポです。`packages/` に各種ツール（commitlint / ESLint / lefthook / prettier / tsconfig など）の設定をパッケージとして提供します。
 
-主要ディレクトリ:
-
-- `packages/`: `@nozomiishii/*-config` 系
-- `apps/`: 設定やサンプル
-- `lefthook.yaml`: Git hooks の設定
-- `.github/workflows/`: CI（release-please 等）
-
 ## 重要なパターン
 
 - 設定変更は基本的に `packages/` 配下の設定・ドキュメント側を優先して更新する。
-- フォーマット・リントは `pnpm format` / `pnpm prettier` と `pnpm fix:md`（markdown）を使う。
+
+## テスト配置
+
+- Unit Test はテスト対象のファイルと同じ階層に配置する（例: `src/init.ts` のテストは `src/init.test.ts`）。
+- `tests/` ディレクトリでまとめて分離するスタイルは採用しない。配置を見るだけで「どのファイルにテストがあるか」が分かるようにするのが狙い。
+- setup / teardown は `beforeEach` / `afterEach` などの hook を避け、vitest の [`test.extend`](https://vitest.dev/guide/test-context.html) による fixture で書く。各 test が context 経由で依存を明示的に受け取ることで、test 間の hidden state（密結合）を排除する。
+- 既存テストが `tests/` 配下にあるパッケージは、新規テストから順次同階層配置に移行する。
 
 ## packages/prettier-config: requirePragma による除外方針
 
