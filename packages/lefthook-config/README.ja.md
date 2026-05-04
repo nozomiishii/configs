@@ -18,9 +18,13 @@
 
 ## インストール
 
+[`nozo`](../nozo) CLI を使う:
+
 ```sh
-pnpm add -D lefthook @nozomiishii/lefthook-config
+pnpx nozo init
 ```
+
+これで `lefthook` と `@nozomiishii/lefthook-config` が pin で `devDependencies` に追加され、推奨プリセットを extend する `lefthook.yaml` が生成される。
 
 補助的なランタイム（現在は `cleanup-merged` post-merge フラグメントで使う `git-harvest`）は、このパッケージの `bin` フィールドが提供する shim でラップされており、利用側が直接 dependency に追加しなくても `node_modules/.bin/nozo-*` として公開されます。
 
