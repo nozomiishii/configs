@@ -14,30 +14,20 @@
 
 ## インストール
 
-```bash
-pnpm add -D @nozomiishii/postinstall
-```
-
-## 使い方
-
-pnpm CLI でこのパッケージをプロジェクトの postinstall スクリプトに追加します:
+[`nozo`](../nozo) CLI を使う:
 
 ```bash
-pnpm pkg set scripts.postinstall="postinstall"
+pnpx nozo init
 ```
 
-`package.json` は次の設定を含むはずです:
+これで `@nozomiishii/postinstall` が pin で `devDependencies` に追加され、`scripts.postinstall` が `"postinstall"` に設定される（毎回の `pnpm install` 時に本パッケージの postinstall スクリプトが起動する）。
 
 `package.json`
 
 ```json
 {
-  "postinstall": "postinstall"
+  "scripts": {
+    "postinstall": "postinstall"
+  }
 }
-```
-
-`pnpm install` を実行すると postinstall スクリプトが起動し、開発ツールがセットアップされます:
-
-```bash
-pnpm install
 ```

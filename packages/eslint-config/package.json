@@ -1,6 +1,6 @@
 {
   "name": "@nozomiishii/eslint-config",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Nozomi's Recommended eslint config",
   "keywords": [
     "eslint",
@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.7.1",
-    "@eslint-react/eslint-plugin": "5.6.2",
+    "@eslint-react/eslint-plugin": "5.6.4",
     "@eslint/config-inspector": "2.0.0",
     "@eslint/js": "10.0.1",
     "@next/eslint-plugin-next": "16.2.4",

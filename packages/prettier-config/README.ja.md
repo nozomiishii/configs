@@ -16,43 +16,13 @@
 
 ## インストール
 
-```bash
-pnpx @nozomiishii/prettier-config@latest
-```
-
-## 手動セットアップ
+[`nozo`](../nozo) CLI を使う:
 
 ```bash
-pnpm add -D @nozomiishii/prettier-config
+pnpx nozo init
 ```
 
-scripts の設定:
-
-```bash
-npm pkg set type="module"
-npm pkg set scripts.format="pnpm prettier --check"
-npm pkg set scripts.format:fix="pnpm prettier --write"
-npm pkg set scripts.prettier="prettier . --ignore-unknown"
-```
-
-`package.json`
-
-```json
-{
-  "type": "module",
-  "scripts": {
-    "format": "pnpm prettier --check",
-    "format:fix": "pnpm prettier --write",
-    "prettier": "prettier . --ignore-unknown"
-  }
-}
-```
-
-`prettier.config.js`
-
-```js
-export { default } from '@nozomiishii/prettier-config';
-```
+これで `@nozomiishii/prettier-config` / `prettier` が pin で `devDependencies` に追加され、`"type": "module"` が設定され、`format` / `format:fix` / `prettier` の scripts が追加され、shared config を re-export する `prettier.config.ts` が生成される。
 
 ## 同梱プラグイン
 

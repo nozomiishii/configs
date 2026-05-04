@@ -8,7 +8,8 @@
     // ----------------------------------------------------------------
     "moduleResolution": "Bundler",
     "module": "ESNext",
-    "noEmit": true
+    "noEmit": true,
+    "types": ["node"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

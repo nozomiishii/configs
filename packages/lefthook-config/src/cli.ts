@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { spawn } from "node:child_process";
 import { createRequire } from "node:module";
 

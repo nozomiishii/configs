@@ -16,19 +16,16 @@ Shared [commitlint](https://commitlint.js.org) config.
 
 ## Install
 
+Use the [`nozo`](../nozo) CLI:
+
 ```bash
-pnpm add -D @nozomiishii/commitlint-config
+pnpx nozo init
 ```
 
-## Usage
+This adds `@nozomiishii/commitlint-config` to your `devDependencies` (pinned)
+and writes a `commitlint.config.ts` that re-exports the shared config.
 
-Add `commitlint.config.ts` (or `.js`) that extends this package:
-
-```ts
-import config from '@nozomiishii/commitlint-config';
-
-export default config;
-```
+## Bin
 
 The package also ships a namespaced bin, `nozo-commitlint`, which wraps the
 pinned `@commitlint/cli`. Lefthook configs (e.g. `@nozomiishii/lefthook-config`)

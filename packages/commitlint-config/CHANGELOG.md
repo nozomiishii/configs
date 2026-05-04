@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.2.0...@nozomiishii/commitlint-config-v0.2.1) (2026-05-03)
+
+### Miscellaneous
+
+- update commitlint monorepo to v20.5.3 ([#2170](https://github.com/nozomiishii/configs/issues/2170)) ([8eb0b69](https://github.com/nozomiishii/configs/commit/8eb0b6905c47b47fe993d6ace97c154f1a31f1b1))
+
 ## [0.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.1.0...@nozomiishii/commitlint-config-v0.2.0) (2026-05-01)
 
 ### ⚠ BREAKING CHANGES

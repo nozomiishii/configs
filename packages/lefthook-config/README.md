@@ -21,9 +21,15 @@ or cherry-pick individual fragments.
 
 ## Install
 
+Use the [`nozo`](../nozo) CLI:
+
 ```sh
-pnpm add -D lefthook @nozomiishii/lefthook-config
+pnpx nozo init
 ```
+
+This adds `lefthook` and `@nozomiishii/lefthook-config` to your
+`devDependencies` (pinned) and writes a `lefthook.yaml` that extends the
+recommended preset.
 
 Auxiliary runtimes (currently `git-harvest`, used by the `cleanup-merged`
 post-merge fragment) are wrapped by shims that this package ships under

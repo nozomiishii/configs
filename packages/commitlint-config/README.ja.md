@@ -16,19 +16,15 @@
 
 ## インストール
 
+[`nozo`](../nozo) CLI を使う:
+
 ```bash
-pnpm add -D @nozomiishii/commitlint-config
+pnpx nozo init
 ```
 
-## 使い方
+これで `@nozomiishii/commitlint-config` が pin で `devDependencies` に追加され、shared config を re-export する `commitlint.config.ts` が生成される。
 
-このパッケージを extend する `commitlint.config.ts`（もしくは `.js`）を追加します:
-
-```ts
-import config from '@nozomiishii/commitlint-config';
-
-export default config;
-```
+## 同梱 bin
 
 このパッケージは pin された `@commitlint/cli` をラップする `nozo-commitlint` という namespace 付きの bin も同梱しています。Lefthook の設定（例: `@nozomiishii/lefthook-config`）からはこの shim を直接呼び出します:
 
