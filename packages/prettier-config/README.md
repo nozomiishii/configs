@@ -16,43 +16,16 @@ Shared [Prettier](https://prettier.io) config.
 
 ## Install
 
-```bash
-pnpx @nozomiishii/prettier-config@latest
-```
-
-## Manual
+Use the [`nozo`](../nozo) CLI:
 
 ```bash
-pnpm add -D @nozomiishii/prettier-config
+pnpx nozo init
 ```
 
-Add the scripts:
-
-```bash
-npm pkg set type="module"
-npm pkg set scripts.format="pnpm prettier --check"
-npm pkg set scripts.format:fix="pnpm prettier --write"
-npm pkg set scripts.prettier="prettier . --ignore-unknown"
-```
-
-`package.json`
-
-```json
-{
-  "type": "module",
-  "scripts": {
-    "format": "pnpm prettier --check",
-    "format:fix": "pnpm prettier --write",
-    "prettier": "prettier . --ignore-unknown"
-  }
-}
-```
-
-`prettier.config.js`
-
-```js
-export { default } from '@nozomiishii/prettier-config';
-```
+This adds `@nozomiishii/prettier-config` and `prettier` to your
+`devDependencies` (pinned), sets `"type": "module"`, adds `format` /
+`format:fix` / `prettier` scripts, and writes a `prettier.config.ts` that
+re-exports the shared config.
 
 ## Included Plugins
 
