@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.1.0...@nozomiishii/postinstall-v0.1.1) (2026-05-05)
+
+
+### Features
+
+* **postinstall:** add nozo-postinstall-init bin ([#2165](https://github.com/nozomiishii/configs/issues/2165)) ([31bd58d](https://github.com/nozomiishii/configs/commit/31bd58dd9c64e14cad6cf89f118dcc0ca28ca5b2))
+
 ## [0.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.0.8...@nozomiishii/postinstall-v0.1.0) (2026-05-01)
 
 ### ⚠ BREAKING CHANGES

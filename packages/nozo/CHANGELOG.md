@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/nozomiishii/configs/compare/nozo-v0.4.2...nozo-v0.4.3) (2026-05-05)
+
+
+### Miscellaneous
+
+* update dependency eslint to v10.3.0 ([#2185](https://github.com/nozomiishii/configs/issues/2185)) ([0ecb904](https://github.com/nozomiishii/configs/commit/0ecb9046e502ed3af729586f4023e32382a864cd))
+
 ## [0.4.2](https://github.com/nozomiishii/configs/compare/nozo-v0.4.1...nozo-v0.4.2) (2026-05-03)
 
 ### Miscellaneous

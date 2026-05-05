@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.6.0...@nozomiishii/lefthook-config-v0.7.0) (2026-05-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* **lefthook-config:** add nozo-lefthook-init bin and remove starter subpath ([#2160](https://github.com/nozomiishii/configs/issues/2160))
+
+### Features
+
+* **lefthook-config:** add nozo-lefthook-init bin and remove starter subpath ([#2160](https://github.com/nozomiishii/configs/issues/2160)) ([062414d](https://github.com/nozomiishii/configs/commit/062414dfb8bce77178498fed9185c6f9dc006282))
+
 ## [0.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.5.0...@nozomiishii/lefthook-config-v0.6.0) (2026-05-02)
 
 ### ⚠ BREAKING CHANGES
