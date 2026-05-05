@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.2.1...@nozomiishii/commitlint-config-v0.2.2) (2026-05-05)
+
+### Features
+
+- **commitlint-config:** add nozo-commitlint-init bin ([#2162](https://github.com/nozomiishii/configs/issues/2162)) ([5016610](https://github.com/nozomiishii/configs/commit/50166102d0a5f6be802af19f7a5418062cb32c1f))
+
 ## [0.2.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.2.0...@nozomiishii/commitlint-config-v0.2.1) (2026-05-03)
 
 ### Miscellaneous

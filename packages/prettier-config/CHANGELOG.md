@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.9.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.8.0...@nozomiishii/prettier-config-v0.9.0) (2026-05-05)
+
+### ⚠ BREAKING CHANGES
+
+- **prettier-config:** replace legacy bash scaffold with nozo-prettier-init bin ([#2164](https://github.com/nozomiishii/configs/issues/2164))
+
+### Features
+
+- **prettier-config:** replace legacy bash scaffold with nozo-prettier-init bin ([#2164](https://github.com/nozomiishii/configs/issues/2164)) ([c54e969](https://github.com/nozomiishii/configs/commit/c54e969fe3799487deb5991d1b1785b9bbd99210))
+
 ## [0.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.7.3...@nozomiishii/prettier-config-v0.8.0) (2026-05-01)
 
 ### ⚠ BREAKING CHANGES

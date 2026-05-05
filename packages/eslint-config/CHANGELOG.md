@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.8.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.8.1...@nozomiishii/eslint-config-v0.8.2) (2026-05-05)
+
+### Miscellaneous
+
+- update dependency @eslint-react/eslint-plugin to v5.6.4 ([#2180](https://github.com/nozomiishii/configs/issues/2180)) ([c0f8de6](https://github.com/nozomiishii/configs/commit/c0f8de6ae2dc6073acc85bb3847f20e2774578a3))
+- update dependency @eslint-react/eslint-plugin to v5.6.6 ([#2184](https://github.com/nozomiishii/configs/issues/2184)) ([f701a61](https://github.com/nozomiishii/configs/commit/f701a61f5bc4bec66d9884c1515db7295682b7f2))
+- update dependency @eslint-react/eslint-plugin to v5.7.0 ([#2188](https://github.com/nozomiishii/configs/issues/2188)) ([d4c700f](https://github.com/nozomiishii/configs/commit/d4c700f1e8f39267d2bb81e1801ec50b7d1901ca))
+- update dependency eslint to v10.3.0 ([#2185](https://github.com/nozomiishii/configs/issues/2185)) ([0ecb904](https://github.com/nozomiishii/configs/commit/0ecb9046e502ed3af729586f4023e32382a864cd))
+- update dependency globals to v17.6.0 ([#2186](https://github.com/nozomiishii/configs/issues/2186)) ([5e6d2d7](https://github.com/nozomiishii/configs/commit/5e6d2d72d8b559d0cdf5c644ed77a7bdb2d745a4))
+
 ## [0.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.8.0...@nozomiishii/eslint-config-v0.8.1) (2026-05-03)
 
 ### Features
