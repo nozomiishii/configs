@@ -4,14 +4,16 @@
 # pnpm config list
 # ```
 
-# 使用するNode.jsのバージョン
-useNodeVersion: 24.15.0
-
 packages:
   - "packages/*"
 
-# モノレポのpackagesもシンボリックリンクで管理する
-linkWorkspacePackages: true
+# lefthook のフック登録は @nozomiishii/postinstall 経由で行うため、
+# パッケージ自身の install スクリプト実行は不要
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
+  lefthook: false
+  unrs-resolver: true
 
 # 依存解決のうまくいっていないdependenciesのdependenciesをrootのnode_modulesまで巻き上げる
 publicHoistPattern:
@@ -22,12 +24,3 @@ publicHoistPattern:
 
 # pinバージョンでインストールする
 savePrefix: ""
-
-# 公開から3日未満のバージョンをインストールしない（サプライチェーン攻撃対策）
-# https://pnpm.io/settings#minimumreleaseage
-# NOTE: transitive dependency の再解決時にフォールバックが効かない pnpm のバグにより一時無効化
-# https://github.com/pnpm/pnpm/issues/11068
-# minimumReleaseAge: 4320
-
-# ログ出力形式をカスタマイズ
-reporter: append-only
