@@ -16,41 +16,15 @@ Shared [eslint](https://eslint.org/) config.
 
 ## Install
 
-```bash
-pnpx @nozomiishii/eslint-config@latest
-```
-
-## Manual
+Use the [`nozo`](../nozo) CLI:
 
 ```bash
-pnpm add -D eslint typescript @nozomiishii/eslint-config && touch eslint.config.ts
+pnpx nozo init
 ```
 
-Add the scripts:
-
-```bash
-pnpm pkg set scripts.eslint="eslint --max-warnings=0 --cache" \
-pnpm pkg set scripts.lint="pnpm eslint" \
-pnpm pkg set scripts.lint:fix="pnpm eslint --fix"
-```
-
-`package.json`
-
-```json
-{
-  "scripts": {
-    "eslint": "eslint --max-warnings=0 --cache",
-    "lint": "pnpm eslint",
-    "lint:fix": "pnpm eslint --fix"
-  }
-}
-```
-
-`eslint.config.ts`
-
-```ts
-export { default } from '@nozomiishii/eslint-config';
-```
+This adds `@nozomiishii/eslint-config`, `eslint`, and `typescript` to your
+`devDependencies` (pinned), adds `eslint` / `lint` / `lint:fix` scripts, and
+writes an `eslint.config.ts` that re-exports the shared config.
 
 ## References
 
