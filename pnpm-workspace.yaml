@@ -7,13 +7,16 @@
 packages:
   - "packages/*"
 
-# lefthook のフック登録は @nozomiishii/postinstall 経由で行うため、
-# パッケージ自身の install スクリプト実行は不要
+# install スクリプトのポリシー: 実際に build/postinstall が動作に必要なら true、
+# 不要・別経路で代替できるなら false。推移依存はコメントで導入経路を明記する
 allowBuilds:
-  '@swc/core': true
-  esbuild: true
-  lefthook: false
-  unrs-resolver: true
+  # ── 直接依存 ──
+  lefthook: false # フック登録は @nozomiishii/postinstall 経由で行うため不要
+
+  # ── 推移依存（@nozomiishii/eslint-config 経由） ──
+  '@swc/core': true     # @swc-node/register 経由、TypeScript 実行時に必要
+  esbuild: true         # @eslint/config-inspector / vitest / storybook 経由
+  unrs-resolver: true   # eslint-import-resolver-typescript 経由（eslint 実行に必要）
 
 # 依存解決のうまくいっていないdependenciesのdependenciesをrootのnode_modulesまで巻き上げる
 publicHoistPattern:
