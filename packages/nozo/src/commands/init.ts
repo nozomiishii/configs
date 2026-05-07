@@ -2,8 +2,8 @@ import * as p from "@clack/prompts";
 import { defineCommand } from "citty";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+import { type AgentName, detect } from "package-manager-detector";
 import which from "which";
-import { detectPackageManager, runInstall } from "../core/package-manager.js";
 
 const exec = promisify(execFile);
 
@@ -33,6 +33,20 @@ const tools = {
 type ToolId = keyof typeof tools;
 
 const toolIds = Object.keys(tools) as ToolId[];
+
+async function detectPackageManager(cwd: string): Promise<AgentName> {
+  const result = await detect({ cwd });
+
+  if (result === null) {
+    throw new Error("Could not detect package manager (no lockfile or packageManager field).");
+  }
+
+  if (result.name === "deno") {
+    throw new Error("nozo does not support deno yet.");
+  }
+
+  return result.name;
+}
 
 // nozo の dependencies に各 config パッケージを持たせているので、
 // pnpx nozo init で transient install された node_modules/.bin に各 init bin が並ぶ前提
@@ -95,7 +109,7 @@ export default defineCommand({
     installSpinner.start(`Installing devDependencies with ${agent}`);
 
     try {
-      await runInstall(agent, cwd);
+      await exec(agent, ["install"], { cwd });
       installSpinner.stop("Installed");
     } catch (error) {
       installSpinner.stop("Install failed");
