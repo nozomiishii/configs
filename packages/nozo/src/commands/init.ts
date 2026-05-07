@@ -2,7 +2,7 @@ import * as p from "@clack/prompts";
 import { defineCommand } from "citty";
 import { spawn } from "node:child_process";
 import which from "which";
-import { detectAgent, runInstall } from "../core/ni.js";
+import { detectPackageManager, runInstall } from "../core/package-manager.js";
 
 const tools = {
   commitlint: {
@@ -91,7 +91,7 @@ export default defineCommand({
     }
 
     const cwd = process.cwd();
-    const agent = await detectAgent(cwd);
+    const agent = await detectPackageManager(cwd);
     p.log.info(`Detected package manager: ${agent}`);
 
     for (const id of selected) {

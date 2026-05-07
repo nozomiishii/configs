@@ -1,25 +1,28 @@
-import { detect, getCommand } from "@antfu/ni";
 import { spawn } from "node:child_process";
+import { type AgentName, detect } from "package-manager-detector";
 
-export type Agent = NonNullable<Awaited<ReturnType<typeof detect>>>;
+export type { AgentName };
 
-export async function detectAgent(cwd: string): Promise<Agent> {
-  const agent = await detect({ cwd });
+export async function detectPackageManager(cwd: string): Promise<AgentName> {
+  const result = await detect({ cwd });
 
-  if (agent === undefined) {
+  if (result === null) {
     throw new Error("Could not detect package manager (no lockfile or packageManager field).");
   }
 
-  return agent;
+  if (result.name === "deno") {
+    throw new Error("nozo does not support deno yet.");
+  }
+
+  return result.name;
 }
 
-// `pnpm install` / `npm install` / `yarn install` / `bun install` 相当を spawn する。
-// nozo init では各 nozo-<tool>-init bin が consumer の package.json に devDependencies を pin で
+// `<agent> install` を spawn する。
+// nozo init では各 nozo-<pkg>-init bin が consumer の package.json に devDependencies を pin で
 // 書き込んだ後、最後にここを呼んで lockfile / node_modules を反映する想定。
-export async function runInstall(agent: Agent, cwd: string): Promise<void> {
-  const resolved = getCommand(agent, "install", []);
+export async function runInstall(agent: AgentName, cwd: string): Promise<void> {
   await new Promise<void>((resolve, reject) => {
-    const child = spawn(resolved.command, resolved.args, {
+    const child = spawn(agent, ["install"], {
       cwd,
       stdio: ["ignore", "pipe", "pipe"],
     });
@@ -40,9 +43,7 @@ export async function runInstall(agent: Agent, cwd: string): Promise<void> {
         return;
       }
       const detail = stderr.trim() || stdout.trim() || "(no output)";
-      reject(
-        new Error(`${resolved.command} exited with code ${String(code ?? "unknown")}\n${detail}`),
-      );
+      reject(new Error(`${agent} install exited with code ${String(code ?? "unknown")}\n${detail}`));
     });
     child.on("error", reject);
   });
