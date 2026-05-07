@@ -1,8 +1,11 @@
 import * as p from "@clack/prompts";
 import { defineCommand } from "citty";
-import { spawn } from "node:child_process";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import which from "which";
 import { detectPackageManager, runInstall } from "../core/package-manager.js";
+
+const exec = promisify(execFile);
 
 const tools = {
   commitlint: {
@@ -40,29 +43,7 @@ async function runInitBin(bin: string, cwd: string): Promise<void> {
     throw new Error(`${bin} is not on PATH. nozo's dependencies should provide it.`);
   }
 
-  await new Promise<void>((resolve, reject) => {
-    const child = spawn(binPath, [], { cwd, stdio: ["ignore", "pipe", "pipe"] });
-
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (chunk: Buffer) => {
-      stdout += chunk.toString("utf8");
-    });
-    child.stderr.on("data", (chunk: Buffer) => {
-      stderr += chunk.toString("utf8");
-    });
-
-    child.on("exit", (code) => {
-      if (code === 0) {
-        resolve();
-
-        return;
-      }
-      const detail = stderr.trim() || stdout.trim() || "(no output)";
-      reject(new Error(`${bin} exited with code ${String(code ?? "unknown")}\n${detail}`));
-    });
-    child.on("error", reject);
-  });
+  await exec(binPath, [], { cwd });
 }
 
 export default defineCommand({
