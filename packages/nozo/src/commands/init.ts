@@ -41,10 +41,6 @@ async function detectPackageManager(cwd: string): Promise<AgentName> {
     throw new Error("Could not detect package manager (no lockfile or packageManager field).");
   }
 
-  if (result.name === "deno") {
-    throw new Error("nozo does not support deno yet.");
-  }
-
   return result.name;
 }
 
