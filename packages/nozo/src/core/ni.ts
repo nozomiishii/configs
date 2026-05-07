@@ -13,8 +13,11 @@ export async function detectAgent(cwd: string): Promise<Agent> {
   return agent;
 }
 
-export async function installDevDeps(agent: Agent, deps: string[], cwd: string): Promise<void> {
-  const resolved = getCommand(agent, "add", ["-D", ...deps]);
+// `pnpm install` / `npm install` / `yarn install` / `bun install` 相当を spawn する。
+// nozo init では各 nozo-<tool>-init bin が consumer の package.json に devDependencies を pin で
+// 書き込んだ後、最後にここを呼んで lockfile / node_modules を反映する想定。
+export async function runInstall(agent: Agent, cwd: string): Promise<void> {
+  const resolved = getCommand(agent, "install", []);
   await new Promise<void>((resolve, reject) => {
     const child = spawn(resolved.command, resolved.args, {
       cwd,

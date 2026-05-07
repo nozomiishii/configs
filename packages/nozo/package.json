@@ -31,13 +31,16 @@
   "dependencies": {
     "@antfu/ni": "30.1.0",
     "@clack/prompts": "1.3.0",
+    "@nozomiishii/commitlint-config": "workspace:*",
+    "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
+    "@nozomiishii/postinstall": "workspace:*",
+    "@nozomiishii/prettier-config": "workspace:*",
     "citty": "0.2.2",
     "consola": "3.4.2",
     "which": "6.0.1"
   },
   "devDependencies": {
-    "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.12.2",
     "@types/which": "3.0.4",

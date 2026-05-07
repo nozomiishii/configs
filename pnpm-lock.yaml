@@ -250,9 +250,21 @@ importers:
       '@clack/prompts':
         specifier: 1.3.0
         version: 1.3.0
+      '@nozomiishii/commitlint-config':
+        specifier: workspace:*
+        version: link:../commitlint-config
+      '@nozomiishii/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@nozomiishii/lefthook-config':
         specifier: workspace:*
         version: link:../lefthook-config
+      '@nozomiishii/postinstall':
+        specifier: workspace:*
+        version: link:../postinstall
+      '@nozomiishii/prettier-config':
+        specifier: workspace:*
+        version: link:../prettier-config
       citty:
         specifier: 0.2.2
         version: 0.2.2
@@ -263,9 +275,6 @@ importers:
         specifier: 6.0.1
         version: 6.0.1
     devDependencies:
-      '@nozomiishii/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
       '@nozomiishii/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
