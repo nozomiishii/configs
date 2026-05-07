@@ -1,27 +1,60 @@
 import * as p from "@clack/prompts";
-import { starter as lefthookYaml } from "@nozomiishii/lefthook-config/starter";
 import { defineCommand } from "citty";
-import { mkdir, writeFile } from "node:fs/promises";
-import path from "node:path";
-import { detectAgent, installDevDeps } from "../core/ni.js";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+import { type AgentName, detect } from "package-manager-detector";
+import which from "which";
 
-type ToolManifest = {
-  description: string;
-  devDeps: string[];
-  files: { content: string; path: string }[];
-};
+const exec = promisify(execFile);
 
 const tools = {
-  lefthook: {
-    description: "Git hooks via lefthook",
-    devDeps: ["lefthook", "@nozomiishii/lefthook-config"],
-    files: [{ content: lefthookYaml, path: "lefthook.yaml" }],
+  commitlint: {
+    bin: "nozo-commitlint-init",
+    description: "Commit-message linting via commitlint",
   },
-} satisfies Record<string, ToolManifest>;
+  eslint: {
+    bin: "nozo-eslint-init",
+    description: "JS/TS linting via ESLint",
+  },
+  lefthook: {
+    bin: "nozo-lefthook-init",
+    description: "Git hooks via lefthook",
+  },
+  postinstall: {
+    bin: "nozo-postinstall-init",
+    description: "Repo bootstrap via @nozomiishii/postinstall",
+  },
+  prettier: {
+    bin: "nozo-prettier-init",
+    description: "Code formatting via Prettier",
+  },
+} as const;
 
 type ToolId = keyof typeof tools;
 
 const toolIds = Object.keys(tools) as ToolId[];
+
+async function detectPackageManager(cwd: string): Promise<AgentName> {
+  const result = await detect({ cwd });
+
+  if (result === null) {
+    throw new Error("Could not detect package manager (no lockfile or packageManager field).");
+  }
+
+  return result.name;
+}
+
+// nozo の dependencies に各 config パッケージを持たせているので、
+// pnpx nozo init で transient install された node_modules/.bin に各 init bin が並ぶ前提
+async function runInitBin(bin: string, cwd: string): Promise<void> {
+  const binPath = await which(bin, { nothrow: true });
+
+  if (binPath === null) {
+    throw new Error(`${bin} is not on PATH. nozo's dependencies should provide it.`);
+  }
+
+  await exec(binPath, [], { cwd });
+}
 
 export default defineCommand({
   meta: {
@@ -49,37 +82,33 @@ export default defineCommand({
     }
 
     const cwd = process.cwd();
-    const agent = await detectAgent(cwd);
+    const agent = await detectPackageManager(cwd);
     p.log.info(`Detected package manager: ${agent}`);
 
     for (const id of selected) {
       const tool = tools[id];
-      p.log.step(`${id}: ${tool.description}`);
+      const spinner = p.spinner();
+      spinner.start(`Running ${tool.bin}`);
 
-      for (const file of tool.files) {
-        const fullPath = path.resolve(cwd, file.path);
-        const relative = path.relative(cwd, fullPath);
+      try {
+        await runInitBin(tool.bin, cwd);
+        spinner.stop(`${tool.bin}: ok`);
+      } catch (error) {
+        spinner.stop(`${tool.bin}: failed`);
+        p.cancel(error instanceof Error ? error.message : String(error));
 
-        if (relative === "" || relative.startsWith("..") || path.isAbsolute(relative)) {
-          throw new Error(`Refusing to write outside cwd: ${file.path}`);
-        }
-
-        await mkdir(path.dirname(fullPath), { recursive: true });
-        await writeFile(fullPath, file.content, "utf8");
-        p.log.info(`  ${file.path}: written`);
+        return;
       }
     }
 
-    const allDeps = [...new Set(selected.flatMap((id) => tools[id].devDeps))];
-
-    const spinner = p.spinner();
-    spinner.start(`Installing ${String(allDeps.length)} package(s) with ${agent}`);
+    const installSpinner = p.spinner();
+    installSpinner.start(`Installing devDependencies with ${agent}`);
 
     try {
-      await installDevDeps(agent, allDeps, cwd);
-      spinner.stop("Installed");
+      await exec(agent, ["install"], { cwd });
+      installSpinner.stop("Installed");
     } catch (error) {
-      spinner.stop("Install failed");
+      installSpinner.stop("Install failed");
       p.cancel(error instanceof Error ? error.message : String(error));
 
       return;
