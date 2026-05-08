@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.5.2...@nozomiishii/cspell-config-v1.0.0) (2026-05-08)
+
+
+### Miscellaneous
+
+* graduate to v1.0.0 with linked-versions ([#2202](https://github.com/nozomiishii/configs/issues/2202)) ([8444f14](https://github.com/nozomiishii/configs/commit/8444f143146fb6fba37cfce1a0d41d64836e4dda))
+* revert phase 5 to redesign linked-versions strategy ([#2206](https://github.com/nozomiishii/configs/issues/2206)) ([511ab9f](https://github.com/nozomiishii/configs/commit/511ab9fd62f158cdf2d36faa60b16c3ad710f273))
+
 ## [0.5.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v0.5.1...@nozomiishii/cspell-config-v0.5.2) (2026-05-08)
 
 ### Miscellaneous
