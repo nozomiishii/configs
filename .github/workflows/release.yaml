@@ -67,17 +67,13 @@ jobs:
   format:
     needs: release-please
 
-    if: needs.release-please.outputs.prs
+    if: needs.release-please.outputs.prs && needs.release-please.outputs.prs != '[]'
 
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
     permissions:
       contents: write # required to push the formatted CHANGELOG commit back to the release-please PR branch
-
-    strategy:
-      matrix:
-        pr: ${{ fromJson(needs.release-please.outputs.prs) }}
 
     steps:
       - name: Load secrets from 1Password
@@ -98,7 +94,7 @@ jobs:
       - name: Checkout release-please Pull Request
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          ref: ${{ matrix.pr.headBranchName }}
+          ref: ${{ fromJson(needs.release-please.outputs.prs)[0].headBranchName }}
           persist-credentials: false # auth は後段の `gh auth setup-git` で配線する
 
       - name: Setup Node
@@ -132,14 +128,10 @@ jobs:
       id-token: write # Required for OIDC
       contents: read
 
-    if: needs.release-please.outputs.releases_created == 'true' && needs.release-please.outputs.paths_released != '[]'
+    if: needs.release-please.outputs.releases_created == 'true'
 
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
-    strategy:
-      matrix:
-        path: ${{ fromJson(needs.release-please.outputs.paths_released) }}
 
     steps:
       - name: Checkout
@@ -150,7 +142,5 @@ jobs:
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
-      - name: Publish package
-        env:
-          MATRIX_PATH: ${{ matrix.path }}
-        run: pnpm --filter "./${MATRIX_PATH}" publish
+      - name: Publish all public packages
+        run: pnpm -r publish --no-git-checks
