@@ -1,4 +1,5 @@
 import type { Config } from "prettier";
+import packagejsonPlugin from "prettier-plugin-packagejson";
 
 /**
  * Prettier options
@@ -65,7 +66,10 @@ export default {
   // Prettier default 複数行に分かれたオブジェクトの改行スタイルを保つ
   objectWrap: "preserve",
 
-  plugins: ["prettier-plugin-packagejson"],
+  // plugin object を直渡し。string 指定だと consumer 側で publicHoistPattern: '*prettier*' が必要になる。
+  // {@link https://prettier.io/docs/plugins#using-plugins} import した plugin を渡す code example
+  // {@link https://prettier.io/docs/api} `plugins: (string | URL | Plugin)[]` の型注釈
+  plugins: [packagejsonPlugin],
 
   overrides: [
     {
