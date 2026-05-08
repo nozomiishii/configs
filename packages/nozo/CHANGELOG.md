@@ -2,16 +2,14 @@
 
 ## [0.4.4](https://github.com/nozomiishii/configs/compare/nozo-v0.4.3...nozo-v0.4.4) (2026-05-08)
 
-
 ### Features
 
-* **nozo:** switch init command to spawn dispatcher and cover all configs ([#2192](https://github.com/nozomiishii/configs/issues/2192)) ([41e25b1](https://github.com/nozomiishii/configs/commit/41e25b13fbaa496e9294e6398cfb5aeecce12577))
-
+- **nozo:** switch init command to spawn dispatcher and cover all configs ([#2192](https://github.com/nozomiishii/configs/issues/2192)) ([41e25b1](https://github.com/nozomiishii/configs/commit/41e25b13fbaa496e9294e6398cfb5aeecce12577))
 
 ### Miscellaneous
 
-* update pnpm to v10.33.3 ([#2199](https://github.com/nozomiishii/configs/issues/2199)) ([6d610b4](https://github.com/nozomiishii/configs/commit/6d610b4ae99a16216c70737e5398d1670725e110))
-* update pnpm to v11 ([#2193](https://github.com/nozomiishii/configs/issues/2193)) ([e7c39d1](https://github.com/nozomiishii/configs/commit/e7c39d1183234ec9ebf2d8599535279b970222e9))
+- update pnpm to v10.33.3 ([#2199](https://github.com/nozomiishii/configs/issues/2199)) ([6d610b4](https://github.com/nozomiishii/configs/commit/6d610b4ae99a16216c70737e5398d1670725e110))
+- update pnpm to v11 ([#2193](https://github.com/nozomiishii/configs/issues/2193)) ([e7c39d1](https://github.com/nozomiishii/configs/commit/e7c39d1183234ec9ebf2d8599535279b970222e9))
 
 ## [0.4.3](https://github.com/nozomiishii/configs/compare/nozo-v0.4.2...nozo-v0.4.3) (2026-05-07)
 

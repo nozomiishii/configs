@@ -2,11 +2,10 @@
 
 ## [0.2.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.2.2...@nozomiishii/commitlint-config-v0.2.3) (2026-05-08)
 
-
 ### Miscellaneous
 
-* update pnpm to v10.33.3 ([#2199](https://github.com/nozomiishii/configs/issues/2199)) ([6d610b4](https://github.com/nozomiishii/configs/commit/6d610b4ae99a16216c70737e5398d1670725e110))
-* update pnpm to v11 ([#2193](https://github.com/nozomiishii/configs/issues/2193)) ([e7c39d1](https://github.com/nozomiishii/configs/commit/e7c39d1183234ec9ebf2d8599535279b970222e9))
+- update pnpm to v10.33.3 ([#2199](https://github.com/nozomiishii/configs/issues/2199)) ([6d610b4](https://github.com/nozomiishii/configs/commit/6d610b4ae99a16216c70737e5398d1670725e110))
+- update pnpm to v11 ([#2193](https://github.com/nozomiishii/configs/issues/2193)) ([e7c39d1](https://github.com/nozomiishii/configs/commit/e7c39d1183234ec9ebf2d8599535279b970222e9))
 
 ## [0.2.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.2.1...@nozomiishii/commitlint-config-v0.2.2) (2026-05-07)
 
