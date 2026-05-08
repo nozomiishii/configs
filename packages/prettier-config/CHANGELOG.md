@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.9.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.9.0...@nozomiishii/prettier-config-v0.9.1) (2026-05-08)
+
+
+### Bug Fixes
+
+* **prettier-config:** pass plugin object directly to drop hoist dependency ([#2195](https://github.com/nozomiishii/configs/issues/2195)) ([3fad67a](https://github.com/nozomiishii/configs/commit/3fad67a2ca5aa8591cc21ced4bf7b7da8ce87f3b))
+
+
+### Miscellaneous
+
+* update pnpm to v10.33.3 ([#2199](https://github.com/nozomiishii/configs/issues/2199)) ([6d610b4](https://github.com/nozomiishii/configs/commit/6d610b4ae99a16216c70737e5398d1670725e110))
+* update pnpm to v11 ([#2193](https://github.com/nozomiishii/configs/issues/2193)) ([e7c39d1](https://github.com/nozomiishii/configs/commit/e7c39d1183234ec9ebf2d8599535279b970222e9))
+
 ## [0.9.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.8.0...@nozomiishii/prettier-config-v0.9.0) (2026-05-07)
 
 ### ⚠ BREAKING CHANGES
