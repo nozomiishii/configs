@@ -3,84 +3,51 @@
 
   "bootstrap-sha": "09c59ef0540b47e96916b8bb91c541ae53c5c72e",
 
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
+
   "changelog-sections": [
     { "type": "feat", "section": "Features" },
     { "type": "fix", "section": "Bug Fixes" },
     { "type": "chore", "section": "Miscellaneous" }
   ],
 
-  "group-pull-request-title-pattern": "chore: release v${version}",
-  "separate-pull-requests": false,
-
-  "plugins": [
-    {
-      "type": "linked-versions",
-      "groupName": "configs",
-      "components": [
-        "configs",
-        "@nozomiishii/commitlint-config",
-        "@nozomiishii/cspell-config",
-        "@nozomiishii/eslint-config",
-        "@nozomiishii/lefthook-config",
-        "@nozomiishii/markdownlint-cli2-config",
-        "@nozomiishii/postinstall",
-        "@nozomiishii/prettier-config",
-        "@nozomiishii/tsconfig",
-        "nozo"
-      ]
-    }
-  ],
-
   "packages": {
-    ".": {
-      "release-type": "node",
-      "component": "configs",
-      "include-component-in-tag": false
-    },
     "packages/commitlint-config": {
       "release-type": "node",
-      "component": "@nozomiishii/commitlint-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/commitlint-config"
     },
     "packages/cspell-config": {
       "release-type": "node",
-      "component": "@nozomiishii/cspell-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/cspell-config"
     },
     "packages/eslint-config": {
       "release-type": "node",
-      "component": "@nozomiishii/eslint-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/eslint-config"
     },
     "packages/lefthook-config": {
       "release-type": "node",
-      "component": "@nozomiishii/lefthook-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/lefthook-config"
     },
     "packages/markdownlint-cli2-config": {
       "release-type": "node",
-      "component": "@nozomiishii/markdownlint-cli2-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/markdownlint-cli2-config"
     },
     "packages/postinstall": {
       "release-type": "node",
-      "component": "@nozomiishii/postinstall",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/postinstall"
     },
     "packages/prettier-config": {
       "release-type": "node",
-      "component": "@nozomiishii/prettier-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/prettier-config"
     },
     "packages/tsconfig": {
       "release-type": "node",
-      "component": "@nozomiishii/tsconfig",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/tsconfig"
     },
     "packages/nozo": {
       "release-type": "node",
-      "component": "nozo",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "nozo"
     }
   }
 }
