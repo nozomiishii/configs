@@ -8,15 +8,13 @@ packages:
   - "packages/*"
 
 # install スクリプトのポリシー: 実際に build/postinstall が動作に必要なら true、
-# 不要・別経路で代替できるなら false。推移依存はコメントで導入経路を明記する
+# 不要・別経路で代替できるなら false。
+# コメント形式: # <package.json 依存 → ... → 自身までの全経路> | <用途>
 allowBuilds:
-  # ── 直接依存 ──
-  lefthook: false # フック登録は @nozomiishii/postinstall 経由で行うため不要
-
-  # ── 推移依存（@nozomiishii/eslint-config 経由） ──
-  "@swc/core": true # @swc-node/register 経由、TypeScript 実行時に必要
-  esbuild: true # @eslint/config-inspector / vitest / storybook 経由
-  unrs-resolver: true # eslint-import-resolver-typescript 経由（eslint 実行に必要）
+  lefthook: false # lefthook | フック登録は @nozomiishii/postinstall 経由で行うため不要
+  "@swc/core": true # @nozomiishii/eslint-config → @swc-node/register → @swc-node/core → @swc/core | TypeScript 実行時に必要
+  esbuild: true # @nozomiishii/eslint-config → @eslint/config-inspector → esbuild | config inspector のビルド（vitest / storybook 経由でも入る）
+  unrs-resolver: true # @nozomiishii/eslint-config → eslint-import-resolver-typescript → eslint-import-context → unrs-resolver | eslint 実行に必要
 
 # 依存解決のうまくいっていないdependenciesのdependenciesをrootのnode_modulesまで巻き上げる
 publicHoistPattern:
