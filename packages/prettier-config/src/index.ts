@@ -67,7 +67,8 @@ export default {
   objectWrap: "preserve",
 
   // plugin object を直渡し。string 指定だと consumer 側で publicHoistPattern: '*prettier*' が必要になる。
-  // {@link https://prettier.io/docs/plugins#using-plugins}
+  // {@link https://prettier.io/docs/plugins#using-plugins} import した plugin を渡す code example
+  // {@link https://prettier.io/docs/api} `plugins: (string | URL | Plugin)[]` の型注釈
   plugins: [packagejsonPlugin],
 
   overrides: [
