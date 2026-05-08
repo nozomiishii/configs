@@ -39,48 +39,39 @@
     },
     "packages/commitlint-config": {
       "release-type": "node",
-      "component": "@nozomiishii/commitlint-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/commitlint-config"
     },
     "packages/cspell-config": {
       "release-type": "node",
-      "component": "@nozomiishii/cspell-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/cspell-config"
     },
     "packages/eslint-config": {
       "release-type": "node",
-      "component": "@nozomiishii/eslint-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/eslint-config"
     },
     "packages/lefthook-config": {
       "release-type": "node",
-      "component": "@nozomiishii/lefthook-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/lefthook-config"
     },
     "packages/markdownlint-cli2-config": {
       "release-type": "node",
-      "component": "@nozomiishii/markdownlint-cli2-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/markdownlint-cli2-config"
     },
     "packages/postinstall": {
       "release-type": "node",
-      "component": "@nozomiishii/postinstall",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/postinstall"
     },
     "packages/prettier-config": {
       "release-type": "node",
-      "component": "@nozomiishii/prettier-config",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/prettier-config"
     },
     "packages/tsconfig": {
       "release-type": "node",
-      "component": "@nozomiishii/tsconfig",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "@nozomiishii/tsconfig"
     },
     "packages/nozo": {
       "release-type": "node",
-      "component": "nozo",
-      "changelog-path": "../../CHANGELOG.md"
+      "component": "nozo"
     }
   }
 }
