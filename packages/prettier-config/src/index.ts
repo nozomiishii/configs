@@ -66,9 +66,8 @@ export default {
   // Prettier default 複数行に分かれたオブジェクトの改行スタイルを保つ
   objectWrap: "preserve",
 
-  // plugin object 直渡し。string で渡すと consumer の prettier コマンドの Node resolution に
-  // 依存するため publicHoistPattern: '*prettier*' が必要になる。import でこの shared config 自身の
-  // resolution に閉じれば consumer 側の hoist 設定は不要 (issue 2182)。
+  // plugin object を直渡し。string 指定だと consumer 側で publicHoistPattern: '*prettier*' が必要になる。
+  // {@link https://prettier.io/docs/plugins#using-plugins}
   plugins: [packagejsonPlugin],
 
   overrides: [
