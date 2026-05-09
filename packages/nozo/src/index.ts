@@ -4,8 +4,9 @@ import { spawn } from "node:child_process";
 import which from "which";
 import pkg from "../package.json" with { type: "json" };
 import init from "./commands/init.js";
+import logo from "./commands/logo.js";
 
-const BUILTIN_COMMANDS = new Set(["init"]);
+const BUILTIN_COMMANDS = new Set(["init", "logo"]);
 
 // POSIX exit code returned by shells when the requested command is not on PATH
 const EXIT_CODE_COMMAND_NOT_FOUND = 127;
@@ -52,6 +53,7 @@ async function main(): Promise<void> {
     },
     subCommands: {
       init,
+      logo,
     },
   });
 

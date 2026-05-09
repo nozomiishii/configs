@@ -18,6 +18,7 @@
   "bin": "./dist/index.js",
   "files": [
     "dist",
+    "logo.ascii",
     "README.md"
   ],
   "scripts": {
