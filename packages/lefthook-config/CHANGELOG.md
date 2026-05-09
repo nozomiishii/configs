@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.7.1...@nozomiishii/lefthook-config-v0.7.2) (2026-05-09)
+
+### Miscellaneous
+
+- update nozomiishii ([#2212](https://github.com/nozomiishii/configs/issues/2212)) ([3579c27](https://github.com/nozomiishii/configs/commit/3579c27234357a4dfaad1f33a701be32d98c9115))
+- update pnpm to v11.0.6 ([#2209](https://github.com/nozomiishii/configs/issues/2209)) ([3b9613b](https://github.com/nozomiishii/configs/commit/3b9613beb8ec17b5843242e0c40bb04829e1501e))
+
 ## [0.7.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v0.7.0...@nozomiishii/lefthook-config-v0.7.1) (2026-05-08)
 
 ### Miscellaneous

@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.2.3...@nozomiishii/commitlint-config-v0.3.0) (2026-05-09)
+
+### ⚠ BREAKING CHANGES
+
+- deny scope by default in commitlint-config ([#2211](https://github.com/nozomiishii/configs/issues/2211))
+
+### Features
+
+- deny scope by default in commitlint-config ([#2211](https://github.com/nozomiishii/configs/issues/2211)) ([fc58840](https://github.com/nozomiishii/configs/commit/fc588403c6abe25bf801646c8c4e66ba0ebe8a4b))
+
+### Miscellaneous
+
+- update pnpm to v11.0.6 ([#2209](https://github.com/nozomiishii/configs/issues/2209)) ([3b9613b](https://github.com/nozomiishii/configs/commit/3b9613beb8ec17b5843242e0c40bb04829e1501e))
+
 ## [0.2.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.2.2...@nozomiishii/commitlint-config-v0.2.3) (2026-05-08)
 
 ### Miscellaneous
