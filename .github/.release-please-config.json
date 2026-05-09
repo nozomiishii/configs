@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
 
-  "bootstrap-sha": "09c59ef0540b47e96916b8bb91c541ae53c5c72e",
+  "bootstrap-sha": "362a8e8f6891e6ce9111e2f167151426ac22df6a",
 
   "release-as": "1.0.0",
   "group-pull-request-title-pattern": "chore: release ${version}",
@@ -17,7 +17,8 @@
       "release-type": "node",
       "component": "configs",
       "skip-changelog": true,
-      "skip-github-release": true
+      "skip-github-release": true,
+      "exclude-paths": ["."]
     },
     "packages/commitlint-config": {
       "release-type": "node",
