@@ -4,7 +4,7 @@
   "bootstrap-sha": "09c59ef0540b47e96916b8bb91c541ae53c5c72e",
 
   "release-as": "1.0.0",
-  "pull-request-title-pattern": "chore: release ${version}",
+  "group-pull-request-title-pattern": "chore: release ${version}",
 
   "changelog-sections": [
     { "type": "feat", "section": "Features" },
@@ -13,6 +13,12 @@
   ],
 
   "packages": {
+    ".": {
+      "release-type": "node",
+      "component": "configs",
+      "skip-changelog": true,
+      "skip-github-release": true
+    },
     "packages/commitlint-config": {
       "release-type": "node",
       "component": "@nozomiishii/commitlint-config"
@@ -56,6 +62,7 @@
       "type": "linked-versions",
       "groupName": "configs",
       "components": [
+        "configs",
         "@nozomiishii/commitlint-config",
         "@nozomiishii/cspell-config",
         "@nozomiishii/eslint-config",
