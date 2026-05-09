@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.1.2...@nozomiishii/postinstall-v0.1.3) (2026-05-09)
+
+
+### Bug Fixes
+
+* increase postinstall init test timeout to avoid CI flakiness ([#2214](https://github.com/nozomiishii/configs/issues/2214)) ([60d7c63](https://github.com/nozomiishii/configs/commit/60d7c63fd643f1832c45564f9c7b1a320ffecc54))
+
+
+### Miscellaneous
+
+* update pnpm to v11.0.6 ([#2209](https://github.com/nozomiishii/configs/issues/2209)) ([3b9613b](https://github.com/nozomiishii/configs/commit/3b9613beb8ec17b5843242e0c40bb04829e1501e))
+
 ## [0.1.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v0.1.1...@nozomiishii/postinstall-v0.1.2) (2026-05-08)
 
 ### Miscellaneous

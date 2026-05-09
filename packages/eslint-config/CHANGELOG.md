@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.9.1...@nozomiishii/eslint-config-v0.9.2) (2026-05-09)
+
+
+### Miscellaneous
+
+* update dependency eslint-plugin-n to v18.0.1 ([#2203](https://github.com/nozomiishii/configs/issues/2203)) ([c496ec2](https://github.com/nozomiishii/configs/commit/c496ec29e6f5f5c6303c88726346e7d4ff5cd35f))
+* update pnpm to v11.0.6 ([#2209](https://github.com/nozomiishii/configs/issues/2209)) ([3b9613b](https://github.com/nozomiishii/configs/commit/3b9613beb8ec17b5843242e0c40bb04829e1501e))
+
 ## [0.9.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.9.0...@nozomiishii/eslint-config-v0.9.1) (2026-05-08)
 
 ### Miscellaneous
