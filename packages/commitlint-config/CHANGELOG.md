@@ -2,10 +2,9 @@
 
 ## [1.0.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.3.0...@nozomiishii/commitlint-config-v1.0.0) (2026-05-09)
 
-
 ### Miscellaneous
 
-* **@nozomiishii/commitlint-config:** Synchronize configs versions
+- **@nozomiishii/commitlint-config:** Synchronize configs versions
 
 ## [0.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.2.3...@nozomiishii/commitlint-config-v0.3.0) (2026-05-09)
 

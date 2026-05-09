@@ -2,10 +2,9 @@
 
 ## [1.0.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.9.2...@nozomiishii/eslint-config-v1.0.0) (2026-05-09)
 
-
 ### Miscellaneous
 
-* update dependency @eslint-react/eslint-plugin to v5.7.3 ([#2217](https://github.com/nozomiishii/configs/issues/2217)) ([1cb0fa3](https://github.com/nozomiishii/configs/commit/1cb0fa349e7e3a3eeebe00a826ef3e2da50c7e91))
+- update dependency @eslint-react/eslint-plugin to v5.7.3 ([#2217](https://github.com/nozomiishii/configs/issues/2217)) ([1cb0fa3](https://github.com/nozomiishii/configs/commit/1cb0fa349e7e3a3eeebe00a826ef3e2da50c7e91))
 
 ## [0.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.9.1...@nozomiishii/eslint-config-v0.9.2) (2026-05-09)
 
