@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.0](https://github.com/nozomiishii/configs/compare/nozo-v0.4.5...nozo-v1.0.0) (2026-05-09)
+
+### Features
+
+- refresh nozo readme with logo image for v1.0.0 ([#2216](https://github.com/nozomiishii/configs/issues/2216)) ([a647623](https://github.com/nozomiishii/configs/commit/a64762375a265776e104fdd69da4adbf0aa0d193))
+
+### Miscellaneous
+
+- rename nozo package description ([#2222](https://github.com/nozomiishii/configs/issues/2222)) ([0d14bb6](https://github.com/nozomiishii/configs/commit/0d14bb6b0de23e405a2bd8209d0ae5a5cae443e0))
+
 ## [0.4.5](https://github.com/nozomiishii/configs/compare/nozo-v0.4.4...nozo-v0.4.5) (2026-05-09)
 
 ### Miscellaneous
