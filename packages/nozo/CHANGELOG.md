@@ -2,10 +2,9 @@
 
 ## [0.4.5](https://github.com/nozomiishii/configs/compare/nozo-v0.4.4...nozo-v0.4.5) (2026-05-09)
 
-
 ### Miscellaneous
 
-* update pnpm to v11.0.6 ([#2209](https://github.com/nozomiishii/configs/issues/2209)) ([3b9613b](https://github.com/nozomiishii/configs/commit/3b9613beb8ec17b5843242e0c40bb04829e1501e))
+- update pnpm to v11.0.6 ([#2209](https://github.com/nozomiishii/configs/issues/2209)) ([3b9613b](https://github.com/nozomiishii/configs/commit/3b9613beb8ec17b5843242e0c40bb04829e1501e))
 
 ## [0.4.4](https://github.com/nozomiishii/configs/compare/nozo-v0.4.3...nozo-v0.4.4) (2026-05-08)
 

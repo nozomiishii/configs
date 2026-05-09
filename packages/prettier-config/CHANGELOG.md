@@ -2,10 +2,9 @@
 
 ## [0.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.9.1...@nozomiishii/prettier-config-v0.9.2) (2026-05-09)
 
-
 ### Miscellaneous
 
-* update pnpm to v11.0.6 ([#2209](https://github.com/nozomiishii/configs/issues/2209)) ([3b9613b](https://github.com/nozomiishii/configs/commit/3b9613beb8ec17b5843242e0c40bb04829e1501e))
+- update pnpm to v11.0.6 ([#2209](https://github.com/nozomiishii/configs/issues/2209)) ([3b9613b](https://github.com/nozomiishii/configs/commit/3b9613beb8ec17b5843242e0c40bb04829e1501e))
 
 ## [0.9.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v0.9.0...@nozomiishii/prettier-config-v0.9.1) (2026-05-08)
 
