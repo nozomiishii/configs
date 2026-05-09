@@ -12,4 +12,4 @@ permissions:
 
 jobs:
   pull-request:
-    uses: nozomiishii/workflows/.github/workflows/pull-request.yaml@2b35b9debc19be8305aea68aa7c26d815ccd4c2d # v3.0.1
+    uses: nozomiishii/workflows/.github/workflows/pull-request.yaml@ad828fad1cd5ef889d3dc52b669b4e409069f61f # v3.1.0
