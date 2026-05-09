@@ -1,7 +1,7 @@
 {
   "name": "nozo",
   "version": "0.4.5",
-  "description": "Nozomi config manager",
+  "description": "nozo shared configs CLI",
   "keywords": [
     "cli",
     "config"
