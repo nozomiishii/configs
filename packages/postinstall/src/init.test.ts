@@ -45,7 +45,9 @@ const test = baseTest
     },
   });
 
-test("init adds @nozomiishii/postinstall to devDependencies", ({ initResult }) => {
+// 最初に initResult を要求する test で file-scoped `built` fixture が `pnpm build` を走らせるため、
+// CI runner の負荷ブレで 5s デフォルトを超えうる（実測 7638ms）。build.test.ts と揃えて 30s。
+test("init adds @nozomiishii/postinstall to devDependencies", { timeout: 30_000 }, ({ initResult }) => {
   expect(initResult.pkg.devDependencies?.["@nozomiishii/postinstall"]).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
