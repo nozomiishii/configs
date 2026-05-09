@@ -3,7 +3,7 @@ import { consola } from "consola";
 import { spawn } from "node:child_process";
 import which from "which";
 import pkg from "../package.json" with { type: "json" };
-import init from "./commands/init.js";
+import init from "./commands/init";
 
 const BUILTIN_COMMANDS = new Set(["init"]);
 
