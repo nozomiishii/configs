@@ -2,6 +2,12 @@
 
 English | [日本語](./README.ja.md)
 
+<br>
+<div align="center">
+  <img src="./demo/logo.png" alt="nozo" width="480" />
+</div>
+<br>
+
 ## Run directly without installing
 
 ```sh
