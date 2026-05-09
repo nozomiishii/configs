@@ -17,7 +17,8 @@
       "release-type": "node",
       "component": "configs",
       "skip-changelog": true,
-      "skip-github-release": true
+      "skip-github-release": true,
+      "exclude-paths": ["."]
     },
     "packages/commitlint-config": {
       "release-type": "node",
