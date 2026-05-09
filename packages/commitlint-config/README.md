@@ -25,6 +25,27 @@ pnpx nozo init
 This adds `@nozomiishii/commitlint-config` to your `devDependencies` (pinned)
 and writes a `commitlint.config.ts` that re-exports the shared config.
 
+## Defaults
+
+- `type-enum`: only `feat` / `fix` / `chore` are allowed.
+- `scope-empty`: scope must be empty by default. `feat: subject` passes; `feat(api): subject` is rejected.
+- `commit-message-ascii-only`: body / footer / notes must be ASCII (write commit messages in English).
+
+### Allowing scope in a consumer
+
+Override `scope-empty` in your own `commitlint.config.ts`:
+
+```ts
+export default {
+  extends: ["@nozomiishii/commitlint-config"],
+  rules: {
+    "scope-empty": [0, "always"],
+    // Optional: pin an allow-list
+    "scope-enum": [2, "always", ["api", "ui", "infra"]],
+  },
+};
+```
+
 ## Bin
 
 The package also ships a namespaced bin, `nozo-commitlint`, which wraps the
