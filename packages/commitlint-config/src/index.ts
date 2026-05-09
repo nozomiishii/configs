@@ -32,6 +32,7 @@ const config: UserConfig = {
   ],
   rules: {
     "type-enum": [2, "always", ["feat", "fix", "chore"]],
+    "scope-empty": [2, "always"],
     "commit-message-ascii-only": [2, "always"],
   },
 };
