@@ -3,8 +3,8 @@ import { consola } from "consola";
 import { spawn } from "node:child_process";
 import which from "which";
 import pkg from "../package.json" with { type: "json" };
-import init from "./commands/init.js";
-import logo from "./commands/logo.js";
+import init from "./commands/init";
+import logo from "./commands/logo";
 
 const BUILTIN_COMMANDS = new Set(["init", "logo"]);
 
