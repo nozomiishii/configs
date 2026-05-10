@@ -2,16 +2,14 @@
 
 ## [1.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.0.0...@nozomiishii/commitlint-config-v1.0.1) (2026-05-10)
 
-
 ### Bug Fixes
 
-* resolve nozo init bins via package exports ([#2234](https://github.com/nozomiishii/configs/issues/2234)) ([92ef8d1](https://github.com/nozomiishii/configs/commit/92ef8d174e5de65836e0fb8bbda9c073be343de0))
-
+- resolve nozo init bins via package exports ([#2234](https://github.com/nozomiishii/configs/issues/2234)) ([92ef8d1](https://github.com/nozomiishii/configs/commit/92ef8d174e5de65836e0fb8bbda9c073be343de0))
 
 ### Miscellaneous
 
-* update pnpm to v11.0.7 ([#2229](https://github.com/nozomiishii/configs/issues/2229)) ([0ce525a](https://github.com/nozomiishii/configs/commit/0ce525a25988a485100b127565391f809371f573))
-* update pnpm to v11.0.8 ([#2238](https://github.com/nozomiishii/configs/issues/2238)) ([77d507a](https://github.com/nozomiishii/configs/commit/77d507a231b2d24a7eab55739eed7c4ad05994a8))
+- update pnpm to v11.0.7 ([#2229](https://github.com/nozomiishii/configs/issues/2229)) ([0ce525a](https://github.com/nozomiishii/configs/commit/0ce525a25988a485100b127565391f809371f573))
+- update pnpm to v11.0.8 ([#2238](https://github.com/nozomiishii/configs/issues/2238)) ([77d507a](https://github.com/nozomiishii/configs/commit/77d507a231b2d24a7eab55739eed7c4ad05994a8))
 
 ## [1.0.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v0.3.0...@nozomiishii/commitlint-config-v1.0.0) (2026-05-09)
 

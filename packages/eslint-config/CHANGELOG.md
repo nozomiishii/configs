@@ -2,20 +2,18 @@
 
 ## [1.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.0.0...@nozomiishii/eslint-config-v1.0.1) (2026-05-10)
 
-
 ### Bug Fixes
 
-* resolve nozo init bins via package exports ([#2234](https://github.com/nozomiishii/configs/issues/2234)) ([92ef8d1](https://github.com/nozomiishii/configs/commit/92ef8d174e5de65836e0fb8bbda9c073be343de0))
-
+- resolve nozo init bins via package exports ([#2234](https://github.com/nozomiishii/configs/issues/2234)) ([92ef8d1](https://github.com/nozomiishii/configs/commit/92ef8d174e5de65836e0fb8bbda9c073be343de0))
 
 ### Miscellaneous
 
-* update dependency @eslint-react/eslint-plugin to v5.7.4 ([#2230](https://github.com/nozomiishii/configs/issues/2230)) ([ee12a68](https://github.com/nozomiishii/configs/commit/ee12a685b51dd85594291beff10d3c1ad73dcce7))
-* update dependency @eslint/config-inspector to v2.0.1 ([#2237](https://github.com/nozomiishii/configs/issues/2237)) ([2473d82](https://github.com/nozomiishii/configs/commit/2473d827ce342785c26711c9cdbcb57fef895fb5))
-* update dependency @next/eslint-plugin-next to v16.2.5 ([#2226](https://github.com/nozomiishii/configs/issues/2226)) ([43b52a5](https://github.com/nozomiishii/configs/commit/43b52a5b6e14ad8f4f4cc93107ae059bc24ecb4f))
-* update dependency eslint-plugin-de-morgan to v2.1.2 ([#2233](https://github.com/nozomiishii/configs/issues/2233)) ([a9f00ce](https://github.com/nozomiishii/configs/commit/a9f00ce25fc1beb2db48c7eb9e3b713613ca1d1a))
-* update pnpm to v11.0.7 ([#2229](https://github.com/nozomiishii/configs/issues/2229)) ([0ce525a](https://github.com/nozomiishii/configs/commit/0ce525a25988a485100b127565391f809371f573))
-* update pnpm to v11.0.8 ([#2238](https://github.com/nozomiishii/configs/issues/2238)) ([77d507a](https://github.com/nozomiishii/configs/commit/77d507a231b2d24a7eab55739eed7c4ad05994a8))
+- update dependency @eslint-react/eslint-plugin to v5.7.4 ([#2230](https://github.com/nozomiishii/configs/issues/2230)) ([ee12a68](https://github.com/nozomiishii/configs/commit/ee12a685b51dd85594291beff10d3c1ad73dcce7))
+- update dependency @eslint/config-inspector to v2.0.1 ([#2237](https://github.com/nozomiishii/configs/issues/2237)) ([2473d82](https://github.com/nozomiishii/configs/commit/2473d827ce342785c26711c9cdbcb57fef895fb5))
+- update dependency @next/eslint-plugin-next to v16.2.5 ([#2226](https://github.com/nozomiishii/configs/issues/2226)) ([43b52a5](https://github.com/nozomiishii/configs/commit/43b52a5b6e14ad8f4f4cc93107ae059bc24ecb4f))
+- update dependency eslint-plugin-de-morgan to v2.1.2 ([#2233](https://github.com/nozomiishii/configs/issues/2233)) ([a9f00ce](https://github.com/nozomiishii/configs/commit/a9f00ce25fc1beb2db48c7eb9e3b713613ca1d1a))
+- update pnpm to v11.0.7 ([#2229](https://github.com/nozomiishii/configs/issues/2229)) ([0ce525a](https://github.com/nozomiishii/configs/commit/0ce525a25988a485100b127565391f809371f573))
+- update pnpm to v11.0.8 ([#2238](https://github.com/nozomiishii/configs/issues/2238)) ([77d507a](https://github.com/nozomiishii/configs/commit/77d507a231b2d24a7eab55739eed7c4ad05994a8))
 
 ## [1.0.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v0.9.2...@nozomiishii/eslint-config-v1.0.0) (2026-05-09)
 
