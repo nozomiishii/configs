@@ -1,13 +1,13 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
+  clean: true,
+  dts: true,
   entry: {
-    "init/index": "src/init/index.ts",
     "init/bin": "src/init/bin.ts",
+    "init/index": "src/init/index.ts",
   },
   format: ["esm"],
-  platform: "node",
   outExtensions: () => ({ dts: ".d.ts", js: ".js" }),
-  dts: true,
-  clean: true,
+  platform: "node",
 });
