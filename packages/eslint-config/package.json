@@ -22,9 +22,10 @@
   },
   "main": "eslint.config.ts",
   "bin": {
-    "nozo-eslint-init": "./dist/init/bin.js"
+    "nozo-eslint-init": "./bin/nozo-eslint-init.js"
   },
   "files": [
+    "bin",
     "dist",
     "rules",
     "utils",
