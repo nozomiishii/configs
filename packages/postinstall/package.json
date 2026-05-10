@@ -21,10 +21,11 @@
   },
   "types": "./dist/index.d.ts",
   "bin": {
-    "postinstall": "./dist/index.js",
-    "nozo-postinstall-init": "./dist/init/bin.js"
+    "nozo-postinstall-init": "./bin/nozo-postinstall-init.js",
+    "postinstall": "./bin/postinstall.js"
   },
   "files": [
+    "bin",
     "dist",
     "README.md"
   ],
