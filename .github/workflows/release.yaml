@@ -7,8 +7,8 @@ on:
       - main
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: release
+  cancel-in-progress: false
 
 # デフォルト権限を無効化し、各ジョブで必要最小限の権限のみ付与する
 permissions: {}
