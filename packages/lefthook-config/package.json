@@ -16,10 +16,14 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "type": "module",
+  "exports": {
+    ".": "./recommended.yaml",
+    "./init": "./dist/init/index.js"
+  },
   "main": "recommended.yaml",
   "bin": {
     "nozo-git-harvest": "./dist/cli.js",
-    "nozo-lefthook-init": "./dist/init.js"
+    "nozo-lefthook-init": "./dist/init/bin.js"
   },
   "files": [
     "dist",

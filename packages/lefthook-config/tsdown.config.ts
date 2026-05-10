@@ -1,12 +1,26 @@
 import { defineConfig } from "tsdown";
 
-export default defineConfig({
-  entry: ["src/cli.ts", "src/init.ts"],
+const base = defineConfig({
   format: ["esm"],
-  clean: true,
-  dts: true,
   platform: "node",
-  loader: { ".yaml": "text" },
   outExtensions: () => ({ js: ".js" }),
-  banner: { js: "#!/usr/bin/env node" },
 });
+
+export default defineConfig([
+  {
+    ...base,
+    entry: { "init/index": "src/init/index.ts" },
+    dts: true,
+    clean: true,
+  },
+  {
+    ...base,
+    entry: {
+      "cli": "src/cli.ts",
+      "init/bin": "src/init/bin.ts",
+    },
+    dts: false,
+    clean: false,
+    banner: { js: "#!/usr/bin/env node" },
+  },
+]);

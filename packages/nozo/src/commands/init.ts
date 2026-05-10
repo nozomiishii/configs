@@ -1,38 +1,49 @@
 import * as p from "@clack/prompts";
+import { init as initCommitlint } from "@nozomiishii/commitlint-config/init";
+import { init as initEslint } from "@nozomiishii/eslint-config/init";
+import { init as initLefthook } from "@nozomiishii/lefthook-config/init";
+import { init as initPostinstall } from "@nozomiishii/postinstall/init";
+import { init as initPrettier } from "@nozomiishii/prettier-config/init";
 import { defineCommand } from "citty";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { type AgentName, detect } from "package-manager-detector";
-import which from "which";
 
 const exec = promisify(execFile);
 
-const tools = {
+type ToolInit = (options: { cwd: string }) => Promise<void>;
+
+export const tools = {
   commitlint: {
-    bin: "nozo-commitlint-init",
     description: "Commit-message linting via commitlint",
+    label: "@nozomiishii/commitlint-config",
+    run: initCommitlint,
   },
   eslint: {
-    bin: "nozo-eslint-init",
     description: "JS/TS linting via ESLint",
+    label: "@nozomiishii/eslint-config",
+    run: initEslint,
   },
   lefthook: {
-    bin: "nozo-lefthook-init",
     description: "Git hooks via lefthook",
+    label: "@nozomiishii/lefthook-config",
+    run: initLefthook,
   },
   postinstall: {
-    bin: "nozo-postinstall-init",
     description: "Repo bootstrap via @nozomiishii/postinstall",
+    label: "@nozomiishii/postinstall",
+    run: initPostinstall,
   },
   prettier: {
-    bin: "nozo-prettier-init",
     description: "Code formatting via Prettier",
+    label: "@nozomiishii/prettier-config",
+    run: initPrettier,
   },
-} as const;
+} as const satisfies Record<string, { description: string; label: string; run: ToolInit }>;
 
-type ToolId = keyof typeof tools;
+export type ToolId = keyof typeof tools;
 
-const toolIds = Object.keys(tools) as ToolId[];
+export const toolIds = Object.keys(tools) as ToolId[];
 
 async function detectPackageManager(cwd: string): Promise<AgentName> {
   const result = await detect({ cwd });
@@ -42,18 +53,6 @@ async function detectPackageManager(cwd: string): Promise<AgentName> {
   }
 
   return result.name;
-}
-
-// nozo の dependencies に各 config パッケージを持たせているので、
-// pnpx nozo init で transient install された node_modules/.bin に各 init bin が並ぶ前提
-async function runInitBin(bin: string, cwd: string): Promise<void> {
-  const binPath = await which(bin, { nothrow: true });
-
-  if (binPath === null) {
-    throw new Error(`${bin} is not on PATH. nozo's dependencies should provide it.`);
-  }
-
-  await exec(binPath, [], { cwd });
 }
 
 export default defineCommand({
@@ -88,13 +87,13 @@ export default defineCommand({
     for (const id of selected) {
       const tool = tools[id];
       const spinner = p.spinner();
-      spinner.start(`Running ${tool.bin}`);
+      spinner.start(`Installing ${tool.label}`);
 
       try {
-        await runInitBin(tool.bin, cwd);
-        spinner.stop(`${tool.bin}: ok`);
+        await tool.run({ cwd });
+        spinner.stop(`${tool.label}: ok`);
       } catch (error) {
-        spinner.stop(`${tool.bin}: failed`);
+        spinner.stop(`${tool.label}: failed`);
         p.cancel(error instanceof Error ? error.message : String(error));
 
         return;

@@ -16,13 +16,13 @@
   "author": "Nozomi Ishii",
   "type": "module",
   "exports": {
-    "./package.json": "./package.json",
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./init": "./dist/init/index.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "nozo-prettier-init": "./dist/init.js"
+    "nozo-prettier-init": "./dist/init/bin.js"
   },
   "files": [
     "dist",
