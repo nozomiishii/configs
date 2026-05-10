@@ -5,7 +5,7 @@ import { test as baseTest, expect } from "vitest";
 import { toolIds, tools } from "./init.js";
 
 const test = baseTest.extend<{ cwd: string }>({
-  cwd: async ({ task: _task }, provide) => {
+  cwd: async ({ task: _ }, provide) => {
     const tmpDir = mkdtempSync(path.join(tmpdir(), "nozo-init-"));
     writeFileSync(
       path.join(tmpDir, "package.json"),

@@ -11,7 +11,7 @@ type InitResult = {
 };
 
 const test = baseTest.extend<{ initResult: InitResult }>({
-  initResult: async ({ task: _task }, provide) => {
+  initResult: async ({ task: _ }, provide) => {
     const tmpDir = mkdtempSync(path.join(tmpdir(), "nozo-lefthook-init-"));
     writeFileSync(
       path.join(tmpDir, "package.json"),
