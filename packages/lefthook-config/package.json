@@ -17,7 +17,6 @@
   "author": "Nozomi Ishii",
   "type": "module",
   "exports": {
-    "./package.json": "./package.json",
     ".": "./recommended.yaml",
     "./init": "./dist/init/index.js"
   },
