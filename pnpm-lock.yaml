@@ -128,8 +128,8 @@ importers:
         specifier: 4.5.0
         version: 4.5.0(eslint@10.3.0(jiti@2.6.1))(tailwindcss@4.2.4)(typescript@6.0.3)
       eslint-plugin-de-morgan:
-        specifier: 2.1.1
-        version: 2.1.1(eslint@10.3.0(jiti@2.6.1))
+        specifier: 2.1.2
+        version: 2.1.2(eslint@10.3.0(jiti@2.6.1))
       eslint-plugin-import-x:
         specifier: 4.16.2
         version: 4.16.2(@typescript-eslint/utils@8.59.2(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1))
@@ -2385,8 +2385,8 @@ packages:
       oxlint:
         optional: true
 
-  eslint-plugin-de-morgan@2.1.1:
-    resolution: {integrity: sha512-0CeQ38b8hMMa3gO5vLnGcQS/xatvYno9RvjKoZ4UVaHjzvHZhR9i6+0ZkZhbbZF1FW7rqrS2MtcH3tVBejrmHQ==}
+  eslint-plugin-de-morgan@2.1.2:
+    resolution: {integrity: sha512-6/MXP77FUrFGTdJ2Lny3Jv027bE3SUHDf+/VBUBckpH5TskOY5G4UX+AebqJeUpt3nXjy3S0KWBRwTItVQwgvw==}
     engines: {node: ^20.0.0 || >=22.0.0}
     peerDependencies:
       eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
@@ -5987,7 +5987,7 @@ snapshots:
       - '@eslint/css'
       - typescript
 
-  eslint-plugin-de-morgan@2.1.1(eslint@10.3.0(jiti@2.6.1)):
+  eslint-plugin-de-morgan@2.1.2(eslint@10.3.0(jiti@2.6.1)):
     dependencies:
       eslint: 10.3.0(jiti@2.6.1)
 
