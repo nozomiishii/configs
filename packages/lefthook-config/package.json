@@ -22,10 +22,11 @@
   },
   "main": "recommended.yaml",
   "bin": {
-    "nozo-git-harvest": "./dist/cli.js",
-    "nozo-lefthook-init": "./dist/init/bin.js"
+    "nozo-git-harvest": "./bin/nozo-git-harvest.js",
+    "nozo-lefthook-init": "./bin/nozo-lefthook-init.js"
   },
   "files": [
+    "bin",
     "dist",
     "hooks",
     "recommended.yaml",
