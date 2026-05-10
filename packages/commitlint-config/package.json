@@ -22,10 +22,11 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "nozo-commitlint": "./dist/cli.js",
-    "nozo-commitlint-init": "./dist/init/bin.js"
+    "nozo-commitlint": "./bin/nozo-commitlint.js",
+    "nozo-commitlint-init": "./bin/nozo-commitlint-init.js"
   },
   "files": [
+    "bin",
     "dist",
     "starter.ts",
     "README.md"

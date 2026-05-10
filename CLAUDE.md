@@ -10,6 +10,11 @@
 
 `configs` は `pnpm` を使った共有設定モノレポです。`packages/` に各種ツール（commitlint / ESLint / lefthook / prettier / tsconfig など）の設定をパッケージとして提供します。
 
+## ファイル拡張子方針
+
+- TypeScript / JavaScript の拡張子は `.ts` / `.js` のみを使用する。`.mjs` / `.cjs` は使わない。
+- 全パッケージが `"type": "module"` のため `.js` は ESM として解釈される。tsdown 出力・bin stub などすべて `.js` で統一する。
+
 ## 重要なパターン
 
 - 設定変更は基本的に `packages/` 配下の設定・ドキュメント側を優先して更新する。
