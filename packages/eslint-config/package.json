@@ -16,9 +16,14 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./eslint.config.ts",
+    "./init": "./dist/init/index.js"
+  },
   "main": "eslint.config.ts",
   "bin": {
-    "nozo-eslint-init": "./dist/init.js"
+    "nozo-eslint-init": "./dist/init/bin.js"
   },
   "files": [
     "dist",
