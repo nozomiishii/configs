@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v1.0.0...@nozomiishii/markdownlint-cli2-config-v1.0.1) (2026-05-10)
+
+### Miscellaneous
+
+- update pnpm to v11.0.7 ([#2229](https://github.com/nozomiishii/configs/issues/2229)) ([0ce525a](https://github.com/nozomiishii/configs/commit/0ce525a25988a485100b127565391f809371f573))
+- update pnpm to v11.0.8 ([#2238](https://github.com/nozomiishii/configs/issues/2238)) ([77d507a](https://github.com/nozomiishii/configs/commit/77d507a231b2d24a7eab55739eed7c4ad05994a8))
+
 ## [1.0.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v0.4.2...@nozomiishii/markdownlint-cli2-config-v1.0.0) (2026-05-09)
 
 ### Miscellaneous
