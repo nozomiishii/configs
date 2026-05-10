@@ -22,9 +22,10 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "nozo-prettier-init": "./dist/init/bin.js"
+    "nozo-prettier-init": "./bin/nozo-prettier-init.js"
   },
   "files": [
+    "bin",
     "dist",
     "starter.ts",
     "README.md"
