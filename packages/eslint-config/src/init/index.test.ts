@@ -2,7 +2,6 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { test as baseTest, expect } from "vitest";
-
 import { init } from "./index.js";
 
 type InitResult = {

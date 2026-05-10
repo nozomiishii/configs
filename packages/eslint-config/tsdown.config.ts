@@ -2,22 +2,22 @@ import { defineConfig } from "tsdown";
 
 const base = defineConfig({
   format: ["esm"],
-  platform: "node",
   outExtensions: () => ({ dts: ".d.ts", js: ".js" }),
+  platform: "node",
 });
 
 export default defineConfig([
   {
     ...base,
-    entry: { "init/index": "src/init/index.ts" },
-    dts: true,
     clean: true,
+    dts: true,
+    entry: { "init/index": "src/init/index.ts" },
   },
   {
     ...base,
-    entry: { "init/bin": "src/init/bin.ts" },
-    dts: false,
-    clean: false,
     banner: { js: "#!/usr/bin/env node" },
+    clean: false,
+    dts: false,
+    entry: { "init/bin": "src/init/bin.ts" },
   },
 ]);

@@ -1,7 +1,9 @@
 /** Scaffold the postinstall hook into the consumer project. */
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
+export type InitOptions = { cwd: string };
 
 type PackageJson = {
   devDependencies?: Record<string, string>;
@@ -10,14 +12,12 @@ type PackageJson = {
   version: string;
 };
 
-export type InitOptions = { cwd: string };
-
 export async function init({ cwd }: InitOptions): Promise<void> {
   const selfPkgPath = fileURLToPath(new URL("../../package.json", import.meta.url));
-  const selfPkg = JSON.parse(readFileSync(selfPkgPath, "utf8")) as PackageJson;
+  const selfPkg = JSON.parse(await readFile(selfPkgPath, "utf8")) as PackageJson;
 
   const targetPath = path.resolve(cwd, "package.json");
-  const target = JSON.parse(readFileSync(targetPath, "utf8")) as PackageJson;
+  const target = JSON.parse(await readFile(targetPath, "utf8")) as PackageJson;
 
   target.devDependencies = {
     ...target.devDependencies,
@@ -29,5 +29,5 @@ export async function init({ cwd }: InitOptions): Promise<void> {
     postinstall: "postinstall",
   };
 
-  writeFileSync(targetPath, `${JSON.stringify(target, null, 2)}\n`);
+  await writeFile(targetPath, `${JSON.stringify(target, null, 2)}\n`);
 }
