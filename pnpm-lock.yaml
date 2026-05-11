@@ -204,8 +204,8 @@ importers:
   packages/lefthook-config:
     dependencies:
       git-harvest:
-        specifier: 0.1.26
-        version: 0.1.26
+        specifier: 0.1.27
+        version: 0.1.27
     devDependencies:
       '@nozomiishii/tsconfig':
         specifier: workspace:*
@@ -2983,8 +2983,8 @@ packages:
     resolution: {integrity: sha512-/6gFNr0N04nob252sTQxyFLi3eKFRqIg1I87YcqAMT1i6SQrSF6KujUEQrtrjMV0H/eejTCltLdDSTEMzHbnsQ==}
     engines: {node: '>=20.20.0'}
 
-  git-harvest@0.1.26:
-    resolution: {integrity: sha512-qa2wJW2TNO7GIf0aNicqarW+TPBzyxvZpQaPRKVsoQBF5OF53tz5DKCqxMNJRtD3N0mL498t5nismQ1zUkcKTw==}
+  git-harvest@0.1.27:
+    resolution: {integrity: sha512-ZbG2pI6qcVaq9rtojB4jUFYlT8HslE7EkrQUjkLFnkrVKQP0G1jk3hBGqaGeQwxMz6YYLbhvMa6/5Mgj1X/CrA==}
     hasBin: true
 
   git-hooks-list@4.2.1:
@@ -6879,7 +6879,7 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  git-harvest@0.1.26: {}
+  git-harvest@0.1.27: {}
 
   git-hooks-list@4.2.1: {}
 
