@@ -2,19 +2,17 @@
 
 ## [1.0.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.0.1...@nozomiishii/lefthook-config-v1.0.2) (2026-05-12)
 
-
 ### Bug Fixes
 
-* stub lefthook-config bins for fresh install ([#2244](https://github.com/nozomiishii/configs/issues/2244)) ([2202c25](https://github.com/nozomiishii/configs/commit/2202c250c5adcd8c293600ae5b43801c51e5c63d))
-
+- stub lefthook-config bins for fresh install ([#2244](https://github.com/nozomiishii/configs/issues/2244)) ([2202c25](https://github.com/nozomiishii/configs/commit/2202c250c5adcd8c293600ae5b43801c51e5c63d))
 
 ### Miscellaneous
 
-* update dependency git-harvest to v0.1.26 ([#2251](https://github.com/nozomiishii/configs/issues/2251)) ([9f461be](https://github.com/nozomiishii/configs/commit/9f461bed1eeb3c03d4b0b4ab906983651132a821))
-* update dependency git-harvest to v0.1.27 ([#2254](https://github.com/nozomiishii/configs/issues/2254)) ([58f99ec](https://github.com/nozomiishii/configs/commit/58f99ec22003876d79902034762b791f37da6992))
-* update dependency tsdown to v0.22.0 ([#2247](https://github.com/nozomiishii/configs/issues/2247)) ([e6b355c](https://github.com/nozomiishii/configs/commit/e6b355cc1a7c93ac7c6ed619b91c2d9624a21f2c))
-* update nozomiishii ([#2259](https://github.com/nozomiishii/configs/issues/2259)) ([bb5a281](https://github.com/nozomiishii/configs/commit/bb5a281a4574667e0aa7898301ae263425e47f68))
-* update pnpm to v11.0.9 ([#2257](https://github.com/nozomiishii/configs/issues/2257)) ([3c01d75](https://github.com/nozomiishii/configs/commit/3c01d758ac9bc682cbc444611fd6b049edec8b86))
+- update dependency git-harvest to v0.1.26 ([#2251](https://github.com/nozomiishii/configs/issues/2251)) ([9f461be](https://github.com/nozomiishii/configs/commit/9f461bed1eeb3c03d4b0b4ab906983651132a821))
+- update dependency git-harvest to v0.1.27 ([#2254](https://github.com/nozomiishii/configs/issues/2254)) ([58f99ec](https://github.com/nozomiishii/configs/commit/58f99ec22003876d79902034762b791f37da6992))
+- update dependency tsdown to v0.22.0 ([#2247](https://github.com/nozomiishii/configs/issues/2247)) ([e6b355c](https://github.com/nozomiishii/configs/commit/e6b355cc1a7c93ac7c6ed619b91c2d9624a21f2c))
+- update nozomiishii ([#2259](https://github.com/nozomiishii/configs/issues/2259)) ([bb5a281](https://github.com/nozomiishii/configs/commit/bb5a281a4574667e0aa7898301ae263425e47f68))
+- update pnpm to v11.0.9 ([#2257](https://github.com/nozomiishii/configs/issues/2257)) ([3c01d75](https://github.com/nozomiishii/configs/commit/3c01d758ac9bc682cbc444611fd6b049edec8b86))
 
 ## [1.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.0.0...@nozomiishii/lefthook-config-v1.0.1) (2026-05-10)
 

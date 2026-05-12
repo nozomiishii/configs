@@ -2,17 +2,15 @@
 
 ## [1.0.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.0.1...@nozomiishii/postinstall-v1.0.2) (2026-05-12)
 
-
 ### Bug Fixes
 
-* skip git setup when not inside a git repo ([#2240](https://github.com/nozomiishii/configs/issues/2240)) ([8dcbc27](https://github.com/nozomiishii/configs/commit/8dcbc27674bd25ed30ab5af609c43131ddf29b85))
-* stub postinstall bins for fresh install ([#2246](https://github.com/nozomiishii/configs/issues/2246)) ([ee29baf](https://github.com/nozomiishii/configs/commit/ee29baf9ac15d9c65ce0d9548a7801ab906d2c68))
-
+- skip git setup when not inside a git repo ([#2240](https://github.com/nozomiishii/configs/issues/2240)) ([8dcbc27](https://github.com/nozomiishii/configs/commit/8dcbc27674bd25ed30ab5af609c43131ddf29b85))
+- stub postinstall bins for fresh install ([#2246](https://github.com/nozomiishii/configs/issues/2246)) ([ee29baf](https://github.com/nozomiishii/configs/commit/ee29baf9ac15d9c65ce0d9548a7801ab906d2c68))
 
 ### Miscellaneous
 
-* update dependency tsdown to v0.22.0 ([#2247](https://github.com/nozomiishii/configs/issues/2247)) ([e6b355c](https://github.com/nozomiishii/configs/commit/e6b355cc1a7c93ac7c6ed619b91c2d9624a21f2c))
-* update pnpm to v11.0.9 ([#2257](https://github.com/nozomiishii/configs/issues/2257)) ([3c01d75](https://github.com/nozomiishii/configs/commit/3c01d758ac9bc682cbc444611fd6b049edec8b86))
+- update dependency tsdown to v0.22.0 ([#2247](https://github.com/nozomiishii/configs/issues/2247)) ([e6b355c](https://github.com/nozomiishii/configs/commit/e6b355cc1a7c93ac7c6ed619b91c2d9624a21f2c))
+- update pnpm to v11.0.9 ([#2257](https://github.com/nozomiishii/configs/issues/2257)) ([3c01d75](https://github.com/nozomiishii/configs/commit/3c01d758ac9bc682cbc444611fd6b049edec8b86))
 
 ## [1.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.0.0...@nozomiishii/postinstall-v1.0.1) (2026-05-10)
 

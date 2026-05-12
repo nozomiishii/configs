@@ -2,10 +2,9 @@
 
 ## [1.0.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.0.1...@nozomiishii/tsconfig-v1.0.2) (2026-05-12)
 
-
 ### Miscellaneous
 
-* update pnpm to v11.0.9 ([#2257](https://github.com/nozomiishii/configs/issues/2257)) ([3c01d75](https://github.com/nozomiishii/configs/commit/3c01d758ac9bc682cbc444611fd6b049edec8b86))
+- update pnpm to v11.0.9 ([#2257](https://github.com/nozomiishii/configs/issues/2257)) ([3c01d75](https://github.com/nozomiishii/configs/commit/3c01d758ac9bc682cbc444611fd6b049edec8b86))
 
 ## [1.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.0.0...@nozomiishii/tsconfig-v1.0.1) (2026-05-10)
 
