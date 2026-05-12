@@ -39,7 +39,7 @@
     "citty": "0.2.2",
     "consola": "3.4.2",
     "package-manager-detector": "1.6.0",
-    "which": "6.0.1"
+    "which": "7.0.0"
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
