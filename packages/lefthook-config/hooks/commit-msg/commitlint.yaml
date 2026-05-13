@@ -1,4 +1,4 @@
 commit-msg:
   jobs:
     - name: commitlint
-      run: node_modules/.bin/nozo-commitlint --edit {1} --verbose
+      run: node_modules/.bin/nozo-commitlint --edit "{1}" --verbose
