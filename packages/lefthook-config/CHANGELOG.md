@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.0.2...@nozomiishii/lefthook-config-v1.0.3) (2026-05-13)
+
+
+### Bug Fixes
+
+* quote --edit arg in lefthook-config commitlint hook ([#2260](https://github.com/nozomiishii/configs/issues/2260)) ([ff73eae](https://github.com/nozomiishii/configs/commit/ff73eaec0e80f8c5568157c0bf5c51d4a5fea15f))
+
 ## [1.0.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.0.1...@nozomiishii/lefthook-config-v1.0.2) (2026-05-12)
 
 ### Bug Fixes
