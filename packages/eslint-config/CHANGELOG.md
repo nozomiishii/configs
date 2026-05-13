@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.0.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.0.1...@nozomiishii/eslint-config-v1.0.2) (2026-05-12)
+
+### Bug Fixes
+
+- stub eslint-config bin for fresh install ([#2243](https://github.com/nozomiishii/configs/issues/2243)) ([6906998](https://github.com/nozomiishii/configs/commit/69069989f2995c0fae61cd75971b4a0340eaebc0))
+
+### Miscellaneous
+
+- update dependency @eslint-react/eslint-plugin to v5.7.5 ([#2253](https://github.com/nozomiishii/configs/issues/2253)) ([68dce7c](https://github.com/nozomiishii/configs/commit/68dce7cf91782f25cca1bc42825d3c6a2a2346b8))
+- update dependency @next/eslint-plugin-next to v16.2.6 ([#2249](https://github.com/nozomiishii/configs/issues/2249)) ([f8679e4](https://github.com/nozomiishii/configs/commit/f8679e468c69eb8393ad21f40c7e4ea5a1372646))
+- update dependency @vitest/eslint-plugin to v1.6.17 ([#2250](https://github.com/nozomiishii/configs/issues/2250)) ([97e725a](https://github.com/nozomiishii/configs/commit/97e725aceaf41d43e95a5fe950542b76b6267161))
+- update dependency tailwindcss to v4.3.0 ([#2255](https://github.com/nozomiishii/configs/issues/2255)) ([2b4a6fb](https://github.com/nozomiishii/configs/commit/2b4a6fbc64ff0683213aba2e66bee07ff1c824b8))
+- update dependency tsdown to v0.22.0 ([#2247](https://github.com/nozomiishii/configs/issues/2247)) ([e6b355c](https://github.com/nozomiishii/configs/commit/e6b355cc1a7c93ac7c6ed619b91c2d9624a21f2c))
+- update pnpm to v11.0.9 ([#2257](https://github.com/nozomiishii/configs/issues/2257)) ([3c01d75](https://github.com/nozomiishii/configs/commit/3c01d758ac9bc682cbc444611fd6b049edec8b86))
+
 ## [1.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.0.0...@nozomiishii/eslint-config-v1.0.1) (2026-05-10)
 
 ### Bug Fixes

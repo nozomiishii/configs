@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.0.1...@nozomiishii/commitlint-config-v1.0.2) (2026-05-12)
+
+### Bug Fixes
+
+- stub commitlint-config bins for fresh install ([#2242](https://github.com/nozomiishii/configs/issues/2242)) ([b2ff480](https://github.com/nozomiishii/configs/commit/b2ff4804e7ca8ffbd913a7e1e28cac0c513d4726))
+
+### Miscellaneous
+
+- update commitlint monorepo to v21 (major) ([#2252](https://github.com/nozomiishii/configs/issues/2252)) ([1e2a56c](https://github.com/nozomiishii/configs/commit/1e2a56cbbe81231972fcb4265004d776d1f8f788))
+- update dependency tsdown to v0.22.0 ([#2247](https://github.com/nozomiishii/configs/issues/2247)) ([e6b355c](https://github.com/nozomiishii/configs/commit/e6b355cc1a7c93ac7c6ed619b91c2d9624a21f2c))
+- update pnpm to v11.0.9 ([#2257](https://github.com/nozomiishii/configs/issues/2257)) ([3c01d75](https://github.com/nozomiishii/configs/commit/3c01d758ac9bc682cbc444611fd6b049edec8b86))
+
 ## [1.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.0.0...@nozomiishii/commitlint-config-v1.0.1) (2026-05-10)
 
 ### Bug Fixes

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.0.1...@nozomiishii/cspell-config-v1.0.2) (2026-05-12)
+
+### Miscellaneous
+
+- update dependency tsdown to v0.22.0 ([#2247](https://github.com/nozomiishii/configs/issues/2247)) ([e6b355c](https://github.com/nozomiishii/configs/commit/e6b355cc1a7c93ac7c6ed619b91c2d9624a21f2c))
+- update pnpm to v11.0.9 ([#2257](https://github.com/nozomiishii/configs/issues/2257)) ([3c01d75](https://github.com/nozomiishii/configs/commit/3c01d758ac9bc682cbc444611fd6b049edec8b86))
+
 ## [1.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.0.0...@nozomiishii/cspell-config-v1.0.1) (2026-05-10)
 
 ### Miscellaneous
