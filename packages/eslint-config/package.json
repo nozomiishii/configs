@@ -46,14 +46,14 @@
     "lint:fix": "pnpm eslint . --fix",
     "prepare": "pnpm run typegen",
     "prepublishOnly": "pnpm run build && pnpm run build:inspector",
-    "start": "pnpx serve .eslint-config-inspector",
+    "start": "pnpx serve dist/__eslint-config-inspector",
     "test": "vitest run",
     "typegen": "node --import @swc-node/register/esm-register scripts/typegen.ts"
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.7.1",
     "@eslint-react/eslint-plugin": "5.7.5",
-    "@eslint/config-inspector": "2.0.1",
+    "@eslint/config-inspector": "3.0.0",
     "@eslint/js": "10.0.1",
     "@next/eslint-plugin-next": "16.2.6",
     "@stylistic/eslint-plugin": "5.10.0",
