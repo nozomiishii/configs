@@ -38,8 +38,6 @@ jobs:
 
       - name: Setup Node
         uses: ./.github/actions/setup-node
-        with:
-          working-directory: packages/eslint-config
 
       - name: Build eslint config inspector
         working-directory: packages/eslint-config
