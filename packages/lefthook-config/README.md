@@ -31,8 +31,9 @@ This adds `lefthook` and `@nozomiishii/lefthook-config` to your
 `devDependencies` (pinned) and writes a `lefthook.yaml` that extends the
 recommended preset.
 
-Auxiliary runtimes (currently `git-harvest`, used by the `cleanup-merged`
-post-merge fragment) are wrapped by shims that this package ships under
+Auxiliary runtimes (currently `git-harvest`, used by the
+`cleanup-worktrees-and-branches` post-merge fragment) are wrapped by
+shims that this package ships under
 its own `bin` field, so they are exposed as `node_modules/.bin/nozo-*`
 without requiring consumers to add them as direct dependencies.
 
@@ -65,7 +66,7 @@ extends:
 
 - `hooks/commit-msg/commitlint.yaml` — runs `nozo-commitlint` (provided by `@nozomiishii/commitlint-config`)
 - `hooks/post-merge/update-node-modules.yaml` — pnpm > bun > npm > yarn
-- `hooks/post-merge/cleanup-merged.yaml` — runs [`git-harvest`](https://github.com/nozomiishii/git-harvest) via the `nozo-git-harvest` shim shipped by this package
+- `hooks/post-merge/cleanup-worktrees-and-branches.yaml` — runs [`git-harvest`](https://github.com/nozomiishii/git-harvest) via the `nozo-git-harvest` shim shipped by this package
 - `hooks/pre-commit/yaml.yaml` — fails the commit when staged files use the `.yml` extension (enforces `.yaml`)
 
 ## Authoring rules (important)
