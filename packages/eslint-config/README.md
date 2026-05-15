@@ -26,6 +26,12 @@ This adds `@nozomiishii/eslint-config`, `eslint`, and `typescript` to your
 `devDependencies` (pinned), adds `eslint` / `lint` / `lint:fix` scripts, and
 writes an `eslint.config.ts` that re-exports the shared config.
 
+## Inspector
+
+Browse the configs and rules enabled by this package via [`@eslint/config-inspector`](https://github.com/eslint/config-inspector):
+
+https://nozomiishii.github.io/configs/eslint/
+
 ## References
 
 - [sxzz/eslint-config](https://github.com/sxzz/eslint-config)

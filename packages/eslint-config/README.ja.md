@@ -24,6 +24,12 @@ pnpx nozo init
 
 これで `@nozomiishii/eslint-config` / `eslint` / `typescript` が pin で `devDependencies` に追加され、`eslint` / `lint` / `lint:fix` の scripts が追加され、shared config を re-export する `eslint.config.ts` が生成される。
 
+## インスペクタ
+
+このパッケージで有効な config と rule を [`@eslint/config-inspector`](https://github.com/eslint/config-inspector) でブラウズできる:
+
+https://nozomiishii.github.io/configs/eslint/
+
 ## 参考
 
 - [sxzz/eslint-config](https://github.com/sxzz/eslint-config)
