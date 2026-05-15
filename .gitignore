@@ -38,6 +38,9 @@ dist
 .eslint-config-inspector
 eslint-typegen.d.ts
 
+# GitHub Pages artifact
+_site
+
 # Claude Code
 **/.claude/settings.local.json
 **/CLAUDE.local.md

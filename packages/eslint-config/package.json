@@ -46,7 +46,6 @@
     "lint:fix": "pnpm eslint . --fix",
     "prepare": "pnpm run typegen",
     "prepublishOnly": "pnpm run build && pnpm run build:inspector",
-    "start": "pnpx serve dist/__eslint-config-inspector",
     "test": "vitest run",
     "typegen": "node --import @swc-node/register/esm-register scripts/typegen.ts"
   },
