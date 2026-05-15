@@ -45,8 +45,6 @@ jobs:
       - name: Setup Node
         if: steps.changes.outputs.src == 'true'
         uses: ./.github/actions/setup-node
-        with:
-          working-directory: packages/postinstall
 
       - name: Test
         if: steps.changes.outputs.src == 'true'

@@ -45,8 +45,6 @@ jobs:
       - name: Setup Node
         if: steps.changes.outputs.src == 'true'
         uses: ./.github/actions/setup-node
-        with:
-          working-directory: packages/eslint-config
 
       - name: Lint
         if: steps.changes.outputs.src == 'true'
