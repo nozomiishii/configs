@@ -95,8 +95,8 @@ importers:
         specifier: 5.7.6
         version: 5.7.6(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3)
       '@eslint/config-inspector':
-        specifier: 3.0.0
-        version: 3.0.0(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3)
+        specifier: 3.0.1
+        version: 3.0.1(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3)
       '@eslint/js':
         specifier: 10.0.1
         version: 10.0.1(eslint@10.3.0(jiti@2.7.0))
@@ -1042,8 +1042,8 @@ packages:
     resolution: {integrity: sha512-eIJYKTCECbP/nsKaaruF6LW967mtbQbsw4JTtSVkUQc9MneSkbrgPJAbKl9nWr0ZeowV8BfsarBmPpBzGelA2w==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/config-inspector@3.0.0':
-    resolution: {integrity: sha512-2T8SCM62KY2I2BJANdO23BlDGrVv4GZYQTt+wjH7xlwkVcC5W99pVFheSvOV4Q3hT5S0kbWHAPTB9XvNMRws8Q==}
+  '@eslint/config-inspector@3.0.1':
+    resolution: {integrity: sha512-PxwflcZr06y1SmaamEbiIs2w5jvR9TiOtqidWgtRy/Y/jFXvHJhhJSAU5y8TpbNOSGXR1sZh8C8tTRmWiKSskg==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     hasBin: true
     peerDependencies:
@@ -4998,7 +4998,7 @@ snapshots:
     dependencies:
       '@eslint/core': 1.2.1
 
-  '@eslint/config-inspector@3.0.0(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3)':
+  '@eslint/config-inspector@3.0.1(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
       ansis: 4.2.0
       cac: 7.0.0
