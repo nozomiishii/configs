@@ -37,7 +37,6 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "build:inspector": "pnpx @eslint/config-inspector build",
     "check:ts": "tsc",
     "dev": "pnpm typegen && eslint --inspect-config",
     "eslint": "eslint --max-warnings=0",
@@ -45,7 +44,7 @@
     "lint": "pnpm eslint .",
     "lint:fix": "pnpm eslint . --fix",
     "prepare": "pnpm run typegen",
-    "prepublishOnly": "pnpm run build && pnpm run build:inspector",
+    "prepublishOnly": "pnpm run build",
     "test": "vitest run",
     "typegen": "node --import @swc-node/register/esm-register scripts/typegen.ts"
   },
