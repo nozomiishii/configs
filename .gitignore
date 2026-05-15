@@ -38,7 +38,7 @@ dist
 .eslint-config-inspector
 eslint-typegen.d.ts
 
-# GitHub Pages artifact (built by .github/workflows/github-pages.yaml)
+# GitHub Pages artifact
 _site
 
 # Claude Code
