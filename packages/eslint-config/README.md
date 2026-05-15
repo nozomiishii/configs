@@ -30,7 +30,7 @@ writes an `eslint.config.ts` that re-exports the shared config.
 
 Browse the configs and rules enabled by this package via [`@eslint/config-inspector`](https://github.com/eslint/config-inspector):
 
-https://nozomiishii.github.io/configs/eslint/
+<https://nozomiishii.github.io/configs/eslint/>
 
 ## References
 

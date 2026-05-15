@@ -28,7 +28,7 @@ pnpx nozo init
 
 このパッケージで有効な config と rule を [`@eslint/config-inspector`](https://github.com/eslint/config-inspector) でブラウズできる:
 
-https://nozomiishii.github.io/configs/eslint/
+<https://nozomiishii.github.io/configs/eslint/>
 
 ## 参考
 
