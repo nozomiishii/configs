@@ -26,7 +26,7 @@ pnpx nozo init
 
 これで `lefthook` と `@nozomiishii/lefthook-config` が pin で `devDependencies` に追加され、推奨プリセットを extend する `lefthook.yaml` が生成される。
 
-補助的なランタイム（現在は `cleanup-merged` post-merge フラグメントで使う `git-harvest`）は、このパッケージの `bin` フィールドが提供する shim でラップされており、利用側が直接 dependency に追加しなくても `node_modules/.bin/nozo-*` として公開されます。
+補助的なランタイム（現在は `cleanup-worktrees-and-branches` post-merge フラグメントで使う `git-harvest`）は、このパッケージの `bin` フィールドが提供する shim でラップされており、利用側が直接 dependency に追加しなくても `node_modules/.bin/nozo-*` として公開されます。
 
 ## プリセット全体を使う
 
@@ -57,7 +57,7 @@ extends:
 
 - `hooks/commit-msg/commitlint.yaml` — `nozo-commitlint`（`@nozomiishii/commitlint-config` が提供）を実行
 - `hooks/post-merge/update-node-modules.yaml` — pnpm > bun > npm > yarn
-- `hooks/post-merge/cleanup-merged.yaml` — このパッケージが提供する `nozo-git-harvest` shim 経由で [`git-harvest`](https://github.com/nozomiishii/git-harvest) を実行
+- `hooks/post-merge/cleanup-worktrees-and-branches.yaml` — このパッケージが提供する `nozo-git-harvest` shim 経由で [`git-harvest`](https://github.com/nozomiishii/git-harvest) を実行
 - `hooks/pre-commit/yaml.yaml` — ステージしたファイルが `.yml` 拡張子だった場合にコミットを失敗させる（`.yaml` を強制）
 
 ## 設定を書く際のルール（重要）
