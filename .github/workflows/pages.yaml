@@ -1,0 +1,73 @@
+name: Pages
+
+# Prerequisite (one-time, manual): repository Settings → Pages → Source must be set to "GitHub Actions".
+# The default GITHUB_TOKEN cannot toggle this; the workflow assumes it is already enabled.
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/eslint-config/**"
+      - ".github/workflows/pages.yaml"
+
+permissions: {}
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-slim
+    timeout-minutes: 10
+
+    permissions:
+      contents: read # required by actions/checkout to fetch repository code
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+        with:
+          working-directory: packages/eslint-config
+
+      - name: Build eslint config inspector
+        working-directory: packages/eslint-config
+        run: pnpx @eslint/config-inspector build --base /configs/eslint/ --outDir ../../_site/eslint
+
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+
+    runs-on: ubuntu-slim
+    timeout-minutes: 5
+
+    permissions:
+      pages: write # required by actions/deploy-pages to publish the uploaded artifact
+      id-token: write # required by actions/deploy-pages for OIDC verification of the artifact
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
