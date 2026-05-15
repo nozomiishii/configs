@@ -1,4 +1,4 @@
-name: Pages
+name: GitHub Pages
 
 # Prerequisite (one-time, manual): repository Settings → Pages → Source must be set to "GitHub Actions".
 # The default GITHUB_TOKEN cannot toggle this; the workflow assumes it is already enabled.
@@ -10,12 +10,12 @@ on:
       - main
     paths:
       - "packages/eslint-config/**"
-      - ".github/workflows/pages.yaml"
+      - ".github/workflows/github-pages.yaml"
 
 permissions: {}
 
 concurrency:
-  group: pages
+  group: github-pages
   cancel-in-progress: false
 
 defaults:
