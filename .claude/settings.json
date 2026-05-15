@@ -2,14 +2,6 @@
   "hooks": {
     "SessionStart": [
       {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "pnpm install"
-          }
-        ]
-      },
-      {
         "matcher": "startup",
         "hooks": [
           {
