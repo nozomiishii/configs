@@ -11,6 +11,13 @@
 extends:
   - ./node_modules/@nozomiishii/lefthook-config/recommended.yaml
 
+pre-commit:
+  jobs:
+    - name: lint-markdown
+      files: git diff --name-only --staged
+      glob: '*.{md,mdx}'
+      run: pnpx markdownlint-cli2 {staged_files}
+
 pre-push:
   jobs:
     - name: lint
