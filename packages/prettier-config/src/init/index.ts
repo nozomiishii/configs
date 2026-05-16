@@ -36,8 +36,8 @@ export async function init({ cwd }: InitOptions): Promise<void> {
 
   target.scripts = {
     ...target.scripts,
-    "format": "pnpm prettier . --check",
-    "format:fix": "pnpm prettier . --write",
+    "format": "pnpm prettier . --check --cache",
+    "format:fix": "pnpm prettier . --write --cache",
     "prettier": "prettier --ignore-unknown",
   };
 

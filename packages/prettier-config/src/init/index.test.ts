@@ -50,11 +50,11 @@ test("init adds prettier to devDependencies", ({ initResult }) => {
 });
 
 test("init adds format script", ({ initResult }) => {
-  expect(initResult.pkg.scripts?.format).toBe("pnpm prettier . --check");
+  expect(initResult.pkg.scripts?.format).toBe("pnpm prettier . --check --cache");
 });
 
 test("init adds format:fix script", ({ initResult }) => {
-  expect(initResult.pkg.scripts?.["format:fix"]).toBe("pnpm prettier . --write");
+  expect(initResult.pkg.scripts?.["format:fix"]).toBe("pnpm prettier . --write --cache");
 });
 
 test("init adds prettier script", ({ initResult }) => {
