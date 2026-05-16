@@ -58,7 +58,7 @@ test("init adds format:fix script", ({ initResult }) => {
 });
 
 test("init adds prettier script", ({ initResult }) => {
-  expect(initResult.pkg.scripts?.prettier).toBe("prettier --ignore-unknown");
+  expect(initResult.pkg.scripts?.prettier).toBe("prettier --ignore-unknown --cache");
 });
 
 test("init generates prettier.config.ts", ({ initResult }) => {

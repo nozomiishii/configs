@@ -38,7 +38,7 @@ export async function init({ cwd }: InitOptions): Promise<void> {
     ...target.scripts,
     "format": "pnpm prettier . --check",
     "format:fix": "pnpm prettier . --write",
-    "prettier": "prettier --ignore-unknown",
+    "prettier": "prettier --ignore-unknown --cache",
   };
 
   await writeFile(targetPath, `${JSON.stringify(target, null, 2)}\n`);
