@@ -84,13 +84,13 @@
     "typescript-eslint": "8.59.3"
   },
   "devDependencies": {
-    "eslint": "10.3.0",
+    "eslint": "10.4.0",
     "tsdown": "0.22.0",
     "typescript": "6.0.3",
     "vitest": "4.1.6"
   },
   "peerDependencies": {
-    "eslint": "10.3.0",
+    "eslint": "10.4.0",
     "typescript": "6.0.3"
   },
   "packageManager": "pnpm@11.1.2",
