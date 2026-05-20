@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.0.3...@nozomiishii/lefthook-config-v1.1.0) (2026-05-20)
+
+### Miscellaneous
+
+- rename cleanup-merged hook to cleanup-worktrees-and-branches ([#2282](https://github.com/nozomiishii/configs/issues/2282)) ([687a19a](https://github.com/nozomiishii/configs/commit/687a19aabb0aa03329cd665025eda4406b4eb1db))
+- update dependency git-harvest to v0.2.0 ([#2287](https://github.com/nozomiishii/configs/issues/2287)) ([067830c](https://github.com/nozomiishii/configs/commit/067830c888c3acb339a0f573943eaf51d368f7eb))
+- update dependency git-harvest to v0.2.1 ([#2295](https://github.com/nozomiishii/configs/issues/2295)) ([82b476e](https://github.com/nozomiishii/configs/commit/82b476eb5bddbe36644dfd0b12c7815436e87434))
+- update dependency vitest to v4.1.6 ([#2266](https://github.com/nozomiishii/configs/issues/2266)) ([3ba8bbe](https://github.com/nozomiishii/configs/commit/3ba8bbe5097bf636fc95df98bcb751ca94a35f3c))
+- update pnpm to v11.1.0 ([#2269](https://github.com/nozomiishii/configs/issues/2269)) ([0e49f0f](https://github.com/nozomiishii/configs/commit/0e49f0f9f468f866b267763225c5c848b6abaa9a))
+- update pnpm to v11.1.1 ([#2276](https://github.com/nozomiishii/configs/issues/2276)) ([d89ec80](https://github.com/nozomiishii/configs/commit/d89ec80fda29cdac6b12df92fde9bb2c5d16eac7))
+- update pnpm to v11.1.2 ([#2290](https://github.com/nozomiishii/configs/issues/2290)) ([a964774](https://github.com/nozomiishii/configs/commit/a964774c08d564627ad98d22611e61e132476fec))
+
 ## [1.0.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.0.2...@nozomiishii/lefthook-config-v1.0.3) (2026-05-13)
 
 ### Bug Fixes
