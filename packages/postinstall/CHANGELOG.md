@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.0.3...@nozomiishii/postinstall-v1.1.0) (2026-05-20)
+
+
+### Miscellaneous
+
+* update dependency vitest to v4.1.6 ([#2266](https://github.com/nozomiishii/configs/issues/2266)) ([3ba8bbe](https://github.com/nozomiishii/configs/commit/3ba8bbe5097bf636fc95df98bcb751ca94a35f3c))
+* update pnpm to v11.1.0 ([#2269](https://github.com/nozomiishii/configs/issues/2269)) ([0e49f0f](https://github.com/nozomiishii/configs/commit/0e49f0f9f468f866b267763225c5c848b6abaa9a))
+* update pnpm to v11.1.1 ([#2276](https://github.com/nozomiishii/configs/issues/2276)) ([d89ec80](https://github.com/nozomiishii/configs/commit/d89ec80fda29cdac6b12df92fde9bb2c5d16eac7))
+* update pnpm to v11.1.2 ([#2290](https://github.com/nozomiishii/configs/issues/2290)) ([a964774](https://github.com/nozomiishii/configs/commit/a964774c08d564627ad98d22611e61e132476fec))
+
 ## [1.0.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.0.2...@nozomiishii/postinstall-v1.0.3) (2026-05-13)
 
 ### Miscellaneous
