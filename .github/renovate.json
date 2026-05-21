@@ -17,6 +17,12 @@
       "matchDepNames": ["node"],
       "matchUpdateTypes": ["minor", "patch"],
       "enabled": false
+    },
+    {
+      "description": "TEMPORARY: freeze actions/create-github-app-token at v3.1.1. v3.2.0 breaks release-please-action's multi-release (monorepo) flow with a 403 on POST /releases. Remove this rule once the v3.2.0 regression is resolved upstream and re-verified.",
+      "matchManagers": ["github-actions"],
+      "matchDepNames": ["actions/create-github-app-token"],
+      "enabled": false
     }
   ]
 }
