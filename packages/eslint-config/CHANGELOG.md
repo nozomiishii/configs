@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.1.0...@nozomiishii/eslint-config-v1.1.1) (2026-05-21)
+
+### Miscellaneous
+
+- update dependency @eslint-react/eslint-plugin to v5.8.1 ([#2299](https://github.com/nozomiishii/configs/issues/2299)) ([6ac95cd](https://github.com/nozomiishii/configs/commit/6ac95cd19436f2c303ea3fabc3bf1868874e0d4b))
+- update dependency eslint-plugin-package-json to v1 ([#2300](https://github.com/nozomiishii/configs/issues/2300)) ([ba99a26](https://github.com/nozomiishii/configs/commit/ba99a2620f382f751df3a7401c9d64b5ddd3d9de))
+- update dependency eslint-plugin-playwright to v2.10.3 ([#2302](https://github.com/nozomiishii/configs/issues/2302)) ([6a0e21e](https://github.com/nozomiishii/configs/commit/6a0e21ec04e97072610925d79ba8887b6f20a8ab))
+
 ## [1.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.0.3...@nozomiishii/eslint-config-v1.1.0) (2026-05-20)
 
 ### Miscellaneous
