@@ -53,6 +53,7 @@ jobs:
           client-id: ${{ steps.secrets.outputs.APP_ID }}
           private-key: ${{ steps.secrets.outputs.APP_PRIVATE_KEY }}
           permission-contents: write
+          permission-issues: write
           permission-pull-requests: write
 
       - name: Run release-please
@@ -61,9 +62,7 @@ jobs:
         with:
           config-file: .github/.release-please-config.json
           manifest-file: .github/.release-please-manifest.json
-          # DIAGNOSTIC: temporarily use the default GITHUB_TOKEN instead of the app token
-          # to isolate whether the create-release 403 is specific to the GitHub App token.
-          token: ${{ github.token }}
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Echo release-please outputs
         if: steps.release-please.outputs
