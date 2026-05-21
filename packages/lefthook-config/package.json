@@ -41,7 +41,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "git-harvest": "0.2.1"
+    "git-harvest": "0.2.2"
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
