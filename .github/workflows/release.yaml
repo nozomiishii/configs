@@ -33,6 +33,10 @@ jobs:
       prs: ${{ steps.release-please.outputs.prs }}
       releases_created: ${{ steps.release-please.outputs.releases_created }}
       paths_released: ${{ steps.release-please.outputs.paths_released }}
+      # No umbrella tag exists (root `.` sets skip-github-release by design), but
+      # linked-versions syncs all components onto one commit, so the `nozo` tag reliably
+      # pins the publish job to the release commit.
+      tag_name: ${{ steps.release-please.outputs['packages/nozo--tag_name'] }}
 
     steps:
       - name: Load secrets from 1Password
@@ -152,6 +156,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
+          # Pin to the released tag, not the run's trigger commit: with rapid merges the
+          # release-creating run may predate the version bump and republish a stale version.
+          ref: ${{ needs.release-please.outputs.tag_name }}
           persist-credentials: false
 
       - name: Setup Node
