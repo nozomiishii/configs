@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.1.0...@nozomiishii/lefthook-config-v1.1.1) (2026-05-21)
+
+
+### Miscellaneous
+
+* update dependency git-harvest to v0.2.2 ([#2301](https://github.com/nozomiishii/configs/issues/2301)) ([d4c80a6](https://github.com/nozomiishii/configs/commit/d4c80a6627087bf693ee4ea4eaeb00601a7bf4fc))
+
 ## [1.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.0.3...@nozomiishii/lefthook-config-v1.1.0) (2026-05-20)
 
 ### Miscellaneous
