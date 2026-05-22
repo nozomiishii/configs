@@ -23,6 +23,11 @@ publicHoistPattern:
   - "*prettier*"
   - "*storybook*"
 
+# minimumReleaseAge は新しく公開された版を一定期間 install させない pnpm の安全機構。自前パッケージは待たず即取り込みたいので除外する。
+minimumReleaseAgeExclude:
+  - "@nozomiishii/*"
+  - git-harvest
+
 # pinバージョンでインストールする
 savePrefix: ""
 
