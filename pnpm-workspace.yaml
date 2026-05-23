@@ -7,23 +7,21 @@
 packages:
   - "packages/*"
 
-# install スクリプトのポリシー: 実際に build/postinstall が動作に必要なら true、
-# 不要・別経路で代替できるなら false。
-# コメント形式: # <package.json 依存 → ... → 自身までの全経路> | <用途>
+# 依存パッケージのライフサイクルスクリプトの許可リスト
 allowBuilds:
-  lefthook: false # lefthook | フック登録は @nozomiishii/postinstall 経由で行うため不要
+  lefthook: false
   "@swc/core": true # @nozomiishii/eslint-config → @swc-node/register → @swc-node/core → @swc/core | TypeScript 実行時に必要
   esbuild: true # @nozomiishii/eslint-config → @eslint/config-inspector → esbuild | config inspector のビルド（vitest / storybook 経由でも入る）
   unrs-resolver: true # @nozomiishii/eslint-config → eslint-import-resolver-typescript → eslint-import-context → unrs-resolver | eslint 実行に必要
 
-# 依存解決のうまくいっていないdependenciesのdependenciesをrootのnode_modulesまで巻き上げる
+# transitive dependencyをrootのnode_modulesまで巻き上げる
 publicHoistPattern:
   - "@types/*"
   - "*eslint*"
   - "*prettier*"
   - "*storybook*"
 
-# minimumReleaseAge は新しく公開された版を一定期間 install させない pnpm の安全機構。自前パッケージは待たず即取り込みたいので除外する。
+# 自前パッケージは待たず即取り込みたいので除外する。
 minimumReleaseAgeExclude:
   - "@nozomiishii/*"
   - git-harvest
