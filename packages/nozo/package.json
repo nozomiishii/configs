@@ -50,7 +50,7 @@
     "typescript": "6.0.3",
     "vitest": "4.1.7"
   },
-  "packageManager": "pnpm@11.2.1",
+  "packageManager": "pnpm@11.2.2",
   "engines": {
     "node": ">=24.0.0"
   },

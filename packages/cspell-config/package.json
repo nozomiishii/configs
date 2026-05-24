@@ -44,7 +44,7 @@
     "tsdown": "0.22.0",
     "typescript": "6.0.3"
   },
-  "packageManager": "pnpm@11.2.1",
+  "packageManager": "pnpm@11.2.2",
   "engines": {
     "node": ">=22.18.0"
   },
