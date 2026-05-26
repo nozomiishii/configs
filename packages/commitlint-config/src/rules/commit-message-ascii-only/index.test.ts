@@ -1,18 +1,11 @@
 import lint from "@commitlint/lint";
 import { describe, expect, it } from "vitest";
 
-import config from "../src/index.js";
+import { name, rule } from "./index.js";
 
-// Plugin から rule callback を取り出して、parser を介さず純粋ロジックを単体検証する。
+// rule callback を直接呼び、parser を介さず純粋ロジックを単体検証する。
 // `commit-message-ascii-only` の検査範囲が body / footer / notes 全体に拡張されたことを保証する。
-const ruleCallback = config.plugins?.[0]?.rules?.["commit-message-ascii-only"];
-if (typeof ruleCallback !== "function") {
-  throw new Error("commit-message-ascii-only rule callback not found in plugin");
-}
-
-type Parsed = Parameters<typeof ruleCallback>[0];
-
-const runRule = (parsed: Partial<Parsed>) => ruleCallback(parsed as Parsed);
+const runRule = (parsed: Parameters<typeof rule>[0]) => rule(parsed);
 
 describe("commit-message-ascii-only (unit)", () => {
   it("空の commit (body/footer/notes すべて空) は通過する", () => {
@@ -76,8 +69,8 @@ describe("commit-message-ascii-only (unit)", () => {
 // PR #2145 で問題になった「body 1 行目の `#nnn` で parser が footer に振り分ける」挙動を
 // 実 parser で踏ませ、ルールが期待通り検出するかを確認する。
 describe("commit-message-ascii-only (integration via @commitlint/lint)", () => {
-  const rules = { "commit-message-ascii-only": [2, "always"] } as const;
-  const opts = { plugins: config.plugins } as const;
+  const rules = { [name]: [2, "always"] } as const;
+  const opts = { plugins: { local: { rules: { [name]: rule } } } } as const;
 
   it("body 1 行目に `#issue-ref` + 日本語混在を検出する", async () => {
     const message = ["feat(scope): subject", "", "Issue #2126 のような本文。日本語混入。"].join(
@@ -87,7 +80,7 @@ describe("commit-message-ascii-only (integration via @commitlint/lint)", () => {
     const result = await lint(message, rules, opts);
 
     expect(result.valid).toBe(false);
-    expect(result.errors.some((e) => e.name === "commit-message-ascii-only")).toBe(true);
+    expect(result.errors.some((e) => e.name === name)).toBe(true);
   });
 
   it("BREAKING CHANGE フッター内の日本語を検出する", async () => {
@@ -102,7 +95,7 @@ describe("commit-message-ascii-only (integration via @commitlint/lint)", () => {
     const result = await lint(message, rules, opts);
 
     expect(result.valid).toBe(false);
-    expect(result.errors.some((e) => e.name === "commit-message-ascii-only")).toBe(true);
+    expect(result.errors.some((e) => e.name === name)).toBe(true);
   });
 
   it("純英語コミットは通過する", async () => {

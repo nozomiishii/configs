@@ -25,92 +25,20 @@ describe("scope-empty (default deny scope)", () => {
   });
 });
 
-// breaking change を宣言するなら header に `!` が必須。footer だけの `BREAKING CHANGE:` は禁止。
-// GitHub の squash commit では footer が畳まれて見えず、prefix と実態がズレるため。
-// type は問わない（`chore!` も可）。組み込みの breaking-change-exclamation-mark (XNOR) とは違い、
-// `!` 単独は許可・footer 単独だけを弾く一方向の含意。
-const breakingPlugin = config.plugins?.[0];
-if (!breakingPlugin || typeof breakingPlugin === "string") {
-  throw new Error("commitlint plugin not configured");
-}
-const breakingRuleCallback = breakingPlugin.rules?.["breaking-change-requires-bang"];
-if (typeof breakingRuleCallback !== "function") {
-  throw new Error("breaking-change-requires-bang rule callback not found in plugin");
-}
+// rule 本体の検証は src/rules/<rule-name>/index.test.ts に co-located。
+// ここでは compose 結果として custom rule が plugin / severity 両方に登録されることを固定する。
+describe("custom rules composition", () => {
+  it("各 custom rule の callback が plugin に登録されている", () => {
+    const plugin = config.plugins?.[0];
+    if (!plugin || typeof plugin === "string") {
+      throw new Error("commitlint plugin not configured");
+    }
+    expect(typeof plugin.rules["commit-message-ascii-only"]).toBe("function");
+    expect(typeof plugin.rules["breaking-change-requires-bang"]).toBe("function");
+  });
 
-// rule が参照する header / notes だけを持つ最小入力。parser の Commit 型は index signature が
-// 全プロパティを string 扱いにするため synthetic な notes 配列と衝突する。テスト入力用に絞る。
-type BreakingInput = { header?: string | null; notes?: { title?: string; text?: string }[] };
-const runBreakingRule = (parsed: BreakingInput) =>
-  breakingRuleCallback(
-    parsed as unknown as Parameters<typeof breakingRuleCallback>[0],
-  ) as readonly [boolean, string?];
-
-describe("breaking-change-requires-bang (unit)", () => {
-  it("default config に breaking-change-requires-bang: [2, 'always'] が登録されている", () => {
+  it("各 custom rule の severity が [2, 'always'] で登録されている", () => {
+    expect(config.rules?.["commit-message-ascii-only"]).toEqual([2, "always"]);
     expect(config.rules?.["breaking-change-requires-bang"]).toEqual([2, "always"]);
-  });
-
-  it("breaking marker なしの通常コミットは通過する", () => {
-    const [valid] = runBreakingRule({ header: "feat: add foo", notes: [] });
-    expect(valid).toBe(true);
-  });
-
-  it("header に `!` があり breaking note もある (feat!) は通過する", () => {
-    const [valid] = runBreakingRule({
-      header: "feat!: drop node 18",
-      notes: [{ title: "BREAKING CHANGE", text: "drop node 18" }],
-    });
-    expect(valid).toBe(true);
-  });
-
-  it("header に `!` なしで footer だけ breaking は失敗する", () => {
-    const [valid] = runBreakingRule({
-      header: "feat: add foo",
-      notes: [{ title: "BREAKING CHANGE", text: "removed old api" }],
-    });
-    expect(valid).toBe(false);
-  });
-
-  it("BREAKING-CHANGE (ハイフン) note も検出する", () => {
-    const [valid] = runBreakingRule({
-      header: "fix: patch",
-      notes: [{ title: "BREAKING-CHANGE", text: "changed signature" }],
-    });
-    expect(valid).toBe(false);
-  });
-
-  it("header 先頭に空白があっても `!` を検出して通過する", () => {
-    // commitlint は header を trim せず rule に渡す。consumer が header-trim を無効化しても
-    // 偶発的な先頭空白で bang を見落とさないことを保証する。
-    const [valid] = runBreakingRule({
-      header: "  feat!: x",
-      notes: [{ title: "BREAKING CHANGE", text: "x" }],
-    });
-    expect(valid).toBe(true);
-  });
-});
-
-describe("breaking-change-requires-bang (integration via @commitlint/lint)", () => {
-  const rules = { "breaking-change-requires-bang": [2, "always"] } as const;
-  // 本番は config-conventional の conventionalcommits preset で動く。@commitlint/lint の
-  // 既定 parser は `BREAKING-CHANGE` (ハイフン) を note 化しないため、note 検出を本番と
-  // 揃えるよう noteKeywords を明示する。
-  const opts = {
-    plugins: { local: breakingPlugin },
-    parserOpts: { noteKeywords: ["BREAKING CHANGE", "BREAKING-CHANGE"] },
-  };
-
-  it("`!` なしで BREAKING CHANGE footer だけのコミットを弾く", async () => {
-    const message = ["feat: add foo", "", "BREAKING CHANGE: removed old api"].join("\n");
-    const result = await lint(message, rules, opts);
-    expect(result.valid).toBe(false);
-    expect(result.errors.some((e) => e.name === "breaking-change-requires-bang")).toBe(true);
-  });
-
-  it("`BREAKING-CHANGE` (ハイフン) footer だけのコミットも弾く", async () => {
-    const message = ["feat: add foo", "", "BREAKING-CHANGE: removed old api"].join("\n");
-    const result = await lint(message, rules, opts);
-    expect(result.valid).toBe(false);
   });
 });
