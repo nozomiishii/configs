@@ -27,6 +27,17 @@ const config: UserConfig = {
             "commit message body / footer / notes must contain ASCII characters only (write in English)",
           ];
         },
+        // 破壊的変更は header の `!` で宣言する。`BREAKING CHANGE:` footer 単独は禁止。
+        // GitHub の squash commit では footer が畳まれて見えず、想定外の major bump を招くため。
+        "breaking-change-requires-bang": ({ header, notes }) => {
+          // header は commitlint 側で trim されないため、偶発的な先頭空白を除いて bang を判定する。
+          const hasBang = /^\w+(?:\([^)]*\))?!:/.test((header ?? "").trimStart());
+          const hasBreaking = (notes ?? []).some((n) => /^BREAKING[ -]CHANGE$/.test(n.title ?? ""));
+          return [
+            !hasBreaking || hasBang,
+            "declare a breaking change with `!` in the header (e.g. `chore!: ...`); a BREAKING CHANGE footer alone is not allowed because GitHub collapses the footer in squash commits",
+          ];
+        },
       },
     },
   ],
@@ -34,6 +45,7 @@ const config: UserConfig = {
     "type-enum": [2, "always", ["feat", "fix", "chore"]],
     "scope-empty": [2, "always"],
     "commit-message-ascii-only": [2, "always"],
+    "breaking-change-requires-bang": [2, "always"],
   },
 };
 
