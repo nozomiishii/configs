@@ -29,6 +29,7 @@ pnpx nozo init
 - `type-enum`: `feat` / `fix` / `chore` のみ許可。
 - `scope-empty`: デフォルトで scope 禁止。`feat: subject` は通り、`feat(api): subject` は弾かれる。
 - `commit-message-ascii-only`: body / footer / notes は ASCII のみ（コミットメッセージは英語で書く）。
+- `breaking-change-requires-bang`: 破壊的変更は header の `!` で宣言する。`BREAKING CHANGE:` footer 単独（header に `!` なし）は弾かれる。GitHub の squash commit では footer が畳まれて見えないため。
 
 ### consumer 側で scope を許可する
 

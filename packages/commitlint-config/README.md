@@ -30,6 +30,7 @@ and writes a `commitlint.config.ts` that re-exports the shared config.
 - `type-enum`: only `feat` / `fix` / `chore` are allowed.
 - `scope-empty`: scope must be empty by default. `feat: subject` passes; `feat(api): subject` is rejected.
 - `commit-message-ascii-only`: body / footer / notes must be ASCII (write commit messages in English).
+- `breaking-change-requires-bang`: declare breaking changes with `!` in the header. A `BREAKING CHANGE:` footer alone (no `!` in the header) is rejected, since GitHub collapses the footer in squash commits.
 
 ### Allowing scope in a consumer
 

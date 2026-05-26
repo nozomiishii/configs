@@ -42,5 +42,6 @@
 
 ## リリース・Conventional Commits
 
-- `BREAKING CHANGE:` フッターと `feat!:` / `fix!:` の `!` 修飾は、**リリースされるパッケージ・公開アセットの互換性を破る変更にのみ**使用する。CI / workflows / branch protection / リポジトリ運用上の変更には使わない。これらの注意事項は PR 本文に記述する（release-please など自動リリースツールが major / minor バンプを誤って行い、CHANGELOG に `⚠ BREAKING CHANGES` セクションを誤生成するのを防ぐため。実例: 2026-04-25 にこのリポジトリ群で `chore: migrate reusable workflows to v3.0.0` PR が誤って BREAKING CHANGE として記録された）。
+- 破壊的変更は header の `!` で宣言する（`feat!:` / `fix!:` / `chore!:`）。`BREAKING CHANGE:` footer 単独（header に `!` なし）は `@nozomiishii/commitlint-config` の `breaking-change-requires-bang` rule が弾く。GitHub の squash commit では footer が畳まれて見えず、release-please は `!`・footer を問わず breaking を major bump 扱いにするため。
+- `!` を付けるのはリリースされるパッケージ・公開アセットの互換性を破る変更のみ（依存の動作環境 EOL など）。CI / workflows / branch protection / リポジトリ運用だけの変更には付けない。この判断は機械化できないので人が見る。運用変更の意図・背景は PR 本文に書く（実例: 2026-04-25 に `chore: migrate reusable workflows to v3.0.0` が誤って BREAKING CHANGE 記録）。
 - shared-config (例: `prettier-config`) の挙動変更で発生する cascade reformat は、**設定変更 PR (`feat(<config>)!: ...`) と必ず別 PR に分離**し、scope なしの `chore: reformat ...` で出すこと。同一 PR の squash commit に混ざると release-please の path-based 振り分けにより、変更 scope と無関係なパッケージにも `⚠ BREAKING CHANGES` セクションと minor バンプが波及する（実例: 2026-05-01 の PR #2140 / #2141 が release PR #2128 で全パッケージに BREAKING を誤付与）。
