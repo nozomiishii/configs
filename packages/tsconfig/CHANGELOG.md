@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.1.1...@nozomiishii/tsconfig-v1.2.0) (2026-05-27)
+
+### Miscellaneous
+
+- update pnpm to v11.1.3 ([#2311](https://github.com/nozomiishii/configs/issues/2311)) ([d80a61b](https://github.com/nozomiishii/configs/commit/d80a61b0b8c33a9e2c2648deceedec7bda5aff9f))
+- update pnpm to v11.2.1 ([#2321](https://github.com/nozomiishii/configs/issues/2321)) ([bd7f46a](https://github.com/nozomiishii/configs/commit/bd7f46a8abd6c467033840143e00ac2008463123))
+- update pnpm to v11.2.2 ([#2324](https://github.com/nozomiishii/configs/issues/2324)) ([ec4ca98](https://github.com/nozomiishii/configs/commit/ec4ca985fd02f6bad0ebb9e46f5cddfa4f4f8003))
+- update pnpm to v11.3.0 ([#2332](https://github.com/nozomiishii/configs/issues/2332)) ([5c68c81](https://github.com/nozomiishii/configs/commit/5c68c8135b26a6e15b2576a4958f56c978f83ba7))
+
 ## [1.1.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.1.0...@nozomiishii/tsconfig-v1.1.1) (2026-05-21)
 
 ### Miscellaneous

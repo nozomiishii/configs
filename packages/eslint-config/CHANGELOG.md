@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.1.1...@nozomiishii/eslint-config-v1.2.0) (2026-05-27)
+
+### Features
+
+- enforce extensionless relative imports in eslint-config ([#2335](https://github.com/nozomiishii/configs/issues/2335)) ([9dc9d55](https://github.com/nozomiishii/configs/commit/9dc9d558d1d77ce069d03d00d684be7637807b47))
+
+### Miscellaneous
+
+- add eslint rule comment guideline to eslint-config CLAUDE.md ([#2336](https://github.com/nozomiishii/configs/issues/2336)) ([1e5d92c](https://github.com/nozomiishii/configs/commit/1e5d92c05c84892a04943f869b3c4c42ad23e460))
+- drop redundant extensions from relative imports ([#2333](https://github.com/nozomiishii/configs/issues/2333)) ([9f1a41a](https://github.com/nozomiishii/configs/commit/9f1a41afa230e14b703cb489ec5437c1f877337f))
+- update dependency @eslint-react/eslint-plugin to v5.8.3 ([#2317](https://github.com/nozomiishii/configs/issues/2317)) ([60f76f4](https://github.com/nozomiishii/configs/commit/60f76f4d49f0c09d1c83f2cfec831ceb961eacd1))
+- update dependency @eslint-react/eslint-plugin to v5.8.4 ([#2326](https://github.com/nozomiishii/configs/issues/2326)) ([64329c1](https://github.com/nozomiishii/configs/commit/64329c12b8e18408f1d151b1df27c8bcf7784f8c))
+- update dependency @eslint-react/eslint-plugin to v5.8.5 ([#2334](https://github.com/nozomiishii/configs/issues/2334)) ([c07ad1c](https://github.com/nozomiishii/configs/commit/c07ad1c078c613d35814fe30a87c18f6b0f66d1c))
+- update dependency @vitest/eslint-plugin to v1.6.18 ([#2331](https://github.com/nozomiishii/configs/issues/2331)) ([f44893a](https://github.com/nozomiishii/configs/commit/f44893a58c9cbb117603056aed28ddbb76ac308c))
+- update dependency eslint-plugin-jsdoc to v63 ([#2319](https://github.com/nozomiishii/configs/issues/2319)) ([623d85e](https://github.com/nozomiishii/configs/commit/623d85e424285a96401c8ca89e6f191632d6f1a1))
+- update dependency eslint-plugin-package-json to v1.1.0 ([#2314](https://github.com/nozomiishii/configs/issues/2314)) ([79eb2aa](https://github.com/nozomiishii/configs/commit/79eb2aa9574672d71400a99439ac9169caca3f96))
+- update dependency eslint-plugin-playwright to v2.10.4 ([#2318](https://github.com/nozomiishii/configs/issues/2318)) ([ca1be99](https://github.com/nozomiishii/configs/commit/ca1be99f08b1467b1c738c512e8b15d056e41139))
+- update dependency eslint-plugin-storybook to v10.4.1 ([#2327](https://github.com/nozomiishii/configs/issues/2327)) ([b9c3892](https://github.com/nozomiishii/configs/commit/b9c3892027bfd871ba53f7af13673606f3252fa7))
+- update dependency typescript-eslint to v8.59.4 ([#2312](https://github.com/nozomiishii/configs/issues/2312)) ([c51cc09](https://github.com/nozomiishii/configs/commit/c51cc0980cc64669e8e82e9d9b608863781b596c))
+- update dependency vitest to v4.1.7 ([#2320](https://github.com/nozomiishii/configs/issues/2320)) ([b28fdec](https://github.com/nozomiishii/configs/commit/b28fdec48505f6261ae667f93e92a28fdb5a859b))
+- update pnpm to v11.1.3 ([#2311](https://github.com/nozomiishii/configs/issues/2311)) ([d80a61b](https://github.com/nozomiishii/configs/commit/d80a61b0b8c33a9e2c2648deceedec7bda5aff9f))
+- update pnpm to v11.2.1 ([#2321](https://github.com/nozomiishii/configs/issues/2321)) ([bd7f46a](https://github.com/nozomiishii/configs/commit/bd7f46a8abd6c467033840143e00ac2008463123))
+- update pnpm to v11.2.2 ([#2324](https://github.com/nozomiishii/configs/issues/2324)) ([ec4ca98](https://github.com/nozomiishii/configs/commit/ec4ca985fd02f6bad0ebb9e46f5cddfa4f4f8003))
+- update pnpm to v11.3.0 ([#2332](https://github.com/nozomiishii/configs/issues/2332)) ([5c68c81](https://github.com/nozomiishii/configs/commit/5c68c8135b26a6e15b2576a4958f56c978f83ba7))
+
 ## [1.1.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.1.0...@nozomiishii/eslint-config-v1.1.1) (2026-05-21)
 
 ### Miscellaneous
