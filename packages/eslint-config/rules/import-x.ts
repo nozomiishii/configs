@@ -31,11 +31,7 @@ export function importX() {
     name: name("import-x"),
     rules: {
       /**
-       * 相対 import の拡張子を省略させる（js/jsx/ts/tsx 等）
-       *
-       * bundler 解決前提なので `.js` を書かない。base を ignorePackages にすることで
-       * パッケージ import は無視しつつ、列挙していない拡張子（json / yaml / css など）は
-       * 拡張子必須のまま残す。checkTypeImports で `import type` も対象にする。
+       * 拡張子を省略できるもの（js/ts 系）は省略する。json などは維持。
        *
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/extensions.md
        */
@@ -44,6 +40,7 @@ export function importX() {
         "ignorePackages",
         {
           checkTypeImports: true,
+          fix: true,
           pattern: {
             cjs: "never",
             cts: "never",
@@ -86,9 +83,7 @@ export function importX() {
       "import-x/no-named-as-default": "warn",
 
       /**
-       * 冗長なパスセグメントを禁止する（`./foo/index` → `.`、`../x/../y` など）
-       *
-       * noUselessIndex で `index` の明示も省かせる。
+       * 冗長なパスセグメントを禁止。noUselessIndex で `index` も省く。
        *
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-useless-path-segments.md
        */
