@@ -1,7 +1,7 @@
 import lint from "@commitlint/lint";
 import { describe, expect, it } from "vitest";
 
-import { breakingChangeRequiresBang } from "./index.js";
+import { breakingChangeRequiresBang } from ".";
 
 const { name, rule } = breakingChangeRequiresBang;
 

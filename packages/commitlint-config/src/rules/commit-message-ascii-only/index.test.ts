@@ -1,7 +1,7 @@
 import lint from "@commitlint/lint";
 import { describe, expect, it } from "vitest";
 
-import { commitMessageAsciiOnly } from "./index.js";
+import { commitMessageAsciiOnly } from ".";
 
 const { name, rule } = commitMessageAsciiOnly;
 
