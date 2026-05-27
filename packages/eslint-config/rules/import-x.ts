@@ -31,6 +31,30 @@ export function importX() {
     name: name("import-x"),
     rules: {
       /**
+       * 拡張子を省略できるもの（js/ts 系）は省略する。json などは維持。
+       *
+       * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/extensions.md
+       */
+      "import-x/extensions": [
+        "warn",
+        "ignorePackages",
+        {
+          checkTypeImports: true,
+          fix: true,
+          pattern: {
+            cjs: "never",
+            cts: "never",
+            js: "never",
+            jsx: "never",
+            mjs: "never",
+            mts: "never",
+            ts: "never",
+            tsx: "never",
+          },
+        },
+      ],
+
+      /**
        * import文は先頭に書く
        *
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/first.md
@@ -57,6 +81,13 @@ export function importX() {
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-named-as-default.md
        */
       "import-x/no-named-as-default": "warn",
+
+      /**
+       * 冗長なパスセグメントを禁止。noUselessIndex で `index` も省く。
+       *
+       * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-useless-path-segments.md
+       */
+      "import-x/no-useless-path-segments": ["warn", { noUselessIndex: true }],
     },
   });
 }
