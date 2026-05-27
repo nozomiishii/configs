@@ -2,7 +2,7 @@ import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { test as baseTest, expect } from "vitest";
-import { toolIds, tools } from "./init.js";
+import { toolIds, tools } from "./init";
 
 const test = baseTest.extend<{ cwd: string }>({
   cwd: async ({ task: _ }, provide) => {
