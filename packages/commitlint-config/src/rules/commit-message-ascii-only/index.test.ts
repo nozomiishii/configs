@@ -1,7 +1,9 @@
 import lint from "@commitlint/lint";
 import { describe, expect, it } from "vitest";
 
-import { name, rule } from "./index.js";
+import { commitMessageAsciiOnly } from "./index.js";
+
+const { name, rule } = commitMessageAsciiOnly;
 
 // rule callback を直接呼び、parser を介さず純粋ロジックを単体検証する。
 // `commit-message-ascii-only` の検査範囲が body / footer / notes 全体に拡張されたことを保証する。

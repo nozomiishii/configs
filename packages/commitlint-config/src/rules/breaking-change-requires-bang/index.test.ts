@@ -1,7 +1,9 @@
 import lint from "@commitlint/lint";
 import { describe, expect, it } from "vitest";
 
-import { name, rule } from "./index.js";
+import { breakingChangeRequiresBang } from "./index.js";
+
+const { name, rule } = breakingChangeRequiresBang;
 
 // breaking change を宣言するなら header に `!` が必須。footer だけの `BREAKING CHANGE:` は禁止。
 // GitHub の squash commit では footer が畳まれて見えず、prefix と実態がズレるため。

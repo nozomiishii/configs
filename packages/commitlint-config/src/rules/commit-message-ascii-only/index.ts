@@ -1,8 +1,6 @@
 import type { RuleConfigTuple } from "@commitlint/types";
 import type { CommitBase } from "conventional-commits-parser";
 
-export const name = "commit-message-ascii-only";
-
 type Parsed = Partial<Pick<CommitBase, "body" | "footer" | "notes">>;
 
 // Header 以外 (body + footer + BREAKING CHANGE notes) を ASCII のみに制限する。
@@ -10,7 +8,7 @@ type Parsed = Partial<Pick<CommitBase, "body" | "footer" | "notes">>;
 // conventional-commits-parser がその行から footer 開始と判定し、
 // body が空文字列となって ASCII チェックが素通りする問題があるため、
 // footer / notes も検査対象に含める。
-export const rule = ({ body, footer, notes }: Parsed): readonly [boolean, string?] => {
+const rule = ({ body, footer, notes }: Parsed): readonly [boolean, string?] => {
   const noteText = (notes ?? []).flatMap((n) => [n.title, n.text]).join("\n");
   const text = [body, footer, noteText].filter(Boolean).join("\n");
   if (!text) return [true];
@@ -21,4 +19,6 @@ export const rule = ({ body, footer, notes }: Parsed): readonly [boolean, string
   ];
 };
 
-export const severity: RuleConfigTuple<void> = [2, "always"];
+const severity: RuleConfigTuple<void> = [2, "always"];
+
+export const commitMessageAsciiOnly = { name: "commit-message-ascii-only", rule, severity };

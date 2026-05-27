@@ -1,11 +1,11 @@
 import type { Plugin, RulesConfig, UserConfig } from "@commitlint/types";
 
-import * as asciiOnly from "./rules/commit-message-ascii-only/index.js";
-import * as breakingChangeRequiresBang from "./rules/breaking-change-requires-bang/index.js";
+import { breakingChangeRequiresBang } from "./rules/breaking-change-requires-bang";
+import { commitMessageAsciiOnly } from "./rules/commit-message-ascii-only";
 
 // custom rule を 1 ディレクトリ 1 module にまとめ、ここで集約する。
 // rule 追加時はこの配列に push するだけで plugin callback と severity の両方が登録される。
-const customRules = [asciiOnly, breakingChangeRequiresBang];
+const customRules = [commitMessageAsciiOnly, breakingChangeRequiresBang];
 
 const pluginRules: Plugin["rules"] = Object.fromEntries(customRules.map((r) => [r.name, r.rule]));
 const customSeverities: Partial<RulesConfig> = Object.fromEntries(
