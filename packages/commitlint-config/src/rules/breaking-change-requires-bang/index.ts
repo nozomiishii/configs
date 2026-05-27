@@ -3,11 +3,6 @@ import type { CommitBase } from "conventional-commits-parser";
 
 export const name = "breaking-change-requires-bang";
 
-// rule が参照するフィールドだけの最小入力。commitlint の Commit は
-// `CommitBase & Record<string, string | null>` で index signature を持ち、
-// `notes` 配列を含むリテラルを直接代入できない。index signature の無い `CommitBase`
-// から Pick して最小型を作る。Commit は CommitBase の subtype なので plugin 登録時の
-// Rule 型(=Commit 引数)とも互換で、テストでは cast 無しでリテラルを渡せる。
 type Parsed = Partial<Pick<CommitBase, "header" | "notes">>;
 
 // 破壊的変更は header の `!` で宣言する。`BREAKING CHANGE:` footer 単独は禁止。
