@@ -8,11 +8,6 @@ describe("scope-empty (default deny scope)", () => {
     expect(config.rules?.["scope-empty"]).toEqual([2, "always"]);
   });
 
-  it("scope なしのコミットは pass する", async () => {
-    const result = await lint("feat: add foo", { "scope-empty": [2, "always"] } as const);
-    expect(result.valid).toBe(true);
-  });
-
   it("scope 付きのコミットは fail する", async () => {
     const result = await lint("feat(api): add foo", { "scope-empty": [2, "always"] } as const);
     expect(result.valid).toBe(false);

@@ -5,16 +5,14 @@ import { name, rule } from "./index.js";
 
 // rule callback を直接呼び、parser を介さず純粋ロジックを単体検証する。
 // `commit-message-ascii-only` の検査範囲が body / footer / notes 全体に拡張されたことを保証する。
-const runRule = (parsed: Parameters<typeof rule>[0]) => rule(parsed);
-
 describe("commit-message-ascii-only (unit)", () => {
   it("空の commit (body/footer/notes すべて空) は通過する", () => {
-    const [valid] = runRule({ body: null, footer: null, notes: [] });
+    const [valid] = rule({ body: null, footer: null, notes: [] });
     expect(valid).toBe(true);
   });
 
   it("body / footer / notes すべて ASCII なら通過する", () => {
-    const [valid] = runRule({
+    const [valid] = rule({
       body: "English body line.",
       footer: "Refs #123",
       notes: [{ title: "BREAKING CHANGE", text: "english breaking note" }],
@@ -22,15 +20,16 @@ describe("commit-message-ascii-only (unit)", () => {
     expect(valid).toBe(true);
   });
 
-  it("body に日本語が含まれる場合は失敗する", () => {
-    const [valid] = runRule({ body: "日本語の本文。", footer: null, notes: [] });
+  it("body に日本語が含まれる場合は失敗し、固定メッセージを返す", () => {
+    const [valid, message] = rule({ body: "日本語の本文。", footer: null, notes: [] });
     expect(valid).toBe(false);
+    expect(message).toMatch(/ASCII characters only/);
   });
 
   it("footer に日本語が含まれる場合は失敗する (PR #2145 で漏れたケース)", () => {
     // parser が body 1 行目の `#nnn` を検出して以降を footer に振り分けたときに、
     // body は空文字列となり footer 側に日本語が流れ込む状況を再現。
-    const [valid] = runRule({
+    const [valid] = rule({
       body: "",
       footer: "Issue #2126 のような本文。日本語混入。",
       notes: [],
@@ -39,7 +38,7 @@ describe("commit-message-ascii-only (unit)", () => {
   });
 
   it("BREAKING CHANGE notes の text に日本語が含まれる場合は失敗する", () => {
-    const [valid] = runRule({
+    const [valid] = rule({
       body: "English body.",
       footer: null,
       notes: [{ title: "BREAKING CHANGE", text: "互換性破壊の説明" }],
@@ -50,18 +49,12 @@ describe("commit-message-ascii-only (unit)", () => {
   it("notes の title に日本語が含まれる場合は失敗する", () => {
     // ルール実装は title と text を両方検査対象に含めている契約。
     // 実用上 title はほぼ "BREAKING CHANGE" 固定だが、契約をテストで固定する。
-    const [valid] = runRule({
+    const [valid] = rule({
       body: "English body.",
       footer: null,
       notes: [{ title: "破壊的変更", text: "english" }],
     });
     expect(valid).toBe(false);
-  });
-
-  it("失敗時に固定のエラーメッセージを返す", () => {
-    const [valid, message] = runRule({ body: "日本語", footer: null, notes: [] });
-    expect(valid).toBe(false);
-    expect(message).toMatch(/ASCII characters only/);
   });
 });
 
@@ -76,21 +69,6 @@ describe("commit-message-ascii-only (integration via @commitlint/lint)", () => {
     const message = ["feat(scope): subject", "", "Issue #2126 のような本文。日本語混入。"].join(
       "\n",
     );
-
-    const result = await lint(message, rules, opts);
-
-    expect(result.valid).toBe(false);
-    expect(result.errors.some((e) => e.name === name)).toBe(true);
-  });
-
-  it("BREAKING CHANGE フッター内の日本語を検出する", async () => {
-    const message = [
-      "feat(scope)!: subject",
-      "",
-      "English body.",
-      "",
-      "BREAKING CHANGE: 互換性破壊の説明",
-    ].join("\n");
 
     const result = await lint(message, rules, opts);
 

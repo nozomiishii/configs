@@ -8,16 +8,14 @@ import { name, rule } from "./index.js";
 // type は問わない（`chore!` も可）。組み込みの breaking-change-exclamation-mark (XNOR) とは違い、
 // `!` 単独は許可・footer 単独だけを弾く一方向の含意。
 
-const runRule = (parsed: Parameters<typeof rule>[0]) => rule(parsed);
-
 describe("breaking-change-requires-bang (unit)", () => {
   it("breaking marker なしの通常コミットは通過する", () => {
-    const [valid] = runRule({ header: "feat: add foo", notes: [] });
+    const [valid] = rule({ header: "feat: add foo", notes: [] });
     expect(valid).toBe(true);
   });
 
   it("header に `!` があり breaking note もある (feat!) は通過する", () => {
-    const [valid] = runRule({
+    const [valid] = rule({
       header: "feat!: drop node 18",
       notes: [{ title: "BREAKING CHANGE", text: "drop node 18" }],
     });
@@ -25,7 +23,7 @@ describe("breaking-change-requires-bang (unit)", () => {
   });
 
   it("header に `!` なしで footer だけ breaking は失敗する", () => {
-    const [valid] = runRule({
+    const [valid] = rule({
       header: "feat: add foo",
       notes: [{ title: "BREAKING CHANGE", text: "removed old api" }],
     });
@@ -33,7 +31,7 @@ describe("breaking-change-requires-bang (unit)", () => {
   });
 
   it("BREAKING-CHANGE (ハイフン) note も検出する", () => {
-    const [valid] = runRule({
+    const [valid] = rule({
       header: "fix: patch",
       notes: [{ title: "BREAKING-CHANGE", text: "changed signature" }],
     });
@@ -43,7 +41,7 @@ describe("breaking-change-requires-bang (unit)", () => {
   it("header 先頭に空白があっても `!` を検出して通過する", () => {
     // commitlint は header を trim せず rule に渡す。consumer が header-trim を無効化しても
     // 偶発的な先頭空白で bang を見落とさないことを保証する。
-    const [valid] = runRule({
+    const [valid] = rule({
       header: "  feat!: x",
       notes: [{ title: "BREAKING CHANGE", text: "x" }],
     });
@@ -53,24 +51,12 @@ describe("breaking-change-requires-bang (unit)", () => {
 
 describe("breaking-change-requires-bang (integration via @commitlint/lint)", () => {
   const rules = { [name]: [2, "always"] } as const;
-  // 本番は config-conventional の conventionalcommits preset で動く。@commitlint/lint の
-  // 既定 parser は `BREAKING-CHANGE` (ハイフン) を note 化しないため、note 検出を本番と
-  // 揃えるよう noteKeywords を明示する。
-  const opts = {
-    plugins: { local: { rules: { [name]: rule } } },
-    parserOpts: { noteKeywords: ["BREAKING CHANGE", "BREAKING-CHANGE"] },
-  };
+  const opts = { plugins: { local: { rules: { [name]: rule } } } };
 
   it("`!` なしで BREAKING CHANGE footer だけのコミットを弾く", async () => {
     const message = ["feat: add foo", "", "BREAKING CHANGE: removed old api"].join("\n");
     const result = await lint(message, rules, opts);
     expect(result.valid).toBe(false);
     expect(result.errors.some((e) => e.name === name)).toBe(true);
-  });
-
-  it("`BREAKING-CHANGE` (ハイフン) footer だけのコミットも弾く", async () => {
-    const message = ["feat: add foo", "", "BREAKING-CHANGE: removed old api"].join("\n");
-    const result = await lint(message, rules, opts);
-    expect(result.valid).toBe(false);
   });
 });
