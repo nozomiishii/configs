@@ -1,16 +1,14 @@
 import type { RuleConfigTuple } from "@commitlint/types";
+import type { CommitBase } from "conventional-commits-parser";
 
 export const name = "commit-message-ascii-only";
 
-// rule が参照するフィールドだけの最小入力。commitlint の Commit 型は
+// rule が参照するフィールドだけの最小入力。commitlint の Commit は
 // `CommitBase & Record<string, string | null>` の交差で index signature を持ち、
-// `notes` 配列を含むオブジェクトリテラルを直接代入できない（テストで cast を強いられる）。
-// Commit はこの最小型に代入可能なので、plugin 登録時の Rule 型とも互換になる。
-type Parsed = {
-  body?: string | null;
-  footer?: string | null;
-  notes?: { title?: string; text?: string }[];
-};
+// `notes` 配列を含むオブジェクトリテラルを直接代入できない。index signature の無い
+// `CommitBase` から Pick して最小型を作る。Commit は CommitBase の subtype なので
+// plugin 登録時の Rule 型とも互換で、テストでは cast 無しでリテラルを渡せる。
+type Parsed = Partial<Pick<CommitBase, "body" | "footer" | "notes">>;
 
 // Header 以外 (body + footer + BREAKING CHANGE notes) を ASCII のみに制限する。
 // body のみを検査すると、本文 1 行目に `#issue-number` が含まれる場合に
