@@ -1,4 +1,5 @@
 /** Scaffold lefthook config into the consumer project. */
+import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -12,14 +13,36 @@ type PackageJson = {
   version: string;
 };
 
+/**
+ * bundle後のチャンク位置に依存せず、package.jsonのあるパッケージルートを探す。
+ * tsdownはinitを `dist/init-<hash>.js` へホイストするため `../../` が固定で使えない。
+ */
+function packageRoot(): string {
+  let dir = path.dirname(fileURLToPath(import.meta.url));
+
+  while (!existsSync(path.join(dir, "package.json"))) {
+    const parent = path.dirname(dir);
+
+    if (parent === dir) {
+      throw new Error("package.json not found");
+    }
+
+    dir = parent;
+  }
+
+  return dir;
+}
+
 export async function init({ cwd }: InitOptions): Promise<void> {
-  const selfPkgPath = fileURLToPath(new URL("../../package.json", import.meta.url));
-  const selfPkg = JSON.parse(await readFile(selfPkgPath, "utf8")) as PackageJson & {
+  const root = packageRoot();
+
+  const selfPkg = JSON.parse(
+    await readFile(path.join(root, "package.json"), "utf8"),
+  ) as PackageJson & {
     peerDependencies: { lefthook: string };
   };
 
-  const starterPath = fileURLToPath(new URL("../../starter.yaml", import.meta.url));
-  const starter = await readFile(starterPath, "utf8");
+  const starter = await readFile(path.join(root, "starter.yaml"), "utf8");
 
   const targetPath = path.resolve(cwd, "package.json");
   const target = JSON.parse(await readFile(targetPath, "utf8")) as PackageJson;
