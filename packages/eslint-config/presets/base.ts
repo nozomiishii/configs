@@ -16,10 +16,10 @@ import {
 import { name } from "../utils/name";
 
 /**
- * フレームワーク・ランタイム非依存の言語土台。node / nextjs がこれを内包する。
+ * フレームワーク・ランタイム非依存の言語土台。
  *
- * prettier は含めない。formatting 系を必ず最後で打ち消す必要があるため、
- * base を元に組む node / nextjs がそれぞれ末尾で prettier() を一度だけ付ける。
+ * prettier は含めない。formatting を最後で打ち消す必要があるため、
+ * 各 preset が末尾で prettier() を一度だけ付ける。
  *
  * tsconfigRootDirは指定しない。typescript-eslintはeslint.config.tsの
  * あるディレクトリへ自動解決するため、consumer側で正しいrootになる。
