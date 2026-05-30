@@ -1,1 +1,4 @@
-export { default } from "@nozomiishii/eslint-config";
+import { defineConfig, node } from "@nozomiishii/eslint-config";
+
+// nozoはCLIなのでnode presetでlintする
+export default defineConfig([...node()]);

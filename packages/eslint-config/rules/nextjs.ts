@@ -12,7 +12,7 @@ import { name } from "../utils/name";
  * @see https://github.com/vercel/next.js/blob/canary/packages/eslint-plugin-next
  * @see https://nextjs.org/docs/app/api-reference/config/eslint#eslint-plugin
  */
-export function nextjs() {
+export function _nextjs() {
   return defineConfig([
     {
       ...eslintPluginNext.configs.recommended,

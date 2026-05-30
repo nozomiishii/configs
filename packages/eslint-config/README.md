@@ -24,7 +24,27 @@ pnpx nozo init
 
 This adds `@nozomiishii/eslint-config`, `eslint`, and `typescript` to your
 `devDependencies` (pinned), adds `eslint` / `lint` / `lint:fix` scripts, and
-writes an `eslint.config.ts` that re-exports the shared config.
+writes an `eslint.config.ts` that composes the preset you pick.
+
+Pick one of two presets:
+
+- `nextjs`: web apps, with React / Next.js / Tailwind / Storybook
+- `node`: CLI / library projects (Node.js setup without the web layers)
+
+## Presets
+
+Cumulative layers: `base ⊂ node ⊂ nextjs`. The generated `eslint.config.ts`
+spreads the preset you picked:
+
+```ts
+import { defineConfig, node } from "@nozomiishii/eslint-config";
+
+export default defineConfig([...node()]);
+```
+
+`base()` is the framework- and runtime-agnostic language foundation that
+`node()` and `nextjs()` build on. Compose `base()` directly if you only want
+the foundation.
 
 ## Rule list
 

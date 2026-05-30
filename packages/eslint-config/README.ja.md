@@ -22,7 +22,24 @@
 pnpx nozo init
 ```
 
-これで `@nozomiishii/eslint-config` / `eslint` / `typescript` が pin で `devDependencies` に追加され、`eslint` / `lint` / `lint:fix` の scripts が追加され、shared config を re-export する `eslint.config.ts` が生成される。
+これで `@nozomiishii/eslint-config` / `eslint` / `typescript` が pin で `devDependencies` に追加され、`eslint` / `lint` / `lint:fix` の scripts が追加され、選んだ preset を compose する `eslint.config.ts` が生成される。
+
+preset は2つから選ぶ:
+
+- `nextjs`: React / Next.js / Tailwind / Storybook 込みの web アプリ向け
+- `node`: CLI / ライブラリ向け（web 系を除いた Node.js 構成）
+
+## preset
+
+`base ⊂ node ⊂ nextjs` の累積構成。生成された `eslint.config.ts` は選んだ preset を spread する:
+
+```ts
+import { defineConfig, node } from "@nozomiishii/eslint-config";
+
+export default defineConfig([...node()]);
+```
+
+`base()` はフレームワーク・ランタイム非依存の言語土台で、`node()` / `nextjs()` がこれを内包する。土台だけ使いたい場合は `base()` を直接 compose できる。
 
 ## ルール一覧
 
