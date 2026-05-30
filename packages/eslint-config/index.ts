@@ -1,5 +1,3 @@
-import { nextjs } from "./presets/nextjs";
-
 export { base } from "./presets/base";
 
 export { nextjs } from "./presets/nextjs";
@@ -49,5 +47,3 @@ export { unicorn } from "./rules/unicorn";
 export { viest } from "./rules/viest";
 
 export { defineConfig } from "eslint/config";
-
-export default nextjs();
