@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.2.0...@nozomiishii/eslint-config-v1.3.0) (2026-05-30)
+
+### Features
+
+- split eslint config into base, node and nextjs presets ([#2343](https://github.com/nozomiishii/configs/issues/2343)) ([96d6515](https://github.com/nozomiishii/configs/commit/96d65154b583e25b2ddd2e656f52409d1eac0633))
+
+### Miscellaneous
+
+- update dependency @eslint-community/eslint-plugin-eslint-comments to v4.7.2 ([#2341](https://github.com/nozomiishii/configs/issues/2341)) ([ec51c79](https://github.com/nozomiishii/configs/commit/ec51c79bef5a91eabe7b2129cb10f84ac69f42c3))
+- update dependency @eslint-react/eslint-plugin to v5.8.6 ([#2344](https://github.com/nozomiishii/configs/issues/2344)) ([8f47fb1](https://github.com/nozomiishii/configs/commit/8f47fb1042603d87495bf4a1eaf8e3e3a8e43df5))
+- update dependency @eslint/config-inspector to v3.0.3 ([#2337](https://github.com/nozomiishii/configs/issues/2337)) ([a84258e](https://github.com/nozomiishii/configs/commit/a84258ee0cab6bd4bfd2478907547d3b19ca0dde))
+- update dependency typescript-eslint to v8.60.0 ([#2339](https://github.com/nozomiishii/configs/issues/2339)) ([1c94ef7](https://github.com/nozomiishii/configs/commit/1c94ef7d1a5c185c780b86f6bff900092a91c9ac))
+
 ## [1.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.1.1...@nozomiishii/eslint-config-v1.2.0) (2026-05-27)
 
 ### Features
