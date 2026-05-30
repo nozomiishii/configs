@@ -6,7 +6,6 @@ import { importX } from "../rules/import-x";
 import { javascript } from "../rules/javascript";
 import { jsdoc } from "../rules/jsdoc";
 import { perfectionist } from "../rules/perfectionist";
-import { prettier } from "../rules/prettier";
 import { regexp } from "../rules/regexp";
 import { stylistic } from "../rules/stylistic";
 import { typescript } from "../rules/typescript";
@@ -15,8 +14,10 @@ import { viest } from "../rules/viest";
 import { name } from "../utils/name";
 
 /**
- * フレームワーク・ランタイム非依存の言語土台。
- * node / nextjs はこれを内包する。
+ * フレームワーク・ランタイム非依存の言語土台。node / nextjs がこれを内包する。
+ *
+ * prettier は含めない。formatting 系を必ず最後で打ち消す必要があるため、
+ * base を元に組む node / nextjs がそれぞれ末尾で prettier() を一度だけ付ける。
  *
  * tsconfigRootDirは指定しない。typescript-eslintはeslint.config.tsの
  * あるディレクトリへ自動解決するため、consumer側で正しいrootになる。
@@ -52,6 +53,5 @@ export function base() {
 
     perfectionist(),
     stylistic(),
-    prettier(),
   ]);
 }

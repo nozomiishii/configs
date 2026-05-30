@@ -23,6 +23,11 @@ test("base excludes the Node.js layer", () => {
   expect(names(base())).not.toContain("@nozomiishii/n");
 });
 
+// base は prettier を含めない（node/nextjs が末尾で付ける）
+test("base excludes prettier", () => {
+  expect(names(base())).not.toContain("@nozomiishii/prettier");
+});
+
 // node は base の言語土台を内包する
 test("node includes the base language layer", () => {
   expect(names(node())).toContain("@nozomiishii/javascript");
@@ -51,4 +56,25 @@ test("nextjs includes the nextjs rule", () => {
 // nextjs は react 層を足す
 test("nextjs adds the react layer", () => {
   expect(names(nextjs()).join(" ")).toMatch(/react/);
+});
+
+// prettier は formatting を打ち消すため必ず最後の1つ
+test("node ends with prettier", () => {
+  const got = names(node());
+
+  expect(got.at(-1)).toBe("@nozomiishii/prettier");
+});
+
+// nextjs は二重適用にならず prettier はちょうど1つ
+test("nextjs applies prettier exactly once", () => {
+  const got = names(nextjs());
+
+  expect(got.filter((value) => value === "@nozomiishii/prettier")).toHaveLength(1);
+});
+
+// nextjs も prettier が最後
+test("nextjs ends with prettier", () => {
+  const got = names(nextjs());
+
+  expect(got.at(-1)).toBe("@nozomiishii/prettier");
 });

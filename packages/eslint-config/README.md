@@ -33,8 +33,9 @@ Pick one of two presets:
 
 ## Presets
 
-Cumulative layers: `base ⊂ node ⊂ nextjs`. The generated `eslint.config.ts`
-spreads the preset you picked:
+`node` and `nextjs` both build on a shared `base` (the framework- and
+runtime-agnostic language foundation) and each append Prettier last. The
+generated `eslint.config.ts` spreads the preset you picked:
 
 ```ts
 import { defineConfig, node } from "@nozomiishii/eslint-config";
@@ -42,9 +43,9 @@ import { defineConfig, node } from "@nozomiishii/eslint-config";
 export default defineConfig([...node()]);
 ```
 
-`base()` is the framework- and runtime-agnostic language foundation that
-`node()` and `nextjs()` build on. Compose `base()` directly if you only want
-the foundation.
+`base()` is exported as the shared foundation (without Prettier; `node()` and
+`nextjs()` add it). `node()` adds the Node.js layer and `nextjs()` adds the
+Node.js and web layers.
 
 ## Rule list
 

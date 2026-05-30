@@ -1,6 +1,7 @@
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import { jsxA11yX } from "../rules/jsx-a11y-x";
+import { n } from "../rules/n";
 import { _nextjs } from "../rules/nextjs";
 import { playwright } from "../rules/playwright";
 import { prettier } from "../rules/prettier";
@@ -10,15 +11,26 @@ import { reactRefresh } from "../rules/react-refresh";
 import { storybook } from "../rules/storybook";
 import { betterTailwindcss } from "../rules/tailwindcss";
 import { name } from "../utils/name";
-import { node } from "./node";
+import { base } from "./base";
 
 /**
- * Next.js / web アプリ向け。node + ブラウザ層 + web rules。
- * prettierはstylistic/react系を打ち消すため末尾に再付与する。
+ * Next.js / web アプリ向け。base + Node.js 層 + ブラウザ層 + web rules。
+ *
+ * node() からは作らず base を元に組む。Next は server コードも持つため
+ * Node.js 層(eslint-plugin-n)も含める。prettier は末尾で一度だけ付ける。
  */
 export function nextjs() {
   return defineConfig([
-    ...node(),
+    ...base(),
+
+    {
+      languageOptions: {
+        globals: globals.node,
+      },
+      name: name("languageOptions/globals/node"),
+    },
+
+    n(),
 
     {
       languageOptions: {

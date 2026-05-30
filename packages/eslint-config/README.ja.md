@@ -31,7 +31,7 @@ preset は2つから選ぶ:
 
 ## preset
 
-`base ⊂ node ⊂ nextjs` の累積構成。生成された `eslint.config.ts` は選んだ preset を spread する:
+`node` と `nextjs` は共有の `base`（フレームワーク・ランタイム非依存の言語土台）を元に組み、末尾でそれぞれ prettier を一度だけ付ける。生成された `eslint.config.ts` は選んだ preset を spread する:
 
 ```ts
 import { defineConfig, node } from "@nozomiishii/eslint-config";
@@ -39,7 +39,7 @@ import { defineConfig, node } from "@nozomiishii/eslint-config";
 export default defineConfig([...node()]);
 ```
 
-`base()` はフレームワーク・ランタイム非依存の言語土台で、`node()` / `nextjs()` がこれを内包する。土台だけ使いたい場合は `base()` を直接 compose できる。
+`base()` は共有の土台として export している（prettier は含めず、node / nextjs が付ける）。`node()` は Node.js 層、`nextjs()` は Node.js 層 + web 層を足す。
 
 ## ルール一覧
 
