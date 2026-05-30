@@ -1,6 +1,6 @@
 import * as p from "@clack/prompts";
 import { init as initCommitlint } from "@nozomiishii/commitlint-config/init";
-import { init as initEslint } from "@nozomiishii/eslint-config/init";
+import { init as initEslint, type PresetId } from "@nozomiishii/eslint-config/init";
 import { init as initLefthook } from "@nozomiishii/lefthook-config/init";
 import { init as initPostinstall } from "@nozomiishii/postinstall/init";
 import { init as initPrettier } from "@nozomiishii/prettier-config/init";
@@ -11,7 +11,14 @@ import { type AgentName, detect } from "package-manager-detector";
 
 const exec = promisify(execFile);
 
-type ToolInit = (options: { cwd: string }) => Promise<void>;
+type Tool = {
+  configure?: () => Promise<null | { preset: PresetId }>;
+  description: string;
+  label: string;
+  run: ToolInit;
+};
+
+type ToolInit = (options: { cwd: string; preset?: PresetId }) => Promise<void>;
 
 export const tools = {
   commitlint: {
@@ -20,6 +27,22 @@ export const tools = {
     run: initCommitlint,
   },
   eslint: {
+    configure: async () => {
+      const preset = await p.select<PresetId>({
+        initialValue: "nextjs",
+        message: "Which ESLint preset?",
+        options: [
+          { hint: "React / Next.js web app", label: "nextjs", value: "nextjs" },
+          { hint: "CLI / library (Node.js)", label: "node", value: "node" },
+        ],
+      });
+
+      if (p.isCancel(preset)) {
+        return null;
+      }
+
+      return { preset };
+    },
     description: "JS/TS linting via ESLint",
     label: "@nozomiishii/eslint-config",
     run: initEslint,
@@ -39,7 +62,7 @@ export const tools = {
     label: "@nozomiishii/prettier-config",
     run: initPrettier,
   },
-} as const satisfies Record<string, { description: string; label: string; run: ToolInit }>;
+} as const satisfies Record<string, Tool>;
 
 export type ToolId = keyof typeof tools;
 
@@ -80,6 +103,27 @@ export default defineCommand({
       return;
     }
 
+    // 追加設定が要るツールは install 前にまとめて尋ねる
+    const presets: Partial<Record<ToolId, PresetId>> = {};
+
+    for (const id of selected) {
+      const tool = tools[id];
+
+      if (!("configure" in tool)) {
+        continue;
+      }
+
+      const configured = await tool.configure();
+
+      if (configured === null) {
+        p.cancel("Cancelled.");
+
+        return;
+      }
+
+      presets[id] = configured.preset;
+    }
+
     const cwd = process.cwd();
     const agent = await detectPackageManager(cwd);
     p.log.info(`Detected package manager: ${agent}`);
@@ -90,7 +134,8 @@ export default defineCommand({
       spinner.start(`Installing ${tool.label}`);
 
       try {
-        await tool.run({ cwd });
+        const preset = presets[id];
+        await tool.run(preset === undefined ? { cwd } : { cwd, preset });
         spinner.stop(`${tool.label}: ok`);
       } catch (error) {
         spinner.stop(`${tool.label}: failed`);

@@ -11,7 +11,7 @@ import { name } from "../utils/name";
  *
  * @see https://github.com/ota-meshi/eslint-plugin-jsonc/issues/385
  */
-export function perfectionist() {
+export function jsonc() {
   return defineConfig([
     {
       // slintPluginJsonc.configs['flat/recommended-with-jsonc'],

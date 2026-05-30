@@ -17,21 +17,22 @@
   "author": "Nozomi Ishii",
   "type": "module",
   "exports": {
-    ".": "./eslint.config.ts",
+    ".": "./index.ts",
     "./init": "./dist/init/index.js"
   },
-  "main": "eslint.config.ts",
+  "main": "index.ts",
   "bin": {
     "nozo-eslint-init": "./bin/nozo-eslint-init.js"
   },
   "files": [
     "bin",
     "dist",
+    "index.ts",
+    "presets",
     "rules",
+    "starters",
     "utils",
     "eslint-typegen.d.ts",
-    "eslint.config.ts",
-    "starter.ts",
     "README.md",
     "README.ja.md"
   ],

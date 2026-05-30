@@ -24,7 +24,28 @@ pnpx nozo init
 
 This adds `@nozomiishii/eslint-config`, `eslint`, and `typescript` to your
 `devDependencies` (pinned), adds `eslint` / `lint` / `lint:fix` scripts, and
-writes an `eslint.config.ts` that re-exports the shared config.
+writes an `eslint.config.ts` that composes the preset you pick.
+
+Pick one of two presets:
+
+- `nextjs`: web apps, with React / Next.js / Tailwind / Storybook
+- `node`: CLI / library projects (Node.js setup without the web layers)
+
+## Presets
+
+`node` and `nextjs` both build on a shared `base` (the framework- and
+runtime-agnostic language foundation) and each append Prettier last. The
+generated `eslint.config.ts` spreads the preset you picked:
+
+```ts
+import { defineConfig, node } from "@nozomiishii/eslint-config";
+
+export default defineConfig([...node()]);
+```
+
+`base()` is exported as the shared foundation (without Prettier; `node()` and
+`nextjs()` add it). `node()` adds the Node.js layer and `nextjs()` adds the
+Node.js and web layers.
 
 ## Rule list
 
