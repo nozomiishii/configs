@@ -2,10 +2,9 @@
 
 ## [1.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.2.0...@nozomiishii/cspell-config-v1.3.0) (2026-05-30)
 
-
 ### Miscellaneous
 
-* **@nozomiishii/cspell-config:** Synchronize configs versions
+- **@nozomiishii/cspell-config:** Synchronize configs versions
 
 ## [1.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.1.1...@nozomiishii/cspell-config-v1.2.0) (2026-05-27)
 
