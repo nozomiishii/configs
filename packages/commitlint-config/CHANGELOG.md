@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.2.0...@nozomiishii/commitlint-config-v1.3.0) (2026-05-30)
+
+
+### Features
+
+* split eslint config into base, node and nextjs presets ([#2343](https://github.com/nozomiishii/configs/issues/2343)) ([96d6515](https://github.com/nozomiishii/configs/commit/96d65154b583e25b2ddd2e656f52409d1eac0633))
+
 ## [1.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.1.1...@nozomiishii/commitlint-config-v1.2.0) (2026-05-27)
 
 ### Features
