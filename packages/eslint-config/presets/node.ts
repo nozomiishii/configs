@@ -1,7 +1,6 @@
 import { defineConfig } from "eslint/config";
 import globals from "globals";
-import { n } from "../rules/n";
-import { prettier } from "../rules/prettier";
+import { n, prettier } from "../rules";
 import { name } from "../utils/name";
 import { base } from "./base";
 

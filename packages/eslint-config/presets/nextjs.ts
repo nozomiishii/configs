@@ -1,15 +1,17 @@
 import { defineConfig } from "eslint/config";
 import globals from "globals";
-import { jsxA11yX } from "../rules/jsx-a11y-x";
-import { n } from "../rules/n";
-import { _nextjs } from "../rules/nextjs";
-import { playwright } from "../rules/playwright";
-import { prettier } from "../rules/prettier";
-import { react } from "../rules/react";
-import { reactHooks } from "../rules/react-hooks";
-import { reactRefresh } from "../rules/react-refresh";
-import { storybook } from "../rules/storybook";
-import { betterTailwindcss } from "../rules/tailwindcss";
+import {
+  _nextjs,
+  betterTailwindcss,
+  jsxA11yX,
+  n,
+  playwright,
+  prettier,
+  react,
+  reactHooks,
+  reactRefresh,
+  storybook,
+} from "../rules";
 import { name } from "../utils/name";
 import { base } from "./base";
 

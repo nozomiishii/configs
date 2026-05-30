@@ -1,16 +1,18 @@
 import gitignore from "eslint-config-flat-gitignore";
 import { defineConfig } from "eslint/config";
-import { deMorgan } from "../rules/de-morgan";
-import { eslintComments } from "../rules/eslint-comments";
-import { importX } from "../rules/import-x";
-import { javascript } from "../rules/javascript";
-import { jsdoc } from "../rules/jsdoc";
-import { perfectionist } from "../rules/perfectionist";
-import { regexp } from "../rules/regexp";
-import { stylistic } from "../rules/stylistic";
-import { typescript } from "../rules/typescript";
-import { unicorn } from "../rules/unicorn";
-import { viest } from "../rules/viest";
+import {
+  deMorgan,
+  eslintComments,
+  importX,
+  javascript,
+  jsdoc,
+  perfectionist,
+  regexp,
+  stylistic,
+  typescript,
+  unicorn,
+  viest,
+} from "../rules";
 import { name } from "../utils/name";
 
 /**

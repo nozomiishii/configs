@@ -1,8 +1,10 @@
 import { flatConfigsToRulesDTS } from "eslint-typegen/core";
+import { defineConfig } from "eslint/config";
 import { writeFile } from "node:fs/promises";
-import { nextjs } from "..";
+import * as rules from "../rules";
 
-// 型は全rule網羅のためnextjs(フル)から生成する
-const dts = await flatConfigsToRulesDTS(nextjs());
+// rules/index.ts の全 rule を型生成する。
+// rule 追加は rules/index.ts に1行足すだけで自動的に網羅される。
+const dts = await flatConfigsToRulesDTS(defineConfig(Object.values(rules).map((rule) => rule())));
 
 await writeFile("eslint-typegen.d.ts", dts);
