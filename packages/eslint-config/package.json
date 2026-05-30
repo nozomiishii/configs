@@ -29,7 +29,6 @@
     "dist",
     "index.ts",
     "presets",
-    "!presets/presets.test.ts",
     "rules",
     "starters",
     "utils",
