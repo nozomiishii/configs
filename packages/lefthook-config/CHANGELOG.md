@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.3.0...@nozomiishii/lefthook-config-v1.4.0) (2026-05-31)
+
+
+### Miscellaneous
+
+* update dependency tsdown to v0.22.1 ([#2361](https://github.com/nozomiishii/configs/issues/2361)) ([8d13cb7](https://github.com/nozomiishii/configs/commit/8d13cb791104eb651802074507446bc427619e6d))
+* update pnpm to v11.4.0 ([#2348](https://github.com/nozomiishii/configs/issues/2348)) ([72de0a9](https://github.com/nozomiishii/configs/commit/72de0a97907141ebeb0c85d8576455019aa5dd5c))
+
 ## [1.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.2.0...@nozomiishii/lefthook-config-v1.3.0) (2026-05-30)
 
 ### Features
