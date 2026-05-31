@@ -11,7 +11,7 @@ import {
   stylistic,
   typescript,
   unicorn,
-  viest,
+  vitest,
 } from "../rules";
 import { name } from "../utils/name";
 
@@ -51,7 +51,7 @@ export function base() {
     deMorgan(),
     regexp(),
 
-    viest(),
+    vitest(),
 
     perfectionist(),
     stylistic(),
