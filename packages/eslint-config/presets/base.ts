@@ -41,6 +41,16 @@ export function base() {
       name: name("languageOptions/parserOptions"),
     },
 
+    /**
+     * inline の disableコメントを無効化。必ずeslint.config.tsで設定の変更はする。
+     *
+     * @see https://eslint.org/docs/latest/use/configure/rules
+     */
+    {
+      linterOptions: { noInlineConfig: true },
+      name: name("linterOptions"),
+    },
+
     javascript(),
     typescript(),
     importX(),

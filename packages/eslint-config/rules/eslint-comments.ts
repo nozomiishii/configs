@@ -19,6 +19,11 @@ export function eslintComments() {
           "error",
           { allowWholeFile: true },
         ],
+        /**
+         * disable コメント自体を禁止する。ただし no-use 自身を巻き込んで
+         * disable すれば bypass できるため、base preset の noInlineConfig と
+         * 併用して抜け道を塞ぐ。
+         */
         "@eslint-community/eslint-comments/no-use": "error",
       },
     },
