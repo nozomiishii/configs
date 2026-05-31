@@ -41,6 +41,17 @@ export function base() {
       name: name("languageOptions/parserOptions"),
     },
 
+    /**
+     * inline の disable / 設定コメントを無効化し、config 外から上書きできなくする。
+     * no-use 単体だと no-use 自身を巻き込んで bypass できるため、併用で抜け道を塞ぐ。
+     *
+     * @see https://eslint.org/docs/latest/use/configure/rules
+     */
+    {
+      linterOptions: { noInlineConfig: true },
+      name: name("linterOptions/noInlineConfig"),
+    },
+
     javascript(),
     typescript(),
     importX(),
