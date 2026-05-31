@@ -42,4 +42,4 @@ export { typescript } from "./typescript";
 
 export { unicorn } from "./unicorn";
 
-export { viest } from "./viest";
+export { vitest } from "./vitest";

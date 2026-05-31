@@ -7,13 +7,13 @@ import { name } from "../utils/name";
  *
  * @see https://github.com/vitest-dev/eslint-plugin-vitest
  */
-export function viest() {
+export function vitest() {
   return defineConfig([
     {
       ...eslintPluginVitest.configs.all,
       files: ["**/*.{test,spec}.{ts,tsx}"],
       ignores: ["**/e2e/**"],
-      name: name("viest"),
+      name: name("vitest"),
 
       rules: {
         ...eslintPluginVitest.configs.all.rules,
