@@ -32,9 +32,11 @@ export function viest() {
         "vitest/consistent-test-it": ["warn", { fn: "test" }],
 
         /**
-         * 同一テスト内で複数expectやめる
+         * 1テスト1振る舞いに合わせ、同じ振る舞いを検証する複数 expect は許容する。
+         *
+         * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/max-expects.md
          */
-        "vitest/max-expects": ["error", { max: 1 }],
+        "vitest/max-expects": "off",
 
         /**
          * describeのネストやめる
