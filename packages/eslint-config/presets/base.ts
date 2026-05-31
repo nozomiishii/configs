@@ -42,7 +42,7 @@ export function base() {
     },
 
     /**
-     * inline の disable / 設定コメントを無効化し、config 外から上書きできなくする。
+     * inline の disableコメントを無効化。必ずeslint.config.tsで設定の変更はする。
      *
      * @see https://eslint.org/docs/latest/use/configure/rules
      */
