@@ -63,7 +63,7 @@ export function viest() {
         ],
 
         /**
-         * `.resolves` を await する形は bun:test で型エラーになる（matcher が void）ため off。
+         * bunが対応してないのと、playwrightっぽくexpectをそのままassertしてもいいという判断
          *
          * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-resolves.md
          */
