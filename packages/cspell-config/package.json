@@ -41,7 +41,7 @@
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.12.2",
-    "tsdown": "0.22.0",
+    "tsdown": "0.22.1",
     "typescript": "6.0.3"
   },
   "packageManager": "pnpm@11.4.0",
