@@ -49,7 +49,7 @@ export function base() {
      */
     {
       linterOptions: { noInlineConfig: true },
-      name: name("linterOptions/noInlineConfig"),
+      name: name("linterOptions"),
     },
 
     javascript(),
