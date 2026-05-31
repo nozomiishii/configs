@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.3.0...@nozomiishii/tsconfig-v1.4.0) (2026-05-31)
+
+
+### Miscellaneous
+
+* update pnpm to v11.4.0 ([#2348](https://github.com/nozomiishii/configs/issues/2348)) ([72de0a9](https://github.com/nozomiishii/configs/commit/72de0a97907141ebeb0c85d8576455019aa5dd5c))
+
 ## [1.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.2.0...@nozomiishii/tsconfig-v1.3.0) (2026-05-30)
 
 ### Miscellaneous
