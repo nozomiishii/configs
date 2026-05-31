@@ -50,6 +50,13 @@ export function viest() {
         "vitest/no-done-callback": "off",
 
         /**
+         * 名前だけのdescribeをdescribe(関数)化して温存する方向に働くためoffにする。describe(関数)は使いたい場面で手書きする。
+         *
+         * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-describe-function-title.md
+         */
+        "vitest/prefer-describe-function-title": "off",
+
+        /**
          * 非同期テストなどで、期待されるアサーションが呼び出されない場合を防ぐ
          *
          * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md
