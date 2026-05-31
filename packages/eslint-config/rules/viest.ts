@@ -50,6 +50,13 @@ export function viest() {
         "vitest/no-done-callback": "off",
 
         /**
+         * 関数ごとにファイル分けているのでテストの中であえて関数と明示しなくても良いという判断。
+         *
+         * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-describe-function-title.md
+         */
+        "vitest/prefer-describe-function-title": "off",
+
+        /**
          * 非同期テストなどで、期待されるアサーションが呼び出されない場合を防ぐ
          *
          * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md
