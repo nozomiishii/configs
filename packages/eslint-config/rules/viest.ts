@@ -63,6 +63,13 @@ export function viest() {
         ],
 
         /**
+         * `.resolves` を await する形は bun:test で型エラーになる（matcher が void）ため off。
+         *
+         * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-resolves.md
+         */
+        "vitest/prefer-expect-resolves": "off",
+
+        /**
          * describe句は必要に応じて使う
          *
          * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-top-level-describe.md
