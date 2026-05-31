@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.3.0...@nozomiishii/eslint-config-v1.4.0) (2026-05-31)
+
+### Features
+
+- ban inline eslint config via noInlineConfig ([#2362](https://github.com/nozomiishii/configs/issues/2362)) ([24288e3](https://github.com/nozomiishii/configs/commit/24288e331929ce5ad188eb7caf9ebaf870c1b0cf))
+
+### Bug Fixes
+
+- correct viest typo to vitest in eslint-config ([#2360](https://github.com/nozomiishii/configs/issues/2360)) ([30e9cc3](https://github.com/nozomiishii/configs/commit/30e9cc31fa5a85f048e0c8a1e9808efa1a30e680))
+- disable vitest max-expects rule ([#2357](https://github.com/nozomiishii/configs/issues/2357)) ([f009375](https://github.com/nozomiishii/configs/commit/f0093750eb92ade4b08f9d7ef13a92d9f8bc3056))
+- disable vitest prefer-describe-function-title rule ([#2355](https://github.com/nozomiishii/configs/issues/2355)) ([d1d670b](https://github.com/nozomiishii/configs/commit/d1d670b85dab9a3fd38db4214f4987e54680db5d))
+- disable vitest/prefer-expect-resolves for bun:test compat ([#2356](https://github.com/nozomiishii/configs/issues/2356)) ([a42f744](https://github.com/nozomiishii/configs/commit/a42f744530e0a9e2d5a7d6fa0ad239159f8008ad))
+
+### Miscellaneous
+
+- update dependency @eslint/config-inspector to v3.0.4 ([#2351](https://github.com/nozomiishii/configs/issues/2351)) ([b6d61c0](https://github.com/nozomiishii/configs/commit/b6d61c0eaa81a941de920966fe366abf9d69a82e))
+- update dependency tsdown to v0.22.1 ([#2361](https://github.com/nozomiishii/configs/issues/2361)) ([8d13cb7](https://github.com/nozomiishii/configs/commit/8d13cb791104eb651802074507446bc427619e6d))
+- update pnpm to v11.4.0 ([#2348](https://github.com/nozomiishii/configs/issues/2348)) ([72de0a9](https://github.com/nozomiishii/configs/commit/72de0a97907141ebeb0c85d8576455019aa5dd5c))
+
 ## [1.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.2.0...@nozomiishii/eslint-config-v1.3.0) (2026-05-30)
 
 ### Features
