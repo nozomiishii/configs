@@ -88,6 +88,15 @@ export default {
       },
     },
     {
+      // Claude Code が多行で書き戻す settings.json を prettier に整形させない。
+      // json parser は requirePragma を無視するので、尊重する jsonc に切替える。
+      files: ["**/.claude/settings.json"],
+      options: {
+        parser: "jsonc",
+        requirePragma: true,
+      },
+    },
+    {
       // JSONC / JSON5 は native parser に委ねコメント等の言語機能を保つ。
       // ただし VSCode の JSONC モードは trailing comma を allowed-but-discouraged 扱いで warning を出す
       // ({@link https://code.visualstudio.com/docs/languages/json}) ため、自動付与は止める

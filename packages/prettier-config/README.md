@@ -36,8 +36,13 @@ re-exports the shared config.
 ### File exclusion: `requirePragma` over `.prettierignore`
 
 Files that should never be formatted (`pnpm-lock.yaml`, `submodules/**`,
-`next-env.d.ts`, `*.md`, `*.mdx`) are excluded via `requirePragma: true`
-overrides in this config rather than a `.prettierignore` file.
+`next-env.d.ts`, `*.md`, `*.mdx`, `**/.claude/settings.json`) are excluded
+via `requirePragma: true` overrides in this config rather than a
+`.prettierignore` file.
+
+`**/.claude/settings.json` also needs `parser: jsonc`: Claude Code writes it
+with multi-line arrays, and the `json` parser ignores `requirePragma` while
+`jsonc` honors it.
 
 A `.prettierignore` would duplicate patterns already in `.gitignore` and
 invite drift between the two. Prettier 3.x already honors `.gitignore`
