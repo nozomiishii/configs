@@ -39,16 +39,27 @@ export function typescript() {
         ],
 
         /**
-         * 使ってない引数はアンダースコア始まりにする
+         * 未使用の変数・引数を検出する
          *
          * @see https://typescript-eslint.io/rules/no-unused-vars
          */
         "@typescript-eslint/no-unused-vars": [
           "warn",
           {
+            // 未使用の引数は _ 始まりで許容
             argsIgnorePattern: "^_",
+            // catch の未使用エラーは _ 始まりで許容
             caughtErrorsIgnorePattern: "^_",
+            // 配列分割代入の未使用要素は _ 始まりで許容
             destructuredArrayIgnorePattern: "^_",
+            // --fix で未使用 import を自動削除する
+            enableAutofixRemoval: { imports: true },
+            // { a, ...rest } で抜き出した a を未使用扱いしない
+            ignoreRestSiblings: true,
+            // using / await using は未使用でも許容
+            ignoreUsingDeclarations: true,
+            // 未使用の局所変数は _ 始まりで許容
+            varsIgnorePattern: "^_",
           },
         ],
       },
