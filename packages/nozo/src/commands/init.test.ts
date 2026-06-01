@@ -1,19 +1,16 @@
 import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { test as baseTest, expect, vi } from "vitest";
+import { test as baseTest, expect, onTestFinished, vi } from "vitest";
 import { resolvePackageManager, toolIds, tools } from "./init";
 
-// npm_config_user_agent を一時的に差し替える。value 省略でランナー無しを再現する。
+// npm_config_user_agent を一時的に差し替え、テスト終了時に元へ戻す。value 省略でランナー無しを再現する。
 // process.env 直接操作は n/no-process-env で禁止のため vi.stubEnv を使う。
 function stubUserAgent(value?: string) {
   vi.stubEnv("npm_config_user_agent", value);
-
-  return {
-    [Symbol.dispose]() {
-      vi.unstubAllEnvs();
-    },
-  };
+  onTestFinished(() => {
+    vi.unstubAllEnvs();
+  });
 }
 
 const test = baseTest.extend<{ cwd: string }>({
@@ -42,8 +39,7 @@ test("happy path: every tool's install script completes without throwing", async
 
 // lockfile も packageManager フィールドも無いとき、nozo を起動したランナーを使う。
 test("falls back to the launching runner when the project has no config", async ({ cwd }) => {
-  using ua = stubUserAgent("bun/1.3.11 npm/? node/v24 darwin arm64");
-  void ua;
+  stubUserAgent("bun/1.3.11 npm/? node/v24 darwin arm64");
 
   await expect(resolvePackageManager(cwd)).resolves.toStrictEqual({
     agent: "bun",
@@ -53,8 +49,7 @@ test("falls back to the launching runner when the project has no config", async 
 
 // 設定もランナーも無いときは throw する。
 test("throws when neither project config nor runner is available", async ({ cwd }) => {
-  using ua = stubUserAgent();
-  void ua;
+  stubUserAgent();
 
   await expect(resolvePackageManager(cwd)).rejects.toThrow(
     "Could not determine a package manager",
@@ -64,8 +59,7 @@ test("throws when neither project config nor runner is available", async ({ cwd 
 // プロジェクトの lockfile はランナーより優先される。
 test("prefers project config over the launching runner", async ({ cwd }) => {
   writeFileSync(path.join(cwd, "pnpm-lock.yaml"), "");
-  using ua = stubUserAgent("bun/1.3.11 npm/? node/v24 darwin arm64");
-  void ua;
+  stubUserAgent("bun/1.3.11 npm/? node/v24 darwin arm64");
 
   await expect(resolvePackageManager(cwd)).resolves.toStrictEqual({
     agent: "pnpm",
