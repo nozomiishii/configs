@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v1.4.0...@nozomiishii/prettier-config-v1.5.0) (2026-06-01)
+
+
+### Features
+
+* exclude Claude Code's .claude/settings.json from formatting ([#2372](https://github.com/nozomiishii/configs/issues/2372)) ([3d400bb](https://github.com/nozomiishii/configs/commit/3d400bb256f3a98ae0e0de868b2cd5aa69ba4c39))
+
 ## [1.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v1.3.0...@nozomiishii/prettier-config-v1.4.0) (2026-05-31)
 
 ### Miscellaneous
