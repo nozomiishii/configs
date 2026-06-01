@@ -2,10 +2,9 @@
 
 ## [1.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.4.0...@nozomiishii/lefthook-config-v1.5.0) (2026-06-01)
 
-
 ### Miscellaneous
 
-* update dependency lefthook to v2.1.9 ([#2375](https://github.com/nozomiishii/configs/issues/2375)) ([93f619e](https://github.com/nozomiishii/configs/commit/93f619e9d6666be49ec4d47fa64d8c5c70a08534))
+- update dependency lefthook to v2.1.9 ([#2375](https://github.com/nozomiishii/configs/issues/2375)) ([93f619e](https://github.com/nozomiishii/configs/commit/93f619e9d6666be49ec4d47fa64d8c5c70a08534))
 
 ## [1.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.3.0...@nozomiishii/lefthook-config-v1.4.0) (2026-05-31)
 

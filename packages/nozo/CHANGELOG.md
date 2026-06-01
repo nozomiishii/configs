@@ -2,15 +2,13 @@
 
 ## [1.5.0](https://github.com/nozomiishii/configs/compare/nozo-v1.4.0...nozo-v1.5.0) (2026-06-01)
 
-
 ### Features
 
-* infer package manager from runner in nozo init ([#2367](https://github.com/nozomiishii/configs/issues/2367)) ([fd457d7](https://github.com/nozomiishii/configs/commit/fd457d749f06996916a6e1bc934959b8c641edfb))
-
+- infer package manager from runner in nozo init ([#2367](https://github.com/nozomiishii/configs/issues/2367)) ([fd457d7](https://github.com/nozomiishii/configs/commit/fd457d749f06996916a6e1bc934959b8c641edfb))
 
 ### Miscellaneous
 
-* use onTestFinished for env cleanup in nozo init tests ([#2369](https://github.com/nozomiishii/configs/issues/2369)) ([54ccc8e](https://github.com/nozomiishii/configs/commit/54ccc8ee39519494985f805416a94079cafaef85))
+- use onTestFinished for env cleanup in nozo init tests ([#2369](https://github.com/nozomiishii/configs/issues/2369)) ([54ccc8e](https://github.com/nozomiishii/configs/commit/54ccc8ee39519494985f805416a94079cafaef85))
 
 ## [1.4.0](https://github.com/nozomiishii/configs/compare/nozo-v1.3.0...nozo-v1.4.0) (2026-05-31)
 
