@@ -7,7 +7,7 @@ import { init as initPrettier } from "@nozomiishii/prettier-config/init";
 import { defineCommand } from "citty";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { type AgentName, detect } from "package-manager-detector";
+import { type AgentName, detect, getUserAgent } from "package-manager-detector";
 
 const exec = promisify(execFile);
 
@@ -68,14 +68,25 @@ export type ToolId = keyof typeof tools;
 
 export const toolIds = Object.keys(tools) as ToolId[];
 
-async function detectPackageManager(cwd: string): Promise<AgentName> {
-  const result = await detect({ cwd });
+export async function resolvePackageManager(
+  cwd: string,
+): Promise<{ agent: AgentName; source: "project" | "runner" }> {
+  const detected = await detect({ cwd });
 
-  if (result === null) {
-    throw new Error("Could not detect package manager (no lockfile or packageManager field).");
+  if (detected !== null) {
+    return { agent: detected.name, source: "project" };
   }
 
-  return result.name;
+  // lockfile も packageManager フィールドも無い → nozo を起動したランナーを使う
+  const runner = getUserAgent();
+
+  if (runner !== null) {
+    return { agent: runner, source: "runner" };
+  }
+
+  throw new Error(
+    "Could not determine a package manager. Run nozo through a package manager such as `pnpm dlx nozo init`, `npx nozo init`, or `bunx nozo init`.",
+  );
 }
 
 export default defineCommand({
@@ -125,8 +136,12 @@ export default defineCommand({
     }
 
     const cwd = process.cwd();
-    const agent = await detectPackageManager(cwd);
-    p.log.info(`Detected package manager: ${agent}`);
+    const { agent, source } = await resolvePackageManager(cwd);
+    p.log.info(
+      source === "project"
+        ? `Detected package manager: ${agent}`
+        : `No package manager configured; using ${agent} from the current runner`,
+    );
 
     for (const id of selected) {
       const tool = tools[id];
