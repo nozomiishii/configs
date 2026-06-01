@@ -39,12 +39,12 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@commitlint/cli": "21.0.1",
-    "@commitlint/config-conventional": "21.0.1",
+    "@commitlint/cli": "21.0.2",
+    "@commitlint/config-conventional": "21.0.2",
     "@commitlint/types": "21.0.1"
   },
   "devDependencies": {
-    "@commitlint/lint": "21.0.1",
+    "@commitlint/lint": "21.0.2",
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.12.2",
     "conventional-commits-parser": "6.4.0",
