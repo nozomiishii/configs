@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.4.0...@nozomiishii/eslint-config-v1.5.0) (2026-06-01)
+
+### Features
+
+- add ignore options to no-unused-vars ([#2373](https://github.com/nozomiishii/configs/issues/2373)) ([259d6d5](https://github.com/nozomiishii/configs/commit/259d6d559a384a36a9b766ebd8bfb3c945c457ac))
+
+### Miscellaneous
+
+- update dependency eslint-plugin-jsonc to v3.2.0 ([#2370](https://github.com/nozomiishii/configs/issues/2370)) ([6c797b0](https://github.com/nozomiishii/configs/commit/6c797b0f465bc94141264e1868f92fea566c6bff))
+- update dependency eslint-plugin-package-json to v1.2.0 ([#2366](https://github.com/nozomiishii/configs/issues/2366)) ([598fec9](https://github.com/nozomiishii/configs/commit/598fec9ca758fa64231eac78cf3936ecce862b8c))
+
 ## [1.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.3.0...@nozomiishii/eslint-config-v1.4.0) (2026-05-31)
 
 ### Features
