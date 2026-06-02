@@ -102,10 +102,10 @@ Bins are in a flat namespace. `commitlint-config` exposes its shim as `nozo-comm
 
 ```yaml
 # fast path
-run: node_modules/.bin/nozo-commitlint --edit {1}
+run: node_modules/.bin/nozo-commitlint --edit "{1}"
 
 # extra spawn (lefthook -> nozo -> shim -> commitlint)
-run: node_modules/.bin/nozo run commitlint --edit {1}
+run: node_modules/.bin/nozo run commitlint --edit "{1}"
 ```
 
 ### Rule 5: each shim lives where its config package lives
