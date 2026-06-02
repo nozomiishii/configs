@@ -49,13 +49,17 @@ export default {
 
 ## Bin
 
-The package also ships a namespaced bin, `nozo-commitlint`, which wraps the
-pinned `@commitlint/cli`. Lefthook configs (e.g. `@nozomiishii/lefthook-config`)
-invoke the shim directly:
+The package also ships a namespaced bin, `nozo-commitlint`, that wraps the
+pinned `@commitlint/cli`. The bin name differs from the package name, so to
+run it without adding the package to your `devDependencies`, pass `--package`:
 
-```yaml
-commit-msg:
-  jobs:
-    - name: commitlint
-      run: node_modules/.bin/nozo-commitlint --edit {1} --verbose
+```sh
+# Lint the most recent commit
+pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --last --verbose
+
+# Lint a specific commit-msg file
+pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --edit .git/COMMIT_EDITMSG
 ```
+
+To wire it into a commit-msg git hook, see
+[`@nozomiishii/lefthook-config`](../lefthook-config).

@@ -48,11 +48,14 @@ export default {
 
 ## 同梱 bin
 
-このパッケージは pin された `@commitlint/cli` をラップする `nozo-commitlint` という namespace 付きの bin も同梱しています。Lefthook の設定（例: `@nozomiishii/lefthook-config`）からはこの shim を直接呼び出します:
+このパッケージは pin された `@commitlint/cli` をラップする `nozo-commitlint` という namespace 付きの bin も同梱しています。bin 名はパッケージ名と異なるため、`devDependencies` に追加せず実行するときは `--package` でパッケージを指定します:
 
-```yaml
-commit-msg:
-  jobs:
-    - name: commitlint
-      run: node_modules/.bin/nozo-commitlint --edit {1} --verbose
+```sh
+# 直近のコミットを lint
+pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --last --verbose
+
+# 特定の commit-msg ファイルを lint
+pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --edit .git/COMMIT_EDITMSG
 ```
+
+commit-msg の git hook に組み込む方法は [`@nozomiishii/lefthook-config`](../lefthook-config) を参照。
