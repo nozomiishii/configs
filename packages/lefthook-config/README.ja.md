@@ -93,10 +93,10 @@ bin はフラットな namespace に置かれます。`commitlint-config` は `@
 
 ```yaml
 # 速い経路
-run: node_modules/.bin/nozo-commitlint --edit {1}
+run: node_modules/.bin/nozo-commitlint --edit "{1}"
 
 # 余分な spawn が発生する経路（lefthook -> nozo -> shim -> commitlint）
-run: node_modules/.bin/nozo run commitlint --edit {1}
+run: node_modules/.bin/nozo run commitlint --edit "{1}"
 ```
 
 ### Rule 5: 各 shim は対応する config パッケージに同梱する
