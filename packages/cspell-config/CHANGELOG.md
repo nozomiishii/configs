@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.5.0...@nozomiishii/cspell-config-v1.5.1) (2026-06-03)
+
+
+### Miscellaneous
+
+* update pnpm to v11.5.0 ([#2378](https://github.com/nozomiishii/configs/issues/2378)) ([880cce3](https://github.com/nozomiishii/configs/commit/880cce3e540bf27e123f9cf402d6e497e4831dd2))
+
 ## [1.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.4.0...@nozomiishii/cspell-config-v1.5.0) (2026-06-01)
 
 ### Miscellaneous

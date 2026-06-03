@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.5.0...@nozomiishii/lefthook-config-v1.5.1) (2026-06-03)
+
+
+### Miscellaneous
+
+* quote {1} in lefthook-config readme to match the hook impl ([#2382](https://github.com/nozomiishii/configs/issues/2382)) ([f846a5f](https://github.com/nozomiishii/configs/commit/f846a5f1b99865ac4aa2f0fb7e95df767e0f7acc))
+* update nozomiishii to v0.2.3 ([#2383](https://github.com/nozomiishii/configs/issues/2383)) ([a1c8185](https://github.com/nozomiishii/configs/commit/a1c8185b648e654dc6232892bf2a9336ac0023a6))
+* update pnpm to v11.5.0 ([#2378](https://github.com/nozomiishii/configs/issues/2378)) ([880cce3](https://github.com/nozomiishii/configs/commit/880cce3e540bf27e123f9cf402d6e497e4831dd2))
+
 ## [1.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.4.0...@nozomiishii/lefthook-config-v1.5.0) (2026-06-01)
 
 ### Miscellaneous

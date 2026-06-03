@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.5.0...@nozomiishii/commitlint-config-v1.5.1) (2026-06-03)
+
+
+### Miscellaneous
+
+* document nozo-commitlint dlx usage in commitlint-config readme ([#2381](https://github.com/nozomiishii/configs/issues/2381)) ([33c29fb](https://github.com/nozomiishii/configs/commit/33c29fbc0bf41b83fc977047295d9c518fc47ebb))
+* update pnpm to v11.5.0 ([#2378](https://github.com/nozomiishii/configs/issues/2378)) ([880cce3](https://github.com/nozomiishii/configs/commit/880cce3e540bf27e123f9cf402d6e497e4831dd2))
+
 ## [1.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.4.0...@nozomiishii/commitlint-config-v1.5.0) (2026-06-01)
 
 ### Miscellaneous
