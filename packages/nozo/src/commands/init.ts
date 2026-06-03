@@ -12,13 +12,19 @@ import { type AgentName, detect, getUserAgent } from "package-manager-detector";
 const exec = promisify(execFile);
 
 type Tool = {
-  configure?: () => Promise<null | { preset: PresetId }>;
+  configure?: () => Promise<null | ToolConfig>;
   description: string;
   label: string;
   run: ToolInit;
 };
 
-type ToolInit = (options: { cwd: string; preset?: PresetId }) => Promise<void>;
+type ToolConfig = { monorepo: boolean; preset: PresetId };
+
+type ToolInit = (options: {
+  cwd: string;
+  monorepo?: boolean;
+  preset?: PresetId;
+}) => Promise<void>;
 
 export const tools = {
   commitlint: {
@@ -41,7 +47,28 @@ export const tools = {
         return null;
       }
 
-      return { preset };
+      const monorepo = await p.select<boolean>({
+        initialValue: false,
+        message: "Is this a per-package config in a monorepo?",
+        options: [
+          {
+            hint: "one eslint.config for the whole repo",
+            label: "single repo",
+            value: false,
+          },
+          {
+            hint: "each package has its own; sets tsconfigRootDir",
+            label: "monorepo (per-package)",
+            value: true,
+          },
+        ],
+      });
+
+      if (p.isCancel(monorepo)) {
+        return null;
+      }
+
+      return { monorepo, preset };
     },
     description: "JS/TS linting via ESLint",
     label: "@nozomiishii/eslint-config",
@@ -115,7 +142,7 @@ export default defineCommand({
     }
 
     // 追加設定が要るツールは install 前にまとめて尋ねる
-    const presets: Partial<Record<ToolId, PresetId>> = {};
+    const configs: Partial<Record<ToolId, ToolConfig>> = {};
 
     for (const id of selected) {
       const tool = tools[id];
@@ -132,7 +159,7 @@ export default defineCommand({
         return;
       }
 
-      presets[id] = configured.preset;
+      configs[id] = configured;
     }
 
     const cwd = process.cwd();
@@ -149,8 +176,8 @@ export default defineCommand({
       spinner.start(`Installing ${tool.label}`);
 
       try {
-        const preset = presets[id];
-        await tool.run(preset === undefined ? { cwd } : { cwd, preset });
+        const config = configs[id];
+        await tool.run(config === undefined ? { cwd } : { cwd, ...config });
         spinner.stop(`${tool.label}: ok`);
       } catch (error) {
         spinner.stop(`${tool.label}: failed`);
