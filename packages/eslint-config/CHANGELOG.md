@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.5.0...@nozomiishii/eslint-config-v1.5.1) (2026-06-03)
+
+### Bug Fixes
+
+- enable curly all after the prettier layer ([#2385](https://github.com/nozomiishii/configs/issues/2385)) ([af74d83](https://github.com/nozomiishii/configs/commit/af74d83aaaa6b3d80d62a678915a7e3ec1efb325))
+
+### Miscellaneous
+
+- update dependency @eslint-react/eslint-plugin to v5.8.7 ([#2376](https://github.com/nozomiishii/configs/issues/2376)) ([5a2a890](https://github.com/nozomiishii/configs/commit/5a2a890f59bd563926605b1e959205aab1a04832))
+- update dependency eslint to v10.4.1 ([#2380](https://github.com/nozomiishii/configs/issues/2380)) ([ff8454e](https://github.com/nozomiishii/configs/commit/ff8454e895453c5c9e8c1752fe88add24bd16d33))
+- update pnpm to v11.5.0 ([#2378](https://github.com/nozomiishii/configs/issues/2378)) ([880cce3](https://github.com/nozomiishii/configs/commit/880cce3e540bf27e123f9cf402d6e497e4831dd2))
+
 ## [1.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.4.0...@nozomiishii/eslint-config-v1.5.0) (2026-06-01)
 
 ### Features

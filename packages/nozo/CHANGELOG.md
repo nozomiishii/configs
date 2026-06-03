@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.1](https://github.com/nozomiishii/configs/compare/nozo-v1.5.0...nozo-v1.5.1) (2026-06-03)
+
+### Miscellaneous
+
+- update dependency @clack/prompts to v1.5.0 ([#2377](https://github.com/nozomiishii/configs/issues/2377)) ([fa6cac2](https://github.com/nozomiishii/configs/commit/fa6cac2ce43480dcd86fd4895c8d81ad6dc8c758))
+- update dependency eslint to v10.4.1 ([#2380](https://github.com/nozomiishii/configs/issues/2380)) ([ff8454e](https://github.com/nozomiishii/configs/commit/ff8454e895453c5c9e8c1752fe88add24bd16d33))
+- update pnpm to v11.5.0 ([#2378](https://github.com/nozomiishii/configs/issues/2378)) ([880cce3](https://github.com/nozomiishii/configs/commit/880cce3e540bf27e123f9cf402d6e497e4831dd2))
+
 ## [1.5.0](https://github.com/nozomiishii/configs/compare/nozo-v1.4.0...nozo-v1.5.0) (2026-06-01)
 
 ### Features
