@@ -36,7 +36,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "cspell": "10.0.0"
+    "cspell": "10.0.1"
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
