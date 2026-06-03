@@ -18,6 +18,9 @@ export function javascript() {
       rules: {
         ...eslintConfigJavascript.configs.recommended.rules,
         /**
+         * prettier 層が off にするため ./prettier.ts(prettier/overrides)で有効化中。
+         * stylistic へ移行したらここを復活させる。
+         *
          * if, else, while, for などで波括弧を省略しないように統一
          *
          * @see https://github.com/prettier/eslint-config-prettier?tab=readme-ov-file#curly
