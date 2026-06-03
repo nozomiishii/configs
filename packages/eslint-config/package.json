@@ -31,6 +31,7 @@
     "presets",
     "rules",
     "starters",
+    "types",
     "utils",
     "eslint-typegen.d.ts",
     "README.md",

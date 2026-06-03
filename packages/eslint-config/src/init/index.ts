@@ -4,7 +4,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-export type InitOptions = { cwd: string; preset?: PresetId };
+export type InitOptions = { cwd: string; monorepo?: boolean; preset?: PresetId };
 
 export type PresetId = "nextjs" | "node";
 
@@ -16,7 +16,11 @@ type PackageJson = {
   version: string;
 };
 
-export async function init({ cwd, preset = "nextjs" }: InitOptions): Promise<void> {
+export async function init({
+  cwd,
+  monorepo = false,
+  preset = "nextjs",
+}: InitOptions): Promise<void> {
   const root = packageRoot();
 
   const selfPkg = JSON.parse(
@@ -25,7 +29,18 @@ export async function init({ cwd, preset = "nextjs" }: InitOptions): Promise<voi
     peerDependencies: { eslint: string; typescript: string };
   };
 
-  const starter = await readFile(path.join(root, "starters", `${preset}.ts`), "utf8");
+  const starterRaw = await readFile(
+    path.join(root, "starters", `${preset}.ts`),
+    "utf8",
+  );
+
+  // monorepo の per-package config は tsconfigRootDir を明示する。
+  const starter = monorepo
+    ? starterRaw.replace(
+        `${preset}()`,
+        `${preset}({ typescript: { tsconfigRootDir: import.meta.dirname } })`,
+      )
+    : starterRaw;
 
   const targetPath = path.resolve(cwd, "package.json");
   const target = JSON.parse(await readFile(targetPath, "utf8")) as PackageJson;

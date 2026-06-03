@@ -1,5 +1,6 @@
 import { defineConfig } from "eslint/config";
 import globals from "globals";
+import type { Options } from "../types";
 import {
   _nextjs,
   betterTailwindcss,
@@ -21,9 +22,9 @@ import { base } from "./base";
  * node() からは作らず base を元に組む。Next は server コードも持つため
  * Node.js 層(eslint-plugin-n)も含める。prettier は末尾で一度だけ付ける。
  */
-export function nextjs() {
+export function nextjs(options: Options = {}) {
   return defineConfig([
-    ...base(),
+    ...base(options),
 
     {
       languageOptions: {

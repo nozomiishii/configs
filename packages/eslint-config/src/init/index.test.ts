@@ -13,14 +13,18 @@ type InitResult = {
 };
 
 // 一時dirでinitを実行し、生成された package.json と eslint.config.ts を読み取る
-async function runInit(preset?: PresetId): Promise<InitResult> {
+async function runInit(preset?: PresetId, monorepo?: boolean): Promise<InitResult> {
   const tmpDir = mkdtempSync(path.join(tmpdir(), "nozo-eslint-init-"));
   writeFileSync(
     path.join(tmpDir, "package.json"),
     `${JSON.stringify({ name: "fixture", version: "1.0.0" }, null, 2)}\n`,
   );
 
-  await init(preset === undefined ? { cwd: tmpDir } : { cwd: tmpDir, preset });
+  await init({
+    cwd: tmpDir,
+    ...(monorepo === undefined ? {} : { monorepo }),
+    ...(preset === undefined ? {} : { preset }),
+  });
 
   const pkg = JSON.parse(
     readFileSync(path.join(tmpDir, "package.json"), "utf8"),
@@ -94,4 +98,20 @@ test("the node starter does not reference nextjs", async () => {
   const { configContent } = await runInit("node");
 
   expect(configContent).not.toContain("nextjs");
+});
+
+// monorepo を選ぶと tsconfigRootDir を渡す形で書き出す
+test("init with monorepo writes tsconfigRootDir", async () => {
+  const { configContent } = await runInit("node", true);
+
+  expect(configContent).toContain(
+    "node({ typescript: { tsconfigRootDir: import.meta.dirname } })",
+  );
+});
+
+// 単一 repo (既定) は tsconfigRootDir を入れない
+test("init without monorepo omits tsconfigRootDir", async () => {
+  const { configContent } = await runInit("node");
+
+  expect(configContent).not.toContain("tsconfigRootDir");
 });

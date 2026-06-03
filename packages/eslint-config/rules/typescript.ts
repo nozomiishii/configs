@@ -1,5 +1,6 @@
 import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
+import type { TypescriptOptions } from "../types";
 import { name } from "../utils/name";
 
 /**
@@ -9,7 +10,7 @@ import { name } from "../utils/name";
  *
  * @see https://typescript-eslint.io/rules
  */
-export function typescript() {
+export function typescript({ tsconfigRootDir }: TypescriptOptions = {}) {
   return defineConfig([
     // typescript-eslint/baseとtypescript-eslint/eslint-recommendedの設定がダブってるからなんとかしたい
     //
@@ -17,6 +18,24 @@ export function typescript() {
     tseslint.configs.strictTypeChecked,
     // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/flat/stylistic-type-checked.ts
     tseslint.configs.stylisticTypeChecked,
+
+    /**
+     * 型を見る rule を動かすための設定。
+     * projectService が各ファイルに型情報を供給し、
+     * tsconfigRootDir でその基準ディレクトリを固定する。
+     *
+     * @see https://typescript-eslint.io/packages/parser/#projectservice
+     */
+    {
+      languageOptions: {
+        parserOptions: {
+          projectService: true,
+          ...(tsconfigRootDir ? { tsconfigRootDir } : {}),
+        },
+      },
+      name: name("typescript/parserOptions"),
+    },
+
     {
       files: ["**/*.{ts,tsx}"],
       name: name("typescript"),

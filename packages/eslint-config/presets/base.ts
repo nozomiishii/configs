@@ -1,5 +1,6 @@
 import gitignore from "eslint-config-flat-gitignore";
 import { defineConfig } from "eslint/config";
+import type { Options } from "../types";
 import {
   deMorgan,
   eslintComments,
@@ -21,10 +22,10 @@ import { name } from "../utils/name";
  * prettier は含めない。formatting を最後で打ち消す必要があるため、
  * 各 preset が末尾で prettier() を一度だけ付ける。
  *
- * tsconfigRootDirは指定しない。typescript-eslintはeslint.config.tsの
- * あるディレクトリへ自動解決するため、consumer側で正しいrootになる。
+ * projectService と tsconfigRootDir は typescript() が持つ。
+ * tsconfigRootDir は options.typescript 経由で consumer が渡す。
  */
-export function base() {
+export function base(options: Options = {}) {
   return defineConfig([
     /**
      * eslint-config-flat-gitignore
@@ -33,13 +34,6 @@ export function base() {
      * @see https://github.com/antfu/eslint-config-flat-gitignore
      */
     gitignore(),
-
-    {
-      languageOptions: {
-        parserOptions: { projectService: true },
-      },
-      name: name("languageOptions/parserOptions"),
-    },
 
     /**
      * inline の disableコメントを無効化。必ずeslint.config.tsで設定の変更はする。
@@ -52,7 +46,7 @@ export function base() {
     },
 
     javascript(),
-    typescript(),
+    typescript(options.typescript),
     importX(),
 
     jsdoc(),
