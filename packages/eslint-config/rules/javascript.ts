@@ -49,6 +49,20 @@ export function javascript() {
         "no-useless-rename": "warn",
 
         /**
+         * var を禁止し、ブロックスコープの let / const に統一
+         *
+         * @see https://eslint.org/docs/latest/rules/no-var
+         */
+        "no-var": "warn",
+
+        /**
+         * 再代入しない let は const に統一
+         *
+         * @see https://eslint.org/docs/latest/rules/prefer-const
+         */
+        "prefer-const": "warn",
+
+        /**
          * 比較式において、リテラルを前に置く「ヨーダ条件」を禁止
          *
          * @see https://eslint.org/docs/latest/rules/yoda
