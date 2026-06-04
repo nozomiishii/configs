@@ -50,7 +50,7 @@
     "conventional-commits-parser": "6.4.0",
     "tsdown": "0.22.1",
     "typescript": "6.0.3",
-    "vitest": "4.1.7"
+    "vitest": "4.1.8"
   },
   "packageManager": "pnpm@11.5.0",
   "publishConfig": {
