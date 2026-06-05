@@ -65,6 +65,10 @@ jobs:
           # 403 "Resource not accessible by integration".
           permission-workflows: write
 
+      # TOCTOU 対策。release-please は package.json の読込時刻と commit の base_tree 解決時刻に
+      # SHA pinning が無く、間に依存 PR が main へ merge されると package.json だけ巻き戻り
+      # pnpm-lock.yaml と乖離する。v5.0.0 が最新タグで upstream 修正は無いため、config の
+      # always-update:true で後続 run が release PR を最新 main へ再生成し自己修復させる。
       - name: Run release-please
         id: release-please
         uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
