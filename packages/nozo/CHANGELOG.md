@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.0](https://github.com/nozomiishii/configs/compare/nozo-v1.5.1...nozo-v1.6.0) (2026-06-05)
+
+
+### Features
+
+* support per-package tsconfigRootDir in eslint-config ([#2390](https://github.com/nozomiishii/configs/issues/2390)) ([ac7c594](https://github.com/nozomiishii/configs/commit/ac7c59498bc245d61009251d1be06da11167ba22))
+
+
+### Miscellaneous
+
+* update vitest monorepo to v4.1.8 ([#2395](https://github.com/nozomiishii/configs/issues/2395)) ([4af680b](https://github.com/nozomiishii/configs/commit/4af680b1b3596c5b5bd837fa8cfd82b2ad81aef1))
+
 ## [1.5.1](https://github.com/nozomiishii/configs/compare/nozo-v1.5.0...nozo-v1.5.1) (2026-06-03)
 
 ### Miscellaneous

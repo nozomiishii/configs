@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.5.1...@nozomiishii/tsconfig-v1.6.0) (2026-06-05)
+
+
+### Miscellaneous
+
+* **@nozomiishii/tsconfig:** Synchronize configs versions
+
 ## [1.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.5.0...@nozomiishii/tsconfig-v1.5.1) (2026-06-03)
 
 ### Miscellaneous
