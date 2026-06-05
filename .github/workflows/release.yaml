@@ -111,7 +111,7 @@ jobs:
           permission-contents: write
 
       - name: Checkout release-please Pull Request
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           ref: ${{ fromJson(needs.release-please.outputs.prs)[0].headBranchName }}
           persist-credentials: false # auth は後段の `gh auth setup-git` で配線する
@@ -154,7 +154,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           # Pin to the released tag, not the run's trigger commit: with rapid merges the
           # release-creating run may predate the version bump and republish a stale version.
