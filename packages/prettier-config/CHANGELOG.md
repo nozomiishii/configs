@@ -2,10 +2,9 @@
 
 ## [1.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v1.5.1...@nozomiishii/prettier-config-v1.6.0) (2026-06-05)
 
-
 ### Miscellaneous
 
-* update vitest monorepo to v4.1.8 ([#2395](https://github.com/nozomiishii/configs/issues/2395)) ([4af680b](https://github.com/nozomiishii/configs/commit/4af680b1b3596c5b5bd837fa8cfd82b2ad81aef1))
+- update vitest monorepo to v4.1.8 ([#2395](https://github.com/nozomiishii/configs/issues/2395)) ([4af680b](https://github.com/nozomiishii/configs/commit/4af680b1b3596c5b5bd837fa8cfd82b2ad81aef1))
 
 ## [1.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v1.5.0...@nozomiishii/prettier-config-v1.5.1) (2026-06-03)
 
