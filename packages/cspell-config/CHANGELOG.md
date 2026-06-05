@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.5.1...@nozomiishii/cspell-config-v1.6.0) (2026-06-05)
+
+### Miscellaneous
+
+- update cspell monorepo to v10.0.1 ([#2389](https://github.com/nozomiishii/configs/issues/2389)) ([37a1207](https://github.com/nozomiishii/configs/commit/37a12078273e4a2a4ca36921aa2202379c61c8d3))
+
 ## [1.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.5.0...@nozomiishii/cspell-config-v1.5.1) (2026-06-03)
 
 ### Miscellaneous

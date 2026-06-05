@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.5.1...@nozomiishii/eslint-config-v1.6.0) (2026-06-05)
+
+### Features
+
+- add const preference lint rules ([#2387](https://github.com/nozomiishii/configs/issues/2387)) ([aae46fc](https://github.com/nozomiishii/configs/commit/aae46fcd3a9ffd30269d7435595706f3c54c0524))
+- support per-package tsconfigRootDir in eslint-config ([#2390](https://github.com/nozomiishii/configs/issues/2390)) ([ac7c594](https://github.com/nozomiishii/configs/commit/ac7c59498bc245d61009251d1be06da11167ba22))
+
+### Miscellaneous
+
+- update dependency @eslint-react/eslint-plugin to v5.8.10 ([#2399](https://github.com/nozomiishii/configs/issues/2399)) ([267793d](https://github.com/nozomiishii/configs/commit/267793d21ecaab772e6d12c30e3a32d76c9bdb50))
+- update dependency @eslint-react/eslint-plugin to v5.8.8 ([#2386](https://github.com/nozomiishii/configs/issues/2386)) ([48f6a0f](https://github.com/nozomiishii/configs/commit/48f6a0f2a4dfb1683debbcb491e08caa4400d1fc))
+- update dependency @eslint-react/eslint-plugin to v5.8.9 ([#2393](https://github.com/nozomiishii/configs/issues/2393)) ([e8fdf2d](https://github.com/nozomiishii/configs/commit/e8fdf2d729aab27c5149709b40802fc4d5b08cd4))
+- update dependency @vitest/eslint-plugin to v1.6.19 ([#2391](https://github.com/nozomiishii/configs/issues/2391)) ([6277dc8](https://github.com/nozomiishii/configs/commit/6277dc8addbaf7356447cd9674822f6d06dfb24c))
+- update dependency eslint-import-resolver-typescript to v4.4.5 ([#2394](https://github.com/nozomiishii/configs/issues/2394)) ([5c24728](https://github.com/nozomiishii/configs/commit/5c24728588e77e8cb05f39b2618df2b31431d172))
+- update dependency eslint-plugin-jsdoc to v63.0.1 ([#2392](https://github.com/nozomiishii/configs/issues/2392)) ([a1d7f5a](https://github.com/nozomiishii/configs/commit/a1d7f5a9b650c6af5a353d173718b88a545100dd))
+- update dependency eslint-plugin-package-json to v1.3.0 ([#2398](https://github.com/nozomiishii/configs/issues/2398)) ([2726fb3](https://github.com/nozomiishii/configs/commit/2726fb3fc97a781b852c1cc4f7afc22273d2359e))
+- update nextjs monorepo to v16.2.7 ([#2396](https://github.com/nozomiishii/configs/issues/2396)) ([44b1521](https://github.com/nozomiishii/configs/commit/44b1521236ece169653fd168ae8a783d5aa52940))
+- update typescript-eslint monorepo to v8.60.1 ([#2397](https://github.com/nozomiishii/configs/issues/2397)) ([918593b](https://github.com/nozomiishii/configs/commit/918593be9002183a91bdc67589549b7aaf233ee1))
+- update vitest monorepo to v4.1.8 ([#2395](https://github.com/nozomiishii/configs/issues/2395)) ([4af680b](https://github.com/nozomiishii/configs/commit/4af680b1b3596c5b5bd837fa8cfd82b2ad81aef1))
+
 ## [1.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.5.0...@nozomiishii/eslint-config-v1.5.1) (2026-06-03)
 
 ### Bug Fixes
