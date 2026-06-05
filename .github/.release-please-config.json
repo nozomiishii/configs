@@ -3,6 +3,8 @@
 
   "bootstrap-sha": "362a8e8f6891e6ce9111e2f167151426ac22df6a",
 
+  "always-update": true,
+
   "group-pull-request-title-pattern": "chore: release ${version}",
 
   "changelog-sections": [
