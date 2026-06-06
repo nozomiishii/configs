@@ -35,11 +35,25 @@ export function javascript() {
         eqeqeq: ["warn", "allow-null"],
 
         /**
+         * ブロックのネスト深さを制限し、深い入れ子を防ぐ。
+         *
+         * @see https://eslint.org/docs/latest/rules/max-depth
+         */
+        "max-depth": "error",
+
+        /**
          * consoleの消し忘れ防止
          *
          * @see https://eslint.org/docs/latest/rules/no-console
          */
         "no-console": ["warn", { allow: ["warn", "error"] }],
+
+        /**
+         * 早期 return 後の不要な else を禁止し、ガード句を促す。
+         *
+         * @see https://eslint.org/docs/latest/rules/no-else-return
+         */
+        "no-else-return": ["warn", { allowElseIf: false }],
 
         /**
          * 不必要な再命名防止
