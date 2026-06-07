@@ -47,7 +47,7 @@
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.12.2",
     "lefthook": "2.1.9",
-    "tsdown": "0.22.1",
+    "tsdown": "0.22.2",
     "typescript": "6.0.3",
     "vitest": "4.1.8"
   },
