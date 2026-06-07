@@ -2,18 +2,16 @@
 
 ## [1.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.6.0...@nozomiishii/eslint-config-v1.7.0) (2026-06-07)
 
-
 ### Features
 
-* add lint troubleshooting guide and starter override scaffold ([#2411](https://github.com/nozomiishii/configs/issues/2411)) ([e226610](https://github.com/nozomiishii/configs/commit/e2266104ece30f74c21e9ffb1f833e26c476462e))
-* add max-depth and no-else-return rules to eslint-config ([#2407](https://github.com/nozomiishii/configs/issues/2407)) ([fd163da](https://github.com/nozomiishii/configs/commit/fd163da76e256cdad1cecbc194e1108fa2e53c60))
-
+- add lint troubleshooting guide and starter override scaffold ([#2411](https://github.com/nozomiishii/configs/issues/2411)) ([e226610](https://github.com/nozomiishii/configs/commit/e2266104ece30f74c21e9ffb1f833e26c476462e))
+- add max-depth and no-else-return rules to eslint-config ([#2407](https://github.com/nozomiishii/configs/issues/2407)) ([fd163da](https://github.com/nozomiishii/configs/commit/fd163da76e256cdad1cecbc194e1108fa2e53c60))
 
 ### Miscellaneous
 
-* update dependency @eslint-react/eslint-plugin to v5.8.11 ([#2409](https://github.com/nozomiishii/configs/issues/2409)) ([a4ef374](https://github.com/nozomiishii/configs/commit/a4ef374bcf4001221cc01443f4ccedd8d8e44868))
-* update pnpm to v11.5.1 ([#2401](https://github.com/nozomiishii/configs/issues/2401)) ([0bf71cd](https://github.com/nozomiishii/configs/commit/0bf71cd5287085d7a0ef81af5ec6cbe8455be2cc))
-* update storybook to v10.4.2 ([#2404](https://github.com/nozomiishii/configs/issues/2404)) ([256b24c](https://github.com/nozomiishii/configs/commit/256b24c5c68795be35ce0216fdff1d45be9a3909))
+- update dependency @eslint-react/eslint-plugin to v5.8.11 ([#2409](https://github.com/nozomiishii/configs/issues/2409)) ([a4ef374](https://github.com/nozomiishii/configs/commit/a4ef374bcf4001221cc01443f4ccedd8d8e44868))
+- update pnpm to v11.5.1 ([#2401](https://github.com/nozomiishii/configs/issues/2401)) ([0bf71cd](https://github.com/nozomiishii/configs/commit/0bf71cd5287085d7a0ef81af5ec6cbe8455be2cc))
+- update storybook to v10.4.2 ([#2404](https://github.com/nozomiishii/configs/issues/2404)) ([256b24c](https://github.com/nozomiishii/configs/commit/256b24c5c68795be35ce0216fdff1d45be9a3909))
 
 ## [1.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.5.1...@nozomiishii/eslint-config-v1.6.0) (2026-06-05)
 
