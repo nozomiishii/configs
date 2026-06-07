@@ -4,18 +4,32 @@ lint エラーで詰まった時の進め方と、よくある対応パターン
 
 ## エラーの解決手順
 
-off で消すのは最後の手段。まずコードの修正を試し、可読性が落ちる時だけ rule の調整を検討する。
+off にするのは最後の手段。まずコードを直し、可読性が落ちる時だけ rule の調整を考える。
 
-- コードを直す。lint が通り読みやすさも保てるなら、それで終わり。
-- 直した結果を diff で見せ、可読性が落ちていないか確認してもらう。
-- 直すと可読性が落ちると判断したら、その rule の options を公式ドキュメントで探す。
-- diff と見つけた options を並べて提示し、どれにするか判断を仰ぐ。
-  - shared config `@nozomiishii/eslint-config` に options で緩める issue を出す
-  - プロジェクトの `project/overrides` で options を緩める
-  - `files` で対象を絞る
-  - off にする
+直す人（人間でも AI でも）は次の順で進める。
 
-可読性が落ちるかの基準は決めていない。今は各自の判断に委ねる。
+- まずコードを直す。lint が通り、読みやすさも保てるなら完了。
+- 直すと読みにくくなるなら、いったん止める。直した diff と、その rule の options を公式ドキュメントで確認して並べて見せ、どうするか相談する。
+- 相談で決めた方針を、shared config かこのプロジェクトのどちらかに入れる。
+  - shared config `@nozomiishii/eslint-config` を直す。全 consumer に効かせたい時。<https://github.com/nozomiishii/configs/issues/new> に issue を出して options で緩める / off にする。
+  - このプロジェクトの `project/overrides` で対応する。
+    - options で緩める
+    - `files` で特定のファイルだけに絞る。他は元のまま厳しく保つ。
+    - off にする
+
+`files` で絞る例。テストだけ env の参照を緩める:
+
+```ts
+{
+  files: ["**/*.test.ts"],
+  name: "project/overrides",
+  rules: {
+    "n/no-process-env": ["error", { allowedVariables: ["HOME", "PATH"] }],
+  },
+}
+```
+
+「可読性が落ちるか」に数値の基準は設けていない。直す人の判断でよく、迷ったら直した diff を見せて相談する。
 
 ## よくある対応パターン
 
