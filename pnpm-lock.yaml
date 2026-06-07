@@ -248,8 +248,8 @@ importers:
   packages/nozo:
     dependencies:
       '@clack/prompts':
-        specifier: 1.5.0
-        version: 1.5.0
+        specifier: 1.5.1
+        version: 1.5.1
       '@nozomiishii/commitlint-config':
         specifier: workspace:*
         version: link:../commitlint-config
@@ -461,12 +461,12 @@ packages:
     resolution: {integrity: sha512-p7/ABylAYlexb31wtRdIfH9L9A0Z2T/9H6zAqzqndkY2PLkvNNc580wGhp/gGKN4Sp9sQvSkhc6Oga8/O+wTyw==}
     engines: {node: ^22.18.0 || >=24.11.0}
 
-  '@clack/core@1.4.0':
-    resolution: {integrity: sha512-7Wctjq6f7c1CPz8sPpkwUnz8yRgVANkpNupb81q432FjcJg4l+Sw7XANdNSdWfAKq0IHI0JTcUeK5dxs/HrGPw==}
+  '@clack/core@1.4.1':
+    resolution: {integrity: sha512-FILJa1gGKEFTGZAJE9RpVhrjKz3c3h4ar60dSv6cGuDqufQ84YEIS3GAGvZiN+H6yaLbbvTFNejjCC4tXpZEuw==}
     engines: {node: '>= 20.12.0'}
 
-  '@clack/prompts@1.5.0':
-    resolution: {integrity: sha512-wKh+wTjmrUoUdkZg8KpJO5X+p9PWV+KE9mePseq9UYWkukgTKsGS47RRL2HstwVcvDQH+PenrPJWII8+MfiiyA==}
+  '@clack/prompts@1.5.1':
+    resolution: {integrity: sha512-zccHj2z2oCCO4yrDiRSlFOxWerGqRiysP7a5jPK6uoI9URKAquwY42Dd/iUP8JWHxEzdRe4TlbvZCo8z1/mhrw==}
     engines: {node: '>= 20.12.0'}
 
   '@commitlint/cli@21.0.2':
@@ -4549,14 +4549,14 @@ snapshots:
       '@babel/helper-string-parser': 8.0.0-rc.6
       '@babel/helper-validator-identifier': 8.0.0-rc.6
 
-  '@clack/core@1.4.0':
+  '@clack/core@1.4.1':
     dependencies:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@clack/prompts@1.5.0':
+  '@clack/prompts@1.5.1':
     dependencies:
-      '@clack/core': 1.4.0
+      '@clack/core': 1.4.1
       fast-string-width: 3.0.2
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
