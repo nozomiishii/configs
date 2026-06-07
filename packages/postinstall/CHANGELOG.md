@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.6.0...@nozomiishii/postinstall-v1.7.0) (2026-06-07)
+
+
+### Miscellaneous
+
+* update pnpm to v11.5.1 ([#2401](https://github.com/nozomiishii/configs/issues/2401)) ([0bf71cd](https://github.com/nozomiishii/configs/commit/0bf71cd5287085d7a0ef81af5ec6cbe8455be2cc))
+
 ## [1.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.5.1...@nozomiishii/postinstall-v1.6.0) (2026-06-05)
 
 ### Miscellaneous
