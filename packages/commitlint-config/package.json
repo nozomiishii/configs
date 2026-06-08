@@ -52,7 +52,7 @@
     "typescript": "6.0.3",
     "vitest": "4.1.8"
   },
-  "packageManager": "pnpm@11.5.1",
+  "packageManager": "pnpm@11.5.2",
   "publishConfig": {
     "access": "public",
     "provenance": true
