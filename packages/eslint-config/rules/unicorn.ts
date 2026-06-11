@@ -34,7 +34,7 @@ export function unicorn() {
          *
          * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md
          */
-        "unicorn/prefer-export-from": ["error", { ignoreUsedVariables: true }],
+        "unicorn/prefer-export-from": ["error", { checkUsedVariables: false }],
 
         /**
          * 略語の制限。やるなら明示的にreplacementを記載していく
