@@ -12,6 +12,9 @@
     "url": "https://github.com/nozomiishii/configs.git",
     "directory": "packages/commitlint-config"
   },
+  "bugs": {
+    "url": "https://github.com/nozomiishii/configs/issues"
+  },
   "license": "MIT",
   "author": "Nozomi Ishii",
   "type": "module",
