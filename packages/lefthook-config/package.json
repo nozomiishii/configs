@@ -54,7 +54,7 @@
   "peerDependencies": {
     "lefthook": "2.1.9"
   },
-  "packageManager": "pnpm@11.5.2",
+  "packageManager": "pnpm@11.5.3",
   "publishConfig": {
     "access": "public",
     "provenance": true
