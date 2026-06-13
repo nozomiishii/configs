@@ -1,6 +1,9 @@
 {
   "name": "@nozomiishii/prettier-config",
   "version": "1.7.0",
+  "bugs": {
+    "url": "https://github.com/nozomiishii/configs/issues"
+  },
   "description": "Nozomi's Recommended Prettier config",
   "keywords": [
     "prettier",
