@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/.hooks/startup.sh\""
+            "command": "bash \"$(git rev-parse --show-toplevel)/.hooks/startup.sh\""
           }
         ]
       }
