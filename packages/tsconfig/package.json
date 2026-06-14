@@ -7,6 +7,9 @@
     "config"
   ],
   "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/tsconfig/README.md",
+  "bugs": {
+    "url": "https://github.com/nozomiishii/configs/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
