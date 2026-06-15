@@ -56,6 +56,13 @@ export function javascript() {
         "no-else-return": ["warn", { allowElseIf: false }],
 
         /**
+         * 入れ子の三項演算子を禁止
+         *
+         * @see https://eslint.org/docs/latest/rules/no-nested-ternary
+         */
+        "no-nested-ternary": "error",
+
+        /**
          * 不必要な再命名防止
          *
          * @see https://eslint.org/docs/latest/rules/no-useless-rename
