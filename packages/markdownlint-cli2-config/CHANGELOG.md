@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.9.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v1.8.0...@nozomiishii/markdownlint-cli2-config-v1.9.0) (2026-06-18)
+
+### Miscellaneous
+
+- **@nozomiishii/markdownlint-cli2-config:** Synchronize configs versions
+
 ## [1.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v1.7.0...@nozomiishii/markdownlint-cli2-config-v1.8.0) (2026-06-18)
 
 ### Miscellaneous

@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.9.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.8.0...@nozomiishii/postinstall-v1.9.0) (2026-06-18)
+
+### Miscellaneous
+
+- **@nozomiishii/postinstall:** Synchronize configs versions
+
 ## [1.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.7.0...@nozomiishii/postinstall-v1.8.0) (2026-06-18)
 
 ### Miscellaneous

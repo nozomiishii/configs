@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.9.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.8.0...@nozomiishii/tsconfig-v1.9.0) (2026-06-18)
+
+### Miscellaneous
+
+- **@nozomiishii/tsconfig:** Synchronize configs versions
+
 ## [1.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.7.0...@nozomiishii/tsconfig-v1.8.0) (2026-06-18)
 
 ### Miscellaneous
