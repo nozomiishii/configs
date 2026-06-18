@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.8.0](https://github.com/nozomiishii/configs/compare/nozo-v1.7.0...nozo-v1.8.0) (2026-06-18)
+
+### Miscellaneous
+
+- add bugs metadata to published packages ([#2436](https://github.com/nozomiishii/configs/issues/2436)) ([7b24089](https://github.com/nozomiishii/configs/commit/7b24089764009bda233273320e2675aea120ef7c))
+- add lint troubleshooting guide reference to nozo eslint config ([#2413](https://github.com/nozomiishii/configs/issues/2413)) ([5653af6](https://github.com/nozomiishii/configs/commit/5653af664169b3c91aba041123ebec540611c506))
+- update dependency @clack/prompts to v1.5.1 ([#2408](https://github.com/nozomiishii/configs/issues/2408)) ([3236530](https://github.com/nozomiishii/configs/commit/3236530bc4da51852a491ca00662a6020814cccb))
+- update dependency eslint-plugin-unicorn to v66 ([#2452](https://github.com/nozomiishii/configs/issues/2452)) ([991601b](https://github.com/nozomiishii/configs/commit/991601bfd41968f6f85b3661cad41ccfbabee4a4))
+- update dependency tsdown to v0.22.2 ([#2414](https://github.com/nozomiishii/configs/issues/2414)) ([8345397](https://github.com/nozomiishii/configs/commit/8345397124bec027c9fa96545541906c597b03fb))
+- update eslint monorepo to v10.5.0 ([#2449](https://github.com/nozomiishii/configs/issues/2449)) ([0ab940d](https://github.com/nozomiishii/configs/commit/0ab940d5f51d67322455d5998c7078862d3a4d7a))
+- update pnpm to v11.5.2 ([#2417](https://github.com/nozomiishii/configs/issues/2417)) ([0948c44](https://github.com/nozomiishii/configs/commit/0948c44dffd4a35ebaf66e1c07672eed6dde701a))
+- update pnpm to v11.5.3 ([#2431](https://github.com/nozomiishii/configs/issues/2431)) ([d7be503](https://github.com/nozomiishii/configs/commit/d7be503ccce8218adcf67a5702f3e4ee080cb3af))
+- update pnpm to v11.6.0 ([#2443](https://github.com/nozomiishii/configs/issues/2443)) ([3c785a3](https://github.com/nozomiishii/configs/commit/3c785a377a4fb0d7a2901ac3627f7c7f8ecdce83))
+
 ## [1.7.0](https://github.com/nozomiishii/configs/compare/nozo-v1.6.0...nozo-v1.7.0) (2026-06-07)
 
 ### Miscellaneous

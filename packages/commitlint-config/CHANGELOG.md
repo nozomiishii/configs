@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.7.0...@nozomiishii/commitlint-config-v1.8.0) (2026-06-18)
+
+### Miscellaneous
+
+- add bugs metadata to published packages ([#2436](https://github.com/nozomiishii/configs/issues/2436)) ([7b24089](https://github.com/nozomiishii/configs/commit/7b24089764009bda233273320e2675aea120ef7c))
+- update dependency tsdown to v0.22.2 ([#2414](https://github.com/nozomiishii/configs/issues/2414)) ([8345397](https://github.com/nozomiishii/configs/commit/8345397124bec027c9fa96545541906c597b03fb))
+- update pnpm to v11.5.2 ([#2417](https://github.com/nozomiishii/configs/issues/2417)) ([0948c44](https://github.com/nozomiishii/configs/commit/0948c44dffd4a35ebaf66e1c07672eed6dde701a))
+- update pnpm to v11.5.3 ([#2431](https://github.com/nozomiishii/configs/issues/2431)) ([d7be503](https://github.com/nozomiishii/configs/commit/d7be503ccce8218adcf67a5702f3e4ee080cb3af))
+- update pnpm to v11.6.0 ([#2443](https://github.com/nozomiishii/configs/issues/2443)) ([3c785a3](https://github.com/nozomiishii/configs/commit/3c785a377a4fb0d7a2901ac3627f7c7f8ecdce83))
+
 ## [1.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.6.0...@nozomiishii/commitlint-config-v1.7.0) (2026-06-07)
 
 ### Miscellaneous
