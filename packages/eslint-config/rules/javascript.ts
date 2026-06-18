@@ -3,7 +3,7 @@ import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
 
 /**
- * @returns @ESLint/js
+ * @returns `@eslint/js`
  *
  * @see https://eslint.org/docs/latest/rules/
  */
