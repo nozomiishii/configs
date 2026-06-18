@@ -1,12 +1,12 @@
 {
-  ".": "1.7.0",
-  "packages/commitlint-config": "1.7.0",
-  "packages/cspell-config": "1.7.0",
-  "packages/eslint-config": "1.7.0",
-  "packages/lefthook-config": "1.7.0",
-  "packages/markdownlint-cli2-config": "1.7.0",
-  "packages/prettier-config": "1.7.0",
-  "packages/tsconfig": "1.7.0",
-  "packages/postinstall": "1.7.0",
-  "packages/nozo": "1.7.0"
+  ".": "1.8.0",
+  "packages/commitlint-config": "1.8.0",
+  "packages/cspell-config": "1.8.0",
+  "packages/eslint-config": "1.8.0",
+  "packages/lefthook-config": "1.8.0",
+  "packages/markdownlint-cli2-config": "1.8.0",
+  "packages/prettier-config": "1.8.0",
+  "packages/tsconfig": "1.8.0",
+  "packages/postinstall": "1.8.0",
+  "packages/nozo": "1.8.0"
 }
