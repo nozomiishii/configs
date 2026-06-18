@@ -6,7 +6,7 @@ export type Options = {
 };
 
 /**
- * typescript preset の options。
+ * TypeScript preset の options。
  */
 export type TypescriptOptions = {
   /**

@@ -22,8 +22,8 @@ async function runInit(preset?: PresetId, monorepo?: boolean): Promise<InitResul
 
   await init({
     cwd: tmpDir,
-    ...(monorepo === undefined ? {} : { monorepo }),
-    ...(preset === undefined ? {} : { preset }),
+    ...(monorepo !== undefined && { monorepo }),
+    ...(preset !== undefined && { preset }),
   });
 
   const pkg = JSON.parse(

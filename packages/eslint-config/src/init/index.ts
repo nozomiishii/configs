@@ -38,7 +38,7 @@ export async function init({
   const starter = monorepo
     ? starterRaw.replace(
         `${preset}()`,
-        `${preset}({ typescript: { tsconfigRootDir: import.meta.dirname } })`,
+        () => `${preset}({ typescript: { tsconfigRootDir: import.meta.dirname } })`,
       )
     : starterRaw;
 

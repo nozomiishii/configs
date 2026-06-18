@@ -30,7 +30,7 @@ export function typescript({ tsconfigRootDir }: TypescriptOptions = {}) {
       languageOptions: {
         parserOptions: {
           projectService: true,
-          ...(tsconfigRootDir ? { tsconfigRootDir } : {}),
+          ...(tsconfigRootDir && { tsconfigRootDir }),
         },
       },
       name: name("typescript/parserOptions"),

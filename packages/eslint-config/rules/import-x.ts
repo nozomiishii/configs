@@ -5,7 +5,7 @@ import { name } from "../utils/name";
 /**
  * @returns eslint-plugin-import-x
  *
- * typescriptに任せた方がいいルール
+ * TypeScriptに任せた方がいいルール
  * https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
  * ```
  * import/named
@@ -31,7 +31,7 @@ export function importX() {
     name: name("import-x"),
     rules: {
       /**
-       * 拡張子を省略できるもの（js/ts 系）は省略する。json などは維持。
+       * 拡張子を省略できるもの（js/ts 系）は省略する。JSON などは維持。
        *
        * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/extensions.md
        */
