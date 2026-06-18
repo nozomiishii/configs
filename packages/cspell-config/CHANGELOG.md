@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.8.0...@nozomiishii/cspell-config-v1.9.0) (2026-06-18)
+
+
+### Miscellaneous
+
+* **@nozomiishii/cspell-config:** Synchronize configs versions
+
 ## [1.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.7.0...@nozomiishii/cspell-config-v1.8.0) (2026-06-18)
 
 ### Miscellaneous

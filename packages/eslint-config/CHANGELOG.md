@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.8.0...@nozomiishii/eslint-config-v1.9.0) (2026-06-18)
+
+
+### Features
+
+* allow experimental Node.js APIs in n/no-unsupported-features/node-builtins ([#2454](https://github.com/nozomiishii/configs/issues/2454)) ([b9a836d](https://github.com/nozomiishii/configs/commit/b9a836d0e5aeaa8e0ecf57d5722f0f3af39e6483))
+
 ## [1.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.7.0...@nozomiishii/eslint-config-v1.8.0) (2026-06-18)
 
 ### Features
