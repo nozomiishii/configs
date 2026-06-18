@@ -2,10 +2,9 @@
 
 ## [1.9.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v1.8.0...@nozomiishii/prettier-config-v1.9.0) (2026-06-18)
 
-
 ### Miscellaneous
 
-* **@nozomiishii/prettier-config:** Synchronize configs versions
+- **@nozomiishii/prettier-config:** Synchronize configs versions
 
 ## [1.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v1.7.0...@nozomiishii/prettier-config-v1.8.0) (2026-06-18)
 

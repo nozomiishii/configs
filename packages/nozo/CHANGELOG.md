@@ -2,10 +2,9 @@
 
 ## [1.9.0](https://github.com/nozomiishii/configs/compare/nozo-v1.8.0...nozo-v1.9.0) (2026-06-18)
 
-
 ### Miscellaneous
 
-* **nozo:** Synchronize configs versions
+- **nozo:** Synchronize configs versions
 
 ## [1.8.0](https://github.com/nozomiishii/configs/compare/nozo-v1.7.0...nozo-v1.8.0) (2026-06-18)
 
