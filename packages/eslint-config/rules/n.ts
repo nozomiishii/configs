@@ -18,7 +18,7 @@ export function n() {
         ...config.rules,
 
         /**
-         * typescriptやeslint-plugin-import-xで解決する
+         * TypeScriptやeslint-plugin-import-xで解決する
          */
         "n/no-missing-import": "off",
       },
