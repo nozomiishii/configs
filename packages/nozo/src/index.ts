@@ -28,7 +28,7 @@ async function main(): Promise<void> {
   const isBuiltin = sub !== undefined && BUILTIN_COMMANDS.has(sub);
 
   if (sub !== undefined && !isFlag && !isBuiltin) {
-    // PATH dispatch (cargo / git style)
+    // PATH dispatch (cargo / Git style)
     const ext = await which(`nozo-${sub}`, { nothrow: true });
 
     if (ext === null) {
