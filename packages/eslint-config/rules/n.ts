@@ -21,6 +21,16 @@ export function n() {
          * TypeScriptやeslint-plugin-import-xで解決する
          */
         "n/no-missing-import": "off",
+
+        /**
+         * experimental な Node.js API の使用を許可する
+         *
+         * @see https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-unsupported-features/node-builtins.md
+         */
+        "n/no-unsupported-features/node-builtins": [
+          "error",
+          { allowExperimental: true },
+        ],
       },
       // pnpmでnode管理したいので設定。engines設定してるならここは省略できる。
       // pnpm.executionEnv.nodeVersionがcustomManagers書いてもenginesと同じタイミングでアップデートしてくれない。
