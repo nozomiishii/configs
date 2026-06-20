@@ -13,7 +13,7 @@ type InitResult = {
 };
 
 // 一時dirでinitを実行し、生成された package.json と eslint.config.ts を読み取る
-async function runInit(preset?: PresetId, monorepo?: boolean): Promise<InitResult> {
+async function runInit(preset?: PresetId, isMonorepo?: boolean): Promise<InitResult> {
   const tmpDir = mkdtempSync(path.join(tmpdir(), "nozo-eslint-init-"));
   writeFileSync(
     path.join(tmpDir, "package.json"),
@@ -22,7 +22,7 @@ async function runInit(preset?: PresetId, monorepo?: boolean): Promise<InitResul
 
   await init({
     cwd: tmpDir,
-    ...(monorepo !== undefined && { monorepo }),
+    ...(isMonorepo !== undefined && { monorepo: isMonorepo }),
     ...(preset !== undefined && { preset }),
   });
 
