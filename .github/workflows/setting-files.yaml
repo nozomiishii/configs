@@ -42,7 +42,7 @@ jobs:
   required:
     needs: [format-check]
     if: always()
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 1
     steps:
       - name: Fail if any required job failed or was cancelled
