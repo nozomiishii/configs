@@ -38,3 +38,15 @@ jobs:
         run: |
           echo 'Try the following command in the project root'
           echo 'pnpm format:fix'
+
+  required:
+    needs: [format-check]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Fail if any required job failed or was cancelled
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+        run: |
+          echo "A required job failed or was cancelled"
+          exit 1
