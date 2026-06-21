@@ -18,14 +18,37 @@ defaults:
     working-directory: packages/postinstall
 
 jobs:
-  test:
+  changes:
     if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      src: ${{ steps.filter.outputs.src }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+
+      - name: Detect changes
+        uses: dorny/paths-filter@fbd0ab8f3e69293af611ebaee6363fc25e6d187d # v4.0.1
+        id: filter
+        with:
+          filters: |
+            src:
+              - 'packages/postinstall/**'
+              - '.github/workflows/postinstall.yaml'
+
+  test:
+    needs: changes
+    if: needs.changes.outputs.src == 'true'
     runs-on: ubuntu-slim
     timeout-minutes: 10
-
     permissions:
-      contents: read # required by actions/checkout to fetch repository code
-      pull-requests: read # required by dorny/paths-filter to list PR files via the GitHub API
+      contents: read
 
     steps:
       - name: Check out
@@ -33,25 +56,14 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Check for changes
-        uses: dorny/paths-filter@fbd0ab8f3e69293af611ebaee6363fc25e6d187d # v4.0.1
-        id: changes
-        with:
-          filters: |
-            src:
-              - 'packages/postinstall/**'
-              - '.github/workflows/postinstall.yaml'
-
       - name: Setup Node
-        if: steps.changes.outputs.src == 'true'
         uses: ./.github/actions/setup-node
 
       - name: Test
-        if: steps.changes.outputs.src == 'true'
         run: pnpm test
 
   required:
-    needs: [test]
+    needs: [changes, test]
     if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 1

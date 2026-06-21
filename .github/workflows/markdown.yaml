@@ -10,12 +10,34 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  markdown-lint:
-    runs-on: ubuntu-slim
-
+  changes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
-      contents: read # required by actions/checkout to fetch repository code
-      pull-requests: read # required by dorny/paths-filter to list PR files via the GitHub API
+      contents: read
+      pull-requests: read
+    outputs:
+      md: ${{ steps.filter.outputs.md }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+
+      - name: Detect changes
+        uses: dorny/paths-filter@fbd0ab8f3e69293af611ebaee6363fc25e6d187d # v4.0.1
+        id: filter
+        with:
+          filters: |
+            md:
+              - '**/*.md'
+
+  markdown-lint:
+    needs: changes
+    if: needs.changes.outputs.md == 'true'
+    runs-on: ubuntu-slim
+    permissions:
+      contents: read
 
     steps:
       - name: Check out
@@ -23,24 +45,14 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Check for changes
-        uses: dorny/paths-filter@fbd0ab8f3e69293af611ebaee6363fc25e6d187d # v4.0.1
-        id: changes
-        with:
-          filters: |
-            md:
-              - '**/*.md'
-
       - name: Setup Node
-        if: steps.changes.outputs.md == 'true'
         uses: ./.github/actions/setup-node
 
       - name: lint
-        if: steps.changes.outputs.md == 'true'
         run: npx -y markdownlint-cli2 "**/*.md"
 
   required:
-    needs: [markdown-lint]
+    needs: [changes, markdown-lint]
     if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 1
