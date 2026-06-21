@@ -47,7 +47,7 @@
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/figlet": "1.7.0",
-    "@types/node": "24.12.2",
+    "@types/node": "24.13.2",
     "tsdown": "0.22.3",
     "typescript": "6.0.3",
     "vitest": "4.1.9"
