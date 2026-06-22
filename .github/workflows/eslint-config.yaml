@@ -65,6 +65,8 @@ jobs:
         run: pnpm check:ts
 
   required:
+    # name 変更時は infra 側も更新する
+    name: ESLint Config / required
     needs: [changes, static]
     if: always()
     runs-on: ubuntu-slim
