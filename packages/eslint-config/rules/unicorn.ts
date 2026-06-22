@@ -22,6 +22,13 @@ export function unicorn() {
         ...eslintPluginUnicorn.configs.recommended.rules,
 
         /**
+         * 略語の制限。やるなら明示的にreplacementを記載していく
+         *
+         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/name-replacements.md
+         */
+        "unicorn/name-replacements": "off",
+
+        /**
          * React Componentやhooksでは条件によってはnullを返せるようにしたいのでoff
          *
          * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-null.md
@@ -35,13 +42,6 @@ export function unicorn() {
          * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md
          */
         "unicorn/prefer-export-from": "error",
-
-        /**
-         * 略語の制限。やるなら明示的にreplacementを記載していく
-         *
-         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
-         */
-        "unicorn/prevent-abbreviations": "off",
       },
     },
   ]);
