@@ -51,7 +51,7 @@ jobs:
         run: npx -y markdownlint-cli2 "**/*.md"
 
   required:
-    # name 変更時は infra 側も更新する
+    # name 変更時は infra 側の required_status_checks も更新する
     name: Markdown lint / required
     needs: [changes, markdown-lint]
     if: always()
