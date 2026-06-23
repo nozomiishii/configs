@@ -34,3 +34,37 @@ lint エラーで詰まった時の進め方と、よくある対応パターン
 ```
 
 @see <https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-process-env.md>
+
+### n/no-process-exit, unicorn/no-process-exit
+
+`process.exit()` はその場でプロセスを殺す。未完了の I/O が切り捨てられ、ライブラリとして呼ばれた場合は呼び出し元もろとも落とす。
+
+`process.exitCode` に変える。全処理の完了を待ってから終了するので安全。
+
+```ts
+// NG
+process.stdout.write("結果を表示\n");
+process.exit(0);
+// ↑ stdout がフラッシュされる前にプロセスが死ぬことがある
+
+// OK
+process.exitCode = 1;
+```
+
+@see <https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-process-exit.md>
+
+### no-console
+
+`console.log` はデバッグの残骸か意図的な出力か、コードを読むだけでは判断できない。意図的な出力には `process.stdout.write` / `process.stderr.write` やログライブラリを使う。こうすると `console.log` が残っていれば消し忘れだと即座に分かる。
+
+```ts
+// NG
+console.log("結果を表示");
+console.error("エラーが発生しました");
+
+// OK
+process.stdout.write("結果を表示\n");
+process.stderr.write("エラーが発生しました\n");
+```
+
+@see <https://eslint.org/docs/latest/rules/no-console>
