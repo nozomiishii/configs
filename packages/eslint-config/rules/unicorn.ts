@@ -47,11 +47,12 @@ export function unicorn() {
 
     {
       /**
-       * Next.js の instrumentation-client はモジュール読み込み時に初期化コードを実行する仕様
+       * Next.js の instrumentation-client は Sentry, PostHog, Datadog RUM でトップレベル副作用関数を呼ぶ必要がある
        *
+       * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
        * @see https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client
        */
-      files: ["**/instrumentation-client.{ts,tsx,js,jsx,mts,mjs}"],
+      files: ["**/instrumentation-client.ts"],
       name: name("unicorn/instrumentation-client"),
       rules: {
         "unicorn/no-top-level-side-effects": "off",
