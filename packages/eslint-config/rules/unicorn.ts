@@ -44,5 +44,19 @@ export function unicorn() {
         "unicorn/prefer-export-from": "error",
       },
     },
+
+    {
+      /**
+       * Next.js の instrumentation-client は Sentry, PostHog, Datadog RUM でトップレベル副作用関数を呼ぶ必要がある
+       *
+       * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+       * @see https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client
+       */
+      files: ["**/instrumentation-client.ts"],
+      name: name("unicorn/instrumentation-client"),
+      rules: {
+        "unicorn/no-top-level-side-effects": "off",
+      },
+    },
   ]);
 }
