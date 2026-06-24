@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.9.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.9.0...@nozomiishii/postinstall-v1.9.1) (2026-06-24)
+
+### Miscellaneous
+
+- update dependency @types/node to v24.13.2 ([#2471](https://github.com/nozomiishii/configs/issues/2471)) ([dbbe14a](https://github.com/nozomiishii/configs/commit/dbbe14a1a198a3ce3f693e453f1c57f850563523))
+- update dependency tsdown to v0.22.3 ([#2466](https://github.com/nozomiishii/configs/issues/2466)) ([004181d](https://github.com/nozomiishii/configs/commit/004181d76ab2ab01f59194644222686a1b5817fb))
+- update pnpm to v11.7.0 ([#2456](https://github.com/nozomiishii/configs/issues/2456)) ([9883fd3](https://github.com/nozomiishii/configs/commit/9883fd39d4429efbc0ec562803d8af941ed628b5))
+- update pnpm to v11.8.0 ([#2473](https://github.com/nozomiishii/configs/issues/2473)) ([93ff57c](https://github.com/nozomiishii/configs/commit/93ff57c4a7792beae8c18df6e0d84ec64288fef8))
+- update vitest monorepo to v4.1.9 ([#2457](https://github.com/nozomiishii/configs/issues/2457)) ([35fea6a](https://github.com/nozomiishii/configs/commit/35fea6ad862cf153bf568cb3f81f1305d63a93bb))
+
 ## [1.9.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.8.0...@nozomiishii/postinstall-v1.9.0) (2026-06-18)
 
 ### Miscellaneous
