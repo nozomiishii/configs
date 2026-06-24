@@ -44,5 +44,18 @@ export function unicorn() {
         "unicorn/prefer-export-from": "error",
       },
     },
+
+    {
+      /**
+       * Next.js の instrumentation-client はモジュール読み込み時に初期化コードを実行する仕様
+       *
+       * @see https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client
+       */
+      files: ["**/instrumentation-client.{ts,tsx,js,jsx,mts,mjs}"],
+      name: name("unicorn/instrumentation-client"),
+      rules: {
+        "unicorn/no-top-level-side-effects": "off",
+      },
+    },
   ]);
 }
