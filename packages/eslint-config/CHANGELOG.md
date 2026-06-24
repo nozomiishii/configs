@@ -1,5 +1,36 @@
 # Changelog
 
+## [1.9.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.9.0...@nozomiishii/eslint-config-v1.9.1) (2026-06-24)
+
+
+### Bug Fixes
+
+* clarify project leader authority in troubleshooting guide ([#2486](https://github.com/nozomiishii/configs/issues/2486)) ([9432333](https://github.com/nozomiishii/configs/commit/9432333cd8277223bbb89edd049e126c6f049c1c))
+* disable unicorn/no-top-level-side-effects for instrumentation-client ([#2490](https://github.com/nozomiishii/configs/issues/2490)) ([b2e56d2](https://github.com/nozomiishii/configs/commit/b2e56d2aba2d71c1e79a0165b2c0b6f862378283))
+* rename unicorn/prevent-abbreviations to unicorn/name-replacements ([#2481](https://github.com/nozomiishii/configs/issues/2481)) ([de51561](https://github.com/nozomiishii/configs/commit/de515613b26536168ef3577940502dd8ed16291b))
+
+
+### Miscellaneous
+
+* add process.exit and console.log troubleshooting examples to eslint-config ([#2487](https://github.com/nozomiishii/configs/issues/2487)) ([cba8d3b](https://github.com/nozomiishii/configs/commit/cba8d3b44c822ed89998f133ba734128ac56c27f))
+* update dependency @eslint-react/eslint-plugin to v5.9.1 ([#2482](https://github.com/nozomiishii/configs/issues/2482)) ([c446ffa](https://github.com/nozomiishii/configs/commit/c446ffa832a1543180bba7e00f42fbec1534d72e))
+* update dependency @types/node to v24.13.2 ([#2471](https://github.com/nozomiishii/configs/issues/2471)) ([dbbe14a](https://github.com/nozomiishii/configs/commit/dbbe14a1a198a3ce3f693e453f1c57f850563523))
+* update dependency eslint-plugin-jsdoc to v63.0.4 ([#2464](https://github.com/nozomiishii/configs/issues/2464)) ([33174d8](https://github.com/nozomiishii/configs/commit/33174d8273fd63f7f5af697d67a47be57655d9ad))
+* update dependency eslint-plugin-jsdoc to v63.0.5 ([#2468](https://github.com/nozomiishii/configs/issues/2468)) ([9cd720b](https://github.com/nozomiishii/configs/commit/9cd720b4eba103b0bdbe95ca578403d74a407f42))
+* update dependency eslint-plugin-jsdoc to v63.0.6 ([#2469](https://github.com/nozomiishii/configs/issues/2469)) ([471ddb4](https://github.com/nozomiishii/configs/commit/471ddb4bd801d24d6cc5466e75412b9fb2895a59))
+* update dependency eslint-plugin-jsdoc to v63.0.7 ([#2489](https://github.com/nozomiishii/configs/issues/2489)) ([35d3c12](https://github.com/nozomiishii/configs/commit/35d3c12128f5f6aeb2d4c4b4ed5773f00790179c))
+* update dependency eslint-plugin-package-json to v1.4.0 ([#2470](https://github.com/nozomiishii/configs/issues/2470)) ([8cfc28e](https://github.com/nozomiishii/configs/commit/8cfc28e04a5052dee636a5bfc4fd5b39bb823430))
+* update dependency eslint-plugin-perfectionist to v5.9.1 ([#2459](https://github.com/nozomiishii/configs/issues/2459)) ([e947547](https://github.com/nozomiishii/configs/commit/e947547af62e228d3bb16cc5bed5eef6d6999901))
+* update dependency eslint-plugin-unicorn to v67 ([#2467](https://github.com/nozomiishii/configs/issues/2467)) ([9de473e](https://github.com/nozomiishii/configs/commit/9de473e3f7a6db5328ab89545e999235bab19d5c))
+* update dependency eslint-plugin-unicorn to v68 ([#2480](https://github.com/nozomiishii/configs/issues/2480)) ([8378cfd](https://github.com/nozomiishii/configs/commit/8378cfd2e88c5c538bbf62ece3cc3a6a4d3224e7))
+* update dependency tsdown to v0.22.3 ([#2466](https://github.com/nozomiishii/configs/issues/2466)) ([004181d](https://github.com/nozomiishii/configs/commit/004181d76ab2ab01f59194644222686a1b5817fb))
+* update pnpm to v11.7.0 ([#2456](https://github.com/nozomiishii/configs/issues/2456)) ([9883fd3](https://github.com/nozomiishii/configs/commit/9883fd39d4429efbc0ec562803d8af941ed628b5))
+* update pnpm to v11.8.0 ([#2473](https://github.com/nozomiishii/configs/issues/2473)) ([93ff57c](https://github.com/nozomiishii/configs/commit/93ff57c4a7792beae8c18df6e0d84ec64288fef8))
+* update storybook to v10.4.5 ([#2462](https://github.com/nozomiishii/configs/issues/2462)) ([a37a893](https://github.com/nozomiishii/configs/commit/a37a8935da2908db6a2dfd7a23149b62184655c2))
+* update storybook to v10.4.6 ([#2465](https://github.com/nozomiishii/configs/issues/2465)) ([4ab7a25](https://github.com/nozomiishii/configs/commit/4ab7a252737c0603784b1da020df83cc7978da76))
+* update typescript-eslint monorepo to v8.61.1 ([#2463](https://github.com/nozomiishii/configs/issues/2463)) ([5991e81](https://github.com/nozomiishii/configs/commit/5991e816eceb7f0102877d079f1bfc513721fe21))
+* update vitest monorepo to v4.1.9 ([#2457](https://github.com/nozomiishii/configs/issues/2457)) ([35fea6a](https://github.com/nozomiishii/configs/commit/35fea6ad862cf153bf568cb3f81f1305d63a93bb))
+
 ## [1.9.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.8.0...@nozomiishii/eslint-config-v1.9.0) (2026-06-18)
 
 ### Features
