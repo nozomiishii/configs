@@ -47,6 +47,18 @@ export function unicorn() {
 
     {
       /**
+       * router.replace() など String#replace() 以外の .replace() メソッドで false positive が発生する
+       *
+       * @see https://github.com/sindresorhus/eslint-plugin-unicorn/issues/3437
+       */
+      name: name("unicorn/workaround"),
+      rules: {
+        "unicorn/no-unsafe-string-replacement": "off",
+      },
+    },
+
+    {
+      /**
        * Next.js の instrumentation-client は Sentry, PostHog, Datadog RUM でトップレベル副作用関数を呼ぶ必要がある
        *
        * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
