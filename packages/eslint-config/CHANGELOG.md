@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.9.1...@nozomiishii/eslint-config-v1.9.2) (2026-06-25)
+
+### Bug Fixes
+
+- disable unicorn/no-unsafe-string-replacement due to false positives ([#2493](https://github.com/nozomiishii/configs/issues/2493)) ([d6a8719](https://github.com/nozomiishii/configs/commit/d6a8719c62f916c0a95818cdfb6bfd7491fee4cc))
+
+### Miscellaneous
+
+- update dependency eslint-plugin-package-json to v1.5.0 ([#2491](https://github.com/nozomiishii/configs/issues/2491)) ([579ed33](https://github.com/nozomiishii/configs/commit/579ed334b061b6091c0bf904d5854fcc39a543c3))
+
 ## [1.9.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.9.0...@nozomiishii/eslint-config-v1.9.1) (2026-06-24)
 
 ### Bug Fixes
