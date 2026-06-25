@@ -41,6 +41,13 @@ export function unicorn() {
          *
          * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md
          */
+        /**
+         * router.replace() など String#replace() 以外の .replace() メソッドで false positive が発生する
+         *
+         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/issues/3437
+         */
+        "unicorn/no-unsafe-string-replacement": "off",
+
         "unicorn/prefer-export-from": "error",
       },
     },
