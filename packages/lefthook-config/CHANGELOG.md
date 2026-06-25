@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.9.1...@nozomiishii/lefthook-config-v1.9.2) (2026-06-25)
+
+
+### Miscellaneous
+
+* **@nozomiishii/lefthook-config:** Synchronize configs versions
+
 ## [1.9.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.9.0...@nozomiishii/lefthook-config-v1.9.1) (2026-06-24)
 
 ### Miscellaneous
