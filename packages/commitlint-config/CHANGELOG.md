@@ -2,11 +2,10 @@
 
 ## [1.9.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.9.2...@nozomiishii/commitlint-config-v1.9.3) (2026-06-26)
 
-
 ### Miscellaneous
 
-* update commitlint monorepo to v21.1.0 ([#2501](https://github.com/nozomiishii/configs/issues/2501)) ([77fa9ab](https://github.com/nozomiishii/configs/commit/77fa9abb18e501bc1647014e6dc8511829025cc4))
-* update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
+- update commitlint monorepo to v21.1.0 ([#2501](https://github.com/nozomiishii/configs/issues/2501)) ([77fa9ab](https://github.com/nozomiishii/configs/commit/77fa9abb18e501bc1647014e6dc8511829025cc4))
+- update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
 
 ## [1.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.9.1...@nozomiishii/commitlint-config-v1.9.2) (2026-06-25)
 
