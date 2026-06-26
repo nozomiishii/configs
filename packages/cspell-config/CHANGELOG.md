@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.9.2...@nozomiishii/cspell-config-v1.9.3) (2026-06-26)
+
+### Miscellaneous
+
+- update node.js to v24.18.0 ([#2499](https://github.com/nozomiishii/configs/issues/2499)) ([2d2b7b2](https://github.com/nozomiishii/configs/commit/2d2b7b2cbbf8cd0212573b7044980a1d655f29ee))
+- update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
+
 ## [1.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.9.1...@nozomiishii/cspell-config-v1.9.2) (2026-06-25)
 
 ### Miscellaneous
