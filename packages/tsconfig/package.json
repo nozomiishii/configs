@@ -26,7 +26,7 @@
     "link": "pnpm link --global"
   },
   "devDependencies": {},
-  "packageManager": "pnpm@11.8.0",
+  "packageManager": "pnpm@11.9.0",
   "publishConfig": {
     "access": "public",
     "provenance": true
