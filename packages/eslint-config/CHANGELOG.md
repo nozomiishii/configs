@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.9.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.9.2...@nozomiishii/eslint-config-v1.9.3) (2026-06-26)
+
+
+### Miscellaneous
+
+* update dependency @eslint-react/eslint-plugin to v5.9.2 ([#2494](https://github.com/nozomiishii/configs/issues/2494)) ([4c5f486](https://github.com/nozomiishii/configs/commit/4c5f486fd5844a11c474ea5df3350e0fe43a0f7e))
+* update dependency globals to v17.7.0 ([#2496](https://github.com/nozomiishii/configs/issues/2496)) ([c48dc40](https://github.com/nozomiishii/configs/commit/c48dc406dfbe7104f57e8c23888d3ab50ff33857))
+* update dependency typescript-eslint to v8.62.0 ([#2497](https://github.com/nozomiishii/configs/issues/2497)) ([c641b0a](https://github.com/nozomiishii/configs/commit/c641b0a1516433ccde2ae6056b08ea0f917d64db))
+* update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
+
 ## [1.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.9.1...@nozomiishii/eslint-config-v1.9.2) (2026-06-25)
 
 ### Bug Fixes

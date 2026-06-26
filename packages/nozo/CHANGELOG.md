@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.3](https://github.com/nozomiishii/configs/compare/nozo-v1.9.2...nozo-v1.9.3) (2026-06-26)
+
+
+### Miscellaneous
+
+* update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
+
 ## [1.9.2](https://github.com/nozomiishii/configs/compare/nozo-v1.9.1...nozo-v1.9.2) (2026-06-25)
 
 ### Miscellaneous
