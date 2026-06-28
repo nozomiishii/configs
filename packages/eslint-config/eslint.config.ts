@@ -8,7 +8,7 @@ export default defineConfig([
   {
     files: ["bin/**/*.js"],
     rules: {
-      "import-x/extensions": "off",
+      "import-x/extensions": ["warn", "ignorePackages"],
     },
   },
 ]);
