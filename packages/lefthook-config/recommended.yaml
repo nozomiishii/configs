@@ -14,6 +14,7 @@ extends:
   - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/update-node-modules.yaml
   - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/cleanup-worktrees-and-branches.yaml
   - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/yaml.yaml
+  - node_modules/@nozomiishii/lefthook-config/hooks/pre-commit/docs.yaml
 
 commit-msg:
   parallel: true
