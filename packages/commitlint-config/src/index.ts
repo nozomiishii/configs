@@ -23,7 +23,7 @@ const config: UserConfig = {
   extends: ["@commitlint/config-conventional"],
   plugins: [{ rules: pluginRules }],
   rules: {
-    "type-enum": [2, "always", ["feat", "fix", "chore"]],
+    "type-enum": [2, "always", ["feat", "fix", "chore", "revert"]],
     "scope-empty": [2, "always"],
     ...customSeverities,
   },
