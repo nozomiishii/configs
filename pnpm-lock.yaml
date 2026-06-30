@@ -168,7 +168,7 @@ importers:
         version: 3.1.1(eslint@10.6.0(jiti@2.7.0))
       eslint-plugin-storybook:
         specifier: 10.4.6
-        version: 10.4.6(eslint@10.6.0(jiti@2.7.0))(storybook@10.4.6(@testing-library/dom@10.4.1)(prettier@3.8.5)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@6.0.3)
+        version: 10.4.6(eslint@10.6.0(jiti@2.7.0))(storybook@10.4.6(@testing-library/dom@10.4.1)(prettier@3.9.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@6.0.3)
       eslint-plugin-tsdoc:
         specifier: 0.5.2
         version: 0.5.2(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)
@@ -332,7 +332,7 @@ importers:
     dependencies:
       prettier-plugin-packagejson:
         specifier: 3.0.2
-        version: 3.0.2(prettier@3.8.5)
+        version: 3.0.2(prettier@3.9.0)
     devDependencies:
       '@nozomiishii/tsconfig':
         specifier: workspace:*
@@ -341,8 +341,8 @@ importers:
         specifier: 24.13.2
         version: 24.13.2
       prettier:
-        specifier: 3.8.5
-        version: 3.8.5
+        specifier: 3.9.0
+        version: 3.9.0
       tsdown:
         specifier: 0.22.3
         version: 0.22.3(oxc-resolver@11.21.3)(typescript@6.0.3)
@@ -3811,8 +3811,8 @@ packages:
       prettier:
         optional: true
 
-  prettier@3.8.5:
-    resolution: {integrity: sha512-zxcTTCedNGJM4R8sj/Cq/F0W/c4iE0afWBcBwMTRtw4WHYP9TWkYjdiH3npPRUYsXQCPR0hTU9yjovOu+E6EQA==}
+  prettier@3.9.0:
+    resolution: {integrity: sha512-LjIqSIC5VYLzs9WedVmJ2ljNAGnU+DteIClbahu4L/DBeWjZ6iT/k1lAYyu9JUh+1xINxWadaPw/Pl63y/agAw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6860,11 +6860,11 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-storybook@10.4.6(eslint@10.6.0(jiti@2.7.0))(storybook@10.4.6(@testing-library/dom@10.4.1)(prettier@3.8.5)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@6.0.3):
+  eslint-plugin-storybook@10.4.6(eslint@10.6.0(jiti@2.7.0))(storybook@10.4.6(@testing-library/dom@10.4.1)(prettier@3.9.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@6.0.3):
     dependencies:
       '@typescript-eslint/utils': 8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)
       eslint: 10.6.0(jiti@2.7.0)
-      storybook: 10.4.6(@testing-library/dom@10.4.1)(prettier@3.8.5)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      storybook: 10.4.6(@testing-library/dom@10.4.1)(prettier@3.9.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -7859,13 +7859,13 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-packagejson@3.0.2(prettier@3.8.5):
+  prettier-plugin-packagejson@3.0.2(prettier@3.9.0):
     dependencies:
       sort-package-json: 3.7.1
     optionalDependencies:
-      prettier: 3.8.5
+      prettier: 3.9.0
 
-  prettier@3.8.5: {}
+  prettier@3.9.0: {}
 
   pretty-format@27.5.1:
     dependencies:
@@ -8097,7 +8097,7 @@ snapshots:
 
   std-env@4.1.0: {}
 
-  storybook@10.4.6(@testing-library/dom@10.4.1)(prettier@3.8.5)(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
+  storybook@10.4.6(@testing-library/dom@10.4.1)(prettier@3.9.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/icons': 2.0.2(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -8115,7 +8115,7 @@ snapshots:
       use-sync-external-store: 1.6.0(react@19.2.7)
       ws: 8.21.0
     optionalDependencies:
-      prettier: 3.8.5
+      prettier: 3.9.0
     transitivePeerDependencies:
       - '@testing-library/dom'
       - bufferutil
