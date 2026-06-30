@@ -33,7 +33,6 @@
     "index.ts",
     "presets",
     "rules",
-    "!rules/*.test.ts",
     "starters",
     "types",
     "utils",
