@@ -1,0 +1,8 @@
+pre-commit:
+  jobs:
+    - name: lint-docs
+      run: |
+        if git diff --cached --diff-filter=d --name-only | grep -q '^docs/superpowers/specs/'; then
+          echo "docs/superpowers/specs/ へのコミットは禁止。設計は GitHub issue にまとめる" >&2
+          exit 1
+        fi
