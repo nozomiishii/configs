@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.10.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.9.2...@nozomiishii/commitlint-config-v1.10.0) (2026-07-01)
+
+### Features
+
+- add revert to allowed commit types ([#2510](https://github.com/nozomiishii/configs/issues/2510)) ([1f8fdb3](https://github.com/nozomiishii/configs/commit/1f8fdb359b8bd6e511b646c511affb9d4bb6cfe8))
+
+### Miscellaneous
+
+- update commitlint monorepo to v21.1.0 ([#2501](https://github.com/nozomiishii/configs/issues/2501)) ([77fa9ab](https://github.com/nozomiishii/configs/commit/77fa9abb18e501bc1647014e6dc8511829025cc4))
+- update dependency conventional-commits-parser to v7 ([#2515](https://github.com/nozomiishii/configs/issues/2515)) ([0c6fbbf](https://github.com/nozomiishii/configs/commit/0c6fbbf66115eea183aae26a282d9d47753a51eb))
+- update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
+
 ## [1.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v1.9.1...@nozomiishii/commitlint-config-v1.9.2) (2026-06-25)
 
 ### Miscellaneous
