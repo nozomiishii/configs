@@ -2,16 +2,14 @@
 
 ## [1.10.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.9.2...@nozomiishii/lefthook-config-v1.10.0) (2026-07-01)
 
-
 ### Features
 
-* add lint-docs pre-commit hook to block superpowers specs ([#2518](https://github.com/nozomiishii/configs/issues/2518)) ([f6393d1](https://github.com/nozomiishii/configs/commit/f6393d13f7d28fa58089570b450bfecedfb4dc72))
-
+- add lint-docs pre-commit hook to block superpowers specs ([#2518](https://github.com/nozomiishii/configs/issues/2518)) ([f6393d1](https://github.com/nozomiishii/configs/commit/f6393d13f7d28fa58089570b450bfecedfb4dc72))
 
 ### Miscellaneous
 
-* update dependency git-harvest to v0.3.3 ([#2500](https://github.com/nozomiishii/configs/issues/2500)) ([e19c0c4](https://github.com/nozomiishii/configs/commit/e19c0c491f8515652a47b2fbaa3a5eaccfb6efa6))
-* update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
+- update dependency git-harvest to v0.3.3 ([#2500](https://github.com/nozomiishii/configs/issues/2500)) ([e19c0c4](https://github.com/nozomiishii/configs/commit/e19c0c491f8515652a47b2fbaa3a5eaccfb6efa6))
+- update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
 
 ## [1.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.9.1...@nozomiishii/lefthook-config-v1.9.2) (2026-06-25)
 

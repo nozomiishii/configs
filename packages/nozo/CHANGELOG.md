@@ -2,11 +2,10 @@
 
 ## [1.10.0](https://github.com/nozomiishii/configs/compare/nozo-v1.9.2...nozo-v1.10.0) (2026-07-01)
 
-
 ### Miscellaneous
 
-* update dependency eslint to v10.6.0 ([#2514](https://github.com/nozomiishii/configs/issues/2514)) ([fa166d5](https://github.com/nozomiishii/configs/commit/fa166d5317fb4b8bb47fd8da2fc7ac1e91e4b4f8))
-* update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
+- update dependency eslint to v10.6.0 ([#2514](https://github.com/nozomiishii/configs/issues/2514)) ([fa166d5](https://github.com/nozomiishii/configs/commit/fa166d5317fb4b8bb47fd8da2fc7ac1e91e4b4f8))
+- update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
 
 ## [1.9.2](https://github.com/nozomiishii/configs/compare/nozo-v1.9.1...nozo-v1.9.2) (2026-06-25)
 
