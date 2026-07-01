@@ -1,12 +1,4 @@
 /**
- * preset (base / node / nextjs) に渡す options。
- */
-export type Options = {
-  betterTailwindcss?: BetterTailwindcssOptions;
-  typescript?: TypescriptOptions;
-};
-
-/**
  * better-tailwindcss preset の options。
  *
  * @see https://github.com/schoero/eslint-plugin-better-tailwindcss/blob/main/docs/settings/settings.md
@@ -35,6 +27,14 @@ export type BetterTailwindcssOptions = {
    * 未指定だとデフォルトの tailwind クラスにフォールバックする。
    */
   entryPoint?: string;
+};
+
+/**
+ * preset (base / node / nextjs) に渡す options。
+ */
+export type Options = {
+  betterTailwindcss?: BetterTailwindcssOptions;
+  typescript?: TypescriptOptions;
 };
 
 /**
