@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.11.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.10.0...@nozomiishii/tsconfig-v1.11.0) (2026-07-01)
+
+### Bug Fixes
+
+- update tsconfig target and lib from ES2024 to ES2025 ([#2524](https://github.com/nozomiishii/configs/issues/2524)) ([4a38aed](https://github.com/nozomiishii/configs/commit/4a38aede2ed57052c1d93f7dea752b4f52d4dadb))
+
 ## [1.10.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.9.2...@nozomiishii/tsconfig-v1.10.0) (2026-07-01)
 
 ### Miscellaneous
