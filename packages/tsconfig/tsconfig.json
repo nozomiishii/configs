@@ -18,9 +18,9 @@
     // どのJavaScriptのバージョンに変換するか
     // 使うnodeバージョンによって変更する
     // 対応表 https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping
-    // ES2024でObject.groupBy / Promise.withResolvers / ArrayBuffer.prototype.transfer等の型が利用可能
-    // Node 22 LTS / Node 24 / 主要モダンブラウザは2026年時点でES2024をネイティブサポート
-    "target": "ES2024",
+    // ES2025でIterator helpers / Set methods / Promise.try等の型が利用可能
+    // Node 22 LTS / Node 24 / 主要モダンブラウザは2026年時点でES2025をネイティブサポート
+    "target": "ES2025",
 
     // バンドラー / トランスパイラ前提のmoduleモード (TS 5.4+)
     // ECMAScript imports/exportsを変換せず保持し、moduleResolution: "bundler" を暗黙的に指定する
@@ -103,9 +103,9 @@
     // Libs
     // ----------------------------------------------------------------
     /* If your code runs in the DOM: */
-    // "lib": ["ES2024", "dom"]
+    // "lib": ["ES2025", "dom"]
     /* If your code doesn't run in the DOM: */
-    "lib": ["ES2024"]
+    "lib": ["ES2025"]
 
     // ----------------------------------------------------------------
     // Types
