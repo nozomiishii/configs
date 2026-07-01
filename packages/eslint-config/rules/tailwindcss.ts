@@ -1,17 +1,14 @@
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 import { defineConfig } from "eslint/config";
+import type { BetterTailwindcssOptions } from "../types";
 import { name } from "../utils/name";
-
-type Options = {
-  entryPoint?: string;
-};
 
 /**
  * @returns eslint-plugin-better-tailwindcss
  *
  * @see https://github.com/schoero/eslint-plugin-better-tailwindcss
  */
-export function betterTailwindcss(options?: Options) {
+export function betterTailwindcss(options?: BetterTailwindcssOptions) {
   return defineConfig([
     {
       name: name("tailwindcss"),
@@ -26,6 +23,7 @@ export function betterTailwindcss(options?: Options) {
       },
       settings: {
         "better-tailwindcss": {
+          ...(options?.cwd && { cwd: options.cwd }),
           entryPoint: options?.entryPoint ?? "src/global.css",
         },
       },

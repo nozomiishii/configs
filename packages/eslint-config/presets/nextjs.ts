@@ -48,7 +48,7 @@ export function nextjs(options: Options = {}) {
     jsxA11yX(),
 
     _nextjs(),
-    betterTailwindcss(),
+    betterTailwindcss(options.betterTailwindcss),
 
     storybook(),
     playwright(),
