@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.10.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v1.9.2...@nozomiishii/prettier-config-v1.10.0) (2026-07-01)
+
+
+### Miscellaneous
+
+* update dependency prettier to v3.8.5 ([#2513](https://github.com/nozomiishii/configs/issues/2513)) ([78d4914](https://github.com/nozomiishii/configs/commit/78d49143e44cf04fc45c732444f7dfae6063a421))
+* update dependency prettier to v3.9.0 ([#2519](https://github.com/nozomiishii/configs/issues/2519)) ([2907e81](https://github.com/nozomiishii/configs/commit/2907e81fb5b2e4ca8415cecef8c268158808373f))
+* update dependency prettier to v3.9.1 ([#2520](https://github.com/nozomiishii/configs/issues/2520)) ([e0c8466](https://github.com/nozomiishii/configs/commit/e0c846687638162ada78c8b07b3f0054d304490f))
+* update pnpm to v11.9.0 ([#2502](https://github.com/nozomiishii/configs/issues/2502)) ([f413ed9](https://github.com/nozomiishii/configs/commit/f413ed9edd8fbb83ad80356dae017c5c308b05e5))
+
 ## [1.9.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v1.9.1...@nozomiishii/prettier-config-v1.9.2) (2026-06-25)
 
 ### Miscellaneous
