@@ -2,15 +2,13 @@
 
 ## [1.11.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.10.0...@nozomiishii/eslint-config-v1.11.0) (2026-07-01)
 
-
 ### Features
 
-* add betterTailwindcss options to eslint-config presets ([#2521](https://github.com/nozomiishii/configs/issues/2521)) ([9c0bfca](https://github.com/nozomiishii/configs/commit/9c0bfca9bd252d388efa423443fcc901c8b4a443))
-
+- add betterTailwindcss options to eslint-config presets ([#2521](https://github.com/nozomiishii/configs/issues/2521)) ([9c0bfca](https://github.com/nozomiishii/configs/commit/9c0bfca9bd252d388efa423443fcc901c8b4a443))
 
 ### Miscellaneous
 
-* update dependency @eslint-react/eslint-plugin to v5.10.0 ([#2523](https://github.com/nozomiishii/configs/issues/2523)) ([b5701c3](https://github.com/nozomiishii/configs/commit/b5701c3ac3c76c19a859681136c55644f4377f49))
+- update dependency @eslint-react/eslint-plugin to v5.10.0 ([#2523](https://github.com/nozomiishii/configs/issues/2523)) ([b5701c3](https://github.com/nozomiishii/configs/commit/b5701c3ac3c76c19a859681136c55644f4377f49))
 
 ## [1.10.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.9.2...@nozomiishii/eslint-config-v1.10.0) (2026-07-01)
 
