@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/nozomiishii/configs/compare/nozo-v1.10.0...nozo-v1.11.0) (2026-07-01)
+
+
+### Miscellaneous
+
+* **nozo:** Synchronize configs versions
+
 ## [1.10.0](https://github.com/nozomiishii/configs/compare/nozo-v1.9.2...nozo-v1.10.0) (2026-07-01)
 
 ### Miscellaneous
