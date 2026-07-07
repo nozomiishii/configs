@@ -2,11 +2,11 @@
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "startup",
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$(git rev-parse --show-toplevel)/.hooks/startup.sh\""
+            "command": "bash \"$(git rev-parse --show-toplevel)/.hooks/apply-direnv.sh\"",
+            "timeout": 300
           }
         ]
       }

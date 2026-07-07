@@ -11,6 +11,7 @@ node_modules
 # env files
 .env*
 !.env.example
+!.envrc
 
 # lefthook
 lefthook-local.yaml
