@@ -40,7 +40,7 @@ importers:
     dependencies:
       '@commitlint/cli':
         specifier: 21.2.1
-        version: 21.2.1(@types/node@24.13.3)(conventional-commits-parser@7.0.1)(typescript@6.0.3)
+        version: 21.2.1(@types/node@24.13.3)(conventional-commits-parser@7.1.0)(typescript@6.0.3)
       '@commitlint/config-conventional':
         specifier: 21.2.0
         version: 21.2.0
@@ -58,8 +58,8 @@ importers:
         specifier: 24.13.3
         version: 24.13.3
       conventional-commits-parser:
-        specifier: 7.0.1
-        version: 7.0.1
+        specifier: 7.1.0
+        version: 7.1.0
       tsdown:
         specifier: 0.22.4
         version: 0.22.4(oxc-resolver@11.23.0)(typescript@6.0.3)
@@ -2272,6 +2272,10 @@ packages:
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
+  argue-cli@3.1.0:
+    resolution: {integrity: sha512-DhBpBfXL4SS2uC0N922MMajKR3CdrTG0u2or1PNYgXMsrSzViJrbtvT0nCLlLGUI0plam/ZZCs7aAauHtW9thw==}
+    engines: {node: '>=22'}
+
   aria-query@5.3.0:
     resolution: {integrity: sha512-b0P0sZPKtyu8HkeRAfCq0IfURZK+SuwMjY1UXGBU27wpAiTwQAIlq56IbIO+ytk/JjS1fMR14ee5WBBfKi5J6A==}
 
@@ -2448,8 +2452,8 @@ packages:
     resolution: {integrity: sha512-n4Kr1HFMTf3iMbES0TMxKIcYtUUv4rKqyQQp2JwfOEfFCOfGT3Tq4mCyJ8S9/YPyWhydjfKrrvnyl+gCjA+mJQ==}
     engines: {node: '>=22'}
 
-  conventional-commits-parser@7.0.1:
-    resolution: {integrity: sha512-6VtskFpPsNkGVk/TY2RnV/MEdKfvCPBtQZN9x8jh9+k5RWBQ+tiaWn5UFCzTr0Dd88iKx7xghxbjBRp5uIzp3g==}
+  conventional-commits-parser@7.1.0:
+    resolution: {integrity: sha512-DPp6hkUjvwIivxbkrTiLXeRswNv1A/4GFA2X6scXma0AMa9632V3TwxmrlkUIEtUktiM3Ln+RrSH2xlP3/jUTw==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -3535,10 +3539,6 @@ packages:
   mdurl@2.0.0:
     resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
 
-  meow@14.1.0:
-    resolution: {integrity: sha512-EDYo6VlmtnumlcBCbh1gLJ//9jvM/ndXHfVXIFrZVr6fGcwTUyCTFNTLCKuY3ffbK8L/+3Mzqnd58RojiZqHVw==}
-    engines: {node: '>=20'}
-
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
@@ -4605,13 +4605,13 @@ snapshots:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@commitlint/cli@21.2.1(@types/node@24.13.3)(conventional-commits-parser@7.0.1)(typescript@6.0.3)':
+  '@commitlint/cli@21.2.1(@types/node@24.13.3)(conventional-commits-parser@7.1.0)(typescript@6.0.3)':
     dependencies:
       '@commitlint/config-conventional': 21.2.0
       '@commitlint/format': 21.2.0
       '@commitlint/lint': 21.2.0
       '@commitlint/load': 21.2.0(@types/node@24.13.3)(typescript@6.0.3)
-      '@commitlint/read': 21.2.1(conventional-commits-parser@7.0.1)
+      '@commitlint/read': 21.2.1(conventional-commits-parser@7.1.0)
       '@commitlint/types': 21.2.0
       tinyexec: 1.2.4
       yargs: 18.0.0
@@ -4676,13 +4676,13 @@ snapshots:
     dependencies:
       '@commitlint/types': 21.2.0
       conventional-changelog-angular: 9.2.1
-      conventional-commits-parser: 7.0.1
+      conventional-commits-parser: 7.1.0
 
-  '@commitlint/read@21.2.1(conventional-commits-parser@7.0.1)':
+  '@commitlint/read@21.2.1(conventional-commits-parser@7.1.0)':
     dependencies:
       '@commitlint/top-level': 21.2.0
       '@commitlint/types': 21.2.0
-      '@conventional-changelog/git-client': 3.1.0(conventional-commits-parser@7.0.1)
+      '@conventional-changelog/git-client': 3.1.0(conventional-commits-parser@7.1.0)
       tinyexec: 1.2.4
     transitivePeerDependencies:
       - conventional-commits-filter
@@ -4711,16 +4711,16 @@ snapshots:
 
   '@commitlint/types@21.2.0':
     dependencies:
-      conventional-commits-parser: 7.0.1
+      conventional-commits-parser: 7.1.0
       picocolors: 1.1.1
 
-  '@conventional-changelog/git-client@3.1.0(conventional-commits-parser@7.0.1)':
+  '@conventional-changelog/git-client@3.1.0(conventional-commits-parser@7.1.0)':
     dependencies:
       '@simple-libs/child-process-utils': 2.0.0
       '@simple-libs/stream-utils': 2.0.0
       semver: 7.8.5
     optionalDependencies:
-      conventional-commits-parser: 7.0.1
+      conventional-commits-parser: 7.1.0
 
   '@conventional-changelog/template@1.2.1': {}
 
@@ -6162,6 +6162,8 @@ snapshots:
 
   argparse@2.0.1: {}
 
+  argue-cli@3.1.0: {}
+
   aria-query@5.3.0:
     dependencies:
       dequal: 2.0.3
@@ -6298,10 +6300,10 @@ snapshots:
     dependencies:
       '@conventional-changelog/template': 1.2.1
 
-  conventional-commits-parser@7.0.1:
+  conventional-commits-parser@7.1.0:
     dependencies:
       '@simple-libs/stream-utils': 2.0.0
-      meow: 14.1.0
+      argue-cli: 3.1.0
 
   convert-hrtime@5.0.0: {}
 
@@ -7471,8 +7473,6 @@ snapshots:
   mdn-data@2.28.1: {}
 
   mdurl@2.0.0: {}
-
-  meow@14.1.0: {}
 
   merge2@1.4.1: {}
 
