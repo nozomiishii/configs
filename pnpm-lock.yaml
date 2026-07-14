@@ -303,8 +303,8 @@ importers:
   packages/postinstall:
     dependencies:
       figlet:
-        specifier: 1.11.0
-        version: 1.11.0
+        specifier: 1.11.1
+        version: 1.11.1
       zx:
         specifier: 8.8.5
         version: 8.8.5
@@ -3007,8 +3007,8 @@ packages:
       picomatch:
         optional: true
 
-  figlet@1.11.0:
-    resolution: {integrity: sha512-EEx3OS/l2bFqcUNN2NM9FPJp8vAMrgbCxsbl2hbcJNNxOEwVe3mEzrhan7TbJQViZa8mMqhihlbCaqD+LyYKTQ==}
+  figlet@1.11.1:
+    resolution: {integrity: sha512-piyV6z7Kg7N/VQnYjFcJylphkVxjXbCim1/mL3+cOnDoOTi0XP3ZlQ9g+0978BayngGgL1QKehk61EtlZ0Y2Mg==}
     engines: {node: '>= 17.0.0'}
     hasBin: true
 
@@ -7042,7 +7042,7 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.5
 
-  figlet@1.11.0:
+  figlet@1.11.1:
     dependencies:
       commander: 14.0.3
 
