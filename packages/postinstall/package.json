@@ -48,7 +48,7 @@
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/figlet": "1.7.0",
     "@types/node": "24.13.3",
-    "tsdown": "0.22.5",
+    "tsdown": "0.22.7",
     "typescript": "6.0.3",
     "vitest": "4.1.10"
   },
