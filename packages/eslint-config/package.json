@@ -73,7 +73,7 @@
     "eslint-plugin-jsonc": "3.3.0",
     "eslint-plugin-jsx-a11y-x": "0.2.0",
     "eslint-plugin-n": "18.2.2",
-    "eslint-plugin-package-json": "1.5.0",
+    "eslint-plugin-package-json": "1.6.0",
     "eslint-plugin-perfectionist": "5.10.0",
     "eslint-plugin-playwright": "2.10.5",
     "eslint-plugin-react-hooks": "7.1.1",
