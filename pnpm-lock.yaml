@@ -167,8 +167,8 @@ importers:
         specifier: 3.1.1
         version: 3.1.1(eslint@10.7.0(jiti@2.7.0))
       eslint-plugin-storybook:
-        specifier: 10.5.1
-        version: 10.5.1(eslint@10.7.0(jiti@2.7.0))(storybook@10.5.2(prettier@3.9.5)(react@19.2.7))(typescript@6.0.3)
+        specifier: 10.5.2
+        version: 10.5.2(eslint@10.7.0(jiti@2.7.0))(storybook@10.5.2(prettier@3.9.5)(react@19.2.7))(typescript@6.0.3)
       eslint-plugin-tsdoc:
         specifier: 0.5.2
         version: 0.5.2(eslint@10.7.0(jiti@2.7.0))(typescript@6.0.3)
@@ -2987,11 +2987,11 @@ packages:
     peerDependencies:
       eslint: '>=9.38.0'
 
-  eslint-plugin-storybook@10.5.1:
-    resolution: {integrity: sha512-F6utS2XVTnF8Rd593sl+/slfgcbUo9gzypkjQyqztZqjQSD+wkbuVkJmV8mtw+khpZ2B85Jybp9d/8V2bxV3ew==}
+  eslint-plugin-storybook@10.5.2:
+    resolution: {integrity: sha512-BPTbb8OKNAlQ2XubEQ6H1TeHG9nMygLrHC8cSVTfdIat65qbS568WYgNg//zlJWtZ9ZamyVkCp/na+LBbFPseA==}
     peerDependencies:
       eslint: '>=8'
-      storybook: ^10.5.1
+      storybook: ^10.5.2
 
   eslint-plugin-tsdoc@0.5.2:
     resolution: {integrity: sha512-BlvqjWZdBJDIPO/YU3zcPCF23CvjYT3gyu63yo6b609NNV3D1b6zceAREy2xnweuBoDpZcLNuPyAUq9cvx6bbQ==}
@@ -7079,7 +7079,7 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-storybook@10.5.1(eslint@10.7.0(jiti@2.7.0))(storybook@10.5.2(prettier@3.9.5)(react@19.2.7))(typescript@6.0.3):
+  eslint-plugin-storybook@10.5.2(eslint@10.7.0(jiti@2.7.0))(storybook@10.5.2(prettier@3.9.5)(react@19.2.7))(typescript@6.0.3):
     dependencies:
       '@typescript-eslint/types': 8.64.0
       '@typescript-eslint/utils': 8.64.0(eslint@10.7.0(jiti@2.7.0))(typescript@6.0.3)
