@@ -39,7 +39,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "markdownlint-cli2": "0.23.0"
+    "markdownlint-cli2": "0.23.1"
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
