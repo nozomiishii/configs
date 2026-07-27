@@ -62,7 +62,7 @@
     "@stylistic/eslint-plugin": "5.10.0",
     "@swc-node/register": "1.12.1",
     "@types/node": "24.13.3",
-    "@vitest/eslint-plugin": "1.6.23",
+    "@vitest/eslint-plugin": "1.6.24",
     "eslint-config-flat-gitignore": "2.3.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.5",
