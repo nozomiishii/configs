@@ -1,4 +1,4 @@
-name: ESLint Config
+name: Lefthook Config
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ concurrency:
 defaults:
   run:
     shell: bash
-    working-directory: packages/eslint-config
+    working-directory: packages/lefthook-config
 
 jobs:
   changes:
@@ -38,8 +38,8 @@ jobs:
         with:
           filters: |
             src:
-              - 'packages/eslint-config/**'
-              - '.github/workflows/eslint-config.yaml'
+              - 'packages/lefthook-config/**'
+              - '.github/workflows/lefthook-config.yaml'
 
   static:
     needs: changes
@@ -58,11 +58,8 @@ jobs:
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
-      - name: Lint
-        run: pnpm lint
-
       - name: Compiler check
-        run: pnpm check:ts
+        run: pnpm tsc
 
   test:
     needs: changes
@@ -86,7 +83,7 @@ jobs:
 
   required:
     # name 変更時は infra 側の required_status_checks も更新する
-    name: ESLint Config / required
+    name: Lefthook Config / required
     needs: [changes, static, test]
     if: always()
     runs-on: ubuntu-slim
