@@ -38,6 +38,7 @@ jobs:
         with:
           filters: |
             src:
+              - 'packages/*/bin/**/*.js'
               - 'packages/eslint-config/**'
               - '.github/workflows/eslint-config.yaml'
 
