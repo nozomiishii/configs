@@ -27,9 +27,9 @@ async function runInit(preset?: PresetId, isMonorepo?: boolean): Promise<InitRes
   });
 
   const pkg = JSON.parse(
-    readFileSync(path.join(tmpDir, "package.json"), "utf8"),
+    readFileSync(path.join(tmpDir, "package.json"), "utf-8"),
   ) as InitResult["pkg"];
-  const configContent = readFileSync(path.join(tmpDir, "eslint.config.ts"), "utf8");
+  const configContent = readFileSync(path.join(tmpDir, "eslint.config.ts"), "utf-8");
 
   rmSync(tmpDir, { force: true, recursive: true });
 

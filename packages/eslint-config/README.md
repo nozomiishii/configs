@@ -50,15 +50,26 @@ add the Node.js and web layers.
 
 ### tanstackStart()
 
-Includes `@tanstack/eslint-plugin-router`, and adjusts three rules that clash
-with how TanStack Router is written:
+Includes `@tanstack/eslint-plugin-router`, and adjusts the rules that clash with
+how TanStack Start is written.
+
+Generated output is not linted:
+
+- `routeTree.gen.ts` is ignored. Its own `eslint-disable` header has no effect under the `noInlineConfig` setting in `base`
+
+Applied everywhere:
 
 - `@typescript-eslint/only-throw-error`: allows throwing `redirect()` and `notFound()`
 - `perfectionist/sort-objects`: leaves route definition objects unsorted, since their property order drives type inference
-- `react-refresh/only-export-components`: off under `src/routes/**`, because route files must export `Route` and cannot export only components
+- `no-restricted-syntax`: bans reading `import.meta.env` directly so env access goes through `env.ts`, matching how `n/no-process-env` is used
 
-If you moved `routesDirectory` away from the default `src/routes`, add the last
-one yourself.
+Applied under `src/routes/**` only:
+
+- `unicorn/filename-case`: ignores the `-` prefix and the trailing `_`, since renaming them changes routing
+- `react-refresh/only-export-components`: off, because route files must export `Route` and cannot export only components
+
+If you moved `routesDirectory` or `generatedRouteTree` away from the defaults,
+add the matching settings yourself.
 
 ## Rule list
 

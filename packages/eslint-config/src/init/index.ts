@@ -31,14 +31,14 @@ export async function init({
   const root = packageRoot();
 
   const selfPkg = JSON.parse(
-    await readFile(path.join(root, "package.json"), "utf8"),
+    await readFile(path.join(root, "package.json"), "utf-8"),
   ) as PackageJson & {
     peerDependencies: { eslint: string; typescript: string };
   };
 
   const starterRaw = await readFile(
     path.join(root, "starters", `${preset}.ts`),
-    "utf8",
+    "utf-8",
   );
 
   // monorepo の per-package config は tsconfigRootDir を明示する。
@@ -51,7 +51,7 @@ export async function init({
     : starterRaw;
 
   const targetPath = path.resolve(cwd, "package.json");
-  const target = JSON.parse(await readFile(targetPath, "utf8")) as PackageJson;
+  const target = JSON.parse(await readFile(targetPath, "utf-8")) as PackageJson;
 
   target.devDependencies = {
     ...target.devDependencies,

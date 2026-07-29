@@ -44,13 +44,24 @@ export default defineConfig([...node()]);
 
 ### tanstackStart()
 
-`@tanstack/eslint-plugin-router` を含む。TanStack Router の書き方と噛み合わない3つの rule を調整している:
+`@tanstack/eslint-plugin-router` を含む。加えて、TanStack Start の書き方と噛み合わない rule を調整している。
+
+生成物は lint 対象から外す:
+
+- `routeTree.gen.ts` を ignore。ファイル自身の `eslint-disable` は base の `noInlineConfig` で効かない
+
+全ファイルに効くもの:
 
 - `@typescript-eslint/only-throw-error`: `redirect()` と `notFound()` を throw できるようにする
 - `perfectionist/sort-objects`: route 定義のオブジェクトを並べ替えの対象外にする。プロパティ順が型推論に効くため
-- `react-refresh/only-export-components`: `src/routes/**` で off。route ファイルは `Route` の export が必須で、component だけを export する形にできない
+- `no-restricted-syntax`: `import.meta.env` の直接参照を禁止し、`env.ts` に集約させる。`n/no-process-env` と同じ運用
 
-`routesDirectory` を既定の `src/routes` から変えている場合は、最後の1つを consumer 側で足す。
+`src/routes/**` に限って効くもの:
+
+- `unicorn/filename-case`: `-` prefix と末尾 `_` を除外する。リネームするとルーティングが変わる
+- `react-refresh/only-export-components`: off。route ファイルは `Route` の export が必須で、component だけを export する形にできない
+
+`routesDirectory` や `generatedRouteTree` を既定から変えている場合は、該当する設定を consumer 側で足す。
 
 ## ルール一覧
 

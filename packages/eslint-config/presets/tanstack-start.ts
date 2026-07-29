@@ -50,6 +50,17 @@ export function tanstackStart(options: Options = {}) {
     ...base(options),
 
     {
+      /**
+       * generatedRouteTree の既定値。生成物なので lint 対象から外す。
+       * ファイル自身が付けている eslint-disable は base の noInlineConfig で効かない。
+       *
+       * @see https://tanstack.com/router/latest/docs/api/file-based-routing
+       */
+      ignores: ["**/routeTree.gen.ts"],
+      name: name("tanstack-start/generated"),
+    },
+
+    {
       languageOptions: {
         globals: globals.node,
       },
@@ -128,6 +139,43 @@ export function tanstackStart(options: Options = {}) {
           },
           ...sortObjectsFallback,
         ],
+      },
+    },
+
+    {
+      // env.client.ts のように分割した場合も例外にする
+      ignores: ["**/env.ts", "**/env.*.ts"],
+      name: name("tanstack-start/import-meta-env"),
+      rules: {
+        /**
+         * n/no-process-envと同じ運用。envの読み取りをenv.tsに集約して、
+         * 値の欠落と型付けを1箇所で扱う。
+         * import.meta.env向けの専用ruleが無いためselectorで書く。
+         *
+         * @see https://vite.dev/guide/env-and-mode
+         */
+        "no-restricted-syntax": [
+          "error",
+          {
+            message: "Please read env through `env.ts` instead.",
+            selector: 'MemberExpression[object.type="MetaProperty"][property.name="env"]',
+          },
+        ],
+      },
+    },
+
+    {
+      files: ["**/src/routes/**"],
+      name: name("tanstack-start/filename-case"),
+      rules: {
+        /**
+         * `-` prefixはroute treeから除外するファイルとディレクトリ、
+         * 末尾`_`は親routeに入れ子にしない記法。
+         * どちらもkebab-caseに直すとルーティングが変わる。
+         *
+         * @see https://github.com/TanStack/router/blob/main/docs/router/routing/file-naming-conventions.md
+         */
+        "unicorn/filename-case": ["error", { ignore: [/^-/u, /_\./u] }],
       },
     },
 
