@@ -85,6 +85,7 @@
     "eslint-plugin-unicorn": "72.0.0",
     "eslint-typegen": "2.3.1",
     "globals": "17.8.0",
+    "jiti": "2.7.0",
     "jsonc-eslint-parser": "3.1.0",
     "tailwindcss": "4.3.3",
     "typescript-eslint": "8.65.0"
