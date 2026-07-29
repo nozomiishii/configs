@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.12.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.11.0...@nozomiishii/postinstall-v1.12.0) (2026-07-29)
+
+
+### Miscellaneous
+
+* update dependency @types/node to v24.13.3 ([#2562](https://github.com/nozomiishii/configs/issues/2562)) ([a3d4e85](https://github.com/nozomiishii/configs/commit/a3d4e85e76dc17c8453e40d5dde5a6c58b9602a8))
+* update dependency figlet to v1.11.1 ([#2584](https://github.com/nozomiishii/configs/issues/2584)) ([efe9137](https://github.com/nozomiishii/configs/commit/efe9137ffa7c51a86c24ac57f4dee3fa9a538194))
+* update dependency figlet to v1.11.2 ([#2591](https://github.com/nozomiishii/configs/issues/2591)) ([e055460](https://github.com/nozomiishii/configs/commit/e05546025e0e62c49391f4fc705f495a7b61c5ab))
+* update dependency figlet to v1.11.3 ([#2630](https://github.com/nozomiishii/configs/issues/2630)) ([b446a70](https://github.com/nozomiishii/configs/commit/b446a701bf62adfdf26032fabeab852f74e920ee))
+* update dependency tsdown to v0.22.11 ([#2619](https://github.com/nozomiishii/configs/issues/2619)) ([f29d0dd](https://github.com/nozomiishii/configs/commit/f29d0ddf8dd92f23f87a5a12d69320d5a34c3289))
+* update dependency tsdown to v0.22.12 ([#2622](https://github.com/nozomiishii/configs/issues/2622)) ([b50b171](https://github.com/nozomiishii/configs/commit/b50b1710e48b019faf8cf903a8474cfde1720fb6))
+* update dependency tsdown to v0.22.13 ([#2634](https://github.com/nozomiishii/configs/issues/2634)) ([2fd1f14](https://github.com/nozomiishii/configs/commit/2fd1f14a25d0d79a8a55bec33eaa7ae26f86f6e7))
+* update dependency tsdown to v0.22.14 ([#2641](https://github.com/nozomiishii/configs/issues/2641)) ([8336bd0](https://github.com/nozomiishii/configs/commit/8336bd0298ecb9ea21d4d76058b22286b23db0e4))
+* update dependency tsdown to v0.22.4 ([#2563](https://github.com/nozomiishii/configs/issues/2563)) ([ed3e8e2](https://github.com/nozomiishii/configs/commit/ed3e8e2eb4481fa31850965cca6006c62e0ceba2))
+* update dependency tsdown to v0.22.5 ([#2586](https://github.com/nozomiishii/configs/issues/2586)) ([6aa42cb](https://github.com/nozomiishii/configs/commit/6aa42cb371a24bd97adc760914fe4a7f8e0e6a5a))
+* update dependency tsdown to v0.22.7 ([#2589](https://github.com/nozomiishii/configs/issues/2589)) ([aab19f1](https://github.com/nozomiishii/configs/commit/aab19f10d2b2bb36f6ab93c4a862df3d3ee3b728))
+* update dependency tsdown to v0.22.8 ([#2601](https://github.com/nozomiishii/configs/issues/2601)) ([07d6a87](https://github.com/nozomiishii/configs/commit/07d6a874778cfceb9f484d3f357c2def84409f47))
+* update dependency tsdown to v0.22.9 ([#2610](https://github.com/nozomiishii/configs/issues/2610)) ([8060da8](https://github.com/nozomiishii/configs/commit/8060da8213e45ac228cd06d3e8d1f8a3684559e1))
+* update dependency vitest to v4.1.10 ([#2555](https://github.com/nozomiishii/configs/issues/2555)) ([c001612](https://github.com/nozomiishii/configs/commit/c0016124449acc0916d16b32f9e577da2b17509c))
+* update pnpm to v11.10.0 ([#2548](https://github.com/nozomiishii/configs/issues/2548)) ([848034e](https://github.com/nozomiishii/configs/commit/848034e0c075d1576ae3290fcf5833303455b583))
+* update pnpm to v11.11.0 ([#2576](https://github.com/nozomiishii/configs/issues/2576)) ([705d3e0](https://github.com/nozomiishii/configs/commit/705d3e0a17e54ee5d9a18439d0f07ce56a3b3832))
+* update pnpm to v11.12.0 ([#2587](https://github.com/nozomiishii/configs/issues/2587)) ([8174636](https://github.com/nozomiishii/configs/commit/81746363cbc4ddad30d602c9622da7c67cf0cea1))
+* update pnpm to v11.14.0 ([#2615](https://github.com/nozomiishii/configs/issues/2615)) ([0276571](https://github.com/nozomiishii/configs/commit/0276571f001feaebeda9eb26f511ed4191eb6267))
+* update pnpm to v11.15.0 ([#2618](https://github.com/nozomiishii/configs/issues/2618)) ([ce34f70](https://github.com/nozomiishii/configs/commit/ce34f708460ace44d85b74a04588975cb0c41866))
+* update pnpm to v11.15.1 ([#2625](https://github.com/nozomiishii/configs/issues/2625)) ([c3458d8](https://github.com/nozomiishii/configs/commit/c3458d8702e62cf153a8ff7a39347ad264bb7d84))
+* update pnpm to v11.16.0 ([#2636](https://github.com/nozomiishii/configs/issues/2636)) ([7c6972f](https://github.com/nozomiishii/configs/commit/7c6972f8b47f98e1e53a637acd30896cb39df458))
+* update pnpm to v11.17.0 ([#2639](https://github.com/nozomiishii/configs/issues/2639)) ([4b7a994](https://github.com/nozomiishii/configs/commit/4b7a99453b1fff2e90b96ff5c916281fbcf28612))
+
 ## [1.11.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v1.10.0...@nozomiishii/postinstall-v1.11.0) (2026-07-01)
 
 ### Miscellaneous

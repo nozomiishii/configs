@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.12.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.11.0...@nozomiishii/tsconfig-v1.12.0) (2026-07-29)
+
+
+### Miscellaneous
+
+* update pnpm to v11.10.0 ([#2548](https://github.com/nozomiishii/configs/issues/2548)) ([848034e](https://github.com/nozomiishii/configs/commit/848034e0c075d1576ae3290fcf5833303455b583))
+* update pnpm to v11.11.0 ([#2576](https://github.com/nozomiishii/configs/issues/2576)) ([705d3e0](https://github.com/nozomiishii/configs/commit/705d3e0a17e54ee5d9a18439d0f07ce56a3b3832))
+* update pnpm to v11.12.0 ([#2587](https://github.com/nozomiishii/configs/issues/2587)) ([8174636](https://github.com/nozomiishii/configs/commit/81746363cbc4ddad30d602c9622da7c67cf0cea1))
+* update pnpm to v11.14.0 ([#2615](https://github.com/nozomiishii/configs/issues/2615)) ([0276571](https://github.com/nozomiishii/configs/commit/0276571f001feaebeda9eb26f511ed4191eb6267))
+* update pnpm to v11.15.0 ([#2618](https://github.com/nozomiishii/configs/issues/2618)) ([ce34f70](https://github.com/nozomiishii/configs/commit/ce34f708460ace44d85b74a04588975cb0c41866))
+* update pnpm to v11.15.1 ([#2625](https://github.com/nozomiishii/configs/issues/2625)) ([c3458d8](https://github.com/nozomiishii/configs/commit/c3458d8702e62cf153a8ff7a39347ad264bb7d84))
+* update pnpm to v11.16.0 ([#2636](https://github.com/nozomiishii/configs/issues/2636)) ([7c6972f](https://github.com/nozomiishii/configs/commit/7c6972f8b47f98e1e53a637acd30896cb39df458))
+* update pnpm to v11.17.0 ([#2639](https://github.com/nozomiishii/configs/issues/2639)) ([4b7a994](https://github.com/nozomiishii/configs/commit/4b7a99453b1fff2e90b96ff5c916281fbcf28612))
+
 ## [1.11.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.10.0...@nozomiishii/tsconfig-v1.11.0) (2026-07-01)
 
 ### Bug Fixes
