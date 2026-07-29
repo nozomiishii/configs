@@ -9,6 +9,6 @@ export default defineConfig({
     "init/index": "src/init/index.ts",
   },
   format: ["esm"],
-  outExtensions: () => ({ js: ".js", dts: ".d.ts" }),
+  outExtensions: () => ({ dts: ".d.ts", js: ".js" }),
   platform: "node",
 });

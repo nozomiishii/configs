@@ -36,6 +36,7 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
+    "lint": "eslint --max-warnings=0 .",
     "prepublishOnly": "pnpm run build",
     "test": "vitest run",
     "tsc": "tsc"
@@ -44,8 +45,10 @@
     "prettier-plugin-packagejson": "3.0.2"
   },
   "devDependencies": {
+    "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.3",
+    "eslint": "10.8.0",
     "prettier": "3.9.6",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",

@@ -2,8 +2,7 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { test as baseTest, expect } from "vitest";
-
-import { init } from "./index.js";
+import { init } from ".";
 
 type InitResult = {
   configContent: string;
@@ -25,9 +24,9 @@ const test = baseTest.extend<{ initResult: InitResult }>({
     await init({ cwd: tmpDir });
 
     const pkg = JSON.parse(
-      readFileSync(path.join(tmpDir, "package.json"), "utf8"),
+      readFileSync(path.join(tmpDir, "package.json"), "utf-8"),
     ) as InitResult["pkg"];
-    const configContent = readFileSync(path.join(tmpDir, "prettier.config.ts"), "utf8");
+    const configContent = readFileSync(path.join(tmpDir, "prettier.config.ts"), "utf-8");
 
     await provide({ configContent, pkg });
 

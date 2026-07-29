@@ -37,6 +37,7 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
+    "lint": "eslint --max-warnings=0 .",
     "prepublishOnly": "pnpm run build",
     "test": "vitest run",
     "tsc": "tsc"
@@ -48,9 +49,11 @@
   },
   "devDependencies": {
     "@commitlint/lint": "21.2.0",
+    "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.3",
     "conventional-commits-parser": "7.1.1",
+    "eslint": "10.8.0",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",
     "vitest": "4.1.10"

@@ -51,6 +51,9 @@ importers:
       '@commitlint/lint':
         specifier: 21.2.0
         version: 21.2.0
+      '@nozomiishii/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@nozomiishii/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -60,6 +63,9 @@ importers:
       conventional-commits-parser:
         specifier: 7.1.1
         version: 7.1.1
+      eslint:
+        specifier: 10.8.0
+        version: 10.8.0(jiti@2.7.0)(supports-color@7.2.0)
       tsdown:
         specifier: 0.22.14
         version: 0.22.14(oxc-resolver@11.24.2)(typescript@6.0.3)
@@ -76,12 +82,18 @@ importers:
         specifier: 10.0.1
         version: 10.0.1
     devDependencies:
+      '@nozomiishii/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@nozomiishii/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@types/node':
         specifier: 24.13.3
         version: 24.13.3
+      eslint:
+        specifier: 10.8.0
+        version: 10.8.0(jiti@2.7.0)(supports-color@7.2.0)
       tsdown:
         specifier: 0.22.14
         version: 0.22.14(oxc-resolver@11.24.2)(typescript@6.0.3)
@@ -219,12 +231,18 @@ importers:
         specifier: 0.3.4
         version: 0.3.4
     devDependencies:
+      '@nozomiishii/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@nozomiishii/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@types/node':
         specifier: 24.13.3
         version: 24.13.3
+      eslint:
+        specifier: 10.8.0
+        version: 10.8.0(jiti@2.7.0)(supports-color@7.2.0)
       lefthook:
         specifier: 2.1.10
         version: 2.1.10
@@ -244,9 +262,18 @@ importers:
         specifier: 0.23.1
         version: 0.23.1(supports-color@7.2.0)
     devDependencies:
+      '@nozomiishii/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@nozomiishii/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
+      '@types/node':
+        specifier: 24.13.3
+        version: 24.13.3
+      eslint:
+        specifier: 10.8.0
+        version: 10.8.0(jiti@2.7.0)(supports-color@7.2.0)
       tsdown:
         specifier: 0.22.14
         version: 0.22.14(oxc-resolver@11.24.2)(typescript@6.0.3)
@@ -318,6 +345,9 @@ importers:
         specifier: 8.8.5
         version: 8.8.5
     devDependencies:
+      '@nozomiishii/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@nozomiishii/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -327,6 +357,9 @@ importers:
       '@types/node':
         specifier: 24.13.3
         version: 24.13.3
+      eslint:
+        specifier: 10.8.0
+        version: 10.8.0(jiti@2.7.0)(supports-color@7.2.0)
       tsdown:
         specifier: 0.22.14
         version: 0.22.14(oxc-resolver@11.24.2)(typescript@6.0.3)
@@ -343,12 +376,18 @@ importers:
         specifier: 3.0.2
         version: 3.0.2(prettier@3.9.6)
     devDependencies:
+      '@nozomiishii/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@nozomiishii/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@types/node':
         specifier: 24.13.3
         version: 24.13.3
+      eslint:
+        specifier: 10.8.0
+        version: 10.8.0(jiti@2.7.0)(supports-color@7.2.0)
       prettier:
         specifier: 3.9.6
         version: 3.9.6
@@ -362,7 +401,20 @@ importers:
         specifier: 4.1.10
         version: 4.1.10(@types/node@24.13.3)(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
 
-  packages/tsconfig: {}
+  packages/tsconfig:
+    devDependencies:
+      '@nozomiishii/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@types/node':
+        specifier: 24.13.3
+        version: 24.13.3
+      eslint:
+        specifier: 10.8.0
+        version: 10.8.0(jiti@2.7.0)(supports-color@7.2.0)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
 
 packages:
 

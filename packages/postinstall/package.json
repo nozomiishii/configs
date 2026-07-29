@@ -36,6 +36,7 @@
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
     "link": "pnpm link --global",
+    "lint": "eslint --max-warnings=0 .",
     "prepublishOnly": "pnpm run build",
     "test": "vitest run",
     "tsc": "tsc"
@@ -45,9 +46,11 @@
     "zx": "8.8.5"
   },
   "devDependencies": {
+    "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/figlet": "1.7.0",
     "@types/node": "24.13.3",
+    "eslint": "10.8.0",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",
     "vitest": "4.1.10"

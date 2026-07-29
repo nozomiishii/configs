@@ -1,17 +1,7 @@
-import { fs, $, echo } from "zx";
+import fs from "node:fs";
+import { $, echo } from "zx";
 
 const TARGET_FILE = "lefthook-local.yaml";
-
-/**
- * Create a local config file
- */
-async function createLocalConfig() {
-  if (fs.existsSync(TARGET_FILE)) {
-    return echo(`Skipped: ${TARGET_FILE} already exists.`);
-  }
-
-  await $`touch ${TARGET_FILE}`;
-}
 
 /**
  * Setup lefthook
@@ -24,7 +14,20 @@ export async function setupLefthook() {
 
     const result = await $`lefthook install --force`;
     echo(result);
-  } catch (e) {
-    echo(e);
+  } catch (error) {
+    echo(error);
   }
+}
+
+/**
+ * Create a local config file
+ */
+async function createLocalConfig() {
+  if (fs.existsSync(TARGET_FILE)) {
+    echo(`Skipped: ${TARGET_FILE} already exists.`);
+
+    return;
+  }
+
+  await $`touch ${TARGET_FILE}`;
 }

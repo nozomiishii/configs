@@ -9,21 +9,6 @@ const customDictionaryPath = fileURLToPath(
  * {@link https://cspell.org/docs/Configuration}
  */
 export default {
-  version: "0.2",
-  language: "en",
-  // 外部辞書
-  // cspellの辞書一覧 https://github.com/streetsidesoftware/cspell-dicts#all-dictionaries
-  import: [],
-
-  // カスタム辞書 https://cspell.org/docs/dictionaries-custom/
-  // 人名、プロジェクト依存、他のプロジェクトでも使えそうな単語集みたいなかんじで分類分けできたらいいかもしれない。
-  dictionaryDefinitions: [
-    {
-      name: "custom-dictionary",
-      path: customDictionaryPath,
-      addWords: true,
-    },
-  ],
   dictionaries: [
     // Built-in dictionaries (alphabetical ascending order)
     "bash",
@@ -49,5 +34,20 @@ export default {
     // Custom dictionaries
     "custom-dictionary",
   ],
+  // カスタム辞書 https://cspell.org/docs/dictionaries-custom/
+  // 人名、プロジェクト依存、他のプロジェクトでも使えそうな単語集みたいなかんじで分類分けできたらいいかもしれない。
+  dictionaryDefinitions: [
+    {
+      addWords: true,
+      name: "custom-dictionary",
+      path: customDictionaryPath,
+    },
+  ],
   ignorePaths: [],
+
+  // 外部辞書
+  // cspellの辞書一覧 https://github.com/streetsidesoftware/cspell-dicts#all-dictionaries
+  import: [],
+  language: "en",
+  version: "0.2",
 };

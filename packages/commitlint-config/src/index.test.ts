@@ -1,21 +1,32 @@
 import lint from "@commitlint/lint";
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
+import config from ".";
 
-import config from "./index.js";
+function pluginRules() {
+  const plugin = config.plugins?.[0];
+
+  if (!plugin || typeof plugin === "string") {
+    throw new Error("commitlint plugin not configured");
+  }
+
+  return plugin.rules;
+}
 
 describe("scope-empty (default deny scope)", () => {
-  it("default config に scope-empty: [2, 'always'] が登録されている", () => {
-    expect(config.rules?.["scope-empty"]).toEqual([2, "always"]);
+  test("registers scope-empty as an error by default", () => {
+    expect(config.rules?.["scope-empty"]).toStrictEqual([2, "always"]);
   });
 
-  it("scope 付きのコミットは fail する", async () => {
+  test("rejects a commit with a scope", async () => {
     const result = await lint("feat(api): add foo", { "scope-empty": [2, "always"] } as const);
+
     expect(result.valid).toBe(false);
     expect(result.errors.some((e) => e.name === "scope-empty")).toBe(true);
   });
 
-  it("consumer が scope-empty を 0 に上書きすれば scope 付きでも pass する", async () => {
+  test("allows a scoped commit when the consumer disables scope-empty", async () => {
     const result = await lint("feat(api): add foo", { "scope-empty": [0, "always"] } as const);
+
     expect(result.valid).toBe(true);
   });
 });
@@ -23,17 +34,15 @@ describe("scope-empty (default deny scope)", () => {
 // rule 本体の検証は src/rules/<rule-name>/index.test.ts に co-located。
 // ここでは compose 結果として custom rule が plugin / severity 両方に登録されることを固定する。
 describe("custom rules composition", () => {
-  it("各 custom rule の callback が plugin に登録されている", () => {
-    const plugin = config.plugins?.[0];
-    if (!plugin || typeof plugin === "string") {
-      throw new Error("commitlint plugin not configured");
-    }
-    expect(typeof plugin.rules["commit-message-ascii-only"]).toBe("function");
-    expect(typeof plugin.rules["breaking-change-requires-bang"]).toBe("function");
+  test("registers custom rule callbacks in the plugin", () => {
+    const rules = pluginRules();
+
+    expect(rules["breaking-change-requires-bang"]).toBeTypeOf("function");
+    expect(rules["commit-message-ascii-only"]).toBeTypeOf("function");
   });
 
-  it("各 custom rule の severity が [2, 'always'] で登録されている", () => {
-    expect(config.rules?.["commit-message-ascii-only"]).toEqual([2, "always"]);
-    expect(config.rules?.["breaking-change-requires-bang"]).toEqual([2, "always"]);
+  test("registers custom rule severities as errors", () => {
+    expect(config.rules?.["commit-message-ascii-only"]).toStrictEqual([2, "always"]);
+    expect(config.rules?.["breaking-change-requires-bang"]).toStrictEqual([2, "always"]);
   });
 });
