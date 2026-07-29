@@ -10,12 +10,13 @@ export type ReactRefreshTarget = keyof typeof eslintPluginReactRefresh.configs;
 /**
  * @param target rule は同じで、見逃す export の指定だけが違う。
  * next は Next.js の予約 export 名を、vite は定数 export を許可する。
+ * 既定の recommended はどちらも許可しない plugin の素の設定。
  *
  * @returns eslint-plugin-react-refresh
  *
  * @see https://github.com/ArnaudBarre/eslint-plugin-react-refresh
  */
-export function reactRefresh(target: ReactRefreshTarget) {
+export function reactRefresh(target: ReactRefreshTarget = "recommended") {
   return defineConfig([
     {
       ...eslintPluginReactRefresh.configs[target],
