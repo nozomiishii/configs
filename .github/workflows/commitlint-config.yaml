@@ -41,6 +41,26 @@ jobs:
               - 'packages/commitlint-config/**'
               - '.github/workflows/commitlint-config.yaml'
 
+  static:
+    needs: changes
+    if: needs.changes.outputs.src == 'true'
+    runs-on: ubuntu-slim
+    timeout-minutes: 10
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Compiler check
+        run: pnpm tsc
+
   test:
     needs: changes
     if: needs.changes.outputs.src == 'true'
@@ -64,7 +84,7 @@ jobs:
   required:
     # name 変更時は infra 側の required_status_checks も更新する
     name: Commitlint Config / required
-    needs: [changes, test]
+    needs: [changes, static, test]
     if: always()
     runs-on: ubuntu-slim
     timeout-minutes: 1
