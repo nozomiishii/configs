@@ -12,6 +12,15 @@ shell は SSR ビルドで prerender されて root route の loader がサー�
 `route-param-names` は TanStack Router の import があるファイルだけを見るが、
 `create-route-property-order` は callee の名前しか見ないので、別 package の `createRoute` にも当たる。
 
+`@tanstack/eslint-plugin-query` は `flat/recommended-strict` を有効化する。どの rule も
+`@tanstack/` で始まり `-query` で終わる package からの import があるファイルだけを見るため、
+TanStack Query を使わない project に入れても何も報告しない。
+
+`recommended` との差は `prefer-query-options` の 1 つ。`queryKey` と `queryFn` を
+`queryOptions()` / `infiniteQueryOptions()` に閉じ込めさせる rule で、
+[同じ key に別の `queryFn` が紐づく事故](https://tanstack.com/query/latest/docs/eslint/prefer-query-options)
+を防ぐ。
+
 他プラグインの rule 調整は preset 側に置く。rule module は自分の plugin だけを扱い、
 横断的な調整は組み合わせる preset が持つ。上書き対象より後に置く必要があるため preset の末尾にまとまっている。
 
@@ -36,23 +45,27 @@ lint で直しても毎回消える。route 2 本のプロジェクトで 28 件
 
 ## perfectionist/sort-objects
 
-route 定義のオブジェクトを並べ替えの対象外にする。
+TanStack の property-order 系 rule が見るオブジェクトを並べ替えの対象外にする。対象は
+route 定義 (`createFileRoute` など) と、`useMutation` / `useInfiniteQuery` /
+`useSuspenseInfiniteQuery` / `infiniteQueryOptions`。
 
-route 定義のプロパティ順は型推論に効く。`context` が組み立てた値を `beforeLoad` が受け取り、
-それを `loader` が受け取る、という連鎖が順序で決まっている。`create-route-property-order` はその順を守らせる rule で、
-アルファベット順とは両立しない。
+これらのプロパティ順は型推論に効く。route 定義では `context` が組み立てた値を `beforeLoad` が受け取り、
+それを `loader` が受け取る。`useMutation` では `onMutate` が返した context を `onError` と `onSettled` が受け取る。
+`create-route-property-order` と `mutation-property-order` / `infinite-query-property-order` は
+その順を守らせる rule で、アルファベット順とは両立しない。
 
 ```tsx
 // TanStack が要求する順
-{ context: ..., beforeLoad: ... }
-// → perfectionist: Expected "beforeLoad" to come before "context"
+{ context: ..., beforeLoad: ... } // route 定義
+{ onMutate: ..., onError: ... } // useMutation
 
 // perfectionist が要求する順
 { beforeLoad: ..., context: ... }
-// → @tanstack/router: Invalid order of properties for `createFileRoute`
+{ onError: ..., onMutate: ... }
 ```
 
-どちらの順でも片方が怒り、両方 auto fix 可能なので `--fix` が往復する。型推論に効く側を優先した。
+どちらの順でも片方が怒り、両方 auto fix 可能なので `--fix` が往復し、
+ESLint が `ESLintCircularFixesWarning` を出す。型推論に効く側を優先した。
 
 除外は `useConfigurationIf.callingFunctionNamePattern` でオブジェクト単位に絞っている。
 route 定義は `src/router.tsx` など routes 配下以外にも書けるため、ファイル単位では切れない。
@@ -107,8 +120,6 @@ route ファイルは `export const Route` が構造上必須なので、この 
 `@tanstack/eslint-plugin-start` は入れていない。peer が `^8.57.0 || ^9.0.0` 止まりで eslint 10 に入らず、
 rule 2 つがどちらも RSC の `'use client'` 境界の検査で SPA mode には効かない。
 追跡は [#2646](https://github.com/nozomiishii/configs/issues/2646)。
-
-`@tanstack/eslint-plugin-query` も入れていない。react-query を使う構成が決まっていないため、使う時点で追加する。
 
 ## 既定値を変えている場合
 

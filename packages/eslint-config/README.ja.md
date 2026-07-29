@@ -27,7 +27,7 @@ pnpx nozo init
 preset は次から選ぶ:
 
 - `nextjs`: React / Next.js / Tailwind / Storybook 込みの web アプリ向け
-- `tanstack-start`: React / TanStack Start (Vite) / Tailwind / Storybook 込みの web アプリ向け
+- `tanstack-start`: React / TanStack Start (Vite) / TanStack Query / Tailwind / Storybook 込みの web アプリ向け
 - `node`: CLI / ライブラリ向け（web 系を除いた Node.js 構成）
 
 ## preset

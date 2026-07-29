@@ -38,6 +38,8 @@ export { stylistic } from "./stylistic";
 
 export { betterTailwindcss } from "./tailwindcss";
 
+export { tanstackQuery } from "./tanstack-query";
+
 export { tanstackRouter } from "./tanstack-router";
 
 export { typescript } from "./typescript";
