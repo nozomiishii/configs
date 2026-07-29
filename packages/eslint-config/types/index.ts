@@ -30,7 +30,7 @@ export type BetterTailwindcssOptions = {
 };
 
 /**
- * preset (base / node / nextjs) に渡す options。
+ * preset に渡す options。
  */
 export type Options = {
   betterTailwindcss?: BetterTailwindcssOptions;

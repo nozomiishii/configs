@@ -6,7 +6,14 @@ import { fileURLToPath } from "node:url";
 
 export type InitOptions = { cwd: string; monorepo?: boolean; preset?: PresetId };
 
-export type PresetId = "nextjs" | "node";
+export type PresetId = "nextjs" | "node" | "tanstack-start";
+
+/** starter が呼ぶ preset 関数名。ファイル名は kebab-case、関数は camelCase のため対応表で持つ。 */
+const presetFunctions: Record<PresetId, string> = {
+  "nextjs": "nextjs",
+  "node": "node",
+  "tanstack-start": "tanstackStart",
+};
 
 type PackageJson = {
   devDependencies?: Record<string, string>;
@@ -24,26 +31,27 @@ export async function init({
   const root = packageRoot();
 
   const selfPkg = JSON.parse(
-    await readFile(path.join(root, "package.json"), "utf8"),
+    await readFile(path.join(root, "package.json"), "utf-8"),
   ) as PackageJson & {
     peerDependencies: { eslint: string; typescript: string };
   };
 
   const starterRaw = await readFile(
     path.join(root, "starters", `${preset}.ts`),
-    "utf8",
+    "utf-8",
   );
 
   // monorepo の per-package config は tsconfigRootDir を明示する。
+  const presetFunction = presetFunctions[preset];
   const starter = monorepo
     ? starterRaw.replace(
-        `${preset}()`,
-        () => `${preset}({ typescript: { tsconfigRootDir: import.meta.dirname } })`,
+        `${presetFunction}()`,
+        () => `${presetFunction}({ typescript: { tsconfigRootDir: import.meta.dirname } })`,
       )
     : starterRaw;
 
   const targetPath = path.resolve(cwd, "package.json");
-  const target = JSON.parse(await readFile(targetPath, "utf8")) as PackageJson;
+  const target = JSON.parse(await readFile(targetPath, "utf-8")) as PackageJson;
 
   target.devDependencies = {
     ...target.devDependencies,

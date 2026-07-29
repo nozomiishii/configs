@@ -45,7 +45,8 @@ export function n() {
     },
 
     {
-      ignores: ["**/env.ts"],
+      // env.server.ts のように分割した場合も例外にする
+      ignores: ["**/env.ts", "**/env.*.ts"],
       name: name("n/no-process-env"),
       rules: {
         /**

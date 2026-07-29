@@ -27,9 +27,9 @@ async function runInit(preset?: PresetId, isMonorepo?: boolean): Promise<InitRes
   });
 
   const pkg = JSON.parse(
-    readFileSync(path.join(tmpDir, "package.json"), "utf8"),
+    readFileSync(path.join(tmpDir, "package.json"), "utf-8"),
   ) as InitResult["pkg"];
-  const configContent = readFileSync(path.join(tmpDir, "eslint.config.ts"), "utf8");
+  const configContent = readFileSync(path.join(tmpDir, "eslint.config.ts"), "utf-8");
 
   rmSync(tmpDir, { force: true, recursive: true });
 
@@ -100,6 +100,20 @@ test("the node starter does not reference nextjs", async () => {
   expect(configContent).not.toContain("nextjs");
 });
 
+// preset=tanstack-start は tanstackStart bundle を書き出す
+test("init with the tanstack-start preset writes the tanstackStart bundle", async () => {
+  const { configContent } = await runInit("tanstack-start");
+
+  expect(configContent).toContain("...tanstackStart()");
+});
+
+// tanstack-start starter は nextjs を参照しない
+test("the tanstack-start starter does not reference nextjs", async () => {
+  const { configContent } = await runInit("tanstack-start");
+
+  expect(configContent).not.toContain("nextjs");
+});
+
 // monorepo を選ぶと tsconfigRootDir を渡す形で書き出す
 test("init with monorepo writes tsconfigRootDir", async () => {
   const { configContent } = await runInit("node", true);
@@ -114,4 +128,13 @@ test("init without monorepo omits tsconfigRootDir", async () => {
   const { configContent } = await runInit("node");
 
   expect(configContent).not.toContain("tsconfigRootDir");
+});
+
+// preset id が kebab-case でも、starter 内の camelCase の呼び出しに tsconfigRootDir を差し込む
+test("init with monorepo writes tsconfigRootDir for a kebab-case preset id", async () => {
+  const { configContent } = await runInit("tanstack-start", true);
+
+  expect(configContent).toContain(
+    "tanstackStart({ typescript: { tsconfigRootDir: import.meta.dirname } })",
+  );
 });

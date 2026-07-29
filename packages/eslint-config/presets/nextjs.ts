@@ -44,7 +44,7 @@ export function nextjs(options: Options = {}) {
 
     react(),
     reactHooks(),
-    reactRefresh(),
+    reactRefresh("next"),
     jsxA11yX(),
 
     _nextjs(),
