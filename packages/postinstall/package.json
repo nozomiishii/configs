@@ -19,10 +19,10 @@
   "author": "Nozomi Ishii",
   "type": "module",
   "exports": {
-    ".": "./dist/index.js",
+    ".": "./dist/postinstall.js",
     "./init": "./dist/init/index.js"
   },
-  "types": "./dist/index.d.ts",
+  "types": "./dist/postinstall.d.ts",
   "bin": {
     "nozo-postinstall-init": "./bin/nozo-postinstall-init.js",
     "postinstall": "./bin/postinstall.js"

@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-import "@nozomiishii/postinstall";
+import "../dist/postinstall.js";
