@@ -48,6 +48,56 @@ export function nextjs(options: Options = {}) {
     jsxA11yX(),
 
     _nextjs(),
+
+    {
+      /**
+       * Next.js の instrumentation-client は Sentry, PostHog, Datadog RUM でトップレベル副作用関数を呼ぶ必要がある
+       *
+       * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+       * @see https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client
+       */
+      files: ["**/instrumentation-client.ts"],
+      name: name("unicorn/instrumentation-client"),
+      rules: {
+        "unicorn/no-top-level-side-effects": "off",
+      },
+    },
+
+    {
+      /**
+       * next-intl越しにnext/linkやnext/navigationを使う
+       *
+       * @see https://next-intl-docs.vercel.app/docs/workflows/linting#consistent-usage-of-navigation-apis
+       */
+      name: name("next-intl"),
+      rules: {
+        "no-restricted-imports": [
+          "error",
+          {
+            message: "Please import from `libs/next-intl` instead.",
+            name: "next/link",
+          },
+          {
+            importNames: [
+              "getPathname",
+              "permanentRedirect",
+              "redirect",
+              "usePathname",
+              "useRouter",
+            ],
+            message: "Please import from `libs/next-intl` instead.",
+            name: "next/navigation",
+          },
+
+          {
+            importNames: ["getLocale"],
+            message: "Please import from `libs/next-intl` instead.",
+            name: "next-intl/server",
+          },
+        ],
+      },
+    },
+
     betterTailwindcss(options.betterTailwindcss),
 
     storybook(),
