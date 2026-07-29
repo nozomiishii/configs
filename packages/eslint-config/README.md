@@ -29,7 +29,7 @@ writes an `eslint.config.ts` that composes the preset you pick.
 Pick from these presets:
 
 - `nextjs`: web apps, with React / Next.js / Tailwind / Storybook
-- `tanstack-start`: web apps, with React / TanStack Start (Vite) / Tailwind / Storybook
+- `tanstack-start`: web apps, with React / TanStack Start (Vite) / TanStack Query / Tailwind / Storybook
 - `node`: CLI / library projects (Node.js setup without the web layers)
 
 ## Presets

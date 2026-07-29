@@ -12,26 +12,33 @@ import {
   reactHooks,
   reactRefresh,
   storybook,
+  tanstackQuery,
   tanstackRouter,
 } from "../rules";
 import { name } from "../utils/name";
 import { base } from "./base";
 
 /**
- * route定義のオブジェクトを受け取る関数。
- * create-route-property-orderが並び順を見る対象と同じ。
+ * プロパティの並び順が型推論に効くオブジェクトを受け取る関数。
+ * TanStackのproperty-order系ruleが並び順を見る対象と同じ。
  *
  * @see https://github.com/TanStack/router/blob/main/packages/eslint-plugin-router/src/rules/create-route-property-order/constants.ts
+ * @see https://github.com/TanStack/query/blob/main/packages/eslint-plugin-query/src/rules/infinite-query-property-order/constants.ts
+ * @see https://github.com/TanStack/query/blob/main/packages/eslint-plugin-query/src/rules/mutation-property-order/constants.ts
  */
-const routeDefinitionFunctions = [
+const propertyOrderFunctions = [
   "createFileRoute",
   "createRootRoute",
   "createRootRouteWithContext",
   "createRoute",
+  "infiniteQueryOptions",
+  "useInfiniteQuery",
+  "useMutation",
+  "useSuspenseInfiniteQuery",
 ];
 
 /**
- * base の sort-objects 設定。上書きしても route 定義以外は元の挙動を保つため、
+ * base の sort-objects 設定。上書きしても対象のオブジェクト以外は元の挙動を保つため、
  * 値を書き写さず recommended-natural から取る。
  */
 const sortObjectsRule =
@@ -82,12 +89,13 @@ export function tanstackStart(options: Options = {}) {
     jsxA11yX(),
 
     tanstackRouter(),
+    tanstackQuery(),
     betterTailwindcss(options.betterTailwindcss),
 
     storybook(),
     playwright(),
 
-    // ここから下は TanStack Router の書き方に合わせた他 plugin の調整。
+    // ここから下は TanStack の書き方に合わせた他 plugin の調整。
     // 上書き対象より後に置く必要がある。
     {
       name: name("tanstack-start/only-throw-error"),
@@ -118,10 +126,10 @@ export function tanstackStart(options: Options = {}) {
       name: name("tanstack-start/sort-objects"),
       rules: {
         /**
-         * route定義のプロパティ順は型推論に効くため、create-route-property-orderが
-         * 決めた順を守る必要がある。baseのperfectionistがアルファベット順に直そうとして
-         * 競合し、どちらもauto fixできるので互いを打ち消し合う。
-         * route定義のオブジェクトだけ並べ替えの対象外にする。
+         * route定義とquery定義のプロパティ順は型推論に効くため、TanStackの
+         * property-order系ruleが決めた順を守る必要がある。baseのperfectionistが
+         * アルファベット順に直そうとして競合し、どちらもauto fixできるので
+         * 互いを打ち消し合う。該当のオブジェクトだけ並べ替えの対象外にする。
          *
          * @see https://perfectionist.dev/rules/sort-objects#useconfigurationif
          */
@@ -132,9 +140,7 @@ export function tanstackStart(options: Options = {}) {
             // 照合対象はcalleeのソース文字列。createFileRoute("/about")のように
             // 引数まで含むため、関数名の直後で切る。
             useConfigurationIf: {
-              callingFunctionNamePattern: routeDefinitionFunctions.map(
-                (fn) => String.raw`^${fn}\b`,
-              ),
+              callingFunctionNamePattern: propertyOrderFunctions.map((fn) => String.raw`^${fn}\b`),
             },
           },
           ...sortObjectsFallback,
