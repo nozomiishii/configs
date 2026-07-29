@@ -7,7 +7,9 @@ const config = tanstackRouterPlugin.configs["flat/recommended"][0];
 /**
  * @returns `@tanstack/eslint-plugin-router`
  *
- * どのruleもTanStack Routerのimportがあるファイルだけを見るため、filesで絞らない。
+ * route-param-namesはTanStack Routerのimportがあるファイルだけを見るが、
+ * create-route-property-orderはcalleeの名前しか見ない。
+ * 別packageのcreateRouteにも当たるため、誤検知が出たらconsumer側でfilesを絞る。
  *
  * @see https://tanstack.com/router/latest/docs/eslint/eslint-plugin-router
  * @see https://github.com/TanStack/router/tree/main/packages/eslint-plugin-router
