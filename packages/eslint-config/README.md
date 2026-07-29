@@ -26,7 +26,7 @@ This adds `@nozomiishii/eslint-config`, `eslint`, and `typescript` to your
 `devDependencies` (pinned), adds `eslint` / `lint` / `lint:fix` scripts, and
 writes an `eslint.config.ts` that composes the preset you pick.
 
-Pick one of three presets:
+Pick from these presets:
 
 - `nextjs`: web apps, with React / Next.js / Tailwind / Storybook
 - `tanstack-start`: web apps, with React / TanStack Start (Vite) / Tailwind / Storybook
@@ -34,9 +34,9 @@ Pick one of three presets:
 
 ## Presets
 
-`node`, `nextjs`, and `tanstack-start` all build on a shared `base` (the
-framework- and runtime-agnostic language foundation) and each append Prettier
-last. The generated `eslint.config.ts` spreads the preset you picked:
+Every preset builds on a shared `base` (the framework- and runtime-agnostic
+language foundation) and appends Prettier last. The generated
+`eslint.config.ts` spreads the preset you picked:
 
 ```ts
 import { defineConfig, node } from "@nozomiishii/eslint-config";
@@ -45,31 +45,11 @@ export default defineConfig([...node()]);
 ```
 
 `base()` is exported as the shared foundation (without Prettier; each preset
-adds it). `node()` adds the Node.js layer, and `nextjs()` and `tanstackStart()`
-add the Node.js and web layers.
+adds it).
 
-### tanstackStart()
+The design decisions behind each preset live in docs:
 
-Includes `@tanstack/eslint-plugin-router`, and adjusts the rules that clash with
-how TanStack Start is written.
-
-Generated output is not linted:
-
-- `routeTree.gen.ts` is ignored. Its own `eslint-disable` header has no effect under the `noInlineConfig` setting in `base`
-
-Applied everywhere:
-
-- `@typescript-eslint/only-throw-error`: allows throwing `redirect()` and `notFound()`
-- `perfectionist/sort-objects`: leaves route definition objects unsorted, since their property order drives type inference
-- `no-restricted-syntax`: bans reading `import.meta.env` directly so env access goes through `env.ts`, matching how `n/no-process-env` is used
-
-Applied under `src/routes/**` only:
-
-- `unicorn/filename-case`: ignores the `-` prefix and the trailing `_`, since renaming them changes routing
-- `react-refresh/only-export-components`: off, because route files must export `Route` and cannot export only components
-
-If you moved `routesDirectory` or `generatedRouteTree` away from the defaults,
-add the matching settings yourself.
+- [tanstackStart()](./docs/tanstack-start.md)
 
 ## Rule list
 

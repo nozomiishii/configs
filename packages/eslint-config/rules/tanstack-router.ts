@@ -2,8 +2,6 @@ import tanstackRouterPlugin from "@tanstack/eslint-plugin-router";
 import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
 
-const config = tanstackRouterPlugin.configs["flat/recommended"][0];
-
 /**
  * @returns `@tanstack/eslint-plugin-router`
  *
@@ -15,10 +13,11 @@ const config = tanstackRouterPlugin.configs["flat/recommended"][0];
  * @see https://github.com/TanStack/router/tree/main/packages/eslint-plugin-router
  */
 export function tanstackRouter() {
-  return defineConfig([
-    {
+  return defineConfig(
+    // 要素が増えても落とさないよう配列のまま扱う。upstream は name を持たない。
+    tanstackRouterPlugin.configs["flat/recommended"].map((config) => ({
       ...config,
       name: name("tanstack-router"),
-    },
-  ]);
+    })),
+  );
 }

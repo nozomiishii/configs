@@ -3,15 +3,19 @@ import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
 
 /**
- * @param target bundler。ruleは同じで、見逃すexportの指定だけが違う。
- * nextはNext.jsの予約export名を、viteは定数exportを許可する。
- * 既定値はscripts/typegen.tsが引数なしで呼ぶために要る。
+ * bundler ごとの config 名。plugin 側が増減しても追随するよう型から引く。
+ */
+export type ReactRefreshTarget = keyof typeof eslintPluginReactRefresh.configs;
+
+/**
+ * @param target rule は同じで、見逃す export の指定だけが違う。
+ * next は Next.js の予約 export 名を、vite は定数 export を許可する。
  *
  * @returns eslint-plugin-react-refresh
  *
  * @see https://github.com/ArnaudBarre/eslint-plugin-react-refresh
  */
-export function reactRefresh(target: "next" | "vite" = "vite") {
+export function reactRefresh(target: ReactRefreshTarget) {
   return defineConfig([
     {
       ...eslintPluginReactRefresh.configs[target],
