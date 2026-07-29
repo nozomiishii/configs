@@ -26,16 +26,17 @@ This adds `@nozomiishii/eslint-config`, `eslint`, and `typescript` to your
 `devDependencies` (pinned), adds `eslint` / `lint` / `lint:fix` scripts, and
 writes an `eslint.config.ts` that composes the preset you pick.
 
-Pick one of two presets:
+Pick one of three presets:
 
 - `nextjs`: web apps, with React / Next.js / Tailwind / Storybook
+- `tanstack-start`: web apps, with React / TanStack Start (Vite) / Tailwind / Storybook
 - `node`: CLI / library projects (Node.js setup without the web layers)
 
 ## Presets
 
-`node` and `nextjs` both build on a shared `base` (the framework- and
-runtime-agnostic language foundation) and each append Prettier last. The
-generated `eslint.config.ts` spreads the preset you picked:
+`node`, `nextjs`, and `tanstack-start` all build on a shared `base` (the
+framework- and runtime-agnostic language foundation) and each append Prettier
+last. The generated `eslint.config.ts` spreads the preset you picked:
 
 ```ts
 import { defineConfig, node } from "@nozomiishii/eslint-config";
@@ -43,9 +44,21 @@ import { defineConfig, node } from "@nozomiishii/eslint-config";
 export default defineConfig([...node()]);
 ```
 
-`base()` is exported as the shared foundation (without Prettier; `node()` and
-`nextjs()` add it). `node()` adds the Node.js layer and `nextjs()` adds the
-Node.js and web layers.
+`base()` is exported as the shared foundation (without Prettier; each preset
+adds it). `node()` adds the Node.js layer, and `nextjs()` and `tanstackStart()`
+add the Node.js and web layers.
+
+### tanstackStart()
+
+Includes `@tanstack/eslint-plugin-router`, and adjusts three rules that clash
+with how TanStack Router is written:
+
+- `@typescript-eslint/only-throw-error`: allows throwing `redirect()` and `notFound()`
+- `perfectionist/sort-objects`: leaves route definition objects unsorted, since their property order drives type inference
+- `react-refresh/only-export-components`: off under `src/routes/**`, because route files must export `Route` and cannot export only components
+
+If you moved `routesDirectory` away from the default `src/routes`, add the last
+one yourself.
 
 ## Rule list
 

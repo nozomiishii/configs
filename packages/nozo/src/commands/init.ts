@@ -39,6 +39,11 @@ export const tools = {
         message: "Which ESLint preset?",
         options: [
           { hint: "React / Next.js web app", label: "nextjs", value: "nextjs" },
+          {
+            hint: "React / TanStack Start (Vite) web app",
+            label: "tanstack-start",
+            value: "tanstack-start",
+          },
           { hint: "CLI / library (Node.js)", label: "node", value: "node" },
         ],
       });

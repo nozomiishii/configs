@@ -61,6 +61,7 @@
     "@next/eslint-plugin-next": "16.2.11",
     "@stylistic/eslint-plugin": "5.10.0",
     "@swc-node/register": "1.12.1",
+    "@tanstack/eslint-plugin-router": "1.162.0",
     "@types/node": "24.13.3",
     "@vitest/eslint-plugin": "1.6.24",
     "eslint-config-flat-gitignore": "2.3.0",

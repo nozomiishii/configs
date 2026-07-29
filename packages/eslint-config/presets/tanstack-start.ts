@@ -2,7 +2,6 @@ import { defineConfig } from "eslint/config";
 import globals from "globals";
 import type { Options } from "../types";
 import {
-  _nextjs,
   betterTailwindcss,
   jsxA11yX,
   n,
@@ -12,17 +11,24 @@ import {
   reactHooks,
   reactRefresh,
   storybook,
+  tanstackRouter,
 } from "../rules";
 import { name } from "../utils/name";
 import { base } from "./base";
 
 /**
- * Next.js / web アプリ向け。base + Node.js 層 + ブラウザ層 + web rules。
+ * TanStack Start / web アプリ向け。base + Node.js 層 + ブラウザ層 + web rules。
  *
- * node() からは作らず base を元に組む。Next は server コードも持つため
+ * node() からは作らず base を元に組む。SPA mode でも server function と
+ * server route は使え、shell は SSR ビルドで prerender されるため
  * Node.js 層(eslint-plugin-n)も含める。prettier は末尾で一度だけ付ける。
+ *
+ * tanstackRouter() は react-refresh の rule を route ファイルで off にするため、
+ * reactRefresh() より後に置く。
+ *
+ * @see https://tanstack.com/start/latest/docs/framework/react/guide/spa-mode
  */
-export function nextjs(options: Options = {}) {
+export function tanstackStart(options: Options = {}) {
   return defineConfig([
     ...base(options),
 
@@ -44,10 +50,10 @@ export function nextjs(options: Options = {}) {
 
     react(),
     reactHooks(),
-    reactRefresh("next"),
+    reactRefresh("vite"),
     jsxA11yX(),
 
-    _nextjs(),
+    tanstackRouter(),
     betterTailwindcss(options.betterTailwindcss),
 
     storybook(),

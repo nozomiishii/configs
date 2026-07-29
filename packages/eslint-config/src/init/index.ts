@@ -6,7 +6,14 @@ import { fileURLToPath } from "node:url";
 
 export type InitOptions = { cwd: string; monorepo?: boolean; preset?: PresetId };
 
-export type PresetId = "nextjs" | "node";
+export type PresetId = "nextjs" | "node" | "tanstack-start";
+
+/** starter が呼ぶ preset 関数名。ファイル名は kebab-case、関数は camelCase のため対応表で持つ。 */
+const presetFunctions: Record<PresetId, string> = {
+  "nextjs": "nextjs",
+  "node": "node",
+  "tanstack-start": "tanstackStart",
+};
 
 type PackageJson = {
   devDependencies?: Record<string, string>;
@@ -35,10 +42,11 @@ export async function init({
   );
 
   // monorepo の per-package config は tsconfigRootDir を明示する。
+  const presetFunction = presetFunctions[preset];
   const starter = monorepo
     ? starterRaw.replace(
-        `${preset}()`,
-        () => `${preset}({ typescript: { tsconfigRootDir: import.meta.dirname } })`,
+        `${presetFunction}()`,
+        () => `${presetFunction}({ typescript: { tsconfigRootDir: import.meta.dirname } })`,
       )
     : starterRaw;
 
