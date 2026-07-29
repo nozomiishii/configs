@@ -24,6 +24,8 @@ pnpx nozo init
 
 これで `@nozomiishii/eslint-config` / `eslint` / `typescript` が pin で `devDependencies` に追加され、`eslint` / `lint` / `lint:fix` の scripts が追加され、選んだ preset を compose する `eslint.config.ts` が生成される。
 
+`tsconfig.json` に `include` 配列があれば `.storybook/**/*` も足す。TypeScript はディレクトリ名を展開するときドット始まりを拾わないため、`.storybook` と書いても `.storybook/main.ts` は project に入らず、preset の Storybook ルールが parse error になる。`include` が無い `tsconfig.json` は既定の `**/*` を壊さないよう触らず、CLI が警告を出す。
+
 preset は2つから選ぶ:
 
 - `nextjs`: React / Next.js / Tailwind / Storybook 込みの web アプリ向け

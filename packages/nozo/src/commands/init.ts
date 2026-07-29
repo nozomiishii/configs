@@ -1,6 +1,11 @@
 import * as p from "@clack/prompts";
 import { init as initCommitlint } from "@nozomiishii/commitlint-config/init";
-import { init as initEslint, type PresetId } from "@nozomiishii/eslint-config/init";
+import {
+  init as initEslint,
+  type InitResult,
+  type PresetId,
+  tsconfigIncludeReports,
+} from "@nozomiishii/eslint-config/init";
 import { init as initLefthook } from "@nozomiishii/lefthook-config/init";
 import { init as initPostinstall } from "@nozomiishii/postinstall/init";
 import { init as initPrettier } from "@nozomiishii/prettier-config/init";
@@ -20,11 +25,12 @@ type Tool = {
 
 type ToolConfig = { monorepo: boolean; preset: PresetId };
 
+// 報告することがある init だけ結果を返す
 type ToolInit = (options: {
   cwd: string;
   monorepo?: boolean;
   preset?: PresetId;
-}) => Promise<void>;
+}) => Promise<InitResult> | Promise<void>;
 
 export const tools = {
   commitlint: {
@@ -177,8 +183,14 @@ export default defineCommand({
 
       try {
         const config = configs[id];
-        await tool.run(config === undefined ? { cwd } : { cwd, ...config });
+        const result = await tool.run(config === undefined ? { cwd } : { cwd, ...config });
         spinner.stop(`${tool.label}: ok`);
+
+        // tsconfig.json に触れたツールは、何をしたかを spinner の後に伝える
+        if (result !== undefined) {
+          const report = tsconfigIncludeReports[result.tsconfigInclude];
+          p.log[report.level](report.message);
+        }
       } catch (error) {
         spinner.stop(`${tool.label}: failed`);
         p.cancel(error instanceof Error ? error.message : String(error));

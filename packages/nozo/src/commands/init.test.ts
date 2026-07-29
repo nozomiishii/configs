@@ -33,8 +33,15 @@ test("happy path: every tool's install script completes without throwing", async
   expect.hasAssertions();
 
   for (const id of toolIds) {
-    await expect(tools[id].run({ cwd })).resolves.toBeUndefined();
+    await expect(tools[id].run({ cwd })).resolves.not.toThrow();
   }
+});
+
+// eslint は tsconfig.json をどう扱ったかを返し、init コマンドはそれをログに出す。
+test("the eslint tool reports how it handled tsconfig.json", async ({ cwd }) => {
+  await expect(tools.eslint.run({ cwd })).resolves.toStrictEqual({
+    tsconfigInclude: "missing",
+  });
 });
 
 // lockfile も packageManager フィールドも無いとき、nozo を起動したランナーを使う。
@@ -51,9 +58,7 @@ test("falls back to the launching runner when the project has no config", async 
 test("throws when neither project config nor runner is available", async ({ cwd }) => {
   stubUserAgent();
 
-  await expect(resolvePackageManager(cwd)).rejects.toThrow(
-    "Could not determine a package manager",
-  );
+  await expect(resolvePackageManager(cwd)).rejects.toThrow("Could not determine a package manager");
 });
 
 // プロジェクトの lockfile はランナーより優先される。

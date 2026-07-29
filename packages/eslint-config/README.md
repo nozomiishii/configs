@@ -26,6 +26,13 @@ This adds `@nozomiishii/eslint-config`, `eslint`, and `typescript` to your
 `devDependencies` (pinned), adds `eslint` / `lint` / `lint:fix` scripts, and
 writes an `eslint.config.ts` that composes the preset you pick.
 
+It also appends `.storybook/**/*` when `tsconfig.json` has an `include` array.
+TypeScript skips dot directories while expanding a bare directory name, so
+`.storybook` alone leaves `.storybook/main.ts` out of the project and the
+preset's Storybook rules fail with a parse error. A `tsconfig.json` without
+`include` is left alone so its default `**/*` stays intact, and the CLI warns
+instead.
+
 Pick one of two presets:
 
 - `nextjs`: web apps, with React / Next.js / Tailwind / Storybook
