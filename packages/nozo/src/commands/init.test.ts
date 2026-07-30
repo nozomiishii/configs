@@ -29,6 +29,7 @@ const test = baseTest.extend<{ cwd: string }>({
 
 // 全ツールの install スクリプトが throw せずに完走することだけを確認する。
 // 各ツールの生成物・package.json 内容の検証は各 config パッケージ側の責務。
+// 正常系では、全ツールの install script が例外なく完了する。
 test("happy path: every tool's install script completes without throwing", async ({ cwd }) => {
   expect.hasAssertions();
 

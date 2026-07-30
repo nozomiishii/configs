@@ -10,12 +10,14 @@ const { name, rule } = breakingChangeRequiresBang;
 // `!` 単独は許可・footer 単独だけを弾く一方向の含意。
 
 describe("breaking-change-requires-bang (unit)", () => {
+  // breaking marker のない通常コミットを許可する。
   test("allows a regular commit without a breaking marker", () => {
     const [valid] = rule({ header: "feat: add foo", notes: [] });
 
     expect(valid).toBe(true);
   });
 
+  // header に bang がある場合は breaking note を許可する。
   test("allows a breaking note when the header contains a bang", () => {
     const [valid] = rule({
       header: "feat!: drop node 18",
@@ -25,6 +27,7 @@ describe("breaking-change-requires-bang (unit)", () => {
     expect(valid).toBe(true);
   });
 
+  // header に bang がない breaking footer を拒否する。
   test("rejects a breaking footer without a header bang", () => {
     const [valid] = rule({
       header: "feat: add foo",
@@ -34,6 +37,7 @@ describe("breaking-change-requires-bang (unit)", () => {
     expect(valid).toBe(false);
   });
 
+  // ハイフン形式の breaking-change note を検出する。
   test("detects a hyphenated breaking-change note", () => {
     const [valid] = rule({
       header: "fix: patch",
@@ -43,6 +47,7 @@ describe("breaking-change-requires-bang (unit)", () => {
     expect(valid).toBe(false);
   });
 
+  // 先頭に空白があっても header の bang を許可する。
   test("allows a header bang after leading whitespace", () => {
     // commitlint は header を trim せず rule に渡す。consumer が header-trim を無効化しても
     // 偶発的な先頭空白で bang を見落とさないことを保証する。
@@ -59,6 +64,7 @@ describe("breaking-change-requires-bang (integration via @commitlint/lint)", () 
   const rules = { [name]: [2, "always"] } as const;
   const opts = { plugins: { local: { rules: { [name]: rule } } } };
 
+  // header に bang がない breaking change footer を拒否する。
   test("rejects a breaking change footer without a header bang", async () => {
     const message = ["feat: add foo", "", "BREAKING CHANGE: removed old api"].join("\n");
     const result = await lint(message, rules, opts);

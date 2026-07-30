@@ -31,10 +31,12 @@ const test = baseTest.extend<{ initResult: InitResult }>({
   },
 });
 
+// init は @nozomiishii/postinstall を devDependencies に追加する。
 test("init adds @nozomiishii/postinstall to devDependencies", ({ initResult }) => {
   expect(initResult.pkg.devDependencies?.["@nozomiishii/postinstall"]).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
+// init は postinstall script を追加する。
 test("init adds postinstall script", ({ initResult }) => {
   expect(initResult.pkg.scripts?.postinstall).toBe("postinstall");
 });

@@ -9,6 +9,7 @@ const distDir = path.resolve(packageDir, "dist");
 
 // ビルド成果物に .map ファイルが含まれないことを検証する
 // `pnpm build` の実行を含むため、CI runner の負荷ブレで 5s デフォルトを超えうる（実測 5137ms / 7143ms）
+// build 出力に .map ファイルが含まれない。
 test("build output should not contain .map files", { timeout: 30_000 }, () => {
   execSync("pnpm build", { cwd: packageDir });
 

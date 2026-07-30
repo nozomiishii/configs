@@ -30,12 +30,14 @@ const test = baseTest.extend<{ initResult: InitResult }>({
   },
 });
 
+// init は @nozomiishii/commitlint-config を devDependencies に追加する。
 test("init adds @nozomiishii/commitlint-config to devDependencies", ({ initResult }) => {
   expect(initResult.pkg.devDependencies?.["@nozomiishii/commitlint-config"]).toMatch(
     /^\d+\.\d+\.\d+$/,
   );
 });
 
+// init は commitlint.config.ts を生成する。
 test("init generates commitlint.config.ts", ({ initResult }) => {
   expect(initResult.configContent.length).toBeGreaterThan(0);
 });

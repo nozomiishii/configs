@@ -7,12 +7,14 @@ const { name, rule } = commitMessageAsciiOnly;
 // rule callback を直接呼び、parser を介さず純粋ロジックを単体検証する。
 // `commit-message-ascii-only` の検査範囲が body / footer / notes 全体に拡張されたことを保証する。
 describe("commit-message-ascii-only (unit)", () => {
+  // body、footer、notes が空のコミットを許可する。
   test("allows an empty commit body, footer, and notes", () => {
     const [valid] = rule({ body: null, footer: null, notes: [] });
 
     expect(valid).toBe(true);
   });
 
+  // body、footer、notes がすべて ASCII のコミットを許可する。
   test("allows ASCII body, footer, and notes", () => {
     const [valid] = rule({
       body: "English body line.",
@@ -23,6 +25,7 @@ describe("commit-message-ascii-only (unit)", () => {
     expect(valid).toBe(true);
   });
 
+  // non-ASCII の body を固定メッセージ付きで拒否する。
   test("rejects a non-ASCII body with the fixed message", () => {
     const [valid, message] = rule({ body: "日本語の本文。", footer: null, notes: [] });
 
@@ -30,6 +33,7 @@ describe("commit-message-ascii-only (unit)", () => {
     expect(message).toMatch(/ASCII characters only/);
   });
 
+  // non-ASCII の footer を拒否する。
   test("rejects a non-ASCII footer", () => {
     // parser が body 1 行目の `#nnn` を検出して以降を footer に振り分けたときに、
     // body は空文字列となり footer 側に日本語が流れ込む状況を再現。
@@ -42,6 +46,7 @@ describe("commit-message-ascii-only (unit)", () => {
     expect(valid).toBe(false);
   });
 
+  // breaking change note 内の non-ASCII text を拒否する。
   test("rejects non-ASCII text in breaking change notes", () => {
     const [valid] = rule({
       body: "English body.",
@@ -52,6 +57,7 @@ describe("commit-message-ascii-only (unit)", () => {
     expect(valid).toBe(false);
   });
 
+  // non-ASCII の note title を拒否する。
   test("rejects a non-ASCII note title", () => {
     // ルール実装は title と text を両方検査対象に含めている契約。
     // 実用上 title はほぼ "BREAKING CHANGE" 固定だが、契約をテストで固定する。
@@ -72,6 +78,7 @@ describe("commit-message-ascii-only (integration via @commitlint/lint)", () => {
   const rules = { [name]: [2, "always"] } as const;
   const opts = { plugins: { local: { rules: { [name]: rule } } } } as const;
 
+  // issue 参照より後ろにある non-ASCII text を検出する。
   test("detects non-ASCII text after an issue reference", async () => {
     const message = ["feat(scope): subject", "", "Issue #2126 のような本文。日本語混入。"].join(
       "\n",
@@ -83,6 +90,7 @@ describe("commit-message-ascii-only (integration via @commitlint/lint)", () => {
     expect(result.errors.some((e) => e.name === name)).toBe(true);
   });
 
+  // 英語だけのコミットを許可する。
   test("allows an English-only commit", async () => {
     const message = [
       "feat(scope): subject",

@@ -30,16 +30,19 @@ const test = baseTest.extend<{ initResult: InitResult }>({
   },
 });
 
+// init は @nozomiishii/lefthook-config を devDependencies に追加する。
 test("init adds @nozomiishii/lefthook-config to devDependencies", ({ initResult }) => {
   expect(initResult.pkg.devDependencies?.["@nozomiishii/lefthook-config"]).toMatch(
     /^\d+\.\d+\.\d+$/,
   );
 });
 
+// init は lefthook を devDependencies に追加する。
 test("init adds lefthook to devDependencies", ({ initResult }) => {
   expect(initResult.pkg.devDependencies?.lefthook).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
+// init は lefthook.yaml を生成する。
 test("init generates lefthook.yaml", ({ initResult }) => {
   expect(initResult.yamlContent.length).toBeGreaterThan(0);
 });
