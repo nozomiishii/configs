@@ -6,16 +6,6 @@ const tsconfigRootDir = fileURLToPath(new URL(".", import.meta.url));
 export default defineConfig([
   ...node({ typescript: { tsconfigRootDir } }),
   {
-    languageOptions: {
-      parserOptions: {
-        projectService: {
-          allowDefaultProject: ["bin/*.js", "eslint.config.ts", "tsdown.config.ts"],
-        },
-      },
-    },
-    name: "project/typescript",
-  },
-  {
     files: ["bin/**/*.js"],
     name: "project/node-esm-bin",
     rules: {
