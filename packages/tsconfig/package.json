@@ -18,13 +18,22 @@
   "license": "MIT",
   "author": "Nozomi Ishii",
   "type": "module",
+  "exports": {
+    ".": "./src/tsconfig.json",
+    "./tsconfig.json": "./src/tsconfig.json",
+    "./tsconfig.bundler.json": "./src/tsconfig.bundler.json",
+    "./tsconfig.lib.json": "./src/tsconfig.lib.json",
+    "./tsconfig.nextjs.json": "./src/tsconfig.nextjs.json",
+    "./tsconfig.tsc.json": "./src/tsconfig.tsc.json",
+    "./package.json": "./package.json"
+  },
   "files": [
-    "*.json",
+    "src/*.json",
     "README.md"
   ],
   "scripts": {
-    "lint": "eslint --max-warnings=0 .",
-    "link": "pnpm link --global"
+    "link": "pnpm link --global",
+    "lint": "eslint --max-warnings=0 ."
   },
   "devDependencies": {
     "@nozomiishii/eslint-config": "workspace:*",
@@ -36,5 +45,6 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
-  }
+  },
+  "tsconfig": "./src/tsconfig.json"
 }

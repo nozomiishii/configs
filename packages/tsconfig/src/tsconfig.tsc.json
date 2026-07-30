@@ -10,7 +10,7 @@
     // tsc で transpile する場合 (base の `module: "preserve"` を上書き)
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
-    "outDir": "dist",
+    "outDir": "../dist",
     "sourceMap": true
   }
 }

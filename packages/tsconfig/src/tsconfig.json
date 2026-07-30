@@ -1,0 +1,115 @@
+{
+  // https://www.typescriptlang.org/tsconfig
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "@nozomiishii/tsconfig",
+
+  "compilerOptions": {
+    // ----------------------------------------------------------------
+    // Base Option
+    // ----------------------------------------------------------------
+    // ESModuleの互換。CommonJSで定義されてるモジュールを変換してESModuleでも利用できるようにするか。
+    "esModuleInterop": true,
+
+    // .d.tsファイルの型までtype checkするか
+    // falseだと全てのnode_modulesまでチェックするからパフォーマンスよくない
+    // https://www.youtube.com/watch?v=zu-EgnbmcLY
+    "skipLibCheck": true,
+
+    // どのJavaScriptのバージョンに変換するか
+    // 使うnodeバージョンによって変更する
+    // 対応表 https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping
+    // ES2025でIterator helpers / Set methods / Promise.try等の型が利用可能
+    // Node 22 LTS / Node 24 / 主要モダンブラウザは2026年時点でES2025をネイティブサポート
+    "target": "ES2025",
+
+    // バンドラー / トランスパイラ前提のmoduleモード (TS 5.4+)
+    // ECMAScript imports/exportsを変換せず保持し、moduleResolution: "bundler" を暗黙的に指定する
+    // tsupなどでtsc以外がtranspileするのが標準的な現状に最適
+    // tscでtranspileする場合はconsumer側で `module: "NodeNext"` 等に上書きする
+    // https://www.typescriptlang.org/tsconfig/module.html#preserve
+    "module": "preserve",
+
+    // .jsファイルのインポートを許可するか
+    "allowJs": true,
+
+    // .jsonファイルのインポートを許可するか
+    "resolveJsonModule": true,
+
+    // forceにすることで全てのファイルをモジュールとして扱う
+    // ファイルがスコープの単位になるので別ファイルで同一名の変数定義が可能
+    // https://www.totaltypescript.com/cannot-redeclare-block-scoped-variable
+    "moduleDetection": "force",
+
+    // ファイル内で何かをエクスポートするか、少なくとも1つの外部モジュールをインポートしているか確認する
+    // TSC以外のトランスパイラに配慮するためのもの
+    "isolatedModules": true,
+
+    // ファイルパスの大文字小文字を区別するか
+    "forceConsistentCasingInFileNames": true,
+
+    // import typeやexport typeすることを強制
+    // 可読性向上とトランスパイル時に不必要なimportが残ってしまうのを減らせる
+    "verbatimModuleSyntax": true,
+
+    // typoした副作用importを silent に許す挙動を防止 (TS 5.6+)
+    // `import "./typo.css"` のような副作用importの解決失敗をエラー化
+    // TS 6.0でデフォルト化予定のため先行採用が安全
+    // CSS等のアンビエント宣言が必要な場合は `declare module "*.css";` を追加
+    // https://www.typescriptlang.org/tsconfig/#noUncheckedSideEffectImports
+    "noUncheckedSideEffectImports": true,
+
+    // Node 23.6+ の type-stripping や `tsgo` などでも実行可能なTypeScript構文に制限 (TS 5.8+)
+    // enum / runtime namespace / parameter properties をエラー化
+    // 既に `verbatimModuleSyntax: true` を採用しているため整合性が高い
+    // https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/
+    "erasableSyntaxOnly": true,
+
+    // ----------------------------------------------------------------
+    // Strictness
+    // ----------------------------------------------------------------
+    // trueにすることで次の8個のオプションがすべて有効になる
+    // noImplicitAny
+    // strictNullChecks
+    // strictFunctionTypes
+    // strictBindCallApply
+    // strictPropertyInitialization
+    // noImplicitThis
+    // useUnknownInCatchVariables
+    // alwaysStrict
+    // https://typescriptbook.jp/reference/tsconfig/strict
+    //
+    // TypeScript 6.0で`strict: true`がデフォルト化予定だが、
+    // 明示維持する: `exactOptionalPropertyTypes`の警告バグ報告
+    // (microsoft/TypeScript#63232)があり、明示の方が安全
+    "strict": true,
+
+    // 配列やオブジェクトへのインデックスアクセスを型安全にする
+    "noUncheckedIndexedAccess": true,
+
+    // x?: T と x?: T | undefined が区別される
+    "exactOptionalPropertyTypes": true,
+
+    // overrideする場合は明示する
+    "noImplicitOverride": true,
+
+    // ----------------------------------------------------------------
+    // JSX
+    // ----------------------------------------------------------------
+    // tsxファイルの変換方法。preserveは.jsファイルに変換せずにそのまま.jsxを出力する
+    // Nextjs使う場合はpreserveのままが良い
+    // "jsx": "preserve",
+
+    // ----------------------------------------------------------------
+    // Libs
+    // ----------------------------------------------------------------
+    /* If your code runs in the DOM: */
+    // "lib": ["ES2025", "dom"]
+    /* If your code doesn't run in the DOM: */
+    "lib": ["ES2025"]
+
+    // ----------------------------------------------------------------
+    // Types
+    // ----------------------------------------------------------------
+    // "types": ["vitest/importMeta"]
+  }
+}
