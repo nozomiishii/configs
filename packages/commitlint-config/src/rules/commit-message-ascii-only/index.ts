@@ -11,10 +11,15 @@ type Parsed = Partial<Pick<CommitBase, "body" | "footer" | "notes">>;
 const rule = ({ body, footer, notes }: Parsed): readonly [boolean, string?] => {
   const noteText = (notes ?? []).flatMap((n) => [n.title, n.text]).join("\n");
   const text = [body, footer, noteText].filter(Boolean).join("\n");
-  if (!text) return [true];
-  const valid = [...text].every((c) => c.charCodeAt(0) < 0x80);
+
+  if (!text) {
+    return [true];
+  }
+
+  const isValid = Buffer.byteLength(text, "utf-8") === text.length;
+
   return [
-    valid,
+    isValid,
     "commit message body / footer / notes must contain ASCII characters only (write in English)",
   ];
 };

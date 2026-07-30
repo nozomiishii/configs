@@ -58,6 +58,9 @@ jobs:
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
+      - name: Lint
+        run: pnpm lint
+
       - name: Compiler check
         run: pnpm tsc
 

@@ -1,4 +1,6 @@
-import { echo, fs, glob, path } from "zx";
+import fs from "node:fs";
+import path from "node:path";
+import { echo, glob } from "zx";
 
 /**
  * Recursively convert .vscode/settings.example.jsonc to .vscode/settings.json

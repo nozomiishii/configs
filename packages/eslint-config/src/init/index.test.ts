@@ -36,36 +36,42 @@ async function runInit(preset?: PresetId, isMonorepo?: boolean): Promise<InitRes
   return { configContent, pkg };
 }
 
+// init は @nozomiishii/eslint-config を devDependencies に追加する。
 test("init adds @nozomiishii/eslint-config to devDependencies", async () => {
   const { pkg } = await runInit();
 
   expect(pkg.devDependencies?.["@nozomiishii/eslint-config"]).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
+// init は eslint を devDependencies に追加する。
 test("init adds eslint to devDependencies", async () => {
   const { pkg } = await runInit();
 
   expect(pkg.devDependencies?.eslint).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
+// init は typescript を devDependencies に追加する。
 test("init adds typescript to devDependencies", async () => {
   const { pkg } = await runInit();
 
   expect(pkg.devDependencies?.typescript).toMatch(/^\d+\.\d+\.\d+$/);
 });
 
+// init は eslint script を追加する。
 test("init adds eslint script", async () => {
   const { pkg } = await runInit();
 
   expect(pkg.scripts?.eslint).toBe("eslint --max-warnings=0 --cache");
 });
 
+// init は lint script を追加する。
 test("init adds lint script", async () => {
   const { pkg } = await runInit();
 
   expect(pkg.scripts?.lint).toBe("pnpm eslint");
 });
 
+// init は lint:fix script を追加する。
 test("init adds lint:fix script", async () => {
   const { pkg } = await runInit();
 

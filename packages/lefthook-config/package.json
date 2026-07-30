@@ -39,6 +39,7 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
+    "lint": "eslint --max-warnings=0 .",
     "prepublishOnly": "pnpm run build",
     "test": "vitest run",
     "tsc": "tsc"
@@ -47,8 +48,10 @@
     "git-harvest": "0.3.4"
   },
   "devDependencies": {
+    "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.3",
+    "eslint": "10.8.0",
     "lefthook": "2.1.10",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",

@@ -1,13 +1,15 @@
 import { execSync } from "node:child_process";
 import { readdirSync } from "node:fs";
-import { resolve } from "node:path";
-import { test, expect } from "vitest";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { expect, test } from "vitest";
 
-const packageDir = resolve(import.meta.dirname, "..");
-const distDir = resolve(packageDir, "dist");
+const packageDir = fileURLToPath(new URL("..", import.meta.url));
+const distDir = path.resolve(packageDir, "dist");
 
 // ビルド成果物に .map ファイルが含まれないことを検証する
 // `pnpm build` の実行を含むため、CI runner の負荷ブレで 5s デフォルトを超えうる（実測 5137ms / 7143ms）
+// build 出力に .map ファイルが含まれない。
 test("build output should not contain .map files", { timeout: 30_000 }, () => {
   execSync("pnpm build", { cwd: packageDir });
 

@@ -8,5 +8,6 @@
  */
 declare module "*.yaml" {
   const yaml: string;
+
   export default yaml;
 }

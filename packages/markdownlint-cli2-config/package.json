@@ -35,6 +35,7 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
+    "lint": "eslint --max-warnings=0 .",
     "prepublishOnly": "pnpm run build",
     "tsc": "tsc"
   },
@@ -42,7 +43,10 @@
     "markdownlint-cli2": "0.23.2"
   },
   "devDependencies": {
+    "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
+    "@types/node": "24.13.3",
+    "eslint": "10.8.0",
     "tsdown": "0.22.14",
     "typescript": "6.0.3"
   },

@@ -8,7 +8,8 @@ type Parsed = Partial<Pick<CommitBase, "header" | "notes">>;
 const rule = ({ header, notes }: Parsed): readonly [boolean, string?] => {
   // header は commitlint 側で trim されないため、偶発的な先頭空白を除いて bang を判定する。
   const hasBang = /^\w+(?:\([^)]*\))?!:/.test((header ?? "").trimStart());
-  const hasBreaking = (notes ?? []).some((n) => /^BREAKING[ -]CHANGE$/.test(n.title ?? ""));
+  const hasBreaking = (notes ?? []).some((note) => /^BREAKING[ -]CHANGE$/.test(note.title));
+
   return [
     !hasBreaking || hasBang,
     "declare a breaking change with `!` in the header (e.g. `chore!: ...`); a BREAKING CHANGE footer alone is not allowed because GitHub collapses the footer in squash commits",
