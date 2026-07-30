@@ -45,6 +45,5 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
-  },
-  "tsconfig": "./src/tsconfig.json"
+  }
 }
