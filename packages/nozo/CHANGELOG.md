@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/nozomiishii/configs/compare/nozo-v1.12.0...nozo-v1.13.0) (2026-07-31)
+
+### Miscellaneous
+
+- lint all packages ([#2658](https://github.com/nozomiishii/configs/issues/2658)) ([2a6c0a6](https://github.com/nozomiishii/configs/commit/2a6c0a658510eef95683e25fa8b60e462ea51c4b))
+- replace init test fixtures with helpers ([#2659](https://github.com/nozomiishii/configs/issues/2659)) ([cd0ba45](https://github.com/nozomiishii/configs/commit/cd0ba4522ad17daf1255026c7e31a1a8928e641c))
+
 ## [1.12.0](https://github.com/nozomiishii/configs/compare/nozo-v1.11.0...nozo-v1.12.0) (2026-07-29)
 
 ### Features

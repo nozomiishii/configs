@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.13.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v1.12.0...@nozomiishii/prettier-config-v1.13.0) (2026-07-31)
+
+### Features
+
+- exclude generated route trees from Prettier ([#2667](https://github.com/nozomiishii/configs/issues/2667)) ([92d67fb](https://github.com/nozomiishii/configs/commit/92d67fb58bba703ca4e869b68160e0da075c7a53))
+
+### Miscellaneous
+
+- lint all packages ([#2658](https://github.com/nozomiishii/configs/issues/2658)) ([2a6c0a6](https://github.com/nozomiishii/configs/commit/2a6c0a658510eef95683e25fa8b60e462ea51c4b))
+- remove redundant Prettier defaults ([#2662](https://github.com/nozomiishii/configs/issues/2662)) ([d08c2a3](https://github.com/nozomiishii/configs/commit/d08c2a3247cb84ce5052ab40642baeae4abf0e30))
+- replace init test fixtures with helpers ([#2659](https://github.com/nozomiishii/configs/issues/2659)) ([cd0ba45](https://github.com/nozomiishii/configs/commit/cd0ba4522ad17daf1255026c7e31a1a8928e641c))
+
 ## [1.12.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v1.11.0...@nozomiishii/prettier-config-v1.12.0) (2026-07-29)
 
 ### Miscellaneous
