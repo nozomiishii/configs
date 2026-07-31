@@ -33,9 +33,9 @@ pnpx nozo init
 ### ファイル除外: `.prettierignore` ではなく `requirePragma` を使う
 
 format 対象外にしたいファイル (`pnpm-lock.yaml` / `submodules/**` /
-`next-env.d.ts` / `*.md` / `*.mdx` / `**/.claude/settings.json`) は、この
-パッケージの `overrides` で `requirePragma: true` を指定して除外している。
-`.prettierignore` ファイルは作らない。
+`next-env.d.ts` / `**/routeTree.gen.ts` / `*.md` / `*.mdx` /
+`**/.claude/settings.json`) は、このパッケージの `overrides` で
+`requirePragma: true` を指定して除外している。`.prettierignore` ファイルは作らない。
 
 `**/.claude/settings.json` は `parser: jsonc` も要る。Claude Code が多行配列で
 書き戻すうえ、`json` parser は `requirePragma` を無視するため (`jsonc` は尊重する)。

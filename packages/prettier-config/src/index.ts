@@ -14,6 +14,8 @@ export default {
         "submodules/**",
         // Next.js が next dev のたびに自動生成上書きするため
         "next-env.d.ts",
+        // TanStack Router が route 変更のたびに自動生成上書きするため
+        "**/routeTree.gen.ts",
         // markdown は remark で行う
         "*.md",
         "*.mdx",
