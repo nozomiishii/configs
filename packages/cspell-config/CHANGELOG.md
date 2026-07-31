@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.13.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.12.0...@nozomiishii/cspell-config-v1.13.0) (2026-07-31)
+
+
+### Miscellaneous
+
+* lint all packages ([#2658](https://github.com/nozomiishii/configs/issues/2658)) ([2a6c0a6](https://github.com/nozomiishii/configs/commit/2a6c0a658510eef95683e25fa8b60e462ea51c4b))
+* update all non-major dependencies ([#2665](https://github.com/nozomiishii/configs/issues/2665)) ([b47375e](https://github.com/nozomiishii/configs/commit/b47375e6c74d9bfc47bb6a068d5d02dfa044da8a))
+
 ## [1.12.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v1.11.0...@nozomiishii/cspell-config-v1.12.0) (2026-07-29)
 
 ### Miscellaneous

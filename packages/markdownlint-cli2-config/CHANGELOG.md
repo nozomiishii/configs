@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.13.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v1.12.0...@nozomiishii/markdownlint-cli2-config-v1.13.0) (2026-07-31)
+
+
+### Miscellaneous
+
+* lint all packages ([#2658](https://github.com/nozomiishii/configs/issues/2658)) ([2a6c0a6](https://github.com/nozomiishii/configs/commit/2a6c0a658510eef95683e25fa8b60e462ea51c4b))
+* update dependency markdownlint-cli2 to v0.23.2 ([#2660](https://github.com/nozomiishii/configs/issues/2660)) ([ce6a627](https://github.com/nozomiishii/configs/commit/ce6a627828405de540f223fe42d433dcf2c41e12))
+
 ## [1.12.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v1.11.0...@nozomiishii/markdownlint-cli2-config-v1.12.0) (2026-07-29)
 
 ### Miscellaneous

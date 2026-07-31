@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.13.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.12.0...@nozomiishii/eslint-config-v1.13.0) (2026-07-31)
+
+
+### Bug Fixes
+
+* add jiti dependency ([#2656](https://github.com/nozomiishii/configs/issues/2656)) ([7043cf5](https://github.com/nozomiishii/configs/commit/7043cf543bced6d0045b1f2c42d95cc7649bfba8))
+
+
+### Miscellaneous
+
+* lint all packages ([#2658](https://github.com/nozomiishii/configs/issues/2658)) ([2a6c0a6](https://github.com/nozomiishii/configs/commit/2a6c0a658510eef95683e25fa8b60e462ea51c4b))
+* update dependency eslint-plugin-jsdoc to v63.3.1 ([#2663](https://github.com/nozomiishii/configs/issues/2663)) ([346f3e7](https://github.com/nozomiishii/configs/commit/346f3e7ce031c605b75765ba3802644a394a40d1))
+* update dependency eslint-plugin-jsdoc to v63.3.2 ([#2666](https://github.com/nozomiishii/configs/issues/2666)) ([9a0d578](https://github.com/nozomiishii/configs/commit/9a0d578745a53daece2f69c4ab081ef626158d9b))
+* update dependency eslint-plugin-playwright to v2.11.0 ([#2661](https://github.com/nozomiishii/configs/issues/2661)) ([9100c0f](https://github.com/nozomiishii/configs/commit/9100c0f2056b7cfe1148eff5530076b9b492d98b))
+* update dependency eslint-plugin-storybook to v10.5.5 ([#2664](https://github.com/nozomiishii/configs/issues/2664)) ([f3c20a9](https://github.com/nozomiishii/configs/commit/f3c20a9e2821d589ed176c5247795014f20b0bd7))
+
 ## [1.12.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.11.0...@nozomiishii/eslint-config-v1.12.0) (2026-07-29)
 
 ### Features
