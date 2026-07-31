@@ -42,7 +42,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "figlet": "1.11.3",
+    "figlet": "1.11.4",
     "zx": "8.8.5"
   },
   "devDependencies": {
