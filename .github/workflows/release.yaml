@@ -44,7 +44,7 @@ jobs:
         uses: 1password/load-secrets-action@eb2efd0703da22a93c467f2d1ffbb6826c11e19c # v4.1.1
         with:
           # renovate: datasource=docker depName=1password/op versioning=semver
-          version: "2.35.0"
+          version: "2.38.1"
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           APP_ID: op://github-app/nozomiishii-release/username
@@ -96,7 +96,7 @@ jobs:
         uses: 1password/load-secrets-action@eb2efd0703da22a93c467f2d1ffbb6826c11e19c # v4.1.1
         with:
           # renovate: datasource=docker depName=1password/op versioning=semver
-          version: "2.35.0"
+          version: "2.38.1"
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           APP_ID: op://github-app/nozomiishii-release/username
