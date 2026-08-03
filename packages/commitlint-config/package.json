@@ -52,13 +52,13 @@
     "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.3",
-    "conventional-commits-parser": "7.1.1",
+    "conventional-commits-parser": "7.1.2",
     "eslint": "10.8.0",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",
     "vitest": "4.1.10"
   },
-  "packageManager": "pnpm@11.18.0",
+  "packageManager": "pnpm@11.19.0",
   "publishConfig": {
     "access": "public",
     "provenance": true
