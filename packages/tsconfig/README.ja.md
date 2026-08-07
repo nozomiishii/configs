@@ -29,6 +29,7 @@ pnpm add -D @nozomiishii/tsconfig
 - [`@nozomiishii/tsconfig/tsconfig.tsc.json`](./src/tsconfig.tsc.json) — `tsc` で transpile する場合 (`NodeNext` + `outDir` + sourceMap)。
 - [`@nozomiishii/tsconfig/tsconfig.lib.json`](./src/tsconfig.lib.json) — ライブラリ向け (`declaration` + `isolatedDeclarations`)。
 - [`@nozomiishii/tsconfig/tsconfig.nextjs.json`](./src/tsconfig.nextjs.json) — Next.js 向け (`jsx` + Next.js plugin など)。
+- [`@nozomiishii/tsconfig/tsconfig.tanstack-start.json`](./src/tsconfig.tanstack-start.json) — Vite を使う TanStack Start 向け (`react-jsx` + DOM + Vite client types)。
 
 extends したあとに `include` / `exclude` / `baseUrl` などプロジェクト固有設定を足す:
 
@@ -38,6 +39,26 @@ extends したあとに `include` / `exclude` / `baseUrl` などプロジェク�
   "extends": "@nozomiishii/tsconfig/tsconfig.bundler.json",
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
+}
+```
+
+## Cloudflare Workers
+
+Cloudflare Workers で動かす TanStack Start アプリでは、プロジェクトの Wrangler 設定から[型を生成する](https://developers.cloudflare.com/workers/languages/typescript/):
+
+```bash
+pnpm wrangler types
+```
+
+生成した型を Vite client types と一緒に追加する。`nodejs_compat` を有効にしている場合は `node` も追加する:
+
+```json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@nozomiishii/tsconfig/tsconfig.tanstack-start.json",
+  "compilerOptions": {
+    "types": ["./worker-configuration.d.ts", "node", "vite/client"]
+  }
 }
 ```
 

@@ -29,6 +29,7 @@ Pick the variant for your setup. Each file is a working `tsconfig` you can `exte
 - [`@nozomiishii/tsconfig/tsconfig.tsc.json`](./src/tsconfig.tsc.json) — for `tsc` transpile (`NodeNext` + `outDir` + sourceMap).
 - [`@nozomiishii/tsconfig/tsconfig.lib.json`](./src/tsconfig.lib.json) — for libraries (`declaration` + `isolatedDeclarations`).
 - [`@nozomiishii/tsconfig/tsconfig.nextjs.json`](./src/tsconfig.nextjs.json) — for Next.js (`jsx` + Next.js plugin, etc.).
+- [`@nozomiishii/tsconfig/tsconfig.tanstack-start.json`](./src/tsconfig.tanstack-start.json) — for TanStack Start with Vite (`react-jsx` + DOM + Vite client types).
 
 After extending, add your own `include` / `exclude` / `baseUrl`:
 
@@ -38,6 +39,26 @@ After extending, add your own `include` / `exclude` / `baseUrl`:
   "extends": "@nozomiishii/tsconfig/tsconfig.bundler.json",
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
+}
+```
+
+## Cloudflare Workers
+
+For a TanStack Start application running on Cloudflare Workers, [generate types](https://developers.cloudflare.com/workers/languages/typescript/) from the project's Wrangler configuration:
+
+```bash
+pnpm wrangler types
+```
+
+Add the generated types alongside the Vite client types. Add `node` when `nodejs_compat` is enabled:
+
+```json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@nozomiishii/tsconfig/tsconfig.tanstack-start.json",
+  "compilerOptions": {
+    "types": ["./worker-configuration.d.ts", "node", "vite/client"]
+  }
 }
 ```
 

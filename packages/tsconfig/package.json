@@ -24,6 +24,7 @@
     "./tsconfig.bundler.json": "./src/tsconfig.bundler.json",
     "./tsconfig.lib.json": "./src/tsconfig.lib.json",
     "./tsconfig.nextjs.json": "./src/tsconfig.nextjs.json",
+    "./tsconfig.tanstack-start.json": "./src/tsconfig.tanstack-start.json",
     "./tsconfig.tsc.json": "./src/tsconfig.tsc.json",
     "./package.json": "./package.json"
   },
@@ -33,13 +34,17 @@
   ],
   "scripts": {
     "link": "pnpm link --global",
-    "lint": "eslint --max-warnings=0 ."
+    "lint": "eslint --max-warnings=0 .",
+    "test": "tsc --noEmit --project tests/tanstack-start/tsconfig.json"
   },
   "devDependencies": {
     "@nozomiishii/eslint-config": "workspace:*",
     "@types/node": "24.13.3",
+    "@types/react": "19.2.18",
     "eslint": "10.8.0",
-    "typescript": "6.0.3"
+    "react": "19.2.8",
+    "typescript": "6.0.3",
+    "vite": "8.2.0"
   },
   "packageManager": "pnpm@11.20.0",
   "publishConfig": {
