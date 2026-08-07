@@ -1,4 +1,6 @@
-/** Scaffold the postinstall hook into the consumer project. */
+/**
+ * Scaffold the postinstall hook into the consumer project.
+ */
 import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
