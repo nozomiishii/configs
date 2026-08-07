@@ -1,4 +1,6 @@
-/** Scaffold ESLint config into the consumer project. */
+/**
+ * Scaffold ESLint config into the consumer project.
+ */
 import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -8,7 +10,9 @@ export type InitOptions = { cwd: string; monorepo?: boolean; preset?: PresetId }
 
 export type PresetId = "nextjs" | "node" | "tanstack-start";
 
-/** starter が呼ぶ preset 関数名。ファイル名は kebab-case、関数は camelCase のため対応表で持つ。 */
+/**
+ * starter が呼ぶ preset 関数名。ファイル名は kebab-case、関数は camelCase のため対応表で持つ。
+ */
 const presetFunctions: Record<PresetId, string> = {
   "nextjs": "nextjs",
   "node": "node",
