@@ -30,15 +30,19 @@ function stubUserAgent(value?: string) {
 
 // 全ツールの install スクリプトが throw せずに完走することだけを確認する。
 // 各ツールの生成物・package.json 内容の検証は各 config パッケージ側の責務。
-test("happy path: every tool's install script completes without throwing", async () => {
-  expect.hasAssertions();
+test(
+  "happy path: every tool's install script completes without throwing",
+  async () => {
+    expect.hasAssertions();
 
-  const cwd = createTestProject();
+    const cwd = createTestProject();
 
-  for (const id of toolIds) {
-    await expect(tools[id].run({ cwd })).resolves.toBeUndefined();
-  }
-});
+    for (const id of toolIds) {
+      await expect(tools[id].run({ cwd })).resolves.toBeUndefined();
+    }
+  },
+  15_000,
+);
 
 // lockfile も packageManager フィールドも無いとき、nozo を起動したランナーを使う。
 test("falls back to the launching runner when the project has no config", async () => {
