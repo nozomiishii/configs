@@ -23,6 +23,7 @@ pnpx nozo init
 ```
 
 これで `@nozomiishii/prettier-config` / `prettier` が pin で `devDependencies` に追加され、`"type": "module"` が設定され、`format` / `format:fix` / `prettier` の scripts が追加され、shared config を re-export する `prettier.config.ts` が生成される。
+`**/routeTree.gen.ts` は `.prettierignore` に追記される。
 
 ## 同梱プラグイン
 
@@ -30,23 +31,32 @@ pnpx nozo init
 
 ## ポリシー
 
-### ファイル除外: `.prettierignore` ではなく `requirePragma` を使う
+### ファイル除外
 
-format 対象外にしたいファイル (`pnpm-lock.yaml` / `submodules/**` /
-`next-env.d.ts` / `**/routeTree.gen.ts` / `*.md` / `*.mdx` /
-`**/.claude/settings.json`) は、このパッケージの `overrides` で
-`requirePragma: true` を指定して除外している。`.prettierignore` ファイルは作らない。
+[shareable config](https://prettier.io/docs/sharing-configurations/) は通常の
+Prettier設定だけを提供する仕組みであり、ファイルのignore状態は設定できない。
+[Prettier公式のignore手順](https://prettier.io/docs/ignore/)に従い、initはconsumer
+rootの`.prettierignore`へ`**/routeTree.gen.ts`を追記する。既存の内容は保持する。
+[TanStack Routerも生成されたroute treeをformatterから除外するよう案内している](https://tanstack.com/router/latest/docs/framework/react/installation/with-router-cli#ignoring-the-generated-route-tree-file)。
+これによりCLIとeditorの両方が生成されたroute treeを対象外として扱い、
+`prettier --file-info src/routeTree.gen.ts`は`ignored: true`を返す。
+
+既存projectでは`pnpx nozo init`を再実行するか、`.prettierignore`へ
+`**/routeTree.gen.ts`を手動で追加する。`--ignore-path`を指定している場合、
+[既定のignore file探索を置き換える](https://prettier.io/docs/cli#--ignore-path)ため、
+指定を外すか`.gitignore`と`.prettierignore`の両方を渡す。
+
+`pnpm-lock.yaml` / `submodules/**` / `next-env.d.ts` / `*.md` / `*.mdx` /
+`**/.claude/settings.json`はshared configの`overrides`で`requirePragma: true`を
+指定し、pragmaが無い限りformatしない。未移行projectを保護するため、
+`**/routeTree.gen.ts`にも同じoverrideを互換用として残す。
 
 `**/.claude/settings.json` は `parser: jsonc` も要る。Claude Code が多行配列で
 書き戻すうえ、`json` parser は `requirePragma` を無視するため (`jsonc` は尊重する)。
 
-`.prettierignore` を導入すると `.gitignore` と二重管理になり、片方だけ
-更新する事故を起こしやすい。Prettier 3.x は `.gitignore` を自動で尊重
-するため、ほとんどの ignore は `.gitignore` だけで足りる。
-
-同じ理由から、Prettier 3.6 で追加された `checkIgnorePragma`
+Prettier 3.6 で追加された `checkIgnorePragma`
 (`@noformat` / `@noprettier`) は採用しない。opt-out の入り口を増やす
-だけで、`.prettierignore` 問題そのものは解決しないため。
+必要がないため。
 
 ### experimental option は採用しない
 

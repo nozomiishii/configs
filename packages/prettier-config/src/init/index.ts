@@ -8,6 +8,8 @@ import { fileURLToPath } from "node:url";
 
 export type InitOptions = { cwd: string };
 
+const routeTreeIgnorePattern = "**/routeTree.gen.ts";
+
 type PackageJson = {
   devDependencies?: Record<string, string>;
   name: string;
@@ -48,6 +50,20 @@ export async function init({ cwd }: InitOptions): Promise<void> {
 
   await writeFile(targetPath, `${JSON.stringify(target, null, 2)}\n`);
   await writeFile(path.resolve(cwd, "prettier.config.ts"), starter);
+  await addRouteTreeIgnore(cwd);
+}
+
+async function addRouteTreeIgnore(cwd: string): Promise<void> {
+  const ignorePath = path.resolve(cwd, ".prettierignore");
+  const current = existsSync(ignorePath) ? await readFile(ignorePath, "utf-8") : "";
+  const patterns = current.split(/\r?\n/u).map((line) => line.trim());
+
+  if (patterns.includes(routeTreeIgnorePattern)) {
+    return;
+  }
+
+  const separator = current.length === 0 || current.endsWith("\n") ? "" : "\n";
+  await writeFile(ignorePath, `${current}${separator}${routeTreeIgnorePattern}\n`);
 }
 
 /**

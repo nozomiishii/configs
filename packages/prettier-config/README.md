@@ -26,6 +26,7 @@ This adds `@nozomiishii/prettier-config` and `prettier` to your
 `devDependencies` (pinned), sets `"type": "module"`, adds `format` /
 `format:fix` / `prettier` scripts, and writes a `prettier.config.ts` that
 re-exports the shared config.
+It also adds `**/routeTree.gen.ts` to `.prettierignore`.
 
 ## Included Plugins
 
@@ -33,24 +34,35 @@ re-exports the shared config.
 
 ## Policy
 
-### File exclusion: `requirePragma` over `.prettierignore`
+### File exclusion
 
-Files that should never be formatted (`pnpm-lock.yaml`, `submodules/**`,
-`next-env.d.ts`, `**/routeTree.gen.ts`, `*.md`, `*.mdx`,
-`**/.claude/settings.json`) are excluded via `requirePragma: true` overrides in
-this config rather than a `.prettierignore` file.
+A [shareable config](https://prettier.io/docs/sharing-configurations/) only
+provides regular Prettier options and cannot set a file's ignore status.
+Following [Prettier's official ignore mechanism](https://prettier.io/docs/ignore/),
+the init command appends `**/routeTree.gen.ts` to the consumer root's
+`.prettierignore` without replacing existing content. This follows
+[TanStack Router's guidance to exclude its generated route tree](https://tanstack.com/router/latest/docs/framework/react/installation/with-router-cli#ignoring-the-generated-route-tree-file).
+The CLI and editors exclude the file, and
+`prettier --file-info src/routeTree.gen.ts` returns `ignored: true`.
+
+For an existing project, rerun `pnpx nozo init` or add
+`**/routeTree.gen.ts` to `.prettierignore` manually. If the project passes
+`--ignore-path`, it [replaces the default ignore file lookup](https://prettier.io/docs/cli#--ignore-path).
+Remove the option or pass both `.gitignore` and `.prettierignore`.
+
+`pnpm-lock.yaml`, `submodules/**`, `next-env.d.ts`, `*.md`, `*.mdx`, and
+`**/.claude/settings.json` use `requirePragma: true` overrides in the shared
+config, so they are not formatted without a pragma. The same override remains
+for `**/routeTree.gen.ts` as a compatibility fallback for projects that have
+not migrated yet.
 
 `**/.claude/settings.json` also needs `parser: jsonc`: Claude Code writes it
 with multi-line arrays, and the `json` parser ignores `requirePragma` while
 `jsonc` honors it.
 
-A `.prettierignore` would duplicate patterns already in `.gitignore` and
-invite drift between the two. Prettier 3.x already honors `.gitignore`
-automatically, so most ignore needs are covered without a dedicated file.
-
-For the same reason, the Prettier 3.6 `checkIgnorePragma` option
-(`@noformat` / `@noprettier`) is **not** adopted: it adds another opt-out
-surface without removing the `.prettierignore` problem.
+The Prettier 3.6 `checkIgnorePragma` option
+(`@noformat` / `@noprettier`) is not adopted: it adds another opt-out surface
+without a need for one.
 
 ### Experimental options
 
