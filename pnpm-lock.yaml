@@ -158,8 +158,8 @@ importers:
         specifier: 63.3.3
         version: 63.3.3(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)
       eslint-plugin-jsonc:
-        specifier: 3.4.0
-        version: 3.4.0(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))
+        specifier: 3.4.1
+        version: 3.4.1(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))
       eslint-plugin-jsx-a11y-x:
         specifier: 0.2.0
         version: 0.2.0(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))
@@ -170,8 +170,8 @@ importers:
         specifier: 1.6.2
         version: 1.6.2(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))
       eslint-plugin-perfectionist:
-        specifier: 5.10.0
-        version: 5.10.0(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
+        specifier: 5.10.1
+        version: 5.10.1(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
       eslint-plugin-playwright:
         specifier: 2.11.0
         version: 2.11.0(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))
@@ -2852,8 +2852,8 @@ packages:
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
 
-  eslint-plugin-jsonc@3.4.0:
-    resolution: {integrity: sha512-0f6RztjDatnBKCkRFIYEX1fjlijts1YsmMbnprE5jsTbLeP2iQsaZB4sXIE3ZSAg+HABZpaZaEhnSEUCTvraTQ==}
+  eslint-plugin-jsonc@3.4.1:
+    resolution: {integrity: sha512-HHWkjAmVJ3QAffCkfo0XKl3CstLtgbIu5EGfFfVDLQT6vqPrxl4pFbUwFwY03nOlvyuDiiBixhHFrlbzn9u09Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     peerDependencies:
       eslint: '>=9.38.0'
@@ -2887,8 +2887,8 @@ packages:
       '@eslint/json':
         optional: true
 
-  eslint-plugin-perfectionist@5.10.0:
-    resolution: {integrity: sha512-HiqpDrUDbGrMC6iHQbemgDyHJ0366Vyz/qRWmxQcSAkmG25cXr8BdRgx8yAhOKhEfBXn8Rnf/mTCsV4EqUJSxg==}
+  eslint-plugin-perfectionist@5.10.1:
+    resolution: {integrity: sha512-Kprsp9Us0GqAesYaAIzUViw57xYp5WBqzXrcE0Mtww++E5fexWXYBipMuuD7yvyH4vvpBH0+oJ+OMAmZ0oYXkw==}
     engines: {node: ^20.0.0 || >=22.0.0}
     peerDependencies:
       eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
@@ -6786,7 +6786,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-jsonc@3.4.0(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0)):
+  eslint-plugin-jsonc@3.4.1(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0)):
     dependencies:
       '@eslint-community/eslint-utils': 4.10.1(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))
       '@eslint/core': 1.2.1
@@ -6842,7 +6842,7 @@ snapshots:
       sort-object-keys: 2.1.0
       sort-package-json: 4.0.0
 
-  eslint-plugin-perfectionist@5.10.0(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3):
+  eslint-plugin-perfectionist@5.10.1(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3):
     dependencies:
       '@typescript-eslint/utils': 8.66.0(eslint@10.8.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
       eslint: 10.8.0(jiti@2.7.0)(supports-color@7.2.0)
