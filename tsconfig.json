@@ -5,9 +5,9 @@
     // ----------------------------------------------------------------
     // Transpiling
     // ----------------------------------------------------------------
-    // TSCでTranspileする場合
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
+    "noEmit": false,
     "outDir": "dist",
     "sourceMap": true
   },

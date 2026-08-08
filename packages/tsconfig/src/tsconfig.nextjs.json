@@ -10,10 +10,8 @@
     // tsconfig.tsbuildinfoを生成して差分コンパイルにより時間短縮するか
     "incremental": true,
 
-    // TSC以外でTranspileする場合
     "moduleResolution": "Bundler",
     "module": "ESNext",
-    "noEmit": true,
 
     // ----------------------------------------------------------------
     // JSX

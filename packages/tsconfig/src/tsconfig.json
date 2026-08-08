@@ -29,6 +29,10 @@
     // https://www.typescriptlang.org/tsconfig/module.html#preserve
     "module": "preserve",
 
+    // tsc は typecheck 専用にして emit はバンドラー (tsdown / tsup / esbuild 等) に任せる
+    // tsc で emit する構成 (tsconfig.tsc.json / tsconfig.lib.json) 側で `noEmit: false` を明示する
+    "noEmit": true,
+
     // .jsファイルのインポートを許可するか
     "allowJs": true,
 
@@ -51,12 +55,9 @@
     // 可読性向上とトランスパイル時に不必要なimportが残ってしまうのを減らせる
     "verbatimModuleSyntax": true,
 
-    // typoした副作用importを silent に許す挙動を防止 (TS 5.6+)
-    // `import "./typo.css"` のような副作用importの解決失敗をエラー化
-    // TS 6.0でデフォルト化予定のため先行採用が安全
-    // CSS等のアンビエント宣言が必要な場合は `declare module "*.css";` を追加
+    // `noUncheckedSideEffectImports` はTypeScript 6.0からデフォルトtrueのため指定しない (このプリセットはTS 6+前提)
+    // 副作用importの解決失敗がエラー化されるので、CSS等は `declare module "*.css";` のアンビエント宣言を追加する
     // https://www.typescriptlang.org/tsconfig/#noUncheckedSideEffectImports
-    "noUncheckedSideEffectImports": true,
 
     // Node 23.6+ の type-stripping や `tsgo` などでも実行可能なTypeScript構文に制限 (TS 5.8+)
     // enum / runtime namespace / parameter properties をエラー化
@@ -67,21 +68,10 @@
     // ----------------------------------------------------------------
     // Strictness
     // ----------------------------------------------------------------
-    // trueにすることで次の8個のオプションがすべて有効になる
-    // noImplicitAny
-    // strictNullChecks
-    // strictFunctionTypes
-    // strictBindCallApply
-    // strictPropertyInitialization
-    // noImplicitThis
-    // useUnknownInCatchVariables
-    // alwaysStrict
-    // https://typescriptbook.jp/reference/tsconfig/strict
-    //
-    // TypeScript 6.0で`strict: true`がデフォルト化予定だが、
-    // 明示維持する: `exactOptionalPropertyTypes`の警告バグ報告
-    // (microsoft/TypeScript#63232)があり、明示の方が安全
-    "strict": true,
+    // `strict` は TypeScript 6.0からデフォルトtrueのため指定しない (このプリセットはTS 6+前提)
+    // 明示維持の理由だった`exactOptionalPropertyTypes`の警告バグ
+    // (microsoft/TypeScript#63232) は6.0.3で修正済みを確認
+    // https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/
 
     // 配列やオブジェクトへのインデックスアクセスを型安全にする
     "noUncheckedIndexedAccess": true,
@@ -93,23 +83,8 @@
     "noImplicitOverride": true,
 
     // ----------------------------------------------------------------
-    // JSX
-    // ----------------------------------------------------------------
-    // tsxファイルの変換方法。preserveは.jsファイルに変換せずにそのまま.jsxを出力する
-    // Nextjs使う場合はpreserveのままが良い
-    // "jsx": "preserve",
-
-    // ----------------------------------------------------------------
     // Libs
     // ----------------------------------------------------------------
-    /* If your code runs in the DOM: */
-    // "lib": ["ES2025", "dom"]
-    /* If your code doesn't run in the DOM: */
     "lib": ["ES2025"]
-
-    // ----------------------------------------------------------------
-    // Types
-    // ----------------------------------------------------------------
-    // "types": ["vitest/importMeta"]
   }
 }

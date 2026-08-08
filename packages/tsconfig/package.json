@@ -21,7 +21,6 @@
   "exports": {
     ".": "./src/tsconfig.json",
     "./tsconfig.json": "./src/tsconfig.json",
-    "./tsconfig.bundler.json": "./src/tsconfig.bundler.json",
     "./tsconfig.lib.json": "./src/tsconfig.lib.json",
     "./tsconfig.nextjs.json": "./src/tsconfig.nextjs.json",
     "./tsconfig.tanstack-start.json": "./src/tsconfig.tanstack-start.json",
