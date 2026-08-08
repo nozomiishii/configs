@@ -1,5 +1,32 @@
 # Changelog
 
+## [2.0.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.13.0...@nozomiishii/eslint-config-v2.0.0) (2026-08-08)
+
+### ⚠ BREAKING CHANGES
+
+- make base tsconfig typecheck-only and drop bundler preset ([#2698](https://github.com/nozomiishii/configs/issues/2698))
+
+### Features
+
+- make base tsconfig typecheck-only and drop bundler preset ([#2698](https://github.com/nozomiishii/configs/issues/2698)) ([b6e4e16](https://github.com/nozomiishii/configs/commit/b6e4e16d5cca129a1bc5705b323d4c748d03f0db))
+
+### Miscellaneous
+
+- update all non-major dependencies ([#2680](https://github.com/nozomiishii/configs/issues/2680)) ([8887047](https://github.com/nozomiishii/configs/commit/8887047872a962546856a257909a50fd5d7537f8))
+- update all non-major dependencies ([#2688](https://github.com/nozomiishii/configs/issues/2688)) ([ef98eb5](https://github.com/nozomiishii/configs/commit/ef98eb55ba9541653ee3cea011a6ba71e955f265))
+- update all non-major dependencies ([#2690](https://github.com/nozomiishii/configs/issues/2690)) ([ddd10c8](https://github.com/nozomiishii/configs/commit/ddd10c817cf650ab95792e85b143c89435a9ed9f))
+- update dependency @eslint-react/eslint-plugin to v5.18.1 ([#2676](https://github.com/nozomiishii/configs/issues/2676)) ([8ea59a1](https://github.com/nozomiishii/configs/commit/8ea59a1c68fc2fe196d5c50f91123bdb469ad936))
+- update dependency @eslint-react/eslint-plugin to v5.18.2 ([#2692](https://github.com/nozomiishii/configs/issues/2692)) ([cdd6d1a](https://github.com/nozomiishii/configs/commit/cdd6d1ad07b0db0f8c06d27e62f7caab0a3e58ac))
+- update dependency @eslint/config-inspector to v3.1.1 ([#2679](https://github.com/nozomiishii/configs/issues/2679)) ([d0640c3](https://github.com/nozomiishii/configs/commit/d0640c32d0e7062dd022850bfe9bddb729878776))
+- update dependency @vitest/eslint-plugin to v1.6.25 ([#2682](https://github.com/nozomiishii/configs/issues/2682)) ([a984bdb](https://github.com/nozomiishii/configs/commit/a984bdb32085d25f8e9d055b04fdea9b8ef87968))
+- update dependency @vitest/eslint-plugin to v1.6.26 ([#2687](https://github.com/nozomiishii/configs/issues/2687)) ([26c11e8](https://github.com/nozomiishii/configs/commit/26c11e8f9efa57de266a185f77de2973f61b979a))
+- update dependency eslint-plugin-jsdoc to v63.3.3 ([#2685](https://github.com/nozomiishii/configs/issues/2685)) ([9f2aa43](https://github.com/nozomiishii/configs/commit/9f2aa4332a249cdeb375bcc02aca4961ad76fa40))
+- update dependency eslint-plugin-package-json to v1.6.3 ([#2695](https://github.com/nozomiishii/configs/issues/2695)) ([890d95f](https://github.com/nozomiishii/configs/commit/890d95f82fd91ec24aae43f2b85d5ec376a16892))
+- update dependency eslint-plugin-unicorn to v73 ([#2689](https://github.com/nozomiishii/configs/issues/2689)) ([6bb7a10](https://github.com/nozomiishii/configs/commit/6bb7a10c6e1144e688f346b16c5befbdcba00516))
+- update dependency globals to v17.9.0 ([#2683](https://github.com/nozomiishii/configs/issues/2683)) ([c32aed9](https://github.com/nozomiishii/configs/commit/c32aed9512edbd9b6ab3f829db266370225c325b))
+- update dependency jsonc-eslint-parser to v3.2.0 ([#2694](https://github.com/nozomiishii/configs/issues/2694)) ([44247bc](https://github.com/nozomiishii/configs/commit/44247bc6ab223ea6c84a66b6ce7a75ee157ad32a))
+- update pnpm to v11.18.0 ([#2669](https://github.com/nozomiishii/configs/issues/2669)) ([0c85b80](https://github.com/nozomiishii/configs/commit/0c85b8034d8fc62c4af927a3d2cefe5f1bd68f8e))
+
 ## [1.13.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v1.12.0...@nozomiishii/eslint-config-v1.13.0) (2026-07-31)
 
 ### Bug Fixes
