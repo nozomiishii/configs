@@ -30,6 +30,8 @@ Pick the variant for your setup. Each file is a working `tsconfig` you can `exte
 - [`@nozomiishii/tsconfig/tsconfig.nextjs.json`](./src/tsconfig.nextjs.json) — for Next.js (`jsx` + Next.js plugin, etc.).
 - [`@nozomiishii/tsconfig/tsconfig.tanstack-start.json`](./src/tsconfig.tanstack-start.json) — for TanStack Start with Vite (`react-jsx` + DOM + Vite client types).
 
+The reasoning behind each option is documented in [docs/プリセットの選定理由.md](./docs/プリセットの選定理由.md) (Japanese).
+
 After extending, add your own `include` / `exclude` / `baseUrl`:
 
 ```json

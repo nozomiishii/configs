@@ -30,6 +30,8 @@ pnpm add -D @nozomiishii/tsconfig
 - [`@nozomiishii/tsconfig/tsconfig.nextjs.json`](./src/tsconfig.nextjs.json) — Next.js 向け (`jsx` + Next.js plugin など)。
 - [`@nozomiishii/tsconfig/tsconfig.tanstack-start.json`](./src/tsconfig.tanstack-start.json) — Vite を使う TanStack Start 向け (`react-jsx` + DOM + Vite client types)。
 
+各オプションの選定理由は [docs/プリセットの選定理由.md](./docs/プリセットの選定理由.md) を参照。
+
 extends したあとに `include` / `exclude` / `baseUrl` などプロジェクト固有設定を足す:
 
 ```json
