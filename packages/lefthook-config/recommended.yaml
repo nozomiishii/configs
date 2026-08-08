@@ -9,7 +9,7 @@
 # Run the command to test:
 #   pnpx lefthook run [-v,--verbose] <hook-name>
 
-# インストール済みの Git hook で lefthook が見つからない場合は失敗させる。
+# lefthook が見つからない場合は Git hook を失敗させ、検証なしのコミットを防ぐ。
 assert_lefthook_installed: true
 
 extends:
