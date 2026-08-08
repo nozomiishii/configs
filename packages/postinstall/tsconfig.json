@@ -3,12 +3,6 @@
   "extends": "@nozomiishii/tsconfig/tsconfig.json",
 
   "compilerOptions": {
-    // ----------------------------------------------------------------
-    // Transpiling
-    // ----------------------------------------------------------------
-    "moduleResolution": "Bundler",
-    "module": "ESNext",
-    "noEmit": true,
     "types": ["node"]
   },
   "include": ["**/*"],

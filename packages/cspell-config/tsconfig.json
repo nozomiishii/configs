@@ -3,9 +3,6 @@
   "extends": "@nozomiishii/tsconfig/tsconfig.json",
 
   "compilerOptions": {
-    "moduleResolution": "Bundler",
-    "module": "ESNext",
-    "noEmit": true,
     "types": ["node"]
   },
   "include": ["**/*"],
