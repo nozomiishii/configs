@@ -9,6 +9,9 @@
 # Run the command to test:
 #   pnpx lefthook run [-v,--verbose] <hook-name>
 
+# lefthook が見つからない場合は Git hook を失敗させ、検証なしのコミットを防ぐ。
+assert_lefthook_installed: true
+
 extends:
   - node_modules/@nozomiishii/lefthook-config/hooks/commit-msg/commitlint.yaml
   - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/update-node-modules.yaml
