@@ -1,5 +1,6 @@
 {
-  // https://www.typescriptlang.org/tsconfig
+  // 各オプションの選定理由: https://github.com/nozomiishii/configs/blob/main/packages/tsconfig/docs/プリセットの選定理由.md
+  // リファレンス: https://www.typescriptlang.org/tsconfig
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "@nozomiishii/tsconfig",
 
@@ -7,79 +8,56 @@
     // ----------------------------------------------------------------
     // Base Option
     // ----------------------------------------------------------------
-    // ESModuleの互換。CommonJSで定義されてるモジュールを変換してESModuleでも利用できるようにするか。
+    // CommonJSモジュールをESModuleとしてimportできるようにする
     "esModuleInterop": true,
 
-    // .d.tsファイルの型までtype checkするか
-    // falseだと全てのnode_modulesまでチェックするからパフォーマンスよくない
-    // https://www.youtube.com/watch?v=zu-EgnbmcLY
+    // .d.tsの型チェックを省略してパフォーマンスを確保する
     "skipLibCheck": true,
 
-    // どのJavaScriptのバージョンに変換するか
-    // 使うnodeバージョンによって変更する
-    // 対応表 https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping
-    // ES2025でIterator helpers / Set methods / Promise.try等の型が利用可能
-    // Node 22 LTS / Node 24 / 主要モダンブラウザは2026年時点でES2025をネイティブサポート
+    // Node 22+と主要モダンブラウザがネイティブサポートするESバージョン
     "target": "ES2025",
 
-    // バンドラー / トランスパイラ前提のmoduleモード (TS 5.4+)
-    // ECMAScript imports/exportsを変換せず保持し、moduleResolution: "bundler" を暗黙的に指定する
-    // tsupなどでtsc以外がtranspileするのが標準的な現状に最適
-    // tscでtranspileする場合はconsumer側で `module: "NodeNext"` 等に上書きする
-    // https://www.typescriptlang.org/tsconfig/module.html#preserve
+    // バンドラー前提のmoduleモード (moduleResolution: "bundler" を暗黙指定)
     "module": "preserve",
 
-    // tsc は typecheck 専用にして emit はバンドラー (tsdown / tsup / esbuild 等) に任せる
-    // tsc で emit する構成 (tsconfig.tsc.json / tsconfig.lib.json) 側で `noEmit: false` を明示する
+    // tscはtypecheck専用にしてemitはバンドラーに任せる
     "noEmit": true,
 
-    // .jsファイルのインポートを許可するか
+    // .jsファイルのインポートを許可する
     "allowJs": true,
 
-    // .jsonファイルのインポートを許可するか
+    // .jsonファイルのインポートを許可する
     "resolveJsonModule": true,
 
-    // forceにすることで全てのファイルをモジュールとして扱う
-    // ファイルがスコープの単位になるので別ファイルで同一名の変数定義が可能
-    // https://www.totaltypescript.com/cannot-redeclare-block-scoped-variable
+    // 全ファイルをモジュールとして扱う
     "moduleDetection": "force",
 
-    // ファイル内で何かをエクスポートするか、少なくとも1つの外部モジュールをインポートしているか確認する
-    // TSC以外のトランスパイラに配慮するためのもの
+    // tsc以外のトランスパイラでも変換できるファイル単位の書き方を強制する
     "isolatedModules": true,
 
-    // ファイルパスの大文字小文字を区別するか
+    // ファイルパスの大文字小文字を区別する
     "forceConsistentCasingInFileNames": true,
 
-    // import typeやexport typeすることを強制
-    // 可読性向上とトランスパイル時に不必要なimportが残ってしまうのを減らせる
+    // import type / export type の明示を強制する
     "verbatimModuleSyntax": true,
 
-    // `noUncheckedSideEffectImports` はTypeScript 6.0からデフォルトtrueのため指定しない (このプリセットはTS 6+前提)
-    // 副作用importの解決失敗がエラー化されるので、CSS等は `declare module "*.css";` のアンビエント宣言を追加する
-    // https://www.typescriptlang.org/tsconfig/#noUncheckedSideEffectImports
+    // noUncheckedSideEffectImports はTypeScript 6.0からデフォルトtrueのため指定しない (このプリセットはTS 6+前提)
 
-    // Node 23.6+ の type-stripping や `tsgo` などでも実行可能なTypeScript構文に制限 (TS 5.8+)
-    // enum / runtime namespace / parameter properties をエラー化
-    // 既に `verbatimModuleSyntax: true` を採用しているため整合性が高い
-    // https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/
+    // 型を消すだけで実行可能なTypeScript構文に制限する (enum等をエラー化)
     "erasableSyntaxOnly": true,
 
     // ----------------------------------------------------------------
     // Strictness
     // ----------------------------------------------------------------
-    // `strict` は TypeScript 6.0からデフォルトtrueのため指定しない (このプリセットはTS 6+前提)
-    // 明示維持の理由だった`exactOptionalPropertyTypes`の警告バグ
-    // (microsoft/TypeScript#63232) は6.0.3で修正済みを確認
-    // https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/
+    // strict はTypeScript 6.0からデフォルトtrueのため指定しない (このプリセットはTS 6+前提)
 
     // 配列やオブジェクトへのインデックスアクセスを型安全にする
     "noUncheckedIndexedAccess": true,
 
-    // x?: T と x?: T | undefined が区別される
+    // x?: T と x?: T | undefined を区別する
     "exactOptionalPropertyTypes": true,
 
-    // overrideする場合は明示する
+    // overrideする場合は明示を強制する
     "noImplicitOverride": true,
 
     // ----------------------------------------------------------------

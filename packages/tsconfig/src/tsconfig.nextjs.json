@@ -1,4 +1,5 @@
 {
+  // 各オプションの選定理由: https://github.com/nozomiishii/configs/blob/main/packages/tsconfig/docs/プリセットの選定理由.md
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "@nozomiishii/tsconfig/tsconfig.nextjs.json",
   "extends": "./tsconfig.json",
@@ -7,24 +8,23 @@
     // ----------------------------------------------------------------
     // Transpiling
     // ----------------------------------------------------------------
-    // tsconfig.tsbuildinfoを生成して差分コンパイルにより時間短縮するか
+    // tsbuildinfoによる差分コンパイルで時間短縮する
     "incremental": true,
 
+    // Next.js公式が案内するmodule設定
     "moduleResolution": "Bundler",
     "module": "ESNext",
 
     // ----------------------------------------------------------------
     // JSX
     // ----------------------------------------------------------------
-    // tsxファイルの変換方法。preserveは.jsファイルに変換せずにそのまま.jsxを出力する
-    // Nextjs使う場合はpreserveのままが良い
+    // .jsxのまま出力してNext.js側で変換させる
     "jsx": "preserve",
 
     // ----------------------------------------------------------------
     // Libs
     // ----------------------------------------------------------------
-    // TypeScript 6.0で`dom.iterable`は`dom`にマージ予定のため指定しない
-    // https://gist.github.com/privatenumber/3d2e80da28f84ee30b77d53e1693378f
+    // dom.iterable はTypeScript 6.0で dom にマージ予定のため指定しない
     "lib": ["dom", "ESNext"],
 
     // ----------------------------------------------------------------

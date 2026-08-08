@@ -1,4 +1,5 @@
 {
+  // 各オプションの選定理由: https://github.com/nozomiishii/configs/blob/main/packages/tsconfig/docs/プリセットの選定理由.md
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "@nozomiishii/tsconfig/tsconfig.lib.json",
   "extends": "./tsconfig.json",
@@ -7,14 +8,13 @@
     // ----------------------------------------------------------------
     // Library Declaration emit
     // ----------------------------------------------------------------
+    // baseはtypecheck専用のためemitを明示的に有効化する
     "noEmit": false,
 
-    // .d.ts ファイルを生成する
+    // .d.tsファイルを生成する
     "declaration": true,
 
-    // tsc 以外のツール (tsdown / tsup / rolldown-plugin-dts 等) で
-    // .d.ts を並列生成可能にする。全ての export に明示的な型注釈を要求する
-    // https://www.typescriptlang.org/tsconfig/isolatedDeclarations.html
+    // tsc以外のツールで.d.tsを並列生成できるようにする
     "isolatedDeclarations": true,
 
     // ----------------------------------------------------------------
