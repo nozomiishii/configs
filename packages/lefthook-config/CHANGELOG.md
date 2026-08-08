@@ -2,27 +2,24 @@
 
 ## [2.0.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.13.0...@nozomiishii/lefthook-config-v2.0.0) (2026-08-08)
 
-
 ### ⚠ BREAKING CHANGES
 
-* make base tsconfig typecheck-only and drop bundler preset ([#2698](https://github.com/nozomiishii/configs/issues/2698))
+- make base tsconfig typecheck-only and drop bundler preset ([#2698](https://github.com/nozomiishii/configs/issues/2698))
 
 ### Features
 
-* make base tsconfig typecheck-only and drop bundler preset ([#2698](https://github.com/nozomiishii/configs/issues/2698)) ([b6e4e16](https://github.com/nozomiishii/configs/commit/b6e4e16d5cca129a1bc5705b323d4c748d03f0db))
-
+- make base tsconfig typecheck-only and drop bundler preset ([#2698](https://github.com/nozomiishii/configs/issues/2698)) ([b6e4e16](https://github.com/nozomiishii/configs/commit/b6e4e16d5cca129a1bc5705b323d4c748d03f0db))
 
 ### Bug Fixes
 
-* require lefthook for installed hooks ([#2697](https://github.com/nozomiishii/configs/issues/2697)) ([570b48e](https://github.com/nozomiishii/configs/commit/570b48ec7271fbe4e0c609971f57f7d0a8b7971b))
-
+- require lefthook for installed hooks ([#2697](https://github.com/nozomiishii/configs/issues/2697)) ([570b48e](https://github.com/nozomiishii/configs/commit/570b48ec7271fbe4e0c609971f57f7d0a8b7971b))
 
 ### Miscellaneous
 
-* update all non-major dependencies ([#2680](https://github.com/nozomiishii/configs/issues/2680)) ([8887047](https://github.com/nozomiishii/configs/commit/8887047872a962546856a257909a50fd5d7537f8))
-* update all non-major dependencies ([#2688](https://github.com/nozomiishii/configs/issues/2688)) ([ef98eb5](https://github.com/nozomiishii/configs/commit/ef98eb55ba9541653ee3cea011a6ba71e955f265))
-* update dependency eslint-plugin-unicorn to v73 ([#2689](https://github.com/nozomiishii/configs/issues/2689)) ([6bb7a10](https://github.com/nozomiishii/configs/commit/6bb7a10c6e1144e688f346b16c5befbdcba00516))
-* update pnpm to v11.18.0 ([#2669](https://github.com/nozomiishii/configs/issues/2669)) ([0c85b80](https://github.com/nozomiishii/configs/commit/0c85b8034d8fc62c4af927a3d2cefe5f1bd68f8e))
+- update all non-major dependencies ([#2680](https://github.com/nozomiishii/configs/issues/2680)) ([8887047](https://github.com/nozomiishii/configs/commit/8887047872a962546856a257909a50fd5d7537f8))
+- update all non-major dependencies ([#2688](https://github.com/nozomiishii/configs/issues/2688)) ([ef98eb5](https://github.com/nozomiishii/configs/commit/ef98eb55ba9541653ee3cea011a6ba71e955f265))
+- update dependency eslint-plugin-unicorn to v73 ([#2689](https://github.com/nozomiishii/configs/issues/2689)) ([6bb7a10](https://github.com/nozomiishii/configs/commit/6bb7a10c6e1144e688f346b16c5befbdcba00516))
+- update pnpm to v11.18.0 ([#2669](https://github.com/nozomiishii/configs/issues/2669)) ([0c85b80](https://github.com/nozomiishii/configs/commit/0c85b8034d8fc62c4af927a3d2cefe5f1bd68f8e))
 
 ## [1.13.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v1.12.0...@nozomiishii/lefthook-config-v1.13.0) (2026-07-31)
 
