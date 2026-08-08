@@ -9,6 +9,8 @@
 # Run the command to test:
 #   pnpx lefthook run [-v,--verbose] <hook-name>
 
+assert_lefthook_installed: true
+
 extends:
   - node_modules/@nozomiishii/lefthook-config/hooks/commit-msg/commitlint.yaml
   - node_modules/@nozomiishii/lefthook-config/hooks/post-merge/update-node-modules.yaml
