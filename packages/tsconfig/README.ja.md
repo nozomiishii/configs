@@ -42,26 +42,6 @@ extends したあとに `include` / `exclude` / `baseUrl` などプロジェク�
 }
 ```
 
-## Cloudflare Workers
-
-Cloudflare Workers で動かす TanStack Start アプリでは、プロジェクトの Wrangler 設定から[型を生成する](https://developers.cloudflare.com/workers/languages/typescript/):
-
-```bash
-pnpm wrangler types
-```
-
-生成した型を Vite client types と一緒に追加する。`nodejs_compat` を有効にしている場合は `node` も追加する:
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig/tsconfig.tanstack-start.json",
-  "compilerOptions": {
-    "types": ["./worker-configuration.d.ts", "node", "vite/client"]
-  }
-}
-```
-
 ## 参考
 
 - [The TSConfig Cheat Sheet](https://www.totaltypescript.com/tsconfig-cheat-sheet)

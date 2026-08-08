@@ -11,6 +11,7 @@
     // https://tanstack.com/start/latest/docs/framework/react/build-from-scratch
     "moduleResolution": "Bundler",
     "module": "ESNext",
+    "target": "ES2022",
 
     // TanStack Start では server module が client bundle に残る可能性があるため無効にする
     // https://tanstack.com/start/latest/docs/framework/react/build-from-scratch
@@ -24,7 +25,7 @@
     // ----------------------------------------------------------------
     // Libs
     // ----------------------------------------------------------------
-    "lib": ["dom", "ES2025"],
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
 
     // ----------------------------------------------------------------
     // Types

@@ -61,9 +61,6 @@ jobs:
       - name: Lint
         run: pnpm lint
 
-      - name: Test
-        run: pnpm test
-
   required:
     # name 変更時は infra 側の required_status_checks も更新する
     name: TypeScript Config / required

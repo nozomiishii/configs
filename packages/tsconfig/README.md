@@ -42,26 +42,6 @@ After extending, add your own `include` / `exclude` / `baseUrl`:
 }
 ```
 
-## Cloudflare Workers
-
-For a TanStack Start application running on Cloudflare Workers, [generate types](https://developers.cloudflare.com/workers/languages/typescript/) from the project's Wrangler configuration:
-
-```bash
-pnpm wrangler types
-```
-
-Add the generated types alongside the Vite client types. Add `node` when `nodejs_compat` is enabled:
-
-```json
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@nozomiishii/tsconfig/tsconfig.tanstack-start.json",
-  "compilerOptions": {
-    "types": ["./worker-configuration.d.ts", "node", "vite/client"]
-  }
-}
-```
-
 ## References
 
 - [The TSConfig Cheat Sheet](https://www.totaltypescript.com/tsconfig-cheat-sheet)
