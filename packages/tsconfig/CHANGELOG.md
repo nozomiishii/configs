@@ -2,17 +2,15 @@
 
 ## [1.14.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.13.0...@nozomiishii/tsconfig-v1.14.0) (2026-08-08)
 
-
 ### Features
 
-* add tanstack start tsconfig preset ([#2693](https://github.com/nozomiishii/configs/issues/2693)) ([c126df9](https://github.com/nozomiishii/configs/commit/c126df93df777db34361d8ad0f395572fc582798))
-
+- add tanstack start tsconfig preset ([#2693](https://github.com/nozomiishii/configs/issues/2693)) ([c126df9](https://github.com/nozomiishii/configs/commit/c126df93df777db34361d8ad0f395572fc582798))
 
 ### Miscellaneous
 
-* update all non-major dependencies ([#2680](https://github.com/nozomiishii/configs/issues/2680)) ([8887047](https://github.com/nozomiishii/configs/commit/8887047872a962546856a257909a50fd5d7537f8))
-* update all non-major dependencies ([#2688](https://github.com/nozomiishii/configs/issues/2688)) ([ef98eb5](https://github.com/nozomiishii/configs/commit/ef98eb55ba9541653ee3cea011a6ba71e955f265))
-* update pnpm to v11.18.0 ([#2669](https://github.com/nozomiishii/configs/issues/2669)) ([0c85b80](https://github.com/nozomiishii/configs/commit/0c85b8034d8fc62c4af927a3d2cefe5f1bd68f8e))
+- update all non-major dependencies ([#2680](https://github.com/nozomiishii/configs/issues/2680)) ([8887047](https://github.com/nozomiishii/configs/commit/8887047872a962546856a257909a50fd5d7537f8))
+- update all non-major dependencies ([#2688](https://github.com/nozomiishii/configs/issues/2688)) ([ef98eb5](https://github.com/nozomiishii/configs/commit/ef98eb55ba9541653ee3cea011a6ba71e955f265))
+- update pnpm to v11.18.0 ([#2669](https://github.com/nozomiishii/configs/issues/2669)) ([0c85b80](https://github.com/nozomiishii/configs/commit/0c85b8034d8fc62c4af927a3d2cefe5f1bd68f8e))
 
 ## [1.13.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.12.0...@nozomiishii/tsconfig-v1.13.0) (2026-07-31)
 
