@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "@nozomiishii/tsconfig/tsconfig.tanstack-start.json",
+  "extends": "./tsconfig.bundler.json",
+
+  "compilerOptions": {
+    // ----------------------------------------------------------------
+    // Transpiling
+    // ----------------------------------------------------------------
+    // TanStack Start が公式に案内する Vite 向けの module 設定
+    // https://tanstack.com/start/latest/docs/framework/react/build-from-scratch
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "target": "ES2022",
+
+    // TanStack Start では server module が client bundle に残る可能性があるため無効にする
+    // https://tanstack.com/start/latest/docs/framework/react/build-from-scratch
+    "verbatimModuleSyntax": false,
+
+    // ----------------------------------------------------------------
+    // JSX
+    // ----------------------------------------------------------------
+    "jsx": "react-jsx",
+
+    // ----------------------------------------------------------------
+    // Libs
+    // ----------------------------------------------------------------
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+
+    // ----------------------------------------------------------------
+    // Types
+    // ----------------------------------------------------------------
+    // asset import / import.meta.env / import.meta.hot の型を追加する
+    // https://vite.dev/guide/features.html#client-types
+    "types": ["vite/client"]
+  }
+}

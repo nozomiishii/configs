@@ -29,6 +29,7 @@ pnpm add -D @nozomiishii/tsconfig
 - [`@nozomiishii/tsconfig/tsconfig.tsc.json`](./src/tsconfig.tsc.json) — `tsc` で transpile する場合 (`NodeNext` + `outDir` + sourceMap)。
 - [`@nozomiishii/tsconfig/tsconfig.lib.json`](./src/tsconfig.lib.json) — ライブラリ向け (`declaration` + `isolatedDeclarations`)。
 - [`@nozomiishii/tsconfig/tsconfig.nextjs.json`](./src/tsconfig.nextjs.json) — Next.js 向け (`jsx` + Next.js plugin など)。
+- [`@nozomiishii/tsconfig/tsconfig.tanstack-start.json`](./src/tsconfig.tanstack-start.json) — Vite を使う TanStack Start 向け (`react-jsx` + DOM + Vite client types)。
 
 extends したあとに `include` / `exclude` / `baseUrl` などプロジェクト固有設定を足す:
 

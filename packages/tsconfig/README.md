@@ -29,6 +29,7 @@ Pick the variant for your setup. Each file is a working `tsconfig` you can `exte
 - [`@nozomiishii/tsconfig/tsconfig.tsc.json`](./src/tsconfig.tsc.json) — for `tsc` transpile (`NodeNext` + `outDir` + sourceMap).
 - [`@nozomiishii/tsconfig/tsconfig.lib.json`](./src/tsconfig.lib.json) — for libraries (`declaration` + `isolatedDeclarations`).
 - [`@nozomiishii/tsconfig/tsconfig.nextjs.json`](./src/tsconfig.nextjs.json) — for Next.js (`jsx` + Next.js plugin, etc.).
+- [`@nozomiishii/tsconfig/tsconfig.tanstack-start.json`](./src/tsconfig.tanstack-start.json) — for TanStack Start with Vite (`react-jsx` + DOM + Vite client types).
 
 After extending, add your own `include` / `exclude` / `baseUrl`:
 

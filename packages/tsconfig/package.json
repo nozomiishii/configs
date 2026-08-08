@@ -24,6 +24,7 @@
     "./tsconfig.bundler.json": "./src/tsconfig.bundler.json",
     "./tsconfig.lib.json": "./src/tsconfig.lib.json",
     "./tsconfig.nextjs.json": "./src/tsconfig.nextjs.json",
+    "./tsconfig.tanstack-start.json": "./src/tsconfig.tanstack-start.json",
     "./tsconfig.tsc.json": "./src/tsconfig.tsc.json",
     "./package.json": "./package.json"
   },
