@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v2.0.0...@nozomiishii/tsconfig-v2.0.1) (2026-08-09)
+
+### Bug Fixes
+
+- raise tanstack-start preset lib to ES2025 ([#2700](https://github.com/nozomiishii/configs/issues/2700)) ([30eea4e](https://github.com/nozomiishii/configs/commit/30eea4e983c9a6dd3bb0420df8469d722cf15105))
+
 ## [2.0.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v1.13.0...@nozomiishii/tsconfig-v2.0.0) (2026-08-08)
 
 ### ⚠ BREAKING CHANGES
