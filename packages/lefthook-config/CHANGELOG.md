@@ -2,10 +2,9 @@
 
 ## [2.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v2.0.1...@nozomiishii/lefthook-config-v2.1.0) (2026-08-09)
 
-
 ### Miscellaneous
 
-* **@nozomiishii/lefthook-config:** Synchronize configs versions
+- **@nozomiishii/lefthook-config:** Synchronize configs versions
 
 ## [2.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v2.0.0...@nozomiishii/lefthook-config-v2.0.1) (2026-08-09)
 

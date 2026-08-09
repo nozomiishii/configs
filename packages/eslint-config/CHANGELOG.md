@@ -2,10 +2,9 @@
 
 ## [2.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.0.1...@nozomiishii/eslint-config-v2.1.0) (2026-08-09)
 
-
 ### Miscellaneous
 
-* **@nozomiishii/eslint-config:** Synchronize configs versions
+- **@nozomiishii/eslint-config:** Synchronize configs versions
 
 ## [2.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.0.0...@nozomiishii/eslint-config-v2.0.1) (2026-08-09)
 
