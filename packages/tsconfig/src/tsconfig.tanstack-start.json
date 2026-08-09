@@ -11,7 +11,9 @@
     // TanStack Start公式が案内するVite向けのmodule設定
     "moduleResolution": "Bundler",
     "module": "ESNext",
-    "target": "ES2022",
+
+    // target は公式が最低要件として案内するES2022をbaseのES2025が満たすため指定しない
+    // (Viteはtsconfigのtargetを無視してbuild.target / oxc.targetを使う)
 
     // server moduleがclient bundleに残る可能性があるため無効にする
     "verbatimModuleSyntax": false,
@@ -24,7 +26,7 @@
     // ----------------------------------------------------------------
     // Libs
     // ----------------------------------------------------------------
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "lib": ["DOM", "DOM.Iterable", "ES2025"],
 
     // ----------------------------------------------------------------
     // Types
