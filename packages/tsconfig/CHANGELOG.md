@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v2.0.1...@nozomiishii/tsconfig-v2.1.0) (2026-08-09)
+
+### Features
+
+- add ESNext.Disposable to base tsconfig lib ([#2702](https://github.com/nozomiishii/configs/issues/2702)) ([2d8f4e6](https://github.com/nozomiishii/configs/commit/2d8f4e6f89a809ebe5cc153d78f1d147f8fd6927))
+
+### Bug Fixes
+
+- align nextjs preset jsx with react-jsx ([#2704](https://github.com/nozomiishii/configs/issues/2704)) ([c36aad6](https://github.com/nozomiishii/configs/commit/c36aad67279ffa626bd04ce93fddb7fed9cfb614))
+
 ## [2.0.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v2.0.0...@nozomiishii/tsconfig-v2.0.1) (2026-08-09)
 
 ### Bug Fixes
