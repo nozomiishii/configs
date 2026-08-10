@@ -48,7 +48,7 @@
     "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.3",
-    "eslint": "10.8.0",
+    "eslint": "10.8.1",
     "prettier": "3.9.6",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",
