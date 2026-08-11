@@ -17,12 +17,6 @@
       "matchDepNames": ["node"],
       "matchUpdateTypes": ["minor", "patch"],
       "enabled": false
-    },
-    {
-      "description": "Hold typescript below v7 until typescript-eslint supports TS7 (typescript-eslint/typescript-eslint#10940)",
-      "matchManagers": ["npm"],
-      "matchDepNames": ["typescript"],
-      "allowedVersions": "<7"
     }
   ]
 }
