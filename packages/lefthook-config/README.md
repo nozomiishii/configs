@@ -65,6 +65,7 @@ extends:
 ## Available fragments
 
 - `hooks/commit-msg/commitlint.yaml` — runs `nozo-commitlint` (provided by `@nozomiishii/commitlint-config`)
+- `hooks/pre-push/commitlint.yaml` — rechecks every outgoing commit before push; existing remote history is excluded
 - `hooks/post-merge/update-node-modules.yaml` — pnpm > bun > npm > yarn
 - `hooks/post-merge/cleanup-worktrees-and-branches.yaml` — runs [`git-harvest`](https://github.com/nozomiishii/git-harvest) via the `nozo-git-harvest` shim shipped by this package
 - `hooks/pre-commit/yaml.yaml` — fails the commit when staged files use the `.yml` extension (enforces `.yaml`)

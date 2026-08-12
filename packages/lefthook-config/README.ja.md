@@ -56,6 +56,7 @@ extends:
 ## 利用可能なフラグメント
 
 - `hooks/commit-msg/commitlint.yaml` — `nozo-commitlint`（`@nozomiishii/commitlint-config` が提供）を実行
+- `hooks/pre-push/commitlint.yaml` — push 前に今回送るすべての commit を再検査（remote の既存履歴は除外）
 - `hooks/post-merge/update-node-modules.yaml` — pnpm > bun > npm > yarn
 - `hooks/post-merge/cleanup-worktrees-and-branches.yaml` — このパッケージが提供する `nozo-git-harvest` shim 経由で [`git-harvest`](https://github.com/nozomiishii/git-harvest) を実行
 - `hooks/pre-commit/yaml.yaml` — ステージしたファイルが `.yml` 拡張子だった場合にコミットを失敗させる（`.yaml` を強制）

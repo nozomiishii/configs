@@ -7,6 +7,7 @@ export default defineConfig({
     cli: "src/cli.ts",
     "init/bin": "src/init/bin.ts",
     "init/index": "src/init/index.ts",
+    "pre-push": "src/pre-push/index.ts",
   },
   format: ["esm"],
   outExtensions: () => ({ js: ".js" }),

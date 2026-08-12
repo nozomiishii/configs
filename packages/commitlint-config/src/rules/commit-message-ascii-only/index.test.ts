@@ -5,24 +5,33 @@ import { commitMessageAsciiOnly } from ".";
 const { name, rule } = commitMessageAsciiOnly;
 
 // rule callback を直接呼び、parser を介さず純粋ロジックを単体検証する。
-// `commit-message-ascii-only` の検査範囲が body / footer / notes 全体に拡張されたことを保証する。
+// `commit-message-ascii-only` の検査範囲が header / body / footer / notes 全体であることを保証する。
 describe("commit-message-ascii-only (unit)", () => {
-  // body、footer、notes が空のコミットを許可する。
-  test("allows an empty commit body, footer, and notes", () => {
-    const [valid] = rule({ body: null, footer: null, notes: [] });
+  // header、body、footer、notes が空のコミットを許可する。
+  test("allows an empty commit header, body, footer, and notes", () => {
+    const [valid] = rule({ body: null, footer: null, header: null, notes: [] });
 
     expect(valid).toBe(true);
   });
 
-  // body、footer、notes がすべて ASCII のコミットを許可する。
-  test("allows ASCII body, footer, and notes", () => {
+  // header、body、footer、notes がすべて ASCII のコミットを許可する。
+  test("allows ASCII header, body, footer, and notes", () => {
     const [valid] = rule({
       body: "English body line.",
       footer: "Refs #123",
+      header: "chore: add validation",
       notes: [{ text: "english breaking note", title: "BREAKING CHANGE" }],
     });
 
     expect(valid).toBe(true);
+  });
+
+  // non-ASCII の header を固定メッセージ付きで拒否する。
+  test("rejects a non-ASCII header with the fixed message", () => {
+    const [valid, message] = rule({ header: "chore: 日本語" });
+
+    expect(valid).toBe(false);
+    expect(message).toMatch(/ASCII characters only/);
   });
 
   // non-ASCII の body を固定メッセージ付きで拒否する。
@@ -77,6 +86,14 @@ describe("commit-message-ascii-only (unit)", () => {
 describe("commit-message-ascii-only (integration via @commitlint/lint)", () => {
   const rules = { [name]: [2, "always"] } as const;
   const opts = { plugins: { local: { rules: { [name]: rule } } } } as const;
+
+  // non-ASCII の header を検出する。
+  test("rejects a non-ASCII header", async () => {
+    const result = await lint("chore: 日本語", rules, opts);
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.name === name)).toBe(true);
+  });
 
   // issue 参照より後ろにある non-ASCII text を検出する。
   test("detects non-ASCII text after an issue reference", async () => {
