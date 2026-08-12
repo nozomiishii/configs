@@ -3,12 +3,16 @@ import path from "node:path";
 import { echo, glob } from "zx";
 
 /**
- * Recursively convert .vscode/settings.example.jsonc to .vscode/settings.json
+ * Recursively copy a .vscode/settings example to .vscode/settings.json.
+ * Prefer strict JSON when both example formats exist.
  */
 export async function setupVSCode() {
   echo("Setup vscode");
 
-  const examples = await glob(["**/.vscode/settings.example.jsonc"]);
+  const examples = await glob([
+    "**/.vscode/settings.example.json",
+    "**/.vscode/settings.example.jsonc",
+  ]);
 
   for (const example of examples) {
     const file = path.join(path.dirname(example), "settings.json");
