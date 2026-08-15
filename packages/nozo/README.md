@@ -30,6 +30,7 @@ npx -y nozo@latest init
 | [@nozomiishii/eslint-config](../eslint-config) | ESLint flat config preset |
 | [@nozomiishii/lefthook-config](../lefthook-config) | Git hooks preset |
 | [@nozomiishii/markdownlint-cli2-config](../markdownlint-cli2-config) | markdownlint preset |
+| [@nozomiishii/oxfmt-config](../oxfmt-config) | oxfmt preset |
 | [@nozomiishii/postinstall](../postinstall) | postinstall scaffolder |
 | [@nozomiishii/prettier-config](../prettier-config) | Prettier preset |
 | [@nozomiishii/tsconfig](../tsconfig) | TSConfig preset |

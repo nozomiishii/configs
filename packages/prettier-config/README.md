@@ -59,14 +59,3 @@ Prettier's `experimental*` options (e.g. `experimentalOperatorPosition`,
 wait for them to stabilize and become defaults. Formatting is fine as
 long as it's consistent — there is no value in chasing experimental
 output changes.
-
-### Future migration to oxfmt
-
-We intend to migrate to [oxfmt](https://oxc.rs/) (Prettier-compatible
-formatter from the OXC project) eventually. The trigger is **when oxlint
-has fully absorbed ESLint's rule set**. Until then we stay on Prettier.
-
-Because oxfmt is designed to accept Prettier's config as-is, the
-settings in this package are expected to carry over without changes.
-Adding non-essential Prettier plugins increases future migration cost
-and is avoided.

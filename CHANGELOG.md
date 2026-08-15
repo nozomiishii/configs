@@ -6,6 +6,7 @@
 - [lefthook-config](packages/lefthook-config/CHANGELOG.md)
 - [markdownlint-cli2-config](packages/markdownlint-cli2-config/CHANGELOG.md)
 - [nozo](packages/nozo/CHANGELOG.md)
+- [oxfmt-config](packages/oxfmt-config/CHANGELOG.md)
 - [postinstall](packages/postinstall/CHANGELOG.md)
 - [prettier-config](packages/prettier-config/CHANGELOG.md)
 - [tsconfig](packages/tsconfig/CHANGELOG.md)

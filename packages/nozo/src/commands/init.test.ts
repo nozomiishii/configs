@@ -2,7 +2,7 @@ import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { expect, onTestFinished, test, vi } from "vitest";
-import { resolvePackageManager, toolIds, tools } from "./init";
+import { defaultToolIds, resolvePackageManager, toolIds, tools } from "./init";
 
 // 一時dirに最小構成の package.json を作り、テスト終了時に削除する。
 function createTestProject(): string {
@@ -43,6 +43,13 @@ test(
   },
   15_000,
 );
+
+// Prettier は選択肢に残し、デフォルトの formatter は oxfmt だけにする。
+test("keeps Prettier available as an opt-in formatter", () => {
+  expect(toolIds).toContain("prettier");
+  expect(defaultToolIds).not.toContain("prettier");
+  expect(defaultToolIds).toContain("oxfmt");
+});
 
 // lockfile も packageManager フィールドも無いとき、nozo を起動したランナーを使う。
 test("falls back to the launching runner when the project has no config", async () => {

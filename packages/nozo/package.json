@@ -37,6 +37,7 @@
     "@nozomiishii/commitlint-config": "workspace:*",
     "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
+    "@nozomiishii/oxfmt-config": "workspace:*",
     "@nozomiishii/postinstall": "workspace:*",
     "@nozomiishii/prettier-config": "workspace:*",
     "citty": "0.2.2",
