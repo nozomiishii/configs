@@ -2,14 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@nozomiishii/tsconfig",
   "compilerOptions": {
-    // ----------------------------------------------------------------
-    // Transpiling
-    // ----------------------------------------------------------------
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "noEmit": false,
-    "outDir": "dist",
-    "sourceMap": true
+    "types": ["node"]
   },
-  "include": ["packages/eslint-config/**/*.ts"]
+  "include": ["*.ts"]
 }
