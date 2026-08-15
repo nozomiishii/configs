@@ -1,0 +1,63 @@
+{
+  "name": "@nozomiishii/oxfmt-config",
+  "version": "2.1.0",
+  "description": "Nozomi's Recommended oxfmt config",
+  "keywords": [
+    "config",
+    "oxfmt"
+  ],
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/oxfmt-config/README.md",
+  "bugs": {
+    "url": "https://github.com/nozomiishii/configs/issues"
+  },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozomiishii/configs.git",
+    "directory": "packages/oxfmt-config"
+  },
+  "bin": {
+    "nozo-oxfmt-init": "./bin/nozo-oxfmt-init.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "starter.ts",
+    "README.md"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./init": "./dist/init/index.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch --sourcemap",
+    "format": "pnpm oxfmt . --check",
+    "lint": "eslint --max-warnings=0 .",
+    "prepublishOnly": "pnpm run build",
+    "test": "vitest run",
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "@nozomiishii/eslint-config": "workspace:*",
+    "@nozomiishii/tsconfig": "workspace:*",
+    "@types/node": "24.13.3",
+    "eslint": "10.8.1",
+    "oxfmt": "0.63.0",
+    "tsdown": "0.22.14",
+    "typescript": "6.0.3",
+    "vitest": "4.1.10"
+  },
+  "peerDependencies": {
+    "oxfmt": "0.63.0"
+  },
+  "packageManager": "pnpm@11.20.0"
+}

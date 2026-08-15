@@ -41,6 +41,10 @@
       "release-type": "node",
       "component": "@nozomiishii/markdownlint-cli2-config"
     },
+    "packages/oxfmt-config": {
+      "release-type": "node",
+      "component": "@nozomiishii/oxfmt-config"
+    },
     "packages/postinstall": {
       "release-type": "node",
       "component": "@nozomiishii/postinstall"
@@ -70,6 +74,7 @@
         "@nozomiishii/eslint-config",
         "@nozomiishii/lefthook-config",
         "@nozomiishii/markdownlint-cli2-config",
+        "@nozomiishii/oxfmt-config",
         "@nozomiishii/postinstall",
         "@nozomiishii/prettier-config",
         "@nozomiishii/tsconfig",

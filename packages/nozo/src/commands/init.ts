@@ -2,6 +2,7 @@ import * as p from "@clack/prompts";
 import { init as initCommitlint } from "@nozomiishii/commitlint-config/init";
 import { init as initEslint, type PresetId } from "@nozomiishii/eslint-config/init";
 import { init as initLefthook } from "@nozomiishii/lefthook-config/init";
+import { init as initOxfmt } from "@nozomiishii/oxfmt-config/init";
 import { init as initPostinstall } from "@nozomiishii/postinstall/init";
 import { init as initPrettier } from "@nozomiishii/prettier-config/init";
 import { defineCommand } from "citty";
@@ -84,6 +85,11 @@ export const tools = {
     label: "@nozomiishii/lefthook-config",
     run: initLefthook,
   },
+  oxfmt: {
+    description: "Code formatting via oxfmt",
+    label: "@nozomiishii/oxfmt-config",
+    run: initOxfmt,
+  },
   postinstall: {
     description: "Repo bootstrap via @nozomiishii/postinstall",
     label: "@nozomiishii/postinstall",
@@ -99,6 +105,8 @@ export const tools = {
 export type ToolId = keyof typeof tools;
 
 export const toolIds = Object.keys(tools) as ToolId[];
+
+export const defaultToolIds = toolIds.filter((id) => id !== "prettier");
 
 export async function resolvePackageManager(
   cwd: string,
@@ -130,7 +138,7 @@ export default defineCommand({
     p.intro("nozo init");
 
     const selected = await p.multiselect<ToolId>({
-      initialValues: toolIds,
+      initialValues: defaultToolIds,
       message: "Which tools do you want to set up?",
       options: toolIds.map((id) => ({
         hint: tools[id].description,

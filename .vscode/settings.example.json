@@ -3,13 +3,14 @@
   // File associations
   // ----------------------------------------------------------------
   "files.associations": {
-    "CODEOWNERS": "ignore"
+    "CODEOWNERS": "ignore",
+    "settings.example.json": "jsonc"
   },
 
   // ----------------------------------------------------------------
-  // Prettier
+  // oxfmt
   // ----------------------------------------------------------------
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
 
   // ----------------------------------------------------------------
@@ -71,14 +72,4 @@
     "stg": {},
     "prod": {}
   }
-
-  // ----------------------------------------------------------------
-  // Theme
-  // ----------------------------------------------------------------
-  // "workbench.colorCustomizations": {
-  //   "activityBar.background": "#0f3a36",
-  //   "titleBar.activeBackground": "#50b1b6",
-  //   "titleBar.inactiveBackground": "#50b1b6c0",
-  //   "titleBar.activeForeground": "#F6FCEE"
-  // }
 }

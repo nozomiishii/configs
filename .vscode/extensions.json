@@ -140,7 +140,7 @@
     // ----------------------------------------------------------------
     "dbaeumer.vscode-eslint",
     "yoavbls.pretty-ts-errors",
-    "esbenp.prettier-vscode",
+    "oxc.oxc-vscode",
     "vitest.explorer",
     "prisma.prisma",
     "nrwl.angular-console",

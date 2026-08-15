@@ -11,36 +11,37 @@
   "bugs": {
     "url": "https://github.com/nozomiishii/configs/issues"
   },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git"
   },
-  "license": "MIT",
-  "author": "Nozomi Ishii",
   "type": "module",
   "main": "README.md",
   "scripts": {
     "clean:all": "git clean -fdX",
     "clean:node": "npkill --delete-all -y",
     "fix:md": "markdownlint-cli2 --fix '**/*.md'",
-    "format": "pnpm prettier --check '!apps/**' '!packages/**' .",
-    "format:fix": "pnpm prettier --write '!apps/**' '!packages/**' .",
-    "postinstall": "pnpm -r run build && postinstall",
-    "prettier": "prettier --ignore-unknown --ignore-path .gitignore"
+    "format": "pnpm oxfmt --check '!packages/**' .",
+    "format:fix": "pnpm oxfmt '!packages/**' .",
+    "oxfmt": "oxfmt --no-error-on-unmatched-pattern",
+    "postinstall": "pnpm -r run build && postinstall"
   },
   "devDependencies": {
     "@nozomiishii/commitlint-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
     "@nozomiishii/markdownlint-cli2-config": "workspace:*",
+    "@nozomiishii/oxfmt-config": "workspace:*",
     "@nozomiishii/postinstall": "workspace:*",
-    "@nozomiishii/prettier-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "lefthook": "2.1.10",
     "markdownlint-cli2": "0.23.2",
-    "npkill": "0.12.2"
+    "npkill": "0.12.2",
+    "oxfmt": "0.63.0"
   },
-  "packageManager": "pnpm@11.21.0",
   "engines": {
     "node": "24.19.0"
-  }
+  },
+  "packageManager": "pnpm@11.21.0"
 }
