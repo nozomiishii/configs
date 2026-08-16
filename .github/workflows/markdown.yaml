@@ -48,7 +48,7 @@ jobs:
         uses: ./.github/actions/setup-node
 
       - name: lint
-        run: npx -y markdownlint-cli2 "**/*.md"
+        run: pnpm exec markdownlint-cli2 "**/*.md"
 
   required:
     # name 変更時は infra 側の required_status_checks も更新する
