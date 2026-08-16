@@ -2,12 +2,11 @@
 
 ## [2.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v2.1.0...@nozomiishii/commitlint-config-v2.2.0) (2026-08-16)
 
-
 ### Miscellaneous
 
-* update all non-major dependencies ([#2716](https://github.com/nozomiishii/configs/issues/2716)) ([3e338fb](https://github.com/nozomiishii/configs/commit/3e338fb84254ba90d6985ba208295bbcfd16ea35))
-* update all non-major dependencies to v21.2.2 ([#2733](https://github.com/nozomiishii/configs/issues/2733)) ([3c88b5f](https://github.com/nozomiishii/configs/commit/3c88b5fe6b4d2ad59ad0754c5b75eb752858ce76))
-* update dependency eslint to v10.8.1 ([#2708](https://github.com/nozomiishii/configs/issues/2708)) ([61753ed](https://github.com/nozomiishii/configs/commit/61753eda9c3cdd358e66dc501f628308ee71b4c0))
+- update all non-major dependencies ([#2716](https://github.com/nozomiishii/configs/issues/2716)) ([3e338fb](https://github.com/nozomiishii/configs/commit/3e338fb84254ba90d6985ba208295bbcfd16ea35))
+- update all non-major dependencies to v21.2.2 ([#2733](https://github.com/nozomiishii/configs/issues/2733)) ([3c88b5f](https://github.com/nozomiishii/configs/commit/3c88b5fe6b4d2ad59ad0754c5b75eb752858ce76))
+- update dependency eslint to v10.8.1 ([#2708](https://github.com/nozomiishii/configs/issues/2708)) ([61753ed](https://github.com/nozomiishii/configs/commit/61753eda9c3cdd358e66dc501f628308ee71b4c0))
 
 ## [2.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v2.0.1...@nozomiishii/commitlint-config-v2.1.0) (2026-08-09)
 

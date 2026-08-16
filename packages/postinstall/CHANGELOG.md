@@ -2,16 +2,14 @@
 
 ## [2.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v2.1.0...@nozomiishii/postinstall-v2.2.0) (2026-08-16)
 
-
 ### Bug Fixes
 
-* support json vscode settings examples ([#2715](https://github.com/nozomiishii/configs/issues/2715)) ([5dea97e](https://github.com/nozomiishii/configs/commit/5dea97e2c6d9d4b576ae50a088770e49b67b9d61))
-
+- support json vscode settings examples ([#2715](https://github.com/nozomiishii/configs/issues/2715)) ([5dea97e](https://github.com/nozomiishii/configs/commit/5dea97e2c6d9d4b576ae50a088770e49b67b9d61))
 
 ### Miscellaneous
 
-* update all non-major dependencies ([#2716](https://github.com/nozomiishii/configs/issues/2716)) ([3e338fb](https://github.com/nozomiishii/configs/commit/3e338fb84254ba90d6985ba208295bbcfd16ea35))
-* update dependency eslint to v10.8.1 ([#2708](https://github.com/nozomiishii/configs/issues/2708)) ([61753ed](https://github.com/nozomiishii/configs/commit/61753eda9c3cdd358e66dc501f628308ee71b4c0))
+- update all non-major dependencies ([#2716](https://github.com/nozomiishii/configs/issues/2716)) ([3e338fb](https://github.com/nozomiishii/configs/commit/3e338fb84254ba90d6985ba208295bbcfd16ea35))
+- update dependency eslint to v10.8.1 ([#2708](https://github.com/nozomiishii/configs/issues/2708)) ([61753ed](https://github.com/nozomiishii/configs/commit/61753eda9c3cdd358e66dc501f628308ee71b4c0))
 
 ## [2.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v2.0.1...@nozomiishii/postinstall-v2.1.0) (2026-08-09)
 
