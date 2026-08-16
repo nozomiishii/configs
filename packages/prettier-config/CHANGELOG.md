@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v2.1.0...@nozomiishii/prettier-config-v2.2.0) (2026-08-16)
+
+
+### Features
+
+* migrate formatting to oxfmt ([#2725](https://github.com/nozomiishii/configs/issues/2725)) ([30bcf15](https://github.com/nozomiishii/configs/commit/30bcf15742422303741ae0735e5862c0452978d2))
+
+
+### Miscellaneous
+
+* update all non-major dependencies ([#2716](https://github.com/nozomiishii/configs/issues/2716)) ([3e338fb](https://github.com/nozomiishii/configs/commit/3e338fb84254ba90d6985ba208295bbcfd16ea35))
+* update dependency eslint to v10.8.1 ([#2708](https://github.com/nozomiishii/configs/issues/2708)) ([61753ed](https://github.com/nozomiishii/configs/commit/61753eda9c3cdd358e66dc501f628308ee71b4c0))
+
 ## [2.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v2.0.1...@nozomiishii/prettier-config-v2.1.0) (2026-08-09)
 
 ### Miscellaneous
