@@ -59,3 +59,13 @@ pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --edit .git/CO
 ```
 
 commit-msg の git hook に組み込む方法は [`@nozomiishii/lefthook-config`](../lefthook-config) を参照。
+
+### 設定の適用のされ方
+
+`nozo-commitlint` は自分の設定を絶対パスの `--extends` として `@commitlint/cli` に渡します。そのため `commitlint.config.ts` も `package.json` も `node_modules` も無い repo でも、上記のルールが効きます。
+
+commitlint は `extends: ["@nozomiishii/commitlint-config"]` を、カレントディレクトリを起点にした Node の module 解決で探します。ローカルに `node_modules` が無いと、この探索が無関係なコピー — 例えば古い npx cache — に当たることがあります。その版に custom rule が無くても commitlint は `found 0 problems` と報告するため、壊れていることに気づけません。絶対パスを渡せば解決経路からカレントディレクトリが外れ、設定は読めるか、はっきり失敗するかのどちらかになります。
+
+`--extends` は置き換えではなく追加です。repo 側の `commitlint.config.ts` は引き続き読まれ、そこで設定した rule が勝ちます。共有設定はあくまで下敷きです。
+
+注入をやめて自分で制御したいときは `--config` か `--extends` を明示的に渡してください。どちらかがあるときは何も注入しません。

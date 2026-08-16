@@ -63,3 +63,24 @@ pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --edit .git/CO
 
 To wire it into a commit-msg git hook, see
 [`@nozomiishii/lefthook-config`](../lefthook-config).
+
+### How the config is applied
+
+`nozo-commitlint` hands its own config to `@commitlint/cli` as an absolute
+`--extends` path. The rules above therefore apply even in a repo that has no
+`commitlint.config.ts`, no `package.json`, and no `node_modules`.
+
+This matters because commitlint resolves `extends: ["@nozomiishii/commitlint-config"]`
+through Node's module resolution, starting from the current directory. Without a
+local `node_modules` that lookup can land on an unrelated copy of the package —
+a stale npx cache, for instance — and commitlint then reports `found 0 problems`
+even though none of the custom rules are registered. Passing an absolute path
+takes the current directory out of the lookup, so the config either loads or
+fails loudly.
+
+`--extends` is additive, not a replacement: a repo-level `commitlint.config.ts`
+is still loaded, and rules it sets still win. The shared config is only the base
+layer.
+
+To opt out and take full control, pass `--config` or `--extends` yourself — when
+either flag is present, nothing is injected.

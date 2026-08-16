@@ -4,7 +4,7 @@ export default defineConfig({
   clean: true,
   dts: true,
   entry: {
-    cli: "src/cli.ts",
+    "cli/bin": "src/cli/bin.ts",
     index: "src/index.ts",
     "init/bin": "src/init/bin.ts",
     "init/index": "src/init/index.ts",
