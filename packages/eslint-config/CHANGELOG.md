@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.1.0...@nozomiishii/eslint-config-v2.2.0) (2026-08-16)
+
+### Miscellaneous
+
+- update all non-major dependencies ([#2705](https://github.com/nozomiishii/configs/issues/2705)) ([9e52413](https://github.com/nozomiishii/configs/commit/9e524134ab36a7439b53418b29232e7b9a6de272))
+- update all non-major dependencies ([#2716](https://github.com/nozomiishii/configs/issues/2716)) ([3e338fb](https://github.com/nozomiishii/configs/commit/3e338fb84254ba90d6985ba208295bbcfd16ea35))
+- update all non-major dependencies ([#2718](https://github.com/nozomiishii/configs/issues/2718)) ([f909d10](https://github.com/nozomiishii/configs/commit/f909d10b8d5b38c0cd35f8bd8b60fd6fd9b9be86))
+- update all non-major dependencies ([#2720](https://github.com/nozomiishii/configs/issues/2720)) ([e0d44b7](https://github.com/nozomiishii/configs/commit/e0d44b723cb0f38a53401d3f95f909afcac104ff))
+- update all non-major dependencies ([#2723](https://github.com/nozomiishii/configs/issues/2723)) ([b087353](https://github.com/nozomiishii/configs/commit/b087353b22250188fbd336682683c9ca8397285a))
+- update all non-major dependencies ([#2729](https://github.com/nozomiishii/configs/issues/2729)) ([5d899ef](https://github.com/nozomiishii/configs/commit/5d899ef004debfed867bcd948b87893fb1d97cf2))
+- update dependency eslint to v10.8.1 ([#2708](https://github.com/nozomiishii/configs/issues/2708)) ([61753ed](https://github.com/nozomiishii/configs/commit/61753eda9c3cdd358e66dc501f628308ee71b4c0))
+- update dependency eslint-plugin-jsdoc to v64 ([#2710](https://github.com/nozomiishii/configs/issues/2710)) ([a5336d8](https://github.com/nozomiishii/configs/commit/a5336d8eb898545bb3fd2cb6a2e135e268831ac7))
+- update dependency eslint-plugin-jsdoc to v64.1.0 ([#2721](https://github.com/nozomiishii/configs/issues/2721)) ([25ee4ff](https://github.com/nozomiishii/configs/commit/25ee4ff6c7233fcaf492a8b0f0181338edfcbe12))
+- update dependency eslint-plugin-n to v18.3.0 ([#2712](https://github.com/nozomiishii/configs/issues/2712)) ([652f521](https://github.com/nozomiishii/configs/commit/652f521fccc980d8d3fcbdaeed935f87e4c9c642))
+- update dependency eslint-plugin-package-json to v1.7.1 ([#2722](https://github.com/nozomiishii/configs/issues/2722)) ([62d6517](https://github.com/nozomiishii/configs/commit/62d65173696c15b213935750e82fd1cf1883ce50))
+- update dependency eslint-plugin-react-refresh to v0.5.4 ([#2719](https://github.com/nozomiishii/configs/issues/2719)) ([1548cd4](https://github.com/nozomiishii/configs/commit/1548cd4e7077e874c998295aa58f3bccb63ad177))
+- update dependency globals to v17.11.0 ([#2724](https://github.com/nozomiishii/configs/issues/2724)) ([eac69d9](https://github.com/nozomiishii/configs/commit/eac69d91ce8b9c7566ec1a609d0e505415afddc6))
+- update dependency jsonc-eslint-parser to v3.3.0 ([#2709](https://github.com/nozomiishii/configs/issues/2709)) ([ef8e9ac](https://github.com/nozomiishii/configs/commit/ef8e9ac8d6cd59aab3eb858efc155fcd58525fd0))
+
 ## [2.1.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.0.1...@nozomiishii/eslint-config-v2.1.0) (2026-08-09)
 
 ### Miscellaneous
