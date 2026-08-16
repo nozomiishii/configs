@@ -40,6 +40,12 @@
     "npkill": "0.12.2",
     "oxfmt": "0.63.0"
   },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "onFail": "error"
+    }
+  },
   "engines": {
     "node": "24.19.0"
   },
