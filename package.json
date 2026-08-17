@@ -44,6 +44,11 @@
     "packageManager": {
       "name": "pnpm",
       "onFail": "error"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "24.19.0",
+      "onFail": "download"
     }
   },
   "engines": {
