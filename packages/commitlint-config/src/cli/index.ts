@@ -53,6 +53,8 @@ export function resolveCommitlintCli(): string {
  * 名前ではなく絶対パスを渡して、解決経路から cwd を外す。
  * パスは package.json の `exports` を使った self-reference で得るため、
  * bundle 後のチャンク位置に依存しない。
+ *
+ * upstream 側の追跡: https://github.com/nozomiishii/configs/issues/2740
  */
 export function resolveSelfConfigPath(): string {
   // 解決できないときは MODULE_NOT_FOUND で落ちる。
