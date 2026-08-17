@@ -64,23 +64,38 @@ pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --edit .git/CO
 To wire it into a commit-msg git hook, see
 [`@nozomiishii/lefthook-config`](../lefthook-config).
 
-### How the config is applied
+### `--recommended`
 
-`nozo-commitlint` hands its own config to `@commitlint/cli` as an absolute
-`--extends` path. The rules above therefore apply even in a repo that has no
-`commitlint.config.ts`, no `package.json`, and no `node_modules`.
+By default `nozo-commitlint` is a pass-through to `@commitlint/cli`: it forwards
+your arguments unchanged and lets commitlint find the config the usual way. A
+repo-level `commitlint.config.ts` — including the rule overrides shown above —
+keeps working exactly as it does with plain `commitlint`.
 
-This matters because commitlint resolves `extends: ["@nozomiishii/commitlint-config"]`
-through Node's module resolution, starting from the current directory. Without a
-local `node_modules` that lookup can land on an unrelated copy of the package —
-a stale npx cache, for instance — and commitlint then reports `found 0 problems`
-even though none of the custom rules are registered. Passing an absolute path
-takes the current directory out of the lookup, so the config either loads or
-fails loudly.
+Pass `--recommended` to run against the shared config directly instead:
 
-`--extends` is additive, not a replacement: a repo-level `commitlint.config.ts`
-is still loaded, and rules it sets still win. The shared config is only the base
-layer.
+```sh
+pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint \
+  --recommended --edit .git/COMMIT_EDITMSG
+```
 
-To opt out and take full control, pass `--config` or `--extends` yourself — when
-either flag is present, nothing is injected.
+The flag is consumed by the shim and replaced with `--config <absolute path>`, so
+the rules above apply even in a repo with no `commitlint.config.ts`, no
+`package.json`, and no `node_modules`.
+
+That matters because `extends: ["@nozomiishii/commitlint-config"]` is resolved
+through Node's module resolution. Without a local `node_modules` that lookup can
+land on an unrelated copy of the package — a stale npx cache, for instance — and
+commitlint then reports `found 0 problems` even though none of the custom rules
+are registered. An absolute path takes that lookup out of the picture, so the
+config either loads or fails loudly.
+
+Two consequences worth knowing:
+
+- `--recommended` does **not** read a repo-level `commitlint.config.*`. If you
+  need to override rules, keep the config file and omit the flag.
+- Without the flag, a repo that has no reachable copy of this package silently
+  lints against whatever commitlint happened to resolve. Add `--recommended`
+  wherever you run the bin without an install.
+
+`--recommended` is replaced in place, so a `--config` you pass after it still
+wins.

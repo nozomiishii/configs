@@ -60,12 +60,24 @@ pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --edit .git/CO
 
 commit-msg の git hook に組み込む方法は [`@nozomiishii/lefthook-config`](../lefthook-config) を参照。
 
-### 設定の適用のされ方
+### `--recommended`
 
-`nozo-commitlint` は自分の設定を絶対パスの `--extends` として `@commitlint/cli` に渡します。そのため `commitlint.config.ts` も `package.json` も `node_modules` も無い repo でも、上記のルールが効きます。
+`nozo-commitlint` は既定では `@commitlint/cli` への pass-through です。引数をそのまま転送し、設定の探索は commitlint に任せます。repo 側の `commitlint.config.ts` — 上記の rule 上書きも含めて — は素の `commitlint` と全く同じように効きます。
 
-commitlint は `extends: ["@nozomiishii/commitlint-config"]` を、カレントディレクトリを起点にした Node の module 解決で探します。ローカルに `node_modules` が無いと、この探索が無関係なコピー — 例えば古い npx cache — に当たることがあります。その版に custom rule が無くても commitlint は `found 0 problems` と報告するため、壊れていることに気づけません。絶対パスを渡せば解決経路からカレントディレクトリが外れ、設定は読めるか、はっきり失敗するかのどちらかになります。
+共有設定で直接実行したいときは `--recommended` を渡します:
 
-`--extends` は置き換えではなく追加です。repo 側の `commitlint.config.ts` は引き続き読まれ、そこで設定した rule が勝ちます。共有設定はあくまで下敷きです。
+```sh
+pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint \
+  --recommended --edit .git/COMMIT_EDITMSG
+```
 
-注入をやめて自分で制御したいときは `--config` か `--extends` を明示的に渡してください。どちらかがあるときは何も注入しません。
+この flag は shim が消費し、`--config <絶対パス>` に置き換えられます。そのため `commitlint.config.ts` も `package.json` も `node_modules` も無い repo でも上記のルールが効きます。
+
+これが要るのは、`extends: ["@nozomiishii/commitlint-config"]` が Node の module 解決に乗るためです。ローカルに `node_modules` が無いと、この探索が無関係なコピー — 例えば古い npx cache — に当たることがあります。その版に custom rule が無くても commitlint は `found 0 problems` と報告するため、壊れていることに気づけません。絶対パスなら探索そのものが経路から消え、設定は読めるか、はっきり失敗するかのどちらかになります。
+
+把握しておくべき点が 2 つあります。
+
+- `--recommended` は repo 側の `commitlint.config.*` を**読みません**。rule を上書きしたいときは設定ファイルを置いたまま flag を付けないでください。
+- flag を付けないと、このパッケージに到達できない repo では従来通り黙って別の設定で lint されます。install 無しで bin を叩く場所には `--recommended` を付けてください。
+
+`--recommended` はその位置で置き換えられるので、後ろに `--config` を渡せばそちらが勝ちます。

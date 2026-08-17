@@ -4,33 +4,37 @@ const require = createRequire(import.meta.url);
 
 const selfPackageName = "@nozomiishii/commitlint-config";
 
-// commitlint が設定を「選ぶ」flag。呼び出し側がこれを渡したときは自己設定を注入しない。
-const configSelectingFlags = ["--config", "-g", "--extends", "-x"] as const;
+// 共有設定の適用を求める自前の flag。commitlint には渡さず、ここで消費する。
+const recommendedFlag = "--recommended";
 
 /**
  * commitlint に渡す引数を組み立てる。
  *
- * `--config` ではなく `--extends` を使うのは additive だから。
- * repo 側の `commitlint.config.ts` は読まれ続け、そこで上書きした rule も勝つ。
- * 共有設定は「下敷き」として必ず載る、という関係になる。
+ * `--recommended` を渡されたときだけ、その位置で `--config <絶対パス>` に置き換える。
+ * flag が無ければ argv を素通しし、`nozo-commitlint` は `@commitlint/cli` の
+ * pass-through のままになる。repo 側の `commitlint.config.*` も、そこで上書きした rule も
+ * これまで通り効く。
+ *
+ * `--extends` ではなく `--config` を使うのは、`--extends` が additive にならないから。
+ * `@commitlint/load` は CLI の値を `merge(base, fileConfig, seed)` で重ねるが、この `merge` は
+ * 配列を index 単位でマージするため、repo 側 `extends[0]` を無言で置き換えてしまう。
+ * `--config` は指定したファイルだけを load するので、その事故が起きない。
+ *
+ * 位置を保つのは、後ろに呼び出し側の `--config` があれば yargs の後勝ちでそちらを優先させるため。
+ *
+ * `resolveConfigPath` を関数で受けるのは、flag が無いときに解決を走らせないため。
  */
-export function buildCommitlintArgs(argv: readonly string[], selfConfigPath: string): string[] {
-  // 呼び出し側が設定を明示したときは尊重する。
-  if (hasExplicitConfigFlag(argv)) {
+export function buildCommitlintArgs(
+  argv: readonly string[],
+  resolveConfigPath: () => string,
+): string[] {
+  const index = argv.indexOf(recommendedFlag);
+
+  if (index === -1) {
     return [...argv];
   }
 
-  // `=` 形式にして、後続の引数が extends の配列へ巻き込まれないようにする。
-  return [`--extends=${selfConfigPath}`, ...argv];
-}
-
-/**
- * 呼び出し側が設定ファイルや extends を明示したか。
- */
-export function hasExplicitConfigFlag(argv: readonly string[]): boolean {
-  return argv.some((arg) =>
-    configSelectingFlags.some((flag) => arg === flag || arg.startsWith(`${flag}=`)),
-  );
+  return [...argv.slice(0, index), "--config", resolveConfigPath(), ...argv.slice(index + 1)];
 }
 
 export function resolveCommitlintCli(): string {
