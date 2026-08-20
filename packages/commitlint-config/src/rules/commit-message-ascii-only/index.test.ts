@@ -5,20 +5,21 @@ import { commitMessageAsciiOnly } from ".";
 const { name, rule } = commitMessageAsciiOnly;
 
 // rule callback を直接呼び、parser を介さず純粋ロジックを単体検証する。
-// `commit-message-ascii-only` の検査範囲が body / footer / notes 全体に拡張されたことを保証する。
+// `commit-message-ascii-only` の検査範囲が header / body / footer / notes 全体に及ぶことを保証する。
 describe("commit-message-ascii-only (unit)", () => {
-  // body、footer、notes が空のコミットを許可する。
-  test("allows an empty commit body, footer, and notes", () => {
-    const [valid] = rule({ body: null, footer: null, notes: [] });
+  // header、body、footer、notes が空のコミットを許可する。
+  test("allows an empty header, body, footer, and notes", () => {
+    const [valid] = rule({ body: null, footer: null, header: null, notes: [] });
 
     expect(valid).toBe(true);
   });
 
-  // body、footer、notes がすべて ASCII のコミットを許可する。
-  test("allows ASCII body, footer, and notes", () => {
+  // header、body、footer、notes がすべて ASCII のコミットを許可する。
+  test("allows an ASCII header, body, footer, and notes", () => {
     const [valid] = rule({
       body: "English body line.",
       footer: "Refs #123",
+      header: "feat: add something",
       notes: [{ text: "english breaking note", title: "BREAKING CHANGE" }],
     });
 
@@ -69,6 +70,37 @@ describe("commit-message-ascii-only (unit)", () => {
 
     expect(valid).toBe(false);
   });
+
+  // non-ASCII の header を固定メッセージ付きで拒否する。
+  test("rejects a non-ASCII header with the fixed message", () => {
+    const [valid, message] = rule({ body: null, footer: null, header: "chore: 日本語のタイトル" });
+
+    expect(valid).toBe(false);
+    expect(message).toMatch(/ASCII characters only/);
+  });
+
+  // header 内の emoji を拒否する。
+  test("rejects an emoji in the header", () => {
+    // emoji は surrogate pair のため、byte 長と code unit 長の比較で検出できることを固定する。
+    const [valid] = rule({ body: null, footer: null, header: "chore: emoji 🚀" });
+
+    expect(valid).toBe(false);
+  });
+
+  // header 内の accented latin を拒否する。
+  test("rejects accented latin characters in the header", () => {
+    const [valid] = rule({ body: null, footer: null, header: "chore: café latte" });
+
+    expect(valid).toBe(false);
+  });
+
+  // scope 内の non-ASCII を拒否する。
+  test("rejects a non-ASCII scope", () => {
+    // scope を許可した consumer でも header 全体が検査対象であることを固定する。
+    const [valid] = rule({ body: null, footer: null, header: "feat(日本語): subject" });
+
+    expect(valid).toBe(false);
+  });
 });
 
 // `@commitlint/lint` を介した end-to-end 検証。
@@ -101,6 +133,44 @@ describe("commit-message-ascii-only (integration via @commitlint/lint)", () => {
     ].join("\n");
 
     const result = await lint(message, rules, opts);
+
+    expect(result.valid).toBe(true);
+  });
+
+  // 日本語 subject のみのコミットを拒否する。
+  test("rejects a Japanese subject", async () => {
+    const result = await lint("chore: 日本語のタイトル", rules, opts);
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.name === name)).toBe(true);
+  });
+
+  // emoji を含む subject のみのコミットを拒否する。
+  test("rejects a subject containing an emoji", async () => {
+    const result = await lint("chore: emoji 🚀", rules, opts);
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.name === name)).toBe(true);
+  });
+
+  // accented latin を含む subject のみのコミットを拒否する。
+  test("rejects a subject containing accented latin characters", async () => {
+    const result = await lint("chore: café latte", rules, opts);
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.name === name)).toBe(true);
+  });
+
+  // ASCII のみの subject を許可する。
+  test("allows an ASCII-only subject", async () => {
+    const result = await lint("chore: ok subject", rules, opts);
+
+    expect(result.valid).toBe(true);
+  });
+
+  // revert コミットの引用付き subject を許可する。
+  test("allows a revert subject wrapped in double quotes", async () => {
+    const result = await lint('revert: "feat: add something"', rules, opts);
 
     expect(result.valid).toBe(true);
   });
