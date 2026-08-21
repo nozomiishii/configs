@@ -1,22 +1,30 @@
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { expect, onTestFinished, test, vi } from "vitest";
 import { defaultToolIds, resolvePackageManager, toolIds, tools } from "./init";
 
 // 一時dirに最小構成の package.json を作り、テスト終了時に削除する。
+// detect は上位ディレクトリを遡るため、親には別の packageManager を置いて探索終端が効いていることも押さえる。
 function createTestProject(): string {
-  const tmpDir = mkdtempSync(path.join(tmpdir(), "nozo-init-"));
+  const tmpRoot = mkdtempSync(path.join(tmpdir(), "nozo-init-"));
   writeFileSync(
-    path.join(tmpDir, "package.json"),
+    path.join(tmpRoot, "package.json"),
+    `${JSON.stringify({ name: "outside", packageManager: "npm@11.0.0" }, null, 2)}\n`,
+  );
+
+  const cwd = path.join(tmpRoot, "project");
+  mkdirSync(cwd);
+  writeFileSync(
+    path.join(cwd, "package.json"),
     `${JSON.stringify({ name: "fixture", version: "1.0.0" }, null, 2)}\n`,
   );
 
   onTestFinished(() => {
-    rmSync(tmpDir, { force: true, recursive: true });
+    rmSync(tmpRoot, { force: true, recursive: true });
   });
 
-  return tmpDir;
+  return cwd;
 }
 
 // npm_config_user_agent を一時的に差し替え、テスト終了時に元へ戻す。value 省略でランナー無しを再現する。
@@ -56,7 +64,7 @@ test("falls back to the launching runner when the project has no config", async 
   const cwd = createTestProject();
   stubUserAgent("bun/1.3.11 npm/? node/v24 darwin arm64");
 
-  await expect(resolvePackageManager(cwd)).resolves.toStrictEqual({
+  await expect(resolvePackageManager(cwd, cwd)).resolves.toStrictEqual({
     agent: "bun",
     source: "runner",
   });
@@ -67,7 +75,9 @@ test("throws when neither project config nor runner is available", async () => {
   const cwd = createTestProject();
   stubUserAgent();
 
-  await expect(resolvePackageManager(cwd)).rejects.toThrow("Could not determine a package manager");
+  await expect(resolvePackageManager(cwd, cwd)).rejects.toThrow(
+    "Could not determine a package manager",
+  );
 });
 
 // プロジェクトの lockfile はランナーより優先される。
@@ -76,7 +86,7 @@ test("prefers project config over the launching runner", async () => {
   writeFileSync(path.join(cwd, "pnpm-lock.yaml"), "");
   stubUserAgent("bun/1.3.11 npm/? node/v24 darwin arm64");
 
-  await expect(resolvePackageManager(cwd)).resolves.toStrictEqual({
+  await expect(resolvePackageManager(cwd, cwd)).resolves.toStrictEqual({
     agent: "pnpm",
     source: "project",
   });
