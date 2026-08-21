@@ -10,19 +10,23 @@
   "bugs": {
     "url": "https://github.com/nozomiishii/configs/issues"
   },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
     "directory": "packages/nozo"
   },
-  "license": "MIT",
-  "author": "Nozomi Ishii",
-  "type": "module",
   "bin": "./dist/index.js",
   "files": [
     "dist",
     "README.md"
   ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
@@ -54,12 +58,8 @@
     "typescript": "6.0.3",
     "vitest": "4.1.11"
   },
-  "packageManager": "pnpm@11.22.0",
   "engines": {
     "node": ">=24.0.0"
   },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  }
+  "packageManager": "pnpm@11.22.0"
 }

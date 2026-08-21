@@ -14,8 +14,8 @@ export type PresetId = "nextjs" | "node" | "tanstack-start";
  * starter が呼ぶ preset 関数名。ファイル名は kebab-case、関数は camelCase のため対応表で持つ。
  */
 const presetFunctions: Record<PresetId, string> = {
-  "nextjs": "nextjs",
-  "node": "node",
+  nextjs: "nextjs",
+  node: "node",
   "tanstack-start": "tanstackStart",
 };
 
@@ -40,10 +40,7 @@ export async function init({
     peerDependencies: { eslint: string; typescript: string };
   };
 
-  const starterRaw = await readFile(
-    path.join(root, "starters", `${preset}.ts`),
-    "utf-8",
-  );
+  const starterRaw = await readFile(path.join(root, "starters", `${preset}.ts`), "utf-8");
 
   // monorepo の per-package config は tsconfigRootDir を明示する。
   const presetFunction = presetFunctions[preset];
@@ -66,8 +63,8 @@ export async function init({
 
   target.scripts = {
     ...target.scripts,
-    "eslint": "eslint --max-warnings=0 --cache",
-    "lint": "pnpm eslint",
+    eslint: "eslint --max-warnings=0 --cache",
+    lint: "pnpm eslint",
     "lint:fix": "pnpm eslint --fix",
   };
 

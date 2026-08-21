@@ -3,35 +3,39 @@
   "version": "2.2.0",
   "description": "Nozomi's Recommended markdownlint-cli2 config",
   "keywords": [
-    "markdownlint-cli2",
-    "markdown",
+    "config",
     "lint",
-    "config"
+    "markdown",
+    "markdownlint-cli2"
   ],
   "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/markdownlint-cli2-config/README.md",
   "bugs": {
     "url": "https://github.com/nozomiishii/configs/issues"
   },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
     "directory": "packages/markdownlint-cli2-config"
   },
-  "license": "MIT",
-  "author": "Nozomi Ishii",
-  "type": "module",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": "./dist/index.js"
-  },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "bin": "bin/cli.sh",
   "files": [
     "bin",
     "dist",
     "README.md"
   ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
@@ -50,9 +54,5 @@
     "tsdown": "0.22.14",
     "typescript": "6.0.3"
   },
-  "packageManager": "pnpm@11.22.0",
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  }
+  "packageManager": "pnpm@11.22.0"
 }

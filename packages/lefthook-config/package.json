@@ -3,27 +3,21 @@
   "version": "2.2.0",
   "description": "Nozomi's Recommended lefthook config",
   "keywords": [
-    "lefthook",
+    "config",
     "githooks",
-    "config"
+    "lefthook"
   ],
   "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/lefthook-config/README.md",
   "bugs": {
     "url": "https://github.com/nozomiishii/configs/issues"
   },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
     "directory": "packages/lefthook-config"
   },
-  "license": "MIT",
-  "author": "Nozomi Ishii",
-  "type": "module",
-  "exports": {
-    ".": "./recommended.yaml",
-    "./init": "./dist/init/index.js"
-  },
-  "main": "recommended.yaml",
   "bin": {
     "nozo-git-harvest": "./bin/nozo-git-harvest.js",
     "nozo-lefthook-init": "./bin/nozo-lefthook-init.js"
@@ -36,6 +30,16 @@
     "starter.yaml",
     "README.md"
   ],
+  "type": "module",
+  "main": "recommended.yaml",
+  "exports": {
+    ".": "./recommended.yaml",
+    "./init": "./dist/init/index.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
@@ -60,9 +64,5 @@
   "peerDependencies": {
     "lefthook": "2.1.10"
   },
-  "packageManager": "pnpm@11.22.0",
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  }
+  "packageManager": "pnpm@11.22.0"
 }

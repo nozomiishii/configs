@@ -3,27 +3,20 @@
   "version": "2.2.0",
   "description": "Nozomi's Recommended Prettier config",
   "keywords": [
-    "prettier",
-    "config"
+    "config",
+    "prettier"
   ],
   "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/prettier-config/README.md",
   "bugs": {
     "url": "https://github.com/nozomiishii/configs/issues"
   },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
     "directory": "packages/prettier-config"
   },
-  "license": "MIT",
-  "author": "Nozomi Ishii",
-  "type": "module",
-  "exports": {
-    ".": "./dist/index.js",
-    "./init": "./dist/init/index.js"
-  },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "bin": {
     "nozo-prettier-init": "./bin/nozo-prettier-init.js"
   },
@@ -33,6 +26,17 @@
     "starter.ts",
     "README.md"
   ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./init": "./dist/init/index.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
@@ -57,9 +61,5 @@
   "peerDependencies": {
     "prettier": "3.9.6"
   },
-  "packageManager": "pnpm@11.22.0",
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  }
+  "packageManager": "pnpm@11.22.0"
 }

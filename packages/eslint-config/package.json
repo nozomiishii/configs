@@ -3,27 +3,21 @@
   "version": "2.2.0",
   "description": "Nozomi's Recommended eslint config",
   "keywords": [
+    "config",
     "eslint",
-    "lint",
-    "config"
+    "lint"
   ],
   "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/eslint-config/README.md",
   "bugs": {
     "url": "https://github.com/nozomiishii/configs/issues"
   },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
     "directory": "packages/eslint-config"
   },
-  "license": "MIT",
-  "author": "Nozomi Ishii",
-  "type": "module",
-  "exports": {
-    ".": "./index.ts",
-    "./init": "./dist/init/index.js"
-  },
-  "main": "index.ts",
   "bin": {
     "nozo-eslint-init": "./bin/nozo-eslint-init.js"
   },
@@ -40,6 +34,16 @@
     "README.md",
     "README.ja.md"
   ],
+  "type": "module",
+  "main": "index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./init": "./dist/init/index.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "scripts": {
     "build": "tsdown",
     "check:ts": "tsc",
@@ -101,12 +105,8 @@
     "eslint": "10.8.1",
     "typescript": "6.0.3"
   },
-  "packageManager": "pnpm@11.22.0",
   "engines": {
     "node": ">=24.0.0"
   },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  }
+  "packageManager": "pnpm@11.22.0"
 }

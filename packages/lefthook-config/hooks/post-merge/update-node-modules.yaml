@@ -2,7 +2,7 @@ post-merge:
   jobs:
     - name: update-node-modules
       files: git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD
-      glob: '**/{package.json,pnpm-lock.yaml,bun.lock,bun.lockb,package-lock.json,yarn.lock}'
+      glob: "**/{package.json,pnpm-lock.yaml,bun.lock,bun.lockb,package-lock.json,yarn.lock}"
       run: |
         if [ -f "pnpm-lock.yaml" ]; then
           echo "🥊 Installing dependencies with pnpm..."

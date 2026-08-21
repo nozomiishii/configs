@@ -3,27 +3,20 @@
   "version": "2.2.0",
   "description": "Nozomi's Recommended cspell config",
   "keywords": [
-    "cspell",
-    "config"
+    "config",
+    "cspell"
   ],
   "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/cspell-config/README.md",
   "bugs": {
     "url": "https://github.com/nozomiishii/configs/issues"
   },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
     "directory": "packages/cspell-config"
   },
-  "license": "MIT",
-  "author": "Nozomi Ishii",
-  "type": "module",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": "./dist/index.js"
-  },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "bin": {
     "nozo-cspell": "./dist/cli.js"
   },
@@ -32,6 +25,17 @@
     "dist",
     "README.md"
   ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
@@ -50,18 +54,14 @@
     "tsdown": "0.22.14",
     "typescript": "6.0.3"
   },
-  "packageManager": "pnpm@11.22.0",
-  "engines": {
-    "node": ">=24"
-  },
   "devEngines": {
     "runtime": {
       "name": "node",
       "version": "24.19.0"
     }
   },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  }
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@11.22.0"
 }

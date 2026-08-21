@@ -3,20 +3,24 @@
   "version": "2.2.0",
   "description": "Nozomi's Recommended tsconfig",
   "keywords": [
-    "tsconfig",
-    "config"
+    "config",
+    "tsconfig"
   ],
   "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/tsconfig/README.md",
   "bugs": {
     "url": "https://github.com/nozomiishii/configs/issues"
   },
+  "license": "MIT",
+  "author": "Nozomi Ishii",
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
     "directory": "packages/tsconfig"
   },
-  "license": "MIT",
-  "author": "Nozomi Ishii",
+  "files": [
+    "src/*.json",
+    "README.md"
+  ],
   "type": "module",
   "exports": {
     ".": "./src/tsconfig.json",
@@ -27,10 +31,10 @@
     "./tsconfig.tsc.json": "./src/tsconfig.tsc.json",
     "./package.json": "./package.json"
   },
-  "files": [
-    "src/*.json",
-    "README.md"
-  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "scripts": {
     "link": "pnpm link --global",
     "lint": "eslint --max-warnings=0 ."
@@ -41,9 +45,5 @@
     "eslint": "10.8.1",
     "typescript": "6.0.3"
   },
-  "packageManager": "pnpm@11.22.0",
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  }
+  "packageManager": "pnpm@11.22.0"
 }

@@ -21,11 +21,7 @@ type Tool = {
 
 type ToolConfig = { monorepo: boolean; preset: PresetId };
 
-type ToolInit = (options: {
-  cwd: string;
-  monorepo?: boolean;
-  preset?: PresetId;
-}) => Promise<void>;
+type ToolInit = (options: { cwd: string; monorepo?: boolean; preset?: PresetId }) => Promise<void>;
 
 export const tools = {
   commitlint: {
