@@ -43,6 +43,7 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch --sourcemap",
+    "format": "pnpm oxfmt . --check",
     "lint": "eslint --max-warnings=0 .",
     "prepublishOnly": "pnpm run build",
     "test": "vitest run",

@@ -36,6 +36,7 @@
     "provenance": true
   },
   "scripts": {
+    "format": "pnpm oxfmt . --check",
     "link": "pnpm link --global",
     "lint": "eslint --max-warnings=0 ."
   },

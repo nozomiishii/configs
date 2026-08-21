@@ -49,6 +49,7 @@
     "check:ts": "tsc",
     "dev": "pnpm typegen && eslint --inspect-config",
     "eslint": "eslint --max-warnings=0",
+    "format": "pnpm oxfmt . --check",
     "link": "pnpm link --global",
     "lint": "pnpm eslint .",
     "lint:fix": "pnpm eslint . --fix",
