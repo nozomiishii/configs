@@ -1,8 +1,6 @@
 import type { RuleConfigTuple } from "@commitlint/types";
 import type { CommitBase } from "conventional-commits-parser";
 
-// CommitBase の残り 4 つを検査対象に入れないのは、commitlint の parser では merge / revert が
-// 常に null で、mentions / references は header・body・footer からの派生値のため。
 type Parsed = Partial<Pick<CommitBase, "body" | "footer" | "header" | "notes">>;
 
 // commit message 全体 (header + body + footer + BREAKING CHANGE notes) を ASCII のみに制限する。
