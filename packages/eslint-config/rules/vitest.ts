@@ -19,6 +19,17 @@ export function vitest() {
         ...eslintPluginVitest.configs.all.rules,
 
         /**
+         * パラメータ化テストは Test Context を受け取れる .for に寄せる。
+         * 未指定のキーは検査されないため、4 つすべてに選好を与える。
+         *
+         * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-each-for.md
+         */
+        "vitest/consistent-each-for": [
+          "error",
+          { describe: "for", it: "for", suite: "for", test: "for" },
+        ],
+
+        /**
          * テストファイル名は .test.{ts,tsx} に統一する。
          * .spec.* も識別対象に含めた上で、ファイル名規則違反としてエラーにする。
          *
