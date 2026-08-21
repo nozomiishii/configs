@@ -4,54 +4,51 @@ import { commitMessageAsciiOnly } from ".";
 
 const { name, rule } = commitMessageAsciiOnly;
 
-// rule callback を直接呼び、parser を介さず検査対象フィールドを網羅する。
-// 非 ASCII のサンプルは日本語で揃え、ケース間で変わるのはフィールドだけにする。
-describe("commit-message-ascii-only (unit)", () => {
-  test.each([
-    { label: "no field is present", parsed: {}, valid: true },
-    {
-      label: "every field is ASCII",
-      parsed: {
-        body: "English body line.",
-        footer: "Refs #123",
-        header: "feat: add something",
-        notes: [{ text: "english breaking note", title: "BREAKING CHANGE" }],
-      },
-      valid: true,
-    },
-    {
-      label: "the header subject is Japanese",
-      parsed: { header: "chore: 日本語のタイトル" },
-      valid: false,
-    },
-    // scope を許可した consumer でも header 全体が検査対象になる。
-    {
-      label: "the header scope is Japanese",
-      parsed: { header: "feat(日本語): subject" },
-      valid: false,
-    },
-    { label: "the body is Japanese", parsed: { body: "日本語の本文。" }, valid: false },
-    // parser が body 1 行目の `#nnn` 以降を footer へ振り分けると、日本語は footer 側に流れる。
-    {
-      label: "the footer is Japanese",
-      parsed: { footer: "Issue #2126 のような本文。" },
-      valid: false,
-    },
-    {
-      label: "a note text is Japanese",
-      parsed: { notes: [{ text: "互換性破壊の説明", title: "BREAKING CHANGE" }] },
-      valid: false,
-    },
-    // title は実用上 "BREAKING CHANGE" 固定だが、検査対象に含める契約を固定する。
-    {
-      label: "a note title is Japanese",
-      parsed: { notes: [{ text: "english", title: "破壊的変更" }] },
-      valid: false,
-    },
-  ])("returns $valid when $label", ({ parsed, valid }) => {
-    const [actual] = rule(parsed);
+// 検査対象のフィールド。
+const fields = [
+  { build: (text: string) => ({ body: text }), name: "body" },
+  { build: (text: string) => ({ footer: text }), name: "footer" },
+  { build: (text: string) => ({ header: text }), name: "header" },
+  { build: (text: string) => ({ notes: [{ text, title: "BREAKING CHANGE" }] }), name: "note text" },
+  { build: (text: string) => ({ notes: [{ text: "english", title: text }] }), name: "note title" },
+];
+
+// 文字種。
+const samples = [
+  { name: "accented latin", text: "café latte", valid: false },
+  { name: "ascii", text: "plain english text", valid: true },
+  { name: "emoji", text: "ship it 🚀", valid: false },
+  { name: "japanese", text: "日本語のテキスト", valid: false },
+];
+
+// フィールドと文字種の 2 軸。どのフィールドに入っても判定が変わらないことを固定する。
+describe.each(fields)("commit-message-ascii-only ($name)", ({ build }) => {
+  test.each(samples)("$name", ({ text, valid }) => {
+    const [actual] = rule(build(text));
 
     expect(actual).toBe(valid);
+  });
+});
+
+// 2 軸に乗らない、rule 単体の契約。
+describe("commit-message-ascii-only (contract)", () => {
+  // 空のコミットを許可する。
+  test("allows a commit with no field at all", () => {
+    const [valid] = rule({});
+
+    expect(valid).toBe(true);
+  });
+
+  // 全フィールドが同時に埋まっていても、ASCII なら許可する。
+  test("allows ASCII in every field at once", () => {
+    const [valid] = rule({
+      body: "English body line.",
+      footer: "Refs #123",
+      header: "feat: add something",
+      notes: [{ text: "english breaking note", title: "BREAKING CHANGE" }],
+    });
+
+    expect(valid).toBe(true);
   });
 
   // 違反時のメッセージで、対象がコミットメッセージ全体だと分かるようにする。
@@ -62,39 +59,37 @@ describe("commit-message-ascii-only (unit)", () => {
   });
 });
 
-// 実 parser を通した end-to-end 検証。文字種ごとの合否と、parser のフィールド振り分けを確認する。
-describe("commit-message-ascii-only (integration via @commitlint/lint)", () => {
+// 実 parser がどのフィールドへ振り分けても判定が効くことを確認する。文字種は上の 2 軸が持つ。
+describe("commit-message-ascii-only (parser routing via @commitlint/lint)", () => {
   const rules = { [name]: [2, "always"] } as const;
   const opts = { plugins: { local: { rules: { [name]: rule } } } } as const;
 
-  test.each([
-    { label: "an ASCII subject", message: "chore: ok subject", valid: true },
+  const routings = [
+    { message: "chore: 日本語のタイトル", name: "the subject lands in the header", valid: false },
     {
-      label: "a revert subject wrapped in double quotes",
       message: 'revert: "feat: add something"',
+      name: "a quoted revert subject stays in the header",
       valid: true,
     },
     {
-      label: "an English body carrying an issue reference and a breaking note",
-      message: [
-        "feat(scope): subject",
-        "",
-        "English body. Refs #2126.",
-        "",
-        "BREAKING CHANGE: english note",
-      ].join("\n"),
+      message: ["feat: subject", "", "English body. Refs #2126."].join("\n"),
+      name: "an English body stays in the body",
       valid: true,
     },
-    { label: "a Japanese subject", message: "chore: 日本語のタイトル", valid: false },
-    { label: "an emoji in the subject", message: "chore: emoji 🚀", valid: false },
-    { label: "accented latin in the subject", message: "chore: café latte", valid: false },
     {
       // 本文 1 行目の `#nnn` を parser が footer 開始と判定し、body が空文字列になる経路。
-      label: "Japanese placed after an issue reference in the body",
-      message: ["feat(scope): subject", "", "Issue #2126 のような本文。日本語混入。"].join("\n"),
+      message: ["feat: subject", "", "Issue #2126 のような本文。日本語混入。"].join("\n"),
+      name: "text after an issue reference lands in the footer",
       valid: false,
     },
-  ])("returns $valid for $label", async ({ message, valid }) => {
+    {
+      message: ["feat!: subject", "", "BREAKING CHANGE: 日本語のノート"].join("\n"),
+      name: "a breaking change note lands in the notes",
+      valid: false,
+    },
+  ];
+
+  test.each(routings)("$name", async ({ message, valid }) => {
     const result = await lint(message, rules, opts);
 
     expect(result.errors.map((e) => e.name)).toStrictEqual(valid ? [] : [name]);
