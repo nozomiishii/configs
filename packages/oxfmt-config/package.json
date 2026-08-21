@@ -51,13 +51,13 @@
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.3",
     "eslint": "10.8.1",
-    "oxfmt": "0.63.0",
+    "oxfmt": "0.64.0",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   },
   "peerDependencies": {
-    "oxfmt": "0.63.0"
+    "oxfmt": "0.64.0"
   },
   "packageManager": "pnpm@11.22.0"
 }
