@@ -19,8 +19,7 @@ export function vitest() {
         ...eslintPluginVitest.configs.all.rules,
 
         /**
-         * パラメータ化テストは Test Context を受け取れる .for に寄せる。
-         * 未指定のキーは検査されないため、4 つすべてに選好を与える。
+         * パラメータ化テストは Test Context を受け取れる .for を使う。
          *
          * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-each-for.md
          */
