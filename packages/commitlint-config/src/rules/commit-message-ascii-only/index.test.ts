@@ -4,104 +4,105 @@ import { commitMessageAsciiOnly } from ".";
 
 const { name, rule } = commitMessageAsciiOnly;
 
-// rule callback を直接呼び、parser を介さず純粋ロジックを単体検証する。
-// `commit-message-ascii-only` の検査範囲が body / footer / notes 全体に拡張されたことを保証する。
-describe("commit-message-ascii-only (unit)", () => {
-  // body、footer、notes が空のコミットを許可する。
-  test("allows an empty commit body, footer, and notes", () => {
-    const [valid] = rule({ body: null, footer: null, notes: [] });
+const rules = { [name]: [2, "always"] } as const;
+const opts = { plugins: { local: { rules: { [name]: rule } } } } as const;
+
+// 検査対象のフィールド。
+const fields = [
+  { build: (text: string) => ({ body: text }), name: "body" },
+  { build: (text: string) => ({ footer: text }), name: "footer" },
+  { build: (text: string) => ({ header: text }), name: "header" },
+  { build: (text: string) => ({ notes: [{ text, title: "BREAKING CHANGE" }] }), name: "note text" },
+  { build: (text: string) => ({ notes: [{ text: "english", title: text }] }), name: "note title" },
+];
+
+// 弾かれる文字種。
+const nonAsciiSamples = [
+  { name: "accented latin", text: "café latte" },
+  { name: "emoji", text: "ship it 🚀" },
+  { name: "japanese", text: "日本語のテキスト" },
+];
+
+describe("commit-message-ascii-only (allows ASCII)", () => {
+  // ASCII はどのフィールドに入っても通る。
+  test.for(fields)("$name", ({ build }) => {
+    const [valid] = rule(build("plain english text"));
 
     expect(valid).toBe(true);
   });
 
-  // body、footer、notes がすべて ASCII のコミットを許可する。
-  test("allows ASCII body, footer, and notes", () => {
+  // フィールドが 1 つも無いコミットを通す。
+  test("no field at all", () => {
+    const [valid] = rule({});
+
+    expect(valid).toBe(true);
+  });
+
+  // 全フィールドが同時に埋まっていても通す。
+  test("every field at once", () => {
     const [valid] = rule({
       body: "English body line.",
       footer: "Refs #123",
+      header: "feat: add something",
       notes: [{ text: "english breaking note", title: "BREAKING CHANGE" }],
     });
 
     expect(valid).toBe(true);
   });
+});
 
-  // non-ASCII の body を固定メッセージ付きで拒否する。
-  test("rejects a non-ASCII body with the fixed message", () => {
-    const [valid, message] = rule({ body: "日本語の本文。", footer: null, notes: [] });
+describe("commit-message-ascii-only (rejects non-ASCII)", () => {
+  // 非 ASCII はどのフィールドに入っても弾かれる。
+  describe.for(fields)("$name", ({ build }) => {
+    test.for(nonAsciiSamples)("$name", ({ text }) => {
+      const [valid] = rule(build(text));
 
-    expect(valid).toBe(false);
-    expect(message).toMatch(/ASCII characters only/);
+      expect(valid).toBe(false);
+    });
   });
 
-  // non-ASCII の footer を拒否する。
-  test("rejects a non-ASCII footer", () => {
-    // parser が body 1 行目の `#nnn` を検出して以降を footer に振り分けたときに、
-    // body は空文字列となり footer 側に日本語が流れ込む状況を再現。
-    const [valid] = rule({
-      body: "",
-      footer: "Issue #2126 のような本文。日本語混入。",
-      notes: [],
-    });
+  // 対象がコミットメッセージ全体だと分かるメッセージを返す。
+  test("reports that the whole commit message must be ASCII", () => {
+    const [, message] = rule({ header: "chore: 日本語のタイトル" });
 
-    expect(valid).toBe(false);
-  });
-
-  // breaking change note 内の non-ASCII text を拒否する。
-  test("rejects non-ASCII text in breaking change notes", () => {
-    const [valid] = rule({
-      body: "English body.",
-      footer: null,
-      notes: [{ text: "互換性破壊の説明", title: "BREAKING CHANGE" }],
-    });
-
-    expect(valid).toBe(false);
-  });
-
-  // non-ASCII の note title を拒否する。
-  test("rejects a non-ASCII note title", () => {
-    // ルール実装は title と text を両方検査対象に含めている契約。
-    // 実用上 title はほぼ "BREAKING CHANGE" 固定だが、契約をテストで固定する。
-    const [valid] = rule({
-      body: "English body.",
-      footer: null,
-      notes: [{ text: "english", title: "破壊的変更" }],
-    });
-
-    expect(valid).toBe(false);
+    expect(message).toBe("commit message must contain ASCII characters only (write in English)");
   });
 });
 
-// `@commitlint/lint` を介した end-to-end 検証。
-// PR #2145 で問題になった「body 1 行目の `#nnn` で parser が footer に振り分ける」挙動を
-// 実 parser で踏ませ、ルールが期待通り検出するかを確認する。
-describe("commit-message-ascii-only (integration via @commitlint/lint)", () => {
-  const rules = { [name]: [2, "always"] } as const;
-  const opts = { plugins: { local: { rules: { [name]: rule } } } } as const;
-
-  // issue 参照より後ろにある non-ASCII text を検出する。
-  test("detects non-ASCII text after an issue reference", async () => {
-    const message = ["feat(scope): subject", "", "Issue #2126 のような本文。日本語混入。"].join(
-      "\n",
-    );
-
+describe("commit-message-ascii-only (parser routing, allows ASCII)", () => {
+  // 実 parser がどのフィールドへ振り分けても、ASCII なら通る。
+  test.for([
+    {
+      message: 'revert: "feat: add something"',
+      name: "a quoted revert subject stays in the header",
+    },
+    {
+      message: ["feat: subject", "", "English body. Refs #2126."].join("\n"),
+      name: "an English body stays in the body",
+    },
+  ])("$name", async ({ message }) => {
     const result = await lint(message, rules, opts);
 
-    expect(result.valid).toBe(false);
-    expect(result.errors.some((e) => e.name === name)).toBe(true);
+    expect(result.errors.map((e) => e.name)).toStrictEqual([]);
   });
+});
 
-  // 英語だけのコミットを許可する。
-  test("allows an English-only commit", async () => {
-    const message = [
-      "feat(scope): subject",
-      "",
-      "English body. Refs #2126.",
-      "",
-      "BREAKING CHANGE: english note",
-    ].join("\n");
-
+describe("commit-message-ascii-only (parser routing, rejects non-ASCII)", () => {
+  // 実 parser がどのフィールドへ振り分けても、非 ASCII は弾かれる。
+  test.for([
+    { message: "chore: 日本語のタイトル", name: "the subject lands in the header" },
+    {
+      // 本文 1 行目の `#nnn` を parser が footer 開始と判定し、body が空文字列になる経路。
+      message: ["feat: subject", "", "Issue #2126 のような本文。日本語混入。"].join("\n"),
+      name: "text after an issue reference lands in the footer",
+    },
+    {
+      message: ["feat!: subject", "", "BREAKING CHANGE: 日本語のノート"].join("\n"),
+      name: "a breaking change note lands in the notes",
+    },
+  ])("$name", async ({ message }) => {
     const result = await lint(message, rules, opts);
 
-    expect(result.valid).toBe(true);
+    expect(result.errors.map((e) => e.name)).toStrictEqual([name]);
   });
 });
