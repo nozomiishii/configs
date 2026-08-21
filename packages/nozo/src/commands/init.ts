@@ -8,7 +8,7 @@ import { init as initPrettier } from "@nozomiishii/prettier-config/init";
 import { defineCommand } from "citty";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { type AgentName, detect, getUserAgent } from "package-manager-detector";
+import { type AgentName, detect, type DetectOptions, getUserAgent } from "package-manager-detector";
 
 const exec = promisify(execFile);
 
@@ -110,8 +110,10 @@ export const defaultToolIds = toolIds.filter((id) => id !== "prettier");
 
 export async function resolvePackageManager(
   cwd: string,
+  // 探索の終端。省略時はファイルシステムのルートまで遡る。
+  stopDir?: DetectOptions["stopDir"],
 ): Promise<{ agent: AgentName; source: "project" | "runner" }> {
-  const detected = await detect({ cwd });
+  const detected = await detect(stopDir === undefined ? { cwd } : { cwd, stopDir });
 
   if (detected !== null) {
     return { agent: detected.name, source: "project" };
