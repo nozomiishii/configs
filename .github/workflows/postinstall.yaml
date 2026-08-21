@@ -58,6 +58,9 @@ jobs:
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
+      - name: Format Check
+        run: pnpm format
+
       - name: Lint
         run: pnpm lint
 

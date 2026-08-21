@@ -27,10 +27,7 @@ export function n() {
          *
          * @see https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-unsupported-features/node-builtins.md
          */
-        "n/no-unsupported-features/node-builtins": [
-          "error",
-          { allowExperimental: true },
-        ],
+        "n/no-unsupported-features/node-builtins": ["error", { allowExperimental: true }],
       },
       // pnpmでnode管理したいので設定。engines設定してるならここは省略できる。
       // pnpm.executionEnv.nodeVersionがcustomManagers書いてもenginesと同じタイミングでアップデートしてくれない。

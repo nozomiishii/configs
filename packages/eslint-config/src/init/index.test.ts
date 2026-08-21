@@ -124,9 +124,7 @@ test("the tanstack-start starter does not reference nextjs", async () => {
 test("init with monorepo writes tsconfigRootDir", async () => {
   const { configContent } = await runInit("node", true);
 
-  expect(configContent).toContain(
-    "node({ typescript: { tsconfigRootDir: import.meta.dirname } })",
-  );
+  expect(configContent).toContain("node({ typescript: { tsconfigRootDir: import.meta.dirname } })");
 });
 
 // 単一 repo (既定) は tsconfigRootDir を入れない
