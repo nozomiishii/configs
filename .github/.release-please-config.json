@@ -5,6 +5,8 @@
 
   "always-update": true,
 
+  "release-as": "2.3.0",
+
   "group-pull-request-title-pattern": "chore: release ${version}",
 
   "changelog-sections": [
