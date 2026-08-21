@@ -25,7 +25,7 @@ const nonAsciiSamples = [
 
 describe("commit-message-ascii-only (allows ASCII)", () => {
   // ASCII はどのフィールドに入っても通る。
-  test.each(fields)("$name", ({ build }) => {
+  test.for(fields)("$name", ({ build }) => {
     const [valid] = rule(build("plain english text"));
 
     expect(valid).toBe(true);
@@ -53,8 +53,8 @@ describe("commit-message-ascii-only (allows ASCII)", () => {
 
 describe("commit-message-ascii-only (rejects non-ASCII)", () => {
   // 非 ASCII はどのフィールドに入っても弾かれる。
-  describe.each(fields)("$name", ({ build }) => {
-    test.each(nonAsciiSamples)("$name", ({ text }) => {
+  describe.for(fields)("$name", ({ build }) => {
+    test.for(nonAsciiSamples)("$name", ({ text }) => {
       const [valid] = rule(build(text));
 
       expect(valid).toBe(false);
@@ -71,7 +71,7 @@ describe("commit-message-ascii-only (rejects non-ASCII)", () => {
 
 describe("commit-message-ascii-only (parser routing, allows ASCII)", () => {
   // 実 parser がどのフィールドへ振り分けても、ASCII なら通る。
-  test.each([
+  test.for([
     {
       message: 'revert: "feat: add something"',
       name: "a quoted revert subject stays in the header",
@@ -89,7 +89,7 @@ describe("commit-message-ascii-only (parser routing, allows ASCII)", () => {
 
 describe("commit-message-ascii-only (parser routing, rejects non-ASCII)", () => {
   // 実 parser がどのフィールドへ振り分けても、非 ASCII は弾かれる。
-  test.each([
+  test.for([
     { message: "chore: 日本語のタイトル", name: "the subject lands in the header" },
     {
       // 本文 1 行目の `#nnn` を parser が footer 開始と判定し、body が空文字列になる経路。
