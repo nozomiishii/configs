@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v2.2.0...@nozomiishii/markdownlint-cli2-config-v2.3.0) (2026-08-22)
+
+### Miscellaneous
+
+- apply oxfmt to packages and check it in CI ([#2754](https://github.com/nozomiishii/configs/issues/2754)) ([07cd9d7](https://github.com/nozomiishii/configs/commit/07cd9d74c226d9bcf07fb3d6dc6128a96602894a))
+- simplify shell option comments ([#2745](https://github.com/nozomiishii/configs/issues/2745)) ([2ee4f95](https://github.com/nozomiishii/configs/commit/2ee4f9547068458155a1b4d8be2bc12640406492))
+- update pnpm to v11.22.0 ([#2746](https://github.com/nozomiishii/configs/issues/2746)) ([14ab491](https://github.com/nozomiishii/configs/commit/14ab4919683d14f0335d8ba34736c2feb886ebc1))
+
 ## [2.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v2.1.0...@nozomiishii/markdownlint-cli2-config-v2.2.0) (2026-08-16)
 
 ### Miscellaneous
