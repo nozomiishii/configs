@@ -64,6 +64,5 @@
   },
   "peerDependencies": {
     "lefthook": "2.1.10"
-  },
-  "packageManager": "pnpm@11.22.0"
+  }
 }
