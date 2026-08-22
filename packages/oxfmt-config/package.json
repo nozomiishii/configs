@@ -58,6 +58,5 @@
   },
   "peerDependencies": {
     "oxfmt": "0.64.0"
-  },
-  "packageManager": "pnpm@11.22.0"
+  }
 }
