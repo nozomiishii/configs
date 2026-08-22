@@ -106,7 +106,11 @@
     "eslint": "10.8.1",
     "typescript": "6.0.3"
   },
-  "engines": {
-    "node": ">=24.0.0"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.19.0",
+      "onFail": "download"
+    }
   }
 }

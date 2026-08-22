@@ -420,6 +420,9 @@ importers:
       eslint:
         specifier: 10.8.1
         version: 10.8.1(jiti@2.7.0)(supports-color@7.2.0)
+      node:
+        specifier: runtime:24.19.0
+        version: runtime:24.19.0
       tsdown:
         specifier: 0.22.14
         version: 0.22.14(oxc-resolver@11.24.2)(typescript@6.0.3)
@@ -534,6 +537,9 @@ importers:
       eslint:
         specifier: 10.8.1
         version: 10.8.1(jiti@2.7.0)(supports-color@7.2.0)
+      node:
+        specifier: runtime:24.19.0
+        version: runtime:24.19.0
       tsdown:
         specifier: 0.22.14
         version: 0.22.14(oxc-resolver@11.24.2)(typescript@6.0.3)

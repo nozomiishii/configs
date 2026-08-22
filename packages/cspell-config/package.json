@@ -60,8 +60,5 @@
       "name": "node",
       "version": "24.19.0"
     }
-  },
-  "engines": {
-    "node": ">=24"
   }
 }

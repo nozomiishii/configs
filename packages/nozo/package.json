@@ -59,7 +59,11 @@
     "typescript": "6.0.3",
     "vitest": "4.1.11"
   },
-  "engines": {
-    "node": ">=24.0.0"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.19.0",
+      "onFail": "download"
+    }
   }
 }
