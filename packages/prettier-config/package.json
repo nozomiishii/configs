@@ -62,5 +62,16 @@
   "peerDependencies": {
     "prettier": "3.9.6"
   },
-  "packageManager": "pnpm@11.22.0"
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.22.0",
+      "onFail": "error"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "24.19.0",
+      "onFail": "download"
+    }
+  }
 }
