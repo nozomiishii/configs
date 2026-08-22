@@ -2,17 +2,15 @@
 
 ## [2.3.0](https://github.com/nozomiishii/configs/compare/nozo-v2.2.0...nozo-v2.3.0) (2026-08-22)
 
-
 ### Bug Fixes
 
-* isolate nozo init tests from ancestor package.json lookup ([#2753](https://github.com/nozomiishii/configs/issues/2753)) ([8b06058](https://github.com/nozomiishii/configs/commit/8b060587109fb08c5a9fa603ab8b5e1d4777f70e))
-
+- isolate nozo init tests from ancestor package.json lookup ([#2753](https://github.com/nozomiishii/configs/issues/2753)) ([8b06058](https://github.com/nozomiishii/configs/commit/8b060587109fb08c5a9fa603ab8b5e1d4777f70e))
 
 ### Miscellaneous
 
-* apply oxfmt to packages and check it in CI ([#2754](https://github.com/nozomiishii/configs/issues/2754)) ([07cd9d7](https://github.com/nozomiishii/configs/commit/07cd9d74c226d9bcf07fb3d6dc6128a96602894a))
-* update all non-major dependencies ([#2752](https://github.com/nozomiishii/configs/issues/2752)) ([4a34248](https://github.com/nozomiishii/configs/commit/4a3424865753e459b2ef6f4fccf8a748d13aa44e))
-* update pnpm to v11.22.0 ([#2746](https://github.com/nozomiishii/configs/issues/2746)) ([14ab491](https://github.com/nozomiishii/configs/commit/14ab4919683d14f0335d8ba34736c2feb886ebc1))
+- apply oxfmt to packages and check it in CI ([#2754](https://github.com/nozomiishii/configs/issues/2754)) ([07cd9d7](https://github.com/nozomiishii/configs/commit/07cd9d74c226d9bcf07fb3d6dc6128a96602894a))
+- update all non-major dependencies ([#2752](https://github.com/nozomiishii/configs/issues/2752)) ([4a34248](https://github.com/nozomiishii/configs/commit/4a3424865753e459b2ef6f4fccf8a748d13aa44e))
+- update pnpm to v11.22.0 ([#2746](https://github.com/nozomiishii/configs/issues/2746)) ([14ab491](https://github.com/nozomiishii/configs/commit/14ab4919683d14f0335d8ba34736c2feb886ebc1))
 
 ## [2.2.0](https://github.com/nozomiishii/configs/compare/nozo-v2.1.0...nozo-v2.2.0) (2026-08-16)
 
