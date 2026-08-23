@@ -60,11 +60,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: ${{ github.workspace }}
-        run: pnpm install --ignore-scripts
-
-      - name: Build workspace packages
-        working-directory: ${{ github.workspace }}
-        run: pnpm -r run build
+        run: pnpm install
 
       - name: Format Check
         run: pnpm format
