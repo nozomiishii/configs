@@ -37,5 +37,5 @@ export default {
     MD033: false,
   },
 
-  ignores: ["**/node_modules", "**/submodules", "LICENSE", ".git"],
+  ignores: ["**/node_modules", ".git"],
 };
