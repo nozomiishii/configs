@@ -32,11 +32,17 @@ and writes a `commitlint.config.ts` that re-exports the shared config.
 - `commit-message-ascii-only`: header / body / footer / notes must all be ASCII (write commit messages in English).
 - `breaking-change-requires-bang`: declare breaking changes with `!` in the header. A `BREAKING CHANGE:` footer alone (no `!` in the header) is rejected, since GitHub collapses the footer in squash commits.
 
-### Allowing scope in a consumer
+### Overriding rules
 
-Override `scope-empty` in your own `commitlint.config.ts`:
+`nozo-commitlint` always lints with the bundled config. To override it, pass
+`--config` explicitly:
+
+```sh
+nozo-commitlint --config commitlint.config.ts --edit .git/COMMIT_EDITMSG
+```
 
 ```ts
+// commitlint.config.ts
 export default {
   extends: ["@nozomiishii/commitlint-config"],
   rules: {
@@ -49,16 +55,38 @@ export default {
 
 ## Bin
 
-The package also ships a namespaced bin, `nozo-commitlint`, that wraps the
-pinned `@commitlint/cli`. The bin name differs from the package name, so to
-run it without adding the package to your `devDependencies`, pass `--package`:
+The package ships a namespaced bin, `nozo-commitlint`, that wraps the pinned
+`@commitlint/cli`. It works zero-config: unless `--config` is passed explicitly,
+it always uses the bundled config and never reads the project's
+`commitlint.config.*` nor any home / global config (this prevents stale global
+configs from being picked up in projects without a config).
+
+### With mise (no package manager required)
+
+Projects without a package.json can install the bin via
+[mise](https://mise.jdx.dev)'s npm backend:
+
+```toml
+# mise.toml
+[tools]
+"npm:@nozomiishii/commitlint-config" = "latest"
+```
 
 ```sh
 # Lint the most recent commit
-pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --last --verbose
+nozo-commitlint --last --verbose
 
 # Lint a specific commit-msg file
-pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --edit .git/COMMIT_EDITMSG
+nozo-commitlint --edit .git/COMMIT_EDITMSG
+```
+
+### With pnpm dlx
+
+The bin name differs from the package name, so to run it without adding the
+package to your `devDependencies`, pass `--package`:
+
+```sh
+pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --last --verbose
 ```
 
 To wire it into a commit-msg git hook, see
