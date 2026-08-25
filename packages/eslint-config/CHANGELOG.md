@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.3.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.3.0...@nozomiishii/eslint-config-v2.3.1) (2026-08-25)
+
+### Miscellaneous
+
+- update dependency @tanstack/eslint-plugin-query to v5.102.0 ([#2769](https://github.com/nozomiishii/configs/issues/2769)) ([f261d57](https://github.com/nozomiishii/configs/commit/f261d574032c8b6b3facfc227d40070ef71055dd))
+
 ## [2.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.2.0...@nozomiishii/eslint-config-v2.3.0) (2026-08-25)
 
 ### Features
