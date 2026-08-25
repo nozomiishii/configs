@@ -31,11 +31,16 @@ pnpx nozo init
 - `commit-message-ascii-only`: header / body / footer / notes すべて ASCII のみ（コミットメッセージは英語で書く）。
 - `breaking-change-requires-bang`: 破壊的変更は header の `!` で宣言する。`BREAKING CHANGE:` footer 単独（header に `!` なし）は弾かれる。GitHub の squash commit では footer が畳まれて見えないため。
 
-### consumer 側で scope を許可する
+### ルールを上書きする
 
-自分の `commitlint.config.ts` で `scope-empty` を上書きする:
+bin は常に同梱 config で検査する。上書きしたいときは `--config` を明示する:
+
+```sh
+commitlint --config commitlint.config.ts --edit .git/COMMIT_EDITMSG
+```
 
 ```ts
+// commitlint.config.ts
 export default {
   extends: ["@nozomiishii/commitlint-config"],
   rules: {
@@ -48,14 +53,38 @@ export default {
 
 ## 同梱 bin
 
-このパッケージは pin された `@commitlint/cli` をラップする `nozo-commitlint` という namespace 付きの bin も同梱しています。bin 名はパッケージ名と異なるため、`devDependencies` に追加せず実行するときは `--package` でパッケージを指定します:
+このパッケージは pin された `@commitlint/cli` をラップする `commitlint` という bin を同梱しています。zero-config で動く: `--config` を明示しない限り常に同梱 config を使い、プロジェクトの `commitlint.config.*` や home / グローバルの config は読まない (config が無いプロジェクトで古いグローバル設定が拾われる事故を防ぐため)。
+
+同じ wrapper は `nozo-commitlint` という別名でも公開しています。どの binary を実行しているか一意に読み取れる方が良い git hook や CI では、こちらを使います。
+
+### mise で使う (package manager 不要)
+
+package.json の無いプロジェクトでも、[mise](https://mise.jdx.dev) の npm backend で bin をそのまま導入できる:
+
+```toml
+# mise.toml
+[tools]
+"npm:@nozomiishii/commitlint-config" = "latest"
+```
 
 ```sh
 # 直近のコミットを lint
-pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --last --verbose
+commitlint --last --verbose
 
 # 特定の commit-msg ファイルを lint
-pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --edit .git/COMMIT_EDITMSG
+commitlint --edit .git/COMMIT_EDITMSG
 ```
+
+### pnpm dlx で使う
+
+bin 名はパッケージ名と異なるため、`devDependencies` に追加せず実行するときは `--package` でパッケージを指定します:
+
+```sh
+pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --last --verbose
+```
+
+### npm の flat install
+
+`@commitlint/cli` 自身も `commitlint` という bin を公開している。mise と pnpm はこのパッケージの bin だけを出すが、npm は transitive な方を `node_modules/.bin` に巻き上げるため、名前を取られることがある。npm では `nozo-commitlint` を呼ぶ。
 
 commit-msg の git hook に組み込む方法は [`@nozomiishii/lefthook-config`](../lefthook-config) を参照。

@@ -18,6 +18,7 @@
     "directory": "packages/commitlint-config"
   },
   "bin": {
+    "commitlint": "./bin/nozo-commitlint.js",
     "nozo-commitlint": "./bin/nozo-commitlint.js",
     "nozo-commitlint-init": "./bin/nozo-commitlint-init.js"
   },
