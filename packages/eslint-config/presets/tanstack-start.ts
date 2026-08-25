@@ -175,13 +175,12 @@ export function tanstackStart(options: Options = {}) {
       name: name("tanstack-start/filename-case"),
       rules: {
         /**
-         * `-` prefixはroute treeから除外するファイルとディレクトリ、
-         * 末尾`_`は親routeに入れ子にしない記法。
-         * どちらもkebab-caseに直すとルーティングが変わる。
+         * TanStack Routerはファイル名をrouting APIとして使い、通常のpath
+         * parameter以外にも複数の特殊tokenを扱うため、routes配下では無効にする。
          *
-         * @see https://github.com/TanStack/router/blob/main/docs/router/routing/file-naming-conventions.md
+         * @see https://tanstack.com/router/latest/docs/routing/file-naming-conventions
          */
-        "unicorn/filename-case": ["error", { ignore: [/^-/u, /_\./u] }],
+        "unicorn/filename-case": "off",
       },
     },
 
