@@ -42,62 +42,25 @@ async function lintRoutePath(routePath: string) {
 describe("tanstackStart filename-case", () => {
   test.for([
     { routePath: "{-$locale}.tsx" },
-    { routePath: "{-$locale}.about-us.tsx" },
-    { routePath: "{-$locale}.$postId.tsx" },
     { routePath: "{-$locale}/about.tsx" },
-  ])("accepts the optional route path $routePath", async ({ routePath }) => {
-    await expect(lintRoutePath(routePath)).resolves.toHaveLength(0);
-  });
-
-  test.for([
     { routePath: "-private.tsx" },
-    { routePath: "-private/about.tsx" },
     { routePath: "about_.tsx" },
-    { routePath: "{-$locale}/-private.tsx" },
-    { routePath: "{-$locale}/about_.tsx" },
-  ])("keeps accepting the existing route path $routePath", async ({ routePath }) => {
-    await expect(lintRoutePath(routePath)).resolves.toHaveLength(0);
-  });
-
-  test.for([
     { routePath: "AboutPage.tsx" },
-    { routePath: "{-$123}.tsx" },
-    { routePath: "{-$locale}-Page.tsx" },
     { routePath: "{-$locale}/AboutPage.tsx" },
     { routePath: "{-$locale}/badDirectory/about.tsx" },
-  ])("still rejects the non-matching route path $routePath", async ({ routePath }) => {
-    await expect(lintRoutePath(routePath)).resolves.toHaveLength(1);
-  });
-
-  test("rejects an optional route name outside the routes directory", async () => {
-    await expect(lintPath("src/components/{-$locale}.tsx")).resolves.toHaveLength(1);
+  ])("ignores the route path $routePath", async ({ routePath }) => {
+    await expect(lintRoutePath(routePath)).resolves.toHaveLength(0);
   });
 
   test.for([
-    { relativePath: "{-$workspace}/src/routes/about.tsx" },
-    { relativePath: "{-$workspace}/src/routes/AboutPage.tsx" },
-  ])(
-    "rejects the path with an optional name before routes: $relativePath",
-    async ({ relativePath }) => {
-      await expect(lintPath(relativePath)).resolves.toHaveLength(1);
-    },
-  );
+    { relativePath: "src/components/AboutPage.tsx" },
+    { relativePath: "src/components/{-$locale}.tsx" },
+    { relativePath: "src/router/AboutPage.tsx" },
+  ])("still rejects the non-route path $relativePath", async ({ relativePath }) => {
+    await expect(lintPath(relativePath)).resolves.toHaveLength(1);
+  });
 
-  test("composes with a consumer Unicorn plugin registration", async () => {
-    const composedEslint = new ESLint({
-      cwd: import.meta.dirname,
-      overrideConfig: [
-        { files: ["**/*.tsx"], plugins: { unicorn: unicornPlugin } },
-        unicornConfig,
-        filenameCaseConfig,
-      ],
-      overrideConfigFile: true,
-    });
-
-    await expect(
-      composedEslint.calculateConfigForFile(
-        path.join(import.meta.dirname, "src/routes/{-$locale}.tsx"),
-      ),
-    ).resolves.toBeDefined();
+  test("ignores a routes directory nested in a workspace", async () => {
+    await expect(lintPath("apps/web/src/routes/AboutPage.tsx")).resolves.toHaveLength(0);
   });
 });

@@ -1,9 +1,6 @@
-import type { ESLint } from "eslint";
 import eslintPluginPerfectionist from "eslint-plugin-perfectionist";
-import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
-import path from "node:path";
 import type { Options } from "../types";
 import {
   betterTailwindcss,
@@ -20,82 +17,6 @@ import {
 } from "../rules";
 import { name } from "../utils/name";
 import { base } from "./base";
-
-const optionalRouteParameterPattern = /^\{-\$[A-Za-z_$][\w$]*\}(?<suffix>(?:\.[^./\\]+)*)$/u;
-
-function hasOptionalRouteParameterSegment(cwd: string, filename: string) {
-  return path
-    .relative(cwd, filename)
-    .split(path.sep)
-    .some((segment) => optionalRouteParameterPattern.test(segment));
-}
-
-/**
- * `ignore`は一致するdirectory配下の検査も止めるため、optional parameterの
- * segmentだけをkebab-caseへ置き換えて他のsegmentはruleに検査させる。
- *
- * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v73.0.0/rules/filename-case.js
- * @see https://github.com/TanStack/router/blob/v1.162.0/packages/eslint-plugin-router/src/rules/route-param-names/constants.ts
- * @see https://tanstack.com/router/latest/docs/guide/internationalization-i18n#i18n-with-optional-path-parameters
- */
-function normalizeOptionalRouteParameterSegments(cwd: string, filename: string) {
-  const relativeFilename = path.relative(cwd, filename);
-  const segments = relativeFilename.split(path.sep);
-  const routesDirectoryIndex = segments.findIndex(
-    (segment, index) => segment === "src" && segments[index + 1] === "routes",
-  );
-
-  if (routesDirectoryIndex === -1) {
-    return filename;
-  }
-
-  const normalizedRelativeFilename = segments
-    .map((segment, index) =>
-      index > routesDirectoryIndex + 1
-        ? segment.replace(optionalRouteParameterPattern, "optional-route-parameter$<suffix>")
-        : segment,
-    )
-    .join(path.sep);
-
-  return path.resolve(cwd, normalizedRelativeFilename);
-}
-
-const unicornFilenameCaseRule = eslintPluginUnicorn.rules?.["filename-case"];
-
-if (!unicornFilenameCaseRule) {
-  throw new Error("The Unicorn filename-case rule is missing.");
-}
-
-const tanstackStartFilenameCasePlugin = {
-  rules: {
-    "filename-case": {
-      ...unicornFilenameCaseRule,
-      create(context) {
-        if (!hasOptionalRouteParameterSegment(context.cwd, context.physicalFilename)) {
-          return {};
-        }
-
-        const normalizedPhysicalFilename = normalizeOptionalRouteParameterSegments(
-          context.cwd,
-          context.physicalFilename,
-        );
-        const normalizedContext = new Proxy(context, {
-          get(target, property, receiver): unknown {
-            if (property === "physicalFilename") {
-              return normalizedPhysicalFilename;
-            }
-
-            const value: unknown = Reflect.get(target, property, receiver);
-
-            return value;
-          },
-        });
-
-        return unicornFilenameCaseRule.create(normalizedContext);
-      },
-    },
-  },
-} satisfies ESLint.Plugin;
 
 /**
  * プロパティの並び順が型推論に効くオブジェクトを受け取る関数。
@@ -252,22 +173,14 @@ export function tanstackStart(options: Options = {}) {
     {
       files: ["**/src/routes/**"],
       name: name("tanstack-start/filename-case"),
-      plugins: {
-        "@nozomiishii/tanstack-start": tanstackStartFilenameCasePlugin,
-      },
       rules: {
         /**
-         * `-` prefixはroute treeから除外するファイルとディレクトリ、
-         * 末尾`_`は親routeに入れ子にしない記法。どちらもkebab-caseに
-         * 直すとルーティングが変わる。
+         * TanStack Routerはファイル名をrouting APIとして使い、通常のpath
+         * parameter以外にも複数の特殊tokenを扱うため、routes配下では無効にする。
          *
-         * @see https://github.com/TanStack/router/blob/main/docs/router/routing/file-naming-conventions.md
+         * @see https://tanstack.com/router/latest/docs/routing/file-naming-conventions
          */
-        "@nozomiishii/tanstack-start/filename-case": ["error", { ignore: [/^-/u, /_\./u] }],
-        "unicorn/filename-case": [
-          "error",
-          { ignore: [/^-/u, /_\./u, optionalRouteParameterPattern] },
-        ],
+        "unicorn/filename-case": "off",
       },
     },
 
