@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.3.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v2.2.0...@nozomiishii/lefthook-config-v2.3.0) (2026-08-25)
+
+### Miscellaneous
+
+- apply oxfmt to packages and check it in CI ([#2754](https://github.com/nozomiishii/configs/issues/2754)) ([07cd9d7](https://github.com/nozomiishii/configs/commit/07cd9d74c226d9bcf07fb3d6dc6128a96602894a))
+- keep tool versions in mise and devEngines only ([#2757](https://github.com/nozomiishii/configs/issues/2757)) ([10b70b7](https://github.com/nozomiishii/configs/commit/10b70b72716b08a42b58890a5c5c140bd07c5f79))
+- remove unused lint-docs pre-commit hook ([#2743](https://github.com/nozomiishii/configs/issues/2743)) ([25e620d](https://github.com/nozomiishii/configs/commit/25e620d49be98b3ae8102934784a1de1d62bf697))
+- update all non-major dependencies ([#2752](https://github.com/nozomiishii/configs/issues/2752)) ([4a34248](https://github.com/nozomiishii/configs/commit/4a3424865753e459b2ef6f4fccf8a748d13aa44e))
+- update dependency eslint to v10.9.0 ([#2764](https://github.com/nozomiishii/configs/issues/2764)) ([ea5cf12](https://github.com/nozomiishii/configs/commit/ea5cf1218f7e06cc1c433635a00dc076625d6343))
+- update nozomiishii ([#2761](https://github.com/nozomiishii/configs/issues/2761)) ([5219228](https://github.com/nozomiishii/configs/commit/52192283df1dd8cea4429ea61ebcb8fd26315af3))
+- update pnpm to v11.22.0 ([#2746](https://github.com/nozomiishii/configs/issues/2746)) ([14ab491](https://github.com/nozomiishii/configs/commit/14ab4919683d14f0335d8ba34736c2feb886ebc1))
+
 ## [2.2.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v2.1.0...@nozomiishii/lefthook-config-v2.2.0) (2026-08-16)
 
 ### Miscellaneous
