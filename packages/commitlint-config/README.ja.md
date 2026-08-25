@@ -33,10 +33,10 @@ pnpx nozo init
 
 ### ルールを上書きする
 
-`nozo-commitlint` は常に同梱 config で検査する。上書きしたいときは `--config` を明示する:
+bin は常に同梱 config で検査する。上書きしたいときは `--config` を明示する:
 
 ```sh
-nozo-commitlint --config commitlint.config.ts --edit .git/COMMIT_EDITMSG
+commitlint --config commitlint.config.ts --edit .git/COMMIT_EDITMSG
 ```
 
 ```ts
@@ -53,7 +53,9 @@ export default {
 
 ## 同梱 bin
 
-このパッケージは pin された `@commitlint/cli` をラップする `nozo-commitlint` という namespace 付きの bin を同梱しています。zero-config で動く: `--config` を明示しない限り常に同梱 config を使い、プロジェクトの `commitlint.config.*` や home / グローバルの config は読まない (config が無いプロジェクトで古いグローバル設定が拾われる事故を防ぐため)。
+このパッケージは pin された `@commitlint/cli` をラップする `commitlint` という bin を同梱しています。zero-config で動く: `--config` を明示しない限り常に同梱 config を使い、プロジェクトの `commitlint.config.*` や home / グローバルの config は読まない (config が無いプロジェクトで古いグローバル設定が拾われる事故を防ぐため)。
+
+同じ wrapper は `nozo-commitlint` という別名でも公開しています。どの binary を実行しているか一意に読み取れる方が良い git hook や CI では、こちらを使います。
 
 ### mise で使う (package manager 不要)
 
@@ -67,10 +69,10 @@ package.json の無いプロジェクトでも、[mise](https://mise.jdx.dev) �
 
 ```sh
 # 直近のコミットを lint
-nozo-commitlint --last --verbose
+commitlint --last --verbose
 
 # 特定の commit-msg ファイルを lint
-nozo-commitlint --edit .git/COMMIT_EDITMSG
+commitlint --edit .git/COMMIT_EDITMSG
 ```
 
 ### pnpm dlx で使う
@@ -80,5 +82,9 @@ bin 名はパッケージ名と異なるため、`devDependencies` に追加せ�
 ```sh
 pnpm --package=@nozomiishii/commitlint-config dlx nozo-commitlint --last --verbose
 ```
+
+### npm の flat install
+
+`@commitlint/cli` 自身も `commitlint` という bin を公開している。mise と pnpm はこのパッケージの bin だけを出すが、npm は transitive な方を `node_modules/.bin` に巻き上げるため、名前を取られることがある。npm では `nozo-commitlint` を呼ぶ。
 
 commit-msg の git hook に組み込む方法は [`@nozomiishii/lefthook-config`](../lefthook-config) を参照。

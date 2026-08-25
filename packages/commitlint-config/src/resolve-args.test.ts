@@ -1,12 +1,13 @@
 import { spawnSync } from "node:child_process";
-import { existsSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, test } from "vitest";
 import { resolveArgs } from "./resolve-args";
 
-const bin = fileURLToPath(new URL("../bin/nozo-commitlint.js", import.meta.url));
+const packageRoot = fileURLToPath(new URL("..", import.meta.url));
+const bin = path.join(packageRoot, "bin/nozo-commitlint.js");
 
 function lintIn(dir: string, message: string) {
   return spawnSync(process.execPath, [bin], {
@@ -14,6 +15,12 @@ function lintIn(dir: string, message: string) {
     encoding: "utf-8",
     input: message,
   });
+}
+
+function publishedBins(): Record<string, string> {
+  const manifest = readFileSync(path.join(packageRoot, "package.json"), "utf-8");
+
+  return (JSON.parse(manifest) as { bin: Record<string, string> }).bin;
 }
 
 function withTempDir<T>(run: (dir: string) => T): T {
@@ -91,5 +98,29 @@ describe("nozo-commitlint bin (e2e)", () => {
     const result = withTempDir((dir) => lintIn(dir, "feat: add foo"));
 
     expect(result.status).toBe(0);
+  });
+});
+
+// bin 名は install した先の PATH に出る公開契約。消すと consumer の hook や CI が壊れる。
+describe("published bin names", () => {
+  // 素の名前で実行できる。consumer は mise に 1 行足すだけで commitlint を呼べる。
+  test("publishes the commitlint command", () => {
+    expect(publishedBins()).toHaveProperty("commitlint");
+  });
+
+  // 既存の呼び出し元 (lefthook hook / CI) のために namespace 付きの名前も残す。
+  test("keeps the nozo-commitlint command as an alias", () => {
+    const bins = publishedBins();
+
+    expect(bins["nozo-commitlint"]).toBe(bins.commitlint);
+  });
+
+  // 公開する名前はすべて実在するファイルを指す。
+  test("points every published bin at a file that exists", () => {
+    const missing = Object.entries(publishedBins())
+      .filter(([, target]) => !existsSync(path.join(packageRoot, target)))
+      .map(([name]) => name);
+
+    expect(missing).toStrictEqual([]);
   });
 });
