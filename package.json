@@ -38,7 +38,7 @@
     "lefthook": "2.1.10",
     "markdownlint-cli2": "0.23.2",
     "npkill": "0.12.2",
-    "oxfmt": "0.64.0"
+    "oxfmt": "0.65.0"
   },
   "devEngines": {
     "packageManager": {
