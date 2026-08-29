@@ -84,7 +84,7 @@
     "eslint-plugin-perfectionist": "5.10.1",
     "eslint-plugin-playwright": "2.11.0",
     "eslint-plugin-react-hooks": "7.1.1",
-    "eslint-plugin-react-refresh": "0.5.4",
+    "eslint-plugin-react-refresh": "0.5.5",
     "eslint-plugin-regexp": "3.2.0",
     "eslint-plugin-storybook": "10.5.10",
     "eslint-plugin-unicorn": "73.0.0",
