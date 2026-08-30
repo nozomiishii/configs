@@ -70,7 +70,7 @@
     "@tanstack/eslint-plugin-router": "1.162.0",
     "@types/node": "24.13.3",
     "@vitest/eslint-plugin": "1.6.27",
-    "eslint-config-flat-gitignore": "2.3.0",
+    "eslint-config-flat-gitignore": "2.4.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.5",
     "eslint-plugin-better-tailwindcss": "4.7.0",
