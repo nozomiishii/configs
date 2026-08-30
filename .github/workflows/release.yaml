@@ -39,12 +39,17 @@ jobs:
       tag_name: ${{ steps.release-please.outputs['packages/nozo--tag_name'] }}
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup mise
+        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+
       - name: Load secrets from 1Password
         id: secrets
         uses: 1password/load-secrets-action@70062d7a876d3eb6334754fa26efd2fbd90c32f2 # 5.0.1
-        with:
-          # renovate: datasource=docker depName=1password/op versioning=semver
-          version: "2.39.0"
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           APP_ID: op://nozomiishii-release/github-app/username
@@ -91,12 +96,18 @@ jobs:
       contents: write # required to push the formatted CHANGELOG commit back to the release-please PR branch
 
     steps:
+      - name: Checkout release-please Pull Request
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ fromJson(needs.release-please.outputs.prs)[0].headBranchName }}
+          persist-credentials: false # auth は後段の `gh auth setup-git` で配線する
+
+      - name: Setup mise
+        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+
       - name: Load secrets from 1Password
         id: secrets
         uses: 1password/load-secrets-action@70062d7a876d3eb6334754fa26efd2fbd90c32f2 # 5.0.1
-        with:
-          # renovate: datasource=docker depName=1password/op versioning=semver
-          version: "2.39.0"
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           APP_ID: op://nozomiishii-release/github-app/username
@@ -109,15 +120,6 @@ jobs:
           client-id: ${{ steps.secrets.outputs.APP_ID }}
           private-key: ${{ steps.secrets.outputs.APP_PRIVATE_KEY }}
           permission-contents: write
-
-      - name: Checkout release-please Pull Request
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          ref: ${{ fromJson(needs.release-please.outputs.prs)[0].headBranchName }}
-          persist-credentials: false # auth は後段の `gh auth setup-git` で配線する
-
-      - name: Setup mise
-        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
 
       - name: Install dependencies
         run: pnpm install

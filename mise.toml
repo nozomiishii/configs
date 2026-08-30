@@ -1,6 +1,7 @@
 [tools]
 node = "24.20.0"
 pnpm = "11.24.0"
+op = "2.39.0"
 
 [settings]
 lockfile = true
