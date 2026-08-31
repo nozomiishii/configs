@@ -57,13 +57,13 @@
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.3",
     "eslint": "10.9.1",
-    "lefthook": "2.1.10",
+    "lefthook": "2.1.12",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",
     "vitest": "4.1.11"
   },
   "peerDependencies": {
-    "lefthook": "2.1.10"
+    "lefthook": "2.1.12"
   },
   "devEngines": {
     "packageManager": {
