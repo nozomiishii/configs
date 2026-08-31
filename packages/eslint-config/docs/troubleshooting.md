@@ -53,6 +53,25 @@ process.exitCode = 1;
 
 @see <https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-process-exit.md>
 
+### n/no-unsupported-features/node-builtins
+
+package.json に Node.js のバージョン指定が無いと対象の Node.js が `>=16.0.0` 扱いになり、`Request` / `Response` など後から安定した builtin がエラーになる。
+
+実行している Node.js を `devEngines.runtime` に書く。app では `engines` を使わない。
+
+```json
+{
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.20.0"
+    }
+  }
+}
+```
+
+@see <https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-unsupported-features/node-builtins.md>
+
 ### no-console
 
 `console.log` はデバッグの残骸か意図的な出力か、コードを読むだけでは判断できない。意図的な出力には `process.stdout.write` / `process.stderr.write` やログライブラリを使う。こうすると `console.log` が残っていれば消し忘れだと即座に分かる。
