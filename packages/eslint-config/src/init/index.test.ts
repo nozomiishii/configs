@@ -4,13 +4,13 @@ import path from "node:path";
 import { expect, test } from "vitest";
 import { init, type PresetId } from ".";
 
-type InitResult = {
+interface InitResult {
   configContent: string;
   pkg: {
     devDependencies?: Record<string, string>;
     scripts?: Record<string, string>;
   };
-};
+}
 
 // 一時dirでinitを実行し、生成された package.json と eslint.config.ts を読み取る
 async function runInit(preset?: PresetId, isMonorepo?: boolean): Promise<InitResult> {

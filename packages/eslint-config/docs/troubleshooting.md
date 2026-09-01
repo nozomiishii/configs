@@ -22,6 +22,40 @@ lint エラーで詰まった時の進め方と、よくある対応パターン
 
 リーダーが事前に承認済みの対応。個別相談は不要。
 
+### @typescript-eslint/consistent-type-definitions
+
+オブジェクトリテラルの type 宣言は interface に直す。`lint:fix` で一括変換し、続けて `format:fix` を実行する。fixer の出力は 1 行 interface になり、そのままでは format check に落ちる。
+
+変換で挙動が変わる箇所が 2 つある。1 つ目は index signature を要求する引数。
+
+```ts
+declare function send(data: Record<string, unknown>): void;
+declare const props: Props;
+
+interface Props {
+  locale: string;
+}
+
+// NG: type Props = { locale: string } だった間は通っていたが、変換後は型エラー
+send(props);
+
+// OK: 複製して渡す。interface に index signature を足すのでもよい
+send({ ...props });
+```
+
+2 つ目は declare global。fixer は declare global 内の type も変換し、global の interface は同名宣言と merge される。
+
+```ts
+declare global {
+  // NG: fix 後に interface Session になり、同名の global 宣言と暗黙に merge される
+  type Session = { user: string };
+}
+```
+
+変換 diff に declare global があれば、意図した merge か確認する。
+
+@see <https://typescript-eslint.io/rules/consistent-type-definitions/>
+
 ### n/no-process-env
 
 `process.env` の直接参照を禁止する。子プロセスへ渡すなど一部の変数だけ通したい時は、off ではなく `allowedVariables` で必要な変数だけ許可する。

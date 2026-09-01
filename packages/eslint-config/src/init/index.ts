@@ -6,7 +6,11 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-export type InitOptions = { cwd: string; monorepo?: boolean; preset?: PresetId };
+export interface InitOptions {
+  cwd: string;
+  monorepo?: boolean;
+  preset?: PresetId;
+}
 
 export type PresetId = "nextjs" | "node" | "tanstack-start";
 
@@ -19,13 +23,13 @@ const presetFunctions: Record<PresetId, string> = {
   "tanstack-start": "tanstackStart",
 };
 
-type PackageJson = {
+interface PackageJson {
   devDependencies?: Record<string, string>;
   name: string;
   peerDependencies?: Record<string, string>;
   scripts?: Record<string, string>;
   version: string;
-};
+}
 
 export async function init({
   cwd,

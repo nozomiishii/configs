@@ -1,13 +1,13 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
-type PackageJson = {
+interface PackageJson {
   pnpm?: {
     executionEnv?: {
       nodeVersion?: string;
     };
   };
-};
+}
 
 /**
  * package.jsonからpnpm.executionEnv.nodeVersionを取得
