@@ -4,10 +4,10 @@ import path from "node:path";
 import { expect, test } from "vitest";
 import { init } from ".";
 
-type InitResult = {
+interface InitResult {
   configContent: string;
   pkg: { devDependencies?: Record<string, string> };
-};
+}
 
 // 一時dirでinitを実行し、生成された package.json と commitlint.config.ts を読み取る。
 async function runInit(): Promise<InitResult> {

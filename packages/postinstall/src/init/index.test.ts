@@ -4,12 +4,12 @@ import path from "node:path";
 import { expect, test } from "vitest";
 import { init } from ".";
 
-type InitResult = {
+interface InitResult {
   pkg: {
     devDependencies?: Record<string, string>;
     scripts?: Record<string, string>;
   };
-};
+}
 
 // 一時dirでinitを実行し、生成された package.json を読み取る。
 async function runInit(): Promise<InitResult> {

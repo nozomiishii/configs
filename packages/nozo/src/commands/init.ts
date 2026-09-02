@@ -12,14 +12,17 @@ import { type AgentName, detect, type DetectOptions, getUserAgent } from "packag
 
 const exec = promisify(execFile);
 
-type Tool = {
+interface Tool {
   configure?: () => Promise<null | ToolConfig>;
   description: string;
   label: string;
   run: ToolInit;
-};
+}
 
-type ToolConfig = { monorepo: boolean; preset: PresetId };
+interface ToolConfig {
+  monorepo: boolean;
+  preset: PresetId;
+}
 
 type ToolInit = (options: { cwd: string; monorepo?: boolean; preset?: PresetId }) => Promise<void>;
 

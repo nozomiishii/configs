@@ -3,7 +3,7 @@
  *
  * @see https://github.com/schoero/eslint-plugin-better-tailwindcss/blob/main/docs/settings/settings.md
  */
-export type BetterTailwindcssOptions = {
+export interface BetterTailwindcssOptions {
   /**
    * tailwindcss と config を解決する作業ディレクトリ。
    * パッケージごとに eslint.config.ts がある場合は不要。
@@ -27,20 +27,20 @@ export type BetterTailwindcssOptions = {
    * 未指定だとデフォルトの tailwind クラスにフォールバックする。
    */
   entryPoint?: string;
-};
+}
 
 /**
  * preset に渡す options。
  */
-export type Options = {
+export interface Options {
   betterTailwindcss?: BetterTailwindcssOptions;
   typescript?: TypescriptOptions;
-};
+}
 
 /**
  * TypeScript preset の options。
  */
-export type TypescriptOptions = {
+export interface TypescriptOptions {
   /**
    * type-aware linting の基準ディレクトリ。
    * 各 consumer の eslint.config の `import.meta.dirname` を渡す。
@@ -53,4 +53,4 @@ export type TypescriptOptions = {
    * @see https://typescript-eslint.io/packages/parser/#tsconfigrootdir
    */
   tsconfigRootDir?: string;
-};
+}

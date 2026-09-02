@@ -6,14 +6,16 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-export type InitOptions = { cwd: string };
+export interface InitOptions {
+  cwd: string;
+}
 
-type PackageJson = {
+interface PackageJson {
   devDependencies?: Record<string, string>;
   name: string;
   peerDependencies?: Record<string, string>;
   version: string;
-};
+}
 
 export async function init({ cwd }: InitOptions): Promise<void> {
   const root = packageRoot();

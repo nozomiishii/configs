@@ -40,13 +40,6 @@ export function typescript({ tsconfigRootDir }: TypescriptOptions = {}) {
       files: ["**/*.{ts,tsx}"],
       name: name("typescript"),
       rules: {
-        /**
-         * interfaceではなくtypeを使う
-         *
-         * @see https://typescript-eslint.io/rules/consistent-type-definitions
-         */
-        "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
-
         // Method shorthand syntaxではなくObject property syntaxで関数の型定義する
         // https://www.totaltypescript.com/method-shorthand-syntax-considered-harmful
         "@typescript-eslint/method-signature-style": ["error", "property"],
@@ -81,18 +74,6 @@ export function typescript({ tsconfigRootDir }: TypescriptOptions = {}) {
             varsIgnorePattern: "^_",
           },
         ],
-      },
-    },
-    {
-      files: ["**/*.d.ts"],
-      name: name("typescript/d.ts"),
-      rules: {
-        /**
-         * typeではなくinterfaceを使う
-         *
-         * @see https://typescript-eslint.io/rules/consistent-type-definitions
-         */
-        "@typescript-eslint/consistent-type-definitions": ["warn", "interface"],
       },
     },
   ]);
