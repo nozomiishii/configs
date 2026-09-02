@@ -22,12 +22,6 @@ lint エラーで詰まった時の進め方と、よくある対応パターン
 
 リーダーが事前に承認済みの対応。個別相談は不要。
 
-### @typescript-eslint/consistent-type-definitions
-
-オブジェクトリテラルの type 宣言は interface に直す。`lint:fix` で一括変換し、続けて `format:fix` を実行する。fixer の出力は 1 行 interface になり、そのままでは format check に落ちる。
-
-@see <https://typescript-eslint.io/rules/consistent-type-definitions/>
-
 ### n/no-process-env
 
 `process.env` の直接参照を禁止する。子プロセスへ渡すなど一部の変数だけ通したい時は、off ではなく `allowedVariables` で必要な変数だけ許可する。
