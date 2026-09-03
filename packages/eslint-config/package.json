@@ -81,7 +81,7 @@
     "eslint-plugin-jsx-a11y-x": "0.2.0",
     "eslint-plugin-n": "18.3.0",
     "eslint-plugin-package-json": "1.8.0",
-    "eslint-plugin-perfectionist": "5.10.1",
+    "eslint-plugin-perfectionist": "5.11.0",
     "eslint-plugin-playwright": "2.11.0",
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-react-refresh": "0.5.5",
