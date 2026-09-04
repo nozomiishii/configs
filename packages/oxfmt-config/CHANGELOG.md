@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.4.0...@nozomiishii/oxfmt-config-v2.5.0) (2026-09-04)
+
+
+### Miscellaneous
+
+* update dependency oxfmt to v0.66.0 ([#2814](https://github.com/nozomiishii/configs/issues/2814)) ([66d616e](https://github.com/nozomiishii/configs/commit/66d616e3552b3f490842d9a969342cb202b547c8))
+
 ## [2.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.3.1...@nozomiishii/oxfmt-config-v2.4.0) (2026-09-02)
 
 ### Features
