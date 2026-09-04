@@ -51,6 +51,10 @@ The design decisions behind each preset live in docs:
 
 - [tanstackStart()](./docs/tanstack-start.md)
 
+## Decisions
+
+- [import の拡張子は lint で強制しない](./docs/decisions/import%20の拡張子は%20lint%20で強制しない.md)
+
 ## Rule list
 
 Browse the configs and rules enabled by this package via [`@eslint/config-inspector`](https://github.com/eslint/config-inspector):

@@ -46,6 +46,10 @@ preset ごとの設計判断は docs にまとめている:
 
 - [tanstackStart()](./docs/tanstack-start.md)
 
+## 判断の記録
+
+- [import の拡張子は lint で強制しない](./docs/decisions/import%20の拡張子は%20lint%20で強制しない.md)
+
 ## ルール一覧
 
 このパッケージで有効な config と rule を [`@eslint/config-inspector`](https://github.com/eslint/config-inspector) でブラウズできる:

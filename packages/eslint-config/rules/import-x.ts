@@ -15,6 +15,9 @@ import { name } from "../utils/name";
  * import/no-unresolved
  * ```
  *
+ * 使わないルール: import/extensions
+ * https://github.com/nozomiishii/configs/blob/main/packages/eslint-config/docs/decisions/import%20の拡張子は%20lint%20で強制しない.md
+ *
  * @see https://github.com/un-ts/eslint-plugin-import-x
  */
 export function importX() {
@@ -30,30 +33,6 @@ export function importX() {
     ...pluginImportX.flatConfigs.typescript,
     name: name("import-x"),
     rules: {
-      /**
-       * 拡張子を省略できるもの（js/ts 系）は省略する。JSON などは維持。
-       *
-       * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/extensions.md
-       */
-      "import-x/extensions": [
-        "warn",
-        "ignorePackages",
-        {
-          checkTypeImports: true,
-          fix: true,
-          pattern: {
-            cjs: "never",
-            cts: "never",
-            js: "never",
-            jsx: "never",
-            mjs: "never",
-            mts: "never",
-            ts: "never",
-            tsx: "never",
-          },
-        },
-      ],
-
       /**
        * import文は先頭に書く
        *
