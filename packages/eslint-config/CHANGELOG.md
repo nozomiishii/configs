@@ -2,20 +2,18 @@
 
 ## [2.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.4.0...@nozomiishii/eslint-config-v2.5.0) (2026-09-04)
 
-
 ### Features
 
-* drop import-x/extensions rule ([#2813](https://github.com/nozomiishii/configs/issues/2813)) ([3968fd6](https://github.com/nozomiishii/configs/commit/3968fd6fc678059756b5194db4e7d2f7fd19f52a))
-
+- drop import-x/extensions rule ([#2813](https://github.com/nozomiishii/configs/issues/2813)) ([3968fd6](https://github.com/nozomiishii/configs/commit/3968fd6fc678059756b5194db4e7d2f7fd19f52a))
 
 ### Miscellaneous
 
-* update dependency @next/eslint-plugin-next to v16.3.4 ([#2807](https://github.com/nozomiishii/configs/issues/2807)) ([b2bf954](https://github.com/nozomiishii/configs/commit/b2bf9544a15b7d90eb98a0cd68097e965ce58f7e))
-* update dependency eslint-plugin-jsdoc to v64.3.2 ([#2804](https://github.com/nozomiishii/configs/issues/2804)) ([ab66193](https://github.com/nozomiishii/configs/commit/ab6619313bc599825eec171cdc8e357cf676be57))
-* update dependency eslint-plugin-jsdoc to v64.3.3 ([#2808](https://github.com/nozomiishii/configs/issues/2808)) ([1f9482f](https://github.com/nozomiishii/configs/commit/1f9482fb786edbb4ed54232fb5dd5206e39d6ee8))
-* update dependency eslint-plugin-perfectionist to v5.11.0 ([#2806](https://github.com/nozomiishii/configs/issues/2806)) ([e1b0d56](https://github.com/nozomiishii/configs/commit/e1b0d56836dbf637208a7b73ebad9722f5d20e49))
-* update dependency globals to v17.12.0 ([#2811](https://github.com/nozomiishii/configs/issues/2811)) ([36fd2fc](https://github.com/nozomiishii/configs/commit/36fd2fc905cc62d0834578473fd97c290d139c46))
-* update dependency typescript-eslint to v8.69.0 ([#2810](https://github.com/nozomiishii/configs/issues/2810)) ([ca70bd1](https://github.com/nozomiishii/configs/commit/ca70bd17a5fa7a470c5eaf2af1d194c2f42f0959))
+- update dependency @next/eslint-plugin-next to v16.3.4 ([#2807](https://github.com/nozomiishii/configs/issues/2807)) ([b2bf954](https://github.com/nozomiishii/configs/commit/b2bf9544a15b7d90eb98a0cd68097e965ce58f7e))
+- update dependency eslint-plugin-jsdoc to v64.3.2 ([#2804](https://github.com/nozomiishii/configs/issues/2804)) ([ab66193](https://github.com/nozomiishii/configs/commit/ab6619313bc599825eec171cdc8e357cf676be57))
+- update dependency eslint-plugin-jsdoc to v64.3.3 ([#2808](https://github.com/nozomiishii/configs/issues/2808)) ([1f9482f](https://github.com/nozomiishii/configs/commit/1f9482fb786edbb4ed54232fb5dd5206e39d6ee8))
+- update dependency eslint-plugin-perfectionist to v5.11.0 ([#2806](https://github.com/nozomiishii/configs/issues/2806)) ([e1b0d56](https://github.com/nozomiishii/configs/commit/e1b0d56836dbf637208a7b73ebad9722f5d20e49))
+- update dependency globals to v17.12.0 ([#2811](https://github.com/nozomiishii/configs/issues/2811)) ([36fd2fc](https://github.com/nozomiishii/configs/commit/36fd2fc905cc62d0834578473fd97c290d139c46))
+- update dependency typescript-eslint to v8.69.0 ([#2810](https://github.com/nozomiishii/configs/issues/2810)) ([ca70bd1](https://github.com/nozomiishii/configs/commit/ca70bd17a5fa7a470c5eaf2af1d194c2f42f0959))
 
 ## [2.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.3.1...@nozomiishii/eslint-config-v2.4.0) (2026-09-02)
 

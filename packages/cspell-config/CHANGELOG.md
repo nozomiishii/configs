@@ -2,10 +2,9 @@
 
 ## [2.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v2.4.0...@nozomiishii/cspell-config-v2.5.0) (2026-09-04)
 
-
 ### Miscellaneous
 
-* update dependency cspell to v10.2.0 ([#2809](https://github.com/nozomiishii/configs/issues/2809)) ([70319b2](https://github.com/nozomiishii/configs/commit/70319b2d5ba9629a790e3da4e453c62091037c8f))
+- update dependency cspell to v10.2.0 ([#2809](https://github.com/nozomiishii/configs/issues/2809)) ([70319b2](https://github.com/nozomiishii/configs/commit/70319b2d5ba9629a790e3da4e453c62091037c8f))
 
 ## [2.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v2.3.1...@nozomiishii/cspell-config-v2.4.0) (2026-09-02)
 

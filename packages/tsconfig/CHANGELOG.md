@@ -2,10 +2,9 @@
 
 ## [2.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v2.4.0...@nozomiishii/tsconfig-v2.5.0) (2026-09-04)
 
-
 ### Miscellaneous
 
-* **@nozomiishii/tsconfig:** Synchronize configs versions
+- **@nozomiishii/tsconfig:** Synchronize configs versions
 
 ## [2.4.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v2.3.1...@nozomiishii/tsconfig-v2.4.0) (2026-09-02)
 
