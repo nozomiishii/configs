@@ -15,9 +15,6 @@ import { name } from "../utils/name";
  * import/no-unresolved
  * ```
  *
- * 使わないルール: import/extensions
- * https://github.com/nozomiishii/configs/blob/main/packages/eslint-config/docs/decisions/import%20の拡張子は%20lint%20で強制しない.md
- *
  * @see https://github.com/un-ts/eslint-plugin-import-x
  */
 export function importX() {
