@@ -20,12 +20,12 @@ rule は import が `.d.ts` に解決されたときだけ判定基準を specif
 | rule を残し、resolver の拡張子解決順を `.js` 優先にする | 実測では `.js` 付きも拡張子なしも通り、検査自体が消える |
 | `js: "always"` に方針転換する | ディレクトリ import の autofix が[実在しないパスを書く](https://github.com/un-ts/eslint-plugin-import-x/issues/413)。全 consumer の `.js` 実体 import に影響する |
 | rule を削除する | `.ts` 付きは tsc が止め (TS5097)、残るリスクは手書きやコピペで混入する `.js` 付きだけ |
-| `n/file-extension-in-import` に置き換える | `["warn", "always", { ".js": "never", ".ts": "never", ... }]` で pilot repo を実測。`.js` + `.d.ts` ペアと `?url` を通し、`.ts` への `.js` 付きも捕捉する。有名プリセットでの採用状況は調査中 |
+| `n/file-extension-in-import` に置き換える | `["warn", "always", { ".js": "never", ".ts": "never", ... }]` で実測。`.js` + `.d.ts` ペアは警告のみで autofix 不可、`settings.n.tryExtensions` の明示が必須、`.ts` 付きは素通り。有効にしている有名プリセットは eslint-config-xo だけで、しかも逆方向の `always`。[plugin 側も recommended 入りを見送っている](https://github.com/eslint-community/eslint-plugin-n/issues/39) |
 | `no-restricted-syntax` の selector で `.js` 付きだけ禁止する | 純 AST 判定で resolver を使わない。typescript-eslint が [`import/extensions` の軽い代替として案内](https://typescript-eslint.io/troubleshooting/typed-linting/performance/)している |
 
 ## 決定
 
-`import-x/extensions` を削除する。置き換えは保留した論点の調査結果を見て決める。
+`import-x/extensions` を削除し、代替の rule も置かない。
 
 前提の調査結果:
 
@@ -47,5 +47,4 @@ rule は import が `.d.ts` に解決されたときだけ判定基準を specif
 
 ### 保留した論点
 
-- `n/file-extension-in-import` へ置き換えるか。有名プリセットの採用状況を調べてから決める
 - import-x 側の [autofix の不具合](https://github.com/un-ts/eslint-plugin-import-x/issues/413)が直ったら、rule を戻す余地を再評価する
