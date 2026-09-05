@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.5.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v2.5.0...@nozomiishii/postinstall-v2.5.1) (2026-09-05)
+
+### Miscellaneous
+
+- **@nozomiishii/postinstall:** Synchronize configs versions
+
 ## [2.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v2.4.0...@nozomiishii/postinstall-v2.5.0) (2026-09-04)
 
 ### Miscellaneous
