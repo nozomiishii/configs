@@ -96,13 +96,13 @@
     "typescript-eslint": "8.69.0"
   },
   "devDependencies": {
-    "eslint": "10.9.1",
+    "eslint": "10.10.0",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",
     "vitest": "5.0.0"
   },
   "peerDependencies": {
-    "eslint": "10.9.1",
+    "eslint": "10.10.0",
     "typescript": "6.0.3"
   },
   "devEngines": {

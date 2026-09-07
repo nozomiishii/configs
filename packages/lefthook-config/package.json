@@ -56,7 +56,7 @@
     "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.3",
-    "eslint": "10.9.1",
+    "eslint": "10.10.0",
     "lefthook": "2.1.12",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",
