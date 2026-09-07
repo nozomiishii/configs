@@ -45,7 +45,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "cspell": "10.2.1"
+    "cspell": "10.2.2"
   },
   "devDependencies": {
     "@nozomiishii/eslint-config": "workspace:*",
