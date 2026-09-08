@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.5.0...@nozomiishii/eslint-config-v2.6.0) (2026-09-08)
+
+
+### Miscellaneous
+
+* update dependency @eslint-react/eslint-plugin to v5.18.7 ([#2818](https://github.com/nozomiishii/configs/issues/2818)) ([ada7978](https://github.com/nozomiishii/configs/commit/ada79787ea10fe20dd1b011bf811380646b8a119))
+* update dependency @eslint-react/eslint-plugin to v5.18.8 ([#2835](https://github.com/nozomiishii/configs/issues/2835)) ([0b6a3d9](https://github.com/nozomiishii/configs/commit/0b6a3d95dd80cded960761a30fb0626effe541bb))
+* update dependency @eslint/config-inspector to v3.4.0 ([#2819](https://github.com/nozomiishii/configs/issues/2819)) ([ba3221d](https://github.com/nozomiishii/configs/commit/ba3221d27e67f16aa79f3a77984626acfbcd862c))
+* update dependency eslint to v10.10.0 ([#2834](https://github.com/nozomiishii/configs/issues/2834)) ([25faf9c](https://github.com/nozomiishii/configs/commit/25faf9cb14a04a43acd1604e8d98a2c27d89a37d))
+* update dependency eslint-plugin-jsdoc to v64.3.4 ([#2816](https://github.com/nozomiishii/configs/issues/2816)) ([4e275bd](https://github.com/nozomiishii/configs/commit/4e275bdd54081d0466c988f6209889d11732469c))
+* update dependency eslint-plugin-jsdoc to v64.3.5 ([#2828](https://github.com/nozomiishii/configs/issues/2828)) ([6b6964a](https://github.com/nozomiishii/configs/commit/6b6964a769f050b136517e710e2b66c317c3b276))
+* update dependency eslint-plugin-jsdoc to v64.3.6 ([#2839](https://github.com/nozomiishii/configs/issues/2839)) ([e2ea810](https://github.com/nozomiishii/configs/commit/e2ea81038312972aabd3f3e7564bba24feb4e65f))
+* update dependency eslint-plugin-react-refresh to v0.5.6 ([#2820](https://github.com/nozomiishii/configs/issues/2820)) ([bd14582](https://github.com/nozomiishii/configs/commit/bd14582c37029aa947fc37d2a1e2ead9b29decf1))
+* update dependency eslint-plugin-regexp to v3.3.0 ([#2830](https://github.com/nozomiishii/configs/issues/2830)) ([eb5116e](https://github.com/nozomiishii/configs/commit/eb5116ef8f7b30e9d395a5a1092ef05bb217573c))
+* update dependency eslint-plugin-storybook to v10.6.0 ([#2821](https://github.com/nozomiishii/configs/issues/2821)) ([bbe96f8](https://github.com/nozomiishii/configs/commit/bbe96f8a017ee47274d63394826a3b1e5916fee4))
+* update dependency pnpm to v12 ([#2822](https://github.com/nozomiishii/configs/issues/2822)) ([245e826](https://github.com/nozomiishii/configs/commit/245e826346616dd857f35e0e2a0d1409311cc1b6))
+* update dependency pnpm to v12.3.2 ([#2829](https://github.com/nozomiishii/configs/issues/2829)) ([5e08a75](https://github.com/nozomiishii/configs/commit/5e08a7584c803c11fdfbc69befb714cc557a4311))
+* update dependency pnpm to v12.3.3 ([#2832](https://github.com/nozomiishii/configs/issues/2832)) ([74947fa](https://github.com/nozomiishii/configs/commit/74947fa0c3f8bc2108d2d08eb42b46fe5da12fbb))
+* update dependency pnpm to v12.3.4 ([#2833](https://github.com/nozomiishii/configs/issues/2833)) ([405ed96](https://github.com/nozomiishii/configs/commit/405ed960c88a58728128d431c66e47b6e0746301))
+* update dependency tsdown to v0.23.0 ([#2827](https://github.com/nozomiishii/configs/issues/2827)) ([824a37f](https://github.com/nozomiishii/configs/commit/824a37fc4a230f7a772c25451cd2ecd88b34ae3c))
+* update dependency vitest to v5 ([#2824](https://github.com/nozomiishii/configs/issues/2824)) ([375f8f2](https://github.com/nozomiishii/configs/commit/375f8f2ec2434bcda7f5a19b779c1b780aab596d))
+
 ## [2.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.4.0...@nozomiishii/eslint-config-v2.5.0) (2026-09-04)
 
 ### Features

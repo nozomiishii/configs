@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v2.5.0...@nozomiishii/cspell-config-v2.6.0) (2026-09-08)
+
+
+### Miscellaneous
+
+* update dependency cspell to v10.2.1 ([#2825](https://github.com/nozomiishii/configs/issues/2825)) ([0c9b543](https://github.com/nozomiishii/configs/commit/0c9b543cab73f486308daaa095e3420e905d1001))
+* update dependency cspell to v10.2.2 ([#2831](https://github.com/nozomiishii/configs/issues/2831)) ([afe98e1](https://github.com/nozomiishii/configs/commit/afe98e15ea15ca06c1477cfd23ed27cbd99a7fd9))
+* update dependency eslint to v10.10.0 ([#2834](https://github.com/nozomiishii/configs/issues/2834)) ([25faf9c](https://github.com/nozomiishii/configs/commit/25faf9cb14a04a43acd1604e8d98a2c27d89a37d))
+* update dependency pnpm to v12 ([#2822](https://github.com/nozomiishii/configs/issues/2822)) ([245e826](https://github.com/nozomiishii/configs/commit/245e826346616dd857f35e0e2a0d1409311cc1b6))
+* update dependency pnpm to v12.3.2 ([#2829](https://github.com/nozomiishii/configs/issues/2829)) ([5e08a75](https://github.com/nozomiishii/configs/commit/5e08a7584c803c11fdfbc69befb714cc557a4311))
+* update dependency pnpm to v12.3.3 ([#2832](https://github.com/nozomiishii/configs/issues/2832)) ([74947fa](https://github.com/nozomiishii/configs/commit/74947fa0c3f8bc2108d2d08eb42b46fe5da12fbb))
+* update dependency pnpm to v12.3.4 ([#2833](https://github.com/nozomiishii/configs/issues/2833)) ([405ed96](https://github.com/nozomiishii/configs/commit/405ed960c88a58728128d431c66e47b6e0746301))
+* update dependency tsdown to v0.23.0 ([#2827](https://github.com/nozomiishii/configs/issues/2827)) ([824a37f](https://github.com/nozomiishii/configs/commit/824a37fc4a230f7a772c25451cd2ecd88b34ae3c))
+
 ## [2.5.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v2.4.0...@nozomiishii/cspell-config-v2.5.0) (2026-09-04)
 
 ### Miscellaneous
