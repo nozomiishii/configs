@@ -11,6 +11,9 @@
     // baseはtypecheck専用のためemitを明示的に有効化する
     "noEmit": false,
 
+    // emitする構成ではtscがこのオプションを拒否するためbaseの許可を戻す
+    "allowImportingTsExtensions": false,
+
     // .d.tsファイルを生成する
     "declaration": true,
 

@@ -23,6 +23,9 @@
     // tscはtypecheck専用にしてemitはバンドラーに任せる
     "noEmit": true,
 
+    // Viteのnative config loader (NodeのESM) が要求する .ts 拡張子付きの相対importを許可する (拡張子なしのimportもこれまでどおり通る)
+    "allowImportingTsExtensions": true,
+
     // .jsファイルのインポートを許可する
     "allowJs": true,
 
