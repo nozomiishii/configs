@@ -10,6 +10,11 @@ export interface InitOptions {
   cwd: string;
   monorepo?: boolean;
   preset?: PresetId;
+  /**
+   * false のとき自パッケージ名を利用先の devDependencies に書かない。
+   * configs メタパッケージ経由の導入で使う。
+   */
+  shouldAddSelfDependency?: boolean;
 }
 
 export type PresetId = "nextjs" | "node" | "tanstack-start";
@@ -35,6 +40,7 @@ export async function init({
   cwd,
   monorepo = false,
   preset = "nextjs",
+  shouldAddSelfDependency = true,
 }: InitOptions): Promise<void> {
   const root = packageRoot();
 
@@ -58,10 +64,12 @@ export async function init({
   const targetPath = path.resolve(cwd, "package.json");
   const target = JSON.parse(await readFile(targetPath, "utf-8")) as PackageJson;
 
+  const selfDependency = shouldAddSelfDependency ? { [selfPkg.name]: selfPkg.version } : {};
+
   target.devDependencies = {
     ...target.devDependencies,
     eslint: selfPkg.peerDependencies.eslint,
-    [selfPkg.name]: selfPkg.version,
+    ...selfDependency,
     typescript: selfPkg.peerDependencies.typescript,
   };
 

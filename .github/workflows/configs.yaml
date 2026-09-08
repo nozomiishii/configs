@@ -1,4 +1,4 @@
-name: Nozo
+name: Configs
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ concurrency:
 defaults:
   run:
     shell: bash
-    working-directory: packages/nozo
+    working-directory: packages/configs
 
 jobs:
   changes:
@@ -38,10 +38,10 @@ jobs:
         with:
           filters: |
             src:
-              - 'packages/nozo/**'
-              # nozo は @nozomiishii/configs/init の型を import する
               - 'packages/configs/**'
-              - '.github/workflows/nozo.yaml'
+              # 子パッケージの peer だけ動いた Renovate PR でもドリフト検知テストを走らせる
+              - 'packages/*/package.json'
+              - '.github/workflows/configs.yaml'
 
   static:
     needs: changes
@@ -97,9 +97,12 @@ jobs:
       - name: Test
         run: pnpm test
 
+      - name: Integration test
+        run: pnpm test:integration
+
   required:
     # name 変更時は infra 側の required_status_checks も更新する
-    name: Nozo / required
+    name: Configs / required
     needs: [changes, static, test]
     if: always()
     runs-on: ubuntu-slim

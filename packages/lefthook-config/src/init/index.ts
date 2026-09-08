@@ -8,6 +8,11 @@ import { fileURLToPath } from "node:url";
 
 export interface InitOptions {
   cwd: string;
+  /**
+   * false のとき自パッケージ名を利用先の devDependencies に書かない。
+   * configs メタパッケージ経由の導入で使う。
+   */
+  shouldAddSelfDependency?: boolean;
 }
 
 interface PackageJson {
@@ -17,7 +22,7 @@ interface PackageJson {
   version: string;
 }
 
-export async function init({ cwd }: InitOptions): Promise<void> {
+export async function init({ cwd, shouldAddSelfDependency = true }: InitOptions): Promise<void> {
   const root = packageRoot();
 
   const selfPkg = JSON.parse(
@@ -31,10 +36,12 @@ export async function init({ cwd }: InitOptions): Promise<void> {
   const targetPath = path.resolve(cwd, "package.json");
   const target = JSON.parse(await readFile(targetPath, "utf-8")) as PackageJson;
 
+  const selfDependency = shouldAddSelfDependency ? { [selfPkg.name]: selfPkg.version } : {};
+
   target.devDependencies = {
     ...target.devDependencies,
     lefthook: selfPkg.peerDependencies.lefthook,
-    [selfPkg.name]: selfPkg.version,
+    ...selfDependency,
   };
 
   await writeFile(targetPath, `${JSON.stringify(target, null, 2)}\n`);

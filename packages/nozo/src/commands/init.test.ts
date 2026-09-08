@@ -1,8 +1,13 @@
+import { init as initConfigs } from "@nozomiishii/configs/init";
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { expect, onTestFinished, test, vi } from "vitest";
-import { defaultToolIds, resolvePackageManager, toolIds, tools } from "./init";
+import { defaultToolIds, resolvePackageManager, runInit, toolIds, tools } from "./init";
+
+vi.mock(import("@nozomiishii/configs/init"), () => ({
+  init: vi.fn<typeof initConfigs>(() => Promise.resolve({ removedDependencies: [] })),
+}));
 
 // 一時dirに最小構成の package.json を作り、テスト終了時に削除する。
 // detect は上位ディレクトリを遡るため、親には別の packageManager を置いて探索終端が効いていることも押さえる。
@@ -86,4 +91,78 @@ test("prefers project config over the launching runner", async () => {
     agent: "pnpm",
     source: "project",
   });
+});
+
+// 呼び出し記録はテストごとに独立させる。lifecycle hook を使わずに helper 側で前後を掃除する。
+function trackConfigsInit() {
+  const mock = vi.mocked(initConfigs);
+  mock.mockClear();
+  onTestFinished(() => {
+    mock.mockClear();
+  });
+
+  return mock;
+}
+
+// configs モードは @nozomiishii/configs の init だけを、検出した package manager 付きで 1 回呼ぶ。
+test("runInit in configs mode calls the configs init once with the agent", async () => {
+  const cwd = createTestProject();
+  const mock = trackConfigsInit();
+
+  await runInit({ agent: "pnpm", cwd, mode: "configs" });
+
+  expect(mock).toHaveBeenCalledExactlyOnceWith({ agent: "pnpm", cwd });
+});
+
+// ESLint の preset と monorepo の答えは configs の init へそのまま渡す。
+test("runInit in configs mode forwards the ESLint answers", async () => {
+  const cwd = createTestProject();
+  const mock = trackConfigsInit();
+
+  await runInit({
+    agent: "pnpm",
+    cwd,
+    eslint: { monorepo: true, preset: "node" },
+    mode: "configs",
+  });
+
+  expect(mock).toHaveBeenCalledExactlyOnceWith({
+    agent: "pnpm",
+    cwd,
+    monorepo: true,
+    preset: "node",
+  });
+});
+
+// individual モードは従来どおり子パッケージを個別に入れる。
+test("runInit in individual mode does not call the configs init", async () => {
+  const cwd = createTestProject();
+  const mock = trackConfigsInit();
+
+  await runInit({ agent: "pnpm", cwd, mode: "individual", tools: ["postinstall"] });
+
+  expect(mock).not.toHaveBeenCalled();
+});
+
+// configs が消した子パッケージ名は、呼び出し元が表示できるよう log へ流す。
+test("runInit in configs mode reports the removed dependencies through log", async () => {
+  const cwd = createTestProject();
+  const mock = trackConfigsInit();
+  mock.mockResolvedValueOnce({ removedDependencies: ["@nozomiishii/eslint-config"] });
+  const messages: string[] = [];
+
+  await runInit({
+    agent: "pnpm",
+    cwd,
+    log: (message) => {
+      messages.push(message);
+    },
+    mode: "configs",
+  });
+
+  expect(messages).toStrictEqual(
+    expect.arrayContaining([
+      expect.stringContaining("Removed @nozomiishii/eslint-config from devDependencies"),
+    ]),
+  );
 });

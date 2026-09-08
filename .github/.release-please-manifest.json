@@ -1,6 +1,7 @@
 {
   ".": "2.6.0",
   "packages/commitlint-config": "2.6.0",
+  "packages/configs": "2.6.0",
   "packages/cspell-config": "2.6.0",
   "packages/eslint-config": "2.6.0",
   "packages/lefthook-config": "2.6.0",

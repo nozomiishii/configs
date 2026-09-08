@@ -26,6 +26,7 @@ npx -y nozo@latest init
 | package | role |
 | --- | --- |
 | [@nozomiishii/commitlint-config](../commitlint-config) | Conventional Commits with scope enforcement |
+| [@nozomiishii/configs](../configs) | The recommended config set as a single devDependency |
 | [@nozomiishii/cspell-config](../cspell-config) | cSpell preset |
 | [@nozomiishii/eslint-config](../eslint-config) | ESLint flat config preset |
 | [@nozomiishii/lefthook-config](../lefthook-config) | Git hooks preset |

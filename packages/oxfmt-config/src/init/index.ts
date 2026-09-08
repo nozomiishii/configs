@@ -8,6 +8,11 @@ import { fileURLToPath } from "node:url";
 
 export interface InitOptions {
   cwd: string;
+  /**
+   * false のとき自パッケージ名を利用先の devDependencies に書かない。
+   * configs メタパッケージ経由の導入で使う。
+   */
+  shouldAddSelfDependency?: boolean;
 }
 
 interface PackageJson {
@@ -19,7 +24,7 @@ interface PackageJson {
   version: string;
 }
 
-export async function init({ cwd }: InitOptions): Promise<void> {
+export async function init({ cwd, shouldAddSelfDependency = true }: InitOptions): Promise<void> {
   const root = packageRoot();
 
   const selfPkg = JSON.parse(
@@ -35,10 +40,12 @@ export async function init({ cwd }: InitOptions): Promise<void> {
 
   target.type = "module";
 
+  const selfDependency = shouldAddSelfDependency ? { [selfPkg.name]: selfPkg.version } : {};
+
   target.devDependencies = {
     ...target.devDependencies,
     oxfmt: selfPkg.peerDependencies.oxfmt,
-    [selfPkg.name]: selfPkg.version,
+    ...selfDependency,
   };
 
   target.scripts = {

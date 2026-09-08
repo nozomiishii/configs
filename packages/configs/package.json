@@ -1,12 +1,13 @@
 {
-  "name": "nozo",
+  "name": "@nozomiishii/configs",
   "version": "2.6.0",
-  "description": "nozo shared configs CLI",
+  "description": "Nozomi's Recommended config bundle",
   "keywords": [
-    "cli",
-    "config"
+    "config",
+    "configs",
+    "preset"
   ],
-  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/nozo/README.md",
+  "homepage": "https://github.com/nozomiishii/configs/blob/main/packages/configs/README.md",
   "bugs": {
     "url": "https://github.com/nozomiishii/configs/issues"
   },
@@ -15,14 +16,21 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/nozomiishii/configs.git",
-    "directory": "packages/nozo"
+    "directory": "packages/configs"
   },
-  "bin": "./dist/index.js",
+  "bin": {
+    "nozo-configs-init": "./bin/nozo-configs-init.js"
+  },
   "files": [
+    "bin",
     "dist",
     "README.md"
   ],
   "type": "module",
+  "exports": {
+    "./init": "./dist/init/index.js",
+    "./package.json": "./package.json"
+  },
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -32,33 +40,35 @@
     "dev": "tsdown --watch --sourcemap",
     "format": "pnpm oxfmt . --check",
     "lint": "eslint --max-warnings=0 .",
-    "lint:fix": "eslint --max-warnings=0 . --fix",
     "prepublishOnly": "pnpm run build",
     "test": "vitest run",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
     "tsc": "tsc"
   },
   "dependencies": {
-    "@clack/prompts": "1.7.0",
     "@nozomiishii/commitlint-config": "workspace:*",
-    "@nozomiishii/configs": "workspace:*",
     "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",
     "@nozomiishii/oxfmt-config": "workspace:*",
     "@nozomiishii/postinstall": "workspace:*",
-    "@nozomiishii/prettier-config": "workspace:*",
-    "citty": "0.2.2",
-    "consola": "3.4.2",
+    "@nozomiishii/tsconfig": "workspace:*",
     "package-manager-detector": "1.8.0",
-    "which": "7.0.0"
+    "yaml": "2.9.0"
   },
   "devDependencies": {
-    "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.3",
-    "@types/which": "3.0.4",
     "eslint": "10.10.0",
+    "lefthook": "2.1.12",
+    "oxfmt": "0.66.0",
     "tsdown": "0.23.0",
     "typescript": "6.0.3",
     "vitest": "5.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "10.10.0",
+    "lefthook": "2.1.12",
+    "oxfmt": "0.66.0",
+    "typescript": "6.0.3"
   },
   "devEngines": {
     "packageManager": {

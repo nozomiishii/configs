@@ -1,5 +1,6 @@
 import * as p from "@clack/prompts";
 import { init as initCommitlint } from "@nozomiishii/commitlint-config/init";
+import { init as initConfigs } from "@nozomiishii/configs/init";
 import { init as initEslint, type PresetId } from "@nozomiishii/eslint-config/init";
 import { init as initLefthook } from "@nozomiishii/lefthook-config/init";
 import { init as initOxfmt } from "@nozomiishii/oxfmt-config/init";
@@ -12,16 +13,32 @@ import { type AgentName, detect, type DetectOptions, getUserAgent } from "packag
 
 const exec = promisify(execFile);
 
+export interface EslintConfig {
+  monorepo: boolean;
+  preset: PresetId;
+}
+
+export type InitMode = "configs" | "individual";
+
+export interface RunInitOptions {
+  agent: string;
+  cwd: string;
+  eslint?: EslintConfig;
+  /**
+   * 進捗の表示先。prompt を持ち込まないよう、UI 側から渡す。
+   */
+  log?: (message: string) => void;
+  mode: InitMode;
+  /**
+   * individual モードで入れるツール。configs モードでは使わない。
+   */
+  tools?: readonly ToolId[];
+}
+
 interface Tool {
-  configure?: () => Promise<null | ToolConfig>;
   description: string;
   label: string;
   run: ToolInit;
-}
-
-interface ToolConfig {
-  monorepo: boolean;
-  preset: PresetId;
 }
 
 type ToolInit = (options: { cwd: string; monorepo?: boolean; preset?: PresetId }) => Promise<void>;
@@ -33,48 +50,6 @@ export const tools = {
     run: initCommitlint,
   },
   eslint: {
-    configure: async () => {
-      const preset = await p.select<PresetId>({
-        initialValue: "nextjs",
-        message: "Which ESLint preset?",
-        options: [
-          { hint: "React / Next.js web app", label: "nextjs", value: "nextjs" },
-          {
-            hint: "React / TanStack Start (Vite) web app",
-            label: "tanstack-start",
-            value: "tanstack-start",
-          },
-          { hint: "CLI / library (Node.js)", label: "node", value: "node" },
-        ],
-      });
-
-      if (p.isCancel(preset)) {
-        return null;
-      }
-
-      const monorepo = await p.select<boolean>({
-        initialValue: false,
-        message: "Is this a per-package config in a monorepo?",
-        options: [
-          {
-            hint: "one eslint.config for the whole repo",
-            label: "single repo",
-            value: false,
-          },
-          {
-            hint: "each package has its own; sets tsconfigRootDir",
-            label: "monorepo (per-package)",
-            value: true,
-          },
-        ],
-      });
-
-      if (p.isCancel(monorepo)) {
-        return null;
-      }
-
-      return { monorepo, preset };
-    },
     description: "JS/TS linting via ESLint",
     label: "@nozomiishii/eslint-config",
     run: initEslint,
@@ -130,6 +105,87 @@ export async function resolvePackageManager(
   );
 }
 
+/**
+ * prompt の答えを受け取って実際の scaffold を行う。prompt を含まないのでテストから直接呼べる。
+ */
+export async function runInit({
+  agent,
+  cwd,
+  eslint,
+  log,
+  mode,
+  tools: selected = [],
+}: RunInitOptions): Promise<void> {
+  const report = (message: string): void => {
+    log?.(message);
+  };
+
+  if (mode === "configs") {
+    report("Installing @nozomiishii/configs");
+
+    const { removedDependencies } = await initConfigs({ agent, cwd, ...eslint });
+
+    for (const name of removedDependencies) {
+      report(`Removed ${name} from devDependencies; it now comes from @nozomiishii/configs`);
+    }
+
+    return;
+  }
+
+  for (const id of selected) {
+    const tool = tools[id];
+    report(`Installing ${tool.label}`);
+
+    await tool.run(id === "eslint" && eslint !== undefined ? { cwd, ...eslint } : { cwd });
+  }
+}
+
+/**
+ * ESLint の starter を決めるのに要る 2 問。configs モードでも individual モードでも同じことを聞く。
+ */
+async function promptEslintConfig(): Promise<EslintConfig | null> {
+  const preset = await p.select<PresetId>({
+    initialValue: "nextjs",
+    message: "Which ESLint preset?",
+    options: [
+      { hint: "React / Next.js web app", label: "nextjs", value: "nextjs" },
+      {
+        hint: "React / TanStack Start (Vite) web app",
+        label: "tanstack-start",
+        value: "tanstack-start",
+      },
+      { hint: "CLI / library (Node.js)", label: "node", value: "node" },
+    ],
+  });
+
+  if (p.isCancel(preset)) {
+    return null;
+  }
+
+  const monorepo = await p.select<boolean>({
+    initialValue: false,
+    message: "Is this a per-package config in a monorepo?",
+    options: [
+      {
+        hint: "one eslint.config for the whole repo",
+        label: "single repo",
+        value: false,
+      },
+      {
+        hint: "each package has its own; sets tsconfigRootDir",
+        label: "monorepo (per-package)",
+        value: true,
+      },
+    ],
+  });
+
+  if (p.isCancel(monorepo)) {
+    return null;
+  }
+
+  return { monorepo, preset };
+}
+
 export default defineCommand({
   meta: {
     description: "Initialize a project with nozo configs",
@@ -138,34 +194,53 @@ export default defineCommand({
   async run() {
     p.intro("nozo init");
 
-    const selected = await p.multiselect<ToolId>({
-      initialValues: defaultToolIds,
-      message: "Which tools do you want to set up?",
-      options: toolIds.map((id) => ({
-        hint: tools[id].description,
-        label: id,
-        value: id,
-      })),
-      required: true,
+    const mode = await p.select<InitMode>({
+      initialValue: "configs",
+      message: "How do you want to set up this project?",
+      options: [
+        {
+          hint: "@nozomiishii/configs, the recommended bundle in one dependency",
+          label: "configs",
+          value: "configs",
+        },
+        { hint: "pick the config packages yourself", label: "individual", value: "individual" },
+      ],
     });
 
-    if (p.isCancel(selected)) {
+    if (p.isCancel(mode)) {
       p.cancel("Cancelled.");
 
       return;
     }
 
-    // 追加設定が要るツールは install 前にまとめて尋ねる
-    const configs: Partial<Record<ToolId, ToolConfig>> = {};
+    let selected: ToolId[] = [];
 
-    for (const id of selected) {
-      const tool = tools[id];
+    if (mode === "individual") {
+      const picked = await p.multiselect<ToolId>({
+        initialValues: defaultToolIds,
+        message: "Which tools do you want to set up?",
+        options: toolIds.map((id) => ({
+          hint: tools[id].description,
+          label: id,
+          value: id,
+        })),
+        required: true,
+      });
 
-      if (!("configure" in tool)) {
-        continue;
+      if (p.isCancel(picked)) {
+        p.cancel("Cancelled.");
+
+        return;
       }
 
-      const configured = await tool.configure();
+      selected = picked;
+    }
+
+    // 追加設定が要るのは ESLint だけ。install 前に尋ねる。
+    let eslint: EslintConfig | undefined;
+
+    if (mode === "configs" || selected.includes("eslint")) {
+      const configured = await promptEslintConfig();
 
       if (configured === null) {
         p.cancel("Cancelled.");
@@ -173,7 +248,7 @@ export default defineCommand({
         return;
       }
 
-      configs[id] = configured;
+      eslint = configured;
     }
 
     const cwd = process.cwd();
@@ -184,21 +259,32 @@ export default defineCommand({
         : `No package manager configured; using ${agent} from the current runner`,
     );
 
-    for (const id of selected) {
-      const tool = tools[id];
-      const spinner = p.spinner();
-      spinner.start(`Installing ${tool.label}`);
+    // spinner 表示中の出力は上書きされるので、集めてから止めた後に出す。
+    const messages: string[] = [];
+    const spinner = p.spinner();
+    spinner.start("Writing configs");
 
-      try {
-        const config = configs[id];
-        await tool.run(config === undefined ? { cwd } : { cwd, ...config });
-        spinner.stop(`${tool.label}: ok`);
-      } catch (error) {
-        spinner.stop(`${tool.label}: failed`);
-        p.cancel(error instanceof Error ? error.message : String(error));
+    try {
+      await runInit({
+        agent,
+        cwd,
+        log: (message) => {
+          messages.push(message);
+        },
+        mode,
+        tools: selected,
+        ...(eslint !== undefined && { eslint }),
+      });
+      spinner.stop("Configs written");
+    } catch (error) {
+      spinner.stop("Failed");
+      p.cancel(error instanceof Error ? error.message : String(error));
 
-        return;
-      }
+      return;
+    }
+
+    for (const message of messages) {
+      p.log.info(message);
     }
 
     const installSpinner = p.spinner();

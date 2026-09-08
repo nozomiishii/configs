@@ -12,7 +12,7 @@ interface InitResult {
 }
 
 // 一時dirでinitを実行し、生成された package.json を読み取る。
-async function runInit(): Promise<InitResult> {
+async function runInit(options: { shouldAddSelfDependency?: boolean } = {}): Promise<InitResult> {
   const tmpDir = mkdtempSync(path.join(tmpdir(), "nozo-postinstall-init-"));
   writeFileSync(
     path.join(tmpDir, "package.json"),
@@ -20,7 +20,7 @@ async function runInit(): Promise<InitResult> {
   );
 
   try {
-    await init({ cwd: tmpDir });
+    await init({ cwd: tmpDir, ...options });
 
     const pkg = JSON.parse(
       readFileSync(path.join(tmpDir, "package.json"), "utf-8"),
@@ -44,4 +44,11 @@ test("init adds postinstall script", async () => {
   const { pkg } = await runInit();
 
   expect(pkg.scripts?.postinstall).toBe("postinstall");
+});
+
+// configs メタパッケージから呼ぶときは、自パッケージ名を利用先に書かせない。
+test("init skips the self dependency when shouldAddSelfDependency is false", async () => {
+  const { pkg } = await runInit({ shouldAddSelfDependency: false });
+
+  expect(pkg.devDependencies?.["@nozomiishii/postinstall"]).toBeUndefined();
 });

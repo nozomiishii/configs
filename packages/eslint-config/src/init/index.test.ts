@@ -13,7 +13,11 @@ interface InitResult {
 }
 
 // 一時dirでinitを実行し、生成された package.json と eslint.config.ts を読み取る
-async function runInit(preset?: PresetId, isMonorepo?: boolean): Promise<InitResult> {
+async function runInit(
+  preset?: PresetId,
+  isMonorepo?: boolean,
+  shouldAddSelfDependency?: boolean,
+): Promise<InitResult> {
   const tmpDir = mkdtempSync(path.join(tmpdir(), "nozo-eslint-init-"));
   writeFileSync(
     path.join(tmpDir, "package.json"),
@@ -21,6 +25,7 @@ async function runInit(preset?: PresetId, isMonorepo?: boolean): Promise<InitRes
   );
 
   await init({
+    ...(shouldAddSelfDependency !== undefined && { shouldAddSelfDependency }),
     cwd: tmpDir,
     ...(isMonorepo !== undefined && { monorepo: isMonorepo }),
     ...(preset !== undefined && { preset }),
@@ -141,4 +146,11 @@ test("init with monorepo writes tsconfigRootDir for a kebab-case preset id", asy
   expect(configContent).toContain(
     "tanstackStart({ typescript: { tsconfigRootDir: import.meta.dirname } })",
   );
+});
+
+// configs メタパッケージから呼ぶときは、自パッケージ名を利用先に書かせない。
+test("init skips the self dependency when shouldAddSelfDependency is false", async () => {
+  const { pkg } = await runInit(undefined, undefined, false);
+
+  expect(pkg.devDependencies?.["@nozomiishii/eslint-config"]).toBeUndefined();
 });

@@ -25,6 +25,10 @@
       "release-type": "node",
       "component": "@nozomiishii/commitlint-config"
     },
+    "packages/configs": {
+      "release-type": "node",
+      "component": "@nozomiishii/configs"
+    },
     "packages/cspell-config": {
       "release-type": "node",
       "component": "@nozomiishii/cspell-config"
@@ -70,6 +74,7 @@
       "components": [
         "configs",
         "@nozomiishii/commitlint-config",
+        "@nozomiishii/configs",
         "@nozomiishii/cspell-config",
         "@nozomiishii/eslint-config",
         "@nozomiishii/lefthook-config",

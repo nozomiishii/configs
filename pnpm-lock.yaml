@@ -186,6 +186,58 @@ importers:
         specifier: 5.0.0
         version: 5.0.0(@types/node@24.13.3)(vite@8.2.2(@types/node@24.13.3))
 
+  packages/configs:
+    dependencies:
+      '@nozomiishii/commitlint-config':
+        specifier: workspace:*
+        version: link:../commitlint-config
+      '@nozomiishii/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@nozomiishii/lefthook-config':
+        specifier: workspace:*
+        version: link:../lefthook-config
+      '@nozomiishii/oxfmt-config':
+        specifier: workspace:*
+        version: link:../oxfmt-config
+      '@nozomiishii/postinstall':
+        specifier: workspace:*
+        version: link:../postinstall
+      '@nozomiishii/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
+      package-manager-detector:
+        specifier: 1.8.0
+        version: 1.8.0
+      yaml:
+        specifier: 2.9.0
+        version: 2.9.0
+    devDependencies:
+      '@types/node':
+        specifier: 24.13.3
+        version: 24.13.3
+      eslint:
+        specifier: 10.10.0
+        version: 10.10.0(jiti@2.7.0)(supports-color@7.2.0)
+      lefthook:
+        specifier: 2.1.12
+        version: 2.1.12
+      node:
+        specifier: runtime:24.20.0
+        version: runtime:24.20.0
+      oxfmt:
+        specifier: 0.66.0
+        version: 0.66.0
+      tsdown:
+        specifier: 0.23.0
+        version: 0.23.0(oxc-resolver@11.24.2)(typescript@6.0.3)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+      vitest:
+        specifier: 5.0.0
+        version: 5.0.0(@types/node@24.13.3)(vite@8.2.2(@types/node@24.13.3))
+
   packages/cspell-config:
     dependencies:
       cspell:
@@ -408,6 +460,9 @@ importers:
       '@nozomiishii/commitlint-config':
         specifier: workspace:*
         version: link:../commitlint-config
+      '@nozomiishii/configs':
+        specifier: workspace:*
+        version: link:../configs
       '@nozomiishii/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
