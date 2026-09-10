@@ -33,6 +33,7 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
+    "./cli": "./dist/cli.js",
     "./init": "./dist/init/index.js"
   },
   "publishConfig": {

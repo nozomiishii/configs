@@ -15,6 +15,11 @@ export interface InitOptions {
    * configs メタパッケージ経由の導入で使う。
    */
   shouldAddSelfDependency?: boolean;
+  /**
+   * starter が参照するパッケージ。既定は自パッケージ名。
+   * configs メタパッケージ経由の導入では meta のサブパスを渡す。
+   */
+  specifier?: string;
 }
 
 export type PresetId = "nextjs" | "node" | "tanstack-start";
@@ -41,6 +46,7 @@ export async function init({
   monorepo = false,
   preset = "nextjs",
   shouldAddSelfDependency = true,
+  specifier,
 }: InitOptions): Promise<void> {
   const root = packageRoot();
 
@@ -50,7 +56,8 @@ export async function init({
     peerDependencies: { eslint: string; typescript: string };
   };
 
-  const starterRaw = await readFile(path.join(root, "starters", `${preset}.ts`), "utf-8");
+  const starterFile = await readFile(path.join(root, "starters", `${preset}.ts`), "utf-8");
+  const starterRaw = rewriteStarter(starterFile, selfPkg.name, specifier ?? selfPkg.name);
 
   // monorepo の per-package config は tsconfigRootDir を明示する。
   const presetFunction = presetFunctions[preset];
@@ -85,6 +92,13 @@ export async function init({
 }
 
 /**
+ * npm 名から repo の packages/ 配下のディレクトリ名を取り出す。サブパスは読み飛ばす。
+ */
+function packageDirectory(specifier: string): string {
+  return specifier.split("/", 2)[1] ?? specifier;
+}
+
+/**
  * bundle後のチャンク位置に依存せず、package.jsonのあるパッケージルートを探す。
  * tsdownはinitを `dist/init-<hash>.js` へホイストするため `../../` が固定で使えない。
  */
@@ -102,4 +116,17 @@ function packageRoot(): string {
   }
 
   return dir;
+}
+
+/**
+ * starter の import 元を specifier に差し替える。@see の repo リンクも specifier のパッケージへ向ける。
+ * troubleshooting の blob リンクは eslint-config の文書を指したままにする。
+ */
+function rewriteStarter(starter: string, selfName: string, specifier: string): string {
+  return starter
+    .replaceAll(selfName, () => specifier)
+    .replaceAll(
+      `tree/main/packages/${packageDirectory(selfName)}`,
+      () => `tree/main/packages/${packageDirectory(specifier)}`,
+    );
 }

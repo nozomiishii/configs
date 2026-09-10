@@ -31,9 +31,8 @@ pnpx nozo init
 Manual setup:
 
 - add the dependency and its peers: `pnpm add -D @nozomiishii/configs eslint typescript lefthook oxfmt`
-- add `@nozomiishii/*` to `publicHoistPattern` (see below)
-- copy the config files from each package listed above
-- add the scripts that the child scaffolders write
+- write the config files below
+- add the scripts that the scaffolder writes
 
 ```json
 {
@@ -49,30 +48,54 @@ Manual setup:
 }
 ```
 
-## pnpm
+Nothing has to be hoisted into the consumer's `node_modules` root.
 
-pnpm 11 or newer is required. pnpm reads `publicHoistPattern` only from `pnpm-workspace.yaml`, not
-from `.npmrc`.
+## Config files
 
-pnpm keeps the child packages out of the consumer's `node_modules` root, so the `nozo-commitlint`,
-`nozo-git-harvest` and `postinstall` bins and the lefthook hooks under
-`node_modules/@nozomiishii/lefthook-config/hooks` are unreachable without hoisting them:
+`eslint.config.ts`, with `nextjs`, `tanstack-start` or `node` as the preset:
 
-```yaml
-# pnpm-workspace.yaml
-publicHoistPattern:
-  - "@nozomiishii/*"
+```ts
+import { defineConfig, nextjs } from "@nozomiishii/configs/eslint";
+
+export default defineConfig([...nextjs()]);
 ```
 
-## tsconfig
+`commitlint.config.ts`:
 
-`@nozomiishii/tsconfig` has no scaffolder. Extend it from the project's tsconfig.json:
+```ts
+export default { extends: ["@nozomiishii/configs/commitlint"] };
+```
+
+`oxfmt.config.ts`:
+
+```ts
+export { default } from "@nozomiishii/configs/oxfmt";
+```
+
+`lefthook.yaml`. lefthook reads `extends` as a path from the repository root, not as a package
+name:
+
+```yaml
+extends:
+  - ./node_modules/@nozomiishii/configs/recommended.yaml
+```
+
+`tsconfig.json`, with `base`, `lib`, `nextjs`, `tanstack-start` or `tsc` as the file name:
 
 ```json
 {
-  "extends": "@nozomiishii/tsconfig/tsconfig.json"
+  "extends": "@nozomiishii/configs/tsconfig/nextjs.json"
 }
 ```
+
+## Bins
+
+| bin | what it runs |
+| --- | --- |
+| `commitlint`, `nozo-commitlint` | commitlint with the bundled config |
+| `nozo-git-harvest` | cleanup of merged worktrees and branches |
+| `postinstall` | repository bootstrap |
+| `nozo-configs-init` | writes this set into the current project |
 
 ## License
 

@@ -1,112 +1,94 @@
-# @nozomiishii/configs メタパッケージを追加し、nozo init の既定にする
+# @nozomiishii/configs を subpath exports で配り、利用先の publicHoistPattern を不要にする
 
-計画は [issue](https://github.com/nozomiishii/configs/issues/2840) から移した。実装 PR で育てる。
+計画は [issue](https://github.com/nozomiishii/configs/issues/2846) から移した。実装 PR で育てる。hoist 版の設計は [PR #2841](https://github.com/nozomiishii/configs/pull/2841) にある。
 
 ## 目的
 
-利用先が devDependencies 1 行でおすすめ一式を導入できるようにする。
-既存の個別パッケージは残し、メタパッケージはそれらに依存するだけにする。
+利用先が触るものを `@nozomiishii/configs/...` の import / extends と `node_modules/.bin` だけにし、pnpm の hoist 設定を要らなくする。
+[メタパッケージ PR](https://github.com/nozomiishii/configs/pull/2841) の対案として、main を base にした別 PR にする。どちらか片方だけをマージできるようにするため。ブランチは #2841 のブランチから切って共通部分を引き継ぐ。
 
 ## 決めたこと
 
-- 含める: commitlint-config / eslint-config / lefthook-config / oxfmt-config / postinstall / tsconfig
-- 含めない: prettier-config / cspell-config / markdownlint-cli2-config。おすすめ一式ではない
-- pnpm 利用先には [publicHoistPattern](https://pnpm.io/settings/node-modules#publichoistpattern) に `@nozomiishii/*` が要る。推移依存の bin link と、lefthook-config の `recommended.yaml` が `node_modules/@nozomiishii/lefthook-config/hooks/...` を直接指すため。nozo init が pnpm-workspace.yaml に書き込む
-- nozo init の既定を configs 一式にし、個別選択も残す
-- release PR をマージする前に、`@nozomiishii/configs` を npm へ手動で 1 度 publish し、trusted publisher を登録する
-
-## 確かめたこと
-
-- publicHoistPattern で hoist した推移依存の bin が `node_modules/.bin` に link されることは公式に書かれていない。`file:` 依存の最小構成で実測して確認した
-- pnpm-workspace.yaml のキーは camelCase だけが有効。kebab-case は無視されることを実測した
-- 新パッケージの初回 npm publish は OIDC では通らない。oxfmt-config を足したときの release がこれで止まり、手動 publish 後に再実行した
+- PR の base は main。ブランチは #2841 から切る。子パッケージ 6 つは残す
+- meta の `exports` を用途別のサブパスにする。利用先の starter はすべて `@nozomiishii/configs/...` を指す
+- bin は meta 自身が wrapper を持つ。hoist に頼らない
+- pnpm-workspace.yaml の書き込みと、それに伴う `yaml` / `package-manager-detector` 依存、`agent` オプションを削る
 
 ## 変更
 
-### packages/configs を新設する
-
-npm 名は `@nozomiishii/configs`。
-
-- `dependencies`: 含める 6 パッケージを `workspace:*` で。pnpm-workspace.yaml の編集用に `yaml` も入れる。コメント保持のため Document API を使う
-- `peerDependencies`: `eslint` / `typescript` / `oxfmt` / `lefthook`。子パッケージの peer と同じ exact 値
-- `exports`: `./package.json` と `./init`。`.` は無し
-- `bin`: `nozo-configs-init`
-- `files`: `bin` / `dist` / `README.md`
-- scripts / devEngines / tsdown.config.ts / tsconfig.json / eslint.config.ts は lefthook-config をひな型にする
-
-`src/init/index.ts` の InitOptions は `cwd` に加えて `agent`、eslint init に渡す `monorepo` と `preset` を取る。処理は次の順。
-
-- 利用先 package.json の devDependencies に `@nozomiishii/configs` を書く。子 6 パッケージのキーが残っていれば削除し、削除した名前をログに出す。peer は書かず、子 init に任せる
-- 子パッケージの init を `shouldAddSelfDependency: false` で順に呼ぶ。commitlint → eslint → lefthook → oxfmt → postinstall。設定ファイル生成と scripts / peer の書き込みは子に任せる。tsconfig には init が無いので何もせず、README で `extends` を案内する
-- `agent` が pnpm のとき、`publicHoistPattern` に `@nozomiishii/*` を追加する。対象ファイルは cwd から上に向かって最初に見つかる pnpm-workspace.yaml。無ければ cwd に作る。既にあれば重複追加しない。コメントと他のキーは保持する
-
-### 子パッケージ 5 つの init に `shouldAddSelfDependency?: boolean` を足す
-
-commitlint-config / eslint-config / lefthook-config / oxfmt-config / postinstall。既定は true。
-false のとき `[selfPkg.name]: selfPkg.version` の書き込みだけを飛ばす。peer と scripts と設定ファイルは従来どおり。
-
-### nozo init
+### packages/configs の exports
 
 ```text
-nozo init
-├── configs (既定)
-│   ├── eslint の preset と monorepo を聞く
-│   └── @nozomiishii/configs/init を agent 付きで 1 回呼ぶ
-└── individual
-    └── 今の multiselect。tools には configs を足さない
+@nozomiishii/configs
+├── ./eslint              → eslint.ts        export * from "@nozomiishii/eslint-config" (TS ソースのまま配る。eslint-config と同じ)
+├── ./commitlint          → dist/commitlint.js  export { default } from "@nozomiishii/commitlint-config"
+├── ./oxfmt               → dist/oxfmt.js       export { default } from "@nozomiishii/oxfmt-config"
+├── ./tsconfig/*.json     → tsconfig/*.json     { "extends": "@nozomiishii/tsconfig/tsconfig.<name>.json" } の中継 5 本
+├── ./lefthook            → recommended.yaml    子の recommended.yaml の extends パスを meta に置換して build 時に生成
+├── ./hooks/*             → hooks/**            build 時に lefthook-config/hooks をコピー
+├── ./init                → dist/init/index.js
+└── ./package.json
 ```
 
-prompt と実行を分け、実行部を `runInit({ mode, cwd, agent, eslint })` として export する。テストはこの関数に対して書く。
-nozo の dependencies に `@nozomiishii/configs: workspace:*` を足す。
+- tsconfig の中継は meta の依存として `@nozomiishii/tsconfig` を解決する。TypeScript が symlink 先の実体から解決できることは統合テストで確かめる
+- hooks のコピーと `recommended.yaml` の生成は `scripts/build-lefthook.ts` で行い、`build` は `node scripts/build-lefthook.ts && tsdown` と明示する。出力先はパッケージルートにする。lefthook の extends は node の解決を通らず利用先のルートからの相対パスで読むため、`node_modules/@nozomiishii/configs/recommended.yaml` と `node_modules/@nozomiishii/configs/hooks/` が実体として要る。生成物は `.gitignore` に足す。ファイル名は子と同じ `recommended.yaml` にし、starter の置換が `@nozomiishii/lefthook-config` → `@nozomiishii/configs` だけで済むようにする
+- `bin`: `commitlint` / `nozo-commitlint` / `postinstall` / `nozo-git-harvest` の wrapper。中身は子の cli を import する 1 行。`nozo-configs-init` は残す
 
-### repo の配線
+### 子パッケージ
 
-- `.github/.release-please-config.json`: `packages/configs` を packages と linked-versions の components に追加。component は `@nozomiishii/configs`
-- `.github/.release-please-manifest.json`: `"packages/configs": "2.6.0"`。package.json の version も同じ値
-- `.github/workflows/configs.yaml`: oxfmt-config.yaml をひな型にする。paths-filter には `packages/configs/**` に加えて `packages/*/package.json` を入れ、Renovate が子の peer だけ更新した PR でもドリフト検知テストが走るようにする。test job に `pnpm test` と `pnpm test:integration` の 2 step を置く。required の job name は `Configs / required`
-- README.md / README.ja.md の Packages 表、packages/nozo/README(.ja).md の Sibling packages 表に行を足す
-- packages/configs/README.md と README.ja.md: 含まれるもの、Install は `nozo init` と手動の 2 通り、`tsconfig` の `extends` 例、prettier / cspell / markdownlint は個別導入と明記、pnpm 11 以上
+- commitlint-config に `./cli`、lefthook-config に `./cli` の exports を足す。wrapper bin が import するため。postinstall は `.` が cli なので不要
+- commitlint-config / eslint-config / lefthook-config / oxfmt-config の init に `specifier?: string` を足す。既定は自パッケージ名。starter 内の自パッケージ名をこの値に置き換え、`@see` の `packages/<子>` も `packages/configs` に置き換えて書く。lefthook は extends が `./node_modules/@nozomiishii/configs/recommended.yaml` になる
+
+### configs の init
+
+- devDependencies の書き換えと子パッケージの直接依存の削除は今のまま
+- 子 init を `shouldAddSelfDependency: false` と `specifier` 付きで呼ぶ
+- 子パッケージの直接依存を消したとき、monorepo の sub-package に残っている可能性を出力に 1 行添える。meta 経由と直接依存で版が違うと ESLint の plugin が二重登録されるため
+- pnpm-workspace.yaml の処理を削る。`agent` オプションも削る
+- bin.ts から package-manager-detector を外す
+
+### nozo
+
+- `runInit` から `agent` の受け渡しを外す。`resolvePackageManager` は install のために残す
+
+### README
+
+- packages/configs の README.md と README.ja.md を subpath 前提に書き直す。publicHoistPattern と pnpm 11 以上の記述を消し、利用先の各設定ファイルの書き方と bin 一覧を載せる
+- 設計ドキュメント `docs/configs メタパッケージの設計.md` を subpath 版に更新する
 
 ## テスト
 
-- `packages/configs/src/init/index.test.ts`
-  - devDependencies に `@nozomiishii/configs` と 4 peer が入り、子パッケージ名は入らない
-  - 既存の `@nozomiishii/eslint-config` などの直接依存が devDependencies から消える
-  - 子 init が生成するファイルと scripts が揃う
-  - pnpm: pnpm-workspace.yaml が無ければ作る / 既存のキーとコメントを保持して追記する / 既に `@nozomiishii/*` があれば重複しない / 上位ディレクトリにあればそちらに追記する
-  - npm / bun: pnpm-workspace.yaml を作らない
-- `packages/configs/package.test.ts`: ドリフト防止
-  - `dependencies` のキー集合が決めた 6 つ + yaml と一致する
-  - `peerDependencies` が子パッケージの peerDependencies の和集合と値まで一致する
-- `packages/configs/src/hoist.integration.test.ts`: bin link の実測を守る
-  - `pnpm pack` でメタと子を tarball にし、一時 dir に `publicHoistPattern` を置いて `pnpm install --ignore-scripts` する。`--offline` は store の状態に依存して flaky になるので使わない
-  - `node_modules/.bin/nozo-commitlint` / `postinstall` / `nozo-git-harvest` と `node_modules/@nozomiishii/lefthook-config/hooks` が存在すること
-  - ネットワークが要るので `pnpm test` から除外し、`pnpm test:integration` として CI の test job で回す
-- 子パッケージ 5 つ: `shouldAddSelfDependency: false` で自パッケージ名が書かれないテストを 1 件ずつ足す
-- nozo: `runInit({ mode: "configs" })` が `@nozomiishii/configs/init` を agent 付きで 1 回呼び、individual のときは呼ばないこと
+- `packages/configs/src/init/index.test.ts`: pnpm-workspace.yaml 系を削り、生成された eslint.config.ts / commitlint.config.ts / oxfmt.config.ts / lefthook.yaml が `@nozomiishii/configs/...` を指し、子パッケージ名を含まないことを見る
+- `packages/configs/package.test.ts`: dependencies は子 6 つだけ。`exports` に上の 8 種が揃う。hooks のコピーと lefthook-config/hooks が一致する。tsconfig の中継 5 本が `@nozomiishii/tsconfig` の `exports` キーと一致する
+- CI の paths-filter に `packages/lefthook-config/hooks/**`、各子の `recommended.yaml` / `starter.*` / `starters/**` を足す
+- `packages/configs/src/hoist.integration.test.ts` を `install.integration.test.ts` に改名。`publicHoistPattern` 無しで install し、次を確かめる。この repo 自身は `*eslint*` を hoist しているので、hoist 不要の証明はこの統合テストにだけ置く
+  - 一時 consumer は `git init` してから `lefthook dump` を実行する。git repo の外では lefthook が exit 128 になる
+  - `.bin` に wrapper 4 本があり、`nozo-commitlint --version` 相当が動く
+  - `node -e` で `@nozomiishii/configs/eslint` と `/commitlint` と `/oxfmt` が import できる
+  - `tsc --showConfig` が `@nozomiishii/configs/tsconfig/nextjs.json` の extends 連鎖を解決する
+  - `lefthook dump` が hooks を解決する
+- 子 4 パッケージ: `specifier` で starter の参照先が置き換わるテストを 1 件ずつ
+- nozo: `agent` を渡さなくなったことに合わせて既存テストを直す
 
 ## 移行
 
-- 既存利用先への影響なし。子パッケージの init は既定値で従来どおり
-- 利用先を configs に乗り換えるときは `nozo init` で configs を選ぶ。手動手順も README に書く
-- 初回 publish はユーザー作業。release PR をマージする前に `packages/configs` で `pnpm publish --no-git-checks` を実行し、npm のパッケージ設定で trusted publisher を登録する
-- infra 側の required_status_checks に `Configs / required` を足すのは、workflow が main に入った後にする。先に足すと既存 PR が Expected で止まる
+- PR #2841 と同じ。初回 publish の手動作業と required_status_checks は変わらない
+- #2841 とこの PR は片方だけをマージする。両方をマージすると hoist 版が一度リリースされる
+- 利用先の乗り換え手順は `nozo init` で configs を選ぶだけになり、pnpm の設定は要らない
 
 ## 範囲外
 
+- 子パッケージを meta に畳む単一パッケージ化
 - tsconfig.json のスキャフォールド
-- 子パッケージの deprecate や統合
 
 ## 比較した案
 
 | 案 | 効果 | コスト |
 | --- | --- | --- |
-| メタパッケージ (採用) | 導入 1 行、既存パッケージ無変更、後戻り可 | 利用先に publicHoistPattern が要る |
-| 単一パッケージへ統合 | hoist 不要、CI / release も 1 本 | 9 パッケージの deprecate と利用先の import 書き換え |
-| configs 側で bin / hooks を再エクスポート | hoist 不要 | 子に bin を足すたびに configs も直す二重管理 |
-| build 時に子の bin / hooks からシムを自動生成 | hoist 不要、二重管理も無い | lefthook の extends パスが子の recommended.yaml 内で固定されているのでシムでは解決しない。利用先の lefthook.yaml も別 starter が要る |
+| hooks を build 時にコピー (採用) | 子の hooks が正本のまま | build 手順が 1 つ増える。ドリフトはテストで守る |
+| hooks を meta に移し、lefthook-config が meta を参照 | コピー不要 | 依存が逆転し、lefthook-config 単体で使えなくなる |
+| starter の置換を meta 側の文字列置換で行う | 子の init に触らない | 子の starter の書き方に meta が依存する |
 
-## 見送ったレビュー指摘
+## 見送った指摘
 
-- `.npmrc` の `public-hoist-pattern` との衝突: pnpm 11 以降は `.npmrc` から auth と registry 以外の設定を読まないため対象外
-- pnpm-workspace.yaml の kebab-case キーへの追記: 有効でないキーに追記しても意味が無いので、camelCase キーに書く
+- なし。敵対的レビューの 10 件はすべて反映した

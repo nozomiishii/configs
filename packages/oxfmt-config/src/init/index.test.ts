@@ -14,7 +14,9 @@ interface InitResult {
 }
 
 // 一時dirでinitを実行し、生成された package.json と oxfmt.config.ts を読み取る。
-async function runInit(options: { shouldAddSelfDependency?: boolean } = {}): Promise<InitResult> {
+async function runInit(
+  options: { shouldAddSelfDependency?: boolean; specifier?: string } = {},
+): Promise<InitResult> {
   const tmpDir = mkdtempSync(path.join(tmpdir(), "nozo-oxfmt-init-"));
   writeFileSync(
     path.join(tmpDir, "package.json"),
@@ -89,4 +91,12 @@ test("init skips the self dependency when shouldAddSelfDependency is false", asy
   const { pkg } = await runInit({ shouldAddSelfDependency: false });
 
   expect(pkg.devDependencies?.["@nozomiishii/oxfmt-config"]).toBeUndefined();
+});
+
+// configs メタパッケージ経由で入れるときは、starter の参照先を specifier に差し替える。
+test("init points the starter at the given specifier", async () => {
+  const { configContent } = await runInit({ specifier: "@nozomiishii/configs/oxfmt" });
+
+  expect(configContent).toContain("@nozomiishii/configs/oxfmt");
+  expect(configContent).not.toContain("oxfmt-config");
 });

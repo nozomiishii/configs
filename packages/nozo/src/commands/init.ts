@@ -21,7 +21,6 @@ export interface EslintConfig {
 export type InitMode = "configs" | "individual";
 
 export interface RunInitOptions {
-  agent: string;
   cwd: string;
   eslint?: EslintConfig;
   /**
@@ -109,7 +108,6 @@ export async function resolvePackageManager(
  * prompt の答えを受け取って実際の scaffold を行う。prompt を含まないのでテストから直接呼べる。
  */
 export async function runInit({
-  agent,
   cwd,
   eslint,
   log,
@@ -123,10 +121,14 @@ export async function runInit({
   if (mode === "configs") {
     report("Installing @nozomiishii/configs");
 
-    const { removedDependencies } = await initConfigs({ agent, cwd, ...eslint });
+    const { notes, removedDependencies } = await initConfigs({ cwd, ...eslint });
 
     for (const name of removedDependencies) {
       report(`Removed ${name} from devDependencies; it now comes from @nozomiishii/configs`);
+    }
+
+    for (const note of notes) {
+      report(note);
     }
 
     return;
@@ -266,7 +268,6 @@ export default defineCommand({
 
     try {
       await runInit({
-        agent,
         cwd,
         log: (message) => {
           messages.push(message);

@@ -2,16 +2,11 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { expect, onTestFinished, test } from "vitest";
-import { parse } from "yaml";
 import { init } from ".";
 
 interface TargetPackageJson {
   devDependencies?: Record<string, string>;
   scripts?: Record<string, string>;
-}
-
-interface WorkspaceYaml {
-  publicHoistPattern?: string[];
 }
 
 const childPackages = new Set([
@@ -23,11 +18,9 @@ const childPackages = new Set([
   "@nozomiishii/tsconfig",
 ]);
 
-// 一時dirに root/project の2階層を作る。上位ディレクトリ探索を試すため project の親も要る。
-// root に .git を置き、探索が一時dirの外へ出て実在の pnpm-workspace.yaml を掴まないようにする。
-function createProject(devDependencies?: Record<string, string>): { cwd: string; root: string } {
+// 一時dirに利用先のプロジェクトを作る。
+function createProject(devDependencies?: Record<string, string>): string {
   const root = mkdtempSync(path.join(tmpdir(), "nozo-configs-init-"));
-  mkdirSync(path.join(root, ".git"));
   const cwd = path.join(root, "project");
   mkdirSync(cwd);
   writeFileSync(
@@ -39,24 +32,20 @@ function createProject(devDependencies?: Record<string, string>): { cwd: string;
     rmSync(root, { force: true, recursive: true });
   });
 
-  return { cwd, root };
+  return cwd;
 }
 
-function readHoistPatterns(dir: string): string[] | undefined {
-  return (parse(readWorkspaceYaml(dir)) as WorkspaceYaml).publicHoistPattern;
+function readGenerated(cwd: string, file: string): string {
+  return readFileSync(path.join(cwd, file), "utf-8");
 }
 
 function readPackageJson(cwd: string): TargetPackageJson {
   return JSON.parse(readFileSync(path.join(cwd, "package.json"), "utf-8")) as TargetPackageJson;
 }
 
-function readWorkspaceYaml(dir: string): string {
-  return readFileSync(path.join(dir, "pnpm-workspace.yaml"), "utf-8");
-}
-
 // init は @nozomiishii/configs を devDependencies に追加する。
 test("adds @nozomiishii/configs to devDependencies", async () => {
-  const { cwd } = createProject();
+  const cwd = createProject();
 
   await init({ cwd });
 
@@ -65,7 +54,7 @@ test("adds @nozomiishii/configs to devDependencies", async () => {
 
 // 子パッケージの peer は子の init が書くので、まとめて devDependencies に載る。
 test("adds the peer dependencies of the child packages to devDependencies", async () => {
-  const { cwd } = createProject();
+  const cwd = createProject();
 
   await init({ cwd });
 
@@ -78,7 +67,7 @@ test("adds the peer dependencies of the child packages to devDependencies", asyn
 
 // 子パッケージは configs 経由で入るので、利用先の devDependencies には書かない。
 test("does not add the child package names to devDependencies", async () => {
-  const { cwd } = createProject();
+  const cwd = createProject();
 
   await init({ cwd });
 
@@ -89,7 +78,7 @@ test("does not add the child package names to devDependencies", async () => {
 
 // 既に直接依存していた子パッケージは configs に置き換えるため削除する。
 test("removes an existing child package from devDependencies", async () => {
-  const { cwd } = createProject({ "@nozomiishii/eslint-config": "2.5.0" });
+  const cwd = createProject({ "@nozomiishii/eslint-config": "2.5.0" });
 
   await init({ cwd });
 
@@ -98,7 +87,7 @@ test("removes an existing child package from devDependencies", async () => {
 
 // 削除した子パッケージ名は呼び出し元が表示できるよう戻り値で返す。
 test("reports the removed child packages", async () => {
-  const { cwd } = createProject({
+  const cwd = createProject({
     "@nozomiishii/oxfmt-config": "2.5.0",
     "@nozomiishii/tsconfig": "2.5.0",
     typescript: "6.0.3",
@@ -112,9 +101,36 @@ test("reports the removed child packages", async () => {
   ]);
 });
 
+// 直接依存を消したときは、monorepo の sub-package に残っている可能性を注意書きで返す。
+test("notes that sub-packages may still depend on the removed packages", async () => {
+  const cwd = createProject({ "@nozomiishii/eslint-config": "2.5.0" });
+
+  const result = await init({ cwd });
+
+  expect(result.notes).toStrictEqual([expect.stringContaining("Sub-packages")]);
+});
+
+// 何も消していないときは注意書きを出さない。
+test("returns no note when nothing was removed", async () => {
+  const cwd = createProject();
+
+  const result = await init({ cwd });
+
+  expect(result.notes).toStrictEqual([]);
+});
+
+// monorepo では sub-package に子パッケージが残っている可能性があるので、何も消していなくても注意書きを返す。
+test("notes the sub-packages for a monorepo even when nothing was removed", async () => {
+  const cwd = createProject();
+
+  const result = await init({ cwd, monorepo: true });
+
+  expect(result.notes).toStrictEqual([expect.stringContaining("Sub-packages")]);
+});
+
 // 設定ファイルの生成は子の init に任せる。
 test("writes the config files of the child packages", async () => {
-  const { cwd } = createProject();
+  const cwd = createProject();
 
   await init({ cwd });
 
@@ -135,7 +151,7 @@ test("writes the config files of the child packages", async () => {
 
 // scripts の追加も子の init に任せる。
 test("adds the scripts of the child packages", async () => {
-  const { cwd } = createProject();
+  const cwd = createProject();
 
   await init({ cwd });
 
@@ -146,180 +162,63 @@ test("adds the scripts of the child packages", async () => {
   );
 });
 
-// pnpm では publicHoistPattern が要るので、pnpm-workspace.yaml が無ければ cwd に作る。
-test("creates pnpm-workspace.yaml in cwd when no workspace file exists", async () => {
-  const { cwd } = createProject();
+// eslint.config.ts は configs の subpath から import する。
+test("points eslint.config.ts at the configs subpath", async () => {
+  const cwd = createProject();
 
-  await init({ agent: "pnpm", cwd });
+  await init({ cwd });
 
-  expect(readHoistPatterns(cwd)).toStrictEqual(["@nozomiishii/*"]);
+  const content = readGenerated(cwd, "eslint.config.ts");
+
+  expect(content).toContain('from "@nozomiishii/configs/eslint"');
+  expect(content).not.toContain("@nozomiishii/eslint-config");
 });
 
-// 既存の publicHoistPattern には追記し、順序も既存の後ろに置く。
-test("appends the hoist pattern to an existing publicHoistPattern list", async () => {
-  const { cwd } = createProject();
-  writeFileSync(
-    path.join(cwd, "pnpm-workspace.yaml"),
-    '# keep me\npackages:\n  - "packages/*"\n\npublicHoistPattern:\n  - "@types/*"\n',
-  );
+// commitlint.config.ts は configs の subpath を extends する。
+test("points commitlint.config.ts at the configs subpath", async () => {
+  const cwd = createProject();
 
-  await init({ agent: "pnpm", cwd });
+  await init({ cwd });
 
-  expect(readHoistPatterns(cwd)).toStrictEqual(["@types/*", "@nozomiishii/*"]);
+  const content = readGenerated(cwd, "commitlint.config.ts");
+
+  expect(content).toContain("@nozomiishii/configs/commitlint");
+  expect(content).not.toContain("@nozomiishii/commitlint-config");
 });
 
-// 既存の pnpm-workspace.yaml はコメントと他のキーを残したまま追記する。
-test("keeps existing keys and comments in pnpm-workspace.yaml", async () => {
-  const { cwd } = createProject();
-  writeFileSync(
-    path.join(cwd, "pnpm-workspace.yaml"),
-    '# keep me\npackages:\n  - "packages/*"\n\npublicHoistPattern:\n  - "@types/*"\n',
-  );
+// oxfmt.config.ts は configs の subpath から re-export する。
+test("points oxfmt.config.ts at the configs subpath", async () => {
+  const cwd = createProject();
 
-  await init({ agent: "pnpm", cwd });
+  await init({ cwd });
 
-  const yaml = readWorkspaceYaml(cwd);
+  const content = readGenerated(cwd, "oxfmt.config.ts");
 
-  expect(yaml).toContain("# keep me");
-  expect(yaml).toContain("packages/*");
+  expect(content).toContain('from "@nozomiishii/configs/oxfmt"');
+  expect(content).not.toContain("@nozomiishii/oxfmt-config");
 });
 
-// 既に @nozomiishii/* があれば追記しない。
-test("does not duplicate an existing @nozomiishii/* hoist pattern", async () => {
-  const { cwd } = createProject();
-  writeFileSync(
-    path.join(cwd, "pnpm-workspace.yaml"),
-    'publicHoistPattern:\n  - "@nozomiishii/*"\n',
-  );
+// lefthook.yaml は configs の recommended.yaml を extends する。
+test("points lefthook.yaml at the configs recommended.yaml", async () => {
+  const cwd = createProject();
 
-  await init({ agent: "pnpm", cwd });
+  await init({ cwd });
 
-  expect(readHoistPatterns(cwd)).toStrictEqual(["@nozomiishii/*"]);
+  const content = readGenerated(cwd, "lefthook.yaml");
+
+  expect(content).toContain("./node_modules/@nozomiishii/configs/recommended.yaml");
+  expect(content).not.toContain("@nozomiishii/lefthook-config");
 });
 
-// キーだけあって値が空のときも、リストとして書き直す。
-test("writes the hoist pattern when publicHoistPattern has a null value", async () => {
-  const { cwd } = createProject();
-  writeFileSync(
-    path.join(cwd, "pnpm-workspace.yaml"),
-    '# keep me\npackages:\n  - "packages/*"\n\npublicHoistPattern:\n',
-  );
+// 生成した設定ファイルは子パッケージ名を含まない。利用先が触る名前は configs だけにする。
+test("does not leave any child package specifier in the generated config files", async () => {
+  const cwd = createProject();
 
-  await init({ agent: "pnpm", cwd });
+  await init({ cwd });
 
-  expect(readHoistPatterns(cwd)).toStrictEqual(["@nozomiishii/*"]);
-  expect(readWorkspaceYaml(cwd)).toContain("# keep me");
-});
+  const generated = ["commitlint.config.ts", "eslint.config.ts", "lefthook.yaml", "oxfmt.config.ts"]
+    .map((file) => readGenerated(cwd, file))
+    .join("\n");
 
-// コメントだけのファイルにもキーを足せる。
-test("writes the hoist pattern into a comment-only pnpm-workspace.yaml", async () => {
-  const { cwd } = createProject();
-  writeFileSync(path.join(cwd, "pnpm-workspace.yaml"), "# keep me\n# and me\n");
-
-  await init({ agent: "pnpm", cwd });
-
-  expect(readHoistPatterns(cwd)).toStrictEqual(["@nozomiishii/*"]);
-  expect(readWorkspaceYaml(cwd)).toContain("# keep me");
-});
-
-// flow 記法のリストにも追記できる。
-test("appends the hoist pattern to a flow-style publicHoistPattern list", async () => {
-  const { cwd } = createProject();
-  writeFileSync(
-    path.join(cwd, "pnpm-workspace.yaml"),
-    'packages:\n  - "packages/*"\n\npublicHoistPattern: ["@types/*"]\n',
-  );
-
-  await init({ agent: "pnpm", cwd });
-
-  expect(readHoistPatterns(cwd)).toStrictEqual(["@types/*", "@nozomiishii/*"]);
-  expect(readWorkspaceYaml(cwd)).toContain("packages/*");
-});
-
-// 空ファイルは中身が無いだけなので、新規作成と同じ結果にする。
-test("writes the hoist pattern into an empty pnpm-workspace.yaml", async () => {
-  const { cwd } = createProject();
-  writeFileSync(path.join(cwd, "pnpm-workspace.yaml"), "");
-
-  await init({ agent: "pnpm", cwd });
-
-  expect(readHoistPatterns(cwd)).toStrictEqual(["@nozomiishii/*"]);
-});
-
-// monorepo の package から実行しても、書き込み先は上位の pnpm-workspace.yaml にする。
-test("appends to the nearest pnpm-workspace.yaml in a parent directory", async () => {
-  const { cwd, root } = createProject();
-  writeFileSync(path.join(root, "pnpm-workspace.yaml"), 'packages:\n  - "project"\n');
-
-  await init({ agent: "pnpm", cwd });
-
-  expect(readHoistPatterns(root)).toStrictEqual(["@nozomiishii/*"]);
-});
-
-// 上位探索は repo の外へ出ないので、.git より上の pnpm-workspace.yaml は書き換えない。
-test("stops the upward search at a .git boundary", async () => {
-  const { cwd, root } = createProject();
-  const outside = 'packages:\n  - "project"\n';
-  writeFileSync(path.join(root, "pnpm-workspace.yaml"), outside);
-  mkdirSync(path.join(cwd, ".git"));
-
-  await init({ agent: "pnpm", cwd });
-
-  expect(readWorkspaceYaml(root)).toBe(outside);
-});
-
-// .git で探索が止まったときは、利用先の cwd に新しく作る。
-test("creates pnpm-workspace.yaml in cwd when the search stops at a .git boundary", async () => {
-  const { cwd, root } = createProject();
-  writeFileSync(path.join(root, "pnpm-workspace.yaml"), 'packages:\n  - "project"\n');
-  mkdirSync(path.join(cwd, ".git"));
-
-  await init({ agent: "pnpm", cwd });
-
-  expect(readHoistPatterns(cwd)).toStrictEqual(["@nozomiishii/*"]);
-});
-
-// publicHoistPattern がリストでないときは、上書きせずに手直しを求める。
-test("throws when publicHoistPattern is not a list", async () => {
-  const { cwd } = createProject();
-  writeFileSync(path.join(cwd, "pnpm-workspace.yaml"), 'publicHoistPattern: "@types/*"\n');
-
-  await expect(init({ agent: "pnpm", cwd })).rejects.toThrow("publicHoistPattern");
-});
-
-// YAML として壊れているファイルは、パスと yaml のエラー内容を添えて落とす。
-test("throws with the file path when pnpm-workspace.yaml cannot be parsed", async () => {
-  const { cwd } = createProject();
-  writeFileSync(path.join(cwd, "pnpm-workspace.yaml"), 'publicHoistPattern: ["@types/*"\n');
-
-  await expect(init({ agent: "pnpm", cwd })).rejects.toThrow(path.join(cwd, "pnpm-workspace.yaml"));
-});
-
-// 壊れたファイルは書き換えず、そのまま残す。
-test("leaves an unparsable pnpm-workspace.yaml untouched", async () => {
-  const { cwd } = createProject();
-  const broken = 'publicHoistPattern: ["@types/*"\n';
-  writeFileSync(path.join(cwd, "pnpm-workspace.yaml"), broken);
-
-  await expect(init({ agent: "pnpm", cwd })).rejects.toThrow("Failed to parse");
-
-  expect(readWorkspaceYaml(cwd)).toBe(broken);
-});
-
-// npm には publicHoistPattern の概念が無いので何も作らない。
-test("does not create pnpm-workspace.yaml for npm", async () => {
-  const { cwd } = createProject();
-
-  await init({ agent: "npm", cwd });
-
-  expect(existsSync(path.join(cwd, "pnpm-workspace.yaml"))).toBe(false);
-});
-
-// bun も同様に何も作らない。
-test("does not create pnpm-workspace.yaml for bun", async () => {
-  const { cwd } = createProject();
-
-  await init({ agent: "bun", cwd });
-
-  expect(existsSync(path.join(cwd, "pnpm-workspace.yaml"))).toBe(false);
+  expect([...childPackages].filter((name) => generated.includes(name))).toStrictEqual([]);
 });

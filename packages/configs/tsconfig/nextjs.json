@@ -1,0 +1,3 @@
+{
+  "extends": "@nozomiishii/tsconfig/tsconfig.nextjs.json"
+}

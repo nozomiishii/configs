@@ -10,19 +10,18 @@ import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { isScalar, isSeq, parseDocument } from "yaml";
 
 export interface InitOptions {
-  /**
-   * package-manager-detector の AgentName。pnpm のときだけ publicHoistPattern を書く。
-   */
-  agent?: string;
   cwd: string;
   monorepo?: boolean;
   preset?: PresetId;
 }
 
 export interface InitResult {
+  /**
+   * 利用先に伝える注意書き。呼び出し元がそのまま表示する。
+   */
+  notes: string[];
   /**
    * configs に置き換えたので devDependencies から消した子パッケージ名。
    */
@@ -47,11 +46,15 @@ const bundledPackages = [
   "@nozomiishii/tsconfig",
 ];
 
-const hoistKey = "publicHoistPattern";
-const hoistPattern = "@nozomiishii/*";
-const workspaceFileName = "pnpm-workspace.yaml";
+/**
+ * 直接依存を消したとき、および monorepo を指定したときに出す注意書き。monorepo の sub-package に
+ * 残った古い版が configs 経由の版と併存すると、ESLint の plugin が二重に登録される。
+ * ルートから消せる依存が無くても sub-package には残り得るので、monorepo なら常に出す。
+ */
+const subPackageNote =
+  "Sub-packages in a monorepo may still list the removed packages. Remove them there too: two versions of the same package register the ESLint plugins twice.";
 
-export async function init({ agent, cwd, monorepo, preset }: InitOptions): Promise<InitResult> {
+export async function init({ cwd, monorepo, preset }: InitOptions): Promise<InitResult> {
   const root = packageRoot();
   const selfPkg = JSON.parse(
     await readFile(path.join(root, "package.json"), "utf-8"),
@@ -71,96 +74,30 @@ export async function init({ agent, cwd, monorepo, preset }: InitOptions): Promi
 
   await writeFile(targetPath, `${JSON.stringify(target, null, 2)}\n`);
 
-  // 設定ファイル・scripts・peer の書き込みは子に任せ、自分の名前だけ書かせない。
-  await initCommitlint({ cwd, shouldAddSelfDependency: false });
+  // 設定ファイル・scripts・peer の書き込みは子に任せ、参照先だけ configs のサブパスに向けさせる。
+  await initCommitlint({
+    cwd,
+    shouldAddSelfDependency: false,
+    specifier: `${selfPkg.name}/commitlint`,
+  });
   await initEslint({
     cwd,
     shouldAddSelfDependency: false,
+    specifier: `${selfPkg.name}/eslint`,
     ...(monorepo !== undefined && { monorepo }),
     ...(preset !== undefined && { preset }),
   });
-  await initLefthook({ cwd, shouldAddSelfDependency: false });
-  await initOxfmt({ cwd, shouldAddSelfDependency: false });
+  // lefthook の extends は node の解決を通らないので、サブパスではなくパッケージ名を渡す。
+  await initLefthook({ cwd, shouldAddSelfDependency: false, specifier: selfPkg.name });
+  await initOxfmt({ cwd, shouldAddSelfDependency: false, specifier: `${selfPkg.name}/oxfmt` });
   await initPostinstall({ cwd, shouldAddSelfDependency: false });
 
-  if (isPnpm(agent)) {
-    await addPublicHoistPattern(cwd);
-  }
+  const shouldNote = removedDependencies.length > 0 || monorepo === true;
 
-  return { removedDependencies };
-}
-
-/**
- * 子パッケージの bin と lefthook の hooks は推移依存になるため、pnpm では hoist しないと利用先から辿れない。
- */
-async function addPublicHoistPattern(cwd: string): Promise<void> {
-  const filePath = findWorkspaceFile(cwd) ?? path.resolve(cwd, workspaceFileName);
-  const raw = existsSync(filePath) ? await readFile(filePath, "utf-8") : "";
-
-  // コメントと既存キーを残すため、JS の値ではなく Document を編集する。
-  const doc = parseDocument(raw);
-  const [parseError] = doc.errors;
-
-  if (parseError !== undefined) {
-    throw new Error(`Failed to parse ${filePath}: ${parseError.message}`);
-  }
-
-  const patterns = doc.get(hoistKey);
-
-  if (patterns === undefined || patterns === null) {
-    doc.set(hoistKey, [hoistPattern]);
-  } else if (isSeq(patterns)) {
-    const isHas = patterns.items.some(
-      (item) => (isScalar(item) ? item.value : item) === hoistPattern,
-    );
-
-    if (!isHas) {
-      patterns.add(hoistPattern);
-    }
-  } else {
-    throw new Error(
-      `${hoistKey} in ${filePath} is not a list. Add "${hoistPattern}" to it manually.`,
-    );
-  }
-
-  await writeFile(filePath, doc.toString());
-}
-
-/**
- * cwd から上に向かって最初に見つかる pnpm-workspace.yaml を返す。monorepo の package から実行されても
- * 設定は workspace root の 1 ファイルにしか効かない。
- * repo の外にある無関係なファイルを書き換えないよう、`.git` のあるディレクトリで探索を打ち切る。
- */
-function findWorkspaceFile(cwd: string): string | undefined {
-  let dir = path.resolve(cwd);
-
-  for (;;) {
-    const candidate = path.join(dir, workspaceFileName);
-
-    if (existsSync(candidate)) {
-      return candidate;
-    }
-
-    // worktree の `.git` はファイルなので、ディレクトリかどうかは見ない。
-    if (existsSync(path.join(dir, ".git"))) {
-      return undefined;
-    }
-
-    const parent = path.dirname(dir);
-
-    if (parent === dir) {
-      return undefined;
-    }
-
-    dir = parent;
-  }
-}
-
-/**
- * AgentName は pnpm 6 系を `pnpm@6` として返すため、`@` の前で判定する。
- */
-function isPnpm(agent: string | undefined): boolean {
-  return agent?.split("@", 1)[0] === "pnpm";
+  return {
+    notes: shouldNote ? [subPackageNote] : [],
+    removedDependencies,
+  };
 }
 
 /**

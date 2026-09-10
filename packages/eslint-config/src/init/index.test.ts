@@ -17,6 +17,7 @@ async function runInit(
   preset?: PresetId,
   isMonorepo?: boolean,
   shouldAddSelfDependency?: boolean,
+  specifier?: string,
 ): Promise<InitResult> {
   const tmpDir = mkdtempSync(path.join(tmpdir(), "nozo-eslint-init-"));
   writeFileSync(
@@ -29,6 +30,7 @@ async function runInit(
     cwd: tmpDir,
     ...(isMonorepo !== undefined && { monorepo: isMonorepo }),
     ...(preset !== undefined && { preset }),
+    ...(specifier !== undefined && { specifier }),
   });
 
   const pkg = JSON.parse(
@@ -153,4 +155,12 @@ test("init skips the self dependency when shouldAddSelfDependency is false", asy
   const { pkg } = await runInit(undefined, undefined, false);
 
   expect(pkg.devDependencies?.["@nozomiishii/eslint-config"]).toBeUndefined();
+});
+
+// configs メタパッケージ経由で入れるときは、starter の import 元を specifier に差し替える。
+test("init points the starter at the given specifier", async () => {
+  const { configContent } = await runInit("node", false, false, "@nozomiishii/configs/eslint");
+
+  expect(configContent).toContain('from "@nozomiishii/configs/eslint"');
+  expect(configContent).not.toContain('from "@nozomiishii/eslint-config"');
 });

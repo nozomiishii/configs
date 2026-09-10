@@ -13,6 +13,11 @@ export interface InitOptions {
    * configs メタパッケージ経由の導入で使う。
    */
   shouldAddSelfDependency?: boolean;
+  /**
+   * starter が参照するパッケージ。既定は自パッケージ名。
+   * configs メタパッケージ経由の導入では meta のサブパスを渡す。
+   */
+  specifier?: string;
 }
 
 interface PackageJson {
@@ -24,7 +29,11 @@ interface PackageJson {
   version: string;
 }
 
-export async function init({ cwd, shouldAddSelfDependency = true }: InitOptions): Promise<void> {
+export async function init({
+  cwd,
+  shouldAddSelfDependency = true,
+  specifier,
+}: InitOptions): Promise<void> {
   const root = packageRoot();
 
   const selfPkg = JSON.parse(
@@ -33,7 +42,8 @@ export async function init({ cwd, shouldAddSelfDependency = true }: InitOptions)
     peerDependencies: { oxfmt: string };
   };
 
-  const starter = await readFile(path.join(root, "starter.ts"), "utf-8");
+  const starterRaw = await readFile(path.join(root, "starter.ts"), "utf-8");
+  const starter = rewriteStarter(starterRaw, selfPkg.name, specifier ?? selfPkg.name);
 
   const targetPath = path.resolve(cwd, "package.json");
   const target = JSON.parse(await readFile(targetPath, "utf-8")) as PackageJson;
@@ -60,6 +70,13 @@ export async function init({ cwd, shouldAddSelfDependency = true }: InitOptions)
 }
 
 /**
+ * npm 名から repo の packages/ 配下のディレクトリ名を取り出す。サブパスは読み飛ばす。
+ */
+function packageDirectory(specifier: string): string {
+  return specifier.split("/", 2)[1] ?? specifier;
+}
+
+/**
  * bundle後のチャンク位置に依存せず、package.jsonのあるパッケージルートを探す。
  * tsdownはinitを `dist/init-<hash>.js` へホイストするため `../../` が固定で使えない。
  */
@@ -77,4 +94,16 @@ function packageRoot(): string {
   }
 
   return dir;
+}
+
+/**
+ * starter の参照先を specifier に差し替える。@see の repo リンクも specifier のパッケージへ向ける。
+ */
+function rewriteStarter(starter: string, selfName: string, specifier: string): string {
+  return starter
+    .replaceAll(selfName, () => specifier)
+    .replaceAll(
+      `tree/main/packages/${packageDirectory(selfName)}`,
+      () => `tree/main/packages/${packageDirectory(specifier)}`,
+    );
 }

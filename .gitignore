@@ -35,6 +35,10 @@ storybook-static
 # dist
 dist
 
+# @nozomiishii/configs が build 時に lefthook-config から生成する
+packages/configs/hooks
+packages/configs/recommended.yaml
+
 # eslint
 .eslint-config-inspector
 eslint-typegen.d.ts

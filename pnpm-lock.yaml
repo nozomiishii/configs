@@ -206,12 +206,6 @@ importers:
       '@nozomiishii/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
-      package-manager-detector:
-        specifier: 1.8.0
-        version: 1.8.0
-      yaml:
-        specifier: 2.9.0
-        version: 2.9.0
     devDependencies:
       '@types/node':
         specifier: 24.13.3

@@ -31,9 +31,8 @@ pnpx nozo init
 手動で入れる場合:
 
 - 依存と peer を足す: `pnpm add -D @nozomiishii/configs eslint typescript lefthook oxfmt`
-- `publicHoistPattern` に `@nozomiishii/*` を足す (下記)
-- 上の各パッケージから設定ファイルを写す
-- 子パッケージのスキャフォールドが書く scripts を足す
+- 下の設定ファイルを書く
+- スキャフォールドが書く scripts を足す
 
 ```json
 {
@@ -49,30 +48,53 @@ pnpx nozo init
 }
 ```
 
-## pnpm
+利用先の `node_modules` 直下に巻き上げる設定は要らない。
 
-pnpm 11 以上が要る。pnpm は `publicHoistPattern` を `.npmrc` からは読まず、`pnpm-workspace.yaml`
-からだけ読む。
+## 設定ファイル
 
-pnpm は子パッケージを利用先の `node_modules` 直下に置かないため、hoist しないと `nozo-commitlint`、
-`nozo-git-harvest`、`postinstall` の bin と
-`node_modules/@nozomiishii/lefthook-config/hooks` の lefthook hooks に届かない:
+`eslint.config.ts`。preset は `nextjs` と `tanstack-start` と `node` から選ぶ:
 
-```yaml
-# pnpm-workspace.yaml
-publicHoistPattern:
-  - "@nozomiishii/*"
+```ts
+import { defineConfig, nextjs } from "@nozomiishii/configs/eslint";
+
+export default defineConfig([...nextjs()]);
 ```
 
-## tsconfig
+`commitlint.config.ts`:
 
-`@nozomiishii/tsconfig` にはスキャフォールドが無い。プロジェクトの tsconfig.json から extends する:
+```ts
+export default { extends: ["@nozomiishii/configs/commitlint"] };
+```
+
+`oxfmt.config.ts`:
+
+```ts
+export { default } from "@nozomiishii/configs/oxfmt";
+```
+
+`lefthook.yaml`。lefthook の `extends` はパッケージ名ではなく、repo ルートからのパスで読む:
+
+```yaml
+extends:
+  - ./node_modules/@nozomiishii/configs/recommended.yaml
+```
+
+`tsconfig.json`。ファイル名は `base` と `lib` と `nextjs` と `tanstack-start` と `tsc` から選ぶ:
 
 ```json
 {
-  "extends": "@nozomiishii/tsconfig/tsconfig.json"
+  "extends": "@nozomiishii/configs/tsconfig/nextjs.json"
 }
 ```
+
+## bin
+
+| bin | 実行するもの |
+| --- | --- |
+| `commitlint`、`nozo-commitlint` | 同梱 config での commitlint |
+| `nozo-git-harvest` | merge 済みの worktree と branch の掃除 |
+| `postinstall` | repo のセットアップ |
+| `nozo-configs-init` | この一式を今のプロジェクトに書き込む |
 
 ## License
 

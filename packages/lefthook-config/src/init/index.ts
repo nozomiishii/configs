@@ -13,6 +13,11 @@ export interface InitOptions {
    * configs メタパッケージ経由の導入で使う。
    */
   shouldAddSelfDependency?: boolean;
+  /**
+   * starter が extends するパッケージ。既定は自パッケージ名。
+   * configs メタパッケージ経由の導入では meta の名前を渡す。
+   */
+  specifier?: string;
 }
 
 interface PackageJson {
@@ -22,7 +27,11 @@ interface PackageJson {
   version: string;
 }
 
-export async function init({ cwd, shouldAddSelfDependency = true }: InitOptions): Promise<void> {
+export async function init({
+  cwd,
+  shouldAddSelfDependency = true,
+  specifier,
+}: InitOptions): Promise<void> {
   const root = packageRoot();
 
   const selfPkg = JSON.parse(
@@ -31,7 +40,11 @@ export async function init({ cwd, shouldAddSelfDependency = true }: InitOptions)
     peerDependencies: { lefthook: string };
   };
 
-  const starter = await readFile(path.join(root, "starter.yaml"), "utf-8");
+  const starterRaw = await readFile(path.join(root, "starter.yaml"), "utf-8");
+
+  // extends は node の解決を通らないので、パッケージ名の部分だけを差し替える。
+  const starterSpecifier = specifier ?? selfPkg.name;
+  const starter = starterRaw.replaceAll(selfPkg.name, () => starterSpecifier);
 
   const targetPath = path.resolve(cwd, "package.json");
   const target = JSON.parse(await readFile(targetPath, "utf-8")) as PackageJson;

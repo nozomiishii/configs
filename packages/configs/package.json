@@ -19,25 +19,39 @@
     "directory": "packages/configs"
   },
   "bin": {
-    "nozo-configs-init": "./bin/nozo-configs-init.js"
+    "commitlint": "./bin/commitlint.js",
+    "nozo-commitlint": "./bin/nozo-commitlint.js",
+    "nozo-configs-init": "./bin/nozo-configs-init.js",
+    "nozo-git-harvest": "./bin/nozo-git-harvest.js",
+    "postinstall": "./bin/postinstall.js"
   },
   "files": [
     "bin",
     "dist",
+    "hooks",
+    "tsconfig",
+    "eslint.ts",
+    "recommended.yaml",
     "README.md"
   ],
   "type": "module",
   "exports": {
+    "./commitlint": "./dist/commitlint.js",
+    "./eslint": "./eslint.ts",
+    "./hooks/*": "./hooks/*",
     "./init": "./dist/init/index.js",
-    "./package.json": "./package.json"
+    "./lefthook": "./recommended.yaml",
+    "./oxfmt": "./dist/oxfmt.js",
+    "./package.json": "./package.json",
+    "./tsconfig/*.json": "./tsconfig/*.json"
   },
   "publishConfig": {
     "access": "public",
     "provenance": true
   },
   "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch --sourcemap",
+    "build": "node scripts/build-lefthook.ts && tsdown",
+    "dev": "node scripts/build-lefthook.ts && tsdown --watch --sourcemap",
     "format": "pnpm oxfmt . --check",
     "lint": "eslint --max-warnings=0 .",
     "prepublishOnly": "pnpm run build",
@@ -51,9 +65,7 @@
     "@nozomiishii/lefthook-config": "workspace:*",
     "@nozomiishii/oxfmt-config": "workspace:*",
     "@nozomiishii/postinstall": "workspace:*",
-    "@nozomiishii/tsconfig": "workspace:*",
-    "package-manager-detector": "1.8.0",
-    "yaml": "2.9.0"
+    "@nozomiishii/tsconfig": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "24.13.3",

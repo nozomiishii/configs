@@ -10,7 +10,9 @@ interface InitResult {
 }
 
 // 一時dirでinitを実行し、生成された package.json と commitlint.config.ts を読み取る。
-async function runInit(options: { shouldAddSelfDependency?: boolean } = {}): Promise<InitResult> {
+async function runInit(
+  options: { shouldAddSelfDependency?: boolean; specifier?: string } = {},
+): Promise<InitResult> {
   const tmpDir = mkdtempSync(path.join(tmpdir(), "nozo-commitlint-init-"));
   writeFileSync(
     path.join(tmpDir, "package.json"),
@@ -50,4 +52,12 @@ test("init skips the self dependency when shouldAddSelfDependency is false", asy
   const { pkg } = await runInit({ shouldAddSelfDependency: false });
 
   expect(pkg.devDependencies?.["@nozomiishii/commitlint-config"]).toBeUndefined();
+});
+
+// configs メタパッケージ経由で入れるときは、starter の参照先を specifier に差し替える。
+test("init points the starter at the given specifier", async () => {
+  const { configContent } = await runInit({ specifier: "@nozomiishii/configs/commitlint" });
+
+  expect(configContent).toContain("@nozomiishii/configs/commitlint");
+  expect(configContent).not.toContain("commitlint-config");
 });

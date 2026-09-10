@@ -41,6 +41,11 @@ jobs:
               - 'packages/configs/**'
               # 子パッケージの peer だけ動いた Renovate PR でもドリフト検知テストを走らせる
               - 'packages/*/package.json'
+              # meta が build 時に取り込む正本と、meta が書き換える starter
+              - 'packages/lefthook-config/hooks/**'
+              - 'packages/lefthook-config/recommended.yaml'
+              - 'packages/*/starter.*'
+              - 'packages/eslint-config/starters/**'
               - '.github/workflows/configs.yaml'
 
   static:
