@@ -26,7 +26,7 @@
     "format": "pnpm oxfmt --check '!packages/**' .",
     "format:fix": "pnpm oxfmt '!packages/**' .",
     "oxfmt": "oxfmt --no-error-on-unmatched-pattern",
-    "postinstall": "pnpm -r run build && postinstall"
+    "prepare": "pnpm -r run build && postinstall"
   },
   "devDependencies": {
     "@nozomiishii/commitlint-config": "workspace:*",
