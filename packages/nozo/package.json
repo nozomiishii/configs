@@ -38,7 +38,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@clack/prompts": "1.7.0",
+    "@clack/prompts": "1.8.0",
     "@nozomiishii/commitlint-config": "workspace:*",
     "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/lefthook-config": "workspace:*",

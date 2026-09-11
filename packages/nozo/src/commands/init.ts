@@ -12,6 +12,10 @@ import { type AgentName, detect, type DetectOptions, getUserAgent } from "packag
 
 const exec = promisify(execFile);
 
+// TODO [@clack/prompts@>1.8.0]: p.isCancel に戻す。1.8.0 の isCancel は typeof CANCEL_SYMBOL に絞り込むが、プロンプトの戻り値は symbol のままなので絞り込めない
+// https://github.com/bombshell-dev/clack/pull/601
+const isCancel = (value: unknown): value is symbol => p.isCancel(value);
+
 interface Tool {
   configure?: () => Promise<null | ToolConfig>;
   description: string;
@@ -48,7 +52,7 @@ export const tools = {
         ],
       });
 
-      if (p.isCancel(preset)) {
+      if (isCancel(preset)) {
         return null;
       }
 
@@ -69,7 +73,7 @@ export const tools = {
         ],
       });
 
-      if (p.isCancel(monorepo)) {
+      if (isCancel(monorepo)) {
         return null;
       }
 
@@ -149,7 +153,7 @@ export default defineCommand({
       required: true,
     });
 
-    if (p.isCancel(selected)) {
+    if (isCancel(selected)) {
       p.cancel("Cancelled.");
 
       return;
