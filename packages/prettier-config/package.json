@@ -52,7 +52,7 @@
   "devDependencies": {
     "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
-    "@types/node": "24.13.3",
+    "@types/node": "24.13.4",
     "eslint": "10.10.0",
     "prettier": "3.9.6",
     "tsdown": "0.23.0",

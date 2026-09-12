@@ -49,7 +49,7 @@
   "devDependencies": {
     "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
-    "@types/node": "24.13.3",
+    "@types/node": "24.13.4",
     "eslint": "10.10.0",
     "oxfmt": "0.67.0",
     "tsdown": "0.23.0",
