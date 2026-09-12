@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.6.1](https://github.com/nozomiishii/configs/compare/nozo-v2.6.0...nozo-v2.6.1) (2026-09-12)
+
+### Miscellaneous
+
+- update dependency @clack/prompts to v1.8.0 ([#2850](https://github.com/nozomiishii/configs/issues/2850)) ([4ebf6cb](https://github.com/nozomiishii/configs/commit/4ebf6cbe3fa09bcc051bd2660d01b614654dfc8b))
+- update dependency @types/node to v24.13.4 ([#2858](https://github.com/nozomiishii/configs/issues/2858)) ([c4b7d77](https://github.com/nozomiishii/configs/commit/c4b7d77fb5cea42b0384d24c0cf14e90ca83ed7d))
+- update dependency pnpm to v12.4.0 ([#2856](https://github.com/nozomiishii/configs/issues/2856)) ([eadba9f](https://github.com/nozomiishii/configs/commit/eadba9f3aebb1fad00c8b9b5c3c6fd6b780b3ace))
+- update node.js to v24.21.0 ([#2845](https://github.com/nozomiishii/configs/issues/2845)) ([f548454](https://github.com/nozomiishii/configs/commit/f54845418eb5e85968de5867cd7847a12e222ef1))
+
 ## [2.6.0](https://github.com/nozomiishii/configs/compare/nozo-v2.5.0...nozo-v2.6.0) (2026-09-08)
 
 ### Miscellaneous
