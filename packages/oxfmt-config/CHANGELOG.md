@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.6.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.6.0...@nozomiishii/oxfmt-config-v2.6.1) (2026-09-12)
+
+
+### Miscellaneous
+
+* update dependency @types/node to v24.13.4 ([#2858](https://github.com/nozomiishii/configs/issues/2858)) ([c4b7d77](https://github.com/nozomiishii/configs/commit/c4b7d77fb5cea42b0384d24c0cf14e90ca83ed7d))
+* update dependency oxfmt to v0.67.0 ([#2852](https://github.com/nozomiishii/configs/issues/2852)) ([dae6ee8](https://github.com/nozomiishii/configs/commit/dae6ee8ababf8a9621f20619a588c432d2df2987))
+* update dependency pnpm to v12.4.0 ([#2856](https://github.com/nozomiishii/configs/issues/2856)) ([eadba9f](https://github.com/nozomiishii/configs/commit/eadba9f3aebb1fad00c8b9b5c3c6fd6b780b3ace))
+* update node.js to v24.21.0 ([#2845](https://github.com/nozomiishii/configs/issues/2845)) ([f548454](https://github.com/nozomiishii/configs/commit/f54845418eb5e85968de5867cd7847a12e222ef1))
+
 ## [2.6.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.5.0...@nozomiishii/oxfmt-config-v2.6.0) (2026-09-08)
 
 ### Miscellaneous
