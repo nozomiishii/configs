@@ -74,7 +74,7 @@ test("init adds format:fix script", async () => {
 test("init adds oxfmt script", async () => {
   const { pkg } = await runInit();
 
-  expect(pkg.scripts?.oxfmt).toBe("oxfmt --no-error-on-unmatched-pattern");
+  expect(pkg.scripts?.oxfmt).toBe("oxfmt");
 });
 
 // init は oxfmt.config.ts を生成する。
