@@ -45,7 +45,7 @@ export async function init({ cwd }: InitOptions): Promise<void> {
     ...target.scripts,
     format: "pnpm oxfmt . --check",
     "format:fix": "pnpm oxfmt .",
-    oxfmt: "oxfmt --no-error-on-unmatched-pattern",
+    oxfmt: "oxfmt",
   };
 
   await writeFile(targetPath, `${JSON.stringify(target, null, 2)}\n`);
