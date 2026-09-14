@@ -280,8 +280,8 @@ importers:
         specifier: 5.19.0
         version: 5.19.0(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
       '@eslint/config-inspector':
-        specifier: 3.4.0
-        version: 3.4.0(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))(srvx@1.0.4)
+        specifier: 3.4.1
+        version: 3.4.1(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))(srvx@1.0.4)
       '@eslint/js':
         specifier: 10.0.1
         version: 10.0.1(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
@@ -1162,8 +1162,8 @@ packages:
     resolution: {integrity: sha512-DObd/KKUsU+FaFv4PLxSRenpXfQWmPXXP3pPZ6/K1PCrMu2vQpMDMuQe/BqYeoLcz8ro0bVDF1RxOJgfVEdhUw==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/config-inspector@3.4.0':
-    resolution: {integrity: sha512-8TXN2JiWBX2pzY+bb5uccWBIZ3C1mSSzyvYDBwHaorAq+GaGJax9/BtwdnqbvWviVHUN5vHBgUkg2gYyd+js7w==}
+  '@eslint/config-inspector@3.4.1':
+    resolution: {integrity: sha512-E5pAF/gZR2yLIMG0N5EVhhFlhJ1K9AALgz+mnaRRm91ACvG1M0Zz6FOAWBylLhTtqpCLrDZqMfZYoFp04bHwJQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     hasBin: true
     peerDependencies:
@@ -5111,7 +5111,7 @@ snapshots:
     dependencies:
       '@eslint/core': 1.2.1
 
-  '@eslint/config-inspector@3.4.0(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))(srvx@1.0.4)':
+  '@eslint/config-inspector@3.4.1(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))(srvx@1.0.4)':
     dependencies:
       ansis: 4.3.1
       cac: 7.0.0
