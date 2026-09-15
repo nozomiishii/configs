@@ -2,11 +2,10 @@
 
 ## [2.7.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.7.0...@nozomiishii/eslint-config-v2.7.1) (2026-09-15)
 
-
 ### Miscellaneous
 
-* update dependency @next/eslint-plugin-next to v16.3.5 ([#2864](https://github.com/nozomiishii/configs/issues/2864)) ([3e91a90](https://github.com/nozomiishii/configs/commit/3e91a90ff684a20b86c1b59e7862614a3ac524fd))
-* update dependency eslint-plugin-jsdoc to v64.3.10 ([#2868](https://github.com/nozomiishii/configs/issues/2868)) ([f158a8e](https://github.com/nozomiishii/configs/commit/f158a8e181d7edeaf6f16b72c24e480dd111aefb))
+- update dependency @next/eslint-plugin-next to v16.3.5 ([#2864](https://github.com/nozomiishii/configs/issues/2864)) ([3e91a90](https://github.com/nozomiishii/configs/commit/3e91a90ff684a20b86c1b59e7862614a3ac524fd))
+- update dependency eslint-plugin-jsdoc to v64.3.10 ([#2868](https://github.com/nozomiishii/configs/issues/2868)) ([f158a8e](https://github.com/nozomiishii/configs/commit/f158a8e181d7edeaf6f16b72c24e480dd111aefb))
 
 ## [2.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.6.0...@nozomiishii/eslint-config-v2.7.0) (2026-09-14)
 

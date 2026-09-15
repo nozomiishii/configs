@@ -2,10 +2,9 @@
 
 ## [2.7.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.7.0...@nozomiishii/oxfmt-config-v2.7.1) (2026-09-15)
 
-
 ### Bug Fixes
 
-* stop passing --no-error-on-unmatched-pattern from oxfmt init scripts ([#2866](https://github.com/nozomiishii/configs/issues/2866)) ([7a4ffb0](https://github.com/nozomiishii/configs/commit/7a4ffb008e8b8d7a267fa78a5440856995bdfba3))
+- stop passing --no-error-on-unmatched-pattern from oxfmt init scripts ([#2866](https://github.com/nozomiishii/configs/issues/2866)) ([7a4ffb0](https://github.com/nozomiishii/configs/commit/7a4ffb008e8b8d7a267fa78a5440856995bdfba3))
 
 ## [2.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.6.0...@nozomiishii/oxfmt-config-v2.7.0) (2026-09-14)
 

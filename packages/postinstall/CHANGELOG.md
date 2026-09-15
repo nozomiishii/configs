@@ -2,10 +2,9 @@
 
 ## [2.7.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v2.7.0...@nozomiishii/postinstall-v2.7.1) (2026-09-15)
 
-
 ### Miscellaneous
 
-* **@nozomiishii/postinstall:** Synchronize configs versions
+- **@nozomiishii/postinstall:** Synchronize configs versions
 
 ## [2.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v2.6.0...@nozomiishii/postinstall-v2.7.0) (2026-09-14)
 
