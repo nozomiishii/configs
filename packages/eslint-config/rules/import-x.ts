@@ -5,8 +5,8 @@ import { name } from "../utils/name";
 /**
  * @returns eslint-plugin-import-x
  *
- * TypeScriptに任せた方がいいルール
- * https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
+ * import 解決系のルールは TypeScript に任せ、recommended を spread しないことで有効化自体を避けている。
+ *
  * ```
  * import/named
  * import/namespace
@@ -16,6 +16,7 @@ import { name } from "../utils/name";
  * ```
  *
  * @see https://github.com/un-ts/eslint-plugin-import-x
+ * @see https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
  */
 export function importX() {
   // tseslint.configがdefineConfigに移行した差分が取り込まれてない
