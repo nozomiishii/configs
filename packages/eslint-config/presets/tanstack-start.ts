@@ -98,6 +98,7 @@ export function tanstackStart(options: Options = {}) {
     // ここから下は TanStack の書き方に合わせた他 plugin の調整。
     // 上書き対象より後に置く必要がある。
     {
+      files: ["**/*.{ts,cts,mts,tsx}"],
       name: name("tanstack-start/only-throw-error"),
       rules: {
         /**
