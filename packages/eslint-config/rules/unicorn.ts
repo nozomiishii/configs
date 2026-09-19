@@ -52,6 +52,13 @@ export function unicorn() {
         "unicorn/prefer-export-from": "error",
 
         /**
+         * 複数行 ternary への書き換え強制は guard clause より読みにくくなるため、1 行に収まる場合のみ検出する。
+         *
+         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-ternary.md
+         */
+        "unicorn/prefer-ternary": ["error", "only-single-line"],
+
+        /**
          * Encoding Standard が名乗る側を `utf-8` に固定しているため dash 付きに揃える。
          * 既定の `utf8` は Node のショートハンドで、HTML の meta charset や
          * HTTP header に出すと規格から外れる。Node は両方受け付ける。

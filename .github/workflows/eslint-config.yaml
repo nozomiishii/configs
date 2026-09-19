@@ -66,7 +66,10 @@ jobs:
         run: pnpm format
 
       - name: Lint
-        run: pnpm lint
+        # eslint-config の変更 (shared config 本体や plugin の bump) は全 package の
+        # lint 結果を変えるため、自 package だけでなく repo 全体を lint する
+        working-directory: ${{ github.workspace }}
+        run: pnpm -r --if-present run lint
 
       - name: Compiler check
         run: pnpm check:ts
