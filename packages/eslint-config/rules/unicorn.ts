@@ -22,6 +22,14 @@ export function unicorn() {
         ...eslintPluginUnicorn.configs.recommended.rules,
 
         /**
+         * 入れ子の三項演算子は unicorn/no-nested-ternary ではなく ESLint core の no-nested-ternary で禁止する。
+         *
+         * @see https://eslint.org/docs/latest/rules/no-nested-ternary
+         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-nested-ternary.md
+         */
+        "no-nested-ternary": "error",
+
+        /**
          * 略語の制限。やるなら明示的にreplacementを記載していく
          *
          * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/name-replacements.md
@@ -42,6 +50,13 @@ export function unicorn() {
          * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md
          */
         "unicorn/prefer-export-from": "error",
+
+        /**
+         * 複数行 ternary への書き換え強制は guard clause より読みにくくなるため、1 行に収まる場合のみ検出する。
+         *
+         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-ternary.md
+         */
+        "unicorn/prefer-ternary": ["error", "only-single-line"],
 
         /**
          * Encoding Standard が名乗る側を `utf-8` に固定しているため dash 付きに揃える。

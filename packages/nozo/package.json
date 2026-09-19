@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@nozomiishii/tsconfig": "workspace:*",
-    "@types/node": "24.13.4",
+    "@types/node": "24.13.5",
     "@types/which": "3.0.4",
     "eslint": "10.10.0",
     "tsdown": "0.23.0",
@@ -62,7 +62,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.4.1",
+      "version": "12.4.2",
       "onFail": "error"
     },
     "runtime": {

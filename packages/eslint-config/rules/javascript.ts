@@ -10,7 +10,7 @@ import { name } from "../utils/name";
 export function javascript() {
   return defineConfig([
     {
-      files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+      files: ["**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}"],
       name: name("javascript"),
       plugins: {
         js: eslintConfigJavascript,
@@ -54,13 +54,6 @@ export function javascript() {
          * @see https://eslint.org/docs/latest/rules/no-else-return
          */
         "no-else-return": ["warn", { allowElseIf: false }],
-
-        /**
-         * 入れ子の三項演算子を禁止
-         *
-         * @see https://eslint.org/docs/latest/rules/no-nested-ternary
-         */
-        "no-nested-ternary": "error",
 
         /**
          * 不必要な再命名防止

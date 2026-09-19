@@ -37,7 +37,7 @@ export function typescript({ tsconfigRootDir }: TypescriptOptions = {}) {
     },
 
     {
-      files: ["**/*.{ts,tsx}"],
+      files: ["**/*.{ts,cts,mts,tsx}"],
       name: name("typescript"),
       rules: {
         // Method shorthand syntaxではなくObject property syntaxで関数の型定義する

@@ -42,14 +42,14 @@
   },
   "devDependencies": {
     "@nozomiishii/eslint-config": "workspace:*",
-    "@types/node": "24.13.4",
+    "@types/node": "24.13.5",
     "eslint": "10.10.0",
     "typescript": "6.0.3"
   },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.4.1",
+      "version": "12.4.2",
       "onFail": "error"
     },
     "runtime": {
