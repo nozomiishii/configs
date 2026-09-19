@@ -8,7 +8,6 @@ export { javascript } from "./javascript";
 
 export { jsdoc } from "./jsdoc";
 
-
 export { jsxA11yX } from "./jsx-a11y-x";
 
 export { n } from "./n";
