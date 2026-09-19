@@ -30,7 +30,7 @@ export function jsdoc() {
     // },
     {
       ...configs,
-      files: ["**/libs/**/*.ts", "**/utils/**/*.tsx"],
+      files: ["**/{lib,libs,utils}/**/*.{ts,tsx}"],
       name: name("jsdoc"),
       rules: {
         ...configs.rules,
