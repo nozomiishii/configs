@@ -10,7 +10,7 @@ import { name } from "../utils/name";
 export function javascript() {
   return defineConfig([
     {
-      files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+      files: ["**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}"],
       name: name("javascript"),
       plugins: {
         js: eslintConfigJavascript,
