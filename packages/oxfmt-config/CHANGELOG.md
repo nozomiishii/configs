@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.7.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.7.0...@nozomiishii/oxfmt-config-v2.7.1) (2026-09-19)
+
+### Bug Fixes
+
+- stop passing --no-error-on-unmatched-pattern from oxfmt init scripts ([#2866](https://github.com/nozomiishii/configs/issues/2866)) ([7a4ffb0](https://github.com/nozomiishii/configs/commit/7a4ffb008e8b8d7a267fa78a5440856995bdfba3))
+
+### Miscellaneous
+
+- document oxfmt-config defineConfig override ([#2867](https://github.com/nozomiishii/configs/issues/2867)) ([c17574f](https://github.com/nozomiishii/configs/commit/c17574f78b508279ec22964f39de6d4aa412a3c3))
+- update dependency @types/node to v24.13.5 ([#2879](https://github.com/nozomiishii/configs/issues/2879)) ([f673be8](https://github.com/nozomiishii/configs/commit/f673be8fe7bc91ade88552edcec3ead8b7ff3791))
+- update dependency oxfmt to v0.68.0 ([#2878](https://github.com/nozomiishii/configs/issues/2878)) ([c9f7145](https://github.com/nozomiishii/configs/commit/c9f7145dfc061652fe4d1bfcb21cc50c64ab7816))
+- update dependency pnpm to v12.4.2 ([#2882](https://github.com/nozomiishii/configs/issues/2882)) ([ffd6b1d](https://github.com/nozomiishii/configs/commit/ffd6b1d09186d9c828599902496c4a2e84b97f2b))
+
 ## [2.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.6.0...@nozomiishii/oxfmt-config-v2.7.0) (2026-09-14)
 
 ### Miscellaneous

@@ -1,5 +1,39 @@
 # Changelog
 
+## [2.7.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.7.0...@nozomiishii/eslint-config-v2.7.1) (2026-09-19)
+
+### Bug Fixes
+
+- add mts and cts to javascript and typescript rules file globs ([#2894](https://github.com/nozomiishii/configs/issues/2894)) ([183ae8d](https://github.com/nozomiishii/configs/commit/183ae8dec5a8221b28449abe1027b2b9c7e158cd))
+- cover lib and both extensions in jsdoc files glob ([#2895](https://github.com/nozomiishii/configs/issues/2895)) ([2bc22e9](https://github.com/nozomiishii/configs/commit/2bc22e95dac2a113c73ab8dc62c976c6cd4d201f))
+- disable type checked rules for js files ([#2898](https://github.com/nozomiishii/configs/issues/2898)) ([44546bc](https://github.com/nozomiishii/configs/commit/44546bcdf37db2f9f5d6165ba208271a9f600348))
+- keep upstream import-x typescript rules when overriding ([#2899](https://github.com/nozomiishii/configs/issues/2899)) ([1ddcf14](https://github.com/nozomiishii/configs/commit/1ddcf14b2320cc0b4f3192ddbfcd092de2721331))
+- re-enable no-nested-ternary overridden by unicorn recommended ([#2888](https://github.com/nozomiishii/configs/issues/2888)) ([aae4e3e](https://github.com/nozomiishii/configs/commit/aae4e3e475dd1ec095f228242155b1ffb45a1617))
+- relax unicorn/prefer-ternary to only-single-line ([#2896](https://github.com/nozomiishii/configs/issues/2896)) ([bcbd3c9](https://github.com/nozomiishii/configs/commit/bcbd3c96467183f7bba9accf84192533f4634bd0))
+- stop exporting broken jsonc rules ([#2902](https://github.com/nozomiishii/configs/issues/2902)) ([de0daeb](https://github.com/nozomiishii/configs/commit/de0daeb960e8b4c08d440bb5a440c9de6b1a1021))
+
+### Miscellaneous
+
+- clarify import-x jsdoc about rules left to typescript ([#2900](https://github.com/nozomiishii/configs/issues/2900)) ([8b0b717](https://github.com/nozomiishii/configs/commit/8b0b717f8ee090e1773a9697f29600d63fc9ff0b))
+- rename eslint-config CLAUDE.md to AGENTS.md ([#2891](https://github.com/nozomiishii/configs/issues/2891)) ([c20793f](https://github.com/nozomiishii/configs/commit/c20793fb74833e74e5517c8b22b60568518c846d))
+- update dependency @eslint-community/eslint-plugin-eslint-comments to v4.8.1 ([#2869](https://github.com/nozomiishii/configs/issues/2869)) ([92c2be7](https://github.com/nozomiishii/configs/commit/92c2be74e32ed1645005ab176f6cb4ce4bb62a23))
+- update dependency @eslint-react/eslint-plugin to v5.19.1 ([#2873](https://github.com/nozomiishii/configs/issues/2873)) ([9186766](https://github.com/nozomiishii/configs/commit/918676626125f9d5720074ebb915f621b63a578e))
+- update dependency @eslint/config-inspector to v3.5.0 ([#2885](https://github.com/nozomiishii/configs/issues/2885)) ([efacc1c](https://github.com/nozomiishii/configs/commit/efacc1cb41a056952cc29efe223a72a7ae501941))
+- update dependency @next/eslint-plugin-next to v16.3.5 ([#2864](https://github.com/nozomiishii/configs/issues/2864)) ([3e91a90](https://github.com/nozomiishii/configs/commit/3e91a90ff684a20b86c1b59e7862614a3ac524fd))
+- update dependency @tanstack/eslint-plugin-query to v5.103.0 ([#2886](https://github.com/nozomiishii/configs/issues/2886)) ([ff84378](https://github.com/nozomiishii/configs/commit/ff84378a0f11c5b4a52e47ec3845d759a772f738))
+- update dependency @tanstack/eslint-plugin-query to v5.103.1 ([#2893](https://github.com/nozomiishii/configs/issues/2893)) ([5f225a7](https://github.com/nozomiishii/configs/commit/5f225a7b0c38d005d7c9e0a82409d8bd1c9f7c3d))
+- update dependency @types/node to v24.13.5 ([#2879](https://github.com/nozomiishii/configs/issues/2879)) ([f673be8](https://github.com/nozomiishii/configs/commit/f673be8fe7bc91ade88552edcec3ead8b7ff3791))
+- update dependency eslint-plugin-jsdoc to v64.3.10 ([#2868](https://github.com/nozomiishii/configs/issues/2868)) ([f158a8e](https://github.com/nozomiishii/configs/commit/f158a8e181d7edeaf6f16b72c24e480dd111aefb))
+- update dependency eslint-plugin-jsdoc to v64.4.0 ([#2876](https://github.com/nozomiishii/configs/issues/2876)) ([f023103](https://github.com/nozomiishii/configs/commit/f0231031197ad55e64fcfa7d8c8b2062cbf0763a))
+- update dependency eslint-plugin-jsdoc to v64.5.0 ([#2883](https://github.com/nozomiishii/configs/issues/2883)) ([fdcdaa7](https://github.com/nozomiishii/configs/commit/fdcdaa721dff358fe721f725a4d250140d2e0306))
+- update dependency eslint-plugin-jsdoc to v64.5.2 ([#2890](https://github.com/nozomiishii/configs/issues/2890)) ([e6f074f](https://github.com/nozomiishii/configs/commit/e6f074f3a57cfafe89f3839e80c957f83bc7e930))
+- update dependency eslint-plugin-package-json to v1.8.1 ([#2870](https://github.com/nozomiishii/configs/issues/2870)) ([932c519](https://github.com/nozomiishii/configs/commit/932c5196d56d05988798df60e5c09c4daa7979b1))
+- update dependency eslint-plugin-perfectionist to v5.11.1 ([#2881](https://github.com/nozomiishii/configs/issues/2881)) ([9cebd43](https://github.com/nozomiishii/configs/commit/9cebd433a8ddc462bbbbc4d505f8e6a29d202019))
+- update dependency eslint-plugin-playwright to v2.12.0 ([#2877](https://github.com/nozomiishii/configs/issues/2877)) ([85de7fc](https://github.com/nozomiishii/configs/commit/85de7fc0c16a5a6b88ed60d718402da0bd0c47ea))
+- update dependency eslint-plugin-react-refresh to v0.5.7 ([#2874](https://github.com/nozomiishii/configs/issues/2874)) ([c99c325](https://github.com/nozomiishii/configs/commit/c99c3253a7cc64ff4764a7e801535b3963e58de8))
+- update dependency eslint-plugin-unicorn to v75 ([#2887](https://github.com/nozomiishii/configs/issues/2887)) ([6ed4093](https://github.com/nozomiishii/configs/commit/6ed4093ef74409f1cb57d1e13db1fb5cd3f0a4d2))
+- update dependency pnpm to v12.4.2 ([#2882](https://github.com/nozomiishii/configs/issues/2882)) ([ffd6b1d](https://github.com/nozomiishii/configs/commit/ffd6b1d09186d9c828599902496c4a2e84b97f2b))
+
 ## [2.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.6.0...@nozomiishii/eslint-config-v2.7.0) (2026-09-14)
 
 ### Miscellaneous
