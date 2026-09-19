@@ -30,6 +30,7 @@ export function importX() {
     ...pluginImportX.flatConfigs.typescript,
     name: name("import-x"),
     rules: {
+      ...pluginImportX.flatConfigs.typescript.rules,
       /**
        * import文は先頭に書く
        *
