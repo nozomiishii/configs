@@ -1,4 +1,4 @@
-# CLAUDE.md
+# AGENTS.md
 
 ## rule の説明コメント
 
