@@ -2,12 +2,11 @@
 
 ## [2.7.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v2.7.0...@nozomiishii/prettier-config-v2.7.1) (2026-09-19)
 
-
 ### Miscellaneous
 
-* update dependency @types/node to v24.13.5 ([#2879](https://github.com/nozomiishii/configs/issues/2879)) ([f673be8](https://github.com/nozomiishii/configs/commit/f673be8fe7bc91ade88552edcec3ead8b7ff3791))
-* update dependency pnpm to v12.4.2 ([#2882](https://github.com/nozomiishii/configs/issues/2882)) ([ffd6b1d](https://github.com/nozomiishii/configs/commit/ffd6b1d09186d9c828599902496c4a2e84b97f2b))
-* update dependency prettier to v3.9.7 ([#2884](https://github.com/nozomiishii/configs/issues/2884)) ([08fd5d1](https://github.com/nozomiishii/configs/commit/08fd5d1f9130bf3e0179486f9fbc496883f12641))
+- update dependency @types/node to v24.13.5 ([#2879](https://github.com/nozomiishii/configs/issues/2879)) ([f673be8](https://github.com/nozomiishii/configs/commit/f673be8fe7bc91ade88552edcec3ead8b7ff3791))
+- update dependency pnpm to v12.4.2 ([#2882](https://github.com/nozomiishii/configs/issues/2882)) ([ffd6b1d](https://github.com/nozomiishii/configs/commit/ffd6b1d09186d9c828599902496c4a2e84b97f2b))
+- update dependency prettier to v3.9.7 ([#2884](https://github.com/nozomiishii/configs/issues/2884)) ([08fd5d1](https://github.com/nozomiishii/configs/commit/08fd5d1f9130bf3e0179486f9fbc496883f12641))
 
 ## [2.7.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v2.6.0...@nozomiishii/prettier-config-v2.7.0) (2026-09-14)
 
