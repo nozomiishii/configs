@@ -44,6 +44,5 @@ _site
 
 # Claude Code
 **/.claude/settings.local.json
-**/CLAUDE.local.md
 **/.claude/worktrees/
 **/.claude/debug/
