@@ -24,11 +24,11 @@ pnpx nozo init
 設定を上書きするときは、`oxfmt.config.ts` を oxfmt の `defineConfig` で書き換えると、型注釈なしで補完と型チェックが効く。
 
 ```typescript
-import nozomiishii from "@nozomiishii/oxfmt-config";
+import config from "@nozomiishii/oxfmt-config";
 import { defineConfig } from "oxfmt";
 
 export default defineConfig({
-  ...nozomiishii,
+  ...config,
   // 上書きしたい設定をここに書く
 });
 ```

@@ -24,11 +24,11 @@ pnpx nozo init
 To override settings, rewrite `oxfmt.config.ts` with oxfmt's `defineConfig` to get autocomplete and type checking without type annotations.
 
 ```typescript
-import nozomiishii from "@nozomiishii/oxfmt-config";
+import config from "@nozomiishii/oxfmt-config";
 import { defineConfig } from "oxfmt";
 
 export default defineConfig({
-  ...nozomiishii,
+  ...config,
   // Add your overrides here
 });
 ```
