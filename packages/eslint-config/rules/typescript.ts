@@ -36,6 +36,17 @@ export function typescript({ tsconfigRootDir }: TypescriptOptions = {}) {
       name: name("typescript/parserOptions"),
     },
 
+    /**
+     * 型情報が要るルールと projectService を .js 系では無効にする。
+     *
+     * @see https://typescript-eslint.io/troubleshooting/typed-linting/#how-do-i-disable-type-checked-linting-for-a-file
+     */
+    {
+      files: ["**/*.{js,cjs,mjs,jsx}"],
+      ...tseslint.configs.disableTypeChecked,
+      name: name("typescript/disable-type-checked-js"),
+    },
+
     {
       files: ["**/*.{ts,cts,mts,tsx}"],
       name: name("typescript"),
