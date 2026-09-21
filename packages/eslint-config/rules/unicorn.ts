@@ -36,6 +36,13 @@ export function unicorn() {
         "unicorn/no-null": "off",
 
         /**
+         * 連続するガード句の結合を促すが、ガード句の条件はシンプルに保つためoff
+         *
+         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-combined-guards.md
+         */
+        "unicorn/prefer-combined-guards": "off",
+
+        /**
          * import + 同名 re-export の bulk pattern を許可（local でも使っている場合のみ）
          * pure re-export は引き続き `export ... from` を強制
          *
