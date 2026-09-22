@@ -214,8 +214,8 @@ export function tanstackStart(options: Options = {}) {
       name: name("tanstack-start/route-stories"),
       rules: {
         /**
-         * routeのstoryは`Meta<typeof Route>`がcomponentを受け付けず、Storybookが
-         * `parameters.tanstack.router.route`からcomponentを取るため、この形に到達できない。
+         * 公式ドキュメントどおりrouteのstoryで`component`を省くとこのruleに引っかかり、
+         * ruleに合わせて`component`を足すと`Meta<typeof Route>`が型エラーになる。公式の形を優先する。
          *
          * @see https://storybook.js.org/docs/get-started/frameworks/tanstack-react
          * @see https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/docs/rules/csf-component.md
