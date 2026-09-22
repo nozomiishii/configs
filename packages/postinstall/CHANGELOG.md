@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v2.7.2...@nozomiishii/postinstall-v2.7.3) (2026-09-22)
+
+### Miscellaneous
+
+- **@nozomiishii/postinstall:** Synchronize configs versions
+
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v2.7.1...@nozomiishii/postinstall-v2.7.2) (2026-09-22)
 
 ### Miscellaneous

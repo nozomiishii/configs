@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.7.2...@nozomiishii/eslint-config-v2.7.3) (2026-09-22)
+
+### Bug Fixes
+
+- keep type-checked eslint-react rules off js files ([#2922](https://github.com/nozomiishii/configs/issues/2922)) ([cf08833](https://github.com/nozomiishii/configs/commit/cf088330be8335ce8b869a5d928e30e849e18fbf))
+
+### Miscellaneous
+
+- update dependency @eslint-react/eslint-plugin to v5.20.0 ([#2919](https://github.com/nozomiishii/configs/issues/2919)) ([10248b8](https://github.com/nozomiishii/configs/commit/10248b8406680923de78ed8f8072e837d546728d))
+- update dependency eslint-plugin-jsdoc to v64.5.4 ([#2916](https://github.com/nozomiishii/configs/issues/2916)) ([b0545d7](https://github.com/nozomiishii/configs/commit/b0545d73ff1981ef71f38724b60397635b764c31))
+- update dependency eslint-plugin-unicorn to v76 ([#2920](https://github.com/nozomiishii/configs/issues/2920)) ([1c5d3d8](https://github.com/nozomiishii/configs/commit/1c5d3d84f7c12ffb783497d74c9b8931e612dd35))
+
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.7.1...@nozomiishii/eslint-config-v2.7.2) (2026-09-22)
 
 ### Bug Fixes
