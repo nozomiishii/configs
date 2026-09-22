@@ -59,7 +59,7 @@
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.5",
     "conventional-commits-parser": "7.1.2",
-    "eslint": "10.10.0",
+    "eslint": "10.11.0",
     "tsdown": "0.23.0",
     "typescript": "6.0.3",
     "vitest": "5.0.0"
