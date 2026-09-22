@@ -115,6 +115,14 @@ route ファイルは `export const Route` が構造上必須なので、この 
 `configs.vite` への切り替えでも `allowExportNames: ["Route"]` でも解消しない。
 前者の `allowConstantExport` は `CallExpression` を対象にせず、後者は報告を抑えるだけで判定の分岐を変えないため。
 
+## storybook/csf-component
+
+`src/routes/**/*.stories.{ts,tsx}` で off。
+
+[route の story](https://storybook.js.org/docs/get-started/frameworks/tanstack-react) の `Meta<typeof Route>` は
+`component` を型で受け付けないので、rule が要求する形に到達できない。
+経緯は[提案した issue](https://github.com/nozomiishii/configs/issues/2913)にある。
+
 ## 採用しなかったもの
 
 `@tanstack/eslint-plugin-start` は入れていない。peer が `^8.57.0 || ^9.0.0` 止まりで eslint 10 に入らず、
