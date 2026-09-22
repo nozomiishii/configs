@@ -59,7 +59,7 @@ export function unicorn() {
         "unicorn/prefer-export-from": "error",
 
         /**
-         * guard clause の最後の 1 段まで ternary に畳ませるので、早期 return で分けた分岐の並びが崩れて読みにくくなるため off
+         * ガード句の最後の 1 段まで三項演算に畳ませるので、早期 return で分けた分岐の並びが崩れて読みにくくなるため off
          *
          * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-ternary.md
          */
