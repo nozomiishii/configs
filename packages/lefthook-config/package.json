@@ -55,7 +55,7 @@
   "devDependencies": {
     "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
-    "@types/node": "24.13.5",
+    "@types/node": "24.13.6",
     "eslint": "10.11.0",
     "lefthook": "2.1.14",
     "tsdown": "0.23.0",
