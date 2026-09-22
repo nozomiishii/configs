@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v2.7.2...@nozomiishii/commitlint-config-v2.7.3) (2026-09-22)
+
+
+### Miscellaneous
+
+* update commitlint monorepo to v21.2.3 ([#2918](https://github.com/nozomiishii/configs/issues/2918)) ([794163b](https://github.com/nozomiishii/configs/commit/794163b2cb065e836c24fc65ee2692e697caea6d))
+
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v2.7.1...@nozomiishii/commitlint-config-v2.7.2) (2026-09-22)
 
 ### Miscellaneous

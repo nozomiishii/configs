@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.7.2...@nozomiishii/oxfmt-config-v2.7.3) (2026-09-22)
+
+
+### Miscellaneous
+
+* **@nozomiishii/oxfmt-config:** Synchronize configs versions
+
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.7.1...@nozomiishii/oxfmt-config-v2.7.2) (2026-09-22)
 
 ### Miscellaneous
