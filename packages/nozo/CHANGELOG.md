@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.2](https://github.com/nozomiishii/configs/compare/nozo-v2.7.1...nozo-v2.7.2) (2026-09-22)
+
+### Bug Fixes
+
+- disable unicorn/prefer-ternary to keep guard clauses ([#2912](https://github.com/nozomiishii/configs/issues/2912)) ([285e21e](https://github.com/nozomiishii/configs/commit/285e21ea588bed1d35a32be9d52b40baecd73ca0))
+
+### Miscellaneous
+
+- update dependency @types/node to v24.13.6 ([#2915](https://github.com/nozomiishii/configs/issues/2915)) ([75acbde](https://github.com/nozomiishii/configs/commit/75acbde8aa3f5dbd67c7f7683296f616372eec9a))
+- update dependency eslint to v10.11.0 ([#2909](https://github.com/nozomiishii/configs/issues/2909)) ([35a65b7](https://github.com/nozomiishii/configs/commit/35a65b7c51cd9d4c8d42d71e166a51cbf4be4d57))
+- update dependency pnpm to v12.5.1 ([#2911](https://github.com/nozomiishii/configs/issues/2911)) ([8f06ce1](https://github.com/nozomiishii/configs/commit/8f06ce128b06b367b180f83394bae0aa62452848))
+
 ## [2.7.1](https://github.com/nozomiishii/configs/compare/nozo-v2.7.0...nozo-v2.7.1) (2026-09-19)
 
 ### Bug Fixes
