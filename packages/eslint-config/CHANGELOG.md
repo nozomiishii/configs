@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.7.1...@nozomiishii/eslint-config-v2.7.2) (2026-09-22)
+
+
+### Bug Fixes
+
+* disable unicorn/prefer-ternary to keep guard clauses ([#2912](https://github.com/nozomiishii/configs/issues/2912)) ([285e21e](https://github.com/nozomiishii/configs/commit/285e21ea588bed1d35a32be9d52b40baecd73ca0))
+* turn off storybook/csf-component for route stories in tanstackStart ([#2914](https://github.com/nozomiishii/configs/issues/2914)) ([0ebe8ee](https://github.com/nozomiishii/configs/commit/0ebe8eee3fb6f919a3d5b07b494d5b7c2b02ae3c))
+
+
+### Miscellaneous
+
+* disable unicorn prefer-combined-guards ([#2907](https://github.com/nozomiishii/configs/issues/2907)) ([7a85c16](https://github.com/nozomiishii/configs/commit/7a85c162fb4693327427eb20b235db340c3f58d6))
+* update dependency @types/node to v24.13.6 ([#2915](https://github.com/nozomiishii/configs/issues/2915)) ([75acbde](https://github.com/nozomiishii/configs/commit/75acbde8aa3f5dbd67c7f7683296f616372eec9a))
+* update dependency eslint to v10.11.0 ([#2909](https://github.com/nozomiishii/configs/issues/2909)) ([35a65b7](https://github.com/nozomiishii/configs/commit/35a65b7c51cd9d4c8d42d71e166a51cbf4be4d57))
+* update dependency eslint-plugin-jsdoc to v64.5.3 ([#2908](https://github.com/nozomiishii/configs/issues/2908)) ([f62e8ed](https://github.com/nozomiishii/configs/commit/f62e8ed6a1069981a595c98a777c26d65ee497de))
+* update dependency eslint-plugin-package-json to v1.9.0 ([#2910](https://github.com/nozomiishii/configs/issues/2910)) ([16843cb](https://github.com/nozomiishii/configs/commit/16843cba0a553625cc9f2746517b84efc80f2e49))
+* update dependency pnpm to v12.5.1 ([#2911](https://github.com/nozomiishii/configs/issues/2911)) ([8f06ce1](https://github.com/nozomiishii/configs/commit/8f06ce128b06b367b180f83394bae0aa62452848))
+
 ## [2.7.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.7.0...@nozomiishii/eslint-config-v2.7.1) (2026-09-19)
 
 ### Bug Fixes
