@@ -204,6 +204,26 @@ export function tanstackStart(options: Options = {}) {
       },
     },
 
+    {
+      /**
+       * routesDirectoryの既定値。変更した場合はconsumer側で同じ設定を足す。
+       *
+       * @see https://tanstack.com/router/latest/docs/api/file-based-routing
+       */
+      files: ["**/src/routes/**/*.stories.{ts,tsx}"],
+      name: name("tanstack-start/route-stories"),
+      rules: {
+        /**
+         * 公式ドキュメントどおりrouteのstoryで`component`を省くとこのruleに引っかかり、
+         * ruleに合わせて`component`を足すと`Meta<typeof Route>`が型エラーになる。公式の形を優先する。
+         *
+         * @see https://storybook.js.org/docs/get-started/frameworks/tanstack-react
+         * @see https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/docs/rules/csf-component.md
+         */
+        "storybook/csf-component": "off",
+      },
+    },
+
     prettier(),
   ]);
 }
