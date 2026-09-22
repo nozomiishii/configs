@@ -69,7 +69,11 @@ export const tools = {
         ],
       });
 
-      return p.isCancel(monorepo) ? null : { monorepo, preset };
+      if (p.isCancel(monorepo)) {
+        return null;
+      }
+
+      return { monorepo, preset };
     },
     description: "JS/TS linting via ESLint",
     label: "@nozomiishii/eslint-config",
