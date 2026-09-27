@@ -45,7 +45,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "markdownlint-cli2": "0.23.2"
+    "markdownlint-cli2": "0.23.3"
   },
   "devDependencies": {
     "@nozomiishii/eslint-config": "workspace:*",
@@ -58,7 +58,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.5.1",
+      "version": "12.6.0",
       "onFail": "error"
     },
     "runtime": {

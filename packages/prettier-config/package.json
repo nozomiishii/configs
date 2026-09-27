@@ -54,18 +54,18 @@
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.13.6",
     "eslint": "10.11.0",
-    "prettier": "3.9.8",
+    "prettier": "3.9.9",
     "tsdown": "0.23.0",
     "typescript": "6.0.3",
     "vitest": "5.0.0"
   },
   "peerDependencies": {
-    "prettier": "3.9.8"
+    "prettier": "3.9.9"
   },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.5.1",
+      "version": "12.6.0",
       "onFail": "error"
     },
     "runtime": {
