@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v2.7.2...@nozomiishii/tsconfig-v2.7.3) (2026-10-03)
+
+### Miscellaneous
+
+- update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
+
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/tsconfig-v2.7.1...@nozomiishii/tsconfig-v2.7.2) (2026-09-22)
 
 ### Miscellaneous

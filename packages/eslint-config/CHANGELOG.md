@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.7.2...@nozomiishii/eslint-config-v2.7.3) (2026-10-03)
+
+### Bug Fixes
+
+- keep type-checked eslint-react rules off js files ([#2922](https://github.com/nozomiishii/configs/issues/2922)) ([cf08833](https://github.com/nozomiishii/configs/commit/cf088330be8335ce8b869a5d928e30e849e18fbf))
+
+### Miscellaneous
+
+- update dependency @eslint-react/eslint-plugin to v5.20.0 ([#2919](https://github.com/nozomiishii/configs/issues/2919)) ([10248b8](https://github.com/nozomiishii/configs/commit/10248b8406680923de78ed8f8072e837d546728d))
+- update dependency @eslint-react/eslint-plugin to v5.20.8 ([#2925](https://github.com/nozomiishii/configs/issues/2925)) ([85bf8f1](https://github.com/nozomiishii/configs/commit/85bf8f1a8877537877441c4607d68fa416e84202))
+- update dependency @next/eslint-plugin-next to v16.3.6 ([#2926](https://github.com/nozomiishii/configs/issues/2926)) ([49f6db4](https://github.com/nozomiishii/configs/commit/49f6db4c66bae95726928a46e58f1ebef97c5b1e))
+- update dependency @tanstack/eslint-plugin-query to v5.103.2 ([#2927](https://github.com/nozomiishii/configs/issues/2927)) ([474714c](https://github.com/nozomiishii/configs/commit/474714c62c90b5fcb4ab82a20e20e40915306a28))
+- update dependency eslint-plugin-de-morgan to v2.2.0 ([#2933](https://github.com/nozomiishii/configs/issues/2933)) ([91b61bf](https://github.com/nozomiishii/configs/commit/91b61bf046819ad95990358b5fa1c286010ac5d6))
+- update dependency eslint-plugin-jsdoc to v64.5.4 ([#2916](https://github.com/nozomiishii/configs/issues/2916)) ([b0545d7](https://github.com/nozomiishii/configs/commit/b0545d73ff1981ef71f38724b60397635b764c31))
+- update dependency eslint-plugin-package-json to v1.10.0 ([#2934](https://github.com/nozomiishii/configs/issues/2934)) ([917ec37](https://github.com/nozomiishii/configs/commit/917ec371488799f44da9ad384cfc45eb5fc464a4))
+- update dependency eslint-plugin-perfectionist to v5.12.1 ([#2935](https://github.com/nozomiishii/configs/issues/2935)) ([2d5716e](https://github.com/nozomiishii/configs/commit/2d5716e750acb2ace0475eea18b0f62e06171b57))
+- update dependency eslint-plugin-regexp to v3.3.1 ([#2929](https://github.com/nozomiishii/configs/issues/2929)) ([902106a](https://github.com/nozomiishii/configs/commit/902106a5c6d517d1400957a358dedd9236e36d04))
+- update dependency eslint-plugin-unicorn to v76 ([#2920](https://github.com/nozomiishii/configs/issues/2920)) ([1c5d3d8](https://github.com/nozomiishii/configs/commit/1c5d3d84f7c12ffb783497d74c9b8931e612dd35))
+- update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
+- update dependency typescript-eslint to v8.70.1 ([#2932](https://github.com/nozomiishii/configs/issues/2932)) ([cd783c2](https://github.com/nozomiishii/configs/commit/cd783c24f8c14eeb1a70d33c88131ed889afbc91))
+
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.7.1...@nozomiishii/eslint-config-v2.7.2) (2026-09-22)
 
 ### Bug Fixes
