@@ -2,11 +2,10 @@
 
 ## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.7.2...@nozomiishii/oxfmt-config-v2.7.3) (2026-10-03)
 
-
 ### Miscellaneous
 
-* update dependency oxfmt to v0.70.0 ([#2936](https://github.com/nozomiishii/configs/issues/2936)) ([b90d126](https://github.com/nozomiishii/configs/commit/b90d126b881943a5a79ad8ab823cba79f6a66ecc))
-* update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
+- update dependency oxfmt to v0.70.0 ([#2936](https://github.com/nozomiishii/configs/issues/2936)) ([b90d126](https://github.com/nozomiishii/configs/commit/b90d126b881943a5a79ad8ab823cba79f6a66ecc))
+- update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
 
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.7.1...@nozomiishii/oxfmt-config-v2.7.2) (2026-09-22)
 

@@ -2,11 +2,10 @@
 
 ## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v2.7.2...@nozomiishii/cspell-config-v2.7.3) (2026-10-03)
 
-
 ### Miscellaneous
 
-* update dependency cspell to v10.3.4 ([#2928](https://github.com/nozomiishii/configs/issues/2928)) ([5617d4b](https://github.com/nozomiishii/configs/commit/5617d4b80923102b25475834675c72ac9175c72c))
-* update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
+- update dependency cspell to v10.3.4 ([#2928](https://github.com/nozomiishii/configs/issues/2928)) ([5617d4b](https://github.com/nozomiishii/configs/commit/5617d4b80923102b25475834675c72ac9175c72c))
+- update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
 
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v2.7.1...@nozomiishii/cspell-config-v2.7.2) (2026-09-22)
 
