@@ -19,7 +19,6 @@ defaults:
 
 jobs:
   changes:
-    if: ${{ !github.event.pull_request.draft }}
     runs-on: ubuntu-slim
     timeout-minutes: 5
     permissions:
