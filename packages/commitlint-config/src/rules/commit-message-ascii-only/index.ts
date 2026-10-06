@@ -1,5 +1,6 @@
 import type { RuleConfigTuple } from "@commitlint/types";
 import type { CommitBase } from "conventional-commits-parser";
+import { RuleConfigSeverity } from "@commitlint/types";
 
 type Parsed = Partial<Pick<CommitBase, "body" | "footer" | "header" | "notes">>;
 
@@ -22,6 +23,6 @@ const rule = ({ body, footer, header, notes }: Parsed): readonly [boolean, strin
   return [isValid, "commit message must contain ASCII characters only (write in English)"];
 };
 
-const severity: RuleConfigTuple<void> = [2, "always"];
+const severity: RuleConfigTuple<void> = [RuleConfigSeverity.Error, "always"];
 
 export const commitMessageAsciiOnly = { name: "commit-message-ascii-only", rule, severity };

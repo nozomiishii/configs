@@ -1,4 +1,5 @@
 import type { Plugin, RulesConfig, UserConfig } from "@commitlint/types";
+import { RuleConfigSeverity } from "@commitlint/types";
 import { breakingChangeRequiresBang } from "./rules/breaking-change-requires-bang";
 import { commitMessageAsciiOnly } from "./rules/commit-message-ascii-only";
 
@@ -22,8 +23,8 @@ const config: UserConfig = {
   extends: ["@commitlint/config-conventional"],
   plugins: [{ rules: pluginRules }],
   rules: {
-    "scope-empty": [2, "always"],
-    "type-enum": [2, "always", ["feat", "fix", "chore", "revert"]],
+    "scope-empty": [RuleConfigSeverity.Error, "always"],
+    "type-enum": [RuleConfigSeverity.Error, "always", ["feat", "fix", "chore", "revert"]],
     ...customSeverities,
   },
 };
