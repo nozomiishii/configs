@@ -1,4 +1,5 @@
 import lint from "@commitlint/lint";
+import { RuleConfigSeverity } from "@commitlint/types";
 import { describe, expect, test } from "vitest";
 import config from ".";
 
@@ -20,7 +21,9 @@ describe("scope-empty (default deny scope)", () => {
 
   // scope 付きコミットを拒否する。
   test("rejects a commit with a scope", async () => {
-    const result = await lint("feat(api): add foo", { "scope-empty": [2, "always"] } as const);
+    const result = await lint("feat(api): add foo", {
+      "scope-empty": [RuleConfigSeverity.Error, "always"],
+    } as const);
 
     expect(result.valid).toBe(false);
     expect(result.errors.some((e) => e.name === "scope-empty")).toBe(true);
@@ -28,7 +31,9 @@ describe("scope-empty (default deny scope)", () => {
 
   // consumer が scope-empty を無効化した場合は scope 付きコミットを許可する。
   test("allows a scoped commit when the consumer disables scope-empty", async () => {
-    const result = await lint("feat(api): add foo", { "scope-empty": [0, "always"] } as const);
+    const result = await lint("feat(api): add foo", {
+      "scope-empty": [RuleConfigSeverity.Disabled, "always"],
+    } as const);
 
     expect(result.valid).toBe(true);
   });

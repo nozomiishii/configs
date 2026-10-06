@@ -1,5 +1,6 @@
 import type { RuleConfigTuple } from "@commitlint/types";
 import type { CommitBase } from "conventional-commits-parser";
+import { RuleConfigSeverity } from "@commitlint/types";
 
 type Parsed = Partial<Pick<CommitBase, "header" | "notes">>;
 
@@ -16,7 +17,7 @@ const rule = ({ header, notes }: Parsed): readonly [boolean, string?] => {
   ];
 };
 
-const severity: RuleConfigTuple<void> = [2, "always"];
+const severity: RuleConfigTuple<void> = [RuleConfigSeverity.Error, "always"];
 
 export const breakingChangeRequiresBang = {
   name: "breaking-change-requires-bang",
