@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.7.2...@nozomiishii/oxfmt-config-v2.7.3) (2026-10-09)
+
+
+### Miscellaneous
+
+* update dependency @types/node to v24.19.0 ([#2946](https://github.com/nozomiishii/configs/issues/2946)) ([a7b019f](https://github.com/nozomiishii/configs/commit/a7b019f5a4d0f7320d4600372b01285366e15b63))
+* update dependency oxfmt to v0.70.0 ([#2936](https://github.com/nozomiishii/configs/issues/2936)) ([b90d126](https://github.com/nozomiishii/configs/commit/b90d126b881943a5a79ad8ab823cba79f6a66ecc))
+* update dependency oxfmt to v0.71.0 ([#2950](https://github.com/nozomiishii/configs/issues/2950)) ([e9efc4f](https://github.com/nozomiishii/configs/commit/e9efc4fb738fc063afe8977f1b5f38770f1c819e))
+* update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
+* update dependency pnpm to v12.8.2 ([#2951](https://github.com/nozomiishii/configs/issues/2951)) ([58f5ed2](https://github.com/nozomiishii/configs/commit/58f5ed20ec319d8b43fe8f80f982a0c86db7b453))
+* update dependency typescript-eslint to v8.71.0 ([#2952](https://github.com/nozomiishii/configs/issues/2952)) ([d5cc409](https://github.com/nozomiishii/configs/commit/d5cc4096e922756624fc67a2bb06c2b3aa678c99))
+
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.7.1...@nozomiishii/oxfmt-config-v2.7.2) (2026-09-22)
 
 ### Miscellaneous

@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v2.7.2...@nozomiishii/lefthook-config-v2.7.3) (2026-10-09)
+
+
+### Miscellaneous
+
+* update dependency @types/node to v24.19.0 ([#2946](https://github.com/nozomiishii/configs/issues/2946)) ([a7b019f](https://github.com/nozomiishii/configs/commit/a7b019f5a4d0f7320d4600372b01285366e15b63))
+* update dependency lefthook to v2.1.16 ([#2943](https://github.com/nozomiishii/configs/issues/2943)) ([cfa8170](https://github.com/nozomiishii/configs/commit/cfa81709a5b22c6a1bf1928649ba082ed072301d))
+* update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
+* update dependency pnpm to v12.8.2 ([#2951](https://github.com/nozomiishii/configs/issues/2951)) ([58f5ed2](https://github.com/nozomiishii/configs/commit/58f5ed20ec319d8b43fe8f80f982a0c86db7b453))
+* update dependency typescript-eslint to v8.71.0 ([#2952](https://github.com/nozomiishii/configs/issues/2952)) ([d5cc409](https://github.com/nozomiishii/configs/commit/d5cc4096e922756624fc67a2bb06c2b3aa678c99))
+
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/lefthook-config-v2.7.1...@nozomiishii/lefthook-config-v2.7.2) (2026-09-22)
 
 ### Miscellaneous
