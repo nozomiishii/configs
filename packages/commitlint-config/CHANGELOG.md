@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v2.7.2...@nozomiishii/commitlint-config-v2.7.3) (2026-10-09)
+
+### Miscellaneous
+
+- update commitlint monorepo to v21.2.3 ([#2918](https://github.com/nozomiishii/configs/issues/2918)) ([794163b](https://github.com/nozomiishii/configs/commit/794163b2cb065e836c24fc65ee2692e697caea6d))
+- update dependency @types/node to v24.19.0 ([#2946](https://github.com/nozomiishii/configs/issues/2946)) ([a7b019f](https://github.com/nozomiishii/configs/commit/a7b019f5a4d0f7320d4600372b01285366e15b63))
+- update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
+- update dependency pnpm to v12.8.2 ([#2951](https://github.com/nozomiishii/configs/issues/2951)) ([58f5ed2](https://github.com/nozomiishii/configs/commit/58f5ed20ec319d8b43fe8f80f982a0c86db7b453))
+- update dependency typescript-eslint to v8.71.0 ([#2952](https://github.com/nozomiishii/configs/issues/2952)) ([d5cc409](https://github.com/nozomiishii/configs/commit/d5cc4096e922756624fc67a2bb06c2b3aa678c99))
+- update typescript-eslint to v8.71.0 and use RuleConfigSeverity ([#2956](https://github.com/nozomiishii/configs/issues/2956)) ([35f61cd](https://github.com/nozomiishii/configs/commit/35f61cd2eb5536d4950cc1de44d6fa04c25ba557))
+
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v2.7.1...@nozomiishii/commitlint-config-v2.7.2) (2026-09-22)
 
 ### Miscellaneous
