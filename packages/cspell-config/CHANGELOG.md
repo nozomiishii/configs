@@ -2,18 +2,17 @@
 
 ## [2.7.3](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v2.7.2...@nozomiishii/cspell-config-v2.7.3) (2026-10-13)
 
-
 ### Miscellaneous
 
-* update dependency @types/node to v24.19.0 ([#2946](https://github.com/nozomiishii/configs/issues/2946)) ([a7b019f](https://github.com/nozomiishii/configs/commit/a7b019f5a4d0f7320d4600372b01285366e15b63))
-* update dependency @types/node to v24.19.1 ([#2961](https://github.com/nozomiishii/configs/issues/2961)) ([eb2e390](https://github.com/nozomiishii/configs/commit/eb2e3902a56734a56cde960e291d73ac0c253d0c))
-* update dependency cspell to v10.3.4 ([#2928](https://github.com/nozomiishii/configs/issues/2928)) ([5617d4b](https://github.com/nozomiishii/configs/commit/5617d4b80923102b25475834675c72ac9175c72c))
-* update dependency cspell to v10.3.6 ([#2940](https://github.com/nozomiishii/configs/issues/2940)) ([1b80b3c](https://github.com/nozomiishii/configs/commit/1b80b3c11163d7af873a5dcec91be5fc6891a748))
-* update dependency eslint to v10.12.0 ([#2969](https://github.com/nozomiishii/configs/issues/2969)) ([f7f8172](https://github.com/nozomiishii/configs/commit/f7f81720a71887c00268bc8b7d22b99d628962c1))
-* update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
-* update dependency pnpm to v12.8.2 ([#2951](https://github.com/nozomiishii/configs/issues/2951)) ([58f5ed2](https://github.com/nozomiishii/configs/commit/58f5ed20ec319d8b43fe8f80f982a0c86db7b453))
-* update dependency typescript-eslint to v8.71.0 ([#2952](https://github.com/nozomiishii/configs/issues/2952)) ([d5cc409](https://github.com/nozomiishii/configs/commit/d5cc4096e922756624fc67a2bb06c2b3aa678c99))
-* update pnpm to v12.10.1 ([#2976](https://github.com/nozomiishii/configs/issues/2976)) ([76b7a2c](https://github.com/nozomiishii/configs/commit/76b7a2cd84af8761e1b291f5f0ba8f3b69919e37))
+- update dependency @types/node to v24.19.0 ([#2946](https://github.com/nozomiishii/configs/issues/2946)) ([a7b019f](https://github.com/nozomiishii/configs/commit/a7b019f5a4d0f7320d4600372b01285366e15b63))
+- update dependency @types/node to v24.19.1 ([#2961](https://github.com/nozomiishii/configs/issues/2961)) ([eb2e390](https://github.com/nozomiishii/configs/commit/eb2e3902a56734a56cde960e291d73ac0c253d0c))
+- update dependency cspell to v10.3.4 ([#2928](https://github.com/nozomiishii/configs/issues/2928)) ([5617d4b](https://github.com/nozomiishii/configs/commit/5617d4b80923102b25475834675c72ac9175c72c))
+- update dependency cspell to v10.3.6 ([#2940](https://github.com/nozomiishii/configs/issues/2940)) ([1b80b3c](https://github.com/nozomiishii/configs/commit/1b80b3c11163d7af873a5dcec91be5fc6891a748))
+- update dependency eslint to v10.12.0 ([#2969](https://github.com/nozomiishii/configs/issues/2969)) ([f7f8172](https://github.com/nozomiishii/configs/commit/f7f81720a71887c00268bc8b7d22b99d628962c1))
+- update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
+- update dependency pnpm to v12.8.2 ([#2951](https://github.com/nozomiishii/configs/issues/2951)) ([58f5ed2](https://github.com/nozomiishii/configs/commit/58f5ed20ec319d8b43fe8f80f982a0c86db7b453))
+- update dependency typescript-eslint to v8.71.0 ([#2952](https://github.com/nozomiishii/configs/issues/2952)) ([d5cc409](https://github.com/nozomiishii/configs/commit/d5cc4096e922756624fc67a2bb06c2b3aa678c99))
+- update pnpm to v12.10.1 ([#2976](https://github.com/nozomiishii/configs/issues/2976)) ([76b7a2c](https://github.com/nozomiishii/configs/commit/76b7a2cd84af8761e1b291f5f0ba8f3b69919e37))
 
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/cspell-config-v2.7.1...@nozomiishii/cspell-config-v2.7.2) (2026-09-22)
 
