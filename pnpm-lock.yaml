@@ -286,8 +286,8 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(eslint@10.12.0(jiti@2.7.0)(supports-color@7.2.0))
       '@next/eslint-plugin-next':
-        specifier: 16.4.0
-        version: 16.4.0(eslint@10.12.0(jiti@2.7.0)(supports-color@7.2.0))
+        specifier: 16.4.1
+        version: 16.4.1(eslint@10.12.0(jiti@2.7.0)(supports-color@7.2.0))
       '@stylistic/eslint-plugin':
         specifier: 5.10.0
         version: 5.10.0(eslint@10.12.0(jiti@2.7.0)(supports-color@7.2.0))
@@ -1284,8 +1284,8 @@ packages:
       '@emnapi/core': ^1.7.1 || ^2.0.0-alpha.4
       '@emnapi/runtime': ^1.7.1 || ^2.0.0-alpha.4
 
-  '@next/eslint-plugin-next@16.4.0':
-    resolution: {integrity: sha512-ffeflB/dL8RrvWejQximw01pOpKHN692Y3FjDB82DCd0YVvXvBD6vY7mcZp27yvSVFVM6wA73xVodEKF4spizA==}
+  '@next/eslint-plugin-next@16.4.1':
+    resolution: {integrity: sha512-2io6M+wAqe7nT5mt2gEVy6FOzye2DmwhjaYCpSvHfrIKL11SXNTwSARxpPHJacRmfgSBSDnNmnEXSp0DaJ23BQ==}
 
   '@node-rs/xxhash-android-arm-eabi@1.7.8':
     resolution: {integrity: sha512-dOwbmnDzULc5uRgbIvcrxDa7vGdk51GQVREcY98DdxTBd0lomRg/gqAR9ny/S533cD5QTRSvrK+q8KEJMqoG4w==}
@@ -5200,7 +5200,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.4
     optional: true
 
-  '@next/eslint-plugin-next@16.4.0(eslint@10.12.0(jiti@2.7.0)(supports-color@7.2.0))':
+  '@next/eslint-plugin-next@16.4.1(eslint@10.12.0(jiti@2.7.0)(supports-color@7.2.0))':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@10.12.0(jiti@2.7.0)(supports-color@7.2.0))
       fast-glob: 3.3.1
