@@ -3,21 +3,21 @@ import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
 
 /**
- * @returns eslint-plugin-import-x
- *
- * import 解決系のルールは TypeScript に任せ、recommended を spread しないことで有効化自体を避けている。
- *
- * ```
- * import/named
- * import/namespace
- * import/default
- * import/no-named-as-default-member
- * import/no-unresolved
- * ```
- *
- * @see https://github.com/un-ts/eslint-plugin-import-x
- * @see https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
- */
+@returns eslint-plugin-import-x
+
+import 解決系のルールは TypeScript に任せ、recommended を spread しないことで有効化自体を避けている。
+
+```
+import/named
+import/namespace
+import/default
+import/no-named-as-default-member
+import/no-unresolved
+```
+
+@see https://github.com/un-ts/eslint-plugin-import-x
+@see https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
+*/
 export function importX() {
   // tseslint.configがdefineConfigに移行した差分が取り込まれてない
   // https://github.com/un-ts/eslint-plugin-import-x/issues/421
@@ -33,38 +33,38 @@ export function importX() {
     rules: {
       ...pluginImportX.flatConfigs.typescript.rules,
       /**
-       * import文は先頭に書く
-       *
-       * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/first.md
-       */
+      import文は先頭に書く
+
+      @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/first.md
+      */
       "import-x/first": "warn",
 
       /**
-       * 循環依存を禁止
-       *
-       * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-cycle.md
-       */
+      循環依存を禁止
+
+      @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-cycle.md
+      */
       "import-x/no-cycle": "warn",
 
       /**
-       * 同じモジュールの繰り返しインポートを禁止
-       *
-       * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-duplicates.md
-       */
+      同じモジュールの繰り返しインポートを禁止
+
+      @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-duplicates.md
+      */
       "import-x/no-duplicates": "warn",
 
       /**
-       * default import名がモジュールのnamed export名と一致することを禁止
-       *
-       * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-named-as-default.md
-       */
+      default import名がモジュールのnamed export名と一致することを禁止
+
+      @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-named-as-default.md
+      */
       "import-x/no-named-as-default": "warn",
 
       /**
-       * 冗長なパスセグメントを禁止。noUselessIndex で `index` も省く。
-       *
-       * @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-useless-path-segments.md
-       */
+      冗長なパスセグメントを禁止。noUselessIndex で `index` も省く。
+
+      @see https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-useless-path-segments.md
+      */
       "import-x/no-useless-path-segments": ["warn", { noUselessIndex: true }],
     },
   });

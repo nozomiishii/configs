@@ -10,10 +10,10 @@ interface PackageJson {
 }
 
 /**
- * package.jsonからpnpm.executionEnv.nodeVersionを取得
- *
- * @returns nodeVersionの値、存在しない場合はundefined
- */
+package.jsonからpnpm.executionEnv.nodeVersionを取得
+
+@returns nodeVersionの値、存在しない場合はundefined
+*/
 export function getNodeVersion(): string | undefined {
   try {
     // プロジェクトルートのpackage.jsonを読み込み

@@ -5,9 +5,9 @@ const customDictionaryPath = fileURLToPath(
 );
 
 /**
- * cspell configuration
- * {@link https://cspell.org/docs/Configuration}
- */
+cspell configuration
+{@link https://cspell.org/docs/Configuration}
+*/
 export default {
   dictionaries: [
     // Built-in dictionaries (alphabetical ascending order)

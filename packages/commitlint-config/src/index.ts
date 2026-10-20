@@ -13,12 +13,12 @@ const customSeverities: Partial<RulesConfig> = Object.fromEntries(
 );
 
 /**
- * Configuration
- * {@link https://commitlint.js.org/#/reference-configuration}
- *
- * Rules
- * {@link https://commitlint.js.org/#/reference-rules}
- */
+Configuration
+{@link https://commitlint.js.org/#/reference-configuration}
+
+Rules
+{@link https://commitlint.js.org/#/reference-rules}
+*/
 const config: UserConfig = {
   extends: ["@commitlint/config-conventional"],
   plugins: [{ rules: pluginRules }],

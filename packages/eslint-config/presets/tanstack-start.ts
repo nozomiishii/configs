@@ -19,13 +19,13 @@ import { name } from "../utils/name";
 import { base } from "./base";
 
 /**
- * プロパティの並び順が型推論に効くオブジェクトを受け取る関数。
- * TanStackのproperty-order系ruleが並び順を見る対象と同じ。
- *
- * @see https://github.com/TanStack/router/blob/main/packages/eslint-plugin-router/src/rules/create-route-property-order/constants.ts
- * @see https://github.com/TanStack/query/blob/main/packages/eslint-plugin-query/src/rules/infinite-query-property-order/constants.ts
- * @see https://github.com/TanStack/query/blob/main/packages/eslint-plugin-query/src/rules/mutation-property-order/constants.ts
- */
+プロパティの並び順が型推論に効くオブジェクトを受け取る関数。
+TanStackのproperty-order系ruleが並び順を見る対象と同じ。
+
+@see https://github.com/TanStack/router/blob/main/packages/eslint-plugin-router/src/rules/create-route-property-order/constants.ts
+@see https://github.com/TanStack/query/blob/main/packages/eslint-plugin-query/src/rules/infinite-query-property-order/constants.ts
+@see https://github.com/TanStack/query/blob/main/packages/eslint-plugin-query/src/rules/mutation-property-order/constants.ts
+*/
 const propertyOrderFunctions = [
   "createFileRoute",
   "createRootRoute",
@@ -38,31 +38,31 @@ const propertyOrderFunctions = [
 ];
 
 /**
- * base の sort-objects 設定。上書きしても対象のオブジェクト以外は元の挙動を保つため、
- * 値を書き写さず recommended-natural から取る。
- */
+base の sort-objects 設定。上書きしても対象のオブジェクト以外は元の挙動を保つため、
+値を書き写さず recommended-natural から取る。
+*/
 const sortObjectsRule =
   eslintPluginPerfectionist.configs["recommended-natural"].rules?.["perfectionist/sort-objects"];
 const sortObjectsFallback = Array.isArray(sortObjectsRule) ? sortObjectsRule.slice(1) : [];
 
 /**
- * TanStack Start / web アプリ向け。base + Node.js 層 + ブラウザ層 + web rules。
- *
- * node() からは作らず base を元に組む。SPA mode でも server function と
- * server route は使え、shell は SSR ビルドで prerender されるため
- * Node.js 層(eslint-plugin-n)も含める。prettier は末尾で一度だけ付ける。
- */
+TanStack Start / web アプリ向け。base + Node.js 層 + ブラウザ層 + web rules。
+
+node() からは作らず base を元に組む。SPA mode でも server function と
+server route は使え、shell は SSR ビルドで prerender されるため
+Node.js 層(eslint-plugin-n)も含める。prettier は末尾で一度だけ付ける。
+*/
 export function tanstackStart(options: Options = {}) {
   return defineConfig([
     ...base(options),
 
     {
       /**
-       * generatedRouteTree の既定値。生成物なので lint 対象から外す。
-       * ファイル自身が付けている eslint-disable は base の noInlineConfig で効かない。
-       *
-       * @see https://tanstack.com/router/latest/docs/api/file-based-routing
-       */
+      generatedRouteTree の既定値。生成物なので lint 対象から外す。
+      ファイル自身が付けている eslint-disable は base の noInlineConfig で効かない。
+
+      @see https://tanstack.com/router/latest/docs/api/file-based-routing
+      */
       ignores: ["**/routeTree.gen.ts"],
       name: name("tanstack-start/generated"),
     },
@@ -102,12 +102,12 @@ export function tanstackStart(options: Options = {}) {
       name: name("tanstack-start/only-throw-error"),
       rules: {
         /**
-         * TanStack RouterはredirectとnotFoundをthrowして制御を移す。
-         * baseのstrictTypeCheckedがonly-throw-errorをerrorにしているため、
-         * この2つだけthrowできる型として許可する。
-         *
-         * @see https://typescript-eslint.io/rules/only-throw-error
-         */
+        TanStack RouterはredirectとnotFoundをthrowして制御を移す。
+        baseのstrictTypeCheckedがonly-throw-errorをerrorにしているため、
+        この2つだけthrowできる型として許可する。
+
+        @see https://typescript-eslint.io/rules/only-throw-error
+        */
         "@typescript-eslint/only-throw-error": [
           "error",
           {
@@ -127,13 +127,13 @@ export function tanstackStart(options: Options = {}) {
       name: name("tanstack-start/sort-objects"),
       rules: {
         /**
-         * route定義とquery定義のプロパティ順は型推論に効くため、TanStackの
-         * property-order系ruleが決めた順を守る必要がある。baseのperfectionistが
-         * アルファベット順に直そうとして競合し、どちらもauto fixできるので
-         * 互いを打ち消し合う。該当のオブジェクトだけ並べ替えの対象外にする。
-         *
-         * @see https://perfectionist.dev/rules/sort-objects#useconfigurationif
-         */
+        route定義とquery定義のプロパティ順は型推論に効くため、TanStackの
+        property-order系ruleが決めた順を守る必要がある。baseのperfectionistが
+        アルファベット順に直そうとして競合し、どちらもauto fixできるので
+        互いを打ち消し合う。該当のオブジェクトだけ並べ替えの対象外にする。
+
+        @see https://perfectionist.dev/rules/sort-objects#useconfigurationif
+        */
         "perfectionist/sort-objects": [
           "error",
           {
@@ -155,12 +155,12 @@ export function tanstackStart(options: Options = {}) {
       name: name("tanstack-start/import-meta-env"),
       rules: {
         /**
-         * n/no-process-envと同じ運用。envの読み取りをenv.tsに集約して、
-         * 値の欠落と型付けを1箇所で扱う。
-         * import.meta.env向けの専用ruleが無いためselectorで書く。
-         *
-         * @see https://vite.dev/guide/env-and-mode
-         */
+        n/no-process-envと同じ運用。envの読み取りをenv.tsに集約して、
+        値の欠落と型付けを1箇所で扱う。
+        import.meta.env向けの専用ruleが無いためselectorで書く。
+
+        @see https://vite.dev/guide/env-and-mode
+        */
         "no-restricted-syntax": [
           "error",
           {
@@ -176,50 +176,50 @@ export function tanstackStart(options: Options = {}) {
       name: name("tanstack-start/filename-case"),
       rules: {
         /**
-         * TanStack Routerはファイル名をrouting APIとして使い、通常のpath
-         * parameter以外にも複数の特殊tokenを扱うため、routes配下では無効にする。
-         *
-         * @see https://tanstack.com/router/latest/docs/routing/file-naming-conventions
-         */
+        TanStack Routerはファイル名をrouting APIとして使い、通常のpath
+        parameter以外にも複数の特殊tokenを扱うため、routes配下では無効にする。
+
+        @see https://tanstack.com/router/latest/docs/routing/file-naming-conventions
+        */
         "unicorn/filename-case": "off",
       },
     },
 
     {
       /**
-       * routesDirectoryの既定値。変更した場合はconsumer側で同じ設定を足す。
-       *
-       * @see https://tanstack.com/router/latest/docs/api/file-based-routing
-       */
+      routesDirectoryの既定値。変更した場合はconsumer側で同じ設定を足す。
+
+      @see https://tanstack.com/router/latest/docs/api/file-based-routing
+      */
       files: ["**/src/routes/**"],
       name: name("tanstack-start/react-refresh"),
       rules: {
         /**
-         * routeファイルは`export const Route`が必須でcomponentだけをexportする形にできない。
-         * router-generatorが生成するrouteファイルもcomponentをexportしないため常に落ちる。
-         *
-         * @see https://github.com/ArnaudBarre/eslint-plugin-react-refresh
-         */
+        routeファイルは`export const Route`が必須でcomponentだけをexportする形にできない。
+        router-generatorが生成するrouteファイルもcomponentをexportしないため常に落ちる。
+
+        @see https://github.com/ArnaudBarre/eslint-plugin-react-refresh
+        */
         "react-refresh/only-export-components": "off",
       },
     },
 
     {
       /**
-       * routesDirectoryの既定値。変更した場合はconsumer側で同じ設定を足す。
-       *
-       * @see https://tanstack.com/router/latest/docs/api/file-based-routing
-       */
+      routesDirectoryの既定値。変更した場合はconsumer側で同じ設定を足す。
+
+      @see https://tanstack.com/router/latest/docs/api/file-based-routing
+      */
       files: ["**/src/routes/**/*.stories.{ts,tsx}"],
       name: name("tanstack-start/route-stories"),
       rules: {
         /**
-         * 公式ドキュメントどおりrouteのstoryで`component`を省くとこのruleに引っかかり、
-         * ruleに合わせて`component`を足すと`Meta<typeof Route>`が型エラーになる。公式の形を優先する。
-         *
-         * @see https://storybook.js.org/docs/get-started/frameworks/tanstack-react
-         * @see https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/docs/rules/csf-component.md
-         */
+        公式ドキュメントどおりrouteのstoryで`component`を省くとこのruleに引っかかり、
+        ruleに合わせて`component`を足すと`Meta<typeof Route>`が型エラーになる。公式の形を優先する。
+
+        @see https://storybook.js.org/docs/get-started/frameworks/tanstack-react
+        @see https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/docs/rules/csf-component.md
+        */
         "storybook/csf-component": "off",
       },
     },

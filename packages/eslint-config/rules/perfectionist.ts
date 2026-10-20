@@ -3,10 +3,10 @@ import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
 
 /**
- * @returns eslint-plugin-perfectionist
- *
- * @see https://github.com/azat-io/eslint-plugin-perfectionist
- */
+@returns eslint-plugin-perfectionist
+
+@see https://github.com/azat-io/eslint-plugin-perfectionist
+*/
 export function perfectionist() {
   return defineConfig([
     {
@@ -18,10 +18,10 @@ export function perfectionist() {
         ...eslintPluginPerfectionist.configs["recommended-natural"].rules,
 
         /**
-         * import文の並び順
-         *
-         * @see https://perfectionist.dev/rules/sort-imports
-         */
+        import文の並び順
+
+        @see https://perfectionist.dev/rules/sort-imports
+        */
         "perfectionist/sort-imports": [
           "error",
           {

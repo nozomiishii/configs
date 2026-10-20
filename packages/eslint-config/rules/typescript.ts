@@ -4,12 +4,12 @@ import type { TypescriptOptions } from "../types";
 import { name } from "../utils/name";
 
 /**
- * @returns typescript-eslint
- *
- * @see https://github.com/typescript-eslint/typescript-eslint
- *
- * @see https://typescript-eslint.io/rules
- */
+@returns typescript-eslint
+
+@see https://github.com/typescript-eslint/typescript-eslint
+
+@see https://typescript-eslint.io/rules
+*/
 export function typescript({ tsconfigRootDir }: TypescriptOptions = {}) {
   return defineConfig([
     // typescript-eslint/baseとtypescript-eslint/eslint-recommendedの設定がダブってるからなんとかしたい
@@ -20,12 +20,12 @@ export function typescript({ tsconfigRootDir }: TypescriptOptions = {}) {
     tseslint.configs.stylisticTypeChecked,
 
     /**
-     * 型を見る rule を動かすための設定。
-     * projectService が各ファイルに型情報を供給し、
-     * tsconfigRootDir でその基準ディレクトリを固定する。
-     *
-     * @see https://typescript-eslint.io/packages/parser/#projectservice
-     */
+    型を見る rule を動かすための設定。
+    projectService が各ファイルに型情報を供給し、
+    tsconfigRootDir でその基準ディレクトリを固定する。
+
+    @see https://typescript-eslint.io/packages/parser/#projectservice
+    */
     {
       languageOptions: {
         parserOptions: {
@@ -37,10 +37,10 @@ export function typescript({ tsconfigRootDir }: TypescriptOptions = {}) {
     },
 
     /**
-     * 型情報が要るルールと projectService を .js 系では無効にする。
-     *
-     * @see https://typescript-eslint.io/troubleshooting/typed-linting/#how-do-i-disable-type-checked-linting-for-a-file
-     */
+    型情報が要るルールと projectService を .js 系では無効にする。
+
+    @see https://typescript-eslint.io/troubleshooting/typed-linting/#how-do-i-disable-type-checked-linting-for-a-file
+    */
     {
       files: ["**/*.{js,cjs,mjs,jsx}"],
       ...tseslint.configs.disableTypeChecked,
@@ -62,10 +62,10 @@ export function typescript({ tsconfigRootDir }: TypescriptOptions = {}) {
         ],
 
         /**
-         * 未使用の変数・引数を検出する
-         *
-         * @see https://typescript-eslint.io/rules/no-unused-vars
-         */
+        未使用の変数・引数を検出する
+
+        @see https://typescript-eslint.io/rules/no-unused-vars
+        */
         "@typescript-eslint/no-unused-vars": [
           "warn",
           {

@@ -5,8 +5,8 @@ import { env } from "node:process";
 import { echo } from "zx";
 
 /**
- * Display a welcome message
- */
+Display a welcome message
+*/
 export function welcome() {
   try {
     // Get workspace root package.json path using INIT_CWD
@@ -44,8 +44,8 @@ export function welcome() {
 }
 
 /**
- * Convert text to ASCII art
- */
+Convert text to ASCII art
+*/
 function createAsciiArt(text: string) {
   return figlet.textSync(text, {
     font: "ANSI Shadow",

@@ -3,9 +3,9 @@ import path from "node:path";
 import { echo, glob } from "zx";
 
 /**
- * Recursively copy a .vscode/settings example to .vscode/settings.json.
- * Prefer strict JSON when both example formats exist.
- */
+Recursively copy a .vscode/settings example to .vscode/settings.json.
+Prefer strict JSON when both example formats exist.
+*/
 export async function setupVSCode() {
   echo("Setup vscode");
 

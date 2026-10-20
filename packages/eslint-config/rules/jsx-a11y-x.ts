@@ -3,10 +3,10 @@ import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
 
 /**
- * @returns eslint-plugin-jsx-a11y-x
- *
- * @see https://github.com/es-tooling/eslint-plugin-jsx-a11y-x
- */
+@returns eslint-plugin-jsx-a11y-x
+
+@see https://github.com/es-tooling/eslint-plugin-jsx-a11y-x
+*/
 export function jsxA11yX() {
   return defineConfig([
     {

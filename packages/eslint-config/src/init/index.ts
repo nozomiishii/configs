@@ -1,6 +1,6 @@
 /**
- * Scaffold ESLint config into the consumer project.
- */
+Scaffold ESLint config into the consumer project.
+*/
 import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -15,8 +15,8 @@ export interface InitOptions {
 export type PresetId = "nextjs" | "node" | "tanstack-start";
 
 /**
- * starter が呼ぶ preset 関数名。ファイル名は kebab-case、関数は camelCase のため対応表で持つ。
- */
+starter が呼ぶ preset 関数名。ファイル名は kebab-case、関数は camelCase のため対応表で持つ。
+*/
 const presetFunctions: Record<PresetId, string> = {
   nextjs: "nextjs",
   node: "node",
@@ -77,9 +77,9 @@ export async function init({
 }
 
 /**
- * bundle後のチャンク位置に依存せず、package.jsonのあるパッケージルートを探す。
- * tsdownはinitを `dist/init-<hash>.js` へホイストするため `../../` が固定で使えない。
- */
+bundle後のチャンク位置に依存せず、package.jsonのあるパッケージルートを探す。
+tsdownはinitを `dist/init-<hash>.js` へホイストするため `../../` が固定で使えない。
+*/
 function packageRoot(): string {
   let dir = path.dirname(fileURLToPath(import.meta.url));
 

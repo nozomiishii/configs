@@ -5,10 +5,10 @@ import { name } from "../utils/name";
 const config = eslintPluginN.configs["flat/recommended-module"];
 
 /**
- * @returns eslint-plugin-n
- *
- * @see https://github.com/eslint-community/eslint-plugin-n
- */
+@returns eslint-plugin-n
+
+@see https://github.com/eslint-community/eslint-plugin-n
+*/
 export function n() {
   return defineConfig([
     {
@@ -18,15 +18,15 @@ export function n() {
         ...config.rules,
 
         /**
-         * TypeScriptやeslint-plugin-import-xで解決する
-         */
+        TypeScriptやeslint-plugin-import-xで解決する
+        */
         "n/no-missing-import": "off",
 
         /**
-         * experimental な Node.js API の使用を許可する
-         *
-         * @see https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-unsupported-features/node-builtins.md
-         */
+        experimental な Node.js API の使用を許可する
+
+        @see https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-unsupported-features/node-builtins.md
+        */
         "n/no-unsupported-features/node-builtins": ["error", { allowExperimental: true }],
       },
       // pnpmでnode管理したいので設定。engines設定してるならここは省略できる。
@@ -47,10 +47,10 @@ export function n() {
       name: name("n/no-process-env"),
       rules: {
         /**
-         * process.envの直接使用禁止
-         *
-         * @see https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-process-env.md
-         */
+        process.envの直接使用禁止
+
+        @see https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-process-env.md
+        */
         "n/no-process-env": "error",
       },
     },

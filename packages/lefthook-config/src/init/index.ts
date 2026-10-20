@@ -1,6 +1,6 @@
 /**
- * Scaffold lefthook config into the consumer project.
- */
+Scaffold lefthook config into the consumer project.
+*/
 import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -42,9 +42,9 @@ export async function init({ cwd }: InitOptions): Promise<void> {
 }
 
 /**
- * bundle後のチャンク位置に依存せず、package.jsonのあるパッケージルートを探す。
- * tsdownはinitを `dist/init-<hash>.js` へホイストするため `../../` が固定で使えない。
- */
+bundle後のチャンク位置に依存せず、package.jsonのあるパッケージルートを探す。
+tsdownはinitを `dist/init-<hash>.js` へホイストするため `../../` が固定で使えない。
+*/
 function packageRoot(): string {
   let dir = path.dirname(fileURLToPath(import.meta.url));
 

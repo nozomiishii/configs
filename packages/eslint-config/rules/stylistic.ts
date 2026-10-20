@@ -3,10 +3,10 @@ import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
 
 /**
- * @returns @stylistic/eslint-plugin
- *
- * @see https://eslint.style/rules
- */
+@returns @stylistic/eslint-plugin
+
+@see https://eslint.style/rules
+*/
 export function stylistic() {
   return defineConfig([
     {
@@ -16,10 +16,10 @@ export function stylistic() {
       },
       rules: {
         /**
-         * 改行のルールの統一
-         *
-         * @see https://eslint.org/docs/latest/rules/padding-line-between-statements#rule-details
-         */
+        改行のルールの統一
+
+        @see https://eslint.org/docs/latest/rules/padding-line-between-statements#rule-details
+        */
         "@stylistic/padding-line-between-statements": [
           "warn",
           { blankLine: "always", next: "block", prev: "*" },
