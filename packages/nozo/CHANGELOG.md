@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.8.0](https://github.com/nozomiishii/configs/compare/nozo-v2.7.2...nozo-v2.8.0) (2026-10-20)
+
+### Features
+
+- drop jsdoc asterisk prefix for eslint-plugin-unicorn v78 ([#3005](https://github.com/nozomiishii/configs/issues/3005)) ([7cd6629](https://github.com/nozomiishii/configs/commit/7cd66299eb767fc47380e68a8eaf6a209c39b4d5))
+
+### Miscellaneous
+
+- update dependency @types/node to v24.19.0 ([#2946](https://github.com/nozomiishii/configs/issues/2946)) ([a7b019f](https://github.com/nozomiishii/configs/commit/a7b019f5a4d0f7320d4600372b01285366e15b63))
+- update dependency @types/node to v24.19.1 ([#2961](https://github.com/nozomiishii/configs/issues/2961)) ([eb2e390](https://github.com/nozomiishii/configs/commit/eb2e3902a56734a56cde960e291d73ac0c253d0c))
+- update dependency eslint to v10.12.0 ([#2969](https://github.com/nozomiishii/configs/issues/2969)) ([f7f8172](https://github.com/nozomiishii/configs/commit/f7f81720a71887c00268bc8b7d22b99d628962c1))
+- update dependency package-manager-detector to v1.9.0 ([#2974](https://github.com/nozomiishii/configs/issues/2974)) ([ada97c0](https://github.com/nozomiishii/configs/commit/ada97c047672eafbb6641a03b7d51224e000d5e5))
+- update dependency pnpm to v12.6.0 ([#2937](https://github.com/nozomiishii/configs/issues/2937)) ([542a33a](https://github.com/nozomiishii/configs/commit/542a33adc2fbc5581a73b64ce9cd743a56eae168))
+- update dependency pnpm to v12.8.2 ([#2951](https://github.com/nozomiishii/configs/issues/2951)) ([58f5ed2](https://github.com/nozomiishii/configs/commit/58f5ed20ec319d8b43fe8f80f982a0c86db7b453))
+- update dependency tsdown to v0.23.1 ([#2991](https://github.com/nozomiishii/configs/issues/2991)) ([1caad1f](https://github.com/nozomiishii/configs/commit/1caad1f12d51194409ab9e6ddaf7c9c7967e03a6))
+- update dependency typescript-eslint to v8.71.0 ([#2952](https://github.com/nozomiishii/configs/issues/2952)) ([d5cc409](https://github.com/nozomiishii/configs/commit/d5cc4096e922756624fc67a2bb06c2b3aa678c99))
+- update dependency vitest to v5.0.5 ([#2993](https://github.com/nozomiishii/configs/issues/2993)) ([8559766](https://github.com/nozomiishii/configs/commit/8559766622b1cc0a7ee50b11800a4fbbb13b3abf))
+- update node.js to v24.22.0 ([#3001](https://github.com/nozomiishii/configs/issues/3001)) ([9f37d0b](https://github.com/nozomiishii/configs/commit/9f37d0b7dad608815ea208bd81dc9816d8a1266f))
+- update pnpm to v12.10.1 ([#2976](https://github.com/nozomiishii/configs/issues/2976)) ([76b7a2c](https://github.com/nozomiishii/configs/commit/76b7a2cd84af8761e1b291f5f0ba8f3b69919e37))
+- update pnpm to v12.14.0 ([#3002](https://github.com/nozomiishii/configs/issues/3002)) ([871f3e9](https://github.com/nozomiishii/configs/commit/871f3e9972ba9be596b46203ffa6ec2ecadb51bd))
+
 ## [2.7.2](https://github.com/nozomiishii/configs/compare/nozo-v2.7.1...nozo-v2.7.2) (2026-09-22)
 
 ### Bug Fixes
