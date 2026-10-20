@@ -4,8 +4,8 @@ import { $, echo } from "zx";
 const TARGET_FILE = "lefthook-local.yaml";
 
 /**
- * Setup lefthook
- */
+Setup lefthook
+*/
 export async function setupLefthook() {
   echo("Setup lefthook");
 
@@ -20,8 +20,8 @@ export async function setupLefthook() {
 }
 
 /**
- * Create a local config file
- */
+Create a local config file
+*/
 async function createLocalConfig() {
   if (fs.existsSync(TARGET_FILE)) {
     echo(`Skipped: ${TARGET_FILE} already exists.`);

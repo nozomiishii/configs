@@ -7,8 +7,8 @@ const TARGET_FILE = ".actrc";
 const EXAMPLE_FILE = ".actrc.example";
 
 /**
- * Setup act
- */
+Setup act
+*/
 export function setupAct() {
   echo("Setup act");
 

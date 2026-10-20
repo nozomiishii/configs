@@ -4,10 +4,10 @@ import type { BetterTailwindcssOptions } from "../types";
 import { name } from "../utils/name";
 
 /**
- * @returns eslint-plugin-better-tailwindcss
- *
- * @see https://github.com/schoero/eslint-plugin-better-tailwindcss
- */
+@returns eslint-plugin-better-tailwindcss
+
+@see https://github.com/schoero/eslint-plugin-better-tailwindcss
+*/
 export function betterTailwindcss(options?: BetterTailwindcssOptions) {
   return defineConfig([
     {

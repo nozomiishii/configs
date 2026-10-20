@@ -3,10 +3,10 @@ import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
 
 /**
- * @returns eslint-plugin-package-json
- *
- * @see https://github.com/JoshuaKGoldberg/eslint-plugin-package-json
- */
+@returns eslint-plugin-package-json
+
+@see https://github.com/JoshuaKGoldberg/eslint-plugin-package-json
+*/
 export function packageJson() {
   return defineConfig([
     {

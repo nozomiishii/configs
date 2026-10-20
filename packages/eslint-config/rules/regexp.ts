@@ -3,10 +3,10 @@ import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
 
 /**
- * @returns eslint-plugin-regexp
- *
- * @see https://github.com/ota-meshi/eslint-plugin-regexp
- */
+@returns eslint-plugin-regexp
+
+@see https://github.com/ota-meshi/eslint-plugin-regexp
+*/
 export function regexp() {
   return defineConfig([
     {

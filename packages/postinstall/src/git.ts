@@ -1,8 +1,8 @@
 import { $, echo } from "zx";
 
 /**
- * Setup git
- */
+Setup git
+*/
 export async function setupGit() {
   echo("Setup git");
 

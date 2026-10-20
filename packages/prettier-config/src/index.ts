@@ -2,9 +2,9 @@ import type { Config } from "prettier";
 import packagejsonPlugin from "prettier-plugin-packagejson";
 
 /**
- * Prettier options
- * {@link https://prettier.io/docs/options}
- */
+Prettier options
+{@link https://prettier.io/docs/options}
+*/
 export default {
   overrides: [
     {

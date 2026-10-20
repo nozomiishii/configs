@@ -5,9 +5,9 @@ import { name } from "../utils/name";
 const configs = eslintPluginEslintComments.recommended;
 
 /**
- * @returns eslint-plugin-eslint-comments
- * {@link https://github.com/eslint-community/eslint-plugin-eslint-comments}
- */
+@returns eslint-plugin-eslint-comments
+{@link https://github.com/eslint-community/eslint-plugin-eslint-comments}
+*/
 export function eslintComments() {
   return defineConfig([
     {
@@ -20,10 +20,10 @@ export function eslintComments() {
           { allowWholeFile: true },
         ],
         /**
-         * disable コメント自体を禁止する。ただし no-use 自身を巻き込んで
-         * disable すれば bypass できるため、base preset の noInlineConfig と
-         * 併用して抜け道を塞ぐ。
-         */
+        disable コメント自体を禁止する。ただし no-use 自身を巻き込んで
+        disable すれば bypass できるため、base preset の noInlineConfig と
+        併用して抜け道を塞ぐ。
+        */
         "@eslint-community/eslint-comments/no-use": "error",
       },
     },

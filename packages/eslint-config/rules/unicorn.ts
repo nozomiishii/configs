@@ -4,10 +4,10 @@ import globals from "globals";
 import { name } from "../utils/name";
 
 /**
- * @returns eslint-plugin-unicorn
- *
- * @see https://github.com/sindresorhus/eslint-plugin-unicorn
- */
+@returns eslint-plugin-unicorn
+
+@see https://github.com/sindresorhus/eslint-plugin-unicorn
+*/
 export function unicorn() {
   return defineConfig([
     {
@@ -22,58 +22,70 @@ export function unicorn() {
         ...eslintPluginUnicorn.configs.recommended.rules,
 
         /**
-         * 入れ子の三項演算子は unicorn/no-nested-ternary ではなく ESLint core の no-nested-ternary で禁止する。
-         *
-         * @see https://eslint.org/docs/latest/rules/no-nested-ternary
-         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-nested-ternary.md
-         */
+        入れ子の三項演算子は unicorn/no-nested-ternary ではなく ESLint core の no-nested-ternary で禁止する。
+
+        @see https://eslint.org/docs/latest/rules/no-nested-ternary
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-nested-ternary.md
+        */
         "no-nested-ternary": "error",
 
         /**
-         * 略語の制限。やるなら明示的にreplacementを記載していく
-         *
-         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/name-replacements.md
-         */
+        略語の制限。やるなら明示的にreplacementを記載していく
+
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/name-replacements.md
+        */
         "unicorn/name-replacements": "off",
 
         /**
-         * React Componentやhooksでは条件によってはnullを返せるようにしたいのでoff
-         *
-         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-null.md
-         */
+        React Componentやhooksでは条件によってはnullを返せるようにしたいのでoff
+
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-null.md
+        */
         "unicorn/no-null": "off",
 
         /**
-         * 連続するガード句の結合を促すが、ガード句の条件はシンプルに保つためoff
-         *
-         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-combined-guards.md
-         */
+        連続するガード句の結合を促すが、ガード句の条件はシンプルに保つためoff
+
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-combined-guards.md
+        */
         "unicorn/prefer-combined-guards": "off",
 
         /**
-         * import + 同名 re-export の bulk pattern を許可（local でも使っている場合のみ）
-         * pure re-export は引き続き `export ... from` を強制
-         *
-         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md
-         */
+        import + 同名 re-export の bulk pattern を許可（local でも使っている場合のみ）
+        pure re-export は引き続き `export ... from` を強制
+
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md
+        */
         "unicorn/prefer-export-from": "error",
 
         /**
-         * ガード句の最後の 1 段まで三項演算に畳ませるので、早期 return で分けた分岐の並びが崩れて読みにくくなるため off
-         *
-         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-ternary.md
-         */
+        ガード句の最後の 1 段まで三項演算に畳ませるので、早期 return で分けた分岐の並びが崩れて読みにくくなるため off
+
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-ternary.md
+        */
         "unicorn/prefer-ternary": "off",
 
         /**
-         * Encoding Standard が名乗る側を `utf-8` に固定しているため dash 付きに揃える。
-         * 既定の `utf8` は Node のショートハンドで、HTML の meta charset や
-         * HTTP header に出すと規格から外れる。Node は両方受け付ける。
-         *
-         * @see https://encoding.spec.whatwg.org/#names-and-labels
-         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/text-encoding-identifier-case.md
-         */
+        Encoding Standard が名乗る側を `utf-8` に固定しているため dash 付きに揃える。
+        既定の `utf8` は Node のショートハンドで、HTML の meta charset や
+        HTTP header に出すと規格から外れる。Node は両方受け付ける。
+
+        @see https://encoding.spec.whatwg.org/#names-and-labels
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/text-encoding-identifier-case.md
+        */
         "unicorn/text-encoding-identifier-case": ["error", { withDash: true }],
+      },
+    },
+    {
+      files: ["**/*.config.{js,cjs,mjs,ts,cts,mts}"],
+      name: name("unicorn/config-files"),
+      rules: {
+        /**
+        設定ファイルは `export default defineConfig(...)` が定型のため off
+
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+        */
+        "unicorn/no-top-level-side-effects": "off",
       },
     },
   ]);

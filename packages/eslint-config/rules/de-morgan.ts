@@ -3,10 +3,10 @@ import { defineConfig } from "eslint/config";
 import { name } from "../utils/name";
 
 /**
- * @returns eslint-plugin-de-morgan
- *
- * @see https://github.com/azat-io/eslint-plugin-de-morgan
- */
+@returns eslint-plugin-de-morgan
+
+@see https://github.com/azat-io/eslint-plugin-de-morgan
+*/
 export function deMorgan() {
   return defineConfig([
     {

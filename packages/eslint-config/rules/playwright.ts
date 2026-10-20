@@ -5,10 +5,10 @@ import { name } from "../utils/name";
 const config = eslintPluginPlaywright.configs["flat/recommended"];
 
 /**
- * @returns eslint-plugin-playwright
- *
- * @see https://github.com/playwright-community/eslint-plugin-playwright
- */
+@returns eslint-plugin-playwright
+
+@see https://github.com/playwright-community/eslint-plugin-playwright
+*/
 export function playwright() {
   return defineConfig([
     {
@@ -19,77 +19,77 @@ export function playwright() {
         ...config.rules,
 
         /**
-         * test内のexpectの数の制限
-         *
-         * @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/max-expects.md
-         */
+        test内のexpectの数の制限
+
+        @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/max-expects.md
+        */
         "playwright/max-expects": ["error", { max: 5 }],
 
         /**
-         * describeはnestの数の制限
-         *
-         * @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/max-nested-describe.md
-         */
+        describeはnestの数の制限
+
+        @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/max-nested-describe.md
+        */
         "playwright/max-nested-describe": ["error", { max: 2 }],
 
         /**
-         * getByTitleは使わない。built in locatorsを使う。
-         * https://playwright.dev/docs/locators
-         * https://playwright.dev/docs/best-practices#best-practices
-         *
-         * @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/no-get-by-title.md
-         */
+        getByTitleは使わない。built in locatorsを使う。
+        https://playwright.dev/docs/locators
+        https://playwright.dev/docs/best-practices#best-practices
+
+        @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/no-get-by-title.md
+        */
         "playwright/no-get-by-title": "warn",
 
         /**
-         * setup and teardown hooksは使わない。関数を逐一呼び出す。
-         *
-         * @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/no-hooks.md
-         */
+        setup and teardown hooksは使わない。関数を逐一呼び出す。
+
+        @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/no-hooks.md
+        */
         "playwright/no-hooks": "error",
 
         /**
-         * raw locatorsは使わない。built in locatorsを使う。
-         * https://playwright.dev/docs/locators
-         * https://playwright.dev/docs/best-practices#best-practices
-         *
-         * @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/no-raw-locators.md
-         */
+        raw locatorsは使わない。built in locatorsを使う。
+        https://playwright.dev/docs/locators
+        https://playwright.dev/docs/best-practices#best-practices
+
+        @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/no-raw-locators.md
+        */
         "playwright/no-raw-locators": "error",
 
         /**
-         * comparison-matcherでいけるところはcomparison-matcher使う
-         *
-         * @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-comparison-matcher.md
-         */
+        comparison-matcherでいけるところはcomparison-matcher使う
+
+        @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-comparison-matcher.md
+        */
         "playwright/prefer-comparison-matcher": "warn",
 
         /**
-         * テストタイトルは小文字からはじめる
-         *
-         * @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-lowercase-title.md
-         */
+        テストタイトルは小文字からはじめる
+
+        @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-lowercase-title.md
+        */
         "playwright/prefer-lowercase-title": "warn",
 
         /**
-         * toBeでいけるところはtoBe
-         *
-         * @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-to-be.md
-         */
+        toBeでいけるところはtoBe
+
+        @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-to-be.md
+        */
         "playwright/prefer-to-be": "warn",
 
         /**
-         * toContainでいけるところはtoContain
-         *
-         * @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-to-contain.md
-         */
+        toContainでいけるところはtoContain
+
+        @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-to-contain.md
+        */
         "playwright/prefer-to-contain": "warn",
 
         /**
-         * toHaveLengthでいけるところはtoHaveLength
-         *
-         * @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-to-have-length.md
-         */
+        toHaveLengthでいけるところはtoHaveLength
+
+        @see https://github.com/playwright-community/eslint-plugin-playwright/blob/main/docs/rules/prefer-to-have-length.md
+        */
         "playwright/prefer-to-have-length": "warn",
 
         // /**
