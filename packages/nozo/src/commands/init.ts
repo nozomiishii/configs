@@ -130,7 +130,7 @@ export async function resolvePackageManager(
   );
 }
 
-export default defineCommand({
+const initCommand = defineCommand({
   meta: {
     description: "Initialize a project with nozo configs",
     name: "init",
@@ -217,3 +217,5 @@ export default defineCommand({
     p.outro("done");
   },
 });
+
+export default initCommand;

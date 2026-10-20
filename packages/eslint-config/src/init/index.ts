@@ -44,7 +44,7 @@ export async function init({
     peerDependencies: { eslint: string; typescript: string };
   };
 
-  const starterRaw = await readFile(path.join(root, "starters", `${preset}.ts`), "utf-8");
+  const starterRaw = await readFile(path.join(root, "starters", `${preset}.config.ts`), "utf-8");
 
   // monorepo の per-package config は tsconfigRootDir を明示する。
   const presetFunction = presetFunctions[preset];

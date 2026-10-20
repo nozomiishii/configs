@@ -76,5 +76,17 @@ export function unicorn() {
         "unicorn/text-encoding-identifier-case": ["error", { withDash: true }],
       },
     },
+    {
+      files: ["**/*.config.{js,cjs,mjs,ts,cts,mts}"],
+      name: name("unicorn/config-files"),
+      rules: {
+        /**
+         * 設定ファイルは `export default defineConfig(...)` が定型のため off
+         *
+         * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+         */
+        "unicorn/no-top-level-side-effects": "off",
+      },
+    },
   ]);
 }
