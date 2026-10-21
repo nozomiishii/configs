@@ -224,6 +224,20 @@ export function tanstackStart(options: Options = {}) {
       },
     },
 
+    {
+      /**
+      src/server.ts は TanStack Start が起動するサーバーのエントリーポイントで、`export default createServerEntry(...)` が定型
+
+      @see https://tanstack.com/start/latest/docs/framework/react/guide/server-entry-point
+      @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+      */
+      files: ["**/src/server.ts"],
+      name: name("tanstack-start/server-entry"),
+      rules: {
+        "unicorn/no-top-level-side-effects": "off",
+      },
+    },
+
     prettier(),
   ]);
 }

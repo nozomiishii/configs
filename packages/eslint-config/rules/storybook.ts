@@ -48,5 +48,18 @@ export function storybook() {
         ...configs[2]?.rules,
       },
     },
+    {
+      /**
+      .storybook の preview や main は Storybook が読み込むエントリーポイントで、トップレベルで設定を組み立てる
+
+      @see https://storybook.js.org/docs/configure
+      @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+      */
+      files: ["**/.storybook/**"],
+      name: name("storybook/config-files"),
+      rules: {
+        "unicorn/no-top-level-side-effects": "off",
+      },
+    },
   ]);
 }
