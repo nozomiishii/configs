@@ -44,6 +44,18 @@ export function unicorn() {
         "unicorn/no-null": "off",
 
         /**
+        zod の z.config() はスキーマより前のトップレベルで呼ぶ API なので許可する。`import { z }` 経由の呼び出しと、引数に関数呼び出しを含む形は通らない
+        設定ファイルやエントリーポイントの除外と allow がこれ以上大きく増えるなら、ルールごと off にすることを検討する
+
+        @see https://zod.dev/error-customization
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+        */
+        "unicorn/no-top-level-side-effects": [
+          "error",
+          { allow: { zod: ["config"], "zod/mini": ["config"], "zod/v4": ["config"] } },
+        ],
+
+        /**
         連続するガード句の結合を促すが、ガード句の条件はシンプルに保つためoff
 
         @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-combined-guards.md
