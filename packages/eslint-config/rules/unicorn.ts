@@ -45,6 +45,7 @@ export function unicorn() {
 
         /**
         zod の z.config() はスキーマより前のトップレベルで呼ぶ API なので許可する。`import { z }` 経由の呼び出しと、引数に関数呼び出しを含む形は通らない
+        設定ファイルやエントリーポイントの除外と allow がこれ以上大きく増えるなら、ルールごと off にすることを検討する
 
         @see https://zod.dev/error-customization
         @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
