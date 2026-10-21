@@ -47,8 +47,11 @@ export function unicorn() {
         zod の z.config() はスキーマより前のトップレベルで呼ぶ API なので許可する。`import { z }` 経由の呼び出しと、引数に関数呼び出しを含む形は通らない
         設定ファイルやエントリーポイントの除外と allow がこれ以上大きく増えるなら、ルールごと off にすることを検討する
 
+        TODO [eslint-plugin-unicorn@>78.0.0]: 既定でグローバル変数の書き換えだけを報告する版に上げたら、この allow を消す
+
         @see https://zod.dev/error-customization
         @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/pull/3915
         */
         "unicorn/no-top-level-side-effects": [
           "error",
@@ -95,7 +98,10 @@ export function unicorn() {
         /**
         設定ファイルは `export default defineConfig(...)` が定型のため off
 
+        TODO [eslint-plugin-unicorn@>78.0.0]: 既定でグローバル変数の書き換えだけを報告する版に上げたら、この除外を消す
+
         @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+        @see https://github.com/sindresorhus/eslint-plugin-unicorn/pull/3915
         */
         "unicorn/no-top-level-side-effects": "off",
       },

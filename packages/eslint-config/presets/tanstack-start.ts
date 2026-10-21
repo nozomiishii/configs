@@ -228,8 +228,11 @@ export function tanstackStart(options: Options = {}) {
       /**
       src/server.ts は TanStack Start が起動するサーバーのエントリーポイントで、`export default createServerEntry(...)` が定型
 
+      TODO [eslint-plugin-unicorn@>78.0.0]: 既定でグローバル変数の書き換えだけを報告する版に上げたら、この除外を消す
+
       @see https://tanstack.com/start/latest/docs/framework/react/guide/server-entry-point
       @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+      @see https://github.com/sindresorhus/eslint-plugin-unicorn/pull/3915
       */
       files: ["**/src/server.ts"],
       name: name("tanstack-start/server-entry"),
