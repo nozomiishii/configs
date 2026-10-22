@@ -47,8 +47,8 @@ jobs:
           version: "2.41.0"
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-          APP_ID: op://nozomiishii-release/github-app/username
-          APP_PRIVATE_KEY: op://nozomiishii-release/github-app/credential
+          APP_ID: op://nozomiishii-ci/github/APP_ID
+          APP_PRIVATE_KEY: op://nozomiishii-ci/github/APP_PRIVATE_KEY
 
       - name: Generate GitHub App token
         id: app-token
@@ -99,8 +99,8 @@ jobs:
           version: "2.41.0"
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-          APP_ID: op://nozomiishii-release/github-app/username
-          APP_PRIVATE_KEY: op://nozomiishii-release/github-app/credential
+          APP_ID: op://nozomiishii-ci/github/APP_ID
+          APP_PRIVATE_KEY: op://nozomiishii-ci/github/APP_PRIVATE_KEY
 
       - name: Generate GitHub App token
         id: app-token
@@ -124,8 +124,8 @@ jobs:
 
       - name: Configure Git user
         run: |
-          git config --global user.name 'nozomiishii-release[bot]'
-          git config --global user.email 'nozomiishii-release[bot]@users.noreply.github.com'
+          git config --global user.name 'nozomiishii-ci[bot]'
+          git config --global user.email 'nozomiishii-ci[bot]@users.noreply.github.com'
 
       - name: Format CHANGELOG.md
         run: |
