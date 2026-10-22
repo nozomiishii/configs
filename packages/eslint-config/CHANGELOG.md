@@ -2,11 +2,10 @@
 
 ## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.8.0...@nozomiishii/eslint-config-v2.8.1) (2026-10-22)
 
-
 ### Bug Fixes
 
-* add expiring todos for no-top-level-side-effects workarounds ([#3008](https://github.com/nozomiishii/configs/issues/3008)) ([737c7b3](https://github.com/nozomiishii/configs/commit/737c7b3afd3efcdd1fd9313695a919f30735a40a))
-* allow framework entrypoints and zod config in no-top-level-side-effects ([#3006](https://github.com/nozomiishii/configs/issues/3006)) ([48bd45b](https://github.com/nozomiishii/configs/commit/48bd45bda9205dd5136c41003abee572559ae224))
+- add expiring todos for no-top-level-side-effects workarounds ([#3008](https://github.com/nozomiishii/configs/issues/3008)) ([737c7b3](https://github.com/nozomiishii/configs/commit/737c7b3afd3efcdd1fd9313695a919f30735a40a))
+- allow framework entrypoints and zod config in no-top-level-side-effects ([#3006](https://github.com/nozomiishii/configs/issues/3006)) ([48bd45b](https://github.com/nozomiishii/configs/commit/48bd45bda9205dd5136c41003abee572559ae224))
 
 ## [2.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.7.2...@nozomiishii/eslint-config-v2.8.0) (2026-10-20)
 

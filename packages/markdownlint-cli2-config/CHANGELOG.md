@@ -2,10 +2,9 @@
 
 ## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v2.8.0...@nozomiishii/markdownlint-cli2-config-v2.8.1) (2026-10-22)
 
-
 ### Miscellaneous
 
-* **@nozomiishii/markdownlint-cli2-config:** Synchronize configs versions
+- **@nozomiishii/markdownlint-cli2-config:** Synchronize configs versions
 
 ## [2.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v2.7.2...@nozomiishii/markdownlint-cli2-config-v2.8.0) (2026-10-20)
 
