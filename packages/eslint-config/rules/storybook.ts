@@ -52,8 +52,11 @@ export function storybook() {
       /**
       .storybook の preview や main は Storybook が読み込むエントリーポイントで、トップレベルで設定を組み立てる
 
+      TODO [eslint-plugin-unicorn@>78.0.0]: 既定でグローバル変数の書き換えだけを報告する版に上げたら、この除外を消す
+
       @see https://storybook.js.org/docs/configure
       @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
+      @see https://github.com/sindresorhus/eslint-plugin-unicorn/pull/3915
       */
       files: ["**/.storybook/**"],
       name: name("storybook/config-files"),

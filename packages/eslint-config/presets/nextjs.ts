@@ -53,8 +53,11 @@ export function nextjs(options: Options = {}) {
       /**
       Next.js の instrumentation-client は Sentry, PostHog, Datadog RUM でトップレベル副作用関数を呼ぶ必要がある
 
+      TODO [eslint-plugin-unicorn@>78.0.0]: 既定でグローバル変数の書き換えだけを報告する版に上げたら、この除外を消す
+
       @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-side-effects.md
       @see https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client
+      @see https://github.com/sindresorhus/eslint-plugin-unicorn/pull/3915
       */
       files: ["**/instrumentation-client.ts"],
       name: name("unicorn/instrumentation-client"),
