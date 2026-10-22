@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v2.8.0...@nozomiishii/postinstall-v2.8.1) (2026-10-22)
+
+
+### Miscellaneous
+
+* **@nozomiishii/postinstall:** Synchronize configs versions
+
 ## [2.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/postinstall-v2.7.2...@nozomiishii/postinstall-v2.8.0) (2026-10-20)
 
 ### Features

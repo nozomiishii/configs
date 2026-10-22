@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.1](https://github.com/nozomiishii/configs/compare/nozo-v2.8.0...nozo-v2.8.1) (2026-10-22)
+
+
+### Miscellaneous
+
+* **nozo:** Synchronize configs versions
+
 ## [2.8.0](https://github.com/nozomiishii/configs/compare/nozo-v2.7.2...nozo-v2.8.0) (2026-10-20)
 
 ### Features
