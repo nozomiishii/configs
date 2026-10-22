@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v2.8.0...@nozomiishii/prettier-config-v2.8.1) (2026-10-22)
+
+### Miscellaneous
+
+- **@nozomiishii/prettier-config:** Synchronize configs versions
+
 ## [2.8.0](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v2.7.2...@nozomiishii/prettier-config-v2.8.0) (2026-10-20)
 
 ### Features
