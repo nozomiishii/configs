@@ -49,12 +49,12 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@commitlint/cli": "21.2.3",
-    "@commitlint/config-conventional": "21.2.3",
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
     "@commitlint/types": "21.2.3"
   },
   "devDependencies": {
-    "@commitlint/lint": "21.2.3",
+    "@commitlint/lint": "21.2.4",
     "@nozomiishii/eslint-config": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "@types/node": "24.19.2",
