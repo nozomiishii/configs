@@ -36,7 +36,7 @@
     "@nozomiishii/postinstall": "workspace:*",
     "@nozomiishii/tsconfig": "workspace:*",
     "lefthook": "2.2.2",
-    "markdownlint-cli2": "0.23.3",
+    "markdownlint-cli2": "0.24.0",
     "npkill": "0.12.2",
     "oxfmt": "0.73.0"
   },
