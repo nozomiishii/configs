@@ -2,12 +2,11 @@
 
 ## [2.8.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.8.1...@nozomiishii/oxfmt-config-v2.8.2) (2026-10-26)
 
-
 ### Miscellaneous
 
-* update dependency eslint to v10.13.0 ([#3017](https://github.com/nozomiishii/configs/issues/3017)) ([9f9c14d](https://github.com/nozomiishii/configs/commit/9f9c14dfeee4612cd4ac4a466838b6f3445e64e5))
-* update dependency oxfmt to v0.74.0 ([#3023](https://github.com/nozomiishii/configs/issues/3023)) ([5839bd9](https://github.com/nozomiishii/configs/commit/5839bd9785bd9b3986d518dea13843751fe1fa1f))
-* update pnpm to v12.15.0 ([#3027](https://github.com/nozomiishii/configs/issues/3027)) ([348ba6d](https://github.com/nozomiishii/configs/commit/348ba6d1754e736375d728bea8c44d1fc1bfdf44))
+- update dependency eslint to v10.13.0 ([#3017](https://github.com/nozomiishii/configs/issues/3017)) ([9f9c14d](https://github.com/nozomiishii/configs/commit/9f9c14dfeee4612cd4ac4a466838b6f3445e64e5))
+- update dependency oxfmt to v0.74.0 ([#3023](https://github.com/nozomiishii/configs/issues/3023)) ([5839bd9](https://github.com/nozomiishii/configs/commit/5839bd9785bd9b3986d518dea13843751fe1fa1f))
+- update pnpm to v12.15.0 ([#3027](https://github.com/nozomiishii/configs/issues/3027)) ([348ba6d](https://github.com/nozomiishii/configs/commit/348ba6d1754e736375d728bea8c44d1fc1bfdf44))
 
 ## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/oxfmt-config-v2.8.0...@nozomiishii/oxfmt-config-v2.8.1) (2026-10-22)
 
