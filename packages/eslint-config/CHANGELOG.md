@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.8.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.8.1...@nozomiishii/eslint-config-v2.8.2) (2026-10-26)
+
+### Miscellaneous
+
+- update dependency @eslint-react/eslint-plugin to v5.28.6 ([#3016](https://github.com/nozomiishii/configs/issues/3016)) ([fab9cec](https://github.com/nozomiishii/configs/commit/fab9cecaa4f556ed5fa46b51461cd56fcb9c16ba))
+- update dependency @next/eslint-plugin-next to v16.4.2 ([#3012](https://github.com/nozomiishii/configs/issues/3012)) ([f2bbb33](https://github.com/nozomiishii/configs/commit/f2bbb338144d87868f99144e24f5280c5e0812af))
+- update dependency @tanstack/eslint-plugin-query to v5.104.5 ([#3013](https://github.com/nozomiishii/configs/issues/3013)) ([9ff13bb](https://github.com/nozomiishii/configs/commit/9ff13bbb4322fa5df6cb1484ae42ab6720c098bd))
+- update dependency eslint to v10.13.0 ([#3017](https://github.com/nozomiishii/configs/issues/3017)) ([9f9c14d](https://github.com/nozomiishii/configs/commit/9f9c14dfeee4612cd4ac4a466838b6f3445e64e5))
+- update dependency eslint-plugin-better-tailwindcss to v4.10.0 ([#3018](https://github.com/nozomiishii/configs/issues/3018)) ([fbb1b82](https://github.com/nozomiishii/configs/commit/fbb1b82e0e210d89054d7f041bd13e48fdd8c47e))
+- update dependency eslint-plugin-jsdoc to v65.4.1 ([#3019](https://github.com/nozomiishii/configs/issues/3019)) ([ab063d0](https://github.com/nozomiishii/configs/commit/ab063d0c0e4f83568f9b0ac3447203e2fdc3330e))
+- update dependency eslint-plugin-n to v18.5.0 ([#3020](https://github.com/nozomiishii/configs/issues/3020)) ([f84342a](https://github.com/nozomiishii/configs/commit/f84342aa57f1e920800789711b0aa7e0d6af608d))
+- update dependency eslint-plugin-perfectionist to v5.13.0 ([#3021](https://github.com/nozomiishii/configs/issues/3021)) ([46442a4](https://github.com/nozomiishii/configs/commit/46442a4a98ec40b159c26bfb0153b994dfe7aa70))
+- update dependency eslint-plugin-storybook to v10.6.3 ([#3014](https://github.com/nozomiishii/configs/issues/3014)) ([5b87391](https://github.com/nozomiishii/configs/commit/5b873916cc41f849a27ff390919eacb07fdb7d0e))
+- update dependency typescript-eslint to v8.72.0 ([#3024](https://github.com/nozomiishii/configs/issues/3024)) ([a1036a5](https://github.com/nozomiishii/configs/commit/a1036a54fc84470d05f7ce110fd8542634efc6b0))
+- update pnpm to v12.15.0 ([#3027](https://github.com/nozomiishii/configs/issues/3027)) ([348ba6d](https://github.com/nozomiishii/configs/commit/348ba6d1754e736375d728bea8c44d1fc1bfdf44))
+
 ## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/eslint-config-v2.8.0...@nozomiishii/eslint-config-v2.8.1) (2026-10-22)
 
 ### Bug Fixes

@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.8.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v2.8.1...@nozomiishii/commitlint-config-v2.8.2) (2026-10-26)
+
+### Miscellaneous
+
+- update commitlint monorepo to v21.2.4 ([#3011](https://github.com/nozomiishii/configs/issues/3011)) ([0ff9a6a](https://github.com/nozomiishii/configs/commit/0ff9a6ab63d6864a4596e21113c2f7835b5a59bf))
+- update dependency eslint to v10.13.0 ([#3017](https://github.com/nozomiishii/configs/issues/3017)) ([9f9c14d](https://github.com/nozomiishii/configs/commit/9f9c14dfeee4612cd4ac4a466838b6f3445e64e5))
+- update pnpm to v12.15.0 ([#3027](https://github.com/nozomiishii/configs/issues/3027)) ([348ba6d](https://github.com/nozomiishii/configs/commit/348ba6d1754e736375d728bea8c44d1fc1bfdf44))
+
 ## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v2.8.0...@nozomiishii/commitlint-config-v2.8.1) (2026-10-22)
 
 ### Miscellaneous
