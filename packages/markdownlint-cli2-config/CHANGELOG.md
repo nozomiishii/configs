@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.8.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v2.8.1...@nozomiishii/markdownlint-cli2-config-v2.8.2) (2026-10-26)
+
+
+### Miscellaneous
+
+* update dependency eslint to v10.13.0 ([#3017](https://github.com/nozomiishii/configs/issues/3017)) ([9f9c14d](https://github.com/nozomiishii/configs/commit/9f9c14dfeee4612cd4ac4a466838b6f3445e64e5))
+* update dependency markdownlint-cli2 to v0.24.0 ([#3022](https://github.com/nozomiishii/configs/issues/3022)) ([6facb58](https://github.com/nozomiishii/configs/commit/6facb5824928c8d8da08b54ee6564143169e85d9))
+* update pnpm to v12.15.0 ([#3027](https://github.com/nozomiishii/configs/issues/3027)) ([348ba6d](https://github.com/nozomiishii/configs/commit/348ba6d1754e736375d728bea8c44d1fc1bfdf44))
+
 ## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v2.8.0...@nozomiishii/markdownlint-cli2-config-v2.8.1) (2026-10-22)
 
 ### Miscellaneous
