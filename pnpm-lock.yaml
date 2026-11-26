@@ -551,8 +551,8 @@ importers:
   packages/postinstall:
     dependencies:
       figlet:
-        specifier: 1.12.0
-        version: 1.12.0
+        specifier: 1.13.0
+        version: 1.13.0
       zx:
         specifier: 8.8.5
         version: 8.8.5
@@ -564,8 +564,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       '@types/figlet':
-        specifier: 1.7.0
-        version: 1.7.0
+        specifier: 1.12.0
+        version: 1.12.0
       '@types/node':
         specifier: 24.19.2
         version: 24.19.2
@@ -1913,8 +1913,9 @@ packages:
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
 
-  '@types/figlet@1.7.0':
-    resolution: {integrity: sha512-KwrT7p/8Eo3Op/HBSIwGXOsTZKYiM9NpWRBJ5sVjWP/SmlS+oxxRvJht/FNAtliJvja44N3ul1yATgohnVBV0Q==}
+  '@types/figlet@1.12.0':
+    resolution: {integrity: sha512-tPv140QqwGL4Jot2fzTxC6Oy8BVdHEZe4SJDlRuRkywfksv8kMCbTYvtuN9mJCm41HlgRhwb5rRaiH6FE5Hm9g==}
+    deprecated: This is a stub types definition. figlet provides its own type definitions, so you do not need this installed.
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -3033,8 +3034,8 @@ packages:
       picomatch:
         optional: true
 
-  figlet@1.12.0:
-    resolution: {integrity: sha512-Ith3WsUi0N/EqGt+0/F6XnWhT04sohhH2tT0Dq7GdUmWbMTIoCbg2Jq9qKggmTO62ST5kRCfB311EmIMbizGyA==}
+  figlet@1.13.0:
+    resolution: {integrity: sha512-gtv594/YXiGqBNyxnz7OcJkFwJ8VHv8nKPQpg6lKNvkAj3tBVI5rP+sapaTQ96EsBl063MNZMGwCjB80ymcnXA==}
     engines: {node: '>= 17.0.0'}
     hasBin: true
 
@@ -5828,7 +5829,9 @@ snapshots:
 
   '@types/estree@1.0.9': {}
 
-  '@types/figlet@1.7.0': {}
+  '@types/figlet@1.12.0':
+    dependencies:
+      figlet: 1.13.0
 
   '@types/json-schema@7.0.15': {}
 
@@ -6991,7 +6994,7 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.7
 
-  figlet@1.12.0:
+  figlet@1.13.0:
     dependencies:
       commander: 14.0.3
 
