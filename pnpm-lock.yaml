@@ -337,8 +337,8 @@ importers:
         specifier: 18.5.0
         version: 18.5.0(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0))(typescript@6.0.3)
       eslint-plugin-package-json:
-        specifier: 1.10.1
-        version: 1.10.1(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0))
+        specifier: 1.14.0
+        version: 1.14.0(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0))
       eslint-plugin-perfectionist:
         specifier: 5.13.0
         version: 5.13.0(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
@@ -2800,8 +2800,8 @@ packages:
       typescript:
         optional: true
 
-  eslint-plugin-package-json@1.10.1:
-    resolution: {integrity: sha512-H/NhssfjCi0PjypHab8R1bM2NPn9FASn/MBrVf8+CmykFM+wg9Wz4XgWgtHRpbXtm3R4S5nJv0HXYeucpPRJpA==}
+  eslint-plugin-package-json@1.14.0:
+    resolution: {integrity: sha512-EF4oCRtyhJz+SQCKOiCfdbButYIraXd19W7/pEVrDCGzRDWv91Kgd7eTbWywhbPd4zOsThbDLOQHe9B1oSjOZA==}
     engines: {node: ^22.22.2 || >=24.15.0}
     peerDependencies:
       '@eslint/json': '>=1.0.0'
@@ -6654,7 +6654,7 @@ snapshots:
     optionalDependencies:
       typescript: 6.0.3
 
-  eslint-plugin-package-json@1.10.1(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0)):
+  eslint-plugin-package-json@1.14.0(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0)):
     dependencies:
       '@altano/repository-tools': 2.1.2
       '@types/estree': 1.0.9
