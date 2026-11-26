@@ -45,7 +45,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "markdownlint-cli2": "0.24.0"
+    "markdownlint-cli2": "0.24.2"
   },
   "devDependencies": {
     "@nozomiishii/eslint-config": "workspace:*",
