@@ -361,8 +361,8 @@ importers:
         specifier: 78.0.0
         version: 78.0.0(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
       eslint-typegen:
-        specifier: 2.3.1
-        version: 2.3.1(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0))
+        specifier: 2.3.2
+        version: 2.3.2(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0))
       globals:
         specifier: 17.13.0
         version: 17.13.0
@@ -2869,8 +2869,8 @@ packages:
     resolution: {integrity: sha512-xS90H51cKw0jltxmvmHy2Iai1LIqrfbw57b79w/J7MfvDfkIkFZ+kj6zC3BjtUwh150HsSSdxXZcsuv72miDFQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  eslint-typegen@2.3.1:
-    resolution: {integrity: sha512-zVdh8rThBvv2o5T/K524Fr5iy1Jo0q09rHL7y7FbOhgMB177T2gw+shxfC4ChCEqdq6/y6LJA4j8Fbr/Xls9aw==}
+  eslint-typegen@2.3.2:
+    resolution: {integrity: sha512-6spoueTVxyuRaL57VmMgB3vVObOFemXEmmmyIHIyQ4dM/7kBsRoEy0zJ+YtdRM6M+Z8Gl1Rh1Zq/zcTJu0lKSA==}
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
 
@@ -6727,7 +6727,7 @@ snapshots:
       esrecurse: 4.3.0
       estraverse: 5.3.0
 
-  eslint-typegen@2.3.1(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0)):
+  eslint-typegen@2.3.2(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0)):
     dependencies:
       eslint: 10.13.0(jiti@2.7.0)(supports-color@7.2.0)
       json-schema-to-typescript-lite: 15.0.0
