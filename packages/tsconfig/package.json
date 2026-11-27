@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@nozomiishii/eslint-config": "workspace:*",
-    "@types/node": "24.19.2",
+    "@types/node": "26.6.6",
     "eslint": "10.15.0",
     "typescript": "6.0.3"
   },
@@ -54,7 +54,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "24.21.0",
+      "version": "26.13.1",
       "onFail": "download"
     }
   }
