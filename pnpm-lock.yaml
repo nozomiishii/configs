@@ -417,8 +417,8 @@ importers:
   packages/lefthook-config:
     dependencies:
       git-harvest:
-        specifier: 0.3.6
-        version: 0.3.6
+        specifier: 0.3.7
+        version: 0.3.7
     devDependencies:
       '@nozomiishii/eslint-config':
         specifier: workspace:*
@@ -3152,8 +3152,8 @@ packages:
     resolution: {integrity: sha512-X6fBC0pmImC70gvX2zm56go9hx0MyoGVdG0tUCkg/D+Xnh5TJsOZ7iDbOdI3PvmtrDxnu1YdDufpK2QJX1Meqw==}
     engines: {node: '>=20.20.0'}
 
-  git-harvest@0.3.6:
-    resolution: {integrity: sha512-Nq5zdqVdwfbOa2bV03/2t5KczxAqeRN7O9LdrhVE+AEjZU9Pjq7rMLwwrnfVqRexffozH1BOlXZGP9KA2BhGdA==}
+  git-harvest@0.3.7:
+    resolution: {integrity: sha512-kE7JhUHRwQZ8fyf9RzkietAlV443R3AFJghwY47CMWPO09DBBZyDslIQuIQH0Y0W/E57mjI6OHi9wFidcV8xKg==}
     hasBin: true
 
   git-hooks-list@4.2.1:
@@ -6958,7 +6958,7 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  git-harvest@0.3.6: {}
+  git-harvest@0.3.7: {}
 
   git-hooks-list@4.2.1: {}
 
