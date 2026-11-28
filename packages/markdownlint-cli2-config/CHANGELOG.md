@@ -2,17 +2,16 @@
 
 ## [2.8.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v2.8.1...@nozomiishii/markdownlint-cli2-config-v2.8.2) (2026-11-28)
 
-
 ### Miscellaneous
 
-* update dependency eslint to v10.13.0 ([#3017](https://github.com/nozomiishii/configs/issues/3017)) ([9f9c14d](https://github.com/nozomiishii/configs/commit/9f9c14dfeee4612cd4ac4a466838b6f3445e64e5))
-* update dependency eslint to v10.15.0 ([#3047](https://github.com/nozomiishii/configs/issues/3047)) ([c1a2da9](https://github.com/nozomiishii/configs/commit/c1a2da93382539ac192776ce58e3ae759b168862))
-* update dependency markdownlint-cli2 to v0.24.0 ([#3022](https://github.com/nozomiishii/configs/issues/3022)) ([6facb58](https://github.com/nozomiishii/configs/commit/6facb5824928c8d8da08b54ee6564143169e85d9))
-* update dependency markdownlint-cli2 to v0.24.2 ([#3037](https://github.com/nozomiishii/configs/issues/3037)) ([adb3865](https://github.com/nozomiishii/configs/commit/adb386589358366828b4492b0910d3f7fa965f58))
-* update dependency tsdown to v0.23.7 ([#3039](https://github.com/nozomiishii/configs/issues/3039)) ([2294ba9](https://github.com/nozomiishii/configs/commit/2294ba9c16dda5d7712179be7215eb710434fef6))
-* update node.js to v26 ([#3066](https://github.com/nozomiishii/configs/issues/3066)) ([2526571](https://github.com/nozomiishii/configs/commit/25265718cada7a3ce3ff203d31631fd5fed3690c))
-* update pnpm to v12.15.0 ([#3027](https://github.com/nozomiishii/configs/issues/3027)) ([348ba6d](https://github.com/nozomiishii/configs/commit/348ba6d1754e736375d728bea8c44d1fc1bfdf44))
-* update pnpm to v12.23.0 ([#3061](https://github.com/nozomiishii/configs/issues/3061)) ([da63a8e](https://github.com/nozomiishii/configs/commit/da63a8e6986e5f214f6aa4cf5bf93f4dd3c0b6bd))
+- update dependency eslint to v10.13.0 ([#3017](https://github.com/nozomiishii/configs/issues/3017)) ([9f9c14d](https://github.com/nozomiishii/configs/commit/9f9c14dfeee4612cd4ac4a466838b6f3445e64e5))
+- update dependency eslint to v10.15.0 ([#3047](https://github.com/nozomiishii/configs/issues/3047)) ([c1a2da9](https://github.com/nozomiishii/configs/commit/c1a2da93382539ac192776ce58e3ae759b168862))
+- update dependency markdownlint-cli2 to v0.24.0 ([#3022](https://github.com/nozomiishii/configs/issues/3022)) ([6facb58](https://github.com/nozomiishii/configs/commit/6facb5824928c8d8da08b54ee6564143169e85d9))
+- update dependency markdownlint-cli2 to v0.24.2 ([#3037](https://github.com/nozomiishii/configs/issues/3037)) ([adb3865](https://github.com/nozomiishii/configs/commit/adb386589358366828b4492b0910d3f7fa965f58))
+- update dependency tsdown to v0.23.7 ([#3039](https://github.com/nozomiishii/configs/issues/3039)) ([2294ba9](https://github.com/nozomiishii/configs/commit/2294ba9c16dda5d7712179be7215eb710434fef6))
+- update node.js to v26 ([#3066](https://github.com/nozomiishii/configs/issues/3066)) ([2526571](https://github.com/nozomiishii/configs/commit/25265718cada7a3ce3ff203d31631fd5fed3690c))
+- update pnpm to v12.15.0 ([#3027](https://github.com/nozomiishii/configs/issues/3027)) ([348ba6d](https://github.com/nozomiishii/configs/commit/348ba6d1754e736375d728bea8c44d1fc1bfdf44))
+- update pnpm to v12.23.0 ([#3061](https://github.com/nozomiishii/configs/issues/3061)) ([da63a8e](https://github.com/nozomiishii/configs/commit/da63a8e6986e5f214f6aa4cf5bf93f4dd3c0b6bd))
 
 ## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/markdownlint-cli2-config-v2.8.0...@nozomiishii/markdownlint-cli2-config-v2.8.1) (2026-10-22)
 

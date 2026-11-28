@@ -2,18 +2,17 @@
 
 ## [2.8.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v2.8.1...@nozomiishii/prettier-config-v2.8.2) (2026-11-28)
 
-
 ### Miscellaneous
 
-* update dependency eslint to v10.13.0 ([#3017](https://github.com/nozomiishii/configs/issues/3017)) ([9f9c14d](https://github.com/nozomiishii/configs/commit/9f9c14dfeee4612cd4ac4a466838b6f3445e64e5))
-* update dependency eslint to v10.15.0 ([#3047](https://github.com/nozomiishii/configs/issues/3047)) ([c1a2da9](https://github.com/nozomiishii/configs/commit/c1a2da93382539ac192776ce58e3ae759b168862))
-* update dependency prettier to v3.10.1 ([#3056](https://github.com/nozomiishii/configs/issues/3056)) ([3e5b1ab](https://github.com/nozomiishii/configs/commit/3e5b1abb08341f9b73a2343e510d5c89e63611a0))
-* update dependency prettier-plugin-packagejson to v3.1.0 ([#3057](https://github.com/nozomiishii/configs/issues/3057)) ([08237f5](https://github.com/nozomiishii/configs/commit/08237f56b38f2ab752d140afd5d1affa2935b5ad))
-* update dependency tsdown to v0.23.7 ([#3039](https://github.com/nozomiishii/configs/issues/3039)) ([2294ba9](https://github.com/nozomiishii/configs/commit/2294ba9c16dda5d7712179be7215eb710434fef6))
-* update dependency vitest to v5.1.1 ([#3059](https://github.com/nozomiishii/configs/issues/3059)) ([2ec469b](https://github.com/nozomiishii/configs/commit/2ec469b1bca5ffbea10f0c8c30aadc6df2685ade))
-* update node.js to v26 ([#3066](https://github.com/nozomiishii/configs/issues/3066)) ([2526571](https://github.com/nozomiishii/configs/commit/25265718cada7a3ce3ff203d31631fd5fed3690c))
-* update pnpm to v12.15.0 ([#3027](https://github.com/nozomiishii/configs/issues/3027)) ([348ba6d](https://github.com/nozomiishii/configs/commit/348ba6d1754e736375d728bea8c44d1fc1bfdf44))
-* update pnpm to v12.23.0 ([#3061](https://github.com/nozomiishii/configs/issues/3061)) ([da63a8e](https://github.com/nozomiishii/configs/commit/da63a8e6986e5f214f6aa4cf5bf93f4dd3c0b6bd))
+- update dependency eslint to v10.13.0 ([#3017](https://github.com/nozomiishii/configs/issues/3017)) ([9f9c14d](https://github.com/nozomiishii/configs/commit/9f9c14dfeee4612cd4ac4a466838b6f3445e64e5))
+- update dependency eslint to v10.15.0 ([#3047](https://github.com/nozomiishii/configs/issues/3047)) ([c1a2da9](https://github.com/nozomiishii/configs/commit/c1a2da93382539ac192776ce58e3ae759b168862))
+- update dependency prettier to v3.10.1 ([#3056](https://github.com/nozomiishii/configs/issues/3056)) ([3e5b1ab](https://github.com/nozomiishii/configs/commit/3e5b1abb08341f9b73a2343e510d5c89e63611a0))
+- update dependency prettier-plugin-packagejson to v3.1.0 ([#3057](https://github.com/nozomiishii/configs/issues/3057)) ([08237f5](https://github.com/nozomiishii/configs/commit/08237f56b38f2ab752d140afd5d1affa2935b5ad))
+- update dependency tsdown to v0.23.7 ([#3039](https://github.com/nozomiishii/configs/issues/3039)) ([2294ba9](https://github.com/nozomiishii/configs/commit/2294ba9c16dda5d7712179be7215eb710434fef6))
+- update dependency vitest to v5.1.1 ([#3059](https://github.com/nozomiishii/configs/issues/3059)) ([2ec469b](https://github.com/nozomiishii/configs/commit/2ec469b1bca5ffbea10f0c8c30aadc6df2685ade))
+- update node.js to v26 ([#3066](https://github.com/nozomiishii/configs/issues/3066)) ([2526571](https://github.com/nozomiishii/configs/commit/25265718cada7a3ce3ff203d31631fd5fed3690c))
+- update pnpm to v12.15.0 ([#3027](https://github.com/nozomiishii/configs/issues/3027)) ([348ba6d](https://github.com/nozomiishii/configs/commit/348ba6d1754e736375d728bea8c44d1fc1bfdf44))
+- update pnpm to v12.23.0 ([#3061](https://github.com/nozomiishii/configs/issues/3061)) ([da63a8e](https://github.com/nozomiishii/configs/commit/da63a8e6986e5f214f6aa4cf5bf93f4dd3c0b6bd))
 
 ## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/prettier-config-v2.8.0...@nozomiishii/prettier-config-v2.8.1) (2026-10-22)
 
