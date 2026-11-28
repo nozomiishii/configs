@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.8.2](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v2.8.1...@nozomiishii/commitlint-config-v2.8.2) (2026-11-28)
+
+
+### Miscellaneous
+
+* update commitlint monorepo to v21.2.4 ([#3011](https://github.com/nozomiishii/configs/issues/3011)) ([0ff9a6a](https://github.com/nozomiishii/configs/commit/0ff9a6ab63d6864a4596e21113c2f7835b5a59bf))
+* update dependency conventional-commits-parser to v7.1.4 ([#3031](https://github.com/nozomiishii/configs/issues/3031)) ([c985bbf](https://github.com/nozomiishii/configs/commit/c985bbf18500a0585ca9c04484220947e77284cc))
+* update dependency eslint to v10.13.0 ([#3017](https://github.com/nozomiishii/configs/issues/3017)) ([9f9c14d](https://github.com/nozomiishii/configs/commit/9f9c14dfeee4612cd4ac4a466838b6f3445e64e5))
+* update dependency eslint to v10.15.0 ([#3047](https://github.com/nozomiishii/configs/issues/3047)) ([c1a2da9](https://github.com/nozomiishii/configs/commit/c1a2da93382539ac192776ce58e3ae759b168862))
+* update dependency tsdown to v0.23.7 ([#3039](https://github.com/nozomiishii/configs/issues/3039)) ([2294ba9](https://github.com/nozomiishii/configs/commit/2294ba9c16dda5d7712179be7215eb710434fef6))
+* update dependency vitest to v5.1.1 ([#3059](https://github.com/nozomiishii/configs/issues/3059)) ([2ec469b](https://github.com/nozomiishii/configs/commit/2ec469b1bca5ffbea10f0c8c30aadc6df2685ade))
+* update node.js to v26 ([#3066](https://github.com/nozomiishii/configs/issues/3066)) ([2526571](https://github.com/nozomiishii/configs/commit/25265718cada7a3ce3ff203d31631fd5fed3690c))
+* update pnpm to v12.15.0 ([#3027](https://github.com/nozomiishii/configs/issues/3027)) ([348ba6d](https://github.com/nozomiishii/configs/commit/348ba6d1754e736375d728bea8c44d1fc1bfdf44))
+* update pnpm to v12.23.0 ([#3061](https://github.com/nozomiishii/configs/issues/3061)) ([da63a8e](https://github.com/nozomiishii/configs/commit/da63a8e6986e5f214f6aa4cf5bf93f4dd3c0b6bd))
+
 ## [2.8.1](https://github.com/nozomiishii/configs/compare/@nozomiishii/commitlint-config-v2.8.0...@nozomiishii/commitlint-config-v2.8.1) (2026-10-22)
 
 ### Miscellaneous
